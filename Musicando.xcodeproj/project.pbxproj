@@ -117,7 +117,6 @@
 		A8C3F096194B72A400E78899 = {
 			isa = PBXGroup;
 			children = (
-				A8C3F0FB194B737D00E78899 /* Base */,
 				A8C3F0A8194B72A400E78899 /* Musicando */,
 				A8C3F0CA194B72A400E78899 /* MusicandoTests */,
 				A8C3F0A1194B72A400E78899 /* Frameworks */,
@@ -148,12 +147,10 @@
 		A8C3F0A8194B72A400E78899 /* Musicando */ = {
 			isa = PBXGroup;
 			children = (
-				A8C3F0B1194B72A400E78899 /* AppDelegate.h */,
-				A8C3F0B2194B72A400E78899 /* AppDelegate.m */,
-				A8C3F0B4194B72A400E78899 /* Main_iPhone.storyboard */,
-				A8C3F0B7194B72A400E78899 /* Main_iPad.storyboard */,
-				A8C3F0BA194B72A400E78899 /* ViewController.h */,
-				A8C3F0BB194B72A400E78899 /* ViewController.m */,
+				A8C3F102194B7B2500E78899 /* Controlador */,
+				A8C3F0FB194B737D00E78899 /* Base */,
+				A8C3F100194B7AE200E78899 /* Delegate */,
+				A8C3F101194B7AFB00E78899 /* Storyboard */,
 				A8C3F0BD194B72A400E78899 /* Images.xcassets */,
 				A8C3F0A9194B72A400E78899 /* Supporting Files */,
 			);
@@ -198,6 +195,7 @@
 				A8C3F0FC194B739800E78899 /* Educacional */,
 			);
 			name = Base;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		A8C3F0FC194B739800E78899 /* Educacional */ = {
@@ -248,6 +246,33 @@
 				A8C3F0EF194B733500E78899 /* Usuario.m */,
 			);
 			name = Usuario;
+			sourceTree = "<group>";
+		};
+		A8C3F100194B7AE200E78899 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				A8C3F0B1194B72A400E78899 /* AppDelegate.h */,
+				A8C3F0B2194B72A400E78899 /* AppDelegate.m */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		A8C3F101194B7AFB00E78899 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A8C3F0B4194B72A400E78899 /* Main_iPhone.storyboard */,
+				A8C3F0B7194B72A400E78899 /* Main_iPad.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		A8C3F102194B7B2500E78899 /* Controlador */ = {
+			isa = PBXGroup;
+			children = (
+				A8C3F0BA194B72A400E78899 /* ViewController.h */,
+				A8C3F0BB194B72A400E78899 /* ViewController.m */,
+			);
+			name = Controlador;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
