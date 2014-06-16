@@ -18,7 +18,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
-        self.bibliotecaDosModulos = [[Biblioteca alloc] init];
+        //Seta com o Singleton
+        self.bibliotecaDosModulos = [Biblioteca sharedManager];
         
         self.iniciante = [[Modulo alloc] init: @"Iniciante"];
         self.intermediario = [[Modulo alloc] init: @"Intermediário"];
@@ -55,12 +56,17 @@
 
 //Actions - Botões de Módulo
 - (IBAction)actionBtoIniciante:(id)sender {
+    [self.bibliotecaDosModulos.listaDeModulos addObject: self.iniciante];
     
 }
 
 - (IBAction)actionBtoIntermediario:(id)sender {
+    [self.bibliotecaDosModulos.listaDeModulos addObject: self.iniciante];
+    
 }
 
 - (IBAction)actionBtoAvancado:(id)sender {
+    [self.bibliotecaDosModulos.listaDeModulos addObject: self.iniciante];
+    
 }
 @end
