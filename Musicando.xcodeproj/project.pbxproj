@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A804EEE1194F6D4A00DB14A9 /* ModuloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A804EEE0194F6D4A00DB14A9 /* ModuloViewController.m */; };
 		A8C3F0A3194B72A400E78899 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C3F0A2194B72A400E78899 /* Foundation.framework */; };
 		A8C3F0A5194B72A400E78899 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C3F0A4194B72A400E78899 /* CoreGraphics.framework */; };
 		A8C3F0A7194B72A400E78899 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C3F0A6194B72A400E78899 /* UIKit.framework */; };
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A804EEDF194F6D4A00DB14A9 /* ModuloViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuloViewController.h; sourceTree = "<group>"; };
+		A804EEE0194F6D4A00DB14A9 /* ModuloViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuloViewController.m; sourceTree = "<group>"; };
 		A8C3F09F194B72A400E78899 /* Musicando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musicando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C3F0A2194B72A400E78899 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A8C3F0A4194B72A400E78899 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -271,6 +274,8 @@
 			children = (
 				A8C3F0BA194B72A400E78899 /* ViewController.h */,
 				A8C3F0BB194B72A400E78899 /* ViewController.m */,
+				A804EEDF194F6D4A00DB14A9 /* ModuloViewController.h */,
+				A804EEE0194F6D4A00DB14A9 /* ModuloViewController.m */,
 			);
 			name = Controlador;
 			sourceTree = "<group>";
@@ -384,6 +389,7 @@
 				A8C3F0F7194B733500E78899 /* Glossario.m in Sources */,
 				A8C3F0F5194B733500E78899 /* Fala.m in Sources */,
 				A8C3F0F3194B733500E78899 /* Conversa.m in Sources */,
+				A804EEE1194F6D4A00DB14A9 /* ModuloViewController.m in Sources */,
 				A8C3F0B3194B72A400E78899 /* AppDelegate.m in Sources */,
 				A8C3F0AF194B72A400E78899 /* main.m in Sources */,
 				A8C3F0F8194B733500E78899 /* Modulo.m in Sources */,
@@ -601,6 +607,7 @@
 				A8C3F0D6194B72A400E78899 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8C3F0D7194B72A400E78899 /* Build configuration list for PBXNativeTarget "MusicandoTests" */ = {
 			isa = XCConfigurationList;
@@ -609,6 +616,7 @@
 				A8C3F0D9194B72A400E78899 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
