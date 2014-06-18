@@ -117,9 +117,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A804EEE2194F7DBE00DB14A9 /* Imagens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Imagens;
+			sourceTree = "<group>";
+		};
 		A8C3F096194B72A400E78899 = {
 			isa = PBXGroup;
 			children = (
+				A804EEE2194F7DBE00DB14A9 /* Imagens */,
 				A8C3F0A8194B72A400E78899 /* Musicando */,
 				A8C3F0CA194B72A400E78899 /* MusicandoTests */,
 				A8C3F0A1194B72A400E78899 /* Frameworks */,
@@ -204,14 +212,14 @@
 		A8C3F0FC194B739800E78899 /* Educacional */ = {
 			isa = PBXGroup;
 			children = (
-				A8C3F0DC194B733500E78899 /* Aula.h */,
-				A8C3F0DD194B733500E78899 /* Aula.m */,
 				A8C3F0DE194B733500E78899 /* Biblioteca.h */,
 				A8C3F0DF194B733500E78899 /* Biblioteca.m */,
-				A8C3F0E2194B733500E78899 /* Exercicio.h */,
-				A8C3F0E3194B733500E78899 /* Exercicio.m */,
 				A8C3F0EA194B733500E78899 /* Modulo.h */,
 				A8C3F0EB194B733500E78899 /* Modulo.m */,
+				A8C3F0DC194B733500E78899 /* Aula.h */,
+				A8C3F0DD194B733500E78899 /* Aula.m */,
+				A8C3F0E2194B733500E78899 /* Exercicio.h */,
+				A8C3F0E3194B733500E78899 /* Exercicio.m */,
 			);
 			name = Educacional;
 			sourceTree = "<group>";
