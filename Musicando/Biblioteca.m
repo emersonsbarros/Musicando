@@ -13,9 +13,8 @@
 -(id)init{
     self = [super init];
     if(self){
-        
         self.listaDeModulos = [[NSMutableArray alloc]init];
-        [self instanciaModulosDoProjeto];
+        [self instanciaAulasDoProjeto];
     }
     return self;
 }
@@ -34,27 +33,33 @@
     return biblioteca;
 }
 
--(void)instanciaModulosDoProjeto{
+-(void)instanciaModuloIniciante{
+  
+    Exercicio *exer1 = [[Exercicio alloc] init:101 nome:@"Ritmo do batuque" nomeView:@"Exe11VC" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote];
+    Exercicio *exer2 = [[Exercicio alloc] init:102 nome:@"Palma, palma" nomeView:@"Exe12VC" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote];
+    Exercicio *exer3 = [[Exercicio alloc] init:103 nome:@"Quantas linhas?" nomeView:@"Exe21VC" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote];
+    Exercicio *exer4 = [[Exercicio alloc] init:104 nome:@"Note a nota" nomeView:@"Exe22VC" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote];
     
-    self.iniciante = [[Modulo alloc] init: @"Iniciante"];
-    self.intermediario = [[Modulo alloc] init: @"Intermediário"];
-    self.avancado = [[Modulo alloc] init: @"Avançado"];
+    Aula *aula1 = [[Aula alloc]init];
+    aula1.nome = @"Melodia";
+    aula1.capa = [UIImage imageNamed:@"aula.png"];
+    [[aula1 listaDeExercicios]addObject:exer1];
+    [[aula1 listaDeExercicios]addObject:exer2];
+    [[aula1 listaDeExercicios]addObject:exer3];
+    [[aula1 listaDeExercicios]addObject:exer4];
     
-    self.mascote = [[Mascote alloc] init];
+    Modulo *mod = [[Modulo alloc]init];
+    mod.nome = @"Iniciante";
+    mod.capa = [UIImage imageNamed:@"modulo.png"];
+    [[mod listaDeAulas]addObject:aula1];
     
-    self.inicianteAula1Exe1 = [[Exercicio alloc] init:11 nome:@"Ritmo do batuque" nomeView:@"Exe11VC" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote];
-    self.inicianteAula1Exe2 = [[Exercicio alloc] init:12 nome:@"Palma, palma" nomeView:@"Exe12VC" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote];
-    self.inicianteAula2Exe1 = [[Exercicio alloc] init:21 nome:@"Quantas linhas?" nomeView:@"Exe21VC" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote];
-    self.inicianteAula2Exe2 = [[Exercicio alloc] init:22 nome:@"Note a nota" nomeView:@"Exe22VC" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote];
-    self.intermediarioAula1Exe1 = [[Exercicio alloc] init:11 nome:@"Note a nota" nomeView:@"Exe22VC" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote];
-
+    [[self listaDeModulos]addObject:mod];
     
 }
 
 -(void)instanciaAulasDoProjeto{
     
-    
-    
+    [self instanciaModuloIniciante];
 }
 
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B03193719520C5D00316D6B /* modulo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B03193519520C5D00316D6B /* modulo.png */; };
+		0B03193819520C5D00316D6B /* aula.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B03193619520C5D00316D6B /* aula.png */; };
+		0B03193B19521C0B00316D6B /* AulasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B03193A19521C0B00316D6B /* AulasViewController.m */; };
 		A804EEE1194F6D4A00DB14A9 /* ModuloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A804EEE0194F6D4A00DB14A9 /* ModuloViewController.m */; };
 		A83ED3D819520810006CB6A4 /* Mascote.m in Sources */ = {isa = PBXBuildFile; fileRef = A83ED3C319520810006CB6A4 /* Mascote.m */; };
 		A83ED3D919520810006CB6A4 /* Aula.m in Sources */ = {isa = PBXBuildFile; fileRef = A83ED3C519520810006CB6A4 /* Aula.m */; };
@@ -47,6 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B03193519520C5D00316D6B /* modulo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modulo.png; sourceTree = "<group>"; };
+		0B03193619520C5D00316D6B /* aula.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aula.png; sourceTree = "<group>"; };
+		0B03193919521C0B00316D6B /* AulasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AulasViewController.h; sourceTree = "<group>"; };
+		0B03193A19521C0B00316D6B /* AulasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AulasViewController.m; sourceTree = "<group>"; };
 		A804EEDF194F6D4A00DB14A9 /* ModuloViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuloViewController.h; sourceTree = "<group>"; };
 		A804EEE0194F6D4A00DB14A9 /* ModuloViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuloViewController.m; sourceTree = "<group>"; };
 		A83ED3C219520810006CB6A4 /* Mascote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mascote.h; sourceTree = "<group>"; };
@@ -117,11 +124,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A804EEE2194F7DBE00DB14A9 /* Imagens */ = {
+		0B03193419520C5D00316D6B /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				0B03193519520C5D00316D6B /* modulo.png */,
+				0B03193619520C5D00316D6B /* aula.png */,
 			);
 			name = Imagens;
+			path = Musicando/Imagens;
 			sourceTree = "<group>";
 		};
 		A83ED3E31952088D006CB6A4 /* Base */ = {
@@ -156,7 +166,7 @@
 		A8C3F096194B72A400E78899 = {
 			isa = PBXGroup;
 			children = (
-				A804EEE2194F7DBE00DB14A9 /* Imagens */,
+				0B03193419520C5D00316D6B /* Imagens */,
 				A8C3F0A8194B72A400E78899 /* Musicando */,
 				A8C3F0CA194B72A400E78899 /* MusicandoTests */,
 				A8C3F0A1194B72A400E78899 /* Frameworks */,
@@ -251,6 +261,8 @@
 				A8C3F0BB194B72A400E78899 /* ViewController.m */,
 				A804EEDF194F6D4A00DB14A9 /* ModuloViewController.h */,
 				A804EEE0194F6D4A00DB14A9 /* ModuloViewController.m */,
+				0B03193919521C0B00316D6B /* AulasViewController.h */,
+				0B03193A19521C0B00316D6B /* AulasViewController.m */,
 			);
 			name = Controlador;
 			sourceTree = "<group>";
@@ -335,6 +347,8 @@
 				A8C3F0BE194B72A400E78899 /* Images.xcassets in Resources */,
 				A8C3F0B6194B72A400E78899 /* Main_iPhone.storyboard in Resources */,
 				A8C3F0AD194B72A400E78899 /* InfoPlist.strings in Resources */,
+				0B03193719520C5D00316D6B /* modulo.png in Resources */,
+				0B03193819520C5D00316D6B /* aula.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +372,7 @@
 				A804EEE1194F6D4A00DB14A9 /* ModuloViewController.m in Sources */,
 				A8C3F0B3194B72A400E78899 /* AppDelegate.m in Sources */,
 				A83ED3DE19520810006CB6A4 /* GerenciadorDeUsuarios.m in Sources */,
+				0B03193B19521C0B00316D6B /* AulasViewController.m in Sources */,
 				A83ED3DA19520810006CB6A4 /* Biblioteca.m in Sources */,
 				A83ED3DD19520810006CB6A4 /* Fala.m in Sources */,
 				A83ED3D919520810006CB6A4 /* Aula.m in Sources */,

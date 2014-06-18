@@ -12,26 +12,10 @@
 
 @interface ModuloViewController : UIViewController
 
-
-//Outlets - botões de módulo
-@property (weak, nonatomic) IBOutlet UIButton *btoModuloIniciante;
-@property (weak, nonatomic) IBOutlet UIButton *btoModuloIntermediario;
-@property (weak, nonatomic) IBOutlet UIButton *btoModuloAvancado;
-
-//Actions - botões de módulo
-- (IBAction)actionBtoIniciante:(id)sender;
-- (IBAction)actionBtoIntermediario:(id)sender;
-- (IBAction)actionBtoAvancado:(id)sender;
-
-
-
 //Biblioteca
 @property Biblioteca *bibliotecaDosModulos;
 
-//Módulos
-@property Modulo *iniciante;
-@property Modulo *intermediario;
-@property Modulo *avancado;
 
+-(void)chamaStoryBoardAulas:(id)sender;
 
 @end

@@ -10,11 +10,9 @@
 
 @implementation Aula
 
-- (id)init: (NSString*)nome{
+- (id)init{
     self = [super init];
     if (self){
-        
-        [self setNome: nome];
         [self setListaDeExercicios: [[NSMutableArray alloc] init]];
         
     }

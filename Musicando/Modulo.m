@@ -10,11 +10,9 @@
 
 @implementation Modulo
 
-- (id)init: (NSString*)nome{
+- (id)init{
     self = [super init];
     if (self){
-        
-        [self setNome: nome];
         [self setListaDeAulas: [[NSMutableArray alloc] init]];
     
     }

@@ -10,10 +10,11 @@
 
 @interface Aula : NSObject
 
+@property UIImage *capa;
 @property NSString *nome;
 @property NSMutableArray *listaDeExercicios;
 
--(id)init: (NSString*)nome;
+-(id)init;
 
 
 @end

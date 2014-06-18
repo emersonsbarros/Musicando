@@ -17,22 +17,41 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
         //Seta com o Singleton
-        self.bibliotecaDosModulos = [Biblioteca sharedManager];
-        
-        self.iniciante = [[Modulo alloc] init: @"Iniciante"];
-        self.intermediario = [[Modulo alloc] init: @"Intermediário"];
-        self.avancado = [[Modulo alloc] init: @"Avançado"];
-
+      
+    
     }
     return self;
 }
 
+-(void)chamaStoryBoardAulas:(id)sender{
+    [self performSegueWithIdentifier:@"chamaAulas" sender:sender];
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.bibliotecaDosModulos = [Biblioteca sharedManager];
+    
+    for(Modulo *mod in [[self bibliotecaDosModulos ]listaDeModulos]){
+        
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button addTarget:self
+                   action:@selector(chamaStoryBoardAulas:)
+         forControlEvents:UIControlEventTouchUpInside];
+        [button setTitle:@"" forState:UIControlStateNormal];
+         button.frame = CGRectMake(80.0, 210.0, 100, 150);
+        [button setImage:[mod capa] forState:UIControlStateNormal];
+        [self.view addSubview:button];
+        
+        UILabel *label =  [[UILabel alloc] initWithFrame: CGRectMake(80,210.0+120,100,100)];
+        label.text = [mod nome];
+        [self.view addSubview:label];
+        
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,19 +73,4 @@
 
 
 
-//Actions - Botões de Módulo
-- (IBAction)actionBtoIniciante:(id)sender {
-    [self.bibliotecaDosModulos.listaDeModulos addObject: self.iniciante];
-    
-}
-
-- (IBAction)actionBtoIntermediario:(id)sender {
-    [self.bibliotecaDosModulos.listaDeModulos addObject: self.iniciante];
-    
-}
-
-- (IBAction)actionBtoAvancado:(id)sender {
-    [self.bibliotecaDosModulos.listaDeModulos addObject: self.iniciante];
-    
-}
 @end

@@ -11,12 +11,12 @@
 @interface Modulo : NSObject
 
 //Atributos
-@property UIImageView *capa;
+@property UIImage *capa;
 @property NSString *nome;
 @property NSMutableArray *listaDeAulas;
 
 
 //Construtor
-- (id)init: (NSString*)nome;
+- (id)init;
 
 @end
