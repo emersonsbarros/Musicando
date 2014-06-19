@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Aula : NSObject
+@interface Aula : UIButton
 
 @property UIImage *capa;
 @property NSString *nome;
+@property UILabel *descricaoBotao;
 @property NSMutableArray *listaDeExercicios;
 
 -(id)init;

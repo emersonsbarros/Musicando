@@ -10,6 +10,8 @@
 		0B03193719520C5D00316D6B /* modulo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B03193519520C5D00316D6B /* modulo.png */; };
 		0B03193819520C5D00316D6B /* aula.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B03193619520C5D00316D6B /* aula.png */; };
 		0B03193B19521C0B00316D6B /* AulasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B03193A19521C0B00316D6B /* AulasViewController.m */; };
+		3FD7EA3119529126005F089A /* Mod1Aula1Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7EA2F19529126005F089A /* Mod1Aula1Exe1ViewController.m */; };
+		3FD7EA3219529126005F089A /* Mod1Aula1Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD7EA3019529126005F089A /* Mod1Aula1Exe1ViewController.xib */; };
 		A804EEE1194F6D4A00DB14A9 /* ModuloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A804EEE0194F6D4A00DB14A9 /* ModuloViewController.m */; };
 		A83ED3D819520810006CB6A4 /* Mascote.m in Sources */ = {isa = PBXBuildFile; fileRef = A83ED3C319520810006CB6A4 /* Mascote.m */; };
 		A83ED3D919520810006CB6A4 /* Aula.m in Sources */ = {isa = PBXBuildFile; fileRef = A83ED3C519520810006CB6A4 /* Aula.m */; };
@@ -54,6 +56,9 @@
 		0B03193619520C5D00316D6B /* aula.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aula.png; sourceTree = "<group>"; };
 		0B03193919521C0B00316D6B /* AulasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AulasViewController.h; sourceTree = "<group>"; };
 		0B03193A19521C0B00316D6B /* AulasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AulasViewController.m; sourceTree = "<group>"; };
+		3FD7EA2E19529126005F089A /* Mod1Aula1Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula1Exe1ViewController.h; sourceTree = "<group>"; };
+		3FD7EA2F19529126005F089A /* Mod1Aula1Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula1Exe1ViewController.m; sourceTree = "<group>"; };
+		3FD7EA3019529126005F089A /* Mod1Aula1Exe1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula1Exe1ViewController.xib; sourceTree = "<group>"; };
 		A804EEDF194F6D4A00DB14A9 /* ModuloViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuloViewController.h; sourceTree = "<group>"; };
 		A804EEE0194F6D4A00DB14A9 /* ModuloViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuloViewController.m; sourceTree = "<group>"; };
 		A83ED3C219520810006CB6A4 /* Mascote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mascote.h; sourceTree = "<group>"; };
@@ -134,31 +139,100 @@
 			path = Musicando/Imagens;
 			sourceTree = "<group>";
 		};
-		A83ED3E31952088D006CB6A4 /* Base */ = {
+		3FD7EA33195294FC005F089A /* Corpo */ = {
+			isa = PBXGroup;
+			children = (
+				A83ED3C419520810006CB6A4 /* Aula.h */,
+				A83ED3C519520810006CB6A4 /* Aula.m */,
+				A83ED3CA19520810006CB6A4 /* Exercicio.h */,
+				A83ED3CB19520810006CB6A4 /* Exercicio.m */,
+				A83ED3D219520810006CB6A4 /* Modulo.h */,
+				A83ED3D319520810006CB6A4 /* Modulo.m */,
+			);
+			name = Corpo;
+			sourceTree = "<group>";
+		};
+		3FD7EA3419529523005F089A /* Mascote */ = {
 			isa = PBXGroup;
 			children = (
 				A83ED3C219520810006CB6A4 /* Mascote.h */,
 				A83ED3C319520810006CB6A4 /* Mascote.m */,
-				A83ED3C419520810006CB6A4 /* Aula.h */,
-				A83ED3C519520810006CB6A4 /* Aula.m */,
-				A83ED3C619520810006CB6A4 /* Biblioteca.h */,
-				A83ED3C719520810006CB6A4 /* Biblioteca.m */,
 				A83ED3C819520810006CB6A4 /* Conversa.h */,
 				A83ED3C919520810006CB6A4 /* Conversa.m */,
-				A83ED3CA19520810006CB6A4 /* Exercicio.h */,
-				A83ED3CB19520810006CB6A4 /* Exercicio.m */,
 				A83ED3CC19520810006CB6A4 /* Fala.h */,
 				A83ED3CD19520810006CB6A4 /* Fala.m */,
-				A83ED3CE19520810006CB6A4 /* GerenciadorDeUsuarios.h */,
-				A83ED3CF19520810006CB6A4 /* GerenciadorDeUsuarios.m */,
+			);
+			name = Mascote;
+			sourceTree = "<group>";
+		};
+		3FD7EA3519529551005F089A /* Glossario */ = {
+			isa = PBXGroup;
+			children = (
 				A83ED3D019520810006CB6A4 /* Glossario.h */,
 				A83ED3D119520810006CB6A4 /* Glossario.m */,
-				A83ED3D219520810006CB6A4 /* Modulo.h */,
-				A83ED3D319520810006CB6A4 /* Modulo.m */,
 				A83ED3D419520810006CB6A4 /* Topico.h */,
 				A83ED3D519520810006CB6A4 /* Topico.m */,
+			);
+			name = Glossario;
+			sourceTree = "<group>";
+		};
+		3FD7EA3619529578005F089A /* Usuario */ = {
+			isa = PBXGroup;
+			children = (
+				A83ED3CE19520810006CB6A4 /* GerenciadorDeUsuarios.h */,
+				A83ED3CF19520810006CB6A4 /* GerenciadorDeUsuarios.m */,
 				A83ED3D619520810006CB6A4 /* Usuario.h */,
 				A83ED3D719520810006CB6A4 /* Usuario.m */,
+			);
+			name = Usuario;
+			sourceTree = "<group>";
+		};
+		3FD7EA37195295E7005F089A /* MenuPrincipalView */ = {
+			isa = PBXGroup;
+			children = (
+				A8C3F0BA194B72A400E78899 /* ViewController.h */,
+				A8C3F0BB194B72A400E78899 /* ViewController.m */,
+			);
+			name = MenuPrincipalView;
+			sourceTree = "<group>";
+		};
+		3FD7EA38195295F9005F089A /* ModuloView */ = {
+			isa = PBXGroup;
+			children = (
+				A804EEE0194F6D4A00DB14A9 /* ModuloViewController.m */,
+				A804EEDF194F6D4A00DB14A9 /* ModuloViewController.h */,
+			);
+			name = ModuloView;
+			sourceTree = "<group>";
+		};
+		3FD7EA3919529625005F089A /* AulasView */ = {
+			isa = PBXGroup;
+			children = (
+				0B03193919521C0B00316D6B /* AulasViewController.h */,
+				0B03193A19521C0B00316D6B /* AulasViewController.m */,
+			);
+			name = AulasView;
+			sourceTree = "<group>";
+		};
+		3FD7EA3A19529661005F089A /* Exercicios */ = {
+			isa = PBXGroup;
+			children = (
+				3FD7EA2E19529126005F089A /* Mod1Aula1Exe1ViewController.h */,
+				3FD7EA2F19529126005F089A /* Mod1Aula1Exe1ViewController.m */,
+				3FD7EA3019529126005F089A /* Mod1Aula1Exe1ViewController.xib */,
+			);
+			name = Exercicios;
+			sourceTree = "<group>";
+		};
+		A83ED3E31952088D006CB6A4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3FD7EA3619529578005F089A /* Usuario */,
+				3FD7EA3519529551005F089A /* Glossario */,
+				3FD7EA33195294FC005F089A /* Corpo */,
+				3FD7EA3419529523005F089A /* Mascote */,
+				A83ED3C619520810006CB6A4 /* Biblioteca.h */,
+				A83ED3C719520810006CB6A4 /* Biblioteca.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -257,12 +331,10 @@
 		A8C3F102194B7B2500E78899 /* Controlador */ = {
 			isa = PBXGroup;
 			children = (
-				A8C3F0BA194B72A400E78899 /* ViewController.h */,
-				A8C3F0BB194B72A400E78899 /* ViewController.m */,
-				A804EEDF194F6D4A00DB14A9 /* ModuloViewController.h */,
-				A804EEE0194F6D4A00DB14A9 /* ModuloViewController.m */,
-				0B03193919521C0B00316D6B /* AulasViewController.h */,
-				0B03193A19521C0B00316D6B /* AulasViewController.m */,
+				3FD7EA3919529625005F089A /* AulasView */,
+				3FD7EA37195295E7005F089A /* MenuPrincipalView */,
+				3FD7EA38195295F9005F089A /* ModuloView */,
+				3FD7EA3A19529661005F089A /* Exercicios */,
 			);
 			name = Controlador;
 			sourceTree = "<group>";
@@ -349,6 +421,7 @@
 				A8C3F0AD194B72A400E78899 /* InfoPlist.strings in Resources */,
 				0B03193719520C5D00316D6B /* modulo.png in Resources */,
 				0B03193819520C5D00316D6B /* aula.png in Resources */,
+				3FD7EA3219529126005F089A /* Mod1Aula1Exe1ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +455,7 @@
 				A83ED3DF19520810006CB6A4 /* Glossario.m in Sources */,
 				A83ED3DC19520810006CB6A4 /* Exercicio.m in Sources */,
 				A8C3F0AF194B72A400E78899 /* main.m in Sources */,
+				3FD7EA3119529126005F089A /* Mod1Aula1Exe1ViewController.m in Sources */,
 				A83ED3E119520810006CB6A4 /* Topico.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

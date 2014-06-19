@@ -25,6 +25,10 @@
 }
 
 -(void)chamaStoryBoardAulas:(id)sender{
+    
+    Modulo *button = (Modulo*) sender;
+    [Biblioteca sharedManager].moduloAtual = button;
+    
     [self performSegueWithIdentifier:@"chamaAulas" sender:sender];
 }
 
@@ -34,42 +38,78 @@
     [super viewDidLoad];
     self.bibliotecaDosModulos = [Biblioteca sharedManager];
     
+    int contadorDistanciaEntreBotoes = 80;
+    
     for(Modulo *mod in [[self bibliotecaDosModulos ]listaDeModulos]){
         
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button addTarget:self
-                   action:@selector(chamaStoryBoardAulas:)
-         forControlEvents:UIControlEventTouchUpInside];
-        [button setTitle:@"" forState:UIControlStateNormal];
-         button.frame = CGRectMake(80.0, 210.0, 100, 150);
-        [button setImage:[mod capa] forState:UIControlStateNormal];
-        [self.view addSubview:button];
+        //UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [mod addTarget:self
+                action:@selector(chamaStoryBoardAulas:)
+               forControlEvents:UIControlEventTouchUpInside];
         
-        UILabel *label =  [[UILabel alloc] initWithFrame: CGRectMake(80,210.0+120,100,100)];
+        [mod setTitle:@"" forState:UIControlStateNormal];
+        mod.frame = CGRectMake(contadorDistanciaEntreBotoes, 210.0, 100, 150);
+        [mod setImage:[mod capa] forState:UIControlStateNormal];
+        
+        [[self view] addSubview:mod];
+        
+        UILabel *label =  [[UILabel alloc] initWithFrame: CGRectMake(contadorDistanciaEntreBotoes,210.0+120,200,100)];
         label.text = [mod nome];
         [self.view addSubview:label];
+        
+        contadorDistanciaEntreBotoes += 200;
         
     }
     
     
 }
 
+
+//-(void)chamaStoryBoardAulas:(id)sender{
+//    //[Biblioteca sharedManager].moduloAtual = mod;
+//    Modulo *button = (Modulo*) sender;
+//    NSLog(@"nome = %@",button.nome);
+//    [self performSegueWithIdentifier:@"chamaAulas" sender:sender];
+//}
+//
+//
+//- (void)viewDidLoad
+//{
+//    [super viewDidLoad];
+//    self.bibliotecaDosModulos = [Biblioteca sharedManager];
+//    
+//    int contadorDistanciaEntreBotoes = 80;
+//    
+//    for(Modulo *mod in [[self bibliotecaDosModulos ]listaDeModulos]){
+//        
+//        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//        [button addTarget:self
+//                   action:@selector(chamaStoryBoardAulas:)
+//         forControlEvents:UIControlEventTouchUpInside];
+//        
+//        [button setTitle:@"" forState:UIControlStateNormal];
+//         button.frame = CGRectMake(contadorDistanciaEntreBotoes, 210.0, 100, 150);
+//        [button setImage:[mod capa] forState:UIControlStateNormal];
+//        
+//        
+//        [self.view addSubview:button];
+//        
+//        UILabel *label =  [[UILabel alloc] initWithFrame: CGRectMake(contadorDistanciaEntreBotoes,210.0+120,200,100)];
+//        label.text = [mod nome];
+//        [self.view addSubview:label];
+//        
+//        contadorDistanciaEntreBotoes += 200;
+//        
+//    }
+//    
+//    
+//}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 
 

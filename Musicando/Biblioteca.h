@@ -17,6 +17,7 @@
 //Atributos
 @property NSMutableArray *listaDeModulos;
 @property Mascote *mascote;
+@property Modulo *moduloAtual;
 
 
 //Métodos

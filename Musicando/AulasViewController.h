@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Biblioteca.h"
+#import "Modulo.h"
+#import "Aula.h"
+#import "Exercicio.h"
 
-@interface AulasViewController : UIViewController
+@interface AulasViewController : UIViewController {
+    
+}
+
+@property Biblioteca *bibliotecaDosModulos;
+@property Aula *aulaAtual;
+@property (weak, nonatomic) IBOutlet UIView *viewExercicios;
+@property CGRect posOriginalAula;
 
 @end

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Mascote.h"
 
-@interface Exercicio : UIViewController
+@interface Exercicio : UIButton
 
 @property int idView;
 @property NSString *nome;
@@ -17,8 +17,10 @@
 @property int experiencia;
 @property int pontuacaoMaxima;
 @property Mascote *mascote;
+@property UILabel *descricaoBotao;
+@property UIImage *capa;
 
 //Construtor
--(id)init: (int)idView nome:(NSString*)nome nomeView:(NSString*)nomeView experiencia:(int)experiencia pontuacaoMaxima:(int)pontuacaoMaxima mascote:(Mascote*)mascote;
+-(id)init: (int)idView nome:(NSString*)nome nomeView:(NSString*)nomeView experiencia:(int)experiencia pontuacaoMaxima:(int)pontuacaoMaxima mascote:(Mascote*)mascote:(UIImage*)capa;
 
 @end

@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Modulo : NSObject
+@interface Modulo : UIButton {
+    
+}
 
 //Atributos
 @property UIImage *capa;
