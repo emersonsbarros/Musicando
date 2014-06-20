@@ -18,28 +18,39 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
 
--(void)chamaStoryBoardAulas:(id)sender{
-    Aula *button = (Aula*) sender;
+-(void)chamaExercicios:(id)sender{
+    Aula *button = sender;
     self.aulaAtual = button;
+  
     [UIView animateWithDuration:2.0
                      animations:^(void){
                          self.posOriginalAula = button.frame;
-                         CGRect moveColher = CGRectMake(470, 10, 100, 150);
-                         self.aulaAtual.frame = moveColher;
+                         CGRect move = CGRectMake(470, 70, 100, 150);
+                         self.aulaAtual.frame = move;
                      } completion:^(BOOL finished){
                          self.viewExercicios.hidden = NO;
                          [self carregaExercicios];
-                         [self efeitoDescer:self.aulaAtual];
+                         [self efeitoDescer];
                      }];
 
 }
 
+-(void)efeitoDescer{
+    
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected)];
+    singleTap.numberOfTouchesRequired = 1;
+    self.view.userInteractionEnabled = YES;
+    [self.view addGestureRecognizer:singleTap];
+    
+}
+
 -(void)tapDetected{
+    
     [UIView animateWithDuration:2.0
                      animations:^(void){
                          self.aulaAtual.frame = self.posOriginalAula;
@@ -49,23 +60,27 @@
                      }];
 }
 
--(void)efeitoDescer:(Aula*)button{
-    
-    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected)];
-    singleTap.numberOfTouchesRequired = 1;
-    button.userInteractionEnabled = YES;
-    [button addGestureRecognizer:singleTap];
-
-}
 
 -(void)chamaStoryBoardExercicio:(id)sender{
-    Exercicio *button = (Exercicio*) sender;
-    [self presentViewController:[[UIViewController alloc]initWithNibName:[button nomeView] bundle:nil] animated:YES completion:NULL];
+    Exercicio *button = sender;
+    id object = [[NSClassFromString([button nomeView]) alloc]initWithNibName:[button nomeView] bundle:nil];
+    
+    CATransition* transition = [CATransition animation];
+    transition.duration = 0.5;
+    transition.type = kCATransitionFade;
+    transition.subtype = kCATransitionFromBottom;
+    [self.view.window.layer addAnimation:transition forKey:kCATransition];
+    
+    [self presentViewController:object animated:NO completion:nil];
+   
 }
+
+////////////////////////// Metodos Carrega Exercicios e aulas ///////////////////////////
 
 -(void)carregaExercicios{
     
     int contadorDistanciaEntreBotoes = 80;
+    
     for(Exercicio *exerc in self.aulaAtual.listaDeExercicios){
         
         [exerc addTarget:self
@@ -73,11 +88,12 @@
         forControlEvents:UIControlEventTouchUpInside];
         
         [exerc setTitle:@"" forState:UIControlStateNormal];
-        exerc.frame = CGRectMake(contadorDistanciaEntreBotoes, 210.0, 100, 150);
-        [exerc setImage:[exerc capa] forState:UIControlStateNormal];
+        exerc.frame = CGRectMake(contadorDistanciaEntreBotoes, 20.0, 100, 100);
+         [exerc setBackgroundImage:[exerc capa] forState:UIControlStateNormal];
         
-        exerc.descricaoBotao =  [[UILabel alloc] initWithFrame: CGRectMake(30,100,200,100)];
+        exerc.descricaoBotao =  [[UILabel alloc] initWithFrame: CGRectMake(-45,60,200,100)];
         exerc.descricaoBotao.text = [exerc nome];
+        exerc.descricaoBotao.textAlignment = NSTextAlignmentCenter;
         [exerc addSubview:exerc.descricaoBotao];
 
         [[self viewExercicios] addSubview:exerc];
@@ -87,39 +103,50 @@
     }
 }
 
+-(void)carregaAulas{
+    
+    int contadorDistanciaEntreBotoes = 80;
+    
+    for(Aula *aula in [Biblioteca sharedManager].moduloAtual.listaDeAulas){
+        
+        [aula addTarget:self
+                 action:@selector(chamaExercicios:)
+                forControlEvents:UIControlEventTouchUpInside];
+        
+        aula.frame = CGRectMake(contadorDistanciaEntreBotoes, 100, 100, 150);
+        [aula setBackgroundImage:[aula capa] forState:UIControlStateNormal];
+        
+        aula.descricaoBotao =  [[UILabel alloc] initWithFrame: CGRectMake(-45,110,200,100)];
+        aula.descricaoBotao.text = [aula nome];
+        aula.descricaoBotao.textAlignment = NSTextAlignmentCenter;
+        [aula addSubview:aula.descricaoBotao];
+        aula.layer.zPosition = -10;
+        
+        [[self view] addSubview:aula];
+        
+        contadorDistanciaEntreBotoes += 200;
+        
+    }
+
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    [super viewDidLoad];
-    self.bibliotecaDosModulos = [Biblioteca sharedManager];
-    
-    
-    int contadorDistanciaEntreBotoes = 80;
+    [self carregaAulas];
 
-    for(Aula *aula in [self bibliotecaDosModulos].moduloAtual.listaDeAulas){
-        
-        [aula addTarget:self
-                action:@selector(chamaStoryBoardAulas:)
-                forControlEvents:UIControlEventTouchUpInside];
-        
-        [aula setTitle:@"" forState:UIControlStateNormal];
-        aula.frame = CGRectMake(contadorDistanciaEntreBotoes, 210.0, 100, 150);
-        [aula setImage:[aula capa] forState:UIControlStateNormal];
-      
-        aula.descricaoBotao =  [[UILabel alloc] initWithFrame: CGRectMake(30,100,200,100)];
-        aula.descricaoBotao.text = [aula nome];
-        [aula addSubview:aula.descricaoBotao];
-        aula.layer.zPosition = -10;
-            
-        [[self view] addSubview:aula];
-    
-        
-        contadorDistanciaEntreBotoes += 200;
-     
-    }
-    
+}
 
+-(void)viewDidDisappear:(BOOL)animated {
+    
+    [super viewDidDisappear:animated];
+    [self bibliotecaDosModulos].moduloAtual = NULL;
+    
+    [self.viewExercicios.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
+    [self.view.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
 }
 
 - (void)didReceiveMemoryWarning

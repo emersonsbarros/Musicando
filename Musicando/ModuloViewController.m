@@ -17,93 +17,64 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        //Seta com o Singleton
-      
-    
+        
     }
     return self;
 }
 
--(void)chamaStoryBoardAulas:(id)sender{
+-(void)chamaStoryBoardAulas:(Modulo*)sender{
     
-    Modulo *button = (Modulo*) sender;
+    Modulo *button =  sender;
+    NSLog(@"estado %@",button.nome);
     [Biblioteca sharedManager].moduloAtual = button;
+    [self performSegueWithIdentifier:@"chamaAulas" sender:self];
     
-    [self performSegueWithIdentifier:@"chamaAulas" sender:sender];
 }
 
+////////////////////////// Metodos Carrega Modulos ///////////////////////////
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    self.bibliotecaDosModulos = [Biblioteca sharedManager];
+-(void)carregaModulos{
     
     int contadorDistanciaEntreBotoes = 80;
-    
     for(Modulo *mod in [[self bibliotecaDosModulos ]listaDeModulos]){
         
-        //UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [mod addTarget:self
                 action:@selector(chamaStoryBoardAulas:)
-               forControlEvents:UIControlEventTouchUpInside];
+                forControlEvents:UIControlEventTouchUpInside];
         
-        [mod setTitle:@"" forState:UIControlStateNormal];
         mod.frame = CGRectMake(contadorDistanciaEntreBotoes, 210.0, 100, 150);
-        [mod setImage:[mod capa] forState:UIControlStateNormal];
-        
+        [mod setBackgroundImage:[mod capa] forState:UIControlStateNormal];
         [[self view] addSubview:mod];
         
-        UILabel *label =  [[UILabel alloc] initWithFrame: CGRectMake(contadorDistanciaEntreBotoes,210.0+120,200,100)];
-        label.text = [mod nome];
-        [self.view addSubview:label];
+        mod.descricaoBotao =  [[UILabel alloc] initWithFrame: CGRectMake(-45,130,200,100)];
+        mod.descricaoBotao.text = [mod nome];
+        mod.descricaoBotao.textAlignment = NSTextAlignmentCenter;
+        [mod addSubview:mod.descricaoBotao];
+        mod.layer.zPosition = -10;
         
         contadorDistanciaEntreBotoes += 200;
-        
     }
+
+}
+
+///////////////////////////////////////////////////////////////////////////
+
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    
+    self.bibliotecaDosModulos = [Biblioteca sharedManager];
+    
+    [self carregaModulos];
+
+}
+
+-(void)viewDidDisappear:(BOOL)animated {
+    
+    [super viewDidDisappear:animated];
     
     
 }
-
-
-//-(void)chamaStoryBoardAulas:(id)sender{
-//    //[Biblioteca sharedManager].moduloAtual = mod;
-//    Modulo *button = (Modulo*) sender;
-//    NSLog(@"nome = %@",button.nome);
-//    [self performSegueWithIdentifier:@"chamaAulas" sender:sender];
-//}
-//
-//
-//- (void)viewDidLoad
-//{
-//    [super viewDidLoad];
-//    self.bibliotecaDosModulos = [Biblioteca sharedManager];
-//    
-//    int contadorDistanciaEntreBotoes = 80;
-//    
-//    for(Modulo *mod in [[self bibliotecaDosModulos ]listaDeModulos]){
-//        
-//        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-//        [button addTarget:self
-//                   action:@selector(chamaStoryBoardAulas:)
-//         forControlEvents:UIControlEventTouchUpInside];
-//        
-//        [button setTitle:@"" forState:UIControlStateNormal];
-//         button.frame = CGRectMake(contadorDistanciaEntreBotoes, 210.0, 100, 150);
-//        [button setImage:[mod capa] forState:UIControlStateNormal];
-//        
-//        
-//        [self.view addSubview:button];
-//        
-//        UILabel *label =  [[UILabel alloc] initWithFrame: CGRectMake(contadorDistanciaEntreBotoes,210.0+120,200,100)];
-//        label.text = [mod nome];
-//        [self.view addSubview:label];
-//        
-//        contadorDistanciaEntreBotoes += 200;
-//        
-//    }
-//    
-//    
-//}
 
 - (void)didReceiveMemoryWarning
 {

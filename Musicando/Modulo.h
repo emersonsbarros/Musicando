@@ -16,6 +16,7 @@
 @property UIImage *capa;
 @property NSString *nome;
 @property NSMutableArray *listaDeAulas;
+@property UILabel *descricaoBotao;
 
 
 //Construtor

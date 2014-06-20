@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.69999999999999973" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bj4-Vm-Snf">
-                                <rect key="frame" x="399" y="330" width="227" height="67"/>
+                                <rect key="frame" x="399" y="321" width="227" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -27,7 +27,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="225-Yc-UqM" kind="modal" modalTransitionStyle="crossDissolve" id="E88-Tu-cJK"/>
+                                    <segue destination="lL8-Nq-0sM" kind="modal" modalTransitionStyle="crossDissolve" id="HSh-jB-znj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v22-F9-IqO">
@@ -66,7 +66,7 @@
             </objects>
             <point key="canvasLocation" x="-32" y="-141"/>
         </scene>
-        <!--Aulas View Controller-->
+        <!--Aulas View Controller - Aulas-->
         <scene sceneID="2eP-fE-ZN1">
             <objects>
                 <viewController id="DGN-Kk-A93" customClass="AulasViewController" sceneMemberID="viewController">
@@ -86,19 +86,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPL-JQ-xMT">
-                                <rect key="frame" x="20" y="20" width="114" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Modulo">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Gfd-Jb-Kxo" kind="modal" modalTransitionStyle="crossDissolve" id="eR9-Gk-HgT"/>
-                                </connections>
-                            </button>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sa1-Pc-766">
-                                <rect key="frame" x="20" y="183" width="984" height="559"/>
+                                <rect key="frame" x="20" y="245" width="984" height="497"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -106,6 +95,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Aulas" id="6ux-SU-lZJ"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="viewExercicios" destination="Sa1-Pc-766" id="EE7-2i-nHX"/>
@@ -113,29 +103,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="37S-Ow-rpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4458" y="-2237"/>
+            <point key="canvasLocation" x="5059" y="-1315"/>
         </scene>
-        <!--Mod1 Aula1 Exe1 View Controller - Mod1Aula1Exe1ViewController-->
-        <scene sceneID="47Y-j2-FnQ">
-            <objects>
-                <viewController title="Mod1Aula1Exe1ViewController" id="tvX-FM-Bwm" customClass="Mod1Aula1Exe1ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="J37-2e-3dK"/>
-                        <viewControllerLayoutGuide type="bottom" id="UC4-kZ-p6z"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2WD-5N-JH9">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hty-oN-EaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4661" y="-1094"/>
-        </scene>
-        <!--Modulo View Controller-->
+        <!--Modulo View Controller - Modulos-->
         <scene sceneID="ug8-dH-x1R">
             <objects>
                 <viewController id="Gfd-Jb-Kxo" customClass="ModuloViewController" sceneMemberID="viewController">
@@ -146,30 +116,21 @@
                     <view key="view" contentMode="scaleToFill" id="dAM-9d-WRA">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kez-uu-QzP">
-                                <rect key="frame" x="29" y="9" width="82" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Menu">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="225-Yc-UqM" kind="modal" modalTransitionStyle="crossDissolve" id="mnJ-CB-Juk"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Modulos" id="VIS-42-bVj">
+                        <barButtonItem key="rightBarButtonItem" id="eTR-dv-WNA">
+                            <connections>
+                                <segue destination="DGN-Kk-A93" kind="push" identifier="chamaAulas" id="hxl-MY-8BE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <segue destination="DGN-Kk-A93" kind="modal" identifier="chamaAulas" modalTransitionStyle="crossDissolve" id="Rt4-gB-sfI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ey2-Tz-uDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3118" y="-1559"/>
+            <point key="canvasLocation" x="3922" y="-1297"/>
         </scene>
         <!--View Controller - Jornada-->
         <scene sceneID="X75-kB-Ko3">
@@ -213,19 +174,21 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Gfd-Jb-Kxo" kind="modal" identifier="" modalTransitionStyle="crossDissolve" id="dNF-FX-8d2"/>
+                                    <segue destination="Gfd-Jb-Kxo" kind="push" id="yqW-is-vcF"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Jornada" id="MPi-to-5FY"/>
+                    <navigationItem key="navigationItem" title="Jornada" id="MPi-to-5FY">
+                        <barButtonItem key="rightBarButtonItem" id="hA5-qc-aW3"/>
+                    </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tba-lG-NrP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1640" y="-1302"/>
+            <point key="canvasLocation" x="2766" y="-1302"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="KFc-IE-YW5">
@@ -267,14 +230,28 @@
             </objects>
             <point key="canvasLocation" x="1671" y="999"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IZn-87-szC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lL8-Nq-0sM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6wX-TU-S4M">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="225-Yc-UqM" kind="relationship" relationship="rootViewController" id="FFj-0u-Wgc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xcd-o5-9V8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1640" y="-1302"/>
+        </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="eR9-Gk-HgT"/>
-        <segue reference="mnJ-CB-Juk"/>
-    </inferredMetricsTieBreakers>
 </document>
