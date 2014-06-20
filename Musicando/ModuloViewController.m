@@ -7,6 +7,7 @@
 //
 
 #import "ModuloViewController.h"
+#import "AulasViewController.h"
 
 @interface ModuloViewController ()
 
