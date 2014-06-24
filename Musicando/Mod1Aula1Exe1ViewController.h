@@ -10,4 +10,10 @@
 
 @interface Mod1Aula1Exe1ViewController : UIViewController
 
+
+@property UILabel *lblTextoDeApresentacao;
+@property (weak, nonatomic) IBOutlet UILabel *lblTeste;
+- (IBAction)btoStart:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *outBtoStart;
+
 @end

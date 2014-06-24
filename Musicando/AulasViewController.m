@@ -27,7 +27,7 @@
     Aula *button = sender;
     self.aulaAtual = button;
   
-    [UIView animateWithDuration:2.0
+    [UIView animateWithDuration:1.0
                      animations:^(void){
                          self.posOriginalAula = button.frame;
                          CGRect move = CGRectMake(470, 70, 100, 150);
@@ -132,10 +132,9 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
+- (void)viewDidLoad{
     
+    [super viewDidLoad];
     [self carregaAulas];
 
 }
@@ -149,8 +148,7 @@
     [self.view.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
