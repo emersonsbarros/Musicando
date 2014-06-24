@@ -7,7 +7,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Mod1Aula1Exe1ViewController">
             <connections>
                 <outlet property="lblTeste" destination="0vx-5K-MzF" id="GqJ-dh-Dcz"/>
+                <outlet property="outBtoAnimal" destination="ETk-1o-SAZ" id="1oY-b2-2YC"/>
+                <outlet property="outBtoNota" destination="Iba-2S-dqB" id="JoE-Ay-vpY"/>
                 <outlet property="outBtoStart" destination="KRY-sE-aZf" id="PLE-je-EM6"/>
+                <outlet property="outBtoVeiculo" destination="Iba-2S-dqB" id="Zh8-yA-Ahb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,6 +23,28 @@
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iba-2S-dqB">
+                    <rect key="frame" x="579" y="605" width="117" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="nota">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btoNota:" destination="-1" eventType="touchUpInside" id="Ige-bT-f3E"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vn-ZW-Pyv">
+                    <rect key="frame" x="454" y="605" width="117" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="veiculo">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btoVeiculo:" destination="-1" eventType="touchUpInside" id="qGh-Am-Wgt"/>
+                    </connections>
+                </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bem-vindo ao Musicando!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="629" translatesAutoresizingMaskIntoConstraints="NO" id="0vx-5K-MzF">
                     <rect key="frame" x="198" y="201" width="629" height="265"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -37,6 +62,17 @@
                     </state>
                     <connections>
                         <action selector="btoStart:" destination="-1" eventType="touchUpInside" id="xoE-aW-B4i"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETk-1o-SAZ">
+                    <rect key="frame" x="324" y="605" width="117" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="animal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btoAnimal:" destination="-1" eventType="touchUpInside" id="v2u-nM-s30"/>
                     </connections>
                 </button>
             </subviews>

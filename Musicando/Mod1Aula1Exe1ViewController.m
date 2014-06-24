@@ -8,6 +8,7 @@
 
 #import "Mod1Aula1Exe1ViewController.h"
 
+
 @interface Mod1Aula1Exe1ViewController ()
 
 @end
@@ -42,9 +43,14 @@
 -(void)carregarComponentesVisuais{
     
     
-    self.lblTeste.text = @"O que é som? ... Sons são ondas produzidas pela vibração de um corpo qualquer, transmitida por um meio de propagação de frequências regulares ou não, que são captadas pelos nossos ouvidos e interpretadas pelos nossos cérebros. Música é uma forma de arte que se constitui basicamente em combinar sons e ritmo seguindo uma pré-organização ao longo do tempo.";
-    
+    self.lblTeste.text = @"O que é som? ... Sons são ondas produzidas pela vibração de um corpo qualquer, são captadas pelos nossos ouvidos e interpretadas pelos nossos cérebros.";
     self.lblTeste.hidden = YES;
+    
+    
+    //Teste
+    NSURL *audioFileLocationURL = [[NSBundle mainBundle] URLForResource:@"galo" withExtension:@"wav"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: audioFileLocationURL error: nil];
+   
 
     
 }
@@ -56,6 +62,18 @@
     [self carregarComponentesVisuais];
     [self.outBtoStart addTarget:self action:@selector(animacaoAparecerTexto:) forControlEvents:UIControlEventTouchUpInside];
 }
+
+- (IBAction)btoAnimal:(id)sender {
+    self.audioPlayer.play;
+    NSLog(@"tocou!");
+}
+
+- (IBAction)btoVeiculo:(id)sender {
+}
+
+- (IBAction)btoNota:(id)sender {
+}
+
 
 -(void)animacaoAparecerTexto:(id)sender{
     
