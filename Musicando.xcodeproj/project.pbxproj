@@ -78,6 +78,7 @@
 		A82BA8AF195A0745009EB605 /* galo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = galo.wav; sourceTree = "<group>"; };
 		A82BA8B0195A0745009EB605 /* helicoptero.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = helicoptero.wav; sourceTree = "<group>"; };
 		A82BA8B4195A0964009EB605 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A82BA8B6195A1DE1009EB605 /* nota.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = nota.aif; path = ../../pianoAudio/nota.aif; sourceTree = "<group>"; };
 		A83ED3C219520810006CB6A4 /* Mascote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mascote.h; sourceTree = "<group>"; };
 		A83ED3C319520810006CB6A4 /* Mascote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mascote.m; sourceTree = "<group>"; };
 		A83ED3C419520810006CB6A4 /* Aula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aula.h; sourceTree = "<group>"; };
@@ -258,6 +259,7 @@
 		A82BA8AD195A0745009EB605 /* Sons */ = {
 			isa = PBXGroup;
 			children = (
+				A82BA8B6195A1DE1009EB605 /* nota.aif */,
 				A82BA8AE195A0745009EB605 /* animalRuminando.wav */,
 				A82BA8AF195A0745009EB605 /* galo.wav */,
 				A82BA8B0195A0745009EB605 /* helicoptero.wav */,

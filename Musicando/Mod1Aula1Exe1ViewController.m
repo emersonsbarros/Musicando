@@ -27,9 +27,7 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-    [self.view addSubview: self.lblTextoDeApresentacao];
-    
-    
+    [self carregarComponentesVisuais];
 }
 
 - (void)didReceiveMemoryWarning{
@@ -45,33 +43,42 @@
     
     self.lblTeste.text = @"O que é som? ... Sons são ondas produzidas pela vibração de um corpo qualquer, são captadas pelos nossos ouvidos e interpretadas pelos nossos cérebros.";
     self.lblTeste.hidden = YES;
-    
-    
-    //Teste
-    NSURL *audioFileLocationURL = [[NSBundle mainBundle] URLForResource:@"galo" withExtension:@"wav"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: audioFileLocationURL error: nil];
    
+    [self.view addSubview: self.lblTextoDeApresentacao];
 
     
 }
 
 
 
-
+//Teste para execução de música
 - (IBAction)btoStart:(id)sender {
     [self carregarComponentesVisuais];
     [self.outBtoStart addTarget:self action:@selector(animacaoAparecerTexto:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (IBAction)btoAnimal:(id)sender {
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"galo" withExtension:@"wav"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+
     self.audioPlayer.play;
     NSLog(@"tocou!");
 }
 
 - (IBAction)btoVeiculo:(id)sender {
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"helicoptero" withExtension:@"wav"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    
+    self.audioPlayer.play;
+    NSLog(@"tocou!");
 }
 
 - (IBAction)btoNota:(id)sender {
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"nota" withExtension:@"aif"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    
+    self.audioPlayer.play;
+    NSLog(@"tocou!");
 }
 
 

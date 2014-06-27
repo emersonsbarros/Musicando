@@ -34,5 +34,6 @@
 
 
 @property AVAudioPlayer *audioPlayer;
+@property NSURL *caminhoDoAudio;
 
 @end
