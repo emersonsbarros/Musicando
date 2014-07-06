@@ -69,7 +69,7 @@
 ////////////////////////////////// Aula 2 //////////////////////////////////////
     
 //Exercícios
-    Exercicio *mod1Aula2Exe1 = [[Exercicio alloc] init:102 nome:@"Introdução ao Som" nomeView:@"Mod1Aula1Exe2" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod1Aula2Exe1 = [[Exercicio alloc] init:102 nome:@"Introdução ao Som" nomeView:@"Mod1Aula2Exe1ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
     
 //Aula de Som
     Aula *mod1Aula2 = [[Aula alloc]init];
@@ -81,15 +81,15 @@
 ////////////////////////////////// Aula 3 //////////////////////////////////////
     
 //Exercícios
-    Exercicio *mod1Aula3Exe1 = [[Exercicio alloc] init:102 nome:@"Introdução Musical" nomeView:@"Mod1Aula1Exe2" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod1Aula3Exe1 = [[Exercicio alloc] init:102 nome:@"Introdução Musical" nomeView:@"Mod1Aula3Exe1ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
     
-    Exercicio *mod1Aula3Exe2 = [[Exercicio alloc] init:102 nome:@"Ritmo" nomeView:@"Mod1Aula1Exe2" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod1Aula3Exe2 = [[Exercicio alloc] init:102 nome:@"Ritmo" nomeView:@"Mod1Aula3Exe2ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
     
-    Exercicio *mod1Aula3Exe3 = [[Exercicio alloc] init:102 nome:@"Melodia" nomeView:@"Mod1Aula1Exe2" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod1Aula3Exe3 = [[Exercicio alloc] init:102 nome:@"Melodia" nomeView:@"Mod1Aula3Exe3ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
     
-    Exercicio *mod1Aula3Exe4 = [[Exercicio alloc] init:102 nome:@"Harmonia" nomeView:@"Mod1Aula1Exe2" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod1Aula3Exe4 = [[Exercicio alloc] init:102 nome:@"Harmonia" nomeView:@"Mod1Aula3Exe4ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
     
-    Exercicio *mod1Aula3Exe5 = [[Exercicio alloc] init:102 nome:@"Polifonia" nomeView:@"Mod1Aula1Exe2" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod1Aula3Exe5 = [[Exercicio alloc] init:102 nome:@"Polifonia" nomeView:@"Mod1Aula3Exe5ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
 
     
 //Aula de Música
@@ -107,7 +107,7 @@
 ////////////////////////////////// Aula 4 //////////////////////////////////////
     
 //Exercícios
-    Exercicio *mod1Aula4Exe1 = [[Exercicio alloc] init:102 nome:@"Introdução a Percepção Musical" nomeView:@"Mod1Aula1Exe2" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod1Aula4Exe1 = [[Exercicio alloc] init:102 nome:@"Introdução a Percepção Musical" nomeView:@"Mod1Aula4Exe1ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
     
 //Aula de Percepção Musical
     Aula *mod1Aula4 = [[Aula alloc]init];
@@ -140,9 +140,9 @@
 ////////////////////////////////// Aula 1 //////////////////////////////////////
     
 //Exercicios
-    Exercicio *mod2Aula1Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução à Notas" nomeView:@"Mod2Aula1Exe1" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
-    Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Notas" nomeView:@"Mod2Aula1Exe2" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
-    Exercicio *mod2Aula1Exe3 = [[Exercicio alloc] init:202 nome:@"História das Notas" nomeView:@"Mod2Aula1Exe2" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula1Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução à Notas" nomeView:@"Mod2Aula1Exe1ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Notas" nomeView:@"Mod2Aula1Exe2ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula1Exe3 = [[Exercicio alloc] init:202 nome:@"História das Notas" nomeView:@"Mod2Aula1Exe3ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
     
 //Aula de Notas
     Aula *mod2Aula1 = [[Aula alloc]init];
@@ -157,8 +157,8 @@
 ////////////////////////////////// Aula 2 //////////////////////////////////////
     
 //Exercicios
-    Exercicio *mod2Aula2Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução às Pausas" nomeView:@"Mod2Aula1Exe1" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
-    Exercicio *mod2Aula2Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando Pausas" nomeView:@"Mod2Aula1Exe2" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula2Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução às Pausas" nomeView:@"Mod2Aula2Exe1ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula2Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando Pausas" nomeView:@"Mod2Aula2Exe12ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
     
 //Aula de Pausas
     Aula *mod2Aula2 = [[Aula alloc]init];
@@ -171,9 +171,9 @@
 ////////////////////////////////// Aula 3 //////////////////////////////////////
     
 //Exercicios
-    Exercicio *mod2Aula3Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução ao Pentagrama" nomeView:@"Mod2Aula1Exe1" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
-    Exercicio *mod2Aula3Exe2 = [[Exercicio alloc] init:202 nome:@"Exercitando" nomeView:@"Mod2Aula1Exe2" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
-    Exercicio *mod2Aula3Exe3 = [[Exercicio alloc] init:202 nome:@"Pentagrama, como surgiu?" nomeView:@"Mod2Aula1Exe2" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula3Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução ao Pentagrama" nomeView:@"Mod2Aula3Exe1ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula3Exe2 = [[Exercicio alloc] init:202 nome:@"Exercitando" nomeView:@"Mod2Aula3Exe2ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula3Exe3 = [[Exercicio alloc] init:202 nome:@"Pentagrama, como surgiu?" nomeView:@"Mod2Aula3Exe3ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
     
 //Aula de Pentagrama
     Aula *mod2Aula3 = [[Aula alloc]init];
@@ -187,13 +187,13 @@
 ////////////////////////////////// Aula 4 //////////////////////////////////////
     
 //Exercicios
-    Exercicio *mod2Aula4Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução a simbologia das notas" nomeView:@"Mod2Aula1Exe1" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
-    Exercicio *mod2Aula4Exe2 = [[Exercicio alloc] init:202 nome:@"Apresentando a Imagem das notas" nomeView:@"Mod2Aula1Exe2" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
-    Exercicio *mod2Aula4Exe3 = [[Exercicio alloc] init:202 nome:@"Treinando com Imagem das notas" nomeView:@"Mod2Aula1Exe2" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
-    Exercicio *mod2Aula4Exe4 = [[Exercicio alloc] init:202 nome:@"Treinamento" nomeView:@"Mod2Aula1Exe2" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
-    Exercicio *mod2Aula4Exe5 = [[Exercicio alloc] init:202 nome:@"Novas imagens de Notas" nomeView:@"Mod2Aula1Exe2" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
-    Exercicio *mod2Aula4Exe6 = [[Exercicio alloc] init:202 nome:@"Introdução aos símbolos das pausas" nomeView:@"Mod2Aula1Exe2" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
-    Exercicio *mod2Aula4Exe7 = [[Exercicio alloc] init:202 nome:@"Resumo final" nomeView:@"Mod2Aula1Exe2" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula4Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução a simbologia das notas" nomeView:@"Mod2Aula4Exe1ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula4Exe2 = [[Exercicio alloc] init:202 nome:@"Apresentando a Imagem das notas" nomeView:@"Mod2Aula4Exe2ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula4Exe3 = [[Exercicio alloc] init:202 nome:@"Treinando com Imagem das notas" nomeView:@"Mod2Aula4Exe3ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula4Exe4 = [[Exercicio alloc] init:202 nome:@"Treinamento" nomeView:@"Mod2Aula4Exe4ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula4Exe5 = [[Exercicio alloc] init:202 nome:@"Novas imagens de Notas" nomeView:@"Mod2Aula4Exe5ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula4Exe6 = [[Exercicio alloc] init:202 nome:@"Introdução aos símbolos das pausas" nomeView:@"Mod2Aula4Exe6ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula4Exe7 = [[Exercicio alloc] init:202 nome:@"Resumo final" nomeView:@"Mod2Aula4Exe7ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
 
     
 //Aula de Notação nota/pausa
@@ -212,7 +212,7 @@
 ////////////////////////////////// Aula 5 //////////////////////////////////////
     
 //Exercicios
-    Exercicio *mod2Aula5Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução às Oitavas" nomeView:@"Mod2Aula1Exe1" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula5Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução às Oitavas" nomeView:@"Mod2Aula5Exe1ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
     
 //Aula de Oitavas
     Aula *mod2Aula5 = [[Aula alloc]init];
@@ -224,7 +224,7 @@
 ////////////////////////////////// Aula 6 //////////////////////////////////////
     
 //Exercicios
-    Exercicio *mod2Aula6Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução às Claves" nomeView:@"Mod2Aula1Exe1" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula6Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução às Claves" nomeView:@"Mod2Aula4Exe6ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
     
 //Aula de Claves
     Aula *mod2Aula6 = [[Aula alloc]init];
@@ -237,12 +237,12 @@
 ////////////////////////////////// Aula 7 //////////////////////////////////////
     
 //Exercicios
-    Exercicio *mod2Aula7Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução ao Compasso" nomeView:@"Mod2Aula1Exe1" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
-    Exercicio *mod2Aula7Exe2 = [[Exercicio alloc] init:201 nome:@"Número de Compasso" nomeView:@"Mod2Aula1Exe1" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
-    Exercicio *mod2Aula7Exe3 = [[Exercicio alloc] init:201 nome:@"Unidade de Tempo" nomeView:@"Mod2Aula1Exe1" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
-    Exercicio *mod2Aula7Exe4 = [[Exercicio alloc] init:201 nome:@"Fórmula de Compasso" nomeView:@"Mod2Aula1Exe1" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
-    Exercicio *mod2Aula7Exe5 = [[Exercicio alloc] init:201 nome:@"Complemento" nomeView:@"Mod2Aula1Exe1" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
-    Exercicio *mod2Aula7Exe6 = [[Exercicio alloc] init:201 nome:@"Compasso Ggestual" nomeView:@"Mod2Aula1Exe1" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula7Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução ao Compasso" nomeView:@"Mod2Aula7Exe1ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula7Exe2 = [[Exercicio alloc] init:201 nome:@"Número de Compasso" nomeView:@"Mod2Aula7Exe2ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula7Exe3 = [[Exercicio alloc] init:201 nome:@"Unidade de Tempo" nomeView:@"Mod2Aula7Exe3ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula7Exe4 = [[Exercicio alloc] init:201 nome:@"Fórmula de Compasso" nomeView:@"Mod2Aula7Exe4ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula7Exe5 = [[Exercicio alloc] init:201 nome:@"Complemento" nomeView:@"Mod2Aula7Exe5ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula7Exe6 = [[Exercicio alloc] init:201 nome:@"Compasso Gestual" nomeView:@"Mod2Aula7Exe6ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
     
 //Aula de Compasso
     Aula *mod2Aula7 = [[Aula alloc]init];
@@ -260,7 +260,7 @@
 ////////////////////////////////// Aula 8 //////////////////////////////////////
     
 //Exercicios
-    Exercicio *mod2Aula8Exe1 = [[Exercicio alloc] init:201 nome:@"Resumo de Partitura" nomeView:@"Mod2Aula1Exe1" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula8Exe1 = [[Exercicio alloc] init:201 nome:@"Resumo de Partitura" nomeView:@"Mod2Aula8Exe1ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
     
 //Aula de Claves
     Aula *mod2Aula8 = [[Aula alloc]init];

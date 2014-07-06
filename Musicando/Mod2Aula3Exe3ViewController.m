@@ -1,18 +1,18 @@
 //
-//  Mod1Aula1Exe2ViewController.m
+//  Mod2Aula3Exe3ViewController.m
 //  Musicando
 //
-//  Created by EMERSON DE SOUZA BARROS on 24/06/14.
+//  Created by Emerson Barros on 06/07/14.
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
 
-#import "Mod1Aula1Exe2ViewController.h"
+#import "Mod2Aula3Exe3ViewController.h"
 
-@interface Mod1Aula1Exe2ViewController ()
+@interface Mod2Aula3Exe3ViewController ()
 
 @end
 
-@implementation Mod1Aula1Exe2ViewController
+@implementation Mod2Aula3Exe3ViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

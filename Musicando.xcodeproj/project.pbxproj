@@ -11,13 +11,73 @@
 		0B03193819520C5D00316D6B /* aula.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B03193619520C5D00316D6B /* aula.png */; };
 		0B03193B19521C0B00316D6B /* AulasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B03193A19521C0B00316D6B /* AulasViewController.m */; };
 		2B64F9DD19690E8200BC57FD /* mascote.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B64F9DC19690E8200BC57FD /* mascote.png */; };
+		2B64F9E41969207E00BC57FD /* Mod1Aula2Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64F9E21969207E00BC57FD /* Mod1Aula2Exe1ViewController.m */; };
+		2B64F9E51969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64F9E31969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib */; };
+		2B64F9EA196920D000BC57FD /* Mod1Aula3Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64F9E8196920D000BC57FD /* Mod1Aula3Exe1ViewController.m */; };
+		2B64F9EB196920D000BC57FD /* Mod1Aula3Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64F9E9196920D000BC57FD /* Mod1Aula3Exe1ViewController.xib */; };
+		2B64F9EF196920DB00BC57FD /* Mod1Aula3Exe2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64F9ED196920DB00BC57FD /* Mod1Aula3Exe2ViewController.m */; };
+		2B64F9F0196920DB00BC57FD /* Mod1Aula3Exe2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64F9EE196920DB00BC57FD /* Mod1Aula3Exe2ViewController.xib */; };
+		2B64F9F4196920F100BC57FD /* Mod1Aula3Exe3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64F9F2196920F100BC57FD /* Mod1Aula3Exe3ViewController.m */; };
+		2B64F9F5196920F100BC57FD /* Mod1Aula3Exe3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64F9F3196920F100BC57FD /* Mod1Aula3Exe3ViewController.xib */; };
+		2B64F9F9196920FA00BC57FD /* Mod1Aula3Exe4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64F9F7196920FA00BC57FD /* Mod1Aula3Exe4ViewController.m */; };
+		2B64F9FA196920FA00BC57FD /* Mod1Aula3Exe4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64F9F8196920FA00BC57FD /* Mod1Aula3Exe4ViewController.xib */; };
+		2B64F9FF1969215900BC57FD /* Mod1Aula4Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64F9FD1969215900BC57FD /* Mod1Aula4Exe1ViewController.m */; };
+		2B64FA001969215900BC57FD /* Mod1Aula4Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64F9FE1969215900BC57FD /* Mod1Aula4Exe1ViewController.xib */; };
+		2B64FA0C1969220C00BC57FD /* Mod2Aula1Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA0A1969220C00BC57FD /* Mod2Aula1Exe1ViewController.m */; };
+		2B64FA0D1969220C00BC57FD /* Mod2Aula1Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA0B1969220C00BC57FD /* Mod2Aula1Exe1ViewController.xib */; };
+		2B64FA111969221C00BC57FD /* Mod2Aula1Exe2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA0F1969221C00BC57FD /* Mod2Aula1Exe2ViewController.m */; };
+		2B64FA121969221C00BC57FD /* Mod2Aula1Exe2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA101969221C00BC57FD /* Mod2Aula1Exe2ViewController.xib */; };
+		2B64FA161969222600BC57FD /* Mod2Aula1Exe3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA141969222600BC57FD /* Mod2Aula1Exe3ViewController.m */; };
+		2B64FA171969222600BC57FD /* Mod2Aula1Exe3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA151969222600BC57FD /* Mod2Aula1Exe3ViewController.xib */; };
+		2B64FA1B1969224200BC57FD /* Mod2Aula2Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA191969224200BC57FD /* Mod2Aula2Exe1ViewController.m */; };
+		2B64FA1C1969224200BC57FD /* Mod2Aula2Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA1A1969224200BC57FD /* Mod2Aula2Exe1ViewController.xib */; };
+		2B64FA201969224F00BC57FD /* Mod2Aula2Exe2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA1E1969224F00BC57FD /* Mod2Aula2Exe2ViewController.m */; };
+		2B64FA211969224F00BC57FD /* Mod2Aula2Exe2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA1F1969224F00BC57FD /* Mod2Aula2Exe2ViewController.xib */; };
+		2B64FA251969226F00BC57FD /* Mod2Aula3Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA231969226F00BC57FD /* Mod2Aula3Exe1ViewController.m */; };
+		2B64FA261969226F00BC57FD /* Mod2Aula3Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA241969226F00BC57FD /* Mod2Aula3Exe1ViewController.xib */; };
+		2B64FA2A1969227A00BC57FD /* Mod2Aula3Exe2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA281969227A00BC57FD /* Mod2Aula3Exe2ViewController.m */; };
+		2B64FA2B1969227A00BC57FD /* Mod2Aula3Exe2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA291969227A00BC57FD /* Mod2Aula3Exe2ViewController.xib */; };
+		2B64FA2F1969228500BC57FD /* Mod2Aula3Exe3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA2D1969228500BC57FD /* Mod2Aula3Exe3ViewController.m */; };
+		2B64FA301969228500BC57FD /* Mod2Aula3Exe3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA2E1969228500BC57FD /* Mod2Aula3Exe3ViewController.xib */; };
+		2B64FA341969229D00BC57FD /* Mod2Aula4Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA321969229D00BC57FD /* Mod2Aula4Exe1ViewController.m */; };
+		2B64FA351969229D00BC57FD /* Mod2Aula4Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA331969229D00BC57FD /* Mod2Aula4Exe1ViewController.xib */; };
+		2B64FA39196922A400BC57FD /* Mod2Aula4Exe2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA37196922A400BC57FD /* Mod2Aula4Exe2ViewController.m */; };
+		2B64FA3A196922A400BC57FD /* Mod2Aula4Exe2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA38196922A400BC57FD /* Mod2Aula4Exe2ViewController.xib */; };
+		2B64FA3E196922AD00BC57FD /* Mod2Aula4Exe3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA3C196922AD00BC57FD /* Mod2Aula4Exe3ViewController.m */; };
+		2B64FA3F196922AD00BC57FD /* Mod2Aula4Exe3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA3D196922AD00BC57FD /* Mod2Aula4Exe3ViewController.xib */; };
+		2B64FA43196922B800BC57FD /* Mod2Aula4Exe4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA41196922B800BC57FD /* Mod2Aula4Exe4ViewController.m */; };
+		2B64FA44196922B800BC57FD /* Mod2Aula4Exe4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA42196922B800BC57FD /* Mod2Aula4Exe4ViewController.xib */; };
+		2B64FA48196922C100BC57FD /* Mod2Aula4Exe5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA46196922C100BC57FD /* Mod2Aula4Exe5ViewController.m */; };
+		2B64FA49196922C100BC57FD /* Mod2Aula4Exe5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA47196922C100BC57FD /* Mod2Aula4Exe5ViewController.xib */; };
+		2B64FA4D196922C900BC57FD /* Mod2Aula4Exe6ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA4B196922C900BC57FD /* Mod2Aula4Exe6ViewController.m */; };
+		2B64FA4E196922C900BC57FD /* Mod2Aula4Exe6ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA4C196922C900BC57FD /* Mod2Aula4Exe6ViewController.xib */; };
+		2B64FA52196922D500BC57FD /* Mod2Aula4Exe7ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA50196922D500BC57FD /* Mod2Aula4Exe7ViewController.m */; };
+		2B64FA53196922D500BC57FD /* Mod2Aula4Exe7ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA51196922D500BC57FD /* Mod2Aula4Exe7ViewController.xib */; };
+		2B64FA57196922F300BC57FD /* Mod2Aula5Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA55196922F300BC57FD /* Mod2Aula5Exe1ViewController.m */; };
+		2B64FA58196922F300BC57FD /* Mod2Aula5Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA56196922F300BC57FD /* Mod2Aula5Exe1ViewController.xib */; };
+		2B64FA5C1969230400BC57FD /* Mod2Aula6Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA5A1969230400BC57FD /* Mod2Aula6Exe1ViewController.m */; };
+		2B64FA5D1969230400BC57FD /* Mod2Aula6Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA5B1969230400BC57FD /* Mod2Aula6Exe1ViewController.xib */; };
+		2B64FA611969232B00BC57FD /* Mod2Aula7Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA5F1969232B00BC57FD /* Mod2Aula7Exe1ViewController.m */; };
+		2B64FA621969232B00BC57FD /* Mod2Aula7Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA601969232B00BC57FD /* Mod2Aula7Exe1ViewController.xib */; };
+		2B64FA661969233700BC57FD /* Mod2Aula7Exe2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA641969233700BC57FD /* Mod2Aula7Exe2ViewController.m */; };
+		2B64FA671969233700BC57FD /* Mod2Aula7Exe2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA651969233700BC57FD /* Mod2Aula7Exe2ViewController.xib */; };
+		2B64FA6B1969233F00BC57FD /* Mod2Aula7Exe3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA691969233F00BC57FD /* Mod2Aula7Exe3ViewController.m */; };
+		2B64FA6C1969233F00BC57FD /* Mod2Aula7Exe3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA6A1969233F00BC57FD /* Mod2Aula7Exe3ViewController.xib */; };
+		2B64FA701969234700BC57FD /* Mod2Aula7Exe4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA6E1969234700BC57FD /* Mod2Aula7Exe4ViewController.m */; };
+		2B64FA711969234700BC57FD /* Mod2Aula7Exe4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA6F1969234700BC57FD /* Mod2Aula7Exe4ViewController.xib */; };
+		2B64FA751969235000BC57FD /* Mod2Aula7Exe5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA731969235000BC57FD /* Mod2Aula7Exe5ViewController.m */; };
+		2B64FA761969235000BC57FD /* Mod2Aula7Exe5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA741969235000BC57FD /* Mod2Aula7Exe5ViewController.xib */; };
+		2B64FA7A1969235B00BC57FD /* Mod2Aula7Exe6ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA781969235B00BC57FD /* Mod2Aula7Exe6ViewController.m */; };
+		2B64FA7B1969235B00BC57FD /* Mod2Aula7Exe6ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA791969235B00BC57FD /* Mod2Aula7Exe6ViewController.xib */; };
+		2B64FA7F1969236D00BC57FD /* Mod2Aula8Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA7D1969236D00BC57FD /* Mod2Aula8Exe1ViewController.m */; };
+		2B64FA801969236D00BC57FD /* Mod2Aula8Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA7E1969236D00BC57FD /* Mod2Aula8Exe1ViewController.xib */; };
+		2B64FA84196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA82196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m */; };
+		2B64FA85196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA83196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib */; };
 		3FADCBB01953811300B90702 /* exercicios.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FADCBAF1953811300B90702 /* exercicios.png */; };
 		3FADCBB219538CA200B90702 /* RJ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FADCBB119538CA200B90702 /* RJ.jpg */; };
 		3FD7EA3119529126005F089A /* Mod1Aula1Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7EA2F19529126005F089A /* Mod1Aula1Exe1ViewController.m */; };
 		3FD7EA3219529126005F089A /* Mod1Aula1Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD7EA3019529126005F089A /* Mod1Aula1Exe1ViewController.xib */; };
 		A804EEE1194F6D4A00DB14A9 /* ModuloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A804EEE0194F6D4A00DB14A9 /* ModuloViewController.m */; };
-		A82BA8AB1959F316009EB605 /* Mod1Aula1Exe2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A82BA8A91959F316009EB605 /* Mod1Aula1Exe2ViewController.m */; };
-		A82BA8AC1959F316009EB605 /* Mod1Aula1Exe2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A82BA8AA1959F316009EB605 /* Mod1Aula1Exe2ViewController.xib */; };
 		A82BA8B1195A0745009EB605 /* animalRuminando.wav in Resources */ = {isa = PBXBuildFile; fileRef = A82BA8AE195A0745009EB605 /* animalRuminando.wav */; };
 		A82BA8B2195A0745009EB605 /* galo.wav in Resources */ = {isa = PBXBuildFile; fileRef = A82BA8AF195A0745009EB605 /* galo.wav */; };
 		A82BA8B3195A0745009EB605 /* helicoptero.wav in Resources */ = {isa = PBXBuildFile; fileRef = A82BA8B0195A0745009EB605 /* helicoptero.wav */; };
@@ -66,6 +126,99 @@
 		0B03193919521C0B00316D6B /* AulasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AulasViewController.h; sourceTree = "<group>"; };
 		0B03193A19521C0B00316D6B /* AulasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AulasViewController.m; sourceTree = "<group>"; };
 		2B64F9DC19690E8200BC57FD /* mascote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mascote.png; path = ../../../../../../../Desktop/mascote.png; sourceTree = "<group>"; };
+		2B64F9E11969207E00BC57FD /* Mod1Aula2Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula2Exe1ViewController.h; sourceTree = "<group>"; };
+		2B64F9E21969207E00BC57FD /* Mod1Aula2Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula2Exe1ViewController.m; sourceTree = "<group>"; };
+		2B64F9E31969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula2Exe1ViewController.xib; sourceTree = "<group>"; };
+		2B64F9E7196920D000BC57FD /* Mod1Aula3Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula3Exe1ViewController.h; sourceTree = "<group>"; };
+		2B64F9E8196920D000BC57FD /* Mod1Aula3Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula3Exe1ViewController.m; sourceTree = "<group>"; };
+		2B64F9E9196920D000BC57FD /* Mod1Aula3Exe1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula3Exe1ViewController.xib; sourceTree = "<group>"; };
+		2B64F9EC196920DB00BC57FD /* Mod1Aula3Exe2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula3Exe2ViewController.h; sourceTree = "<group>"; };
+		2B64F9ED196920DB00BC57FD /* Mod1Aula3Exe2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula3Exe2ViewController.m; sourceTree = "<group>"; };
+		2B64F9EE196920DB00BC57FD /* Mod1Aula3Exe2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula3Exe2ViewController.xib; sourceTree = "<group>"; };
+		2B64F9F1196920F100BC57FD /* Mod1Aula3Exe3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula3Exe3ViewController.h; sourceTree = "<group>"; };
+		2B64F9F2196920F100BC57FD /* Mod1Aula3Exe3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula3Exe3ViewController.m; sourceTree = "<group>"; };
+		2B64F9F3196920F100BC57FD /* Mod1Aula3Exe3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula3Exe3ViewController.xib; sourceTree = "<group>"; };
+		2B64F9F6196920FA00BC57FD /* Mod1Aula3Exe4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula3Exe4ViewController.h; sourceTree = "<group>"; };
+		2B64F9F7196920FA00BC57FD /* Mod1Aula3Exe4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula3Exe4ViewController.m; sourceTree = "<group>"; };
+		2B64F9F8196920FA00BC57FD /* Mod1Aula3Exe4ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula3Exe4ViewController.xib; sourceTree = "<group>"; };
+		2B64F9FC1969215900BC57FD /* Mod1Aula4Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula4Exe1ViewController.h; sourceTree = "<group>"; };
+		2B64F9FD1969215900BC57FD /* Mod1Aula4Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula4Exe1ViewController.m; sourceTree = "<group>"; };
+		2B64F9FE1969215900BC57FD /* Mod1Aula4Exe1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula4Exe1ViewController.xib; sourceTree = "<group>"; };
+		2B64FA091969220C00BC57FD /* Mod2Aula1Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula1Exe1ViewController.h; sourceTree = "<group>"; };
+		2B64FA0A1969220C00BC57FD /* Mod2Aula1Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula1Exe1ViewController.m; sourceTree = "<group>"; };
+		2B64FA0B1969220C00BC57FD /* Mod2Aula1Exe1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula1Exe1ViewController.xib; sourceTree = "<group>"; };
+		2B64FA0E1969221C00BC57FD /* Mod2Aula1Exe2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula1Exe2ViewController.h; sourceTree = "<group>"; };
+		2B64FA0F1969221C00BC57FD /* Mod2Aula1Exe2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula1Exe2ViewController.m; sourceTree = "<group>"; };
+		2B64FA101969221C00BC57FD /* Mod2Aula1Exe2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula1Exe2ViewController.xib; sourceTree = "<group>"; };
+		2B64FA131969222600BC57FD /* Mod2Aula1Exe3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula1Exe3ViewController.h; sourceTree = "<group>"; };
+		2B64FA141969222600BC57FD /* Mod2Aula1Exe3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula1Exe3ViewController.m; sourceTree = "<group>"; };
+		2B64FA151969222600BC57FD /* Mod2Aula1Exe3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula1Exe3ViewController.xib; sourceTree = "<group>"; };
+		2B64FA181969224200BC57FD /* Mod2Aula2Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula2Exe1ViewController.h; sourceTree = "<group>"; };
+		2B64FA191969224200BC57FD /* Mod2Aula2Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula2Exe1ViewController.m; sourceTree = "<group>"; };
+		2B64FA1A1969224200BC57FD /* Mod2Aula2Exe1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula2Exe1ViewController.xib; sourceTree = "<group>"; };
+		2B64FA1D1969224F00BC57FD /* Mod2Aula2Exe2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula2Exe2ViewController.h; sourceTree = "<group>"; };
+		2B64FA1E1969224F00BC57FD /* Mod2Aula2Exe2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula2Exe2ViewController.m; sourceTree = "<group>"; };
+		2B64FA1F1969224F00BC57FD /* Mod2Aula2Exe2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula2Exe2ViewController.xib; sourceTree = "<group>"; };
+		2B64FA221969226F00BC57FD /* Mod2Aula3Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula3Exe1ViewController.h; sourceTree = "<group>"; };
+		2B64FA231969226F00BC57FD /* Mod2Aula3Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula3Exe1ViewController.m; sourceTree = "<group>"; };
+		2B64FA241969226F00BC57FD /* Mod2Aula3Exe1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula3Exe1ViewController.xib; sourceTree = "<group>"; };
+		2B64FA271969227A00BC57FD /* Mod2Aula3Exe2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula3Exe2ViewController.h; sourceTree = "<group>"; };
+		2B64FA281969227A00BC57FD /* Mod2Aula3Exe2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula3Exe2ViewController.m; sourceTree = "<group>"; };
+		2B64FA291969227A00BC57FD /* Mod2Aula3Exe2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula3Exe2ViewController.xib; sourceTree = "<group>"; };
+		2B64FA2C1969228500BC57FD /* Mod2Aula3Exe3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula3Exe3ViewController.h; sourceTree = "<group>"; };
+		2B64FA2D1969228500BC57FD /* Mod2Aula3Exe3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula3Exe3ViewController.m; sourceTree = "<group>"; };
+		2B64FA2E1969228500BC57FD /* Mod2Aula3Exe3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula3Exe3ViewController.xib; sourceTree = "<group>"; };
+		2B64FA311969229D00BC57FD /* Mod2Aula4Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula4Exe1ViewController.h; sourceTree = "<group>"; };
+		2B64FA321969229D00BC57FD /* Mod2Aula4Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula4Exe1ViewController.m; sourceTree = "<group>"; };
+		2B64FA331969229D00BC57FD /* Mod2Aula4Exe1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula4Exe1ViewController.xib; sourceTree = "<group>"; };
+		2B64FA36196922A400BC57FD /* Mod2Aula4Exe2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula4Exe2ViewController.h; sourceTree = "<group>"; };
+		2B64FA37196922A400BC57FD /* Mod2Aula4Exe2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula4Exe2ViewController.m; sourceTree = "<group>"; };
+		2B64FA38196922A400BC57FD /* Mod2Aula4Exe2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula4Exe2ViewController.xib; sourceTree = "<group>"; };
+		2B64FA3B196922AD00BC57FD /* Mod2Aula4Exe3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula4Exe3ViewController.h; sourceTree = "<group>"; };
+		2B64FA3C196922AD00BC57FD /* Mod2Aula4Exe3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula4Exe3ViewController.m; sourceTree = "<group>"; };
+		2B64FA3D196922AD00BC57FD /* Mod2Aula4Exe3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula4Exe3ViewController.xib; sourceTree = "<group>"; };
+		2B64FA40196922B800BC57FD /* Mod2Aula4Exe4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula4Exe4ViewController.h; sourceTree = "<group>"; };
+		2B64FA41196922B800BC57FD /* Mod2Aula4Exe4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula4Exe4ViewController.m; sourceTree = "<group>"; };
+		2B64FA42196922B800BC57FD /* Mod2Aula4Exe4ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula4Exe4ViewController.xib; sourceTree = "<group>"; };
+		2B64FA45196922C100BC57FD /* Mod2Aula4Exe5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula4Exe5ViewController.h; sourceTree = "<group>"; };
+		2B64FA46196922C100BC57FD /* Mod2Aula4Exe5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula4Exe5ViewController.m; sourceTree = "<group>"; };
+		2B64FA47196922C100BC57FD /* Mod2Aula4Exe5ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula4Exe5ViewController.xib; sourceTree = "<group>"; };
+		2B64FA4A196922C900BC57FD /* Mod2Aula4Exe6ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula4Exe6ViewController.h; sourceTree = "<group>"; };
+		2B64FA4B196922C900BC57FD /* Mod2Aula4Exe6ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula4Exe6ViewController.m; sourceTree = "<group>"; };
+		2B64FA4C196922C900BC57FD /* Mod2Aula4Exe6ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula4Exe6ViewController.xib; sourceTree = "<group>"; };
+		2B64FA4F196922D500BC57FD /* Mod2Aula4Exe7ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula4Exe7ViewController.h; sourceTree = "<group>"; };
+		2B64FA50196922D500BC57FD /* Mod2Aula4Exe7ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula4Exe7ViewController.m; sourceTree = "<group>"; };
+		2B64FA51196922D500BC57FD /* Mod2Aula4Exe7ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula4Exe7ViewController.xib; sourceTree = "<group>"; };
+		2B64FA54196922F300BC57FD /* Mod2Aula5Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula5Exe1ViewController.h; sourceTree = "<group>"; };
+		2B64FA55196922F300BC57FD /* Mod2Aula5Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula5Exe1ViewController.m; sourceTree = "<group>"; };
+		2B64FA56196922F300BC57FD /* Mod2Aula5Exe1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula5Exe1ViewController.xib; sourceTree = "<group>"; };
+		2B64FA591969230400BC57FD /* Mod2Aula6Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula6Exe1ViewController.h; sourceTree = "<group>"; };
+		2B64FA5A1969230400BC57FD /* Mod2Aula6Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula6Exe1ViewController.m; sourceTree = "<group>"; };
+		2B64FA5B1969230400BC57FD /* Mod2Aula6Exe1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula6Exe1ViewController.xib; sourceTree = "<group>"; };
+		2B64FA5E1969232B00BC57FD /* Mod2Aula7Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula7Exe1ViewController.h; sourceTree = "<group>"; };
+		2B64FA5F1969232B00BC57FD /* Mod2Aula7Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula7Exe1ViewController.m; sourceTree = "<group>"; };
+		2B64FA601969232B00BC57FD /* Mod2Aula7Exe1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula7Exe1ViewController.xib; sourceTree = "<group>"; };
+		2B64FA631969233700BC57FD /* Mod2Aula7Exe2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula7Exe2ViewController.h; sourceTree = "<group>"; };
+		2B64FA641969233700BC57FD /* Mod2Aula7Exe2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula7Exe2ViewController.m; sourceTree = "<group>"; };
+		2B64FA651969233700BC57FD /* Mod2Aula7Exe2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula7Exe2ViewController.xib; sourceTree = "<group>"; };
+		2B64FA681969233F00BC57FD /* Mod2Aula7Exe3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula7Exe3ViewController.h; sourceTree = "<group>"; };
+		2B64FA691969233F00BC57FD /* Mod2Aula7Exe3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula7Exe3ViewController.m; sourceTree = "<group>"; };
+		2B64FA6A1969233F00BC57FD /* Mod2Aula7Exe3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula7Exe3ViewController.xib; sourceTree = "<group>"; };
+		2B64FA6D1969234700BC57FD /* Mod2Aula7Exe4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula7Exe4ViewController.h; sourceTree = "<group>"; };
+		2B64FA6E1969234700BC57FD /* Mod2Aula7Exe4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula7Exe4ViewController.m; sourceTree = "<group>"; };
+		2B64FA6F1969234700BC57FD /* Mod2Aula7Exe4ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula7Exe4ViewController.xib; sourceTree = "<group>"; };
+		2B64FA721969235000BC57FD /* Mod2Aula7Exe5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula7Exe5ViewController.h; sourceTree = "<group>"; };
+		2B64FA731969235000BC57FD /* Mod2Aula7Exe5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula7Exe5ViewController.m; sourceTree = "<group>"; };
+		2B64FA741969235000BC57FD /* Mod2Aula7Exe5ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula7Exe5ViewController.xib; sourceTree = "<group>"; };
+		2B64FA771969235B00BC57FD /* Mod2Aula7Exe6ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula7Exe6ViewController.h; sourceTree = "<group>"; };
+		2B64FA781969235B00BC57FD /* Mod2Aula7Exe6ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula7Exe6ViewController.m; sourceTree = "<group>"; };
+		2B64FA791969235B00BC57FD /* Mod2Aula7Exe6ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula7Exe6ViewController.xib; sourceTree = "<group>"; };
+		2B64FA7C1969236D00BC57FD /* Mod2Aula8Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod2Aula8Exe1ViewController.h; sourceTree = "<group>"; };
+		2B64FA7D1969236D00BC57FD /* Mod2Aula8Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod2Aula8Exe1ViewController.m; sourceTree = "<group>"; };
+		2B64FA7E1969236D00BC57FD /* Mod2Aula8Exe1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod2Aula8Exe1ViewController.xib; sourceTree = "<group>"; };
+		2B64FA81196923FA00BC57FD /* Mod1Aula3Exe5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula3Exe5ViewController.h; sourceTree = "<group>"; };
+		2B64FA82196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula3Exe5ViewController.m; sourceTree = "<group>"; };
+		2B64FA83196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula3Exe5ViewController.xib; sourceTree = "<group>"; };
 		3FADCBAF1953811300B90702 /* exercicios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exercicios.png; sourceTree = "<group>"; };
 		3FADCBB119538CA200B90702 /* RJ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RJ.jpg; sourceTree = "<group>"; };
 		3FD7EA2E19529126005F089A /* Mod1Aula1Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula1Exe1ViewController.h; sourceTree = "<group>"; };
@@ -73,9 +226,6 @@
 		3FD7EA3019529126005F089A /* Mod1Aula1Exe1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula1Exe1ViewController.xib; sourceTree = "<group>"; };
 		A804EEDF194F6D4A00DB14A9 /* ModuloViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuloViewController.h; sourceTree = "<group>"; };
 		A804EEE0194F6D4A00DB14A9 /* ModuloViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuloViewController.m; sourceTree = "<group>"; };
-		A82BA8A81959F316009EB605 /* Mod1Aula1Exe2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula1Exe2ViewController.h; sourceTree = "<group>"; };
-		A82BA8A91959F316009EB605 /* Mod1Aula1Exe2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula1Exe2ViewController.m; sourceTree = "<group>"; };
-		A82BA8AA1959F316009EB605 /* Mod1Aula1Exe2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula1Exe2ViewController.xib; sourceTree = "<group>"; };
 		A82BA8AE195A0745009EB605 /* animalRuminando.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = animalRuminando.wav; sourceTree = "<group>"; };
 		A82BA8AF195A0745009EB605 /* galo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = galo.wav; sourceTree = "<group>"; };
 		A82BA8B0195A0745009EB605 /* helicoptero.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = helicoptero.wav; sourceTree = "<group>"; };
@@ -162,17 +312,210 @@
 			path = Musicando/Imagens;
 			sourceTree = "<group>";
 		};
-		3FADCBB31953BEBB00B90702 /* Mod1Aula1ViewController */ = {
+		2B64F9DE19691F8600BC57FD /* Iniciante */ = {
+			isa = PBXGroup;
+			children = (
+				3FADCBB31953BEBB00B90702 /* Aula1 */,
+				2B64F9E01969205700BC57FD /* Aula2 */,
+				2B64F9E61969209200BC57FD /* Aula3 */,
+				2B64F9FB1969211300BC57FD /* Aula4 */,
+			);
+			name = Iniciante;
+			sourceTree = "<group>";
+		};
+		2B64F9DF19691F9600BC57FD /* Intermediario */ = {
+			isa = PBXGroup;
+			children = (
+				2B64FA011969217300BC57FD /* Aula1 */,
+				2B64FA021969217C00BC57FD /* Aula2 */,
+				2B64FA08196921C200BC57FD /* Aula3 */,
+				2B64FA07196921BC00BC57FD /* Aula4 */,
+				2B64FA06196921B200BC57FD /* Aula5 */,
+				2B64FA05196921A700BC57FD /* Aula6 */,
+				2B64FA041969219F00BC57FD /* Aula7 */,
+				2B64FA031969219900BC57FD /* Aula8 */,
+			);
+			name = Intermediario;
+			sourceTree = "<group>";
+		};
+		2B64F9E01969205700BC57FD /* Aula2 */ = {
+			isa = PBXGroup;
+			children = (
+				2B64F9E11969207E00BC57FD /* Mod1Aula2Exe1ViewController.h */,
+				2B64F9E21969207E00BC57FD /* Mod1Aula2Exe1ViewController.m */,
+				2B64F9E31969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib */,
+			);
+			name = Aula2;
+			sourceTree = "<group>";
+		};
+		2B64F9E61969209200BC57FD /* Aula3 */ = {
+			isa = PBXGroup;
+			children = (
+				2B64F9E7196920D000BC57FD /* Mod1Aula3Exe1ViewController.h */,
+				2B64F9E8196920D000BC57FD /* Mod1Aula3Exe1ViewController.m */,
+				2B64F9E9196920D000BC57FD /* Mod1Aula3Exe1ViewController.xib */,
+				2B64F9EC196920DB00BC57FD /* Mod1Aula3Exe2ViewController.h */,
+				2B64F9ED196920DB00BC57FD /* Mod1Aula3Exe2ViewController.m */,
+				2B64F9EE196920DB00BC57FD /* Mod1Aula3Exe2ViewController.xib */,
+				2B64F9F1196920F100BC57FD /* Mod1Aula3Exe3ViewController.h */,
+				2B64F9F2196920F100BC57FD /* Mod1Aula3Exe3ViewController.m */,
+				2B64F9F3196920F100BC57FD /* Mod1Aula3Exe3ViewController.xib */,
+				2B64F9F6196920FA00BC57FD /* Mod1Aula3Exe4ViewController.h */,
+				2B64F9F7196920FA00BC57FD /* Mod1Aula3Exe4ViewController.m */,
+				2B64F9F8196920FA00BC57FD /* Mod1Aula3Exe4ViewController.xib */,
+				2B64FA81196923FA00BC57FD /* Mod1Aula3Exe5ViewController.h */,
+				2B64FA82196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m */,
+				2B64FA83196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib */,
+			);
+			name = Aula3;
+			sourceTree = "<group>";
+		};
+		2B64F9FB1969211300BC57FD /* Aula4 */ = {
+			isa = PBXGroup;
+			children = (
+				2B64F9FC1969215900BC57FD /* Mod1Aula4Exe1ViewController.h */,
+				2B64F9FD1969215900BC57FD /* Mod1Aula4Exe1ViewController.m */,
+				2B64F9FE1969215900BC57FD /* Mod1Aula4Exe1ViewController.xib */,
+			);
+			name = Aula4;
+			sourceTree = "<group>";
+		};
+		2B64FA011969217300BC57FD /* Aula1 */ = {
+			isa = PBXGroup;
+			children = (
+				2B64FA091969220C00BC57FD /* Mod2Aula1Exe1ViewController.h */,
+				2B64FA0A1969220C00BC57FD /* Mod2Aula1Exe1ViewController.m */,
+				2B64FA0B1969220C00BC57FD /* Mod2Aula1Exe1ViewController.xib */,
+				2B64FA0E1969221C00BC57FD /* Mod2Aula1Exe2ViewController.h */,
+				2B64FA0F1969221C00BC57FD /* Mod2Aula1Exe2ViewController.m */,
+				2B64FA101969221C00BC57FD /* Mod2Aula1Exe2ViewController.xib */,
+				2B64FA131969222600BC57FD /* Mod2Aula1Exe3ViewController.h */,
+				2B64FA141969222600BC57FD /* Mod2Aula1Exe3ViewController.m */,
+				2B64FA151969222600BC57FD /* Mod2Aula1Exe3ViewController.xib */,
+			);
+			name = Aula1;
+			sourceTree = "<group>";
+		};
+		2B64FA021969217C00BC57FD /* Aula2 */ = {
+			isa = PBXGroup;
+			children = (
+				2B64FA181969224200BC57FD /* Mod2Aula2Exe1ViewController.h */,
+				2B64FA191969224200BC57FD /* Mod2Aula2Exe1ViewController.m */,
+				2B64FA1A1969224200BC57FD /* Mod2Aula2Exe1ViewController.xib */,
+				2B64FA1D1969224F00BC57FD /* Mod2Aula2Exe2ViewController.h */,
+				2B64FA1E1969224F00BC57FD /* Mod2Aula2Exe2ViewController.m */,
+				2B64FA1F1969224F00BC57FD /* Mod2Aula2Exe2ViewController.xib */,
+			);
+			name = Aula2;
+			sourceTree = "<group>";
+		};
+		2B64FA031969219900BC57FD /* Aula8 */ = {
+			isa = PBXGroup;
+			children = (
+				2B64FA7C1969236D00BC57FD /* Mod2Aula8Exe1ViewController.h */,
+				2B64FA7D1969236D00BC57FD /* Mod2Aula8Exe1ViewController.m */,
+				2B64FA7E1969236D00BC57FD /* Mod2Aula8Exe1ViewController.xib */,
+			);
+			name = Aula8;
+			sourceTree = "<group>";
+		};
+		2B64FA041969219F00BC57FD /* Aula7 */ = {
+			isa = PBXGroup;
+			children = (
+				2B64FA5E1969232B00BC57FD /* Mod2Aula7Exe1ViewController.h */,
+				2B64FA5F1969232B00BC57FD /* Mod2Aula7Exe1ViewController.m */,
+				2B64FA601969232B00BC57FD /* Mod2Aula7Exe1ViewController.xib */,
+				2B64FA631969233700BC57FD /* Mod2Aula7Exe2ViewController.h */,
+				2B64FA641969233700BC57FD /* Mod2Aula7Exe2ViewController.m */,
+				2B64FA651969233700BC57FD /* Mod2Aula7Exe2ViewController.xib */,
+				2B64FA681969233F00BC57FD /* Mod2Aula7Exe3ViewController.h */,
+				2B64FA691969233F00BC57FD /* Mod2Aula7Exe3ViewController.m */,
+				2B64FA6A1969233F00BC57FD /* Mod2Aula7Exe3ViewController.xib */,
+				2B64FA6D1969234700BC57FD /* Mod2Aula7Exe4ViewController.h */,
+				2B64FA6E1969234700BC57FD /* Mod2Aula7Exe4ViewController.m */,
+				2B64FA6F1969234700BC57FD /* Mod2Aula7Exe4ViewController.xib */,
+				2B64FA721969235000BC57FD /* Mod2Aula7Exe5ViewController.h */,
+				2B64FA731969235000BC57FD /* Mod2Aula7Exe5ViewController.m */,
+				2B64FA741969235000BC57FD /* Mod2Aula7Exe5ViewController.xib */,
+				2B64FA771969235B00BC57FD /* Mod2Aula7Exe6ViewController.h */,
+				2B64FA781969235B00BC57FD /* Mod2Aula7Exe6ViewController.m */,
+				2B64FA791969235B00BC57FD /* Mod2Aula7Exe6ViewController.xib */,
+			);
+			name = Aula7;
+			sourceTree = "<group>";
+		};
+		2B64FA05196921A700BC57FD /* Aula6 */ = {
+			isa = PBXGroup;
+			children = (
+				2B64FA591969230400BC57FD /* Mod2Aula6Exe1ViewController.h */,
+				2B64FA5A1969230400BC57FD /* Mod2Aula6Exe1ViewController.m */,
+				2B64FA5B1969230400BC57FD /* Mod2Aula6Exe1ViewController.xib */,
+			);
+			name = Aula6;
+			sourceTree = "<group>";
+		};
+		2B64FA06196921B200BC57FD /* Aula5 */ = {
+			isa = PBXGroup;
+			children = (
+				2B64FA54196922F300BC57FD /* Mod2Aula5Exe1ViewController.h */,
+				2B64FA55196922F300BC57FD /* Mod2Aula5Exe1ViewController.m */,
+				2B64FA56196922F300BC57FD /* Mod2Aula5Exe1ViewController.xib */,
+			);
+			name = Aula5;
+			sourceTree = "<group>";
+		};
+		2B64FA07196921BC00BC57FD /* Aula4 */ = {
+			isa = PBXGroup;
+			children = (
+				2B64FA311969229D00BC57FD /* Mod2Aula4Exe1ViewController.h */,
+				2B64FA321969229D00BC57FD /* Mod2Aula4Exe1ViewController.m */,
+				2B64FA331969229D00BC57FD /* Mod2Aula4Exe1ViewController.xib */,
+				2B64FA36196922A400BC57FD /* Mod2Aula4Exe2ViewController.h */,
+				2B64FA37196922A400BC57FD /* Mod2Aula4Exe2ViewController.m */,
+				2B64FA38196922A400BC57FD /* Mod2Aula4Exe2ViewController.xib */,
+				2B64FA3B196922AD00BC57FD /* Mod2Aula4Exe3ViewController.h */,
+				2B64FA3C196922AD00BC57FD /* Mod2Aula4Exe3ViewController.m */,
+				2B64FA3D196922AD00BC57FD /* Mod2Aula4Exe3ViewController.xib */,
+				2B64FA40196922B800BC57FD /* Mod2Aula4Exe4ViewController.h */,
+				2B64FA41196922B800BC57FD /* Mod2Aula4Exe4ViewController.m */,
+				2B64FA42196922B800BC57FD /* Mod2Aula4Exe4ViewController.xib */,
+				2B64FA45196922C100BC57FD /* Mod2Aula4Exe5ViewController.h */,
+				2B64FA46196922C100BC57FD /* Mod2Aula4Exe5ViewController.m */,
+				2B64FA47196922C100BC57FD /* Mod2Aula4Exe5ViewController.xib */,
+				2B64FA4A196922C900BC57FD /* Mod2Aula4Exe6ViewController.h */,
+				2B64FA4B196922C900BC57FD /* Mod2Aula4Exe6ViewController.m */,
+				2B64FA4C196922C900BC57FD /* Mod2Aula4Exe6ViewController.xib */,
+				2B64FA4F196922D500BC57FD /* Mod2Aula4Exe7ViewController.h */,
+				2B64FA50196922D500BC57FD /* Mod2Aula4Exe7ViewController.m */,
+				2B64FA51196922D500BC57FD /* Mod2Aula4Exe7ViewController.xib */,
+			);
+			name = Aula4;
+			sourceTree = "<group>";
+		};
+		2B64FA08196921C200BC57FD /* Aula3 */ = {
+			isa = PBXGroup;
+			children = (
+				2B64FA221969226F00BC57FD /* Mod2Aula3Exe1ViewController.h */,
+				2B64FA231969226F00BC57FD /* Mod2Aula3Exe1ViewController.m */,
+				2B64FA241969226F00BC57FD /* Mod2Aula3Exe1ViewController.xib */,
+				2B64FA271969227A00BC57FD /* Mod2Aula3Exe2ViewController.h */,
+				2B64FA281969227A00BC57FD /* Mod2Aula3Exe2ViewController.m */,
+				2B64FA291969227A00BC57FD /* Mod2Aula3Exe2ViewController.xib */,
+				2B64FA2C1969228500BC57FD /* Mod2Aula3Exe3ViewController.h */,
+				2B64FA2D1969228500BC57FD /* Mod2Aula3Exe3ViewController.m */,
+				2B64FA2E1969228500BC57FD /* Mod2Aula3Exe3ViewController.xib */,
+			);
+			name = Aula3;
+			sourceTree = "<group>";
+		};
+		3FADCBB31953BEBB00B90702 /* Aula1 */ = {
 			isa = PBXGroup;
 			children = (
 				3FD7EA2E19529126005F089A /* Mod1Aula1Exe1ViewController.h */,
 				3FD7EA2F19529126005F089A /* Mod1Aula1Exe1ViewController.m */,
 				3FD7EA3019529126005F089A /* Mod1Aula1Exe1ViewController.xib */,
-				A82BA8A81959F316009EB605 /* Mod1Aula1Exe2ViewController.h */,
-				A82BA8A91959F316009EB605 /* Mod1Aula1Exe2ViewController.m */,
-				A82BA8AA1959F316009EB605 /* Mod1Aula1Exe2ViewController.xib */,
 			);
-			name = Mod1Aula1ViewController;
+			name = Aula1;
 			sourceTree = "<group>";
 		};
 		3FD7EA33195294FC005F089A /* Corpo */ = {
@@ -253,7 +596,8 @@
 		3FD7EA3A19529661005F089A /* Exercicios */ = {
 			isa = PBXGroup;
 			children = (
-				3FADCBB31953BEBB00B90702 /* Mod1Aula1ViewController */,
+				2B64F9DE19691F8600BC57FD /* Iniciante */,
+				2B64F9DF19691F9600BC57FD /* Intermediario */,
 			);
 			name = Exercicios;
 			sourceTree = "<group>";
@@ -461,18 +805,48 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B64FA301969228500BC57FD /* Mod2Aula3Exe3ViewController.xib in Resources */,
+				2B64FA6C1969233F00BC57FD /* Mod2Aula7Exe3ViewController.xib in Resources */,
 				2B64F9DD19690E8200BC57FD /* mascote.png in Resources */,
-				A82BA8AC1959F316009EB605 /* Mod1Aula1Exe2ViewController.xib in Resources */,
 				A8C3F0B9194B72A400E78899 /* Main_iPad.storyboard in Resources */,
+				2B64FA211969224F00BC57FD /* Mod2Aula2Exe2ViewController.xib in Resources */,
+				2B64FA001969215900BC57FD /* Mod1Aula4Exe1ViewController.xib in Resources */,
+				2B64FA621969232B00BC57FD /* Mod2Aula7Exe1ViewController.xib in Resources */,
 				A8C3F0BE194B72A400E78899 /* Images.xcassets in Resources */,
+				2B64FA801969236D00BC57FD /* Mod2Aula8Exe1ViewController.xib in Resources */,
+				2B64FA2B1969227A00BC57FD /* Mod2Aula3Exe2ViewController.xib in Resources */,
+				2B64FA171969222600BC57FD /* Mod2Aula1Exe3ViewController.xib in Resources */,
+				2B64FA3A196922A400BC57FD /* Mod2Aula4Exe2ViewController.xib in Resources */,
+				2B64FA121969221C00BC57FD /* Mod2Aula1Exe2ViewController.xib in Resources */,
 				A82BA8B2195A0745009EB605 /* galo.wav in Resources */,
+				2B64FA761969235000BC57FD /* Mod2Aula7Exe5ViewController.xib in Resources */,
 				3FADCBB219538CA200B90702 /* RJ.jpg in Resources */,
+				2B64FA58196922F300BC57FD /* Mod2Aula5Exe1ViewController.xib in Resources */,
 				A8C3F0B6194B72A400E78899 /* Main_iPhone.storyboard in Resources */,
+				2B64F9EB196920D000BC57FD /* Mod1Aula3Exe1ViewController.xib in Resources */,
+				2B64FA711969234700BC57FD /* Mod2Aula7Exe4ViewController.xib in Resources */,
 				A8C3F0AD194B72A400E78899 /* InfoPlist.strings in Resources */,
+				2B64FA671969233700BC57FD /* Mod2Aula7Exe2ViewController.xib in Resources */,
+				2B64FA49196922C100BC57FD /* Mod2Aula4Exe5ViewController.xib in Resources */,
 				0B03193719520C5D00316D6B /* modulo.png in Resources */,
+				2B64FA53196922D500BC57FD /* Mod2Aula4Exe7ViewController.xib in Resources */,
+				2B64FA351969229D00BC57FD /* Mod2Aula4Exe1ViewController.xib in Resources */,
 				0B03193819520C5D00316D6B /* aula.png in Resources */,
+				2B64F9F0196920DB00BC57FD /* Mod1Aula3Exe2ViewController.xib in Resources */,
+				2B64FA44196922B800BC57FD /* Mod2Aula4Exe4ViewController.xib in Resources */,
+				2B64FA3F196922AD00BC57FD /* Mod2Aula4Exe3ViewController.xib in Resources */,
+				2B64FA7B1969235B00BC57FD /* Mod2Aula7Exe6ViewController.xib in Resources */,
+				2B64FA0D1969220C00BC57FD /* Mod2Aula1Exe1ViewController.xib in Resources */,
+				2B64FA4E196922C900BC57FD /* Mod2Aula4Exe6ViewController.xib in Resources */,
+				2B64FA85196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib in Resources */,
+				2B64F9F5196920F100BC57FD /* Mod1Aula3Exe3ViewController.xib in Resources */,
 				3FD7EA3219529126005F089A /* Mod1Aula1Exe1ViewController.xib in Resources */,
+				2B64FA1C1969224200BC57FD /* Mod2Aula2Exe1ViewController.xib in Resources */,
+				2B64F9E51969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib in Resources */,
+				2B64F9FA196920FA00BC57FD /* Mod1Aula3Exe4ViewController.xib in Resources */,
 				3FADCBB01953811300B90702 /* exercicios.png in Resources */,
+				2B64FA261969226F00BC57FD /* Mod2Aula3Exe1ViewController.xib in Resources */,
+				2B64FA5D1969230400BC57FD /* Mod2Aula6Exe1ViewController.xib in Resources */,
 				A82BA8B1195A0745009EB605 /* animalRuminando.wav in Resources */,
 				A82BA8B3195A0745009EB605 /* helicoptero.wav in Resources */,
 			);
@@ -493,22 +867,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B64FA251969226F00BC57FD /* Mod2Aula3Exe1ViewController.m in Sources */,
+				2B64FA701969234700BC57FD /* Mod2Aula7Exe4ViewController.m in Sources */,
 				A8C3F0BC194B72A400E78899 /* ViewController.m in Sources */,
 				A83ED3D819520810006CB6A4 /* Mascote.m in Sources */,
+				2B64FA751969235000BC57FD /* Mod2Aula7Exe5ViewController.m in Sources */,
+				2B64FA84196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m in Sources */,
+				2B64FA7A1969235B00BC57FD /* Mod2Aula7Exe6ViewController.m in Sources */,
+				2B64FA161969222600BC57FD /* Mod2Aula1Exe3ViewController.m in Sources */,
+				2B64FA4D196922C900BC57FD /* Mod2Aula4Exe6ViewController.m in Sources */,
+				2B64FA39196922A400BC57FD /* Mod2Aula4Exe2ViewController.m in Sources */,
+				2B64F9E41969207E00BC57FD /* Mod1Aula2Exe1ViewController.m in Sources */,
+				2B64FA52196922D500BC57FD /* Mod2Aula4Exe7ViewController.m in Sources */,
+				2B64FA611969232B00BC57FD /* Mod2Aula7Exe1ViewController.m in Sources */,
+				2B64FA2F1969228500BC57FD /* Mod2Aula3Exe3ViewController.m in Sources */,
 				A804EEE1194F6D4A00DB14A9 /* ModuloViewController.m in Sources */,
+				2B64F9FF1969215900BC57FD /* Mod1Aula4Exe1ViewController.m in Sources */,
 				A8C3F0B3194B72A400E78899 /* AppDelegate.m in Sources */,
-				A82BA8AB1959F316009EB605 /* Mod1Aula1Exe2ViewController.m in Sources */,
 				A83ED3DE19520810006CB6A4 /* GerenciadorDeUsuarios.m in Sources */,
+				2B64FA48196922C100BC57FD /* Mod2Aula4Exe5ViewController.m in Sources */,
+				2B64FA661969233700BC57FD /* Mod2Aula7Exe2ViewController.m in Sources */,
+				2B64FA3E196922AD00BC57FD /* Mod2Aula4Exe3ViewController.m in Sources */,
 				0B03193B19521C0B00316D6B /* AulasViewController.m in Sources */,
+				2B64FA7F1969236D00BC57FD /* Mod2Aula8Exe1ViewController.m in Sources */,
+				2B64FA0C1969220C00BC57FD /* Mod2Aula1Exe1ViewController.m in Sources */,
+				2B64FA201969224F00BC57FD /* Mod2Aula2Exe2ViewController.m in Sources */,
 				A83ED3DA19520810006CB6A4 /* Biblioteca.m in Sources */,
+				2B64FA2A1969227A00BC57FD /* Mod2Aula3Exe2ViewController.m in Sources */,
 				A83ED3DD19520810006CB6A4 /* Fala.m in Sources */,
+				2B64FA5C1969230400BC57FD /* Mod2Aula6Exe1ViewController.m in Sources */,
+				2B64FA6B1969233F00BC57FD /* Mod2Aula7Exe3ViewController.m in Sources */,
+				2B64F9F4196920F100BC57FD /* Mod1Aula3Exe3ViewController.m in Sources */,
+				2B64F9F9196920FA00BC57FD /* Mod1Aula3Exe4ViewController.m in Sources */,
+				2B64FA1B1969224200BC57FD /* Mod2Aula2Exe1ViewController.m in Sources */,
+				2B64FA341969229D00BC57FD /* Mod2Aula4Exe1ViewController.m in Sources */,
+				2B64FA57196922F300BC57FD /* Mod2Aula5Exe1ViewController.m in Sources */,
 				A83ED3D919520810006CB6A4 /* Aula.m in Sources */,
+				2B64F9EF196920DB00BC57FD /* Mod1Aula3Exe2ViewController.m in Sources */,
 				A83ED3E019520810006CB6A4 /* Modulo.m in Sources */,
 				A83ED3DB19520810006CB6A4 /* Conversa.m in Sources */,
+				2B64FA111969221C00BC57FD /* Mod2Aula1Exe2ViewController.m in Sources */,
 				A83ED3E219520810006CB6A4 /* Usuario.m in Sources */,
 				A83ED3DF19520810006CB6A4 /* Glossario.m in Sources */,
 				A83ED3DC19520810006CB6A4 /* Exercicio.m in Sources */,
+				2B64F9EA196920D000BC57FD /* Mod1Aula3Exe1ViewController.m in Sources */,
 				A8C3F0AF194B72A400E78899 /* main.m in Sources */,
+				2B64FA43196922B800BC57FD /* Mod2Aula4Exe4ViewController.m in Sources */,
 				3FD7EA3119529126005F089A /* Mod1Aula1Exe1ViewController.m in Sources */,
 				A83ED3E119520810006CB6A4 /* Topico.m in Sources */,
 			);
