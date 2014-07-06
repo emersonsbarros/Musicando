@@ -10,6 +10,7 @@
 		0B03193719520C5D00316D6B /* modulo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B03193519520C5D00316D6B /* modulo.png */; };
 		0B03193819520C5D00316D6B /* aula.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B03193619520C5D00316D6B /* aula.png */; };
 		0B03193B19521C0B00316D6B /* AulasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B03193A19521C0B00316D6B /* AulasViewController.m */; };
+		2B64F9DD19690E8200BC57FD /* mascote.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B64F9DC19690E8200BC57FD /* mascote.png */; };
 		3FADCBB01953811300B90702 /* exercicios.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FADCBAF1953811300B90702 /* exercicios.png */; };
 		3FADCBB219538CA200B90702 /* RJ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FADCBB119538CA200B90702 /* RJ.jpg */; };
 		3FD7EA3119529126005F089A /* Mod1Aula1Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7EA2F19529126005F089A /* Mod1Aula1Exe1ViewController.m */; };
@@ -64,6 +65,7 @@
 		0B03193619520C5D00316D6B /* aula.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aula.png; sourceTree = "<group>"; };
 		0B03193919521C0B00316D6B /* AulasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AulasViewController.h; sourceTree = "<group>"; };
 		0B03193A19521C0B00316D6B /* AulasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AulasViewController.m; sourceTree = "<group>"; };
+		2B64F9DC19690E8200BC57FD /* mascote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mascote.png; path = ../../../../../../../Desktop/mascote.png; sourceTree = "<group>"; };
 		3FADCBAF1953811300B90702 /* exercicios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exercicios.png; sourceTree = "<group>"; };
 		3FADCBB119538CA200B90702 /* RJ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RJ.jpg; sourceTree = "<group>"; };
 		3FD7EA2E19529126005F089A /* Mod1Aula1Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula1Exe1ViewController.h; sourceTree = "<group>"; };
@@ -78,7 +80,6 @@
 		A82BA8AF195A0745009EB605 /* galo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = galo.wav; sourceTree = "<group>"; };
 		A82BA8B0195A0745009EB605 /* helicoptero.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = helicoptero.wav; sourceTree = "<group>"; };
 		A82BA8B4195A0964009EB605 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		A82BA8B6195A1DE1009EB605 /* nota.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = nota.aif; path = ../../pianoAudio/nota.aif; sourceTree = "<group>"; };
 		A83ED3C219520810006CB6A4 /* Mascote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mascote.h; sourceTree = "<group>"; };
 		A83ED3C319520810006CB6A4 /* Mascote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mascote.m; sourceTree = "<group>"; };
 		A83ED3C419520810006CB6A4 /* Aula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aula.h; sourceTree = "<group>"; };
@@ -151,10 +152,11 @@
 		0B03193419520C5D00316D6B /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
-				3FADCBAF1953811300B90702 /* exercicios.png */,
 				0B03193519520C5D00316D6B /* modulo.png */,
-				3FADCBB119538CA200B90702 /* RJ.jpg */,
 				0B03193619520C5D00316D6B /* aula.png */,
+				3FADCBAF1953811300B90702 /* exercicios.png */,
+				2B64F9DC19690E8200BC57FD /* mascote.png */,
+				3FADCBB119538CA200B90702 /* RJ.jpg */,
 			);
 			name = Imagens;
 			path = Musicando/Imagens;
@@ -259,7 +261,6 @@
 		A82BA8AD195A0745009EB605 /* Sons */ = {
 			isa = PBXGroup;
 			children = (
-				A82BA8B6195A1DE1009EB605 /* nota.aif */,
 				A82BA8AE195A0745009EB605 /* animalRuminando.wav */,
 				A82BA8AF195A0745009EB605 /* galo.wav */,
 				A82BA8B0195A0745009EB605 /* helicoptero.wav */,
@@ -460,6 +461,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B64F9DD19690E8200BC57FD /* mascote.png in Resources */,
 				A82BA8AC1959F316009EB605 /* Mod1Aula1Exe2ViewController.xib in Resources */,
 				A8C3F0B9194B72A400E78899 /* Main_iPad.storyboard in Resources */,
 				A8C3F0BE194B72A400E78899 /* Images.xcassets in Resources */,
@@ -646,6 +648,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Musicando/Musicando-Prefix.pch";
 				INFOPLIST_FILE = "Musicando/Musicando-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -659,6 +662,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Musicando/Musicando-Prefix.pch";
 				INFOPLIST_FILE = "Musicando/Musicando-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
