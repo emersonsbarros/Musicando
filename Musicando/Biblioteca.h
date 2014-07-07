@@ -18,7 +18,8 @@
 @property NSMutableArray *listaDeModulos;
 @property Mascote *mascote;
 @property Modulo *moduloAtual;
-
+@property Aula *aulaAtual;
+@property Exercicio *exercicioAtual;
 
 //Métodos
 -(id)init;

@@ -15,7 +15,7 @@
 +(Mascote*)sharedManager{
     static Mascote *mascote = nil;
     if(!mascote){
-        mascote = [[super allocWithZone:nil]init];
+        mascote = [[super allocWithZone:nil] init];
     }
     return mascote;
 }
@@ -25,7 +25,8 @@
     self = [super init];
     if(self){
         self.listaDeConversas = [[NSMutableArray alloc]init];
-        self.imagem = [UIImage imageNamed:@"mascote.png"];
+        self.imagem = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"mascote.png"]];
+        self.nome = @"Mano mascote";
     }
     return self;
 }

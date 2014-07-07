@@ -12,7 +12,7 @@
 
 //Atributos
 @property NSString *nome;
-@property UIImage *imagem;
+@property UIImageView *imagem;
 @property NSMutableArray *listaDeConversas;
 
 //Métodos

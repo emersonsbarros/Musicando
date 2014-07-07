@@ -64,6 +64,8 @@
 -(void)chamaStoryBoardExercicio:(id)sender{
     Exercicio *button = sender;
     id object = [[NSClassFromString([button nomeView]) alloc]initWithNibName:[button nomeView] bundle:nil];
+    [Biblioteca sharedManager].exercicioAtual = button;
+
     
     CATransition* transition = [CATransition animation];
     transition.duration = 0.5;

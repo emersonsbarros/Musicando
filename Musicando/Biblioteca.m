@@ -14,6 +14,7 @@
     self = [super init];
     if(self){
         self.listaDeModulos = [[NSMutableArray alloc]init];
+        self.mascote = [[Mascote alloc] init];
         [self instanciaAulasDoProjeto];
     }
     return self;
@@ -290,7 +291,6 @@
 }
 
 -(void)instanciaAulasDoProjeto{
-    
     [self instanciaModuloIniciante];
     [self instanciaModuloIntermediario];
 }

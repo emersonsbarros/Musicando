@@ -13,14 +13,13 @@
 
 
 @property UILabel *lblTextoDeApresentacao;
-
-@property (weak, nonatomic) IBOutlet UILabel *lblTeste;
+@property (weak, nonatomic) IBOutlet UIImageView *imagemDoMascote;
+@property (strong, nonatomic) IBOutlet UIImageView *imagemDoMascote2;
+@property (weak, nonatomic) IBOutlet UILabel *lblFalaDoMascote;
 @property (weak, nonatomic) IBOutlet UIButton *outBtoStart;
 @property (weak, nonatomic) IBOutlet UIButton *outBtoAnimal;
 @property (weak, nonatomic) IBOutlet UIButton *outBtoVeiculo;
 @property (weak, nonatomic) IBOutlet UIButton *outBtoNota;
-
-
 
 - (IBAction)btoStart:(id)sender;
 - (IBAction)btoAnimal:(id)sender;
