@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "Mascote.h"
+#import "Conversa.h"
+#import "Fala.h"
 #import "Modulo.h"
 #import "Aula.h"
 #import "Exercicio.h"

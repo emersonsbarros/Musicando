@@ -26,7 +26,7 @@
     if(self){
         self.listaDeConversas = [[NSMutableArray alloc]init];
         self.imagem = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"mascote.png"]];
-        self.nome = @"Mano mascote";
+        self.nome = @"Meu mascote";
     }
     return self;
 }

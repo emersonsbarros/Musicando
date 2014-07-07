@@ -37,7 +37,7 @@
 -(void)carregaModulos{
     
     int contadorDistanciaEntreBotoes = 80;
-    for(Modulo *mod in [[self bibliotecaDosModulos ]listaDeModulos]){
+    for(Modulo *mod in [[self bibliotecaDosModulos] listaDeModulos]){
         
         [mod addTarget:self
                 action:@selector(chamaStoryBoardAulas:)
@@ -65,7 +65,6 @@
     [super viewDidLoad];
     
     self.bibliotecaDosModulos = [Biblioteca sharedManager];
-    
     [self carregaModulos];
 
 }
@@ -73,7 +72,6 @@
 -(void)viewDidDisappear:(BOOL)animated {
     
     [super viewDidDisappear:animated];
-    
     
 }
 

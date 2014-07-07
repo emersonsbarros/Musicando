@@ -45,7 +45,7 @@
  PADRÃO DE NOMENCLATURA DOS OBJETOS
  
  MODULO-AULA-EXERCICIO
- Exemplo: MÓDULO 1 - AULA 1 - EXERCÍCIO 1 = m1a1Exercicio1
+ Exemplo: MÓDULO 1 - AULA 1 - EXERCÍCIO 1 = mod1Aula1Exe1
  */
 
 //------------------------------------------------
@@ -59,6 +59,20 @@
 //Exercícios
     Exercicio *mod1Aula1Exe1 = [[Exercicio alloc] init:101 nome:@"Introdução a Música" nomeView:@"Mod1Aula1Exe1ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
     
+//Falas do Mascote
+    //Falas
+    Fala *mod1Aula1Exe1fala1 = [[Fala alloc] init];
+    mod1Aula1Exe1fala1.conteudo = @"Primeira fala do mascote para teste do objeto";
+    Fala *mod1Aula1Exe1fala2 = [[Fala alloc] init];
+    mod1Aula1Exe1fala2.conteudo = @"Segunda fala do mascote, em sequencia da primeira de acordo com a aula";
+    
+    //Conversa
+    Conversa *mod1Aula1Exe1conversa1 = [[Conversa alloc] init];
+    [[mod1Aula1Exe1conversa1 listaDeFalas] addObject: mod1Aula1Exe1fala1];
+    [[mod1Aula1Exe1conversa1 listaDeFalas] addObject: mod1Aula1Exe1fala2];
+    
+    [[[mod1Aula1Exe1 mascote] listaDeConversas] addObject: mod1Aula1Exe1conversa1];
+    
     
 //Aula de Musicalização
     Aula *mod1Aula1 = [[Aula alloc]init];
@@ -71,6 +85,20 @@
     
 //Exercícios
     Exercicio *mod1Aula2Exe1 = [[Exercicio alloc] init:102 nome:@"Introdução ao Som" nomeView:@"Mod1Aula2Exe1ViewController" experiencia:10 pontuacaoMaxima:10 mascote:self.mascote :[UIImage imageNamed:@"exercicios.png"]];
+    
+//Falas do Mascote
+    //Falas
+    Fala *mod1Aula2Exe1fala1 = [[Fala alloc] init];
+    mod1Aula2Exe1fala1.conteudo = @"Olá esta será uma aula sobre som, será que você já sabe o que é?";
+    Fala *mod1Aula2Exe1fala2 = [[Fala alloc] init];
+    mod1Aula2Exe1fala2.conteudo = @"Há muitas definições, talvez tenha sua própria...";
+    
+    //Conversa
+    Conversa *mod1Aula2Exe1conversa1 = [[Conversa alloc] init];
+    [[mod1Aula2Exe1conversa1 listaDeFalas] addObject: mod1Aula2Exe1fala1];
+    [[mod1Aula2Exe1conversa1 listaDeFalas] addObject: mod1Aula2Exe1fala2];
+    
+    [[[mod1Aula1Exe1 mascote] listaDeConversas] addObject: mod1Aula2Exe1conversa1];
     
 //Aula de Som
     Aula *mod1Aula2 = [[Aula alloc]init];

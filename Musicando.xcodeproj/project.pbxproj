@@ -10,7 +10,8 @@
 		0B03193719520C5D00316D6B /* modulo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B03193519520C5D00316D6B /* modulo.png */; };
 		0B03193819520C5D00316D6B /* aula.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B03193619520C5D00316D6B /* aula.png */; };
 		0B03193B19521C0B00316D6B /* AulasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B03193A19521C0B00316D6B /* AulasViewController.m */; };
-		2B64F9DD19690E8200BC57FD /* mascote.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B64F9DC19690E8200BC57FD /* mascote.png */; };
+		2B0FDB3B196A51AC00228116 /* mascote.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0FDB3A196A51AC00228116 /* mascote.png */; };
+		2B0FDB3D196A66AE00228116 /* roma.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B0FDB3C196A66AE00228116 /* roma.jpg */; };
 		2B64F9E41969207E00BC57FD /* Mod1Aula2Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64F9E21969207E00BC57FD /* Mod1Aula2Exe1ViewController.m */; };
 		2B64F9E51969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64F9E31969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib */; };
 		2B64F9EA196920D000BC57FD /* Mod1Aula3Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64F9E8196920D000BC57FD /* Mod1Aula3Exe1ViewController.m */; };
@@ -125,7 +126,8 @@
 		0B03193619520C5D00316D6B /* aula.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aula.png; sourceTree = "<group>"; };
 		0B03193919521C0B00316D6B /* AulasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AulasViewController.h; sourceTree = "<group>"; };
 		0B03193A19521C0B00316D6B /* AulasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AulasViewController.m; sourceTree = "<group>"; };
-		2B64F9DC19690E8200BC57FD /* mascote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mascote.png; path = ../../../../../../../Desktop/mascote.png; sourceTree = "<group>"; };
+		2B0FDB3A196A51AC00228116 /* mascote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mascote.png; sourceTree = "<group>"; };
+		2B0FDB3C196A66AE00228116 /* roma.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = roma.jpg; sourceTree = "<group>"; };
 		2B64F9E11969207E00BC57FD /* Mod1Aula2Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula2Exe1ViewController.h; sourceTree = "<group>"; };
 		2B64F9E21969207E00BC57FD /* Mod1Aula2Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula2Exe1ViewController.m; sourceTree = "<group>"; };
 		2B64F9E31969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula2Exe1ViewController.xib; sourceTree = "<group>"; };
@@ -305,8 +307,9 @@
 				0B03193519520C5D00316D6B /* modulo.png */,
 				0B03193619520C5D00316D6B /* aula.png */,
 				3FADCBAF1953811300B90702 /* exercicios.png */,
-				2B64F9DC19690E8200BC57FD /* mascote.png */,
+				2B0FDB3A196A51AC00228116 /* mascote.png */,
 				3FADCBB119538CA200B90702 /* RJ.jpg */,
+				2B0FDB3C196A66AE00228116 /* roma.jpg */,
 			);
 			name = Imagens;
 			path = Musicando/Imagens;
@@ -807,7 +810,6 @@
 			files = (
 				2B64FA301969228500BC57FD /* Mod2Aula3Exe3ViewController.xib in Resources */,
 				2B64FA6C1969233F00BC57FD /* Mod2Aula7Exe3ViewController.xib in Resources */,
-				2B64F9DD19690E8200BC57FD /* mascote.png in Resources */,
 				A8C3F0B9194B72A400E78899 /* Main_iPad.storyboard in Resources */,
 				2B64FA211969224F00BC57FD /* Mod2Aula2Exe2ViewController.xib in Resources */,
 				2B64FA001969215900BC57FD /* Mod1Aula4Exe1ViewController.xib in Resources */,
@@ -832,10 +834,12 @@
 				2B64FA53196922D500BC57FD /* Mod2Aula4Exe7ViewController.xib in Resources */,
 				2B64FA351969229D00BC57FD /* Mod2Aula4Exe1ViewController.xib in Resources */,
 				0B03193819520C5D00316D6B /* aula.png in Resources */,
+				2B0FDB3B196A51AC00228116 /* mascote.png in Resources */,
 				2B64F9F0196920DB00BC57FD /* Mod1Aula3Exe2ViewController.xib in Resources */,
 				2B64FA44196922B800BC57FD /* Mod2Aula4Exe4ViewController.xib in Resources */,
 				2B64FA3F196922AD00BC57FD /* Mod2Aula4Exe3ViewController.xib in Resources */,
 				2B64FA7B1969235B00BC57FD /* Mod2Aula7Exe6ViewController.xib in Resources */,
+				2B0FDB3D196A66AE00228116 /* roma.jpg in Resources */,
 				2B64FA0D1969220C00BC57FD /* Mod2Aula1Exe1ViewController.xib in Resources */,
 				2B64FA4E196922C900BC57FD /* Mod2Aula4Exe6ViewController.xib in Resources */,
 				2B64FA85196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib in Resources */,

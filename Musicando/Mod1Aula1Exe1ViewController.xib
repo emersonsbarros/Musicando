@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" alpha="0.34999999999999964" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RJ.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="thH-Yn-gA0">
-                    <rect key="frame" x="626" y="32" width="1024" height="768"/>
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iba-2S-dqB">
@@ -76,8 +76,8 @@
                         <action selector="btoAnimal:" destination="-1" eventType="touchUpInside" id="v2u-nM-s30"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="IIA-0n-JtT">
-                    <rect key="frame" x="437" y="426" width="150" height="150"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IIA-0n-JtT">
+                    <rect key="frame" x="160" y="259" width="150" height="150"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
@@ -88,6 +88,5 @@
     </objects>
     <resources>
         <image name="RJ.jpg" width="652" height="408"/>
-        <image name="mascote.png" width="1000" height="1000"/>
     </resources>
 </document>

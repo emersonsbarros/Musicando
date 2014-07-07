@@ -26,6 +26,7 @@
 -(void)chamaExercicios:(id)sender{
     Aula *button = sender;
     self.aulaAtual = button;
+    [Biblioteca sharedManager].aulaAtual = button;
   
     [UIView animateWithDuration:1.0
                      animations:^(void){
@@ -62,6 +63,7 @@
 
 
 -(void)chamaStoryBoardExercicio:(id)sender{
+    
     Exercicio *button = sender;
     id object = [[NSClassFromString([button nomeView]) alloc]initWithNibName:[button nomeView] bundle:nil];
     [Biblioteca sharedManager].exercicioAtual = button;
@@ -98,7 +100,7 @@
         exerc.descricaoBotao.textAlignment = NSTextAlignmentCenter;
         [exerc addSubview:exerc.descricaoBotao];
 
-        [[self viewExercicios] addSubview:exerc];
+        [[self viewExercicios] addSubview: exerc];
         
         contadorDistanciaEntreBotoes += 200;
         
@@ -143,9 +145,10 @@
 
 -(void)viewDidDisappear:(BOOL)animated {
     
-    [super viewDidDisappear:animated];
-    [self bibliotecaDosModulos].moduloAtual = NULL;
+    [super viewDidDisappear: animated];
     
+    //[self bibliotecaDosModulos].moduloAtual = NULL;
+    [Biblioteca sharedManager].moduloAtual = NULL;
     [self.viewExercicios.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
     [self.view.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
 }

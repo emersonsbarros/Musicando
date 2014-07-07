@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -40,7 +40,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="llf-uP-6aJ" kind="modal" id="EGz-0V-Nqc"/>
+                                    <segue destination="mUZ-ze-YhB" kind="modal" modalTransitionStyle="crossDissolve" id="2ey-bm-rnj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoR-qI-WBM">
@@ -53,7 +53,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="gON-Sz-EON" kind="modal" id="p5r-wj-h4z"/>
+                                    <segue destination="1dp-hl-lq5" kind="modal" modalTransitionStyle="crossDissolve" id="hMU-mO-PBW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -103,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="37S-Ow-rpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5049" y="-1297"/>
+            <point key="canvasLocation" x="5253" y="-1297"/>
         </scene>
         <!--Modulo View Controller - Modulos-->
         <scene sceneID="ug8-dH-x1R">
@@ -130,7 +130,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ey2-Tz-uDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3922" y="-1297"/>
+            <point key="canvasLocation" x="4042" y="-1297"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kvo-Ef-97z">
+            <objects>
+                <viewController id="taX-VU-oUx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YJr-og-D5X"/>
+                        <viewControllerLayoutGuide type="bottom" id="9ZV-P2-1qe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jzb-JC-YqI">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HZN-Et-R1p"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Pe-gk-4fx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4042" y="-133"/>
         </scene>
         <!--View Controller - Jornada-->
         <scene sceneID="X75-kB-Ko3">
@@ -188,52 +209,98 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tba-lG-NrP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2766" y="-1302"/>
+            <point key="canvasLocation" x="2850" y="-1297"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="KFc-IE-YW5">
+        <scene sceneID="Oy8-Zf-KGf">
             <objects>
-                <viewController id="llf-uP-6aJ" sceneMemberID="viewController">
+                <viewController id="h4N-1N-AuU" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9TX-Ym-LZv"/>
-                        <viewControllerLayoutGuide type="bottom" id="lc1-Jr-qjU"/>
+                        <viewControllerLayoutGuide type="top" id="SiV-ai-iTl"/>
+                        <viewControllerLayoutGuide type="bottom" id="qcW-gn-Qi5"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Vk3-yB-qIG">
+                    <view key="view" contentMode="scaleToFill" id="Hvy-R7-rug">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SG7-2V-178">
+                                <rect key="frame" x="436" y="369" width="153" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Abrir outra view">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="taX-VU-oUx" kind="push" id="nLv-c1-OaA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gkB-Q5-84h"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mT5-PI-Lk6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2845" y="-141"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zP7-pW-51H">
+            <objects>
+                <viewController id="ZbA-h2-eRr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xtt-JY-9vT"/>
+                        <viewControllerLayoutGuide type="bottom" id="sSd-jb-U5z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lFg-2i-70x">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SE8-QQ-RIG">
+                                <rect key="frame" x="436" y="369" width="153" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Abrir outra view">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ah7-y7-RI5" kind="push" id="uaq-ML-EBR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XAv-04-VEj"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jrs-N4-eR1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2850" y="959"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CBy-UF-kfi">
+            <objects>
+                <viewController id="Ah7-y7-RI5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e3g-G1-Ikz"/>
+                        <viewControllerLayoutGuide type="bottom" id="7bc-Eg-bY9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bkI-oB-r5a">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <navigationItem key="navigationItem" id="RVh-jb-60l"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="il1-jg-1g6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9h9-ug-rLp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1671" y="-141"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="EBE-ym-Def">
-            <objects>
-                <viewController id="gON-Sz-EON" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bLi-B8-uVI"/>
-                        <viewControllerLayoutGuide type="bottom" id="yxA-H6-cT3"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Xog-Nm-EWE">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r8m-YO-f41" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1671" y="999"/>
+            <point key="canvasLocation" x="4031" y="951"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IZn-87-szC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xcd-o5-9V8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lL8-Nq-0sM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6wX-TU-S4M">
@@ -245,8 +312,47 @@
                         <segue destination="225-Yc-UqM" kind="relationship" relationship="rootViewController" id="FFj-0u-Wgc"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xcd-o5-9V8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1640" y="-1302"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Huk-s4-SU1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mUZ-ze-YhB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f6a-Xk-fZT">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="h4N-1N-AuU" kind="relationship" relationship="rootViewController" id="Pwf-uM-WQF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D37-tU-bo8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1640" y="-141"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9V7-9j-lXI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1dp-hl-lq5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1wz-VS-AZ3">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZbA-h2-eRr" kind="relationship" relationship="rootViewController" id="mR9-q7-b72"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Gh-EU-BXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1635" y="959"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -10,4 +10,12 @@
 
 @implementation Conversa
 
+-(id)init{
+    self = [super init];
+    if(self){
+        self.listaDeFalas = [[NSMutableArray alloc]init];
+    }
+    return self;
+}
+
 @end
