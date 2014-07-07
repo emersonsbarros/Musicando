@@ -98,7 +98,7 @@
                     <navigationItem key="navigationItem" title="Aulas" id="6ux-SU-lZJ"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="viewExercicios" destination="Sa1-Pc-766" id="EE7-2i-nHX"/>
+                        <outlet property="viewExercicios" destination="Sa1-Pc-766" id="z5g-rw-vVU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="37S-Ow-rpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
