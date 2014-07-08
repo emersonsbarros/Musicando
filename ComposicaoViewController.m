@@ -21,7 +21,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-       
+        
     }
     return self;
 }
@@ -52,7 +52,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
     }
     ///////////////// 6B ////////////////
     else if(j==0){
@@ -76,8 +76,8 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
-
+        
+        
     }
     ///////////////// 6A ////////////////
     else if(j==0.5){
@@ -102,7 +102,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
         
     }
     ///////////////// 6G ////////////////
@@ -127,7 +127,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
         
     }
     ///////////////// 6F ////////////////
@@ -153,7 +153,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
         
     }
     ///////////////// 6E ////////////////
@@ -178,7 +178,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
         
     }
     ///////////////// 6D ////////////////
@@ -204,7 +204,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
         
     }
     ///////////////// 6C ////////////////
@@ -229,7 +229,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
         
     }
     ///////////////// 5B ////////////////
@@ -255,7 +255,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
         
     }
     ///////////////// 5A ////////////////
@@ -280,7 +280,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
         
     }
     ///////////////// 5G ////////////////
@@ -306,7 +306,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
         
     }
     ///////////////// 5F ////////////////
@@ -331,7 +331,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
         
     }
     //////////////// 5E ////////////////
@@ -357,7 +357,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
         
     }
     //////////////// 5D ////////////////
@@ -382,7 +382,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
         
     }
     //////////////// 5C ////////////////
@@ -408,7 +408,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
         
     }
     //////////////// 4B ////////////////
@@ -433,7 +433,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
         
     }
     //////////////// 4A ////////////////
@@ -459,7 +459,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
         
     }
     //////////////// 4G ////////////////
@@ -484,7 +484,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
         
     }
     //////////////// 4F ////////////////
@@ -510,7 +510,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
         
     }
     //////////////// 4E ////////////////
@@ -535,7 +535,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
         
     }
     //////////////// 4D ////////////////
@@ -561,7 +561,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
         
     }
     //////////////// 4C ////////////////
@@ -586,7 +586,7 @@
         posicaoX += espacamentoEntreNotas;
         [self addGestureSegurarNotasTela:aux];
         return aux;
-
+        
         
     }
     //////////////// 3B ////////////////
@@ -621,7 +621,7 @@
 -(Nota*)retornaPosicaoNotaEdicao:(float)posx :(float)posy{
     
     Nota *aux;
-   
+    
     int precisaoTouchLinha = 5;
     UIImageView *linhaPausa = [[[DesenhaPartitura sharedManager]listaImagensTracoPentagrama]objectAtIndex:5];
     
@@ -751,14 +751,14 @@
             }
             
         }
-
+        
     }
     return NULL;
 }
 
 -(void)aumentarLinhasPentagrama{
     for (UIImageView *t in [DesenhaPartitura sharedManager].listaImagensTracoPentagrama) {
-         [t setFrame:CGRectMake(t.frame.origin.x, t.frame.origin.y, posicaoX + 500.0f, 2.0f)];
+        [t setFrame:CGRectMake(t.frame.origin.x, t.frame.origin.y, posicaoX + 500.0f, 2.0f)];
         
     }
 }
@@ -787,7 +787,7 @@
     }else{
         NSLog(@"Passou do limite de notas");
     }
-
+    
 }
 
 
@@ -797,7 +797,7 @@
 }
 
 - (IBAction)limparNotasPartituraEdicao:(id)sender {
-
+    
     if(listaNotasEdicao.count != 0){
         for (UIView *subView in self.scrollEdicao.subviews)
         {
@@ -821,7 +821,7 @@
 
 
 -(void)addGesturePrintarNotasTela{
-
+    
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addNotaNaTela:)];
     singleTap.numberOfTouchesRequired = 1;
     self.view.userInteractionEnabled = YES;
@@ -863,7 +863,7 @@
                                      
                                  }];
             }
-
+            
             
             break;
         }
@@ -894,11 +894,11 @@
                          
                          [listaNotasEdicao removeObject:notaParaEdicao];
                      }];
-
+    
 }
 
 -(void)addGestureSegurarNotasTela:(Nota*)notaSegura{
-
+    
     
     NotaEdicaoGesture *swipeGesture2 = [[NotaEdicaoGesture alloc] initWithTarget:self action:@selector(deletarNota:)];
     swipeGesture2.direction = UISwipeGestureRecognizerDirectionDown;

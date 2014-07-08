@@ -56,9 +56,9 @@
         [[self scroll]addSubview:t];
     }
     
-   
+    
     [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(atualizaTextoDescricaoNota) userInfo:nil repeats:YES];
-
+    
     
 }
 
@@ -103,7 +103,7 @@
     [self removeViewDoScroll];
     [[Sinfonia sharedManager] metodoIniciaSinfonia:@"asa":@"ViolaoNylon"];
     [self addItensDesenhoPartituraAoScroll];
-
+    
 }
 
 
@@ -121,7 +121,7 @@
 - (IBAction)botaoStop:(id)sender {
     [[Sinfonia sharedManager]repetePlayerPartitura];
     [[self scroll] setContentOffset:CGPointMake(0,0) animated:YES];
-
+    
 }
 
 - (IBAction)botaoPlay:(id)sender {
@@ -142,9 +142,9 @@
     stepper.continuous = YES;
     stepper.autorepeat =YES;
     
-   
+    
     [Sinfonia sharedManager].controleVelocidaTranNota = stepper.value;
-   
+    
 }
 
 @end

@@ -223,10 +223,10 @@
 		3F75746B196BA07700B49773 /* zelda.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3F7573D1196BA07600B49773 /* zelda.xml */; };
 		3F75746C196BA07700B49773 /* Zelda_Ocarina_of_Time.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3F7573D2196BA07600B49773 /* Zelda_Ocarina_of_Time.xml */; };
 		3F75746D196BA07700B49773 /* Zelda_Underworld.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3F7573D3196BA07600B49773 /* Zelda_Underworld.xml */; };
-		3F75746E196BA07700B49773 /* ComposicaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7573D6196BA07600B49773 /* ComposicaoViewController.m */; };
-		3F75746F196BA07700B49773 /* LeituraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7573D8196BA07600B49773 /* LeituraViewController.m */; };
 		3FADCBB01953811300B90702 /* exercicios.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FADCBAF1953811300B90702 /* exercicios.png */; };
 		3FADCBB219538CA200B90702 /* RJ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FADCBB119538CA200B90702 /* RJ.jpg */; };
+		3FCD2CBA196BAF380096B154 /* LeituraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD2CB9196BAF380096B154 /* LeituraViewController.m */; };
+		3FCD2CBD196BB1380096B154 /* ComposicaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD2CBC196BB1380096B154 /* ComposicaoViewController.m */; };
 		3FD7EA3119529126005F089A /* Mod1Aula1Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7EA2F19529126005F089A /* Mod1Aula1Exe1ViewController.m */; };
 		3FD7EA3219529126005F089A /* Mod1Aula1Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD7EA3019529126005F089A /* Mod1Aula1Exe1ViewController.xib */; };
 		A804EEE1194F6D4A00DB14A9 /* ModuloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A804EEE0194F6D4A00DB14A9 /* ModuloViewController.m */; };
@@ -532,12 +532,12 @@
 		3F7573D1196BA07600B49773 /* zelda.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = zelda.xml; sourceTree = "<group>"; };
 		3F7573D2196BA07600B49773 /* Zelda_Ocarina_of_Time.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Zelda_Ocarina_of_Time.xml; sourceTree = "<group>"; };
 		3F7573D3196BA07600B49773 /* Zelda_Underworld.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Zelda_Underworld.xml; sourceTree = "<group>"; };
-		3F7573D5196BA07600B49773 /* ComposicaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposicaoViewController.h; sourceTree = "<group>"; };
-		3F7573D6196BA07600B49773 /* ComposicaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposicaoViewController.m; sourceTree = "<group>"; };
-		3F7573D7196BA07600B49773 /* LeituraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeituraViewController.h; sourceTree = "<group>"; };
-		3F7573D8196BA07600B49773 /* LeituraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeituraViewController.m; sourceTree = "<group>"; };
 		3FADCBAF1953811300B90702 /* exercicios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exercicios.png; sourceTree = "<group>"; };
 		3FADCBB119538CA200B90702 /* RJ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RJ.jpg; sourceTree = "<group>"; };
+		3FCD2CB8196BAF380096B154 /* LeituraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeituraViewController.h; sourceTree = SOURCE_ROOT; };
+		3FCD2CB9196BAF380096B154 /* LeituraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeituraViewController.m; sourceTree = SOURCE_ROOT; };
+		3FCD2CBB196BB1380096B154 /* ComposicaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposicaoViewController.h; sourceTree = SOURCE_ROOT; };
+		3FCD2CBC196BB1380096B154 /* ComposicaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposicaoViewController.m; sourceTree = SOURCE_ROOT; };
 		3FD7EA2E19529126005F089A /* Mod1Aula1Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula1Exe1ViewController.h; sourceTree = "<group>"; };
 		3FD7EA2F19529126005F089A /* Mod1Aula1Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula1Exe1ViewController.m; sourceTree = "<group>"; };
 		3FD7EA3019529126005F089A /* Mod1Aula1Exe1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula1Exe1ViewController.xib; sourceTree = "<group>"; };
@@ -1165,10 +1165,10 @@
 		3F7573D4196BA07600B49773 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3F7573D5196BA07600B49773 /* ComposicaoViewController.h */,
-				3F7573D6196BA07600B49773 /* ComposicaoViewController.m */,
-				3F7573D7196BA07600B49773 /* LeituraViewController.h */,
-				3F7573D8196BA07600B49773 /* LeituraViewController.m */,
+				3FCD2CB8196BAF380096B154 /* LeituraViewController.h */,
+				3FCD2CB9196BAF380096B154 /* LeituraViewController.m */,
+				3FCD2CBB196BB1380096B154 /* ComposicaoViewController.h */,
+				3FCD2CBC196BB1380096B154 /* ComposicaoViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1679,6 +1679,7 @@
 				2B64FA751969235000BC57FD /* Mod2Aula7Exe5ViewController.m in Sources */,
 				2B64FA84196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m in Sources */,
 				2B64FA7A1969235B00BC57FD /* Mod2Aula7Exe6ViewController.m in Sources */,
+				3FCD2CBA196BAF380096B154 /* LeituraViewController.m in Sources */,
 				2B64FA161969222600BC57FD /* Mod2Aula1Exe3ViewController.m in Sources */,
 				2B64FA4D196922C900BC57FD /* Mod2Aula4Exe6ViewController.m in Sources */,
 				2B64FA39196922A400BC57FD /* Mod2Aula4Exe2ViewController.m in Sources */,
@@ -1697,10 +1698,9 @@
 				2B64FA3E196922AD00BC57FD /* Mod2Aula4Exe3ViewController.m in Sources */,
 				0B03193B19521C0B00316D6B /* AulasViewController.m in Sources */,
 				2B64FA7F1969236D00BC57FD /* Mod2Aula8Exe1ViewController.m in Sources */,
-				3F75746E196BA07700B49773 /* ComposicaoViewController.m in Sources */,
+				3FCD2CBD196BB1380096B154 /* ComposicaoViewController.m in Sources */,
 				2B64FA0C1969220C00BC57FD /* Mod2Aula1Exe1ViewController.m in Sources */,
 				3F75740E196BA07700B49773 /* OpenALSupport.c in Sources */,
-				3F75746F196BA07700B49773 /* LeituraViewController.m in Sources */,
 				3F7573DF196BA07700B49773 /* DesenhaPartitura.m in Sources */,
 				2B64FA201969224F00BC57FD /* Mod2Aula2Exe2ViewController.m in Sources */,
 				A83ED3DA19520810006CB6A4 /* Biblioteca.m in Sources */,

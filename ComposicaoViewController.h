@@ -1,9 +1,9 @@
 //
 //  ComposicaoViewController.h
-//  DesenhoPartitura
+//  Musicando
 //
-//  Created by VINICIUS RESENDE FIALHO on 24/06/14.
-//  Copyright (c) 2014 Vinicius Resende Fialho. All rights reserved.
+//  Created by Vinicius Resende Fialho on 08/07/14.
+//  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -21,7 +21,7 @@
     int limiteDeNotas;
     NSMutableArray *listaSons;
     Nota *notaParaEdicao;
-  
+    
 }
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollEdicao;
@@ -50,5 +50,4 @@
 
 - (IBAction)tocarTodasNoras:(id)sender;
 - (IBAction)limparNotasPartituraEdicao:(id)sender;
-
 @end
