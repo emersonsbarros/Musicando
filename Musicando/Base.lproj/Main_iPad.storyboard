@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Leitura View Controller-->
+        <!--Leitura Partitura View Controller-->
         <scene sceneID="3AN-a4-C9f">
             <objects>
-                <viewController id="ZZA-eA-jRR" customClass="LeituraViewController" sceneMemberID="viewController">
+                <viewController id="ZZA-eA-jRR" customClass="LeituraPartituraViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0vN-Nh-aZs"/>
                         <viewControllerLayoutGuide type="bottom" id="nkR-rH-Xoc"/>
@@ -20,11 +20,11 @@
                                 <rect key="frame" x="0.0" y="20" width="1024" height="639"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
-                                    <outlet property="delegate" destination="ZZA-eA-jRR" id="G2l-Rf-sbF"/>
+                                    <outlet property="delegate" destination="ZZA-eA-jRR" id="HRs-jA-EDR"/>
                                 </connections>
                             </scrollView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fJf-Jd-atm">
-                                <rect key="frame" x="399" y="667" width="512" height="93"/>
+                                <rect key="frame" x="399" y="667" width="452" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0T5-q0-VTd">
@@ -35,7 +35,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="botaoPlay:" destination="ZZA-eA-jRR" eventType="touchUpInside" id="Hq0-jG-Cx5"/>
+                                            <action selector="botaoPlay:" destination="ZZA-eA-jRR" eventType="touchUpInside" id="XdH-3f-2e1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HA1-Sf-UCK">
@@ -46,7 +46,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="botaoStop:" destination="ZZA-eA-jRR" eventType="touchUpInside" id="485-RS-KzL"/>
+                                            <action selector="botaoStop:" destination="ZZA-eA-jRR" eventType="touchUpInside" id="hyk-xu-Prr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fp3-Ka-LTp">
@@ -57,7 +57,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="botaoPause:" destination="ZZA-eA-jRR" eventType="touchUpInside" id="5zw-Fz-TaK"/>
+                                            <action selector="botaoPause:" destination="ZZA-eA-jRR" eventType="touchUpInside" id="apS-Rv-Rgy"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fah-J9-yQl">
@@ -78,7 +78,7 @@
                                         <rect key="frame" x="338" y="44" width="94" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <connections>
-                                            <action selector="botaoAlteraVelocidade:" destination="ZZA-eA-jRR" eventType="valueChanged" id="0yM-0a-rgf"/>
+                                            <action selector="botaoAlteraVelocidade:" destination="ZZA-eA-jRR" eventType="valueChanged" id="wec-1o-0x5"/>
                                         </connections>
                                     </stepper>
                                 </subviews>
@@ -93,7 +93,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="tocarViolao:" destination="ZZA-eA-jRR" eventType="touchUpInside" id="wWp-2u-JSz"/>
+                                    <action selector="tocarViolao:" destination="ZZA-eA-jRR" eventType="touchUpInside" id="Z4H-f8-gmn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tF8-Cb-UC9">
@@ -104,7 +104,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="tocar:" destination="ZZA-eA-jRR" eventType="touchUpInside" id="lSB-fd-Iau"/>
+                                    <action selector="tocar:" destination="ZZA-eA-jRR" eventType="touchUpInside" id="bGa-P7-DsX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXx-t1-6Nl">
@@ -115,7 +115,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="tocarFlauta:" destination="ZZA-eA-jRR" eventType="touchUpInside" id="QGn-QH-A2T"/>
+                                    <action selector="tocarFlauta:" destination="ZZA-eA-jRR" eventType="touchUpInside" id="68f-th-Kqh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wp6-oi-peV">
@@ -126,7 +126,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="piH-kM-Q8k" kind="modal" modalTransitionStyle="crossDissolve" id="7us-nQ-6UY"/>
+                                    <segue destination="piH-kM-Q8k" kind="modal" id="sRR-sR-4oW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -135,9 +135,9 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="scroll" destination="fzH-ZZ-5xy" id="JSY-OK-vU2"/>
-                        <outlet property="textoDescricaoNota" destination="Fah-J9-yQl" id="gfD-3W-hBF"/>
-                        <outlet property="textoDescricaoVelocidade" destination="aRm-d4-Etb" id="84t-W1-jCD"/>
+                        <outlet property="scroll" destination="fzH-ZZ-5xy" id="FR8-gq-vd2"/>
+                        <outlet property="textoDescricaoNota" destination="Fah-J9-yQl" id="Xb7-Cz-WGc"/>
+                        <outlet property="textoDescricaoVelocidade" destination="aRm-d4-Etb" id="VpF-fA-hbd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="840-Pe-aAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -448,10 +448,10 @@
             </objects>
             <point key="canvasLocation" x="4031" y="951"/>
         </scene>
-        <!--Composicao View Controller-->
+        <!--Composicao Partitura View Controller-->
         <scene sceneID="gW5-a8-H1H">
             <objects>
-                <viewController id="piH-kM-Q8k" customClass="ComposicaoViewController" sceneMemberID="viewController">
+                <viewController id="piH-kM-Q8k" customClass="ComposicaoPartituraViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LNe-NE-uCr"/>
                         <viewControllerLayoutGuide type="bottom" id="Tdg-QD-dgv"/>
@@ -468,7 +468,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="tocarTodasNoras:" destination="piH-kM-Q8k" eventType="touchUpInside" id="Tb1-W0-RrF"/>
+                                    <action selector="tocarTodasNoras:" destination="piH-kM-Q8k" eventType="touchUpInside" id="YMe-ei-t1d"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9A8-75-77M">
@@ -479,7 +479,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="limparNotasPartituraEdicao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="sTe-dD-nSC"/>
+                                    <action selector="limparNotasPartituraEdicao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="u6D-wR-jfP"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VG5-HZ-jkS">
@@ -493,7 +493,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="semibreveBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="jgg-Nx-deg"/>
+                                            <action selector="semibreveBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="WJ3-MA-ZAO"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ck5-Sb-LuX">
@@ -503,7 +503,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="minimaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="UOX-pl-nyz"/>
+                                            <action selector="minimaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="nHp-o7-o80"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iL5-aJ-clc">
@@ -513,7 +513,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="seminimaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="9BJ-xs-EOR"/>
+                                            <action selector="seminimaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="89A-jl-yXC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wn-l5-j0a">
@@ -523,7 +523,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="colcheiaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="cnN-Cs-SyI"/>
+                                            <action selector="colcheiaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="UM7-07-u4a"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hn-mG-Vzo">
@@ -533,7 +533,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="semicolcheiaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="WLb-km-cLe"/>
+                                            <action selector="semicolcheiaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="gUf-XS-6Ux"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gQ-3j-Qo1">
@@ -543,7 +543,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="fusaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="Gl7-LE-NuL"/>
+                                            <action selector="fusaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="BvK-fj-1TH"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoF-yq-bhw">
@@ -553,17 +553,17 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="semifusaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="U1b-ni-rjQ"/>
+                                            <action selector="semifusaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="Gkz-gd-5Cm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vC-7e-eWW">
-                                        <rect key="frame" x="549" y="26" width="67" height="19"/>
+                                        <rect key="frame" x="549" y="24" width="67" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="4-2Pausa.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="pausaSemibreveBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="O2c-uq-Gdx"/>
+                                            <action selector="pausaSemibreveBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="dnc-vc-pJk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDj-ac-Rca">
@@ -573,7 +573,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="pausaMinimaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="DiG-qB-9eX"/>
+                                            <action selector="pausaMinimaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="1YZ-2Z-xBQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJA-cv-Kc5">
@@ -583,7 +583,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="pausaFusaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="1gi-1b-UTI"/>
+                                            <action selector="pausaFusaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="Z0A-Iz-0ee"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idq-vs-pRX">
@@ -593,7 +593,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="pausaSemicolcheiaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="QOv-XP-PLT"/>
+                                            <action selector="pausaSemicolcheiaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="vAU-RY-onm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBt-vp-TJP">
@@ -603,7 +603,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="pausaSemifusaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="8fe-sE-ZkP"/>
+                                            <action selector="pausaSemifusaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="BQk-2s-X4n"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysf-0c-Vu5">
@@ -613,7 +613,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="pausaSeminimaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="dYB-9y-bcx"/>
+                                            <action selector="pausaSeminimaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="7qZ-IK-nIh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSU-oT-xJ6">
@@ -623,7 +623,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="pausaColcheiaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="dLd-Ih-xtM"/>
+                                            <action selector="pausaColcheiaBotao:" destination="piH-kM-Q8k" eventType="touchUpInside" id="vLR-mn-Mh4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -633,7 +633,7 @@
                                 <rect key="frame" x="0.0" y="117" width="1024" height="557"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <outlet property="delegate" destination="piH-kM-Q8k" id="LWj-Fg-29j"/>
+                                    <outlet property="delegate" destination="piH-kM-Q8k" id="LHg-3s-kCO"/>
                                 </connections>
                             </scrollView>
                         </subviews>
@@ -642,7 +642,7 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="scrollEdicao" destination="IMV-6J-GBa" id="XaK-A2-yuI"/>
+                        <outlet property="scrollEdicao" destination="IMV-6J-GBa" id="jg6-xn-WAQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcw-uT-LZf" userLabel="First Responder" sceneMemberID="firstResponder"/>

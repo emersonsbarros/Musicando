@@ -101,7 +101,8 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
--(void)desenhaContornoPartituraHorizontal{
+
+-(void)desenhaContornoPartitura{
     
     float posVerticaRiscoPentagrama = 120.0f;
     float espacamentoRiscoPentagrama = 20.0f;
@@ -115,74 +116,8 @@
     if(auxPar %2 ==0) auxPar = auxPar +1;
     codeValue2 = [NSString stringWithFormat:@"%d",auxPar];
     
-    //    NSLog(@"Numero Compassso = %@",codeValue2);
-    //    NSLog(@"Numero de pentragrans = %f",[codeValue2 floatValue] / 4);
-    [Sinfonia sharedManager].numeroTotalCompassos = [codeValue2 intValue];
-    
-    int numeroDivisaoPentagrama = 4;
-    int numeroPentagrama;
-    
-    if([codeValue2 floatValue] / numeroDivisaoPentagrama > [codeValue2 intValue] / numeroDivisaoPentagrama ){
-        numeroPentagrama = [codeValue2 intValue] / numeroDivisaoPentagrama + 1;
-    }else{
-        numeroPentagrama = [codeValue2 intValue] / numeroDivisaoPentagrama;
-    }
-    
-    self.listaImagensColunaPentagrama = [[NSMutableArray alloc]init];
-    self.listaImagensTracoPentagrama = [[NSMutableArray alloc]init];
-    
-    
-    for(int i=0;i<numeroPentagrama;i++){
-        
-        posVerticalColuna = 250.0f;
-        
-        for(int i =1;i<=4;i++){
-            
-            UIImageView *coluna = [[UIImageView alloc]
-                                   initWithFrame:CGRectMake(posVerticalColuna,posVerticaRiscoPentagrama+100, 2.0f, 120.0f)];
-            coluna.backgroundColor = [UIColor blackColor];
-            posVerticalColuna += espacamentoColunaPentagrama;
-            
-            [ self.listaImagensColunaPentagrama addObject:coluna];
-            
-        }
-        
-        
-        espacamentroColunaentrePentagrama +=  espacamentroColunaentrePentagrama;
-        
-        
-        for(int i=0;i<11;i++){
-            UIImageView *linha = [[UIImageView alloc]
-                                  initWithFrame:CGRectMake(0.0f, posVerticaRiscoPentagrama + espacamentoRiscoPentagrama, 1100.0f, 2.0f)];
-            posVerticaRiscoPentagrama = posVerticaRiscoPentagrama + espacamentoRiscoPentagrama;
-            linha.backgroundColor = [UIColor clearColor];
-            
-            if((i>=5)&&(i<10)){
-                linha.backgroundColor = [UIColor blackColor];
-            }
-            
-            [ self.listaImagensTracoPentagrama addObject:linha];
-        }
-        
-        posVerticaRiscoPentagrama = posVerticaRiscoPentagrama +  espacamentoEntrePentagrama;
-        
-    }
-}
-
-
--(void)desenhaContornoPartituraVertical{
-    
-    float posVerticaRiscoPentagrama = 120.0f;
-    float espacamentoRiscoPentagrama = 20.0f;
-    
-    float posVerticalColuna = 0.0f;
-    float espacamentoColunaPentagrama = 260.0f;
-    float espacamentroColunaentrePentagrama = 100.0f;
-    
-    int auxPar= [codeValue2 intValue];
-    if(auxPar %2 ==0) auxPar = auxPar +1;
-    codeValue2 = [NSString stringWithFormat:@"%d",auxPar];
-    
+//    NSLog(@"Numero Compassso = %@",codeValue2);
+//    NSLog(@"Numero de pentragrans = %f",[codeValue2 floatValue] / 4);
     [Sinfonia sharedManager].numeroTotalCompassos = [codeValue2 intValue];
     
     int numeroDivisaoPentagrama = 4;
@@ -197,12 +132,12 @@
     self.listaImagensColunaPentagrama = [[NSMutableArray alloc]init];
      self.listaImagensTracoPentagrama = [[NSMutableArray alloc]init];
 
-  
+    
     for(int i=0;i<numeroPentagrama;i++){
         
         posVerticalColuna = 250.0f;
         
-        for(int i =0;i<=[codeValue2 intValue];i++){
+        for(int i =1;i<=4;i++){
             
             UIImageView *coluna = [[UIImageView alloc]
                                    initWithFrame:CGRectMake(posVerticalColuna,posVerticaRiscoPentagrama+100, 2.0f, 120.0f)];
@@ -213,25 +148,27 @@
         
         }
         
+       
         espacamentroColunaentrePentagrama +=  espacamentroColunaentrePentagrama;
         
-    }
-    
-    for(int i=0;i<11;i++){
-        posVerticalColuna = 250.0f;
-        UIImageView *linha = [[UIImageView alloc]
-                              initWithFrame:CGRectMake(0.0f, posVerticaRiscoPentagrama + espacamentoRiscoPentagrama, 10000, 2.0f)];
-        posVerticaRiscoPentagrama = posVerticaRiscoPentagrama + espacamentoRiscoPentagrama;
-        linha.backgroundColor = [UIColor clearColor];
         
-        if((i>=5)&&(i<10)){
-            linha.backgroundColor = [UIColor blackColor];
+        for(int i=0;i<11;i++){
+            UIImageView *linha = [[UIImageView alloc]
+                                  initWithFrame:CGRectMake(0.0f, posVerticaRiscoPentagrama + espacamentoRiscoPentagrama, 1100.0f, 2.0f)];
+            posVerticaRiscoPentagrama = posVerticaRiscoPentagrama + espacamentoRiscoPentagrama;
+            linha.backgroundColor = [UIColor clearColor];
+
+            if((i>=5)&&(i<10)){
+                linha.backgroundColor = [UIColor blackColor];
+            }
+   
+            [ self.listaImagensTracoPentagrama addObject:linha];
         }
         
-        [ self.listaImagensTracoPentagrama addObject:linha];
+        posVerticaRiscoPentagrama = posVerticaRiscoPentagrama +  espacamentoEntrePentagrama;
+        
     }
 }
-
 
 -(void)desenhaObjetosClave {
     
@@ -375,7 +312,7 @@
      self.textoNomePartitura = tituloPartitura;
     
     
-    [self desenhaContornoPartituraHorizontal];
+    [self desenhaContornoPartitura];
     
     [self desenhaObjetosClave];
     

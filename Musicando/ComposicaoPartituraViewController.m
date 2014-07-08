@@ -1,21 +1,18 @@
 //
-//  ComposicaoViewController.m
-//  DesenhoPartitura
+//  ComposicaoPartituraViewController.m
+//  Musicando
 //
-//  Created by VINICIUS RESENDE FIALHO on 24/06/14.
-//  Copyright (c) 2014 Vinicius Resende Fialho. All rights reserved.
+//  Created by Vinicius Resende Fialho on 08/07/14.
+//  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
 
-#import "ComposicaoViewController.h"
+#import "ComposicaoPartituraViewController.h"
 
-@interface ComposicaoViewController ()
+@interface ComposicaoPartituraViewController ()
 
 @end
 
-#define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
-
-
-@implementation ComposicaoViewController
+@implementation ComposicaoPartituraViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -827,7 +824,6 @@
     self.view.userInteractionEnabled = YES;
     [self.scrollEdicao addGestureRecognizer:singleTap];
     
-    
 }
 
 -(void)rearranjaPosicoesNotas:(int)posicaoNotaDeletada{
@@ -906,6 +902,7 @@
     notaSegura.imagemNota.userInteractionEnabled = YES;
     swipeGesture2.notaEdicaoGesture = notaSegura;
     
+    
     [notaSegura.imagemNota addGestureRecognizer:swipeGesture2];
     
     
@@ -929,7 +926,6 @@
     posicaoX = 150;
     espacamentoEntreNotas = 110;
     limiteDeNotas = 100;
-    
     [self addGesturePrintarNotasTela];
     
 }
@@ -1002,5 +998,3 @@
 }
 
 @end
-
-

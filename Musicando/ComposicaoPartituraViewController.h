@@ -1,19 +1,19 @@
 //
-//  ComposicaoViewController.h
+//  ComposicaoPartituraViewController.h
 //  Musicando
 //
 //  Created by Vinicius Resende Fialho on 08/07/14.
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "Sinfonia.h"
 #import "DataBaseInstrumento.h"
 #import "DesenhaPartitura.h"
 #import "DataBaseNotaPadrao.h"
 #import "NotaEdicaoGesture.h"
 
-@interface ComposicaoViewController : UIViewController <UIScrollViewDelegate> {
+@interface ComposicaoPartituraViewController : UIViewController <UIScrollViewDelegate> {
+    
     Nota *nota;
     NSMutableArray *listaNotasEdicao;
     int posicaoX;
@@ -24,10 +24,11 @@
     
 }
 
+- (IBAction)tocarTodasNoras:(id)sender;
+- (IBAction)limparNotasPartituraEdicao:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollEdicao;
 
-
-//Botoes notas
 - (IBAction)semibreveBotao:(id)sender;
 - (IBAction)minimaBotao:(id)sender;
 - (IBAction)seminimaBotao:(id)sender;
@@ -45,9 +46,4 @@
 - (IBAction)pausaFusaBotao:(id)sender;
 - (IBAction)pausaSemifusaBotao:(id)sender;
 
-
-
-
-- (IBAction)tocarTodasNoras:(id)sender;
-- (IBAction)limparNotasPartituraEdicao:(id)sender;
 @end

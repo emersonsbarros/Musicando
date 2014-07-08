@@ -137,7 +137,7 @@
 
 -(void)instanciaInstrumentoViolao{
     Instrumento *instr1 = [[Instrumento alloc]init];
-    instr1.nomeInstrumento = @"ViolaoNylon";
+    instr1.nomeInstrumento = @"natural";
     
     NSMutableArray *nomeNotas = [[NSMutableArray alloc]init];
     [nomeNotas addObject:@"0A"];

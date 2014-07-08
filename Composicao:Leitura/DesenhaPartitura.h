@@ -23,7 +23,6 @@
 +(DesenhaPartitura*)sharedManager;
 -(void)metodosDesenhaPartitura;
 
-
 @property  NSMutableArray *listaImagensTracoPentagrama;
 @property  NSMutableArray *listaImagensColunaPentagrama;
 @property  NSMutableArray *listaArmadurasClave;

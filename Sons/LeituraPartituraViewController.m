@@ -1,8 +1,18 @@
+//
+//  LeituraPartituraViewController.m
+//  Musicando
+//
+//  Created by Vinicius Resende Fialho on 08/07/14.
+//  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
+//
 
-#import "LeituraViewController.h"
+#import "LeituraPartituraViewController.h"
 
+@interface LeituraPartituraViewController ()
 
-@implementation LeituraViewController
+@end
+
+@implementation LeituraPartituraViewController
 
 -(void)atualizaBarraScroll{
     if([Sinfonia sharedManager].compassoAtual < [Sinfonia sharedManager].numeroTotalCompassos){
@@ -65,6 +75,7 @@
 -(void)removeViewDoScroll{
     [Sinfonia sharedManager].compassoAtual = 0;
     [Sinfonia sharedManager].contadorScrollDesloca = 500;
+    [Sinfonia sharedManager].controleVelocidaTranNota = 0.5;
     [[self scroll] setContentOffset:CGPointMake(0,0) animated:YES];
     for (UIView *subView in self.scroll.subviews){
         [subView removeFromSuperview];
@@ -87,9 +98,10 @@
     
 }
 
--(void)viewDidDisappear:(BOOL)animated{
-    [[Sinfonia sharedManager]pararPlayerPartitura];
-}
+//-(void)viewDidDisappear:(BOOL)animated{
+//    [[Sinfonia sharedManager]pararPlayerPartitura];
+//}
+
 
 - (IBAction)tocar:(id)sender {
     [self removeViewDoScroll];
@@ -101,7 +113,7 @@
 
 - (IBAction)tocarViolao:(id)sender {
     [self removeViewDoScroll];
-    [[Sinfonia sharedManager] metodoIniciaSinfonia:@"asa":@"ViolaoNylon"];
+    [[Sinfonia sharedManager] metodoIniciaSinfonia:@"asa":@"natural"];
     [self addItensDesenhoPartituraAoScroll];
     
 }
@@ -142,13 +154,8 @@
     stepper.continuous = YES;
     stepper.autorepeat =YES;
     
-    
     [Sinfonia sharedManager].controleVelocidaTranNota = stepper.value;
     
 }
 
 @end
-
-
-
-
