@@ -98,9 +98,9 @@
     
 }
 
-//-(void)viewDidDisappear:(BOOL)animated{
-//    [[Sinfonia sharedManager]pararPlayerPartitura];
-//}
+-(void)viewDidDisappear:(BOOL)animated{
+    [[Sinfonia sharedManager]pararPlayerPartitura];
+}
 
 
 - (IBAction)tocar:(id)sender {

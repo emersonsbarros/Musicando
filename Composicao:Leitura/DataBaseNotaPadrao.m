@@ -41,31 +41,31 @@
     nota1.tipoNota = @"whole";
     
     Nota *nota2 = [[Nota alloc]init];
-    nota2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"6.png"]];
+    nota2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"2.png"]];
     nota2.nomeNota = @"minima";
     nota2.tipoNota = @"half";
     
     
     Nota *nota3 = [[Nota alloc]init];
-    nota3.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"4.png"]];
+    nota3.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"3.png"]];
     nota3.nomeNota = @"seminima";
     nota3.tipoNota = @"quarter";
     
     
     Nota *nota4 = [[Nota alloc]init];
-    nota4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"3.png"]];
+    nota4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"4.png"]];
     nota4.nomeNota = @"colcheia";
     nota4.tipoNota = @"eighth";
     
     
     Nota *nota5 = [[Nota alloc]init];
-    nota5.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"2.png"]];
+    nota5.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"5.png"]];
     nota5.nomeNota = @"semicolcheia";
     nota5.tipoNota = @"16th";
     
     
     Nota *nota6 = [[Nota alloc]init];
-    nota6.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"7.png"]];
+    nota6.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"6.png"]];
     nota6.nomeNota = @"fusa";
     nota6.tipoNota = @"32th";
 
