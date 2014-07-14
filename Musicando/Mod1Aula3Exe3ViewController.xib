@@ -1,20 +1,146 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4437" systemVersion="13A451" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3662"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Mod1Aula3Exe3ViewController">
             <connections>
+                <outlet property="imgDoMascote" destination="PpM-4A-dgE" id="5HU-OQ-bhG"/>
+                <outlet property="imgNota1" destination="det-0k-WIO" id="qoj-9G-h56"/>
+                <outlet property="imgNota2" destination="3mt-Ww-QbX" id="vaz-Oa-RfZ"/>
+                <outlet property="imgNota3" destination="feP-8o-zyv" id="fKV-5C-aXd"/>
+                <outlet property="imgNota4" destination="0s8-Mg-1b9" id="3fo-fn-Qwf"/>
+                <outlet property="imgNota5" destination="uph-XY-k2a" id="VWm-DR-5ye"/>
+                <outlet property="lblTextoMascote" destination="72k-5q-jAW" id="SVo-bq-MTU"/>
+                <outlet property="outBtoStartIntro" destination="JGQ-er-J5c" id="Szl-VH-cnS"/>
+                <outlet property="outFlauta" destination="Tr7-qV-rdk" id="9LW-B8-4HQ"/>
+                <outlet property="outPiano" destination="AJz-Hd-8ZK" id="IcS-Qt-1xF"/>
+                <outlet property="outTocaTreco1" destination="aOL-FJ-JgB" id="Dta-gx-pMO"/>
+                <outlet property="outTocaTreco2" destination="Soh-vV-pIZ" id="LQY-Zs-igm"/>
+                <outlet property="outViolaco" destination="OzY-al-ed5" id="rfE-mW-f1h"/>
                 <outlet property="view" destination="2" id="3"/>
+                <outlet property="viewDeExercitar" destination="YcL-ID-iBw" id="JEl-6E-ehw"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2">
-            <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descobrimos como uma música é formada e como o ritmo pode alterar seu tempo e velocidade. Vamos agora saber onde se encaixa." lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="384" translatesAutoresizingMaskIntoConstraints="NO" id="72k-5q-jAW">
+                    <rect key="frame" x="376" y="325" width="384" height="117"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="PpM-4A-dgE">
+                    <rect key="frame" x="158" y="284" width="200" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGQ-er-J5c">
+                    <rect key="frame" x="440" y="497" width="295" height="43"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.31000388150000002" green="0.76799665179999999" blue="0.31736044019999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="COMEÇAR"/>
+                    <connections>
+                        <action selector="btoStartIntro:" destination="-1" eventType="touchUpInside" id="iVW-WN-9sJ"/>
+                    </connections>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YcL-ID-iBw">
+                    <rect key="frame" x="163" y="253" width="861" height="434"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Soh-vV-pIZ">
+                            <rect key="frame" x="36" y="256" width="394" height="165"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="tocaTreco.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tocaTreco2:" destination="-1" eventType="touchUpInside" id="tUI-Iv-xKz"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOL-FJ-JgB">
+                            <rect key="frame" x="36" y="18" width="394" height="165"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="tocaTreco.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tocaTreco1:" destination="-1" eventType="touchUpInside" id="N2Q-bm-pcJ"/>
+                            </connections>
+                        </button>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pausaBloco.png" translatesAutoresizingMaskIntoConstraints="NO" id="feP-8o-zyv">
+                            <rect key="frame" x="136" y="343" width="46" height="43"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doBloco.png" translatesAutoresizingMaskIntoConstraints="NO" id="0s8-Mg-1b9">
+                            <rect key="frame" x="197" y="343" width="46" height="43"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="siBloco.png" translatesAutoresizingMaskIntoConstraints="NO" id="uph-XY-k2a">
+                            <rect key="frame" x="197" y="300" width="46" height="43"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJz-Hd-8ZK">
+                            <rect key="frame" x="573" y="117" width="200" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button" image="piano.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="piano:" destination="-1" eventType="touchUpInside" id="LCg-fS-yyZ"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tr7-qV-rdk">
+                            <rect key="frame" x="290" y="117" width="200" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button" image="flauta.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="flauta:" destination="-1" eventType="touchUpInside" id="coY-lq-2P7"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzY-al-ed5">
+                            <rect key="frame" x="36" y="117" width="200" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button" image="violao.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="violao:" destination="-1" eventType="touchUpInside" id="4UM-4g-AQ4"/>
+                            </connections>
+                        </button>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="faBloco.png" translatesAutoresizingMaskIntoConstraints="NO" id="3mt-Ww-QbX">
+                            <rect key="frame" x="77" y="343" width="46" height="43"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reBloco.png" translatesAutoresizingMaskIntoConstraints="NO" id="det-0k-WIO">
+                            <rect key="frame" x="77" y="300" width="46" height="43"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
         </view>
     </objects>
+    <resources>
+        <image name="doBloco.png" width="120" height="120"/>
+        <image name="faBloco.png" width="120" height="120"/>
+        <image name="flauta.png" width="436" height="445"/>
+        <image name="mascote.png" width="1000" height="1000"/>
+        <image name="pausaBloco.png" width="123" height="120"/>
+        <image name="piano.png" width="555" height="473"/>
+        <image name="reBloco.png" width="120" height="120"/>
+        <image name="siBloco.png" width="120" height="122"/>
+        <image name="tocaTreco.png" width="793" height="307"/>
+        <image name="violao.png" width="256" height="282"/>
+    </resources>
 </document>

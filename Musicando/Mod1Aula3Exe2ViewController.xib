@@ -1,20 +1,171 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4437" systemVersion="13A451" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3662"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Mod1Aula3Exe2ViewController">
             <connections>
+                <outlet property="imagemDoMascote" destination="wob-m9-6eX" id="n1p-7g-t1c"/>
+                <outlet property="imgNota1" destination="2DA-Qx-TRB" id="8Tl-HC-WAv"/>
+                <outlet property="imgNota2" destination="ZFY-bC-PwR" id="buk-aZ-UOL"/>
+                <outlet property="imgNota3" destination="c7P-2q-6au" id="6Ko-TA-wAD"/>
+                <outlet property="lblTextoMascote" destination="5Rc-OQ-uhM" id="Ens-OR-Mry"/>
+                <outlet property="outBtoClassico" destination="GLh-ge-w1N" id="cHa-9o-01h"/>
+                <outlet property="outBtoMaestro" destination="I4W-dS-FL1" id="KHu-Ll-eoi"/>
+                <outlet property="outBtoMicrofone" destination="V4f-sT-HUs" id="OZW-kO-8NG"/>
+                <outlet property="outBtoRock" destination="l31-fD-k3d" id="Kem-rL-gf8"/>
+                <outlet property="outBtoSamba" destination="Abq-70-TXO" id="yOV-HR-fCF"/>
+                <outlet property="outBtoStartIntro" destination="uV5-35-VV4" id="jsx-cz-h3V"/>
+                <outlet property="outBtoTempoVelocidade" destination="jdx-uu-yP8" id="9KM-T2-om6"/>
+                <outlet property="outTocaTreco1" destination="Pe8-SC-5tD" id="KUv-T3-6Rj"/>
+                <outlet property="outTocaTreco2" destination="Kch-lD-Gby" id="FEU-kA-UDY"/>
                 <outlet property="view" destination="2" id="3"/>
+                <outlet property="viewDosRitmos" destination="h0f-aX-gks" id="Ggo-yF-9Yi"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2">
-            <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="wob-m9-6eX">
+                    <rect key="frame" x="264" y="269" width="200" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="453" translatesAutoresizingMaskIntoConstraints="NO" id="5Rc-OQ-uhM">
+                    <rect key="frame" x="472" y="310" width="453" height="117"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <string key="text">Pra falarmos de ritmo, talvez a primeira coisa que venha a sua mente é estilo como rock ou samba. Mas você o que diferencia cada um?</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uV5-35-VV4">
+                    <rect key="frame" x="472" y="482" width="274" height="43"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.31000388150000002" green="0.76799665179999999" blue="0.31736044019999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="COMEÇAR"/>
+                    <connections>
+                        <action selector="btoStartIntro:" destination="-1" eventType="touchUpInside" id="Xrn-7R-Svc"/>
+                    </connections>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h0f-aX-gks">
+                    <rect key="frame" x="236" y="249" width="880" height="384"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLh-ge-w1N">
+                            <rect key="frame" x="20" y="92" width="150" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="classicoSimbolo.jpg">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btoClassico:" destination="-1" eventType="touchUpInside" id="VdT-Q3-4aR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l31-fD-k3d">
+                            <rect key="frame" x="254" y="98" width="200" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="rockSimbolo.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btoRock:" destination="-1" eventType="touchUpInside" id="0kY-xl-vdD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abq-70-TXO">
+                            <rect key="frame" x="514" y="109" width="185" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="sambaSimbolo.jpg">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btoSamba:" destination="-1" eventType="touchUpInside" id="R25-9w-oTC"/>
+                            </connections>
+                        </button>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doBloco.png" translatesAutoresizingMaskIntoConstraints="NO" id="2DA-Qx-TRB">
+                            <rect key="frame" x="161" y="280" width="46" height="43"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pausaBloco.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZFY-bC-PwR">
+                            <rect key="frame" x="107" y="280" width="46" height="43"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="laBloco.png" translatesAutoresizingMaskIntoConstraints="NO" id="c7P-2q-6au">
+                            <rect key="frame" x="53" y="280" width="46" height="43"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <button hidden="YES" opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kch-lD-Gby">
+                            <rect key="frame" x="34" y="236" width="300" height="110"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="tocaTreco.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tocaTreco2:" destination="-1" eventType="touchUpInside" id="iA0-Cf-93s"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pe8-SC-5tD">
+                            <rect key="frame" x="34" y="20" width="300" height="110"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="tocaTreco.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tocaTreco1:" destination="-1" eventType="touchUpInside" id="oOz-dr-ZoQ"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdx-uu-yP8">
+                            <rect key="frame" x="9" y="82" width="242" height="220"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="velocidadeTempo.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tempoVelocidade:" destination="-1" eventType="touchUpInside" id="TYj-1f-bJ6"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4W-dS-FL1">
+                            <rect key="frame" x="288" y="89" width="242" height="220"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="maestro.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="maestro:" destination="-1" eventType="touchUpInside" id="yTN-kv-H12"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4f-sT-HUs">
+                            <rect key="frame" x="594" y="122" width="165" height="174"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="microfone.jpg">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="microfone:" destination="-1" eventType="touchUpInside" id="Hnl-RF-CRn"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
         </view>
     </objects>
+    <resources>
+        <image name="classicoSimbolo.jpg" width="562" height="807"/>
+        <image name="doBloco.png" width="120" height="120"/>
+        <image name="laBloco.png" width="121" height="120"/>
+        <image name="maestro.png" width="287" height="246"/>
+        <image name="mascote.png" width="1000" height="1000"/>
+        <image name="microfone.jpg" width="161" height="170"/>
+        <image name="pausaBloco.png" width="123" height="120"/>
+        <image name="rockSimbolo.png" width="178" height="178"/>
+        <image name="sambaSimbolo.jpg" width="320" height="231"/>
+        <image name="tocaTreco.png" width="793" height="307"/>
+        <image name="velocidadeTempo.png" width="552" height="366"/>
+    </resources>
 </document>

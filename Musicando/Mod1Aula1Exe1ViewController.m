@@ -93,7 +93,7 @@
 }
 
 - (IBAction)btoVeiculo:(id)sender {
-    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"helicoptero" withExtension:@"wav"];
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"nota3C" withExtension:@"aif"];
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
     
     self.audioPlayer.play;
@@ -101,7 +101,7 @@
 }
 
 - (IBAction)btoNota:(id)sender {
-    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"nota" withExtension:@"aif"];
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"nota3C" withExtension:@"wav"];
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
     
     self.audioPlayer.play;
