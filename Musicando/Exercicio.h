@@ -21,6 +21,7 @@
 @property UIImage *capa;
 
 //Construtor
--(id)init: (int)idView nome:(NSString*)nome nomeView:(NSString*)nomeView experiencia:(int)experiencia pontuacaoMaxima:(int)pontuacaoMaxima mascote:(Mascote*)mascote:(UIImage*)capa;
+-(id)init: (int)idView nome:(NSString*)nome nomeView:(NSString*)nomeView experiencia:(int)experiencia pontuacaoMaxima:(int)pontuacaoMaxima :(UIImage*)capa;
+
 
 @end

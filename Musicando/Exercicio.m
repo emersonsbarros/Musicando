@@ -11,7 +11,7 @@
 @implementation Exercicio
 
 
--(id)init: (int)idView nome:(NSString*)nome nomeView:(NSString*)nomeView experiencia:(int)experiencia pontuacaoMaxima:(int)pontuacaoMaxima mascote:(Mascote*)mascote :(UIImage*)capa{
+-(id)init: (int)idView nome:(NSString*)nome nomeView:(NSString*)nomeView experiencia:(int)experiencia pontuacaoMaxima:(int)pontuacaoMaxima :(UIImage*)capa{
     
     self = [super init];
     if(self){
@@ -21,7 +21,7 @@
         self.nomeView = nomeView;
         self.experiencia = experiencia;
         self.pontuacaoMaxima = pontuacaoMaxima;
-        self.mascote = mascote;
+        self.mascote = [[Mascote alloc]init];
         self.capa = capa;
         
     }

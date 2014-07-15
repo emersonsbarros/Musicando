@@ -11,16 +11,6 @@
 @implementation Mascote
 
 
-//Singleton
-+(Mascote*)sharedManager{
-    static Mascote *mascote = nil;
-    if(!mascote){
-        mascote = [[super allocWithZone:nil] init];
-    }
-    return mascote;
-}
-
-
 -(id)init{
     self = [super init];
     if(self){
@@ -32,9 +22,8 @@
 }
 
 
-+(id)allocWithZone:(struct _NSZone *)zone{
-    return [self sharedManager];
-}
+
+
 
 
 @end

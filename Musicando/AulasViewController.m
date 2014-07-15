@@ -33,12 +33,15 @@
 
 -(void)tapDetected{
     
-    [UIView animateWithDuration:2.0
+    [UIView animateWithDuration:1.0
                      animations:^(void){
                          self.aulaAtual.frame = self.posOriginalAula;
                          self.viewExercicios.hidden = YES;
+                         
                      } completion:^(BOOL finished){
-                       
+                         for(Aula *aulas in [Biblioteca sharedManager].moduloAtual.listaDeAulas){
+                             aulas.hidden = NO;
+                         }
                      }];
 }
 
@@ -97,6 +100,14 @@
     self.aulaAtual = button;
     [Biblioteca sharedManager].aulaAtual = button;
     
+    for(Aula *aulas in [Biblioteca sharedManager].moduloAtual.listaDeAulas){
+        if([aulas.nome isEqualToString:self.aulaAtual.nome]){
+            
+        }else{
+            aulas.hidden = YES;
+        }
+    }
+    
     [UIView animateWithDuration:1.0
                      animations:^(void){
                          self.posOriginalAula = button.frame;
@@ -115,10 +126,13 @@
 //Cria os botões dos exercícios e adiciona-os na view
 -(void)carregaExercicios{
     
+    for (UIView *subView in self.viewExercicios.subviews){
+        [subView removeFromSuperview];
+    }
+    
     int contadorDistanciaEntreBotoes = 80;
     
     for(Exercicio *exerc in [[[Biblioteca sharedManager] aulaAtual] listaDeExercicios]){
-        
         
         //Quando a aula recebe o toque será chamado seu storyboard
         [exerc addTarget:self action:@selector(chamaStoryBoardExercicio:) forControlEvents:UIControlEventTouchUpInside];

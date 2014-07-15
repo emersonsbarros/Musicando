@@ -10,30 +10,66 @@
 #import "Fala.h"
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import "Nota.h"
+#import "Sinfonia.h"
+#import "EfeitoImagem.h"
+#import "EfeitoMascote.h"
+#import <QuartzCore/QuartzCore.h>
 
-@interface Mod1Aula1Exe1ViewController : UIViewController
+@interface Mod1Aula1Exe1ViewController : UIViewController <UIGestureRecognizerDelegate>
+
 
 
 //Mascote
-@property (strong, nonatomic) IBOutlet UIImageView *imagemDoMascote2;
-@property (weak, nonatomic) IBOutlet UILabel *lblFalaDoMascote;
+//Codigo mutavel
+@property NSMutableArray *listaImangesColisao;
 @property Biblioteca *testaBiblio;
 @property Conversa *testaConversa;
 @property Fala *testaFala;
+@property int contadorDeFalas;
+@property (strong, nonatomic) IBOutlet UIImageView *imagemDoMascote2;
+@property (weak, nonatomic) IBOutlet UILabel *lblFalaDoMascote;
+@property (weak, nonatomic) IBOutlet UIView *viewGesturePassaFala;
 
 
-@property (weak, nonatomic) IBOutlet UIButton *outBtoStart;
-@property (weak, nonatomic) IBOutlet UIButton *outBtoAnimal;
-@property (weak, nonatomic) IBOutlet UIButton *outBtoVeiculo;
-@property (weak, nonatomic) IBOutlet UIButton *outBtoNota;
+//Toca Treco
+@property (weak, nonatomic) IBOutlet UIImageView *imgTocaTreco;
+- (IBAction)btnAlavancaTocaTreco:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *outAlavancaTocaTreco;
 
-- (IBAction)btoStart:(id)sender;
-- (IBAction)btoAnimal:(id)sender;
-- (IBAction)btoVeiculo:(id)sender;
-- (IBAction)btoNota:(id)sender;
 
+//Atributos para tocar audio
 @property AVAudioPlayer *audioPlayer;
 @property NSURL *caminhoDoAudio;
+
+
+//Atributos para Colisao
+@property (weak, nonatomic) IBOutlet UIImageView *imgFitaGalo;
+@property (weak, nonatomic) IBOutlet UIImageView *imgFitaCarro;
+@property (weak, nonatomic) IBOutlet UIImageView *imgFitaFuracao;
+@property (weak, nonatomic) IBOutlet UIImageView *imgObjetoMusica3;
+@property (weak, nonatomic) IBOutlet UIImageView *imgObjetoMusica2;
+@property (weak, nonatomic) IBOutlet UIImageView *imgObjetoMusica1;
+
+
+//Atributos para Interagir
+@property (weak, nonatomic) IBOutlet UIImageView *imgGaloGrande;
+@property (weak, nonatomic) IBOutlet UIImageView *imgPipaGrande;
+@property (weak, nonatomic) IBOutlet UIImageView *imgCarroGrande;
+
+
+//Intro para passar de fala
+- (IBAction)btnComecar:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *viewInicialGesture;
+
+
+//Atributos para Animacao chover objetos
+@property NSMutableArray *listaSons;
+@property CGFloat posX;
+@property float delay;
+@property float duracao;
+@property NSMutableArray *listaImagensCai;
+
 
 
 
