@@ -12,13 +12,16 @@
                 <outlet property="imgFitaFuracao" destination="kk5-Ga-GqD" id="bZN-BO-H4p"/>
                 <outlet property="imgFitaGalo" destination="2Id-fM-wuG" id="0To-dq-7Hb"/>
                 <outlet property="imgGaloGrande" destination="ood-eM-K8o" id="BFH-o5-aTf"/>
-                <outlet property="imgObjetoMusica1" destination="zgW-BP-btq" id="teg-EV-9am"/>
-                <outlet property="imgObjetoMusica2" destination="Ckg-ab-1uE" id="h6d-ei-vD1"/>
-                <outlet property="imgObjetoMusica3" destination="EbN-GZ-q9L" id="afK-XK-Ord"/>
+                <outlet property="imgMaoTouch" destination="X0B-cV-0oK" id="Ot6-tN-qMD"/>
+                <outlet property="imgMascoteIntro" destination="B6J-TP-QgU" id="Nu1-7E-duM"/>
+                <outlet property="imgObjetoMusica1" destination="h5c-8C-Yz9" id="tmS-TO-cem"/>
+                <outlet property="imgObjetoMusica2" destination="9y3-YD-rhy" id="0qp-4J-XaM"/>
+                <outlet property="imgObjetoMusica3" destination="iVr-8O-c0J" id="Wvm-xf-WpK"/>
                 <outlet property="imgPipaGrande" destination="Vl0-NB-fqt" id="COj-Cl-ReQ"/>
                 <outlet property="imgTocaTreco" destination="9l5-36-ag6" id="fZ3-2l-t46"/>
                 <outlet property="lblFalaDoMascote" destination="0vx-5K-MzF" id="Jkh-KS-Gla"/>
                 <outlet property="outAlavancaTocaTreco" destination="1wH-j5-URZ" id="ZMV-fc-jSB"/>
+                <outlet property="outBtnComecar" destination="5cB-NT-e8B" id="k3J-x4-PRA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewGesturePassaFala" destination="F6H-tr-YnU" id="LNZ-z1-RYe"/>
                 <outlet property="viewInicialGesture" destination="dBz-Rs-4GG" id="LHj-xu-Acg"/>
@@ -33,10 +36,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="333" translatesAutoresizingMaskIntoConstraints="NO" id="0vx-5K-MzF">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="333" translatesAutoresizingMaskIntoConstraints="NO" id="0vx-5K-MzF">
                     <rect key="frame" x="570" y="524" width="333" height="224"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="20"/>
+                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IIA-0n-JtT">
@@ -76,10 +79,10 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dBz-Rs-4GG">
-                    <rect key="frame" x="141" y="128" width="742" height="502"/>
+                    <rect key="frame" x="149" y="145" width="742" height="502"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cB-NT-e8B">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cB-NT-e8B">
                             <rect key="frame" x="322" y="406" width="141" height="67"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="34"/>
@@ -92,13 +95,20 @@
                             </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gesturePassaFalaMascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="X0B-cV-0oK">
-                            <rect key="frame" x="184" y="135" width="145" height="244"/>
+                            <rect key="frame" x="142" y="180" width="145" height="244"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="B6J-TP-QgU">
-                            <rect key="frame" x="463" y="31" width="240" height="261"/>
+                            <rect key="frame" x="428" y="-11" width="275" height="350"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Para passar de fala pressione o dedo no mascote quando ele estiver brilhando" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="374" translatesAutoresizingMaskIntoConstraints="NO" id="vRv-D0-l0z">
+                            <rect key="frame" x="0.0" y="8" width="374" height="151"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
@@ -112,16 +122,16 @@
                         <action selector="btnAlavancaTocaTreco:" destination="-1" eventType="touchUpInside" id="CEo-A8-Uys"/>
                     </connections>
                 </button>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gesturePassaFalaMascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="zgW-BP-btq">
-                    <rect key="frame" x="241" y="208" width="126" height="128"/>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bemol.png" translatesAutoresizingMaskIntoConstraints="NO" id="iVr-8O-c0J">
+                    <rect key="frame" x="540" y="139" width="159" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gesturePassaFalaMascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ckg-ab-1uE">
-                    <rect key="frame" x="375" y="201" width="126" height="128"/>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bemol.png" translatesAutoresizingMaskIntoConstraints="NO" id="h5c-8C-Yz9">
+                    <rect key="frame" x="122" y="151" width="159" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gesturePassaFalaMascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="EbN-GZ-q9L">
-                    <rect key="frame" x="526" y="201" width="126" height="128"/>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bemol.png" translatesAutoresizingMaskIntoConstraints="NO" id="9y3-YD-rhy">
+                    <rect key="frame" x="347" y="145" width="159" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
@@ -132,12 +142,13 @@
     </objects>
     <resources>
         <image name="RJ.jpg" width="652" height="408"/>
+        <image name="bemol.png" width="61" height="145"/>
         <image name="carro.png" width="640" height="320"/>
         <image name="furacao.png" width="113" height="150"/>
         <image name="galo.png" width="135" height="150"/>
         <image name="gesturePassaFalaMascote.png" width="320" height="640"/>
         <image name="mascote.png" width="1000" height="1000"/>
-        <image name="tocaTreco.png" width="352" height="257"/>
+        <image name="tocaTreco.png" width="793" height="307"/>
         <image name="ventoPipa.png" width="320" height="640"/>
     </resources>
 </document>

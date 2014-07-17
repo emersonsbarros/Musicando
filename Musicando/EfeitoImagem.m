@@ -34,7 +34,7 @@
 }
 
 //////////////////////////// Metodos Add Gesture  /////////////////////////////
-
+//Adiciona o arrastar a uma imagem
 -(void)addGesturePainImagem:(UIImageView*)img{
     UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
     img.userInteractionEnabled = YES;
@@ -42,6 +42,7 @@
     img.layer.zPosition = -10;
 }
 
+//Adiciona o arrastar a uma lista imagens
 -(void)addGesturePainImagens:(NSMutableArray*)listaImangesColisao{
     for(UIImageView *img in listaImangesColisao){
         UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
@@ -51,6 +52,7 @@
     }
 }
 
+//Metodos para deixar mais maroto o gesture de arrastar
 - (void)pan:(UIPanGestureRecognizer *)gesture {
     
     static CGPoint originalCenter;
@@ -91,7 +93,7 @@
     layer.beginTime = timeSincePause;
 }
 
-/////////////////////////// COLISAO ///////////////////////////////
+/////////////////////////// verica todas as colisoes ///////////////////////////////
 
 //-(void) checkCollision:(NSTimer *) theTimer{
 //    CGRect pos = CGRectMake(0, 0, 0, 0);
@@ -127,6 +129,72 @@
 //
 //}
 
+
+
+
+/////////////////////////// Remove Animacoes ///////////////////////////////
+//Remove img
+-(void)removeTodasAnimacoesView:(UIView*)img{
+    [img.layer removeAllAnimations];
+}
+//Remove lista img
+-(void)removeTodasAnimacoesViewLista:(NSMutableArray*)listaImg{
+    for(UIImageView *img in listaImg){
+        [img.layer removeAllAnimations];
+    }
+}
+
+
+
+/////////////////////////// Remove Animacoes ///////////////////////////////
+-(void)verficaPulaFala:(NSTimer *) theTimer{
+    
+    if(self.listaLiberaFala.count == self.qtdColisoes){
+        [[EfeitoMascote sharedManager]chamaAddBrilho:self.imgMascoteAux:0.0f:self.viewGesturePassaFala];
+        [self.listaLiberaFala removeAllObjects];
+        [theTimer invalidate];
+    }
+}
+
+-(void)chamaVerficadorPassaFala:(UIImageView*)imagemMascote :(UIView*)viewGesturePassaFala :(NSMutableArray*)lista :(int)qtdColisao{
+    self.imgMascoteAux = imagemMascote;
+    self.viewGesturePassaFala = viewGesturePassaFala;
+    self.listaLiberaFala = lista;
+    self.qtdColisoes = qtdColisao;
+    [NSTimer scheduledTimerWithTimeInterval: 0.5 target:self selector: @selector(verficaPulaFala:) userInfo: nil repeats: YES];
+}
+
+
+
+
+/////////////////////////// Sprites Imagens ////////////////////////////////
+//Add o Sprites de uma imagem
+-(void)addAnimacaoSprite:(NSArray*)listaSprite :(UIImageView*)imgAddAnimacao{
+    
+    imgAddAnimacao.animationImages = listaSprite;
+    CAKeyframeAnimation *animationSequence = [CAKeyframeAnimation animationWithKeyPath: @"contents"];
+    animationSequence.calculationMode = kCAAnimationDiscrete;
+    animationSequence.autoreverses = YES;
+    animationSequence.duration = 1.0;
+    animationSequence.repeatCount = HUGE_VALF;
+    animationSequence.values = [self animationCGImagesArray:imgAddAnimacao];
+    [imgAddAnimacao.layer addAnimation:animationSequence forKey:@"contents"];
+
+}
+
+//Remove o sprite de uma imagem
+-(void)removeAnimacaoSprite:(NSString*)nomeAnimacao :(UIImageView*)imgAddAnimacao{
+    [imgAddAnimacao.layer removeAnimationForKey:@"contents"];
+}
+
+//Aux que converte para CGImage, unico jeito para dar certo
+-(NSArray*)animationCGImagesArray:(UIImageView*)imgAddAnimacao {
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:[imgAddAnimacao.animationImages count]];
+    for (UIImage *image in imgAddAnimacao.animationImages) {
+        [array addObject:(id)[image CGImage]];
+    }
+    return [NSArray arrayWithArray:array];
+}
 
 
 @end

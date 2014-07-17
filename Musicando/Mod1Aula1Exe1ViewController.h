@@ -15,21 +15,29 @@
 #import "EfeitoImagem.h"
 #import "EfeitoMascote.h"
 #import <QuartzCore/QuartzCore.h>
+#import <SpriteKit/SpriteKit.h>
 
 @interface Mod1Aula1Exe1ViewController : UIViewController <UIGestureRecognizerDelegate>
 
-
-
-//Mascote
-//Codigo mutavel
+//--------------- CODIGO QUE REPETE EM TODAS AS VIEWS ---------------------//
+//////////////////Codigo mutavel/////////////////
+//lista de todas imagens que precisam de colisao
 @property NSMutableArray *listaImangesColisao;
+//Aux Biblioteca
 @property Biblioteca *testaBiblio;
 @property Conversa *testaConversa;
 @property Fala *testaFala;
 @property int contadorDeFalas;
+//Mascote (img,view,label)
 @property (strong, nonatomic) IBOutlet UIImageView *imagemDoMascote2;
 @property (weak, nonatomic) IBOutlet UILabel *lblFalaDoMascote;
 @property (weak, nonatomic) IBOutlet UIView *viewGesturePassaFala;
+//Auxilia para liberar a fala qd todas as colisoes que vc quer acontecerem
+@property NSMutableArray *listaLiberaFala;
+@property NSString *estadoAux1;
+@property NSString *estadoAux2;
+@property NSString *estadoAux3;
+//-------------------------------------------------------------------------//
 
 
 //Toca Treco
@@ -43,7 +51,7 @@
 @property NSURL *caminhoDoAudio;
 
 
-//Atributos para Colisao
+//Imagens para Colisao
 @property (weak, nonatomic) IBOutlet UIImageView *imgFitaGalo;
 @property (weak, nonatomic) IBOutlet UIImageView *imgFitaCarro;
 @property (weak, nonatomic) IBOutlet UIImageView *imgFitaFuracao;
@@ -52,15 +60,19 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgObjetoMusica1;
 
 
-//Atributos para Interagir
+//Imagens que fazem animacao sem colisao
 @property (weak, nonatomic) IBOutlet UIImageView *imgGaloGrande;
 @property (weak, nonatomic) IBOutlet UIImageView *imgPipaGrande;
 @property (weak, nonatomic) IBOutlet UIImageView *imgCarroGrande;
 
 
-//Intro para passar de fala
+//Intro gesture de como passar fala
 - (IBAction)btnComecar:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *outBtnComecar;
+
 @property (weak, nonatomic) IBOutlet UIView *viewInicialGesture;
+@property (weak, nonatomic) IBOutlet UIImageView *imgMaoTouch;
+@property (weak, nonatomic) IBOutlet UIImageView *imgMascoteIntro;
 
 
 //Atributos para Animacao chover objetos
