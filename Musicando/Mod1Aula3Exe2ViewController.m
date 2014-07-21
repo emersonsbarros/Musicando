@@ -34,11 +34,170 @@
     //Áudio teste
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"mi3E" withExtension:@"wav"];
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    
+    [self iniciarComponentes];
 }
 
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
 }
+
+
+-(void)iniciarComponentes{
+    
+    //Habilita o gesture do mascote com a UIView que fica por cima dele
+    [self addGesturePassaFalaMascote: self.viewGesturePassaFala];
+    
+    //Inicia lista de imagens para colisão
+    self.listaImangesColisao = [[NSMutableArray alloc]init];
+    
+    //Adiciona imagens para colisao
+    //[self.listaImangesColisao addObject: self.notaMelodia];
+    //[self.listaImangesColisao addObject: self.notasHarmonia];
+    //[self.listaImangesColisao addObject: self.violao];
+    //[self.listaImangesColisao addObject: self.flauta];
+    
+    //Adiciona gesture ARRASTAR em todas imagens dessa lista
+    [[EfeitoImagem sharedManager]addGesturePainImagens: self.listaImangesColisao];
+    
+    //Inicia lista para liberar falas e auxiliares
+    self.listaLiberaFala = [[NSMutableArray alloc]init];
+    self.estadoAux1 = @"0";
+    self.estadoAux2 = @"0";
+    self.estadoAux3 = @"0";
+    
+    //Inicia auxiliares da biblioteca
+    self.contadorDeFalas = 0;
+    self.testaBiblio = [Biblioteca sharedManager];
+    self.testaConversa = self.testaBiblio.exercicioAtual.mascote.listaDeConversas.firstObject;
+    
+    //Usar sempre que quiser pular uma fala
+    [self pulaFalaMascote];
+    
+    //Imagem do mascote
+    self.imagemDoMascote.image = [[[[Biblioteca sharedManager] exercicioAtual] mascote] imagem].image;
+    [self.view addSubview: self.imagemDoMascote];
+    [self.view addSubview: self.lblFalaDoMascote];
+    
+    //Mascote começa a pular
+    [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando: self.imagemDoMascote];
+}
+
+//Adiciona gesture ao passar de fala a view que fica por cima do mascote
+-(void)addGesturePassaFalaMascote:(UIView*)viewGesture{
+    
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pulaFalaMascote)];
+    
+    singleTap.numberOfTouchesRequired = 1;
+    singleTap.enabled = NO;
+    viewGesture.userInteractionEnabled = NO;
+    
+    [viewGesture addGestureRecognizer: singleTap];
+}
+
+
+
+///////////////////////////////////////////////  FALAS ///////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//Gerenciador das falas
+-(void)pulaFalaMascote{
+    
+    //Para não dar erro de NULL na ultima fala
+    int contadorMaximo = (int)self.testaConversa.listaDeFalas.count;
+    
+    if(self.contadorDeFalas < contadorMaximo){
+        switch (self.contadorDeFalas) {
+            case 0:
+                [self chamaMetodosFala0];
+                break;
+            case 1:
+                [self chamaMetodosFala1];
+                break;
+            case 2:
+                [self chamaMetodosFala2];
+                break;
+            case 3:
+                [self chamaMetodosFala3];
+                break;
+                
+            case 4:
+                [self chamaMetodosFala4];
+                break;
+                
+            default:
+                break;
+        }
+        
+        //Pega a fala atual de acordo com o contador e passa para o label
+        self.testaFala = [self.testaConversa.listaDeFalas objectAtIndex: self.contadorDeFalas];
+        self.lblFalaDoMascote.text = self.testaFala.conteudo;
+        
+        self.contadorDeFalas +=1;
+    }
+}
+
+//Intro sobre música
+-(void)chamaMetodosFala0 {
+    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Primeira animação
+-(void)chamaMetodosFala1 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    //Mostra view de exercitar
+    self.viewDosRitmos.hidden = NO;
+    [self primeiraAnimacao];
+    
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+-(void)chamaMetodosFala2 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    //Esconde botões de ritmo
+    self.outBtoClassico.hidden = YES;
+    self.outBtoRock.hidden = YES;
+    self.outBtoSamba.hidden = YES;
+    
+    //Mostra toca trecos
+    self.outTocaTreco1.hidden = NO;
+    self.outTocaTreco2.hidden = NO;
+    
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+-(void)chamaMetodosFala3 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    self.outBtoMaestro.hidden = NO;
+    self.outBtoMicrofone.hidden = NO;
+    self.outBtoTempoVelocidade.hidden = NO;
+    self.outTocaTreco1.hidden = YES;
+    self.outTocaTreco2.hidden = YES;
+    
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+-(void)chamaMetodosFala4 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -52,10 +211,7 @@
     [UIView animateWithDuration:2.0
                      animations:^(void){
                          //Muda local do mascote e label
-                        self.imagemDoMascote.frame = CGRectMake(20, 20, self.imagemDoMascote.frame.size.width, self.imagemDoMascote.frame.size.height);
-                         self.lblTextoMascote.frame = CGRectMake(200, 50, self.lblTextoMascote.frame.size.width, self.lblTextoMascote.frame.size.height);
-                        self.outBtoStartIntro.frame = CGRectMake(700, 100, self.outBtoStartIntro.frame.size.width, self.outBtoStartIntro.frame.size.height);
-                         self.viewDosRitmos.frame = CGRectMake(200, self.viewDosRitmos.frame.origin.y, self.viewDosRitmos.frame.size.width, self.viewDosRitmos.frame.size.height);
+                        self.viewDosRitmos.frame = CGRectMake(200, self.viewDosRitmos.frame.origin.y, self.viewDosRitmos.frame.size.width, self.viewDosRitmos.frame.size.height);
                      } completion:^(BOOL finished){
                      }];
     
@@ -108,70 +264,22 @@
     self.outTocaTreco2.tag = 0;
 }
 
-- (IBAction)btoStartIntro:(id)sender {
-    
-    //Ação START
-    if (self.outBtoStartIntro.tag == 1) {
-        [self primeiraAnimacao];
-        
-        self.viewDosRitmos.hidden = NO;
-        self.lblTextoMascote.text = @"Você já deve ter ouvido essa música muito conhecida XXX, mas talvez nunca percebeu que ela pode ser apresentar de várias maneiras dependendo do ritmo. Clique em cada uma ao lado e veja diferença.";
-        self.outBtoStartIntro.hidden = YES;
-        [self.outBtoStartIntro setTitle:@"Continuar" forState: UIControlStateNormal];
-        self.outBtoStartIntro.tag = 2;
-        
-    //Ações CONTINUAR
-    }else if(self.outBtoStartIntro.tag == 2){
-        
-        //Esconde botões de ritmo
-        self.outBtoClassico.hidden = YES;
-        self.outBtoRock.hidden = YES;
-        self.outBtoSamba.hidden = YES;
-        
-        //Mostra toca trecos
-        self.outTocaTreco1.hidden = NO;
-        self.outTocaTreco2.hidden = NO;
-        
-        self.lblTextoMascote.text = @"É nítido que de acordo com o ritmo a velocidade e tempo da música é alterada, se você se lembra do tocatreco clique em cada um e veja a diferença na saída da música.";
-        self.outBtoStartIntro.tag = 3;
-    }else if(self.outBtoStartIntro.tag == 3){
-        self.lblTextoMascote.text = @"Agora para exercitar me responda, qual dessas figuras corresponde ao ritmo na música?";
-        
-        self.outBtoMaestro.hidden = NO;
-        self.outBtoMicrofone.hidden = NO;
-        self.outBtoTempoVelocidade.hidden = NO;
-        self.outTocaTreco1.hidden = YES;
-        self.outTocaTreco2.hidden = YES;
-
-        
-        self.outBtoStartIntro.tag = 4;
-    }else if(self.outBtoStartIntro.tag == 4){
-        NSLog(@"Aqui chamará a próxima aula");
-    }
-    
-}
 
 - (IBAction)btoClassico:(id)sender {
     [self animacaoAumentarBtoRitmo: self.outBtoClassico];
     self.audioPlayer.play;
-    self.outBtoStartIntro.hidden = NO;
-
 }
 
 - (IBAction)btoRock:(id)sender {
     self.audioPlayer.play;
-    self.outBtoStartIntro.hidden = NO;
-
 }
 
 - (IBAction)btoSamba:(id)sender {
     self.audioPlayer.play;
-    self.outBtoStartIntro.hidden = NO;
 }
 
 - (IBAction)tempoVelocidade:(id)sender {
     NSLog(@"ACERTOU! Tempo e velocidade");
-    [self.outBtoStartIntro setTitle:@"Finalizar Aula" forState: UIControlStateNormal];
 }
 
 - (IBAction)maestro:(id)sender {

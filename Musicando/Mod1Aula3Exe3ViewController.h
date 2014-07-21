@@ -5,16 +5,27 @@
 //  Created by Emerson Barros on 06/07/14.
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
-
+#import "Biblioteca.h"
+#import "Conversa.h"
+#import "Fala.h"
+#import <AVFoundation/AVFoundation.h>
+#import "Nota.h"
+#import "Sinfonia.h"
+#import "EfeitoImagem.h"
+#import "EfeitoMascote.h"
+#import <QuartzCore/QuartzCore.h>
+#import <SpriteKit/SpriteKit.h>
 #import <UIKit/UIKit.h>
 
 @interface Mod1Aula3Exe3ViewController : UIViewController
 
 
+/*==============================VIEWS===============================*/
+
+@property (strong, nonatomic) IBOutlet UIImageView *imagemDoMascote;
+@property (strong, nonatomic) IBOutlet UIView *viewGesturePassaFala;
+@property (strong, nonatomic) IBOutlet UILabel *lblFalaDoMascote;
 @property (strong, nonatomic) IBOutlet UIView *viewDeExercitar;
-@property (strong, nonatomic) IBOutlet UIImageView *imgDoMascote;
-@property (strong, nonatomic) IBOutlet UILabel *lblTextoMascote;
-@property (strong, nonatomic) IBOutlet UIButton *outBtoStartIntro;
 
 //Botões p/ exercitar
 @property (strong, nonatomic) IBOutlet UIButton *outTocaTreco1;
@@ -22,6 +33,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *outViolaco;
 @property (strong, nonatomic) IBOutlet UIButton *outFlauta;
 @property (strong, nonatomic) IBOutlet UIButton *outPiano;
+
 @property (strong, nonatomic) IBOutlet UIImageView *imgNota1;
 @property (strong, nonatomic) IBOutlet UIImageView *imgNota2;
 @property (strong, nonatomic) IBOutlet UIImageView *imgNota3;
@@ -35,7 +47,25 @@
 - (IBAction)flauta:(id)sender;
 - (IBAction)piano:(id)sender;
 
-- (IBAction)btoStartIntro:(id)sender;
+/*===========================ATRIBUTOS=============================*/
 
+//Audio
+@property AVAudioPlayer *audioPlayer;
+@property NSURL *caminhoDoAudio;
+
+//Lista de imagens que precisam de colisao
+@property NSMutableArray *listaImangesColisao;
+
+//Auxiliares da Biblioteca
+@property Biblioteca *testaBiblio;
+@property Conversa *testaConversa;
+@property Fala *testaFala;
+@property int contadorDeFalas;
+
+//Auxiliares para liberar fala quando todas as colisoes acontecerem
+@property NSMutableArray *listaLiberaFala;
+@property NSString *estadoAux1;
+@property NSString *estadoAux2;
+@property NSString *estadoAux3;
 
 @end

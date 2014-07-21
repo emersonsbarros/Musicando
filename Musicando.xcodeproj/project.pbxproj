@@ -74,6 +74,11 @@
 		2B64FA801969236D00BC57FD /* Mod2Aula8Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA7E1969236D00BC57FD /* Mod2Aula8Exe1ViewController.xib */; };
 		2B64FA84196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA82196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m */; };
 		2B64FA85196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA83196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib */; };
+		2B90AFB1197D095500E61C7C /* tecladoeletrico.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B90AFAF197D095500E61C7C /* tecladoeletrico.jpg */; };
+		2B90AFB2197D095500E61C7C /* pianoclassico.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B90AFB0197D095500E61C7C /* pianoclassico.png */; };
+		2BC304C9197C9F1D006FCFD1 /* notas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BC304C8197C9F1D006FCFD1 /* notas.jpg */; };
+		2BC304CB197CC039006FCFD1 /* flauta.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC304CA197CC039006FCFD1 /* flauta.png */; };
+		2BC304CD197CC061006FCFD1 /* violao.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC304CC197CC061006FCFD1 /* violao.png */; };
 		3F608CA1196C5B7D001979E9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F608CA0196C5B7D001979E9 /* AudioToolbox.framework */; };
 		3F608CA3196C5B85001979E9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F608CA2196C5B85001979E9 /* OpenAL.framework */; };
 		3F608CA5196C5B8D001979E9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F608CA4196C5B8D001979E9 /* QuartzCore.framework */; };
@@ -372,6 +377,11 @@
 		2B64FA81196923FA00BC57FD /* Mod1Aula3Exe5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula3Exe5ViewController.h; sourceTree = "<group>"; };
 		2B64FA82196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula3Exe5ViewController.m; sourceTree = "<group>"; };
 		2B64FA83196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula3Exe5ViewController.xib; sourceTree = "<group>"; };
+		2B90AFAF197D095500E61C7C /* tecladoeletrico.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tecladoeletrico.jpg; sourceTree = "<group>"; };
+		2B90AFB0197D095500E61C7C /* pianoclassico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pianoclassico.png; sourceTree = "<group>"; };
+		2BC304C8197C9F1D006FCFD1 /* notas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = notas.jpg; sourceTree = "<group>"; };
+		2BC304CA197CC039006FCFD1 /* flauta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flauta.png; sourceTree = "<group>"; };
+		2BC304CC197CC061006FCFD1 /* violao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = violao.png; sourceTree = "<group>"; };
 		3F608CA0196C5B7D001979E9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3F608CA2196C5B85001979E9 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		3F608CA4196C5B8D001979E9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -626,6 +636,9 @@
 		0B03193419520C5D00316D6B /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				2BC304CC197CC061006FCFD1 /* violao.png */,
+				2BC304CA197CC039006FCFD1 /* flauta.png */,
+				2BC304C8197C9F1D006FCFD1 /* notas.jpg */,
 				3FD44F8B19783DD200C9351E /* retrato.jpg */,
 				3F70E5CA1974E1FE00535869 /* apito.png */,
 				3F70E5CB1974E1FE00535869 /* leao.png */,
@@ -643,6 +656,8 @@
 				3FAA1FE8196D08A000C32F03 /* galo.png */,
 				3FAA1FE9196D08A000C32F03 /* ventoPipa.png */,
 				0B03193519520C5D00316D6B /* modulo.png */,
+				2B90AFAF197D095500E61C7C /* tecladoeletrico.jpg */,
+				2B90AFB0197D095500E61C7C /* pianoclassico.png */,
 				0B03193619520C5D00316D6B /* aula.png */,
 				3FADCBAF1953811300B90702 /* exercicios.png */,
 				3FD974251974653F002EB77A /* pilar.png */,
@@ -1482,6 +1497,7 @@
 				3FAA1FEA196D08A000C32F03 /* carro.png in Resources */,
 				2B64FA801969236D00BC57FD /* Mod2Aula8Exe1ViewController.xib in Resources */,
 				2B64FA2B1969227A00BC57FD /* Mod2Aula3Exe2ViewController.xib in Resources */,
+				2BC304CB197CC039006FCFD1 /* flauta.png in Resources */,
 				2B64FA171969222600BC57FD /* Mod2Aula1Exe3ViewController.xib in Resources */,
 				3F608D8D196C7585001979E9 /* colcheiaPausa.png in Resources */,
 				3F608DDC196C7585001979E9 /* P200 Piano F#4.caf in Resources */,
@@ -1491,6 +1507,8 @@
 				3F608D75196C7585001979E9 /* dot.gif in Resources */,
 				3F608D5B196C7585001979E9 /* do1.caf in Resources */,
 				2B64FA3A196922A400BC57FD /* Mod2Aula4Exe2ViewController.xib in Resources */,
+				2BC304C9197C9F1D006FCFD1 /* notas.jpg in Resources */,
+				2B90AFB2197D095500E61C7C /* pianoclassico.png in Resources */,
 				3F608D76196C7585001979E9 /* natural.png in Resources */,
 				3F608D8B196C7585001979E9 /* fgfdgf.png in Resources */,
 				3F608D8F196C7585001979E9 /* semicolcheiaPausa.png in Resources */,
@@ -1509,6 +1527,7 @@
 				3F608DC0196C7585001979E9 /* simp.xml in Resources */,
 				3F608D9E196C7585001979E9 /* asa.xml in Resources */,
 				3F70E5D61974EBB700535869 /* graficoAgudo.jpg in Resources */,
+				2BC304CD197CC061006FCFD1 /* violao.png in Resources */,
 				3F608D91196C7585001979E9 /* seminimaPausa.png in Resources */,
 				3F608D7D196C7585001979E9 /* fusa.png in Resources */,
 				3F608D84196C7585001979E9 /* 1.png in Resources */,
@@ -1544,6 +1563,7 @@
 				3FAA1FE0196CFA8A00C32F03 /* tocaTreco.png in Resources */,
 				2B64FA49196922C100BC57FD /* Mod2Aula4Exe5ViewController.xib in Resources */,
 				3F608D9A196C7585001979E9 /* 5th_Symphony.xml in Resources */,
+				2B90AFB1197D095500E61C7C /* tecladoeletrico.jpg in Resources */,
 				3F608DB7196C7585001979E9 /* ninar.xml in Resources */,
 				0B03193719520C5D00316D6B /* modulo.png in Resources */,
 				3F608DB9196C7585001979E9 /* palmeiras.xml in Resources */,

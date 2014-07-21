@@ -60,7 +60,7 @@
     [self.listaImangesColisao addObject:self.imgObjetoMusica2];
     [self.listaImangesColisao addObject:self.imgObjetoMusica3];
     //Add gesture arrastar em todas imagens dessa lista
-    [[EfeitoImagem sharedManager]addGesturePainImagens:self.listaImangesColisao];
+    [[EfeitoImagem sharedManager]addGesturePainImagens: self.listaImangesColisao];
     
     
     //Lista para saber se as colisoes na tela foram feitas p/ ir na prox fala
@@ -126,7 +126,7 @@
     
 }
 
-//////////////////////////// Colisoes //////////////////////////////
+//////////////////////////// Colisões //////////////////////////////
 
 ////// colisao Galo
 -(void) checkColisaoGalo:(NSTimer *) theTimer{
@@ -235,7 +235,7 @@
 
 
 -(void)chamaMetodosFala0 {
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
 }
 
 -(void)chamaMetodosFala1 {
@@ -468,9 +468,7 @@
     self.imgCarroGrande.hidden = YES;
     self.imgPipaGrande.hidden = YES;
     self.imgGaloGrande.hidden = NO;
-    [self deslocaImagemGrandeParaDireita:self.imgGaloGrande:3.0];
-   
-
+    [self deslocaImagemGrandeParaDireita: self.imgGaloGrande:3.0];
 }
 
 - (void)acaoColisaoCarro {
@@ -482,7 +480,7 @@
     self.imgGaloGrande.hidden = YES;
     self.imgPipaGrande.hidden = YES;
     self.imgCarroGrande.hidden = NO;
-    [self deslocaImagemGrandeParaDireita:self.imgCarroGrande:7.0];
+    [self deslocaImagemGrandeParaDireita: self.imgCarroGrande:7.0];
     
     
 }
@@ -497,7 +495,7 @@
     self.imgCarroGrande.hidden = YES;
     self.imgGaloGrande.hidden = YES;
     self.imgPipaGrande.hidden = NO;
-    [self deslocaImagemGrandeParaDireita:self.imgPipaGrande:14.0];
+    [self deslocaImagemGrandeParaDireita: self.imgPipaGrande:14.0];
 }
 
 

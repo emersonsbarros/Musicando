@@ -35,11 +35,12 @@
     self.testaBiblio = [Biblioteca sharedManager];
     self.testaConversa = self.testaBiblio.exercicioAtual.mascote.listaDeConversas.firstObject;
     [self pulaFalaMascote];
+    
     //Imagem do mascote
     self.imagemDoMascote2.image = [[[[Biblioteca sharedManager] exercicioAtual] mascote] imagem].image;
     [self.view addSubview: self.imagemDoMascote2];
     [self.view addSubview: self.lblFalaDoMascote];
-    [self addGesturePassaFalaMascote:self.viewGesturePassaFala];
+    [self addGesturePassaFalaMascote: self.viewGesturePassaFala];
 
     
     [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote2];
