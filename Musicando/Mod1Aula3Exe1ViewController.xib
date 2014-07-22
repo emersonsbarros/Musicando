@@ -1,20 +1,122 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4437" systemVersion="13A451" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3662"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Mod1Aula3Exe1ViewController">
             <connections>
+                <outlet property="imagemDoMascote" destination="tCZ-Bv-LBE" id="UF9-U2-NMz"/>
+                <outlet property="imgBlocoDo" destination="fDC-w6-E22" id="5rL-6D-pn5"/>
+                <outlet property="imgBlocoPausa" destination="NPf-7z-twH" id="9BY-gS-sVJ"/>
+                <outlet property="imgNota" destination="x2P-4e-1yh" id="weM-4w-7Wj"/>
+                <outlet property="imgNota2" destination="i6J-ac-q5m" id="irr-UD-3hV"/>
+                <outlet property="imgSeta" destination="XYu-7P-8gt" id="TVO-y6-Rrn"/>
+                <outlet property="lblFalaDoMascote" destination="OD3-z8-YYr" id="aZ1-dX-PCF"/>
+                <outlet property="outBtoCoral" destination="q7h-Md-y8S" id="Ryh-40-eI0"/>
+                <outlet property="outBtoInstrumentos" destination="9aj-yK-aqw" id="E37-PJ-FbQ"/>
+                <outlet property="outBtoNotasPausas" destination="imH-Mr-cwk" id="3jX-nI-8e8"/>
+                <outlet property="tocaTreco" destination="hts-eT-koX" id="opx-lv-0zm"/>
                 <outlet property="view" destination="2" id="3"/>
+                <outlet property="viewDeExercitar" destination="QLy-Ek-nkL" id="Z3l-tO-mqg"/>
+                <outlet property="viewGesturePassaFala" destination="i8J-z6-E2c" id="og5-BH-KdR"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2">
-            <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="501" translatesAutoresizingMaskIntoConstraints="NO" id="OD3-z8-YYr">
+                    <rect key="frame" x="349" y="602" width="501" height="117"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="tCZ-Bv-LBE">
+                    <rect key="frame" x="824" y="561" width="200" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QLy-Ek-nkL">
+                    <rect key="frame" x="178" y="51" width="846" height="492"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="x2P-4e-1yh">
+                            <rect key="frame" x="270" y="0.0" width="70" height="70"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doBloco.png" translatesAutoresizingMaskIntoConstraints="NO" id="fDC-w6-E22">
+                            <rect key="frame" x="433" y="359" width="46" height="43"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seta.png" translatesAutoresizingMaskIntoConstraints="NO" id="XYu-7P-8gt">
+                            <rect key="frame" x="481" y="10" width="49" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pausaBloco.png" translatesAutoresizingMaskIntoConstraints="NO" id="NPf-7z-twH">
+                            <rect key="frame" x="379" y="359" width="46" height="43"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="i6J-ac-q5m">
+                            <rect key="frame" x="215" y="0.0" width="70" height="70"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tocaTreco.png" translatesAutoresizingMaskIntoConstraints="NO" id="hts-eT-koX">
+                            <rect key="frame" x="136" y="177" width="561" height="285"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aj-yK-aqw">
+                            <rect key="frame" x="22" y="136" width="242" height="220"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="conjuntoInstrumentos.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="intrumentos:" destination="-1" eventType="touchUpInside" id="Yh3-eQ-xkx"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7h-Md-y8S">
+                            <rect key="frame" x="295" y="136" width="242" height="220"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="conjuntoPessoas.jpg">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="coral:" destination="-1" eventType="touchUpInside" id="uzs-K4-gyH"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imH-Mr-cwk">
+                            <rect key="frame" x="577" y="136" width="242" height="220"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="conjuntoNotasPausas.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="notasPausas:" destination="-1" eventType="touchUpInside" id="0dI-La-W6Q"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i8J-z6-E2c">
+                    <rect key="frame" x="865" y="546" width="119" height="229"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
         </view>
     </objects>
+    <resources>
+        <image name="conjuntoInstrumentos.png" width="287" height="268"/>
+        <image name="conjuntoNotasPausas.png" width="286" height="289"/>
+        <image name="conjuntoPessoas.jpg" width="274" height="184"/>
+        <image name="doBloco.png" width="120" height="120"/>
+        <image name="mascote.png" width="1000" height="1000"/>
+        <image name="pausaBloco.png" width="123" height="120"/>
+        <image name="seta.png" width="196" height="245"/>
+        <image name="tocaTreco.png" width="1784" height="916"/>
+    </resources>
 </document>
