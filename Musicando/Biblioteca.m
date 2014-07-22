@@ -310,13 +310,13 @@
     mod1Aula3Exe4fala1.conteudo = @"Agora vamos falar um pouco sobre harmonia!";
     
     Fala *mod1Aula3Exe4fala2 = [[Fala alloc] init];
-    mod1Aula3Exe4fala2.conteudo = @"De uma forma simples a harmonia é justamente o contrário da harmonia...";
+    mod1Aula3Exe4fala2.conteudo = @"De uma forma simples a harmonia é justamente o contrário da melodia. São sons tocados ao mesmo tempo, contíunos, dando fluidez a m'suica";
     
     Fala *mod1Aula3Exe4fala3 = [[Fala alloc] init];
     mod1Aula3Exe4fala3.conteudo = @"Quer ver a diferença? Arraste a nota separada que é a melodia e depois a harmonia que são vários sons juntos.";
     
     Fala *mod1Aula3Exe4fala4 = [[Fala alloc] init];
-    mod1Aula3Exe4fala4.conteudo = @"Notou que na harmonia...";
+    mod1Aula3Exe4fala4.conteudo = @"Notou que na harmonia há esse conjunto de sons, e a melodia parece apenas uma sequência cada um tocada de uma vez?";
     
     Fala *mod1Aula3Exe4fala5 = [[Fala alloc] init];
     mod1Aula3Exe4fala5.conteudo = @"Assim como para a melodia, existem maneiras de tocar os instrumentos que exemplificam bem a harmonia. Arraste e veja a diferença entre os acordes harmoniosos do violão para a escala feita na flauta";

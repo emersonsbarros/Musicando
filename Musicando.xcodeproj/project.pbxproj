@@ -10,6 +10,7 @@
 		0B03193719520C5D00316D6B /* modulo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B03193519520C5D00316D6B /* modulo.png */; };
 		0B03193819520C5D00316D6B /* aula.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B03193619520C5D00316D6B /* aula.png */; };
 		0B03193B19521C0B00316D6B /* AulasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B03193A19521C0B00316D6B /* AulasViewController.m */; };
+		2B0041A4197EE6F200EB1D54 /* tocaTreco.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0041A3197EE6F200EB1D54 /* tocaTreco.png */; };
 		2B0FDB3B196A51AC00228116 /* mascote.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0FDB3A196A51AC00228116 /* mascote.png */; };
 		2B0FDB3D196A66AE00228116 /* roma.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B0FDB3C196A66AE00228116 /* roma.jpg */; };
 		2B64F9E41969207E00BC57FD /* Mod1Aula2Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64F9E21969207E00BC57FD /* Mod1Aula2Exe1ViewController.m */; };
@@ -205,7 +206,6 @@
 		3F70E5D31974E38600535869 /* tocaTreco2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F70E5D21974E38600535869 /* tocaTreco2.png */; };
 		3F70E5D61974EBB700535869 /* graficoAgudo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F70E5D41974EBB700535869 /* graficoAgudo.jpg */; };
 		3F70E5D71974EBB700535869 /* graficoGrave.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F70E5D51974EBB700535869 /* graficoGrave.jpg */; };
-		3FAA1FE0196CFA8A00C32F03 /* tocaTreco.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA1FDF196CFA8A00C32F03 /* tocaTreco.png */; };
 		3FAA1FE4196D034F00C32F03 /* vento.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA1FE3196D034F00C32F03 /* vento.wav */; };
 		3FAA1FE6196D05D600C32F03 /* carro.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA1FE5196D05D600C32F03 /* carro.wav */; };
 		3FAA1FEA196D08A000C32F03 /* carro.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA1FE7196D08A000C32F03 /* carro.png */; };
@@ -282,6 +282,7 @@
 		0B03193619520C5D00316D6B /* aula.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aula.png; sourceTree = "<group>"; };
 		0B03193919521C0B00316D6B /* AulasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AulasViewController.h; sourceTree = "<group>"; };
 		0B03193A19521C0B00316D6B /* AulasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AulasViewController.m; sourceTree = "<group>"; };
+		2B0041A3197EE6F200EB1D54 /* tocaTreco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tocaTreco.png; sourceTree = "<group>"; };
 		2B0FDB3A196A51AC00228116 /* mascote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mascote.png; sourceTree = "<group>"; };
 		2B0FDB3C196A66AE00228116 /* roma.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = roma.jpg; sourceTree = "<group>"; };
 		2B64F9E11969207E00BC57FD /* Mod1Aula2Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula2Exe1ViewController.h; sourceTree = "<group>"; };
@@ -521,7 +522,6 @@
 		3F70E5D21974E38600535869 /* tocaTreco2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tocaTreco2.png; sourceTree = "<group>"; };
 		3F70E5D41974EBB700535869 /* graficoAgudo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = graficoAgudo.jpg; sourceTree = "<group>"; };
 		3F70E5D51974EBB700535869 /* graficoGrave.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = graficoGrave.jpg; sourceTree = "<group>"; };
-		3FAA1FDF196CFA8A00C32F03 /* tocaTreco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tocaTreco.png; sourceTree = "<group>"; };
 		3FAA1FE3196D034F00C32F03 /* vento.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = vento.wav; sourceTree = "<group>"; };
 		3FAA1FE5196D05D600C32F03 /* carro.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = carro.wav; sourceTree = "<group>"; };
 		3FAA1FE7196D08A000C32F03 /* carro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carro.png; sourceTree = "<group>"; };
@@ -650,7 +650,7 @@
 				3FD9741519744097002EB77A /* colher.png */,
 				3FD9741619744097002EB77A /* panela.png */,
 				3FACC84C196E5F08003D4660 /* gesturePassaFalaMascote.png */,
-				3FAA1FDF196CFA8A00C32F03 /* tocaTreco.png */,
+				2B0041A3197EE6F200EB1D54 /* tocaTreco.png */,
 				3F70E5D21974E38600535869 /* tocaTreco2.png */,
 				3FAA1FE7196D08A000C32F03 /* carro.png */,
 				3FAA1FE8196D08A000C32F03 /* galo.png */,
@@ -1560,7 +1560,6 @@
 				A8C3F0AD194B72A400E78899 /* InfoPlist.strings in Resources */,
 				3FD974261974653F002EB77A /* pilar.png in Resources */,
 				2B64FA671969233700BC57FD /* Mod2Aula7Exe2ViewController.xib in Resources */,
-				3FAA1FE0196CFA8A00C32F03 /* tocaTreco.png in Resources */,
 				2B64FA49196922C100BC57FD /* Mod2Aula4Exe5ViewController.xib in Resources */,
 				3F608D9A196C7585001979E9 /* 5th_Symphony.xml in Resources */,
 				2B90AFB1197D095500E61C7C /* tecladoeletrico.jpg in Resources */,
@@ -1600,6 +1599,7 @@
 				3F608D5D196C7585001979E9 /* do3.caf in Resources */,
 				3F608D83196C7585001979E9 /* seminimaCortada.png in Resources */,
 				2B64FA0D1969220C00BC57FD /* Mod2Aula1Exe1ViewController.xib in Resources */,
+				2B0041A4197EE6F200EB1D54 /* tocaTreco.png in Resources */,
 				2B64FA4E196922C900BC57FD /* Mod2Aula4Exe6ViewController.xib in Resources */,
 				3F608DB4196C7585001979E9 /* Mozart-Marcha Turca.xml in Resources */,
 				3F608D5C196C7585001979E9 /* do2.caf in Resources */,

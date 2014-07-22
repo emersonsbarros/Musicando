@@ -117,6 +117,6 @@
         <image name="mascote.png" width="1000" height="1000"/>
         <image name="pausaBloco.png" width="123" height="120"/>
         <image name="seta.png" width="196" height="245"/>
-        <image name="tocaTreco.png" width="793" height="307"/>
+        <image name="tocaTreco.png" width="1784" height="916"/>
     </resources>
 </document>
