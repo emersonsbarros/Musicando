@@ -75,7 +75,7 @@
     mod1Aula1Exe1fala4.conteudo = @"Este é o nosso Toca Treco, um carinha que toca o som de todo tipo de objeto jogado nele e ainda pode misturalos";
     
     Fala *mod1Aula1Exe1fala5 = [[Fala alloc] init];
-    mod1Aula1Exe1fala5.conteudo = @"Agora arraste esses objetos acima dentro do nosso Toca treco e vamos a magica!";
+    mod1Aula1Exe1fala5.conteudo = @"Agora arraste esses objetos para a entrada do nosso Toca Treco e vamos a magica!";
     
     Fala *mod1Aula1Exe1fala6 = [[Fala alloc] init];
     mod1Aula1Exe1fala6.conteudo = @"Muito Bem! Agora abaixe a alavanca e veja a musica acontecer da forma mais inesperada";
@@ -90,7 +90,7 @@
     mod1Aula1Exe1fala9.conteudo = @"Ah como eu amo a musica, ela é muito importante não só no lazer, mais ajuda tambem em terapias, estimula o aprendizado e até na melhora em casos de doenca";
     
     Fala *mod1Aula1Exe1fala10 = [[Fala alloc] init];
-    mod1Aula1Exe1fala10.conteudo = @"Vamos comecar nossa jornada!, como o grande professor Suzuki falava,'não precisa nascer com o dom para musica, todos podem aprender com nossa vontade!'";
+    mod1Aula1Exe1fala10.conteudo = @"Vamos comecar nossa jornada!, como o grande professor Suzuki falava,'não precisa nascer com o dom para musica, todos podem aprender com a vontade!'";
     
     
     //Conversa
@@ -155,25 +155,25 @@
     mod1Aula2Exe2fala2.conteudo = @"Jogue esses Objetos dentro do Toca Treco e veja o que ele vai responder sobre a vibracao do objeto";
     
     Fala *mod1Aula2Exe2fala3 = [[Fala alloc] init];
-    mod1Aula2Exe2fala3.conteudo = @"Como voce viu dependendo da altura do objeto o som pode sair agudo ou grave, isso está relacionada a frequencia que quanto maior, maior será o agudo";
+    mod1Aula2Exe2fala3.conteudo = @"Como voce viu dependendo da quantidade de vibracoes a altura do objeto pode sair um som agudo ou grave, sendo quanto maior, maior o nivel de agudo";
     
     Fala *mod1Aula2Exe2fala4 = [[Fala alloc] init];
-    mod1Aula2Exe2fala4.conteudo = @"Observe esses graficos acima, e os jogue para o Toca Treco captar a frequencia!";
+    mod1Aula2Exe2fala4.conteudo = @"Observe esses graficos acima, e os jogue para o Toca Treco captar a vibracao e observe a resposta para cada objeto!";
     
     Fala *mod1Aula2Exe2fala5 = [[Fala alloc] init];
-    mod1Aula2Exe2fala5.conteudo = @"Como voce observou quanto mais ondinhas tiver em um trecho, maior será o agudo e maior será a frequencia";
+    mod1Aula2Exe2fala5.conteudo = @"Como voce observou quanto mais ondinhas tiver em um trecho, maior será o agudo e a frequencia, que é a quantidade de ocorrencias de alguma coisa em determinado intervalo, acima temos um grafico com frequencia 2 e outro 1, logo a primeira figura é mais aguda";
     
     Fala *mod1Aula2Exe2fala6 = [[Fala alloc] init];
-    mod1Aula2Exe2fala6.conteudo = @"Agora vamos aprender outro Pilar, o timbre que é a capacidade que nos faz descobrir a origem de algum som e está relacionada a forma das ondinhas da frequencia.";
+    mod1Aula2Exe2fala6.conteudo = @"Agora vamos aprender outro Pilar, o timbre que é a capacidade que nos faz descobrir a origem de algum som e está relacionada a forma das ondinhas do grafico.";
     
     Fala *mod1Aula2Exe2fala7 = [[Fala alloc] init];
     mod1Aula2Exe2fala7.conteudo = @"Agora toque nos pontos pretos acima e tente associalos ao seu respectivos instrumento arrastando as plaquinhas para em cima do ponto";
     
     Fala *mod1Aula2Exe2fala8 = [[Fala alloc] init];
-    mod1Aula2Exe2fala8.conteudo = @"Como eu tinha falado no comeco, o que faz diferenciar o timbre na frequencia é o formato das ondas como voce observa as imagens passando a cima.";
+    mod1Aula2Exe2fala8.conteudo = @"Como eu tinha falado no comeco, o que faz diferenciar o timbre na frequencia é o formato das ondas como voce observa as imagens a cima";
     
     Fala *mod1Aula2Exe2fala9 = [[Fala alloc] init];
-    mod1Aula2Exe2fala9.conteudo = @"Mais um pilar é importante falar, se o som aumentar alguem vai reclamar!, e é exatamente dessa rima que vem nosso outro carinha, a chamada Intensidade";
+    mod1Aula2Exe2fala9.conteudo = @"Mais um pilar é importante falar, se o som aumentar alguem vai reclamar!, e é exatamente dessa rima que vem nosso outro carinha, a chamada Intensidade, ou melhor o Volume";
     
     Fala *mod1Aula2Exe2fala10 = [[Fala alloc] init];
     mod1Aula2Exe2fala10.conteudo = @"Como observou a Intesidade é o volume do som, onde maior a intensidade, maior o volume do seu som, agora arraste um som descolado no Toca Treco e aumente a intesidade";
@@ -185,7 +185,7 @@
     mod1Aula2Exe2fala12.conteudo = @"Por fim chegamos ao nosso ultimo pilar, a duracao que é nada mais que o tempo em que o som é feito";
     
     Fala *mod1Aula2Exe2fala13 = [[Fala alloc] init];
-    mod1Aula2Exe2fala13.conteudo = @"A animacao acima descreve bem como a duracao funciona, a tartaruga faz um som mais longo e a lebre faz o som mais rapido, ambos possuem uma duracao mais com tempos diferentes!";
+    mod1Aula2Exe2fala13.conteudo = @"A animacao acima descreve bem como a duracao funciona, toque nos animais e veja a tartaruga fazendo um som mais longo e a lebre fazendo o som mais rapido, ambos possuem uma duracao mais com tempos diferentes!";
 
     
 //Conversa
@@ -259,7 +259,7 @@
     //Cria o modulo Iniciante
     Modulo *moduloIniciante = [[Modulo alloc]init];
     moduloIniciante.nome = @"Iniciante";
-    moduloIniciante.capa = [UIImage imageNamed:@"modulo.png"];
+    moduloIniciante.capa = [UIImage imageNamed:@"elevador.png"];
     [[moduloIniciante listaDeAulas]addObject: mod1Aula1];
     [[moduloIniciante listaDeAulas]addObject: mod1Aula2];
     [[moduloIniciante listaDeAulas]addObject: mod1Aula3];
@@ -412,7 +412,7 @@
     //Cria o modulo Intermediario
     Modulo *moduloIntermediario = [[Modulo alloc]init];
     moduloIntermediario.nome = @"Intermediario";
-    moduloIntermediario.capa = [UIImage imageNamed:@"modulo.png"];
+    moduloIntermediario.capa = [UIImage imageNamed:@"escada.png"];
     [[moduloIntermediario listaDeAulas]addObject: mod2Aula1];
     [[moduloIntermediario listaDeAulas]addObject: mod2Aula2];
     [[moduloIntermediario listaDeAulas]addObject: mod2Aula3];

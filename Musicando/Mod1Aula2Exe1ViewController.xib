@@ -11,6 +11,7 @@
                 <outlet property="imgAstronauta" destination="bXA-sU-BbG" id="uSX-ke-70B"/>
                 <outlet property="imgColher" destination="jac-40-pyH" id="EgZ-QL-Knz"/>
                 <outlet property="imgExplosao" destination="Kva-1T-WlU" id="tKa-pj-YZ9"/>
+                <outlet property="imgGestureAstronauta" destination="McJ-mj-8RZ" id="v0u-0a-KXI"/>
                 <outlet property="imgOuvindo" destination="idj-5I-2NU" id="gzB-tN-fQS"/>
                 <outlet property="imgPanela" destination="arb-wR-6mb" id="hsJ-Yy-tdE"/>
                 <outlet property="imgSatelite" destination="oV8-xv-1yM" id="ofC-Gf-8Yl"/>
@@ -31,7 +32,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tocaTreco.png" translatesAutoresizingMaskIntoConstraints="NO" id="dAq-0L-2Qz">
-                    <rect key="frame" x="20" y="550" width="235" height="168"/>
+                    <rect key="frame" x="20" y="496" width="490" height="262"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="471" translatesAutoresizingMaskIntoConstraints="NO" id="xxO-XL-ZTs">
@@ -69,7 +70,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="explosao.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kva-1T-WlU">
-                    <rect key="frame" x="758" y="15" width="228" height="189"/>
+                    <rect key="frame" x="726" y="20" width="228" height="189"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="astronauta.png" translatesAutoresizingMaskIntoConstraints="NO" id="bXA-sU-BbG">
@@ -95,7 +96,11 @@
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eO9-H3-Juc">
                     <rect key="frame" x="150" y="-60" width="485" height="62"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gesturePassaFalaMascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="McJ-mj-8RZ">
+                    <rect key="frame" x="784" y="106" width="146" height="205"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -107,11 +112,12 @@
         <image name="astronauta.png" width="131" height="150"/>
         <image name="colher.png" width="150" height="75"/>
         <image name="explosao.png" width="150" height="114"/>
+        <image name="gesturePassaFalaMascote.png" width="320" height="640"/>
         <image name="ouvindo.png" width="640" height="372"/>
         <image name="panela.png" width="150" height="75"/>
         <image name="pilar.png" width="320" height="640"/>
         <image name="satelite.png" width="150" height="109"/>
-        <image name="tocaTreco.png" width="352" height="257"/>
+        <image name="tocaTreco.png" width="786" height="495"/>
         <image name="vibracao.png" width="640" height="372"/>
     </resources>
 </document>

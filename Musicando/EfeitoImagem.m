@@ -52,6 +52,14 @@
     }
 }
 
+//Delete gesture
+-(void)tiraGestureObjeto:(UIView*)viewGesture{
+    for (UIGestureRecognizer *gestureRecognizer in viewGesture.gestureRecognizers) {
+        gestureRecognizer.enabled = NO;
+        viewGesture.userInteractionEnabled = NO;
+    }
+}
+
 //Metodos para deixar mais maroto o gesture de arrastar
 - (void)pan:(UIPanGestureRecognizer *)gesture {
     
@@ -131,16 +139,37 @@
 
 
 
-
 /////////////////////////// Remove Animacoes ///////////////////////////////
 //Remove img
 -(void)removeTodasAnimacoesView:(UIView*)img{
-    [img.layer removeAllAnimations];
+    [UIView animateWithDuration:1.0
+                          delay:0
+                        options: UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         img.alpha = 0.0;
+                     }
+                     completion:^(BOOL finished){
+                         img.hidden = YES;
+                         [img.layer removeAllAnimations];
+                     }];
+    
 }
 //Remove lista img
 -(void)removeTodasAnimacoesViewLista:(NSMutableArray*)listaImg{
+    
     for(UIImageView *img in listaImg){
-        [img.layer removeAllAnimations];
+        [UIView animateWithDuration:1.0
+                              delay:0
+                            options: UIViewAnimationOptionTransitionCrossDissolve
+                         animations:^{
+                             img.alpha = 0.0;
+                         }
+                         completion:^(BOOL finished){
+                             img.hidden = YES;
+                             [img.layer removeAllAnimations];
+                         }];
+
+        //[img.layer removeAllAnimations];
     }
 }
 
@@ -195,6 +224,39 @@
     }
     return [NSArray arrayWithArray:array];
 }
+
+//////////////////////// Hidden em degrade ///////////////////////
+
+-(void)hiddenYesEmDegrade:(UIView*)imgHidden{
+    [UIView animateWithDuration:1.0
+                          delay:0
+                        options: UIViewAnimationOptionCurveEaseInOut |UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         imgHidden.alpha = 0.0;
+                     }
+                     completion:^(BOOL finished){
+                         imgHidden.hidden = YES;
+                     }];
+
+}
+
+-(void)hiddenNoEmDegrade:(UIView*)imgHidden{
+    imgHidden.alpha = 0.0;
+    imgHidden.hidden = NO;
+    [UIView animateWithDuration:1.0
+                          delay:0
+                        options: UIViewAnimationOptionCurveEaseInOut |UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         imgHidden.alpha = 1.0;
+                     }
+                     completion:^(BOOL finished){
+                         
+                     }];
+    
+}
+
+
+
 
 
 @end

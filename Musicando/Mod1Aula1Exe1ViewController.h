@@ -73,6 +73,30 @@
 @property (weak, nonatomic) IBOutlet UIView *viewInicialGesture;
 @property (weak, nonatomic) IBOutlet UIImageView *imgMaoTouch;
 @property (weak, nonatomic) IBOutlet UIImageView *imgMascoteIntro;
+@property (weak, nonatomic) IBOutlet UIImageView *imgMaoTocaTreco;
+@property (weak, nonatomic) IBOutlet UIImageView *imgGaloMao;
+
+
+
+//Beneficios Musica
+@property (weak, nonatomic) IBOutlet UIImageView *imgBen1;
+@property (weak, nonatomic) IBOutlet UIImageView *imgBen2;
+@property (weak, nonatomic) IBOutlet UIImageView *imgBen3;
+
+
+//Movimento cultural
+@property (weak, nonatomic) IBOutlet UIImageView *imgIndioMusica;
+@property (weak, nonatomic) IBOutlet UIImageView *imgAnimacaoIndio;
+
+
+
+@property (weak, nonatomic) IBOutlet UIImageView *imgCarnaval;
+@property (weak, nonatomic) IBOutlet UIImageView *imgAnimacaoCarnaval;
+
+
+
+@property (weak, nonatomic) IBOutlet UIImageView *imgCapoeiraMusica;
+@property (weak, nonatomic) IBOutlet UIImageView *imgAnimacaoCapoeira;
 
 
 //Atributos para Animacao chover objetos

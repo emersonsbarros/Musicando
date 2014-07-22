@@ -20,7 +20,8 @@
 -(void)addGesturePainImagem:(UIImageView*)img;
 //Add o gesture de arrastar para uma lista Imagens
 -(void)addGesturePainImagens:(NSMutableArray*)listaImangesColisao;
-
+//Tira gesture
+-(void)tiraGestureObjeto:(UIView*)viewGesture;
 
 //Remove as animacoes de uma imagem
 -(void)removeTodasAnimacoesView:(UIView*)img;
@@ -42,4 +43,12 @@
 -(void)addAnimacaoSprite:(NSArray*)listaSprite :(UIImageView*)imgAddAnimacao;
 -(void)removeAnimacaoSprite:(NSString*)nomeAnimacao :(UIImageView*)imgAddAnimacao;
 
+
+//Hidden em degrade
+-(void)hiddenYesEmDegrade:(UIView*)imgHidden;
+-(void)hiddenNoEmDegrade:(UIView*)imgHidden;
+
 @end
+
+
+

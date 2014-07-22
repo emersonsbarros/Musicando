@@ -38,7 +38,7 @@
     
     int contadorDistanciaEntreBotoes = 80;
     for(Modulo *mod in [[self bibliotecaDosModulos] listaDeModulos]){
-        
+        mod.layer.zPosition = +5;
         [mod addTarget:self
                 action:@selector(chamaStoryBoardAulas:)
                 forControlEvents:UIControlEventTouchUpInside];
@@ -49,9 +49,11 @@
         
         mod.descricaoBotao =  [[UILabel alloc] initWithFrame: CGRectMake(-45,130,200,100)];
         mod.descricaoBotao.text = [mod nome];
+        mod.descricaoBotao.font = [UIFont fontWithName:@"Papyrus" size:30];
         mod.descricaoBotao.textAlignment = NSTextAlignmentCenter;
         [mod addSubview:mod.descricaoBotao];
-        mod.layer.zPosition = -10;
+        
+        [self.view bringSubviewToFront:mod];
         
         contadorDistanciaEntreBotoes += 200;
     }
@@ -63,6 +65,9 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+//    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tela.png"]];
+//    [self.view addSubview:backgroundView];
     
     self.bibliotecaDosModulos = [Biblioteca sharedManager];
     [self carregaModulos];

@@ -38,6 +38,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgSatelite;
 @property (weak, nonatomic) IBOutlet UIImageView *imgAstronauta;
 @property (weak, nonatomic) IBOutlet UIImageView *imgExplosao;
+@property (weak, nonatomic) IBOutlet UIImageView *imgGestureAstronauta;
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *pilar1;
@@ -47,6 +48,12 @@
 @property (weak, nonatomic) IBOutlet UIImageView *base;
 
 
+@property NSMutableArray *listaLiberaFala;
+@property NSString *estadoAux1;
+@property NSString *estadoAux2;
+@property NSString *estadoAux3;
+
+@property NSMutableArray *listaImagensCai;
 
 
 @end

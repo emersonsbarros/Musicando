@@ -73,6 +73,7 @@
     
     for(Aula *aula in [Biblioteca sharedManager].moduloAtual.listaDeAulas){
         
+        aula.layer.zPosition = +5;
         //Quando a aula recebe o toque são mostrados seus exercícios
         [aula addTarget:self action:@selector(chamaExercicios:) forControlEvents:UIControlEventTouchUpInside];
         
@@ -81,9 +82,9 @@
         
         aula.descricaoBotao =  [[UILabel alloc] initWithFrame: CGRectMake(-45,110,200,100)];
         aula.descricaoBotao.text = [aula nome];
+        aula.descricaoBotao.font = [UIFont fontWithName:@"Papyrus" size:20];
         aula.descricaoBotao.textAlignment = NSTextAlignmentCenter;
         [aula addSubview:aula.descricaoBotao];
-        aula.layer.zPosition = -10;
         
         [[self view] addSubview:aula];
         
@@ -133,7 +134,7 @@
     int contadorDistanciaEntreBotoes = 80;
     
     for(Exercicio *exerc in [[[Biblioteca sharedManager] aulaAtual] listaDeExercicios]){
-        
+        exerc.layer.zPosition = +5;
         //Quando a aula recebe o toque será chamado seu storyboard
         [exerc addTarget:self action:@selector(chamaStoryBoardExercicio:) forControlEvents:UIControlEventTouchUpInside];
         
@@ -143,6 +144,7 @@
         
         exerc.descricaoBotao =  [[UILabel alloc] initWithFrame: CGRectMake(-45,60,200,100)];
         exerc.descricaoBotao.text = [exerc nome];
+        exerc.descricaoBotao.font = [UIFont fontWithName:@"Papyrus" size:20];
         exerc.descricaoBotao.textAlignment = NSTextAlignmentCenter;
         [exerc addSubview:exerc.descricaoBotao];
         

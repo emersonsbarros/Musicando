@@ -90,21 +90,34 @@
 
 //Chama o seletor
 -(void)chamaAnimacaoMascotePulando:(UIImageView*)imagemDoMascote2{
-    [self performSelector:@selector(animacaoMascotePulando:) withObject:imagemDoMascote2 afterDelay:0.0f];
+    [self performSelector:@selector(animacaoMascotePulando:) withObject:imagemDoMascote2 afterDelay:0.1f];
 }
 //faz a animcao do mascote pulando
 -(void)animacaoMascotePulando:(UIImageView*)imagemMascote{
-    [UIView animateWithDuration:0.5
-                          delay:1.0
-                        options:UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat | UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve
+    [UIView animateWithDuration:1.0
+                          delay:0.0
+                        options:UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat | UIViewAnimationOptionTransitionCrossDissolve
                      animations:^{
-                                                  CGRect moveGalo = CGRectMake(imagemMascote.frame.origin.x,
+                        CGRect moveGalo = CGRectMake(imagemMascote.frame.origin.x,
                                                       imagemMascote.frame.origin.y-40,
                                                       imagemMascote.frame.size.width,
                                                       imagemMascote.frame.size.height);
                          imagemMascote.frame = moveGalo;
                      }
-                     completion:NULL];
+                     completion:^(BOOL finished){
+                         
+                     }];
+
+//
+//    [UIView animateWithDuration:4.0 animations:^(void) {
+//        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+//        [UIView setAnimationRepeatCount:HUGE_VALF];
+//        CGRect moveGalo = CGRectMake(imagemMascote.frame.origin.x,
+//                                    imagemMascote.frame.origin.y-40,
+//                                    imagemMascote.frame.size.width,
+//                                imagemMascote.frame.size.height);
+//        imagemMascote.frame = moveGalo;
+//    }];
 
 }
 
