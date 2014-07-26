@@ -23,14 +23,29 @@
     return self;
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 -(void)chamaStoryBoardAulas:(Modulo*)sender{
     
     Modulo *button =  sender;
-    NSLog(@"estado %@",button.nome);
     [Biblioteca sharedManager].moduloAtual = button;
-    [self performSegueWithIdentifier:@"chamaAulas" sender:self];
     
+
+    [self performSegueWithIdentifier:@"chamaAulas" sender:self];
+//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
+//    UINavigationController *vc = [sb instantiateViewControllerWithIdentifier:@"aulas"];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([[segue identifier] isEqualToString:@"chamaAulas"]){
+        
+    }
+
+}
+
 
 ////////////////////////// Metodos Carrega Modulos ///////////////////////////
 

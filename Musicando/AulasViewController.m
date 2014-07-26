@@ -21,6 +21,10 @@
     return self;
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 //Animação da view de exercícios
 -(void)efeitoDescer{
     

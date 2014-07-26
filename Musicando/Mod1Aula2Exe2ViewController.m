@@ -23,9 +23,16 @@
     return self;
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //Add barra Superior ao Xib
+    [[EfeitoBarraSuperior sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
     
     //Habilita o gesture do mascote com a UIView que fica por cima dele
     //Coloquei essa view para colocar o gesture de pular fala, pois com animation atrapalha
@@ -820,7 +827,7 @@
                          self.imgCoelho.frame = move ;
                      }
                      completion:^(BOOL finished){
-                         
+                         [self.listaLiberaFala addObject:self.estadoAux2];
                      }];
 }
 
@@ -836,7 +843,7 @@
                          self.imgTartaruga.frame = move ;
                      }
                      completion:^(BOOL finished){
-                         
+                         [self.listaLiberaFala addObject:self.estadoAux2];
                      }];
 }
 
@@ -866,12 +873,21 @@
     [self.imgTartaruga addGestureRecognizer:tapCristal2];
     
     
+    //Metodo que verifica o passar fala, nele tem que passar a qt de objetos que colidirá nessa fala, no caso 3
+    [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote2 :self.viewGesturePassaFala:self.listaLiberaFala:2];
+    
+    
 }
 
 
 -(void)pulaFalaMascote{
     int contadorMaximo = self.testaConversa.listaDeFalas.count;
     
+    if(self.contadorDeFalas == contadorMaximo){
+        NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
+        [[Biblioteca sharedManager]chamaOProximoExercicio:self:proxExercicio];
+    }
+
     if(self.contadorDeFalas < contadorMaximo){
         switch (self.contadorDeFalas) {
             case 0:

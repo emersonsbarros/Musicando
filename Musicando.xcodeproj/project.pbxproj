@@ -94,6 +94,10 @@
 		2B64FA801969236D00BC57FD /* Mod2Aula8Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA7E1969236D00BC57FD /* Mod2Aula8Exe1ViewController.xib */; };
 		2B64FA84196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA82196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m */; };
 		2B64FA85196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA83196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib */; };
+		3F3ADB8A1980B30E00199743 /* molduraBarraSuoerior.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F3ADB891980B30E00199743 /* molduraBarraSuoerior.jpg */; };
+		3F3ADB8C1980B5E900199743 /* molduraBarraSuperior2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F3ADB8B1980B5E900199743 /* molduraBarraSuperior2.jpg */; };
+		3F3ADB8E1980B7E200199743 /* molduraBarraSuoerior3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F3ADB8D1980B7E200199743 /* molduraBarraSuoerior3.png */; };
+		3F3ADB941980BEBF00199743 /* alavanca.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F3ADB931980BEBF00199743 /* alavanca.png */; };
 		3F608CA1196C5B7D001979E9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F608CA0196C5B7D001979E9 /* AudioToolbox.framework */; };
 		3F608CA3196C5B85001979E9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F608CA2196C5B85001979E9 /* OpenAL.framework */; };
 		3F608CA5196C5B8D001979E9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F608CA4196C5B8D001979E9 /* QuartzCore.framework */; };
@@ -271,6 +275,10 @@
 		3FAABF1B197E4D1900AAD8FD /* biblioteca.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FAABF1A197E4D1900AAD8FD /* biblioteca.png */; };
 		3FAABF1E197E515200AAD8FD /* elevador.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FAABF1C197E515200AAD8FD /* elevador.png */; };
 		3FAABF1F197E515200AAD8FD /* escada.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FAABF1D197E515200AAD8FD /* escada.png */; };
+		3FAC5921197F5BE8001B762F /* BarraSuperiorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC591F197F5BE8001B762F /* BarraSuperiorViewController.m */; };
+		3FAC5922197F5BE8001B762F /* BarraSuperiorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FAC5920197F5BE8001B762F /* BarraSuperiorViewController.xib */; };
+		3FAC5925197F7146001B762F /* EfeitoBarraSuperior.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC5924197F7146001B762F /* EfeitoBarraSuperior.m */; };
+		3FAC5929197F7923001B762F /* BibliotecaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC5928197F7923001B762F /* BibliotecaViewController.m */; };
 		3FACC84B196E4290003D4660 /* furacao.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FACC84A196E4290003D4660 /* furacao.png */; };
 		3FACC84D196E5F08003D4660 /* gesturePassaFalaMascote.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FACC84C196E5F08003D4660 /* gesturePassaFalaMascote.png */; };
 		3FAD24521973843A00DEDFF8 /* EfeitoImagem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD24511973843A00DEDFF8 /* EfeitoImagem.m */; };
@@ -457,6 +465,10 @@
 		2B64FA81196923FA00BC57FD /* Mod1Aula3Exe5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula3Exe5ViewController.h; sourceTree = "<group>"; };
 		2B64FA82196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula3Exe5ViewController.m; sourceTree = "<group>"; };
 		2B64FA83196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula3Exe5ViewController.xib; sourceTree = "<group>"; };
+		3F3ADB891980B30E00199743 /* molduraBarraSuoerior.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = molduraBarraSuoerior.jpg; sourceTree = "<group>"; };
+		3F3ADB8B1980B5E900199743 /* molduraBarraSuperior2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = molduraBarraSuperior2.jpg; sourceTree = "<group>"; };
+		3F3ADB8D1980B7E200199743 /* molduraBarraSuoerior3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = molduraBarraSuoerior3.png; sourceTree = "<group>"; };
+		3F3ADB931980BEBF00199743 /* alavanca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alavanca.png; sourceTree = "<group>"; };
 		3F608CA0196C5B7D001979E9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3F608CA2196C5B85001979E9 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		3F608CA4196C5B8D001979E9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -647,6 +659,13 @@
 		3FAABF1A197E4D1900AAD8FD /* biblioteca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = biblioteca.png; sourceTree = "<group>"; };
 		3FAABF1C197E515200AAD8FD /* elevador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elevador.png; sourceTree = "<group>"; };
 		3FAABF1D197E515200AAD8FD /* escada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = escada.png; sourceTree = "<group>"; };
+		3FAC591E197F5BE8001B762F /* BarraSuperiorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarraSuperiorViewController.h; sourceTree = "<group>"; };
+		3FAC591F197F5BE8001B762F /* BarraSuperiorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarraSuperiorViewController.m; sourceTree = "<group>"; };
+		3FAC5920197F5BE8001B762F /* BarraSuperiorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarraSuperiorViewController.xib; sourceTree = "<group>"; };
+		3FAC5923197F7146001B762F /* EfeitoBarraSuperior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoBarraSuperior.h; sourceTree = "<group>"; };
+		3FAC5924197F7146001B762F /* EfeitoBarraSuperior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoBarraSuperior.m; sourceTree = "<group>"; };
+		3FAC5927197F7923001B762F /* BibliotecaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BibliotecaViewController.h; sourceTree = "<group>"; };
+		3FAC5928197F7923001B762F /* BibliotecaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BibliotecaViewController.m; sourceTree = "<group>"; };
 		3FACC84A196E4290003D4660 /* furacao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = furacao.png; sourceTree = "<group>"; };
 		3FACC84C196E5F08003D4660 /* gesturePassaFalaMascote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gesturePassaFalaMascote.png; sourceTree = "<group>"; };
 		3FAD24501973843A00DEDFF8 /* EfeitoImagem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoImagem.h; sourceTree = "<group>"; };
@@ -834,6 +853,7 @@
 				3FAABF00197E1DC800AAD8FD /* violaoTimbre.png */,
 				3FAABF04197E2D8200AAD8FD /* notaMusical.png */,
 				3FAABF06197E315B00AAD8FD /* frequenciaDiapasao.jpg */,
+				3F3ADB8D1980B7E200199743 /* molduraBarraSuoerior3.png */,
 				3FAABF07197E315B00AAD8FD /* frequenciaFlauta.jpg */,
 				3FAABF08197E315B00AAD8FD /* frequenciaHomen.jpg */,
 				3FAABF09197E315B00AAD8FD /* frequenciaViolino.jpg */,
@@ -845,6 +865,9 @@
 				3FAABF1A197E4D1900AAD8FD /* biblioteca.png */,
 				3FAABF1C197E515200AAD8FD /* elevador.png */,
 				3FAABF1D197E515200AAD8FD /* escada.png */,
+				3F3ADB891980B30E00199743 /* molduraBarraSuoerior.jpg */,
+				3F3ADB8B1980B5E900199743 /* molduraBarraSuperior2.jpg */,
+				3F3ADB931980BEBF00199743 /* alavanca.png */,
 			);
 			name = Imagens;
 			path = Musicando/Imagens;
@@ -1327,6 +1350,15 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		3FAC5926197F78F8001B762F /* BibliotecaView */ = {
+			isa = PBXGroup;
+			children = (
+				3FAC5927197F7923001B762F /* BibliotecaViewController.h */,
+				3FAC5928197F7923001B762F /* BibliotecaViewController.m */,
+			);
+			name = BibliotecaView;
+			sourceTree = "<group>";
+		};
 		3FADCBB31953BEBB00B90702 /* Aula1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1452,6 +1484,8 @@
 				3FAD24511973843A00DEDFF8 /* EfeitoImagem.m */,
 				A83ED3C619520810006CB6A4 /* Biblioteca.h */,
 				A83ED3C719520810006CB6A4 /* Biblioteca.m */,
+				3FAC5923197F7146001B762F /* EfeitoBarraSuperior.h */,
+				3FAC5924197F7146001B762F /* EfeitoBarraSuperior.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -1557,10 +1591,14 @@
 		A8C3F102194B7B2500E78899 /* Controlador */ = {
 			isa = PBXGroup;
 			children = (
+				3FAC5926197F78F8001B762F /* BibliotecaView */,
 				3FD7EA3919529625005F089A /* AulasView */,
 				3FD7EA38195295F9005F089A /* ModuloView */,
 				3FD7EA37195295E7005F089A /* MenuPrincipalView */,
 				3FD7EA3A19529661005F089A /* Exercicios */,
+				3FAC591E197F5BE8001B762F /* BarraSuperiorViewController.h */,
+				3FAC591F197F5BE8001B762F /* BarraSuperiorViewController.m */,
+				3FAC5920197F5BE8001B762F /* BarraSuperiorViewController.xib */,
 			);
 			name = Controlador;
 			sourceTree = "<group>";
@@ -1695,6 +1733,7 @@
 				2B0041CC197EFF6600EB1D54 /* novoTocaTreco.png in Resources */,
 				3F608D8D196C7585001979E9 /* colcheiaPausa.png in Resources */,
 				3F608DDC196C7585001979E9 /* P200 Piano F#4.caf in Resources */,
+				3F3ADB8E1980B7E200199743 /* molduraBarraSuoerior3.png in Resources */,
 				3F608DD1196C7585001979E9 /* P200 Piano A#7.caf in Resources */,
 				3F608DCD196C7585001979E9 /* P200 Piano A#2.caf in Resources */,
 				3F608D85196C7585001979E9 /* 2.png in Resources */,
@@ -1744,6 +1783,7 @@
 				3F608DDD196C7585001979E9 /* P200 Piano F#5.caf in Resources */,
 				3FAABF02197E1DC800AAD8FD /* pianoTimbre.png in Resources */,
 				3FDE64C819762B4100EECEE8 /* spark.png in Resources */,
+				3F3ADB8C1980B5E900199743 /* molduraBarraSuperior2.jpg in Resources */,
 				3F608DAE196C7585001979E9 /* harry_potter_theme_song.xml in Resources */,
 				3F7B678F197C79E60095CF0F /* animaIndio2.gif in Resources */,
 				3FAD245A1973AD8200DEDFF8 /* Mod1Aula2Exe2ViewController.xib in Resources */,
@@ -1759,6 +1799,7 @@
 				3F608D90196C7585001979E9 /* semifusaPausa.png in Resources */,
 				2B64FA711969234700BC57FD /* Mod2Aula7Exe4ViewController.xib in Resources */,
 				3F7B67B2197CDBDA0095CF0F /* graficoAgudoCortado.jpg in Resources */,
+				3FAC5922197F5BE8001B762F /* BarraSuperiorViewController.xib in Resources */,
 				3F608DD0196C7585001979E9 /* P200 Piano A#5.caf in Resources */,
 				3FD9742419745C75002EB77A /* explosao.png in Resources */,
 				3F608D5F196C7585001979E9 /* fad2.caf in Resources */,
@@ -1827,6 +1868,7 @@
 				3F608DB4196C7585001979E9 /* Mozart-Marcha Turca.xml in Resources */,
 				3F608D5C196C7585001979E9 /* do2.caf in Resources */,
 				3F7B678D197C75B60095CF0F /* tocaIndio.png in Resources */,
+				3F3ADB941980BEBF00199743 /* alavanca.png in Resources */,
 				3F608D70196C7585001979E9 /* 6c - G.caf in Resources */,
 				3FA586B9197EDE5400C3BDE3 /* panelaMusica.png in Resources */,
 				3FA586C2197EE49F00C3BDE3 /* lazerMusica.png in Resources */,
@@ -1847,6 +1889,7 @@
 				3FD7EA3219529126005F089A /* Mod1Aula1Exe1ViewController.xib in Resources */,
 				2B64FA1C1969224200BC57FD /* Mod2Aula2Exe1ViewController.xib in Resources */,
 				3FAA1FEB196D08A000C32F03 /* galo.png in Resources */,
+				3F3ADB8A1980B30E00199743 /* molduraBarraSuoerior.jpg in Resources */,
 				3F608D86196C7585001979E9 /* 3.png in Resources */,
 				3F608DBA196C7585001979E9 /* parabens.xml in Resources */,
 				3FACC84D196E5F08003D4660 /* gesturePassaFalaMascote.png in Resources */,
@@ -1916,6 +1959,7 @@
 				2B64FA161969222600BC57FD /* Mod2Aula1Exe3ViewController.m in Sources */,
 				2B64FA4D196922C900BC57FD /* Mod2Aula4Exe6ViewController.m in Sources */,
 				2B64FA39196922A400BC57FD /* Mod2Aula4Exe2ViewController.m in Sources */,
+				3FAC5921197F5BE8001B762F /* BarraSuperiorViewController.m in Sources */,
 				2B64F9E41969207E00BC57FD /* Mod1Aula2Exe1ViewController.m in Sources */,
 				3FAD24591973AD8200DEDFF8 /* Mod1Aula2Exe2ViewController.m in Sources */,
 				3F608DE3196C7585001979E9 /* OpenALSupport.c in Sources */,
@@ -1933,6 +1977,7 @@
 				0B03193B19521C0B00316D6B /* AulasViewController.m in Sources */,
 				3FAD24521973843A00DEDFF8 /* EfeitoImagem.m in Sources */,
 				3F608DCC196C7585001979E9 /* Partitura.m in Sources */,
+				3FAC5929197F7923001B762F /* BibliotecaViewController.m in Sources */,
 				2B64FA7F1969236D00BC57FD /* Mod2Aula8Exe1ViewController.m in Sources */,
 				2B64FA0C1969220C00BC57FD /* Mod2Aula1Exe1ViewController.m in Sources */,
 				2B64FA201969224F00BC57FD /* Mod2Aula2Exe2ViewController.m in Sources */,
@@ -1956,6 +2001,7 @@
 				2B64FA111969221C00BC57FD /* Mod2Aula1Exe2ViewController.m in Sources */,
 				A83ED3E219520810006CB6A4 /* Usuario.m in Sources */,
 				3F608D58196C7585001979E9 /* DataBaseInstrumento.m in Sources */,
+				3FAC5925197F7146001B762F /* EfeitoBarraSuperior.m in Sources */,
 				A83ED3DF19520810006CB6A4 /* Glossario.m in Sources */,
 				A83ED3DC19520810006CB6A4 /* Exercicio.m in Sources */,
 				2B64F9EA196920D000BC57FD /* Mod1Aula3Exe1ViewController.m in Sources */,

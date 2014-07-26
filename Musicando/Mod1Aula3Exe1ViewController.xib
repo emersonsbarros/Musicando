@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -117,6 +117,6 @@
         <image name="mascote.png" width="1000" height="1000"/>
         <image name="pausaBloco.png" width="123" height="120"/>
         <image name="seta.png" width="196" height="245"/>
-        <image name="tocaTreco.png" width="1784" height="916"/>
+        <image name="tocaTreco.png" width="786" height="495"/>
     </resources>
 </document>

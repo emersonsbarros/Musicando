@@ -12,6 +12,7 @@
 #import "EfeitoMascote.h"
 #import "EfeitoImagem.h"
 #import <AVFoundation/AVFoundation.h>
+#import "EfeitoBarraSuperior.h"
 #import <UIKit/UIKit.h>
 
 @interface Mod1Aula2Exe2ViewController : UIViewController

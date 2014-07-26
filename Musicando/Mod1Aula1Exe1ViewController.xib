@@ -93,6 +93,10 @@
                     <rect key="frame" x="149" y="145" width="742" height="502"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tela.png" translatesAutoresizingMaskIntoConstraints="NO" id="6eg-5Z-EF2">
+                            <rect key="frame" x="-8" y="-11" width="750" height="513"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cB-NT-e8B">
                             <rect key="frame" x="322" y="406" width="141" height="67"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -105,7 +109,7 @@
                                 <action selector="btnComecar:" destination="-1" eventType="touchUpInside" id="hdz-pp-nhY"/>
                             </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gesturePassaFalaMascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="X0B-cV-0oK">
+                        <imageView userInteractionEnabled="NO" alpha="0.5499999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gesturePassaFalaMascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="X0B-cV-0oK">
                             <rect key="frame" x="142" y="180" width="145" height="244"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -113,7 +117,7 @@
                             <rect key="frame" x="428" y="-11" width="275" height="350"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Há momentos que nosso mascote quer falar mais coisas, para isso basta tocar com o dedo quando ele estiver brilhando" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="374" translatesAutoresizingMaskIntoConstraints="NO" id="vRv-D0-l0z">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5499999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Há momentos que nosso mascote quer falar mais coisas, para isso basta tocar com o dedo quando ele estiver brilhando" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="374" translatesAutoresizingMaskIntoConstraints="NO" id="vRv-D0-l0z">
                             <rect key="frame" x="16" y="8" width="374" height="154"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -124,9 +128,9 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wH-j5-URZ">
-                    <rect key="frame" x="241" y="693" width="78" height="30"/>
+                    <rect key="frame" x="266" y="616" width="40" height="96"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="alavanca">
+                    <state key="normal" backgroundImage="alavanca.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -191,7 +195,6 @@
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
         </view>
     </objects>
@@ -200,6 +203,7 @@
         <image name="CapoeiraJog.png" width="100" height="55"/>
         <image name="Capoeiraframe1.gif" width="288" height="217"/>
         <image name="RJ.jpg" width="652" height="408"/>
+        <image name="alavanca.png" width="48" height="196"/>
         <image name="animaIndio1.gif" width="106" height="190"/>
         <image name="aprendizadoMusica.jpg" width="150" height="110"/>
         <image name="carnavalFesta.png" width="147" height="150"/>
@@ -215,6 +219,7 @@
         <image name="palmas.png" width="150" height="146"/>
         <image name="panelaMusica.png" width="150" height="86"/>
         <image name="saudeMusica.jpg" width="150" height="150"/>
+        <image name="tela.png" width="1024" height="680"/>
         <image name="tocaIndio.png" width="474" height="640"/>
         <image name="tocaTreco.png" width="786" height="495"/>
         <image name="ventoPipa.png" width="320" height="640"/>

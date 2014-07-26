@@ -16,6 +16,7 @@
 #import "EfeitoMascote.h"
 #import <QuartzCore/QuartzCore.h>
 #import <SpriteKit/SpriteKit.h>
+#import "EfeitoBarraSuperior.h"
 
 @interface Mod1Aula1Exe1ViewController : UIViewController <UIGestureRecognizerDelegate>
 

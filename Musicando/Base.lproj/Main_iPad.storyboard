@@ -208,6 +208,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -217,7 +218,7 @@
         <!--Aulas View Controller - Aulas-->
         <scene sceneID="2eP-fE-ZN1">
             <objects>
-                <viewController id="DGN-Kk-A93" customClass="AulasViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="aulas" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DGN-Kk-A93" customClass="AulasViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Ce-be-YDP"/>
                         <viewControllerLayoutGuide type="bottom" id="sil-mZ-PC9"/>
@@ -227,7 +228,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tela.png" translatesAutoresizingMaskIntoConstraints="NO" id="cBT-pd-fPF">
-                                <rect key="frame" x="1" y="64" width="1024" height="702"/>
+                                <rect key="frame" x="1" y="46" width="1024" height="720"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8G0-6c-Kxz">
@@ -247,6 +248,7 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="Aulas" id="6ux-SU-lZJ"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="viewExercicios" destination="Sa1-Pc-766" id="z5g-rw-vVU"/>
@@ -259,7 +261,7 @@
         <!--Modulo View Controller - Modulos-->
         <scene sceneID="ug8-dH-x1R">
             <objects>
-                <viewController id="Gfd-Jb-Kxo" customClass="ModuloViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="modulos" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gfd-Jb-Kxo" customClass="ModuloViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cqD-6x-oWn"/>
                         <viewControllerLayoutGuide type="bottom" id="6c2-2T-rjS"/>
@@ -269,7 +271,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tela.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZwO-Gw-9It">
-                                <rect key="frame" x="0.0" y="66" width="1024" height="702"/>
+                                <rect key="frame" x="0.0" y="45" width="1024" height="723"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -278,11 +280,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Modulos" id="VIS-42-bVj">
                         <barButtonItem key="rightBarButtonItem" id="eTR-dv-WNA">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="DGN-Kk-A93" kind="push" identifier="chamaAulas" id="hxl-MY-8BE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="imgFundo" destination="ZwO-Gw-9It" id="pH0-jZ-Mbf"/>
@@ -313,10 +317,10 @@
             </objects>
             <point key="canvasLocation" x="4042" y="-133"/>
         </scene>
-        <!--View Controller - Jornada-->
+        <!--Biblioteca View Controller - biblioteca-->
         <scene sceneID="X75-kB-Ko3">
             <objects>
-                <viewController id="225-Yc-UqM" sceneMemberID="viewController">
+                <viewController title="biblioteca" id="225-Yc-UqM" customClass="BibliotecaViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vfx-cU-rnR"/>
                         <viewControllerLayoutGuide type="bottom" id="TKg-7V-5XB"/>
@@ -326,7 +330,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tela.png" translatesAutoresizingMaskIntoConstraints="NO" id="TqK-q8-5A5">
-                                <rect key="frame" x="0.0" y="66" width="1024" height="702"/>
+                                <rect key="frame" x="0.0" y="45" width="1024" height="723"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfL-9j-DG8">
@@ -391,7 +395,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="modal" modalTransitionStyle="crossDissolve" id="g4X-9d-msD"/>
+                                            <segue destination="BYZ-38-t0r" kind="modal" identifier="biblioteca" modalTransitionStyle="crossDissolve" id="g4X-9d-msD"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -402,8 +406,11 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="Jornada" id="MPi-to-5FY">
-                        <barButtonItem key="rightBarButtonItem" id="hA5-qc-aW3"/>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Item" id="hA5-qc-aW3">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tba-lG-NrP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -701,16 +708,16 @@
         <!--Navigation Controller-->
         <scene sceneID="IZn-87-szC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="lL8-Nq-0sM" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="biblioteca" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lL8-Nq-0sM" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="4-2Pausa.png" backIndicatorTransitionMaskImage="4-2Pausa.png" id="6wX-TU-S4M">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
-                            <color key="textColor" patternImage="E918AAD4-F67C-4732-BFB9-FBEB8AD8F35B" colorSpace="pattern"/>
-                            <color key="textShadowColor" patternImage="B3C24E26-71C6-422A-A90B-F65669A0306C" colorSpace="pattern"/>
+                            <color key="textColor" patternImage="E5513D80-BF84-431E-BF72-737A5665295A" colorSpace="pattern"/>
+                            <color key="textShadowColor" patternImage="FC83A81D-B949-4690-88FA-121D46D94BC9" colorSpace="pattern"/>
                             <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                         </textAttributes>
                     </navigationBar>
@@ -770,7 +777,7 @@
         <image name="4.png" width="57" height="96"/>
         <image name="5.png" width="57" height="96"/>
         <image name="6.png" width="57" height="96"/>
-        <image name="B3C24E26-71C6-422A-A90B-F65669A0306C" width="320" height="460">
+        <image name="E5513D80-BF84-431E-BF72-737A5665295A" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -10657,7 +10664,7 @@ CQq/AAkKxAAJCswACQrPAAkK1AAJCtwACQrfAAkK8QAJCvQACQr5AAAAAAAABAEAAAAAAAAAQgAAAAAA
 AAAAAAAAAAAJCvs
 </mutableData>
         </image>
-        <image name="E918AAD4-F67C-4732-BFB9-FBEB8AD8F35B" width="320" height="460">
+        <image name="FC83A81D-B949-4690-88FA-121D46D94BC9" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -20559,6 +20566,6 @@ AAAAAAAAAAAJCvs
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="yqW-is-vcF"/>
+        <segue reference="fnx-GB-heE"/>
     </inferredMetricsTieBreakers>
 </document>

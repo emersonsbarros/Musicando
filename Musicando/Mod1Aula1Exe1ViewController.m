@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
 #import "Mod1Aula1Exe1ViewController.h"
-
+#import "BarraSuperiorViewController.h"
 
 @interface Mod1Aula1Exe1ViewController ()
 
@@ -22,12 +22,20 @@
     return self;
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
+    //Add barra Superior ao Xib
+    [[EfeitoBarraSuperior sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
+    
     //Chama a view de Introducao
     [self performSelector:@selector(animacaoMaoMascote) withObject:NULL afterDelay:0.1f];
     
-}
+   }
 
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
@@ -662,6 +670,7 @@
 //    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgBen1];
     
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
 }
 
 
@@ -669,6 +678,14 @@
 -(void)pulaFalaMascote{
     //Usa pra não dar erro de nulo na ultima fala
     int contadorMaximo = (int)self.testaConversa.listaDeFalas.count;
+    
+    //Estrapola a ultima fala e chama o proximo exercicio
+    //Obs: é so colar esse treco em todos os pulaFalaMascote alem de colocar o
+    //metodo chamaAddBrilho no ultimo chamaMetodosFalaX
+    if(self.contadorDeFalas == contadorMaximo){
+        NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
+        [[Biblioteca sharedManager]chamaOProximoExercicio:self:proxExercicio];
+    }
     
     if(self.contadorDeFalas < contadorMaximo){
         switch (self.contadorDeFalas) {
