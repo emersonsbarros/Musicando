@@ -41,11 +41,28 @@
     [Biblioteca sharedManager].exercicioAtual = prox;
     
     CATransition* transition = [CATransition animation];
-    transition.duration = 1;
+    transition.duration = 1.5;
     transition.type = kCATransitionFade;
     transition.subtype = kCATransitionFromBottom;
     [viewAntiga.view.window.layer addAnimation:transition forKey:kCATransition];
     [viewAntiga presentViewController:object animated:NO completion:nil];
+
+}
+
+-(NSString*)retornaONomeDaProximaAula:(NSString*)nomeDaViewAtual{
+    Exercicio *prox = [self retornaIndiceExercicioModuloBasico:nomeDaViewAtual];
+    return prox.nome;
+}
+
+-(void)chamaViewTransicaoExercicio:(UIViewController*)viewProxAula :(NSString*)nomeDaViewAtual{
+    TransicaoExercicioViewController *trans = [[TransicaoExercicioViewController alloc]init];
+    
+    CATransition* transition = [CATransition animation];
+    transition.duration = 1.5;
+    transition.type = kCATransitionFade;
+    transition.subtype = kCATransitionFromBottom;
+    [viewProxAula.view.window.layer addAnimation:transition forKey:kCATransition];
+    [viewProxAula presentViewController:trans animated:NO completion:nil];
 
 }
 

@@ -279,6 +279,8 @@
 		3FAC5922197F5BE8001B762F /* BarraSuperiorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FAC5920197F5BE8001B762F /* BarraSuperiorViewController.xib */; };
 		3FAC5925197F7146001B762F /* EfeitoBarraSuperior.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC5924197F7146001B762F /* EfeitoBarraSuperior.m */; };
 		3FAC5929197F7923001B762F /* BibliotecaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC5928197F7923001B762F /* BibliotecaViewController.m */; };
+		3FAC668F1984ADD700BED55E /* TransicaoExercicioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC668D1984ADD700BED55E /* TransicaoExercicioViewController.m */; };
+		3FAC66901984ADD700BED55E /* TransicaoExercicioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FAC668E1984ADD700BED55E /* TransicaoExercicioViewController.xib */; };
 		3FACC84B196E4290003D4660 /* furacao.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FACC84A196E4290003D4660 /* furacao.png */; };
 		3FACC84D196E5F08003D4660 /* gesturePassaFalaMascote.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FACC84C196E5F08003D4660 /* gesturePassaFalaMascote.png */; };
 		3FAD24521973843A00DEDFF8 /* EfeitoImagem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD24511973843A00DEDFF8 /* EfeitoImagem.m */; };
@@ -666,6 +668,9 @@
 		3FAC5924197F7146001B762F /* EfeitoBarraSuperior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoBarraSuperior.m; sourceTree = "<group>"; };
 		3FAC5927197F7923001B762F /* BibliotecaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BibliotecaViewController.h; sourceTree = "<group>"; };
 		3FAC5928197F7923001B762F /* BibliotecaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BibliotecaViewController.m; sourceTree = "<group>"; };
+		3FAC668C1984ADD700BED55E /* TransicaoExercicioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransicaoExercicioViewController.h; sourceTree = "<group>"; };
+		3FAC668D1984ADD700BED55E /* TransicaoExercicioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransicaoExercicioViewController.m; sourceTree = "<group>"; };
+		3FAC668E1984ADD700BED55E /* TransicaoExercicioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransicaoExercicioViewController.xib; sourceTree = "<group>"; };
 		3FACC84A196E4290003D4660 /* furacao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = furacao.png; sourceTree = "<group>"; };
 		3FACC84C196E5F08003D4660 /* gesturePassaFalaMascote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gesturePassaFalaMascote.png; sourceTree = "<group>"; };
 		3FAD24501973843A00DEDFF8 /* EfeitoImagem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoImagem.h; sourceTree = "<group>"; };
@@ -1350,6 +1355,16 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		3FAAE944198365010053DD23 /* BarraView */ = {
+			isa = PBXGroup;
+			children = (
+				3FAC591E197F5BE8001B762F /* BarraSuperiorViewController.h */,
+				3FAC591F197F5BE8001B762F /* BarraSuperiorViewController.m */,
+				3FAC5920197F5BE8001B762F /* BarraSuperiorViewController.xib */,
+			);
+			name = BarraView;
+			sourceTree = "<group>";
+		};
 		3FAC5926197F78F8001B762F /* BibliotecaView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1357,6 +1372,16 @@
 				3FAC5928197F7923001B762F /* BibliotecaViewController.m */,
 			);
 			name = BibliotecaView;
+			sourceTree = "<group>";
+		};
+		3FAC66911984B63F00BED55E /* TransicaoExerciciosView */ = {
+			isa = PBXGroup;
+			children = (
+				3FAC668C1984ADD700BED55E /* TransicaoExercicioViewController.h */,
+				3FAC668D1984ADD700BED55E /* TransicaoExercicioViewController.m */,
+				3FAC668E1984ADD700BED55E /* TransicaoExercicioViewController.xib */,
+			);
+			name = TransicaoExerciciosView;
 			sourceTree = "<group>";
 		};
 		3FADCBB31953BEBB00B90702 /* Aula1 */ = {
@@ -1591,14 +1616,13 @@
 		A8C3F102194B7B2500E78899 /* Controlador */ = {
 			isa = PBXGroup;
 			children = (
+				3FAC66911984B63F00BED55E /* TransicaoExerciciosView */,
+				3FAAE944198365010053DD23 /* BarraView */,
 				3FAC5926197F78F8001B762F /* BibliotecaView */,
 				3FD7EA3919529625005F089A /* AulasView */,
 				3FD7EA38195295F9005F089A /* ModuloView */,
 				3FD7EA37195295E7005F089A /* MenuPrincipalView */,
 				3FD7EA3A19529661005F089A /* Exercicios */,
-				3FAC591E197F5BE8001B762F /* BarraSuperiorViewController.h */,
-				3FAC591F197F5BE8001B762F /* BarraSuperiorViewController.m */,
-				3FAC5920197F5BE8001B762F /* BarraSuperiorViewController.xib */,
 			);
 			name = Controlador;
 			sourceTree = "<group>";
@@ -1725,6 +1749,7 @@
 				3F608D7F196C7585001979E9 /* semibreve.png in Resources */,
 				3F608DD2196C7585001979E9 /* P200 Piano C10.caf in Resources */,
 				2B0041CA197EFE0C00EB1D54 /* notas.jpg in Resources */,
+				3FAC66901984ADD700BED55E /* TransicaoExercicioViewController.xib in Resources */,
 				3F608DE1196C7585001979E9 /* Piano.plist in Resources */,
 				3FAA1FEA196D08A000C32F03 /* carro.png in Resources */,
 				2B64FA801969236D00BC57FD /* Mod2Aula8Exe1ViewController.xib in Resources */,
@@ -1978,6 +2003,7 @@
 				3FAD24521973843A00DEDFF8 /* EfeitoImagem.m in Sources */,
 				3F608DCC196C7585001979E9 /* Partitura.m in Sources */,
 				3FAC5929197F7923001B762F /* BibliotecaViewController.m in Sources */,
+				3FAC668F1984ADD700BED55E /* TransicaoExercicioViewController.m in Sources */,
 				2B64FA7F1969236D00BC57FD /* Mod2Aula8Exe1ViewController.m in Sources */,
 				2B64FA0C1969220C00BC57FD /* Mod2Aula1Exe1ViewController.m in Sources */,
 				2B64FA201969224F00BC57FD /* Mod2Aula2Exe2ViewController.m in Sources */,

@@ -340,10 +340,9 @@
     
     if(self.contadorDeFalas == contadorMaximo){
         NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
-        [[Biblioteca sharedManager]chamaOProximoExercicio:self:proxExercicio];
+        [[Biblioteca sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
     }
 
-    
     if(self.contadorDeFalas < contadorMaximo){
         switch (self.contadorDeFalas) {
             case 0:

@@ -103,10 +103,12 @@
                                                       imagemMascote.frame.size.width,
                                                       imagemMascote.frame.size.height);
                          imagemMascote.frame = moveGalo;
+
                      }
                      completion:^(BOOL finished){
                          
                      }];
+    
 
 //
 //    [UIView animateWithDuration:4.0 animations:^(void) {

@@ -35,6 +35,7 @@
     //Chama a view de Introducao
     [self performSelector:@selector(animacaoMaoMascote) withObject:NULL afterDelay:0.1f];
     
+    
    }
 
 - (void)didReceiveMemoryWarning{
@@ -46,6 +47,7 @@
 
 //Botao que aparece na view introducao
 - (IBAction)btnComecar:(id)sender {
+    
     
     ////////////remove animacoes da intro---> só é usado nessa view///////////
     [[EfeitoImagem sharedManager]removeTodasAnimacoesView:self.imgMaoTouch];
@@ -684,7 +686,7 @@
     //metodo chamaAddBrilho no ultimo chamaMetodosFalaX
     if(self.contadorDeFalas == contadorMaximo){
         NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
-        [[Biblioteca sharedManager]chamaOProximoExercicio:self:proxExercicio];
+        [[Biblioteca sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
     }
     
     if(self.contadorDeFalas < contadorMaximo){

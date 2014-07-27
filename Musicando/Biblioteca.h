@@ -13,6 +13,7 @@
 #import "Modulo.h"
 #import "Aula.h"
 #import "Exercicio.h"
+#import "TransicaoExercicioViewController.h"
 
 @interface Biblioteca : NSObject
 
@@ -30,6 +31,8 @@
 
 -(Exercicio*)retornaIndiceExercicioModuloBasico:(NSString*)nomeView;
 -(void)chamaOProximoExercicio:(UIViewController*)viewAntiga :(NSString*)nomeDaViewAtual;
+-(void)chamaViewTransicaoExercicio:(UIViewController*)viewProxAula :(NSString*)nomeDaViewAtual;
+-(NSString*)retornaONomeDaProximaAula:(NSString*)nomeDaViewAtual;
 
 @end
 

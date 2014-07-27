@@ -57,7 +57,6 @@
     
     [Biblioteca sharedManager].exercicioAtual = button;
 
-    
     CATransition* transition = [CATransition animation];
     transition.duration = 0.5;
     transition.type = kCATransitionFade;
