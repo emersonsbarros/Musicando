@@ -472,6 +472,7 @@
     [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgMaoTocaTreco];
     [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgGaloMao];
     
+    
     [UIView animateWithDuration:2.0
                           delay:0.0
                         options:  UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve
@@ -540,10 +541,53 @@
     
     [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.outAlavancaTocaTreco];
     
+    
+    
 }
 
+//-(void)rotate:(id)sender {
+//    
+//    
+//    UIRotationGestureRecognizer *rotationRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(rotate:)];
+//    [rotationRecognizer setDelegate:self];
+//    [self.outAlavancaTocaTreco addGestureRecognizer:rotationRecognizer];
+//    
+//    //lastRotation is a cgfloat member variable
+//    
+//    if([(UIRotationGestureRecognizer*)sender state] == UIGestureRecognizerStateEnded) {
+//        _lastRotation = 0.0;
+//        return;
+//    }
+//    
+//    CGFloat rotation = 0.0 - (_lastRotation - [(UIRotationGestureRecognizer*)sender rotation]);
+//    
+//    CGAffineTransform currentTransform = self.outAlavancaTocaTreco.transform;
+//    CGAffineTransform newTransform = CGAffineTransformRotate(currentTransform,rotation);
+//    
+//    [self.outAlavancaTocaTreco setTransform:newTransform];
+//    
+//    _lastRotation = [(UIRotationGestureRecognizer*)sender rotation];
+//}
+
+
 - (IBAction)btnAlavancaTocaTreco:(id)sender {
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+    
+    
+    [UIView animateWithDuration:2.0
+                          delay:0.0
+                        options: UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         self.outAlavancaTocaTreco.transform = CGAffineTransformRotate(self.outAlavancaTocaTreco.transform, ((10 * M_PI) / 180.0));
+                     }
+                     completion:^(BOOL finished){
+                         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"musicaMixaIntroducao" withExtension:@"wav"];
+                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+                         [[self audioPlayer]play];
+                         
+                         [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:8.0f:self.viewGesturePassaFala];
+                     }];
+    
+   
 }
 
 
@@ -551,6 +595,7 @@
     
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
 
+    [[self audioPlayer]stop];
     
     [[EfeitoImagem sharedManager]removeTodasAnimacoesView:self.imgPipaGrande];
     [[EfeitoImagem sharedManager]removeTodasAnimacoesView:self.imgCarroGrande];

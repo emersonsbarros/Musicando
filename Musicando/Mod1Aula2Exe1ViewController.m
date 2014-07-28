@@ -80,9 +80,15 @@
                                             self.imgColher.frame.size.height);
         if(self.estadoAux1 == NULL)self.estadoAux1 = @"1";
         [self.listaLiberaFala addObject:self.estadoAux1];
-            
+        
+        self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"panela" withExtension:@"mp3"];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+        [[self audioPlayer]play];
+
+        
     }else{
-        //self.imgVibracao.hidden = YES;
+    
+        
         [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgVibracao];
     }
     
@@ -92,7 +98,7 @@
 -(void)chamaMetodosFala1{
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
-   [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+   [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
 }
 
 -(void)chamaMetodosFala2{
@@ -267,11 +273,13 @@
                          
                      }
                      completion:^(BOOL finished){
-                         
+                         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"barulhoPilarCaindo" withExtension:@"mp3"];
+                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+                         [[self audioPlayer]play];
                      }];
     
     [UIView animateWithDuration:2.0
-                          delay:0.0
+                          delay:2.0
                         options:  UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve
                      animations:^{
                          CGRect moveGalo = CGRectMake(self.pilar2.frame.origin.x,
@@ -282,11 +290,13 @@
                          
                      }
                      completion:^(BOOL finished){
-                         
+                         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"barulhoPilarCaindo" withExtension:@"mp3"];
+                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+                         [[self audioPlayer]play];
                      }];
     
     [UIView animateWithDuration:2.0
-                          delay:0.0
+                          delay:4.0
                         options:  UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve
                      animations:^{
                          CGRect moveGalo = CGRectMake(self.pilar3.frame.origin.x,
@@ -297,11 +307,13 @@
                          
                      }
                      completion:^(BOOL finished){
-                         
+                         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"barulhoPilarCaindo" withExtension:@"mp3"];
+                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+                         [[self audioPlayer]play];
                      }];
     
     [UIView animateWithDuration:2.0
-                          delay:0.0
+                          delay:6.0
                         options:  UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve
                      animations:^{
                          CGRect moveGalo = CGRectMake(self.pilar4.frame.origin.x,
@@ -312,11 +324,13 @@
                          
                      }
                      completion:^(BOOL finished){
-            
+                         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"barulhoPilarCaindo" withExtension:@"mp3"];
+                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+                         [[self audioPlayer]play];
                      }];    
     
     [UIView animateWithDuration:3.0
-                          delay:3.0
+                          delay:9.0
                         options:  UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve
                      animations:^{
                          self.base.hidden = NO;
@@ -328,6 +342,9 @@
                          
                      }
                      completion:^(BOOL finished){
+                         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"barulhoBasePilar" withExtension:@"wav"];
+                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+                         [[self audioPlayer]play];
                          [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
                      }];
     

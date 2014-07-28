@@ -134,7 +134,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frequenciaDiapasao.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6oJ-U3-RjW">
-                    <rect key="frame" x="-465" y="52" width="465" height="128"/>
+                    <rect key="frame" x="-463" y="75" width="465" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frequenciaViolino.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Fdc-6q-Lbs">
