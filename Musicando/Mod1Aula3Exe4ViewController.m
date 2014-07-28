@@ -22,6 +22,10 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
+    //Add barra Superior ao Xib
+    [[EfeitoBarraSuperior sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
+    
     [self iniciarComponentes];
 }
 
@@ -95,6 +99,11 @@
     //Para não dar erro de NULL na ultima fala
     int contadorMaximo = (int)self.testaConversa.listaDeFalas.count;
     
+    if(self.contadorDeFalas == contadorMaximo){
+        NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
+        [[Biblioteca sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
+    }
+    
     if(self.contadorDeFalas < contadorMaximo){
         switch (self.contadorDeFalas) {
             case 0:
@@ -133,6 +142,7 @@
 
 //Explica Harmonia
 -(void)chamaMetodosFala0 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 

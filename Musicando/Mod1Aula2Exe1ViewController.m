@@ -199,7 +199,7 @@
 -(void)chamaMetodosFala4{
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
-    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgExplosao];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade: self.imgExplosao];
     [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgAstronauta];
     [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgSatelite];
 

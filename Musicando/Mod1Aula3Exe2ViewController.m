@@ -24,16 +24,15 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
+    //Add barra Superior ao Xib
+    [[EfeitoBarraSuperior sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
+    
     //Sombreando view dos ritmos
     self.viewDosRitmos.layer.shadowColor = [[UIColor blackColor] CGColor];
     self.viewDosRitmos.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
     self.viewDosRitmos.layer.shadowRadius = 3.0f;
     self.viewDosRitmos.layer.shadowOpacity = 1.0f;
     [self.viewDosRitmos setBackgroundColor: [UIColor whiteColor]];
-    
-    //Áudio teste
-    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"mi3E" withExtension:@"wav"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
     
     [self iniciarComponentes];
 }
@@ -108,6 +107,11 @@
     //Para não dar erro de NULL na ultima fala
     int contadorMaximo = (int)self.testaConversa.listaDeFalas.count;
     
+    if(self.contadorDeFalas == contadorMaximo){
+        NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
+        [[Biblioteca sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
+    }
+    
     if(self.contadorDeFalas < contadorMaximo){
         switch (self.contadorDeFalas) {
             case 0:
@@ -122,9 +126,23 @@
             case 3:
                 [self chamaMetodosFala3];
                 break;
-                
             case 4:
                 [self chamaMetodosFala4];
+                break;
+            case 5:
+                [self chamaMetodosFala5];
+                break;
+            case 6:
+                [self chamaMetodosFala6];
+                break;
+            case 7:
+                [self chamaMetodosFala7];
+                break;
+            case 8:
+                [self chamaMetodosFala8];
+                break;
+            case 9:
+                [self chamaMetodosFala9];
                 break;
                 
             default:
@@ -139,23 +157,63 @@
     }
 }
 
-//Intro sobre música
+//Intro sobre ritmo
 -(void)chamaMetodosFala0 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//Primeira animação
+//Explicação ritmo
 -(void)chamaMetodosFala1 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Animação batimentos do coração
+-(void)chamaMetodosFala2 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    //Chama animação de batidas do coração
+    [self animacaoBatidasDoCoracao];
+    
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Complemento de fala sobre ritmos
+-(void)chamaMetodosFala3 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    //Para som das batidas
+    self.audioPlayer.stop;
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade: self.imgBatidasDoCoracao];
+    
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Exemplo de música em vários ritmos
+-(void)chamaMetodosFala4 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Mostra view de exercitar
     self.viewDosRitmos.hidden = NO;
+    self.imgBatidasDoCoracao.hidden = YES;
     [self primeiraAnimacao];
     
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
--(void)chamaMetodosFala2 {
+//Complemento de fala
+-(void)chamaMetodosFala5 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    //Para som das batidas
+    self.audioPlayer.stop;
+    
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Animação dos tocatrecos
+-(void)chamaMetodosFala6 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Esconde botões de ritmo
@@ -170,32 +228,35 @@
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
--(void)chamaMetodosFala3 {
+//Exercício
+-(void)chamaMetodosFala7 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     self.outBtoMaestro.hidden = NO;
     self.outBtoMicrofone.hidden = NO;
     self.outBtoTempoVelocidade.hidden = NO;
+    
     self.outTocaTreco1.hidden = YES;
     self.outTocaTreco2.hidden = YES;
     
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
--(void)chamaMetodosFala4 {
+//Completa fala
+-(void)chamaMetodosFala8 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-
-
-
-
-
-
-
-
-
+//Fala final
+-(void)chamaMetodosFala9 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    //Mostra view de exercitar
+    self.viewDosRitmos.hidden = YES;
+    
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
 
 
 
@@ -203,6 +264,30 @@
 
 
 //================Métodos de animação e gameficação do exercício
+
+-(void)animacaoBatidasDoCoracao{
+    
+    [UIView animateWithDuration:2.0
+                          delay:0.0
+                        options:  UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         self.imgBatidasDoCoracao.frame = CGRectMake(self.imgBatidasDoCoracao.frame.origin.x,
+                                                                     self.imgBatidasDoCoracao.frame.origin.y+250,
+                                                                     self.imgBatidasDoCoracao.frame.size.width,
+                                                                     self.imgBatidasDoCoracao.frame.size.height);
+                     }
+                     completion:^(BOOL finished){
+                        
+                         //Degradê para imagem de batidas do coração
+                         [[EfeitoImagem sharedManager]hiddenNoEmDegrade: self.imgBatidasDoCoracao];
+                         
+                         
+                         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"coracaoBatendo" withExtension:@"mp3"];
+                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+                         self.audioPlayer.play;
+                     }];
+    
+}
 
 
 //Primeira animação
@@ -267,14 +352,23 @@
 
 - (IBAction)btoClassico:(id)sender {
     [self animacaoAumentarBtoRitmo: self.outBtoClassico];
+    
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"happybirthdayClassico" withExtension:@"mp3"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
     self.audioPlayer.play;
 }
 
 - (IBAction)btoRock:(id)sender {
+    
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"happybirthdayRock" withExtension:@"mp3"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
     self.audioPlayer.play;
 }
 
 - (IBAction)btoSamba:(id)sender {
+    
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"happybirthdaySamba" withExtension:@"mp3"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
     self.audioPlayer.play;
 }
 
@@ -292,14 +386,14 @@
 }
 
 - (IBAction)tocaTreco1:(id)sender {
-    [self animacaoTocaTreco: 1.0];
     self.outTocaTreco1.tag = 100;
+    [self animacaoTocaTreco: 1.0];
     
 }
 
 - (IBAction)tocaTreco2:(id)sender {
-    [self animacaoTocaTreco: 3.0];
     self.outTocaTreco2.tag = 100;
+    [self animacaoTocaTreco: 3.0];
 }
 
 @end

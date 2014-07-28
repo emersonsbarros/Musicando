@@ -27,6 +27,10 @@
     
     [super viewDidLoad];
     
+    //Add barra Superior ao Xib
+    [[EfeitoBarraSuperior sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
+    
+    
     //Sombreando view de exercitar
     self.viewDeExercitar.layer.shadowColor = [[UIColor blackColor] CGColor];
     self.viewDeExercitar.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
@@ -107,6 +111,11 @@
     //Para não dar erro de NULL na ultima fala
     int contadorMaximo = (int)self.testaConversa.listaDeFalas.count;
     
+    if(self.contadorDeFalas == contadorMaximo){
+        NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
+        [[Biblioteca sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
+    }
+    
     if(self.contadorDeFalas < contadorMaximo){
         switch (self.contadorDeFalas) {
             case 0:
@@ -127,6 +136,12 @@
             case 5:
                 [self chamaMetodosFala5];
                 break;
+            case 6:
+                [self chamaMetodosFala6];
+                break;
+            case 7:
+                [self chamaMetodosFala7];
+                break;
                 
             default:
                 break;
@@ -142,30 +157,74 @@
 
 //Intro sobre música
 -(void)chamaMetodosFala0 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//Primeira animação
+//Animação e silêncio
 -(void)chamaMetodosFala1 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
-    //Mostra view de exercitar
-    self.viewDeExercitar.hidden = NO;
+    //Animação
+    self.imgSilencio.hidden = NO;
+    self.imgSom.hidden = NO;
+    
+    [UIView animateWithDuration:2.0
+                          delay:0.0
+                        options:  UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         self.imgSilencio.frame = CGRectMake(self.imgSilencio.frame.origin.x,
+                                                             self.imgSilencio.frame.origin.y+200,
+                                                             self.imgSilencio.frame.size.width,
+                                                             self.imgSilencio.frame.size.height);
+                         
+                         self.imgSom.frame = CGRectMake(self.imgSom.frame.origin.x,
+                                                        self.imgSom.frame.origin.y+200,
+                                                        self.imgSom.frame.size.width,
+                                                        self.imgSom.frame.size.height);
+                     }
+                     completion:^(BOOL finished){
+                         
+                     }];
+
     
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
+//Fala sobre tocatreco
 -(void)chamaMetodosFala2 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:2.0f:self.viewGesturePassaFala];
+}
+
+//Chama animação do tocatreco
+-(void)chamaMetodosFala3 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    //Mostra view de exercitar
+    self.viewDeExercitar.hidden = NO;
+    self.imgSilencio.hidden = YES;
+    self.imgSom.hidden = YES;
     
     //Animações nota caindo
     [self animacaoNotaEntrandoNoTocador];
     [self animacaoNotaSaindoDoTocador];
     
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:2.0f:self.viewGesturePassaFala];
+}
+
+//Fala sobre animação
+-(void)chamaMetodosFala4 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    //Para a música
+    self.audioPlayer.stop;
+    
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
--(void)chamaMetodosFala3 {
+//Mostra explicação nota e pausa
+-(void)chamaMetodosFala5 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     [self animacaoExplicandoNotaPausa];
@@ -173,7 +232,8 @@
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
--(void)chamaMetodosFala4 {
+//Exercício
+-(void)chamaMetodosFala6 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Esconde as views de explicação
@@ -189,42 +249,23 @@
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
--(void)chamaMetodosFala5 {
-    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+//Fala final
+-(void)chamaMetodosFala7 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
-    //Esconde view de exercitar
-    self.viewDeExercitar.hidden = NO;
+    //Esconde view de exercitar e para a música
+    self.viewDeExercitar.hidden = YES;
+    self.audioPlayer.stop;
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:3.0f:self.viewGesturePassaFala];
 }
 
-
-
-//================Métodos de animação e gameficação do exercício
-/*
-//Mascote e fala sobem
--(void)primeiraAnimacao{
-    
-        [UIView animateWithDuration:2.0
-                         animations:^(void){
-                             
-                             //Sobe mascote, fala e botão
-                             self.imagemDoMascote.frame = CGRectMake(20, 20, self.imagemDoMascote.frame.size.width, self.imagemDoMascote.frame.size.height);
-                             self.lblFalaDoMascote.frame = CGRectMake(200, 50, self.lblFalaDoMascote.frame.size.width, self.lblFalaDoMascote.frame.size.height);
-                             self.outBtoStartIntro.frame = CGRectMake(700, 100, self.outBtoStartIntro.frame.size.width, self.outBtoStartIntro.frame.size.height);
-
-                         } completion:^(BOOL finished){
-                             self.viewDeExercitar.hidden = NO;
-                        }];
-}*/
 
 //Assim que o mascote sobe aparece desce a nota
 -(void)animacaoNotaEntrandoNoTocador{
     
-    //Para teste
-    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"do3C" withExtension:@"wav"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    
+
+    //Mostra objetos que vao entrar
     self.imgNota.hidden = NO;
     self.imgNota2.hidden = NO;
     
@@ -246,10 +287,10 @@
 -(void)animacaoNotaSaindoDoTocador{
     
     //Para teste
-    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"do3C" withExtension:@"wav"];
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"musicaSomEPausa" withExtension:@"mp3"];
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
     
-    [UIView animateWithDuration:1.0
+    [UIView animateWithDuration:2.0
                      animations:^(void){
                          
                          //Notas e pausas andam pela esteira
@@ -266,10 +307,6 @@
 //Assim que o mascote sobe aparece desce a nota
 -(void)animacaoExplicandoNotaPausa{
     
-    //Para teste
-    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"do3C" withExtension:@"wav"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    
     self.imgNota.frame = CGRectMake(290, 35, self.imgNota.frame.size.width, self.imgNota.frame.size.height);
     self.imgNota.hidden = NO;
     self.imgSeta.hidden = NO;
@@ -279,7 +316,8 @@
                          
                          //Notas entrando no tocador
                          self.imgNota.frame = CGRectMake(self.imgNota.frame.origin.x, 70, self.imgNota.frame.size.width, self.imgNota.frame.size.height);
-                         self.imgSeta.frame = CGRectMake(self.imgNota.frame.origin.x+100, 70, self.imgSeta.frame.size.width, self.imgSeta.frame.size.height);
+                         self.imgSeta.frame = CGRectMake(self.imgNota.frame.origin.x+60, 70, self.imgSeta.frame.size.width, self.imgSeta.frame.size.height);
+                     
                      } completion:^(BOOL finished){
                      }];
     
@@ -289,14 +327,27 @@
 //Opções
 - (IBAction)intrumentos:(id)sender {
     NSLog(@"Instrumentos");
+    
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"instrumentos" withExtension:@"mp3"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    self.audioPlayer.play;
 }
 
 - (IBAction)coral:(id)sender {
     NSLog(@"Coral");
+    
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"coral" withExtension:@"mp3"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    self.audioPlayer.play;
 }
 
 - (IBAction)notasPausas:(id)sender {
     NSLog(@"ACERTOU! Notas e pausas");
+    
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"notasPausas" withExtension:@"mp3"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    self.audioPlayer.play;
+\
 }
 
 

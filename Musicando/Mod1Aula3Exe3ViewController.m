@@ -21,17 +21,19 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
+    
+    //Add barra Superior ao Xib
+    [[EfeitoBarraSuperior sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
 
     //Sombreando view de exercitar
-    self.viewDeExercitar.layer.shadowColor = [[UIColor blackColor] CGColor];
-    self.viewDeExercitar.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
-    self.viewDeExercitar.layer.shadowRadius = 3.0f;
-    self.viewDeExercitar.layer.shadowOpacity = 1.0f;
-    [self.viewDeExercitar setBackgroundColor: [UIColor whiteColor]];
-    
+//    self.viewDeExercitar.layer.shadowColor = [[UIColor blackColor] CGColor];
+//    self.viewDeExercitar.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
+//    self.viewDeExercitar.layer.shadowRadius = 3.0f;
+//    self.viewDeExercitar.layer.shadowOpacity = 1.0f;
+//    [self.viewDeExercitar setBackgroundColor: [UIColor whiteColor]];
+//    
     [self iniciarComponentes];
 }
 
@@ -106,6 +108,12 @@
     //Para não dar erro de NULL na ultima fala
     int contadorMaximo = (int)self.testaConversa.listaDeFalas.count;
     
+
+    if(self.contadorDeFalas == contadorMaximo){
+        NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
+        [[Biblioteca sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
+    }
+    
     if(self.contadorDeFalas < contadorMaximo){
         switch (self.contadorDeFalas) {
             case 0:
@@ -120,6 +128,21 @@
             case 3:
                 [self chamaMetodosFala3];
                 break;
+            case 4:
+                [self chamaMetodosFala4];
+                break;
+            case 5:
+                [self chamaMetodosFala5];
+                break;
+            case 6:
+                [self chamaMetodosFala6];
+                break;
+            case 7:
+                [self chamaMetodosFala7];
+                break;
+            case 8:
+                [self chamaMetodosFala8];
+                break;
                 
             default:
                 break;
@@ -133,25 +156,68 @@
     }
 }
 
-//Intro sobre música
+//Intro sobre melodia
 -(void)chamaMetodosFala0 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//Primeira animação
+//Intro melodia
 -(void)chamaMetodosFala1 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Definição melodia
+-(void)chamaMetodosFala2 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Exemplo coma animação da vitrola
+-(void)chamaMetodosFala3 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
-    //Mostra view de exercitar
-    [self primeiraAnimacao];
-    self.viewDeExercitar.hidden = NO;
+    //Mostra vitrola e chama animação
+    self.vitrola.hidden = NO;
     
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
--(void)chamaMetodosFala2 {
+//Complemento de fala
+-(void)chamaMetodosFala4 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Exemplo toca treco
+-(void)chamaMetodosFala5 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
+    //Esconde vitrolda, mostra view de exercitar
+    self.vitrola.hidden = YES;
+    [self primeiraAnimacao];
+    self.viewDeExercitar.hidden = NO;
+    
+    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Complemento
+-(void)chamaMetodosFala6 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    //Para som
+    self.audioPlayer.stop;
+
+    
+    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Exercício
+-(void)chamaMetodosFala7 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    //Mostra views do teste
     self.outTocaTreco1.hidden = YES;
     self.outTocaTreco2.hidden = YES;
     self.imgNota1.hidden = YES;
@@ -164,33 +230,34 @@
     self.outFlauta.hidden = NO;
     self.outPiano.hidden = NO;
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    
+    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
--(void)chamaMetodosFala3 {
+//Fala Final
+-(void)chamaMetodosFala8 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
+    //Esconde o teste e para som
     self.viewDeExercitar.hidden = YES;
+    self.audioPlayer.stop;
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 
 //===ANIMAÇÕES
 
 
-//Primeira
+//Traz a view de exercitar
 -(void)primeiraAnimacao{
     
-    [UIView animateWithDuration:2.0
+    [UIView animateWithDuration:1.0
                      animations:^(void){
                          //Muda local do mascote e label
-                         self.viewDeExercitar.frame = CGRectMake(200, self.viewDeExercitar.frame.origin.y, self.viewDeExercitar.frame.size.width, self.viewDeExercitar.frame.size.height);
+                         self.viewDeExercitar.frame = CGRectMake(100, self.viewDeExercitar.frame.origin.y, self.viewDeExercitar.frame.size.width, self.viewDeExercitar.frame.size.height);
                      } completion:^(BOOL finished){
                      }];
-    
-    self.viewDeExercitar.hidden = NO;
-    
 }
 
 
@@ -207,6 +274,9 @@
         self.imgNota3.hidden = NO;
         self.imgNota4.hidden = NO;
         
+        self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"escalaPiano3AOitava" withExtension:@"wav"];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+        
     }else if(self.outTocaTreco2.tag == 100){
         NSLog(@"Primeiro tocatreco");
         self.imgNota1.frame = CGRectMake(84, 322, self.imgNota1.frame.size.width, self.imgNota1.frame.size.height);
@@ -220,6 +290,10 @@
         self.imgNota3.hidden = NO;
         self.imgNota4.hidden = NO;
         self.imgNota5.hidden = NO;
+        
+        
+        self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"harmoniaPiano" withExtension:@"wav"];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
     }
     
 
@@ -236,6 +310,9 @@
                          self.imgNota5.frame = CGRectMake(1200, self.imgNota5.frame.origin.y, self.imgNota5.frame.size.width, self.imgNota3.frame.size.height);
                          
                      } completion:^(BOOL finished){
+                         
+                         self.audioPlayer.play;
+                         
                      }];
     
     self.outTocaTreco1.tag = 0;
@@ -243,8 +320,6 @@
 }
 
 
-
-//Primeiro questão
 - (IBAction)tocaTreco1:(id)sender {
     NSLog(@"TocaTreco1 acionado");
     self.outTocaTreco1.tag = 100;
@@ -260,15 +335,27 @@
 
 - (IBAction)violao:(id)sender {
     NSLog(@"Violão acionado");
+    
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"acordesViolao" withExtension:@"wav"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    self.audioPlayer.play;
 
 }
 
 - (IBAction)flauta:(id)sender {
     NSLog(@"ACERTOU! Flauta acionada");
+    
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"escalaFlauta" withExtension:@"wav"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    self.audioPlayer.play;
 }
 
 - (IBAction)piano:(id)sender {
     NSLog(@"Piano acionado");
+    
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"escalaPiano3AOitava" withExtension:@"wav"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    self.audioPlayer.play;
 
 }
 @end

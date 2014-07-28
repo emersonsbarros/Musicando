@@ -276,22 +276,28 @@
 
 //Falas
     Fala *mod1Aula3Exe1fala1 = [[Fala alloc] init];
-    mod1Aula3Exe1fala1.conteudo = @"Agora que já temos uma ideia do que é música e som. Vamos aprender como a música é formada, quais são seus componentes e o papel de cada uma.";
+    mod1Aula3Exe1fala1.conteudo = @"Agora que já temos uma ideia de como à música está presente em nossa vida e também o que é o som. Vamos aprender como a música é formada e quais são seus componentes.";
     
     Fala *mod1Aula3Exe1fala2 = [[Fala alloc] init];
-    mod1Aula3Exe1fala2.conteudo = @"De uma forma sucinta a música é um conjunto ou somatória de sons e silêncios. No tocatreco ao adicionarmos esses elementos sua saída pode ser considerada música.";
+    mod1Aula3Exe1fala2.conteudo = @"Numa mistura de SILÊNCIOS e SONS, a música nasce como a soma desses dois.. Díficil de imaginar?";
     
     Fala *mod1Aula3Exe1fala3 = [[Fala alloc] init];
-    mod1Aula3Exe1fala3.conteudo = @"Desse resultado podemos perceber cada elemento da música, Clique em próximo novamente";
+    mod1Aula3Exe1fala3.conteudo = @"Vamos ver agora como o tocatreco cria música com essa junção...";
     
     Fala *mod1Aula3Exe1fala4 = [[Fala alloc] init];
-    mod1Aula3Exe1fala4.conteudo = @"O pequeno mascote apontado representa o som e o intervalo entre um som e outro, os silêncios são as pausas";
+    mod1Aula3Exe1fala4.conteudo = @"É simples assim! Ao entrar sons com pausas o tocatreco faz a música. E é assim com qualquer instrumento.";
     
     Fala *mod1Aula3Exe1fala5 = [[Fala alloc] init];
-    mod1Aula3Exe1fala5.conteudo = @"Para memorizar agora vamos para um teste. Qual desses conjuntos representa o significado de música?";
+    mod1Aula3Exe1fala5.conteudo = @"Agora já pra fixar cada elemento, clique em próximo novamente e veja!";
     
     Fala *mod1Aula3Exe1fala6 = [[Fala alloc] init];
-    mod1Aula3Exe1fala6.conteudo = @"Agora já sabe um pouco mais do que é a música";
+    mod1Aula3Exe1fala6.conteudo = @"O pequeno mascote apontado representa o som e o intervalo entre um som e outro, são os silêncios (ou as chamadas as pausas).";
+    
+    Fala *mod1Aula3Exe1fala7 = [[Fala alloc] init];
+    mod1Aula3Exe1fala7.conteudo = @"Para memorizar vamos para um teste. Qual desses conjuntos na tela pode 'representar' o significado de música?";
+    
+    Fala *mod1Aula3Exe1fala8 = [[Fala alloc] init];
+    mod1Aula3Exe1fala8.conteudo = @"Acho que agora já sabe um pouco melhor o que é a música, o que acha de entramos no 'mundo'dos ritmos?";
     
     //Conversa
     Conversa *mod1Aula3Exe1conversa1 = [[Conversa alloc] init];
@@ -301,6 +307,8 @@
     [[mod1Aula3Exe1conversa1 listaDeFalas] addObject: mod1Aula3Exe1fala4];
     [[mod1Aula3Exe1conversa1 listaDeFalas] addObject: mod1Aula3Exe1fala5];
     [[mod1Aula3Exe1conversa1 listaDeFalas] addObject: mod1Aula3Exe1fala6];
+    [[mod1Aula3Exe1conversa1 listaDeFalas] addObject: mod1Aula3Exe1fala7];
+    [[mod1Aula3Exe1conversa1 listaDeFalas] addObject: mod1Aula3Exe1fala8];
     [[[mod1Aula3Exe1 mascote] listaDeConversas] addObject: mod1Aula3Exe1conversa1];
     
 //RITMO
@@ -308,19 +316,34 @@
 
 //Falas
     Fala *mod1Aula3Exe2fala1 = [[Fala alloc] init];
-    mod1Aula3Exe2fala1.conteudo = @"Pra falarmos de ritmo, talvez a primeira coisa que venha a sua mente é estilo como rock ou samba. Mas você o que diferencia cada um?";
+    mod1Aula3Exe2fala1.conteudo = @"Quando ouvimos falar sobre RITMO, talvez a primeira coisa que venha na nossa mente é estilo como rock ou samba. Mas você já parou pra pensar, o que diferencia cada um?";
     
     Fala *mod1Aula3Exe2fala2 = [[Fala alloc] init];
-    mod1Aula3Exe2fala2.conteudo = @"Você já deve ter ouvido essa música muito conhecida XXX, mas talvez nunca percebeu que ela pode ser apresentar de várias maneiras dependendo do ritmo. Clique em cada uma ao lado e veja diferença.";
+    mod1Aula3Exe2fala2.conteudo = @"O ritmo é o movimento dos sons regulados pela sua maior ou menor duração. Ou seja, pode ser considerado um condutor dos sons conforme o tempo e velocidade que são tocados. Ainda díficil de entender?";
     
     Fala *mod1Aula3Exe2fala3 = [[Fala alloc] init];
-    mod1Aula3Exe2fala3.conteudo = @"É nítido que de acordo com o ritmo a velocidade e tempo da música é alterada, se você se lembra do tocatreco clique em cada um e veja a diferença na saída da música.";
+    mod1Aula3Exe2fala3.conteudo = @"Um exemplo do uso do ritmo e de sua importância são os batimentos cardíacos. Parece algo simples, mas para seu bom funcionamento necessita sempre estar coordenado com velocidade e tempo para que o fluxo seja bombeado e o movimento do coração seja executado constantemente.";
     
     Fala *mod1Aula3Exe2fala4 = [[Fala alloc] init];
-    mod1Aula3Exe2fala4.conteudo = @"Agora para exercitar me responda, qual dessas figuras corresponde ao ritmo na música?";
+    mod1Aula3Exe2fala4.conteudo = @"Voltando a história dos ritmos que ligamos a estilos musicais, realmente eles tem uma relação. Uns são mais rápidos como Rock outros mais suaves como Clássico. Vamos ver um exemplo de alguns deles...";
     
     Fala *mod1Aula3Exe2fala5 = [[Fala alloc] init];
-    mod1Aula3Exe2fala5.conteudo = @"Rápido, devagar, alegre ou sonolento. Cada ritmo desempenha...";
+    mod1Aula3Exe2fala5.conteudo = @"Você já deve ter ouvido a música 'Parabéns pra você' pelo menos uma dezena de vezes na vida, mas talvez nunca percebeu que ela pode ser apresentar de várias maneiras dependendo do ritmo. Dúvida? Clique em cada um acima e veja a diferença.";
+    
+    Fala *mod1Aula3Exe2fala6 = [[Fala alloc] init];
+    mod1Aula3Exe2fala6.conteudo = @"Percebe que a diferênça acontece diretamente na execução, pode parecer até músicas diferente. E em tese realmente são, pois de acordo com o RITMO a velocidade e tempo da música é alterada.";
+    
+    Fala *mod1Aula3Exe2fala7 = [[Fala alloc] init];
+    mod1Aula3Exe2fala7.conteudo = @"Veja mais uma vez essa diferença de velocidade e tempo no tocatreco. Clique em cada um, e veja a saída da música.";
+    
+    Fala *mod1Aula3Exe2fala8 = [[Fala alloc] init];
+    mod1Aula3Exe2fala8.conteudo = @"Para exercitar depois de tudo que te mostrei, qual dessas figuras você acha que corresponde definição e ao que interfere o ritmo na música?";
+    
+    Fala *mod1Aula3Exe2fala9 = [[Fala alloc] init];
+    mod1Aula3Exe2fala9.conteudo = @"Sempre que ouvir falar de RITMO lembre dele como um maestro do tempo e velocidade na música. E por ele existem os estilos. Rápido, devagar, alegre, sonolento. Seja qual for desempenha um papel importante na música.";
+    
+    Fala *mod1Aula3Exe2fala10 = [[Fala alloc] init];
+    mod1Aula3Exe2fala10.conteudo = @"Quem sabe daqui algum tempo você mesmo não cria seu próprio Ritmo? Vamos continuar, porque a melodia vem chegando...";
     
 //Conversa
     Conversa *mod1Aula3Exe2conversa1 = [[Conversa alloc] init];
@@ -329,6 +352,11 @@
     [[mod1Aula3Exe2conversa1 listaDeFalas] addObject: mod1Aula3Exe2fala3];
     [[mod1Aula3Exe2conversa1 listaDeFalas] addObject: mod1Aula3Exe2fala4];
     [[mod1Aula3Exe2conversa1 listaDeFalas] addObject: mod1Aula3Exe2fala5];
+    [[mod1Aula3Exe2conversa1 listaDeFalas] addObject: mod1Aula3Exe2fala6];
+    [[mod1Aula3Exe2conversa1 listaDeFalas] addObject: mod1Aula3Exe2fala7];
+    [[mod1Aula3Exe2conversa1 listaDeFalas] addObject: mod1Aula3Exe2fala8];
+    [[mod1Aula3Exe2conversa1 listaDeFalas] addObject: mod1Aula3Exe2fala9];
+    [[mod1Aula3Exe2conversa1 listaDeFalas] addObject: mod1Aula3Exe2fala10];
     [[[mod1Aula3Exe2 mascote] listaDeConversas] addObject: mod1Aula3Exe2conversa1];
 
 //MELODIA
@@ -336,16 +364,31 @@
 
 //Falas
     Fala *mod1Aula3Exe3fala1 = [[Fala alloc] init];
-    mod1Aula3Exe3fala1.conteudo = @"Descobrimos como uma música é formada e como o ritmo pode alterar seu tempo e velocidade. Vamos agora saber onde se encaixa.";
+    mod1Aula3Exe3fala1.conteudo = @"Já descobrimos como a música é formada e como o ritmo coordena e pode alterar seu tempo e velocidade. Chegou a pensar de onde vem esse sentido musical, será realmente que acontece só com vários sons ou pausas tocadas? Quem dá esse sentido?";
     
     Fala *mod1Aula3Exe3fala2 = [[Fala alloc] init];
-    mod1Aula3Exe3fala2.conteudo = @"Entenda por melodia como sons ou notas tocados e cantados SEPARADAMENTE, sempre uma nota por vez. Veja abaixo o exemplo dos tocatrecos, clique em cada um.";
+    mod1Aula3Exe3fala2.conteudo = @"Agora é hora de saber onde esse elementos se encaixam...";
     
     Fala *mod1Aula3Exe3fala3 = [[Fala alloc] init];
-    mod1Aula3Exe3fala3.conteudo = @"Para fixar, sabendo que a melodia ocorre equando notas são tocadas individualmente. Qual dos instrumentos abaixo tem essa caracteristica?";
+    mod1Aula3Exe3fala3.conteudo = @"Melodia são sons emitidos SEPARADAMENTE, uma sucessão que dá sentido e fluidez na música. Isso mesmo, sempre uma nota por vez é tocada em sequência de acordo com o ritmo, a melodia surge!";
     
     Fala *mod1Aula3Exe3fala4 = [[Fala alloc] init];
-    mod1Aula3Exe3fala4.conteudo = @"Notas em fila ou sons simultaneos, a melodia aparece...";
+    mod1Aula3Exe3fala4.conteudo = @"Imagine uma fila de notas e pausas sendo lideradas pelo ritmo, e uma à uma são tocadas criando esse sentido";
+    
+    Fala *mod1Aula3Exe3fala5 = [[Fala alloc] init];
+    mod1Aula3Exe3fala5.conteudo = @"O conceito é simples, vamos ver em seguida o exemplo nos tocatrecos";
+    
+    Fala *mod1Aula3Exe3fala6 = [[Fala alloc] init];
+    mod1Aula3Exe3fala6.conteudo = @"O primeiro tocatreco representa bem a melodia, com cada nota sendo tocada. Já o segundo contém a melodia, porém já acresenta outros elementos que veremos mais pra frente, daí a diferença.";
+    
+    Fala *mod1Aula3Exe3fala7 = [[Fala alloc] init];
+    mod1Aula3Exe3fala7.conteudo = @"Você deve memorizar que a melodia é fluidez de sons contínuos, e assim consegue diferenciar quando ela aparece";
+    
+    Fala *mod1Aula3Exe3fala8 = [[Fala alloc] init];
+    mod1Aula3Exe3fala8.conteudo = @"Para fixar, sabendo que a melodia ocorre equando notas são tocadas individualmente. Qual dos instrumentos abaixo tem essa caracteristica?";
+    
+    Fala *mod1Aula3Exe3fala9 = [[Fala alloc] init];
+    mod1Aula3Exe3fala9.conteudo = @"Notas em fila ou sons simultaneos, a melodia aparece em toda música. Porém ela ainda terá o auxilio de outros 'colegas'. Vamos para a Harmonia!";
     
 //Conversa
     Conversa *mod1Aula3Exe3conversa1 = [[Conversa alloc] init];
@@ -353,6 +396,11 @@
     [[mod1Aula3Exe3conversa1 listaDeFalas] addObject: mod1Aula3Exe3fala2];
     [[mod1Aula3Exe3conversa1 listaDeFalas] addObject: mod1Aula3Exe3fala3];
     [[mod1Aula3Exe3conversa1 listaDeFalas] addObject: mod1Aula3Exe3fala4];
+    [[mod1Aula3Exe3conversa1 listaDeFalas] addObject: mod1Aula3Exe3fala5];
+    [[mod1Aula3Exe3conversa1 listaDeFalas] addObject: mod1Aula3Exe3fala6];
+    [[mod1Aula3Exe3conversa1 listaDeFalas] addObject: mod1Aula3Exe3fala7];
+    [[mod1Aula3Exe3conversa1 listaDeFalas] addObject: mod1Aula3Exe3fala8];
+    [[mod1Aula3Exe3conversa1 listaDeFalas] addObject: mod1Aula3Exe3fala9];
     [[[mod1Aula3Exe3 mascote] listaDeConversas] addObject: mod1Aula3Exe3conversa1];
 
 //HARMONIA

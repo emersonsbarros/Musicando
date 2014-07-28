@@ -13,6 +13,7 @@
 #import "Sinfonia.h"
 #import "EfeitoImagem.h"
 #import "EfeitoMascote.h"
+#import "EfeitoBarraSuperior.h"
 #import <QuartzCore/QuartzCore.h>
 #import <SpriteKit/SpriteKit.h>
 #import <UIKit/UIKit.h>
@@ -44,6 +45,9 @@
 - (IBAction)intrumentos:(id)sender;
 - (IBAction)coral:(id)sender;
 - (IBAction)notasPausas:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UIImageView *imgSilencio;
+@property (strong, nonatomic) IBOutlet UIImageView *imgSom;
 
 /*===========================ATRIBUTOS=============================*/
 

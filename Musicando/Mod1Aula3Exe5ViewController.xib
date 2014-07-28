@@ -44,7 +44,7 @@
                     <rect key="frame" x="527" y="327" width="135" height="114"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tocaTreco.png" translatesAutoresizingMaskIntoConstraints="NO" id="sKe-Rf-N7Z">
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="novoTocaTreco.png" translatesAutoresizingMaskIntoConstraints="NO" id="sKe-Rf-N7Z">
                     <rect key="frame" x="20" y="571" width="313" height="168"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
@@ -65,8 +65,8 @@
     <resources>
         <image name="mascote.png" width="1000" height="1000"/>
         <image name="notas.jpg" width="200" height="200"/>
+        <image name="novoTocaTreco.png" width="1784" height="916"/>
         <image name="pianoclassico.png" width="505" height="470"/>
         <image name="tecladoeletrico.jpg" width="900" height="900"/>
-        <image name="tocaTreco.png" width="1784" height="916"/>
     </resources>
 </document>

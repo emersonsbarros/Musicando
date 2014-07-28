@@ -13,6 +13,7 @@
 #import "Sinfonia.h"
 #import "EfeitoImagem.h"
 #import "EfeitoMascote.h"
+#import "EfeitoBarraSuperior.h"
 #import <QuartzCore/QuartzCore.h>
 #import <SpriteKit/SpriteKit.h>
 #import <UIKit/UIKit.h>

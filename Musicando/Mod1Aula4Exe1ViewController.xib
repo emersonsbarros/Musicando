@@ -51,7 +51,7 @@
                     <rect key="frame" x="340" y="343" width="84" height="81"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tocaTreco.png" translatesAutoresizingMaskIntoConstraints="NO" id="vZC-UP-1ib">
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="novoTocaTreco.png" translatesAutoresizingMaskIntoConstraints="NO" id="vZC-UP-1ib">
                     <rect key="frame" x="48" y="570" width="344" height="168"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
@@ -83,8 +83,8 @@
     <resources>
         <image name="mascote.png" width="1000" height="1000"/>
         <image name="notas.jpg" width="200" height="200"/>
+        <image name="novoTocaTreco.png" width="1784" height="916"/>
         <image name="pilar.png" width="320" height="640"/>
-        <image name="tocaTreco.png" width="793" height="307"/>
         <image name="vibracao.png" width="640" height="372"/>
     </resources>
 </document>

@@ -681,9 +681,7 @@
     //Usa pra não dar erro de nulo na ultima fala
     int contadorMaximo = (int)self.testaConversa.listaDeFalas.count;
     
-    //Estrapola a ultima fala e chama o proximo exercicio
-    //Obs: é so colar esse treco em todos os pulaFalaMascote alem de colocar o
-    //metodo chamaAddBrilho no ultimo chamaMetodosFalaX
+
     if(self.contadorDeFalas == contadorMaximo){
         NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
         [[Biblioteca sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];

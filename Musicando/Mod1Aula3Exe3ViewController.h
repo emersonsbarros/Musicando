@@ -13,6 +13,7 @@
 #import "Sinfonia.h"
 #import "EfeitoImagem.h"
 #import "EfeitoMascote.h"
+#import "EfeitoBarraSuperior.h"
 #import <QuartzCore/QuartzCore.h>
 #import <SpriteKit/SpriteKit.h>
 #import <UIKit/UIKit.h>
@@ -29,6 +30,8 @@
 
 //Botões p/ exercitar
 @property (strong, nonatomic) IBOutlet UIButton *outTocaTreco1;
+@property (strong, nonatomic) IBOutlet UIImageView *vitrola;
+
 @property (strong, nonatomic) IBOutlet UIButton *outTocaTreco2;
 @property (strong, nonatomic) IBOutlet UIButton *outViolaco;
 @property (strong, nonatomic) IBOutlet UIButton *outFlauta;

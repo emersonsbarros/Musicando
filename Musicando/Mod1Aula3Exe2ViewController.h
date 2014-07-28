@@ -13,6 +13,7 @@
 #import "Sinfonia.h"
 #import "EfeitoImagem.h"
 #import "EfeitoMascote.h"
+#import "EfeitoBarraSuperior.h"
 #import <QuartzCore/QuartzCore.h>
 #import <SpriteKit/SpriteKit.h>
 #import <UIKit/UIKit.h>
@@ -27,6 +28,8 @@
 @property (strong, nonatomic) IBOutlet UIView *viewDosRitmos;
 
 //Views para os ritmos
+@property (strong, nonatomic) IBOutlet UIImageView *imgBatidasDoCoracao;
+
 @property (strong, nonatomic) IBOutlet UIButton *outBtoClassico;
 @property (strong, nonatomic) IBOutlet UIButton *outBtoRock;
 @property (strong, nonatomic) IBOutlet UIButton *outBtoSamba;
