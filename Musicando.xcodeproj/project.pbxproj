@@ -108,6 +108,7 @@
 		2BA3E2CF1986D92B00455FFE /* escalaFlauta.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2BA3E2CC1986D92B00455FFE /* escalaFlauta.wav */; };
 		2BA3E2D01986D92B00455FFE /* escalaPiano3AOitava.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2BA3E2CD1986D92B00455FFE /* escalaPiano3AOitava.wav */; };
 		2BA3E2D21986DA9800455FFE /* harmoniaPiano.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2BA3E2D11986DA9800455FFE /* harmoniaPiano.wav */; };
+		2BA3E2D41986DE9900455FFE /* tecladoEletrico.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2BA3E2D31986DE9900455FFE /* tecladoEletrico.wav */; };
 		2BB619C319860C0F006F73D1 /* silencio.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BB619C119860C0F006F73D1 /* silencio.jpg */; };
 		2BB619C419860C0F006F73D1 /* som.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BB619C219860C0F006F73D1 /* som.jpg */; };
 		3F3ADB8A1980B30E00199743 /* molduraBarraSuoerior.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F3ADB891980B30E00199743 /* molduraBarraSuoerior.jpg */; };
@@ -497,6 +498,7 @@
 		2BA3E2CC1986D92B00455FFE /* escalaFlauta.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = escalaFlauta.wav; sourceTree = "<group>"; };
 		2BA3E2CD1986D92B00455FFE /* escalaPiano3AOitava.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = escalaPiano3AOitava.wav; sourceTree = "<group>"; };
 		2BA3E2D11986DA9800455FFE /* harmoniaPiano.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = harmoniaPiano.wav; sourceTree = "<group>"; };
+		2BA3E2D31986DE9900455FFE /* tecladoEletrico.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tecladoEletrico.wav; sourceTree = "<group>"; };
 		2BB619C119860C0F006F73D1 /* silencio.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = silencio.jpg; sourceTree = "<group>"; };
 		2BB619C219860C0F006F73D1 /* som.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = som.jpg; sourceTree = "<group>"; };
 		3F3ADB891980B30E00199743 /* molduraBarraSuoerior.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = molduraBarraSuoerior.jpg; sourceTree = "<group>"; };
@@ -1522,6 +1524,7 @@
 				2BA3E2CC1986D92B00455FFE /* escalaFlauta.wav */,
 				2BA3E2CD1986D92B00455FFE /* escalaPiano3AOitava.wav */,
 				2BA3E2D11986DA9800455FFE /* harmoniaPiano.wav */,
+				2BA3E2D31986DE9900455FFE /* tecladoEletrico.wav */,
 				2BA3E2C11986ADE000455FFE /* happybirthdayClassico.mp3 */,
 				2BA3E2C21986ADE000455FFE /* happybirthdayRock.mp3 */,
 				2BA3E2C31986ADE000455FFE /* happybirthdaySamba.mp3 */,
@@ -1889,6 +1892,7 @@
 				3FAABF15197E3FD000AAD8FD /* tartaruga.png in Resources */,
 				3F608DD4196C7585001979E9 /* P200 Piano D#8.caf in Resources */,
 				A8C3F0AD194B72A400E78899 /* InfoPlist.strings in Resources */,
+				2BA3E2D41986DE9900455FFE /* tecladoEletrico.wav in Resources */,
 				3FA586BD197EE2AA00C3BDE3 /* musicaPalmas.mp3 in Resources */,
 				3FD974261974653F002EB77A /* pilar.png in Resources */,
 				2B64FA671969233700BC57FD /* Mod2Aula7Exe2ViewController.xib in Resources */,

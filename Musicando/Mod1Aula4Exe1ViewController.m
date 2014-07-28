@@ -255,10 +255,10 @@
 }
 
 - (void)acaoColisaoSom{
-    //self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"galo" withExtension:@"wav"];
-    //self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"notasPausas" withExtension:@"mp3"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
     
-    //[[self audioPlayer]play];
+    [[self audioPlayer]play];
     self.lblSaidaTocaTreco.text = @"SOM";
 }
 
@@ -279,10 +279,10 @@
 }
 
 - (void)acaoColisaoRitmo{
-    //self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"galo" withExtension:@"wav"];
-    //self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"happybirthdaySamba" withExtension:@"mp3"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
     
-    //[[self audioPlayer]play];
+    [[self audioPlayer]play];
     self.lblSaidaTocaTreco.text = @"RITMO";
 
 }
@@ -304,10 +304,10 @@
 }
 
 - (void)acaoColisaoModoMeloHarmoPoli{
-    //self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"galo" withExtension:@"wav"];
-    //self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"happibirthdayClassico" withExtension:@"mp3"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
     
-    //[[self audioPlayer]play];
+    [[self audioPlayer]play];
     self.lblSaidaTocaTreco.text = @"MELODIA, HARMONIA E POLI";
 }
 

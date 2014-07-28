@@ -237,10 +237,10 @@
 }
 
 - (void)acaoColisaoHarmonia{
-    //self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"galo" withExtension:@"wav"];
-    //self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"acordesViolao" withExtension:@"wav"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
     
-    //[[self audioPlayer]play];
+    [[self audioPlayer]play];
 }
 
 -(void) checkColisaoMelodia:(NSTimer *) theTimer{
@@ -260,10 +260,10 @@
 }
 
 - (void)acaoColisaoMelodia{
-    //self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"galo" withExtension:@"wav"];
-    //self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"escalaFlauta" withExtension:@"wav"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
     
-    //[[self audioPlayer]play];
+    [[self audioPlayer]play];
 }
 
 
@@ -284,10 +284,10 @@
 }
 
 - (void)acaoColisaoTeclado{
-    //self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"galo" withExtension:@"wav"];
-    //self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"tecladoEletrico" withExtension:@"wav"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
     
-    //[[self audioPlayer]play];
+    [[self audioPlayer]play];
 }
 
 -(void) checkColisaoPiano:(NSTimer *) theTimer{
@@ -307,10 +307,10 @@
 }
 
 - (void)acaoColisaoPiano{
-    //self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"galo" withExtension:@"wav"];
-    //self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"escalaPiano3AOitava" withExtension:@"wav"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
     
-    //[[self audioPlayer]play];
+    [[self audioPlayer]play];
 }
 
 
