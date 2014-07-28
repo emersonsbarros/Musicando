@@ -74,15 +74,15 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ventoPipa.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vl0-NB-fqt">
-                    <rect key="frame" x="-91" y="12" width="128" height="221"/>
+                    <rect key="frame" x="-91" y="92" width="128" height="221"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="galo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ood-eM-K8o">
-                    <rect key="frame" x="-122" y="54" width="153" height="128"/>
+                    <rect key="frame" x="-122" y="84" width="153" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="carro.png" translatesAutoresizingMaskIntoConstraints="NO" id="D8J-KK-EMz">
-                    <rect key="frame" x="-247" y="20" width="269" height="128"/>
+                    <rect key="frame" x="-247" y="83" width="269" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F6H-tr-YnU">
@@ -157,16 +157,16 @@
                     <rect key="frame" x="83" y="279" width="145" height="244"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="saudeMusica.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ZFI-MI-4uK">
-                    <rect key="frame" x="-234" y="361" width="262" height="128"/>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="saudeMusica.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZFI-MI-4uK">
+                    <rect key="frame" x="-239" y="423" width="245" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lazerMusica.png" translatesAutoresizingMaskIntoConstraints="NO" id="4On-l9-QmK">
-                    <rect key="frame" x="-234" y="197" width="240" height="128"/>
+                    <rect key="frame" x="-228" y="249" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aprendizadoMusica.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="V2K-vb-h1g">
-                    <rect key="frame" x="-228" y="25" width="240" height="128"/>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aprendizadoMusica.png" translatesAutoresizingMaskIntoConstraints="NO" id="V2K-vb-h1g">
+                    <rect key="frame" x="-228" y="93" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tocaIndio.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mta-yl-FhM">
@@ -174,23 +174,23 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="animaIndio1.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Rur-WY-jCi">
-                    <rect key="frame" x="-148" y="566" width="154" height="128"/>
+                    <rect key="frame" x="-157" y="566" width="154" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="carnavalFesta.png" translatesAutoresizingMaskIntoConstraints="NO" id="neP-ug-Gqj">
-                    <rect key="frame" x="-220" y="292" width="264" height="128"/>
+                    <rect key="frame" x="-220" y="305" width="264" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="carnavalframe1.gif" translatesAutoresizingMaskIntoConstraints="NO" id="sf8-xb-GIh">
-                    <rect key="frame" x="-207" y="258" width="216" height="175"/>
+                    <rect key="frame" x="-220" y="279" width="216" height="175"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Capoeiraframe1.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Iex-vv-Lj6">
-                    <rect key="frame" x="-295" y="7" width="314" height="182"/>
+                    <rect key="frame" x="-317" y="83" width="314" height="182"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CapoeiraJog.png" translatesAutoresizingMaskIntoConstraints="NO" id="HcU-pA-8B4">
-                    <rect key="frame" x="-118" y="44" width="162" height="138"/>
+                    <rect key="frame" x="-140" y="93" width="162" height="138"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
@@ -205,7 +205,7 @@
         <image name="RJ.jpg" width="652" height="408"/>
         <image name="alavanca.png" width="48" height="196"/>
         <image name="animaIndio1.gif" width="106" height="190"/>
-        <image name="aprendizadoMusica.jpg" width="150" height="110"/>
+        <image name="aprendizadoMusica.png" width="144" height="150"/>
         <image name="carnavalFesta.png" width="147" height="150"/>
         <image name="carnavalframe1.gif" width="274" height="291"/>
         <image name="carro.png" width="640" height="320"/>
@@ -218,7 +218,7 @@
         <image name="mascote.png" width="1000" height="1000"/>
         <image name="palmas.png" width="150" height="146"/>
         <image name="panelaMusica.png" width="150" height="86"/>
-        <image name="saudeMusica.jpg" width="150" height="150"/>
+        <image name="saudeMusica.png" width="150" height="145"/>
         <image name="tela.png" width="1024" height="680"/>
         <image name="tocaIndio.png" width="474" height="640"/>
         <image name="tocaTreco.png" width="786" height="495"/>

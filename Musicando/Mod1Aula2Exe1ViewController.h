@@ -12,11 +12,17 @@
 #import "EfeitoImagem.h"
 #import "EfeitoBarraSuperior.h"
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface Mod1Aula2Exe1ViewController : UIViewController
 
 //toca treco
 @property (weak, nonatomic) IBOutlet UIImageView *imgTocaTreco;
+
+
+//Atributos para tocar audio
+@property AVAudioPlayer *audioPlayer;
+@property NSURL *caminhoDoAudio;
 
 
 //mascote

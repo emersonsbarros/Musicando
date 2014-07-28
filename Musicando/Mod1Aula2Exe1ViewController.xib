@@ -66,15 +66,15 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="satelite.png" translatesAutoresizingMaskIntoConstraints="NO" id="oV8-xv-1yM">
-                    <rect key="frame" x="754" y="12" width="228" height="189"/>
+                    <rect key="frame" x="754" y="72" width="228" height="189"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="explosao.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kva-1T-WlU">
-                    <rect key="frame" x="726" y="20" width="228" height="189"/>
+                    <rect key="frame" x="726" y="80" width="228" height="189"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="astronauta.png" translatesAutoresizingMaskIntoConstraints="NO" id="bXA-sU-BbG">
-                    <rect key="frame" x="561" y="106" width="228" height="189"/>
+                    <rect key="frame" x="553" y="174" width="228" height="189"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pilar.png" translatesAutoresizingMaskIntoConstraints="NO" id="82a-cO-GIp">
@@ -99,7 +99,7 @@
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gesturePassaFalaMascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="McJ-mj-8RZ">
-                    <rect key="frame" x="784" y="106" width="146" height="205"/>
+                    <rect key="frame" x="784" y="166" width="146" height="205"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>

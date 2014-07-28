@@ -90,6 +90,11 @@
         self.imgTeclaPiano.frame = self.imgTeclaPiano.frame;
         self.lblVisorTocaTreco.text = @"Grave";
         [self.listaLiberaFala addObject:self.estadoAux1];
+        
+        self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"P200 Piano A#2" withExtension:@"caf"];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+        [[self audioPlayer]play];
+        
         [theTimer invalidate];
     }
     
@@ -105,6 +110,11 @@
         self.imgTelefone.frame = self.imgTelefone.frame;
         self.lblVisorTocaTreco.text = @"Agudo";
         [self.listaLiberaFala addObject:self.estadoAux2];
+        
+        self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"telefone" withExtension:@"mp3"];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+        [[self audioPlayer]play];
+        
         [theTimer invalidate];
     }
     
@@ -120,6 +130,11 @@
         self.imgLeao.frame = self.imgLeao.frame;
         self.lblVisorTocaTreco.text = @"Grave";
         [self.listaLiberaFala addObject:self.estadoAux3];
+        
+        self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"leao" withExtension:@"wav"];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+        [[self audioPlayer]play];
+        
         [theTimer invalidate];
     }
     
@@ -135,6 +150,11 @@
         self.imgApito.frame = self.imgApito.frame;
         self.lblVisorTocaTreco.text = @"Agudo";
         [self.listaLiberaFala addObject:self.estadoAux4];
+        
+        self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"apito" withExtension:@"wav"];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+        [[self audioPlayer]play];
+        
         [theTimer invalidate];
     }
     
@@ -149,6 +169,11 @@
         self.imgGraficoAgudo.hidden = true;
         self.lblVisorTocaTreco.text = @"Agudo";
         [self.listaLiberaFala addObject:self.estadoAux1];
+        
+        self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"apito" withExtension:@"wav"];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+        [[self audioPlayer]play];
+        
         [theTimer invalidate];
     }
     
@@ -163,6 +188,11 @@
         self.imgGraficoGrave.hidden = true;
         self.lblVisorTocaTreco.text = @"Grave";
         [self.listaLiberaFala addObject:self.estadoAux2];
+        
+        self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"P200 Piano A#2" withExtension:@"caf"];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+        [[self audioPlayer]play];
+        
         [theTimer invalidate];
     }
     
@@ -186,6 +216,11 @@
                                                self.imgPianoTimbre.frame.size.height);
         [[EfeitoImagem sharedManager]tiraGestureObjeto:self.imgPianoTimbre];
         [self.listaLiberaFala addObject:self.estadoAux2];
+    
+        self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"pianoPonto" withExtension:@"mp3"];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+        [[self audioPlayer]play];
+        
         [theTimer invalidate];
     }
     
@@ -239,6 +274,11 @@
                                                  self.imgCristalTimbre.frame.size.height);
         [[EfeitoImagem sharedManager]tiraGestureObjeto:self.imgCristalTimbre];
         [self.listaLiberaFala addObject:self.estadoAux2];
+        
+        self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"musicaCristal" withExtension:@"mp3"];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+        [[self audioPlayer]play];
+        
         [theTimer invalidate];
     }
     
@@ -293,6 +333,11 @@
                                                 self.imgViolaoTimbre.frame.size.height);
         [[EfeitoImagem sharedManager]tiraGestureObjeto:self.imgViolaoTimbre];
         [self.listaLiberaFala addObject:self.estadoAux2];
+        
+        self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"violaoPonto" withExtension:@"wav"];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+        [[self audioPlayer]play];
+        
         [theTimer invalidate];
     }
     
@@ -342,7 +387,8 @@
         
         [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.volume];
         
-        self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"vento" withExtension:@"wav"];
+        
+        self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"musicaManeira" withExtension:@"mp3"];
         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
         self.audioPlayer.volume = 0.0;
         [[self audioPlayer]play];
@@ -368,6 +414,9 @@
                          self.imgPilar1Altura.frame = move ;
                      }
                      completion:^(BOOL finished){
+                         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"barulhoPilarCaindo" withExtension:@"mp3"];
+                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+                         [[self audioPlayer]play];
                          [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.lblPilar];
                     }];
     
@@ -385,7 +434,7 @@
     [self performSelector:@selector(caiPilar:) withObject:self.lblPilar afterDelay:0.2];
     
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
 }
 
 
@@ -433,7 +482,7 @@
     
     //Metodo que verifica o passar fala, nele tem que passar a qt de objetos que colidirá nessa fala, no caso 3
     //[[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote2 :self.viewGesturePassaFala:self.listaLiberaFala:4];
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
     
 }
 
@@ -466,7 +515,7 @@
                      }];
     
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
 }
 
 
@@ -497,9 +546,9 @@
                                    userInfo: nil
                                     repeats: YES];
     
-   // [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote2 :self.viewGesturePassaFala:self.listaLiberaFala:2];
+    [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote2 :self.viewGesturePassaFala:self.listaLiberaFala:2];
     
-     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+    
 }
 
 -(void)mostraNumeroOndinhas{
@@ -567,7 +616,7 @@
                                    userInfo: nil
                                     repeats: NO];
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:8.0f:self.viewGesturePassaFala];
     
 }
 
@@ -583,7 +632,7 @@
     [self performSelector:@selector(caiPilar:) withObject:self.lblPilar afterDelay:0.2];
 
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
 }
 
 -(void)chamaMetodosFala7{
@@ -735,7 +784,7 @@
                      }];
 
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
     //passar varias imagens infinatamente de lado, com timbre de varios instrumentos.
 }
 
@@ -754,11 +803,12 @@
     self.lblPilar.text = @"Volume";
     [self performSelector:@selector(caiPilar:) withObject:self.lblPilar afterDelay:0.2];
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
 }
 
 - (IBAction)btnVolume:(id)sender {
     self.audioPlayer.volume = self.volume.value * 10;
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:2.0f:self.viewGesturePassaFala];
 }
 
 -(void)chamaMetodosFala10{
@@ -778,13 +828,32 @@
     [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgMusicaTocar];
 
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+}
+
+-(void)mostraNumeroAmplitude{
+    
+    UIImageView *traco = [[UIImageView alloc]init];
+    traco.backgroundColor = [UIColor redColor];
+    traco.frame = CGRectMake(28,8,5,78);
+    traco.hidden = YES;
+    [self.imgAmplitude addSubview:traco];
+    
+    
+    UIImageView *traco2 = [[UIImageView alloc]init];
+    traco2.backgroundColor = [UIColor redColor];
+    traco2.frame = CGRectMake(26,210,5,40);
+    traco2.hidden = YES;
+    [self.imgAmplitude addSubview:traco2];
+    
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:traco];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:traco2];
 }
 
 -(void)chamaMetodosFala11{
     
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
+    [[self audioPlayer]stop];
     
     [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgTocaTreco];
     [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.volume];
@@ -792,9 +861,15 @@
     
     [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgAmplitude];
 
- 
+    [NSTimer scheduledTimerWithTimeInterval: 2.0
+                                     target: self
+                                   selector: @selector(mostraNumeroAmplitude)
+                                   userInfo: nil
+                                    repeats: NO];
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+   
+    
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
 }
 
 -(void)chamaMetodosFala12{
@@ -811,7 +886,7 @@
     [self performSelector:@selector(caiPilar:) withObject:self.lblPilar afterDelay:0.2];
 
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
 }
 
 -(void)andaCoelho{
@@ -825,14 +900,18 @@
                                                   self.imgCoelho.frame.size.width,
                                                   self.imgCoelho.frame.size.height);
                          self.imgCoelho.frame = move ;
+                         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"corridaCoelho" withExtension:@"wav"];
+                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+                         [[self audioPlayer]play];
                      }
                      completion:^(BOOL finished){
+                         
                          [self.listaLiberaFala addObject:self.estadoAux2];
                      }];
 }
 
 -(void)andaTartaruga{
-    [UIView animateWithDuration:4.0
+    [UIView animateWithDuration:7.0
                           delay:0.1
                         options:  UIViewAnimationOptionCurveEaseInOut  | UIViewAnimationOptionTransitionCrossDissolve
                      animations:^{
@@ -841,8 +920,12 @@
                                                   self.imgTartaruga.frame.size.width,
                                                   self.imgTartaruga.frame.size.height);
                          self.imgTartaruga.frame = move ;
+                         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"corridaTartaruga" withExtension:@"wav"];
+                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+                         [[self audioPlayer]play];
                      }
                      completion:^(BOOL finished){
+                         
                          [self.listaLiberaFala addObject:self.estadoAux2];
                      }];
 }
@@ -972,7 +1055,7 @@
                     }
                      completion:^(BOOL finished){
                          self.imgNotaMusicalCaindo.frame = posOriginal;
-                         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"galo" withExtension:@"wav"];
+                         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"violaoPonto" withExtension:@"wav"];
                          self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
                          
                          [[self audioPlayer]play];
@@ -993,7 +1076,7 @@
                      }
                      completion:^(BOOL finished){
                          self.imgNotaMusicalCaindo.frame = posOriginal;
-                         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"galo" withExtension:@"wav"];
+                         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"musicaCristal" withExtension:@"mp3"];
                          self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
                          
                          [[self audioPlayer]play];
@@ -1014,7 +1097,7 @@
                      }
                      completion:^(BOOL finished){
                          self.imgNotaMusicalCaindo.frame = posOriginal;
-                         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"galo" withExtension:@"wav"];
+                         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"pianoPonto" withExtension:@"mp3"];
                          self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
                          
                          [[self audioPlayer]play];

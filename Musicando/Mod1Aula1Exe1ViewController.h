@@ -45,6 +45,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgTocaTreco;
 - (IBAction)btnAlavancaTocaTreco:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *outAlavancaTocaTreco;
+@property float lastRotation;
 
 
 //Atributos para tocar audio

@@ -98,6 +98,20 @@
 		3F3ADB8C1980B5E900199743 /* molduraBarraSuperior2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F3ADB8B1980B5E900199743 /* molduraBarraSuperior2.jpg */; };
 		3F3ADB8E1980B7E200199743 /* molduraBarraSuoerior3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F3ADB8D1980B7E200199743 /* molduraBarraSuoerior3.png */; };
 		3F3ADB941980BEBF00199743 /* alavanca.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F3ADB931980BEBF00199743 /* alavanca.png */; };
+		3F5F674E198602EB0048A145 /* musicaMixaIntroducao.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3F5F674D198602EB0048A145 /* musicaMixaIntroducao.wav */; };
+		3F5F675119860AC60048A145 /* aprendizadoMusica.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F5F674F19860AC60048A145 /* aprendizadoMusica.png */; };
+		3F5F675219860AC60048A145 /* saudeMusica.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F5F675019860AC60048A145 /* saudeMusica.png */; };
+		3F5F675419860CCC0048A145 /* panela.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F5F675319860CCC0048A145 /* panela.mp3 */; };
+		3F5F6757198611040048A145 /* barulhoBasePilar.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3F5F6755198611040048A145 /* barulhoBasePilar.wav */; };
+		3F5F6758198611040048A145 /* barulhoPilarCaindo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F5F6756198611040048A145 /* barulhoPilarCaindo.mp3 */; };
+		3F5F675C198613F10048A145 /* apito.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3F5F6759198613F10048A145 /* apito.wav */; };
+		3F5F675D198613F10048A145 /* leao.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3F5F675A198613F10048A145 /* leao.wav */; };
+		3F5F675E198613F10048A145 /* telefone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F5F675B198613F10048A145 /* telefone.mp3 */; };
+		3F5F6761198617360048A145 /* pianoPonto.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F5F675F198617360048A145 /* pianoPonto.mp3 */; };
+		3F5F6762198617360048A145 /* violaoPonto.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3F5F6760198617360048A145 /* violaoPonto.wav */; };
+		3F5F676419861B440048A145 /* musicaManeira.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F5F676319861B440048A145 /* musicaManeira.mp3 */; };
+		3F5F6767198621310048A145 /* corridaCoelho.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3F5F6765198621310048A145 /* corridaCoelho.wav */; };
+		3F5F6768198621310048A145 /* corridaTartaruga.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3F5F6766198621310048A145 /* corridaTartaruga.wav */; };
 		3F608CA1196C5B7D001979E9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F608CA0196C5B7D001979E9 /* AudioToolbox.framework */; };
 		3F608CA3196C5B85001979E9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F608CA2196C5B85001979E9 /* OpenAL.framework */; };
 		3F608CA5196C5B8D001979E9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F608CA4196C5B8D001979E9 /* QuartzCore.framework */; };
@@ -250,9 +264,7 @@
 		3FA586B9197EDE5400C3BDE3 /* panelaMusica.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA586B8197EDE5400C3BDE3 /* panelaMusica.png */; };
 		3FA586BB197EE02D00C3BDE3 /* palmas.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA586BA197EE02D00C3BDE3 /* palmas.png */; };
 		3FA586BD197EE2AA00C3BDE3 /* musicaPalmas.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FA586BC197EE2AA00C3BDE3 /* musicaPalmas.mp3 */; };
-		3FA586C1197EE49F00C3BDE3 /* aprendizadoMusica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FA586BE197EE49F00C3BDE3 /* aprendizadoMusica.jpg */; };
 		3FA586C2197EE49F00C3BDE3 /* lazerMusica.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA586BF197EE49F00C3BDE3 /* lazerMusica.png */; };
-		3FA586C3197EE49F00C3BDE3 /* saudeMusica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FA586C0197EE49F00C3BDE3 /* saudeMusica.jpg */; };
 		3FAA1FE0196CFA8A00C32F03 /* tocaTreco.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA1FDF196CFA8A00C32F03 /* tocaTreco.png */; };
 		3FAA1FE4196D034F00C32F03 /* vento.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA1FE3196D034F00C32F03 /* vento.wav */; };
 		3FAA1FE6196D05D600C32F03 /* carro.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA1FE5196D05D600C32F03 /* carro.wav */; };
@@ -471,6 +483,20 @@
 		3F3ADB8B1980B5E900199743 /* molduraBarraSuperior2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = molduraBarraSuperior2.jpg; sourceTree = "<group>"; };
 		3F3ADB8D1980B7E200199743 /* molduraBarraSuoerior3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = molduraBarraSuoerior3.png; sourceTree = "<group>"; };
 		3F3ADB931980BEBF00199743 /* alavanca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alavanca.png; sourceTree = "<group>"; };
+		3F5F674D198602EB0048A145 /* musicaMixaIntroducao.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = musicaMixaIntroducao.wav; sourceTree = "<group>"; };
+		3F5F674F19860AC60048A145 /* aprendizadoMusica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aprendizadoMusica.png; sourceTree = "<group>"; };
+		3F5F675019860AC60048A145 /* saudeMusica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saudeMusica.png; sourceTree = "<group>"; };
+		3F5F675319860CCC0048A145 /* panela.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = panela.mp3; sourceTree = "<group>"; };
+		3F5F6755198611040048A145 /* barulhoBasePilar.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = barulhoBasePilar.wav; sourceTree = "<group>"; };
+		3F5F6756198611040048A145 /* barulhoPilarCaindo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = barulhoPilarCaindo.mp3; sourceTree = "<group>"; };
+		3F5F6759198613F10048A145 /* apito.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = apito.wav; sourceTree = "<group>"; };
+		3F5F675A198613F10048A145 /* leao.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = leao.wav; sourceTree = "<group>"; };
+		3F5F675B198613F10048A145 /* telefone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = telefone.mp3; sourceTree = "<group>"; };
+		3F5F675F198617360048A145 /* pianoPonto.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pianoPonto.mp3; sourceTree = "<group>"; };
+		3F5F6760198617360048A145 /* violaoPonto.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = violaoPonto.wav; sourceTree = "<group>"; };
+		3F5F676319861B440048A145 /* musicaManeira.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musicaManeira.mp3; sourceTree = "<group>"; };
+		3F5F6765198621310048A145 /* corridaCoelho.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = corridaCoelho.wav; sourceTree = "<group>"; };
+		3F5F6766198621310048A145 /* corridaTartaruga.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = corridaTartaruga.wav; sourceTree = "<group>"; };
 		3F608CA0196C5B7D001979E9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3F608CA2196C5B85001979E9 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		3F608CA4196C5B8D001979E9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -636,9 +662,7 @@
 		3FA586B8197EDE5400C3BDE3 /* panelaMusica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panelaMusica.png; sourceTree = "<group>"; };
 		3FA586BA197EE02D00C3BDE3 /* palmas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = palmas.png; sourceTree = "<group>"; };
 		3FA586BC197EE2AA00C3BDE3 /* musicaPalmas.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musicaPalmas.mp3; sourceTree = "<group>"; };
-		3FA586BE197EE49F00C3BDE3 /* aprendizadoMusica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aprendizadoMusica.jpg; sourceTree = "<group>"; };
 		3FA586BF197EE49F00C3BDE3 /* lazerMusica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lazerMusica.png; sourceTree = "<group>"; };
-		3FA586C0197EE49F00C3BDE3 /* saudeMusica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = saudeMusica.jpg; sourceTree = "<group>"; };
 		3FAA1FDF196CFA8A00C32F03 /* tocaTreco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tocaTreco.png; sourceTree = "<group>"; };
 		3FAA1FE3196D034F00C32F03 /* vento.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = vento.wav; sourceTree = "<group>"; };
 		3FAA1FE5196D05D600C32F03 /* carro.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = carro.wav; sourceTree = "<group>"; };
@@ -830,15 +854,15 @@
 				3F70E5D51974EBB700535869 /* graficoGrave.jpg */,
 				3FDE64CB197633DD00EECEE8 /* gesturePassaFalaMascoteTap.png */,
 				3FDE64C519762B4100EECEE8 /* brilhoParticula.sks */,
+				3F5F674F19860AC60048A145 /* aprendizadoMusica.png */,
+				3F5F675019860AC60048A145 /* saudeMusica.png */,
 				3FDE64C619762B4100EECEE8 /* spark.png */,
 				3F7B678A197C75B60095CF0F /* tocaIndio.png */,
 				3F7B6790197C79FF0095CF0F /* animaIndio1.gif */,
 				3F7B678E197C79E60095CF0F /* animaIndio2.gif */,
 				3FA586B8197EDE5400C3BDE3 /* panelaMusica.png */,
 				3FA586BA197EE02D00C3BDE3 /* palmas.png */,
-				3FA586BE197EE49F00C3BDE3 /* aprendizadoMusica.jpg */,
 				3FA586BF197EE49F00C3BDE3 /* lazerMusica.png */,
-				3FA586C0197EE49F00C3BDE3 /* saudeMusica.jpg */,
 				3F7B6792197CA17B0095CF0F /* carnavalFesta.png */,
 				3F7B6793197CA17B0095CF0F /* carnavalframe1.gif */,
 				3F7B6794197CA17B0095CF0F /* carnavalframe2.gif */,
@@ -1481,6 +1505,7 @@
 		A82BA8AD195A0745009EB605 /* Sons */ = {
 			isa = PBXGroup;
 			children = (
+				3F5F674D198602EB0048A145 /* musicaMixaIntroducao.wav */,
 				A82BA8AE195A0745009EB605 /* animalRuminando.wav */,
 				3FAA1FE5196D05D600C32F03 /* carro.wav */,
 				A82BA8AF195A0745009EB605 /* galo.wav */,
@@ -1492,6 +1517,17 @@
 				3FA586B4197EDE3300C3BDE3 /* musicaCristal.mp3 */,
 				3FA586B5197EDE3300C3BDE3 /* musicaPanela.mp3 */,
 				3FA586BC197EE2AA00C3BDE3 /* musicaPalmas.mp3 */,
+				3F5F675319860CCC0048A145 /* panela.mp3 */,
+				3F5F6755198611040048A145 /* barulhoBasePilar.wav */,
+				3F5F6756198611040048A145 /* barulhoPilarCaindo.mp3 */,
+				3F5F6759198613F10048A145 /* apito.wav */,
+				3F5F675A198613F10048A145 /* leao.wav */,
+				3F5F675B198613F10048A145 /* telefone.mp3 */,
+				3F5F675F198617360048A145 /* pianoPonto.mp3 */,
+				3F5F6760198617360048A145 /* violaoPonto.wav */,
+				3F5F676319861B440048A145 /* musicaManeira.mp3 */,
+				3F5F6765198621310048A145 /* corridaCoelho.wav */,
+				3F5F6766198621310048A145 /* corridaTartaruga.wav */,
 			);
 			path = Sons;
 			sourceTree = "<group>";
@@ -1708,7 +1744,6 @@
 				3F608D80196C7585001979E9 /* semicolcheia.png in Resources */,
 				3F70E5CF1974E1FE00535869 /* leao.png in Resources */,
 				2B64FA301969228500BC57FD /* Mod2Aula3Exe3ViewController.xib in Resources */,
-				3FA586C1197EE49F00C3BDE3 /* aprendizadoMusica.jpg in Resources */,
 				2B64FA6C1969233F00BC57FD /* Mod2Aula7Exe3ViewController.xib in Resources */,
 				A8C3F0B9194B72A400E78899 /* Main_iPad.storyboard in Resources */,
 				2B0041BC197EFCB400EB1D54 /* faBloco.png in Resources */,
@@ -1738,8 +1773,10 @@
 				3F608D60196C7585001979E9 /* fad3.caf in Resources */,
 				3FAABF03197E1DC800AAD8FD /* violaoTimbre.png in Resources */,
 				3F608D7E196C7585001979E9 /* minima.png in Resources */,
+				3F5F6758198611040048A145 /* barulhoPilarCaindo.mp3 in Resources */,
 				A8C3F0BE194B72A400E78899 /* Images.xcassets in Resources */,
 				2B0041C4197EFCB400EB1D54 /* rockSimbolo.png in Resources */,
+				3F5F6762198617360048A145 /* violaoPonto.wav in Resources */,
 				3FAABF1B197E4D1900AAD8FD /* biblioteca.png in Resources */,
 				3F7B67B3197CDBDA0095CF0F /* graficoGraveCortado.jpg in Resources */,
 				3F7B679E197CA17B0095CF0F /* carnavalframe5.gif in Resources */,
@@ -1751,6 +1788,7 @@
 				2B0041CA197EFE0C00EB1D54 /* notas.jpg in Resources */,
 				3FAC66901984ADD700BED55E /* TransicaoExercicioViewController.xib in Resources */,
 				3F608DE1196C7585001979E9 /* Piano.plist in Resources */,
+				3F5F675D198613F10048A145 /* leao.wav in Resources */,
 				3FAA1FEA196D08A000C32F03 /* carro.png in Resources */,
 				2B64FA801969236D00BC57FD /* Mod2Aula8Exe1ViewController.xib in Resources */,
 				2B64FA2B1969227A00BC57FD /* Mod2Aula3Exe2ViewController.xib in Resources */,
@@ -1816,7 +1854,9 @@
 				3F608D64196C7585001979E9 /* la3.caf in Resources */,
 				3F608D67196C7585001979E9 /* mib3.caf in Resources */,
 				3F70E5D31974E38600535869 /* tocaTreco2.png in Resources */,
+				3F5F6757198611040048A145 /* barulhoBasePilar.wav in Resources */,
 				3FD9741D19744F0F002EB77A /* ouvindo.png in Resources */,
+				3F5F6761198617360048A145 /* pianoPonto.mp3 in Resources */,
 				3F7B679B197CA17B0095CF0F /* carnavalframe2.gif in Resources */,
 				3F608DA0196C7585001979E9 /* atireiGato.xml in Resources */,
 				3F608DDF196C7585001979E9 /* P200 Piano F#7.caf in Resources */,
@@ -1832,8 +1872,10 @@
 				3F608DD4196C7585001979E9 /* P200 Piano D#8.caf in Resources */,
 				A8C3F0AD194B72A400E78899 /* InfoPlist.strings in Resources */,
 				3FA586BD197EE2AA00C3BDE3 /* musicaPalmas.mp3 in Resources */,
+				3F5F676419861B440048A145 /* musicaManeira.mp3 in Resources */,
 				3FD974261974653F002EB77A /* pilar.png in Resources */,
 				2B64FA671969233700BC57FD /* Mod2Aula7Exe2ViewController.xib in Resources */,
+				3F5F675419860CCC0048A145 /* panela.mp3 in Resources */,
 				2B0041BF197EFCB400EB1D54 /* reBloco.png in Resources */,
 				3FAA1FE0196CFA8A00C32F03 /* tocaTreco.png in Resources */,
 				2B64FA49196922C100BC57FD /* Mod2Aula4Exe5ViewController.xib in Resources */,
@@ -1882,6 +1924,7 @@
 				3F608D8A196C7585001979E9 /* notaCaraPausaSom.png in Resources */,
 				3F7B6799197CA17B0095CF0F /* carnavalFesta.png in Resources */,
 				2B0041C2197EFCB400EB1D54 /* classicoSimbolo.jpg in Resources */,
+				3F5F675119860AC60048A145 /* aprendizadoMusica.png in Resources */,
 				3F70E5D71974EBB700535869 /* graficoGrave.jpg in Resources */,
 				3F608D5D196C7585001979E9 /* do3.caf in Resources */,
 				3F7B67A8197CA4030095CF0F /* Capoeiraframe3.gif in Resources */,
@@ -1892,6 +1935,7 @@
 				2B64FA4E196922C900BC57FD /* Mod2Aula4Exe6ViewController.xib in Resources */,
 				3F608DB4196C7585001979E9 /* Mozart-Marcha Turca.xml in Resources */,
 				3F608D5C196C7585001979E9 /* do2.caf in Resources */,
+				3F5F674E198602EB0048A145 /* musicaMixaIntroducao.wav in Resources */,
 				3F7B678D197C75B60095CF0F /* tocaIndio.png in Resources */,
 				3F3ADB941980BEBF00199743 /* alavanca.png in Resources */,
 				3F608D70196C7585001979E9 /* 6c - G.caf in Resources */,
@@ -1900,6 +1944,7 @@
 				3F608DC8196C7585001979E9 /* vitoria.xml in Resources */,
 				3F7B679A197CA17B0095CF0F /* carnavalframe1.gif in Resources */,
 				2B64FA85196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib in Resources */,
+				3F5F6767198621310048A145 /* corridaCoelho.wav in Resources */,
 				3FA586B3197EC8E000C3BDE3 /* indio.mp3 in Resources */,
 				3F608D69196C7585001979E9 /* 2 - A.caf in Resources */,
 				2B64F9F5196920F100BC57FD /* Mod1Aula3Exe3ViewController.xib in Resources */,
@@ -1916,6 +1961,7 @@
 				3FAA1FEB196D08A000C32F03 /* galo.png in Resources */,
 				3F3ADB8A1980B30E00199743 /* molduraBarraSuoerior.jpg in Resources */,
 				3F608D86196C7585001979E9 /* 3.png in Resources */,
+				3F5F675219860AC60048A145 /* saudeMusica.png in Resources */,
 				3F608DBA196C7585001979E9 /* parabens.xml in Resources */,
 				3FACC84D196E5F08003D4660 /* gesturePassaFalaMascote.png in Resources */,
 				3F608DB2196C7585001979E9 /* lepo.xml in Resources */,
@@ -1929,14 +1975,15 @@
 				3F608DB1196C7585001979E9 /* kokiri-forest.xml in Resources */,
 				3F608DB6196C7585001979E9 /* natal.xml in Resources */,
 				3F608DDB196C7585001979E9 /* P200 Piano F#3.caf in Resources */,
+				3F5F675E198613F10048A145 /* telefone.mp3 in Resources */,
 				2B0041BE197EFCB400EB1D54 /* miBloco.png in Resources */,
 				2B64F9FA196920FA00BC57FD /* Mod1Aula3Exe4ViewController.xib in Resources */,
 				3F608D63196C7585001979E9 /* la2.caf in Resources */,
 				3F608D6F196C7585001979E9 /* 6b - D.caf in Resources */,
 				3FADCBB01953811300B90702 /* exercicios.png in Resources */,
 				3F608DA4196C7585001979E9 /* caribe.xml in Resources */,
-				3FA586C3197EE49F00C3BDE3 /* saudeMusica.jpg in Resources */,
 				3F608D73196C7585001979E9 /* claveSol.png in Resources */,
+				3F5F675C198613F10048A145 /* apito.wav in Resources */,
 				3F608D82196C7585001979E9 /* seminima.png in Resources */,
 				3F608DA1196C7585001979E9 /* Bachviolao.xml in Resources */,
 				2B64FA261969226F00BC57FD /* Mod2Aula3Exe1ViewController.xib in Resources */,
@@ -1947,6 +1994,7 @@
 				3FAABF1F197E515200AAD8FD /* escada.png in Resources */,
 				3FAABF05197E2D8200AAD8FD /* notaMusical.png in Resources */,
 				3FAABF1E197E515200AAD8FD /* elevador.png in Resources */,
+				3F5F6768198621310048A145 /* corridaTartaruga.wav in Resources */,
 				3FD9741719744097002EB77A /* colher.png in Resources */,
 				3FDE64C719762B4100EECEE8 /* brilhoParticula.sks in Resources */,
 				3F608D6A196C7585001979E9 /* 3 - D.caf in Resources */,

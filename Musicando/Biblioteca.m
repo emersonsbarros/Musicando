@@ -219,7 +219,7 @@
     mod1Aula2Exe2fala6.conteudo = @"Agora vamos aprender outro Pilar, o timbre que é a capacidade que nos faz descobrir a origem de algum som e está relacionada a forma das ondinhas do grafico.";
     
     Fala *mod1Aula2Exe2fala7 = [[Fala alloc] init];
-    mod1Aula2Exe2fala7.conteudo = @"Agora toque nos pontos pretos acima e tente associalos ao seu respectivos instrumento arrastando as plaquinhas para em cima do ponto";
+    mod1Aula2Exe2fala7.conteudo = @"Agora toque nos pontos pretos acima e tente associalos ao seu respectivos instrumento arrastando os Objetos para em cima do ponto";
     
     Fala *mod1Aula2Exe2fala8 = [[Fala alloc] init];
     mod1Aula2Exe2fala8.conteudo = @"Como eu tinha falado no comeco, o que faz diferenciar o timbre na frequencia é o formato das ondas como voce observa as imagens a cima";
