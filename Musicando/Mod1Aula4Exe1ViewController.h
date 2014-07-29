@@ -27,14 +27,19 @@
 @property (strong, nonatomic) IBOutlet UIView *viewGesturePassaFala;
 @property (strong, nonatomic) IBOutlet UIImageView *imagemDoMascote;
 
-@property (strong, nonatomic) IBOutlet UIImageView *som;
+
 @property (strong, nonatomic) IBOutlet UIImageView *ritmo;
-@property (strong, nonatomic) IBOutlet UIImageView *modoMeloHarmoPoli;
+@property (strong, nonatomic) IBOutlet UIImageView *melodia;
+@property (strong, nonatomic) IBOutlet UIImageView *harmonia;
+
 @property (strong, nonatomic) IBOutlet UIImageView *tocaTreco;
 @property (strong, nonatomic) IBOutlet UILabel *lblSaidaTocaTreco;
+
 @property (strong, nonatomic) IBOutlet UIImageView *pilar1;
 @property (strong, nonatomic) IBOutlet UIImageView *pilar2;
 @property (strong, nonatomic) IBOutlet UIImageView *pilar3;
+@property (strong, nonatomic) IBOutlet UIImageView *telao;
+@property (strong, nonatomic) IBOutlet UIImageView *teto;
 
 /*===========================ATRIBUTOS=============================*/
 

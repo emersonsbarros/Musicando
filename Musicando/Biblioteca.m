@@ -407,22 +407,34 @@
     Exercicio *mod1Aula3Exe4 = [[Exercicio alloc] init:102 nome:@"Harmonia" nomeView:@"Mod1Aula3Exe4ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
 //Falas
     Fala *mod1Aula3Exe4fala1 = [[Fala alloc] init];
-    mod1Aula3Exe4fala1.conteudo = @"Agora vamos falar um pouco sobre harmonia!";
+    mod1Aula3Exe4fala1.conteudo = @"Agora vamos falar um pouco sobre harmonia, que é um dos chamados elementos constitutivos e fundamentais da música!";
     
     Fala *mod1Aula3Exe4fala2 = [[Fala alloc] init];
-    mod1Aula3Exe4fala2.conteudo = @"Pra nossa surpresa, a harmonia é justamente o contrário da melodia. São sons tocados ao mesmo tempo, contíunos, que também dão fluidez a músuica tocada.";
+    mod1Aula3Exe4fala2.conteudo = @"Para nossa surpresa e felicidade, a harmonia é justamente o contrário da melodia. São sons tocados ao mesmo tempo, contíunos, que também dão fluidez a música tocada. Díficil?";
     
     Fala *mod1Aula3Exe4fala3 = [[Fala alloc] init];
-    mod1Aula3Exe4fala3.conteudo = @"Quer ver a diferença? Arraste a nota separada que representa a melodia e depois a harmonia que são vários sons juntos.";
+    mod1Aula3Exe4fala3.conteudo = @"Imagine";
     
     Fala *mod1Aula3Exe4fala4 = [[Fala alloc] init];
-    mod1Aula3Exe4fala4.conteudo = @"Notou que na harmonia há esse conjunto de sons, e a melodia parece apenas uma sequência cada um tocada de uma vez?";
+    mod1Aula3Exe4fala4.conteudo = @"Quer ver a diferença? Arraste a nota separada que representa a melodia, e depois a harmonia que são vários sons juntos. Ouça cada uma!";
     
     Fala *mod1Aula3Exe4fala5 = [[Fala alloc] init];
-    mod1Aula3Exe4fala5.conteudo = @"Assim como para a melodia, existem maneiras de tocar os instrumentos que exemplificam bem a harmonia. Arraste e veja a diferença entre os acordes harmoniosos do violão para a escala feita na flauta";
+    mod1Aula3Exe4fala5.conteudo = @"Notou que na harmonia parece vários sons juntos, e já na melodia dá a impressão de apenas uma sequência cada um tocada de uma vez?";
     
     Fala *mod1Aula3Exe4fala6 = [[Fala alloc] init];
-    mod1Aula3Exe4fala6.conteudo = @"Viu como não há segredo na harmonia, daqui algumas aulas você mesmo já poderá testar e usar o que aprendeu. E até a próxima!";
+    mod1Aula3Exe4fala6.conteudo = @"Agora vamos para os instrumentos. Assim como mostrei na melodia, existem técnicas de tocar instrumentos que exemplificam bem a harmonia.";
+    
+    Fala *mod1Aula3Exe4fala7 = [[Fala alloc] init];
+    mod1Aula3Exe4fala7.conteudo = @"Arraste  cada um, e veja a diferença entre os acordes harmoniosos do violão para a escala feita na flauta.";
+    
+    Fala *mod1Aula3Exe4fala8 = [[Fala alloc] init];
+    mod1Aula3Exe4fala8.conteudo = @"Existem outros instrumentos que mostram a diferença. Grave pra você que a harmonia é relacionada a conjunto e a melodia a unidade.";
+    
+    Fala *mod1Aula3Exe4fala9 = [[Fala alloc] init];
+    mod1Aula3Exe4fala9.conteudo = @"Sempre que ouvir músicas, você vai perceber que não haverá apenas harmonia e melodia, as duas trabalham em conjunto.";
+    
+    Fala *mod1Aula3Exe4fala10 = [[Fala alloc] init];
+    mod1Aula3Exe4fala10.conteudo = @"Por isso vamos agora saber melhor o que é Polifonia...";
     
     //Conversa
     Conversa *mod1Aula3Exe4conversa1 = [[Conversa alloc] init];
@@ -432,6 +444,10 @@
     [[mod1Aula3Exe4conversa1 listaDeFalas] addObject: mod1Aula3Exe4fala4];
     [[mod1Aula3Exe4conversa1 listaDeFalas] addObject: mod1Aula3Exe4fala5];
     [[mod1Aula3Exe4conversa1 listaDeFalas] addObject: mod1Aula3Exe4fala6];
+    [[mod1Aula3Exe4conversa1 listaDeFalas] addObject: mod1Aula3Exe4fala7];
+    [[mod1Aula3Exe4conversa1 listaDeFalas] addObject: mod1Aula3Exe4fala8];
+    [[mod1Aula3Exe4conversa1 listaDeFalas] addObject: mod1Aula3Exe4fala9];
+    [[mod1Aula3Exe4conversa1 listaDeFalas] addObject: mod1Aula3Exe4fala10];
     [[[mod1Aula3Exe4 mascote] listaDeConversas] addObject:mod1Aula3Exe4conversa1];
  
 //POLIFONIA

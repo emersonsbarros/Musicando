@@ -156,30 +156,51 @@
     }
 }
 
-//Intro sobre melodia
+//Introdução
 -(void)chamaMetodosFala0 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//Intro melodia
+//Introdução
 -(void)chamaMetodosFala1 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//Definição melodia
+//Definição de melodia
 -(void)chamaMetodosFala2 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//Exemplo coma animação da vitrola
+//Animação da vitrola
 -(void)chamaMetodosFala3 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
-    //Mostra vitrola e chama animação
-    self.vitrola.hidden = NO;
+    //Animação da vitrola
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.vitrola];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.notasDeMelodia];
+    [UIView animateWithDuration:1.0
+                          delay:0.0
+                        options:  UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         CGRect novaPosicao1 = CGRectMake(self.vitrola.frame.origin.x+30,
+                                                          self.vitrola.frame.origin.y-50,
+                                                          self.vitrola.frame.size.width,
+                                                          self.vitrola.frame.size.height);
+                         
+                         CGRect novaPosicao2 = CGRectMake(self.notasDeMelodia.frame.origin.x+30,
+                                                          self.notasDeMelodia.frame.origin.y-50,
+                                                          self.notasDeMelodia.frame.size.width,
+                                                          self.notasDeMelodia.frame.size.height);
+                         
+                         self.vitrola.frame = novaPosicao1;
+                         self.notasDeMelodia.frame = novaPosicao2;
+                     }
+                     completion:^(BOOL finished){
+                         
+                     }];
     
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
@@ -187,28 +208,31 @@
 //Complemento de fala
 -(void)chamaMetodosFala4 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    //Remove animação da vitrola
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.vitrola];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.notasDeMelodia];
+    
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//Exemplo toca treco
+//Exemplo do toca treco
 -(void)chamaMetodosFala5 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
-    //Esconde vitrolda, mostra view de exercitar
-    self.vitrola.hidden = YES;
+    //Esconde vitrola, mostra view de exercitar
     [self primeiraAnimacao];
     self.viewDeExercitar.hidden = NO;
     
     [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//Complemento
+//Complemento de fala
 -(void)chamaMetodosFala6 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Para som
     self.audioPlayer.stop;
-
     
     [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
@@ -216,6 +240,9 @@
 //Exercício
 -(void)chamaMetodosFala7 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    //Para som
+    self.audioPlayer.stop;
     
     //Mostra views do teste
     self.outTocaTreco1.hidden = YES;
@@ -239,6 +266,7 @@
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Esconde o teste e para som
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.alternativaCorreta];
     self.viewDeExercitar.hidden = YES;
     self.audioPlayer.stop;
     
@@ -246,7 +274,9 @@
 }
 
 
-//===ANIMAÇÕES
+
+//////////////////////////////////////////  ANIMAÇÕES E AÇÕES /////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 //Traz a view de exercitar
@@ -344,6 +374,19 @@
 
 - (IBAction)flauta:(id)sender {
     NSLog(@"ACERTOU! Flauta acionada");
+    
+    //Animação da vitrola
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.alternativaCorreta];
+    [UIView animateWithDuration:1.0
+                          delay:0.0
+                        options:  UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         self.alternativaCorreta.alpha = 0.3;
+                     }
+                     completion:^(BOOL finished){
+                         
+                     }];
+
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"escalaFlauta" withExtension:@"wav"];
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];

@@ -27,6 +27,9 @@
 @property (strong, nonatomic) IBOutlet UIView *viewGesturePassaFala;
 @property (strong, nonatomic) IBOutlet UIImageView *imagemDoMascote;
 
+@property (strong, nonatomic) IBOutlet UIImageView *vitrola;
+@property (strong, nonatomic) IBOutlet UIImageView *notasDeHarmonia;
+
 //Tocador: tocatreco, notas, instrumentos
 @property (strong, nonatomic) IBOutlet UIImageView *notasHarmonia;
 @property (strong, nonatomic) IBOutlet UIImageView *notaMelodia;

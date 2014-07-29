@@ -28,11 +28,11 @@
     [[EfeitoBarraSuperior sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
     
     //Sombreando view dos ritmos
-    self.viewDosRitmos.layer.shadowColor = [[UIColor blackColor] CGColor];
-    self.viewDosRitmos.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
-    self.viewDosRitmos.layer.shadowRadius = 3.0f;
-    self.viewDosRitmos.layer.shadowOpacity = 1.0f;
-    [self.viewDosRitmos setBackgroundColor: [UIColor whiteColor]];
+//    self.viewDosRitmos.layer.shadowColor = [[UIColor blackColor] CGColor];
+//    self.viewDosRitmos.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
+//    self.viewDosRitmos.layer.shadowRadius = 3.0f;
+//    self.viewDosRitmos.layer.shadowOpacity = 1.0f;
+//    [self.viewDosRitmos setBackgroundColor: [UIColor whiteColor]];
     
     [self iniciarComponentes];
 }
@@ -216,6 +216,9 @@
 -(void)chamaMetodosFala6 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
+    //Para som das batidas
+    self.audioPlayer.stop;
+    
     //Esconde botões de ritmo
     self.outBtoClassico.hidden = YES;
     self.outBtoRock.hidden = YES;
@@ -254,6 +257,7 @@
     
     //Mostra view de exercitar
     self.viewDosRitmos.hidden = YES;
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.alternativaCorreta];
     
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
@@ -267,25 +271,24 @@
 
 -(void)animacaoBatidasDoCoracao{
     
-    [UIView animateWithDuration:2.0
+    //Animação da vitrola
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgBatidasDoCoracao];
+    [UIView animateWithDuration:1.0
                           delay:0.0
-                        options:  UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve
+                        options:  UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionTransitionCrossDissolve
                      animations:^{
-                         self.imgBatidasDoCoracao.frame = CGRectMake(self.imgBatidasDoCoracao.frame.origin.x,
-                                                                     self.imgBatidasDoCoracao.frame.origin.y+250,
-                                                                     self.imgBatidasDoCoracao.frame.size.width,
-                                                                     self.imgBatidasDoCoracao.frame.size.height);
+                         CGRect novaPosicao = CGRectMake(self.imgBatidasDoCoracao.frame.origin.x+10,
+                                                         self.imgBatidasDoCoracao.frame.origin.y+20,
+                                                         self.imgBatidasDoCoracao.frame.size.width,
+                                                         self.imgBatidasDoCoracao.frame.size.height);
+                         self.imgBatidasDoCoracao.frame = novaPosicao;
                      }
                      completion:^(BOOL finished){
-                        
-                         //Degradê para imagem de batidas do coração
-                         [[EfeitoImagem sharedManager]hiddenNoEmDegrade: self.imgBatidasDoCoracao];
-                         
-                         
-                         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"coracaoBatendo" withExtension:@"mp3"];
-                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-                         self.audioPlayer.play;
                      }];
+    
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"coracaoBatendo" withExtension:@"mp3"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    self.audioPlayer.play;
     
 }
 
@@ -374,6 +377,18 @@
 
 - (IBAction)tempoVelocidade:(id)sender {
     NSLog(@"ACERTOU! Tempo e velocidade");
+    
+    //Animação da vitrola
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.alternativaCorreta];
+    [UIView animateWithDuration:1.0
+                          delay:0.0
+                        options:  UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         self.alternativaCorreta.alpha = 0.3;
+                     }
+                     completion:^(BOOL finished){
+                         
+                     }];
 }
 
 - (IBAction)maestro:(id)sender {

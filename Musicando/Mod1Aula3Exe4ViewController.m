@@ -118,13 +118,23 @@
             case 3:
                 [self chamaMetodosFala3];
                 break;
-                
             case 4:
                 [self chamaMetodosFala4];
                 break;
-                
             case 5:
                 [self chamaMetodosFala5];
+                break;
+            case 6:
+                [self chamaMetodosFala6];
+                break;
+            case 7:
+                [self chamaMetodosFala7];
+                break;
+            case 8:
+                [self chamaMetodosFala8];
+                break;
+            case 9:
+                [self chamaMetodosFala9];
                 break;
                 
             default:
@@ -140,21 +150,58 @@
 }
 
 
-//Explica Harmonia
+//Introdução
 -(void)chamaMetodosFala0 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//Diferença entre Melodia
+//Explica definição de harmonia
 -(void)chamaMetodosFala1 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//TocaTreco e notas
+//Vitrola
 -(void)chamaMetodosFala2 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    //Animação da vitrola
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.vitrola];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.notasDeHarmonia];
+    [UIView animateWithDuration:1.0
+                          delay:0.0
+                        options:  UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         CGRect novaPosicao1 = CGRectMake(self.vitrola.frame.origin.x+30,
+                                                      self.vitrola.frame.origin.y-50,
+                                                      self.vitrola.frame.size.width,
+                                                      self.vitrola.frame.size.height);
+                         
+                         CGRect novaPosicao2 = CGRectMake(self.notasDeHarmonia.frame.origin.x+30,
+                                                          self.notasDeHarmonia.frame.origin.y-50,
+                                                          self.notasDeHarmonia.frame.size.width,
+                                                          self.notasDeHarmonia.frame.size.height);
+                         
+                         self.vitrola.frame = novaPosicao1;
+                         self.notasDeHarmonia.frame = novaPosicao2;
+                     }
+                     completion:^(BOOL finished){
+                         
+                     }];
+    
+    
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//TocaTreco mostra diferença
+-(void)chamaMetodosFala3 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    //Remove animação da vitrola
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.vitrola];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.notasDeHarmonia];
+
     
     //Verifica se as imagens colidiram e add em uma lista que verificará se todas tiveram colisao
     [NSTimer scheduledTimerWithTimeInterval: 0.5
@@ -168,25 +215,35 @@
                                    selector: @selector(checkColisaoNotaMelodia:)
                                    userInfo: nil
                                     repeats: YES];
-
     
     self.tocaTreco.hidden = NO;
     self.notasHarmonia.hidden = NO;
     self.notaMelodia.hidden = NO;
     self.tocaTreco.userInteractionEnabled = YES;
-
+    
     //Verifica o passar fala, passando a qtd de objetos que colidem
     [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote :self.viewGesturePassaFala:self.listaLiberaFala:2];
+    
 }
 
--(void)chamaMetodosFala3 {
+//Complemento de fala
+-(void)chamaMetodosFala4 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//TocaTreco e Instrumentos
--(void)chamaMetodosFala4 {
+//Complemento de fala
+-(void)chamaMetodosFala5 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Tocatreco e instrumentos
+-(void)chamaMetodosFala6 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    //Para som
+    self.audioPlayer.stop;
     
     //Verifica se as imagens colidiram e add em uma lista que verificará se todas tiveram colisao
     [NSTimer scheduledTimerWithTimeInterval: 0.5
@@ -203,7 +260,6 @@
     
     //Mostra os instrumentos e habilita interação
     self.tocaTreco.userInteractionEnabled = YES;
-    self.tocaTreco.hidden = NO;
     self.violao.hidden = NO;
     self.flauta.hidden = NO;
     
@@ -211,13 +267,29 @@
     [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote :self.viewGesturePassaFala:self.listaLiberaFala:2];
 }
 
--(void)chamaMetodosFala5 {
+//Fala de fixacao
+-(void)chamaMetodosFala7 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    
-    self.tocaTreco.hidden = YES;
-    
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
+
+//Complemento
+-(void)chamaMetodosFala8 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    //Esconde tocatreco e para som
+    self.audioPlayer.stop;
+    self.tocaTreco.hidden = YES;
+
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Fala final
+-(void)chamaMetodosFala9 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
 
 
 //==========================================================Colisões/Ações=========================================================//

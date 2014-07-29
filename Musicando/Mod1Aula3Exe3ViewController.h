@@ -31,11 +31,13 @@
 //Botões p/ exercitar
 @property (strong, nonatomic) IBOutlet UIButton *outTocaTreco1;
 @property (strong, nonatomic) IBOutlet UIImageView *vitrola;
+@property (strong, nonatomic) IBOutlet UIImageView *notasDeMelodia;
 
 @property (strong, nonatomic) IBOutlet UIButton *outTocaTreco2;
 @property (strong, nonatomic) IBOutlet UIButton *outViolaco;
 @property (strong, nonatomic) IBOutlet UIButton *outFlauta;
 @property (strong, nonatomic) IBOutlet UIButton *outPiano;
+@property (strong, nonatomic) IBOutlet UIImageView *alternativaCorreta;
 
 @property (strong, nonatomic) IBOutlet UIImageView *imgNota1;
 @property (strong, nonatomic) IBOutlet UIImageView *imgNota2;

@@ -30,14 +30,6 @@
     //Add barra Superior ao Xib
     [[EfeitoBarraSuperior sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
     
-    
-    //Sombreando view de exercitar
-    self.viewDeExercitar.layer.shadowColor = [[UIColor blackColor] CGColor];
-    self.viewDeExercitar.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
-    self.viewDeExercitar.layer.shadowRadius = 3.0f;
-    self.viewDeExercitar.layer.shadowOpacity = 1.0f;
-    [self.viewDeExercitar setBackgroundColor: [UIColor whiteColor]];
-    
     [self iniciarComponentes];
 }
 
@@ -254,6 +246,8 @@
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Esconde view de exercitar e para a música
+    //Remove animação da vitrola
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.alternativaCorreta];
     self.viewDeExercitar.hidden = YES;
     self.audioPlayer.stop;
     
@@ -287,7 +281,7 @@
 -(void)animacaoNotaSaindoDoTocador{
     
     //Para teste
-    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"musicaSomEPausa" withExtension:@"mp3"];
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"notasPausas" withExtension:@"mp3"];
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
     
     [UIView animateWithDuration:2.0
@@ -343,6 +337,19 @@
 
 - (IBAction)notasPausas:(id)sender {
     NSLog(@"ACERTOU! Notas e pausas");
+    
+    //Animação de resposta certa
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.alternativaCorreta];
+    [UIView animateWithDuration:1.0
+                          delay:0.0
+                        options:  UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         self.alternativaCorreta.alpha = 0.3;
+                     }
+                     completion:^(BOOL finished){
+                         
+                     }];
+
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"notasPausas" withExtension:@"mp3"];
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];

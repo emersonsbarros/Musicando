@@ -46,6 +46,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *outBtoTempoVelocidade;
 @property (strong, nonatomic) IBOutlet UIButton *outBtoMaestro;
 @property (strong, nonatomic) IBOutlet UIButton *outBtoMicrofone;
+@property (strong, nonatomic) IBOutlet UIImageView *alternativaCorreta;
 
 - (IBAction)tempoVelocidade:(id)sender;
 - (IBAction)maestro:(id)sender;

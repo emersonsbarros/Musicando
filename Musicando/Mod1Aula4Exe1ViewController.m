@@ -44,9 +44,9 @@
     self.listaImangesColisao = [[NSMutableArray alloc]init];
     
     //Adiciona imagens para colisao
-    [self.listaImangesColisao addObject: self.som];
+    [self.listaImangesColisao addObject: self.melodia];
     [self.listaImangesColisao addObject: self.ritmo];
-    [self.listaImangesColisao addObject: self.modoMeloHarmoPoli];
+    [self.listaImangesColisao addObject: self.harmonia];
     
     //Adiciona gesture ARRASTAR em todas imagens dessa lista
     [[EfeitoImagem sharedManager]addGesturePainImagens: self.listaImangesColisao];
@@ -68,6 +68,8 @@
     //Imagem do mascote
     self.imagemDoMascote.image = [[[[Biblioteca sharedManager] exercicioAtual] mascote] imagem].image;
     [self.view addSubview: self.imagemDoMascote];
+    [self.view addSubview: self.telao];
+    [self.view addSubview: self.lblSaidaTocaTreco];
     [self.view addSubview: self.lblFalaDoMascote];
     
     //Mascote começa a pular
@@ -150,28 +152,29 @@
      //Verifica se as imagens colidiram e add em uma lista que verificará se todas tiveram colisao
      [NSTimer scheduledTimerWithTimeInterval: 0.5
                                       target: self
-                                    selector: @selector(checkColisaoSom:)
+                                    selector: @selector(checkColisaoRitmo:)
                                     userInfo: nil
                                      repeats: YES];
      
      [NSTimer scheduledTimerWithTimeInterval: 0.5
                                       target: self
-                                    selector: @selector(checkColisaoRitmo:)
+                                    selector: @selector(checkColisaoMelodia:)
                                     userInfo: nil
                                      repeats: YES];
     
     [NSTimer scheduledTimerWithTimeInterval: 0.5
                                      target: self
-                                   selector: @selector(checkColisaoModoMeloHarmoPoli:)
+                                   selector: @selector(checkColisaoHarmonia:)
                                    userInfo: nil
                                     repeats: YES];
     
     //Habilita interação e mostra views
     self.tocaTreco.userInteractionEnabled = YES;
     self.tocaTreco.hidden = NO;
-    self.som.hidden = NO;
+    self.melodia.hidden = NO;
     self.ritmo.hidden = NO;
-    self.modoMeloHarmoPoli.hidden = NO;
+    self.harmonia.hidden = NO;
+    self.telao.hidden = NO;
     self.lblSaidaTocaTreco.hidden = NO;
     
     [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote :self.viewGesturePassaFala:self.listaLiberaFala: 3];
@@ -182,9 +185,10 @@
     
     
     self.tocaTreco.hidden = YES;
-    self.som.hidden = YES;
+    self.melodia.hidden = YES;
     self.ritmo.hidden = YES;
-    self.modoMeloHarmoPoli.hidden = YES;
+    self.harmonia.hidden = YES;
+    self.telao.hidden = YES;
     self.lblSaidaTocaTreco.hidden = YES;
     
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
@@ -194,6 +198,7 @@
 -(void)chamaMetodosFala4 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
 
+    self.teto.hidden = NO;
     self.pilar1.hidden = NO;
     self.pilar2.hidden = NO;
     self.pilar3.hidden = NO;
@@ -216,6 +221,11 @@
                                                    self.pilar3.frame.origin.y+200,
                                                    self.pilar3.frame.size.width,
                                                    self.pilar3.frame.size.height);
+                         
+                         self.teto.frame = CGRectMake(self.teto.frame.origin.x,
+                                                        self.teto.frame.origin.y+200,
+                                                        self.teto.frame.size.width,
+                                                        self.teto.frame.size.height);
 
                      }
                      completion:^(BOOL finished){
@@ -228,6 +238,7 @@
 -(void)chamaMetodosFala5 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
+    self.teto.hidden = YES;
     self.pilar1.hidden = YES;
     self.pilar2.hidden = YES;
     self.pilar3.hidden = YES;
@@ -238,28 +249,28 @@
 
 //==========================================================Colisões/Ações=========================================================//
 
--(void) checkColisaoSom:(NSTimer *) theTimer{
+-(void) checkColisaoMelodia:(NSTimer *) theTimer{
     id presentationLayer1 = self.tocaTreco.layer.presentationLayer;
-    id presentationLayer2 = self.som.layer.presentationLayer;
+    id presentationLayer2 = self.melodia.layer.presentationLayer;
     BOOL nowIntersecting = CGRectIntersectsRect([presentationLayer1 frame], [presentationLayer2 frame]);
     
     if (nowIntersecting){
-        self.som.hidden = true;
-        self.som.frame = self.tocaTreco.frame;
+        self.melodia.hidden = true;
+        self.melodia.frame = self.tocaTreco.frame;
         [self.listaLiberaFala addObject:self.estadoAux1];
         
         [theTimer invalidate];
-        [self acaoColisaoSom];
+        [self acaoColisaoMelodia];
     }
     
 }
 
-- (void)acaoColisaoSom{
+- (void)acaoColisaoMelodia{
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"notasPausas" withExtension:@"mp3"];
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
     
     [[self audioPlayer]play];
-    self.lblSaidaTocaTreco.text = @"SOM";
+    self.lblSaidaTocaTreco.text = @"Melodia";
 }
 
 -(void) checkColisaoRitmo:(NSTimer *) theTimer{
@@ -283,32 +294,32 @@
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
     
     [[self audioPlayer]play];
-    self.lblSaidaTocaTreco.text = @"RITMO";
+    self.lblSaidaTocaTreco.text = @"Ritmo";
 
 }
 
--(void) checkColisaoModoMeloHarmoPoli:(NSTimer *) theTimer{
+-(void) checkColisaoHarmonia:(NSTimer *) theTimer{
     id presentationLayer1 = self.tocaTreco.layer.presentationLayer;
-    id presentationLayer2 = self.modoMeloHarmoPoli.layer.presentationLayer;
+    id presentationLayer2 = self.harmonia.layer.presentationLayer;
     BOOL nowIntersecting = CGRectIntersectsRect([presentationLayer1 frame], [presentationLayer2 frame]);
     
     if (nowIntersecting){
-        self.modoMeloHarmoPoli.hidden = true;
-        self.modoMeloHarmoPoli.frame = self.tocaTreco.frame;
+        self.harmonia.hidden = true;
+        self.harmonia.frame = self.tocaTreco.frame;
         [self.listaLiberaFala addObject:self.estadoAux1];
         
         [theTimer invalidate];
-        [self acaoColisaoModoMeloHarmoPoli];
+        [self acaoColisaoHarmonia];
     }
     
 }
 
-- (void)acaoColisaoModoMeloHarmoPoli{
+- (void)acaoColisaoHarmonia{
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"happibirthdayClassico" withExtension:@"mp3"];
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
     
     [[self audioPlayer]play];
-    self.lblSaidaTocaTreco.text = @"MELODIA, HARMONIA E POLI";
+    self.lblSaidaTocaTreco.text = @"Harmonia";
 }
 
 

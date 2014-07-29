@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Mod1Aula3Exe3ViewController">
             <connections>
+                <outlet property="alternativaCorreta" destination="AEg-hF-VJ3" id="d2x-e8-67A"/>
                 <outlet property="imagemDoMascote" destination="PpM-4A-dgE" id="OeS-th-23R"/>
                 <outlet property="imgNota1" destination="det-0k-WIO" id="qoj-9G-h56"/>
                 <outlet property="imgNota2" destination="3mt-Ww-QbX" id="vaz-Oa-RfZ"/>
@@ -13,6 +14,7 @@
                 <outlet property="imgNota4" destination="0s8-Mg-1b9" id="3fo-fn-Qwf"/>
                 <outlet property="imgNota5" destination="uph-XY-k2a" id="VWm-DR-5ye"/>
                 <outlet property="lblFalaDoMascote" destination="72k-5q-jAW" id="DkA-G0-l4d"/>
+                <outlet property="notasDeMelodia" destination="Dx0-aP-lVy" id="IXn-k0-eqL"/>
                 <outlet property="outFlauta" destination="Tr7-qV-rdk" id="9LW-B8-4HQ"/>
                 <outlet property="outPiano" destination="AJz-Hd-8ZK" id="IcS-Qt-1xF"/>
                 <outlet property="outTocaTreco1" destination="aOL-FJ-JgB" id="Dta-gx-pMO"/>
@@ -38,6 +40,10 @@
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="PpM-4A-dgE">
                     <rect key="frame" x="824" y="568" width="200" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vitrola.png" translatesAutoresizingMaskIntoConstraints="NO" id="JWp-uu-cJj">
+                    <rect key="frame" x="526" y="178" width="337" height="289"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YcL-ID-iBw">
@@ -74,6 +80,10 @@
                         </imageView>
                         <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="siBloco.png" translatesAutoresizingMaskIntoConstraints="NO" id="uph-XY-k2a">
                             <rect key="frame" x="197" y="300" width="46" height="43"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="contornoAlternativaCorreta.png" translatesAutoresizingMaskIntoConstraints="NO" id="AEg-hF-VJ3">
+                            <rect key="frame" x="253" y="80" width="274" height="273"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJz-Hd-8ZK">
@@ -121,12 +131,12 @@
                     <rect key="frame" x="871" y="553" width="119" height="229"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </view>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vitrola.png" translatesAutoresizingMaskIntoConstraints="NO" id="JWp-uu-cJj">
-                    <rect key="frame" x="554" y="208" width="337" height="289"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
                 <imageView userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backFalaDoMascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="6ZI-K7-jTI">
                     <rect key="frame" x="132" y="553" width="731" height="195"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notasDeMelodia.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dx0-aP-lVy">
+                    <rect key="frame" x="145" y="202" width="463" height="127"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
@@ -137,10 +147,12 @@
     </objects>
     <resources>
         <image name="backFalaDoMascote.png" width="947" height="374"/>
+        <image name="contornoAlternativaCorreta.png" width="725" height="725"/>
         <image name="doBloco.png" width="120" height="120"/>
         <image name="faBloco.png" width="120" height="120"/>
         <image name="flauta.png" width="436" height="445"/>
         <image name="mascote.png" width="1000" height="1000"/>
+        <image name="notasDeMelodia.png" width="1117" height="287"/>
         <image name="novoTocaTreco.png" width="1784" height="916"/>
         <image name="pausaBloco.png" width="123" height="120"/>
         <image name="piano.png" width="555" height="473"/>

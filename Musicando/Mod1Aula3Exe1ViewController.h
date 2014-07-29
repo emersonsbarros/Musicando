@@ -45,6 +45,7 @@
 - (IBAction)intrumentos:(id)sender;
 - (IBAction)coral:(id)sender;
 - (IBAction)notasPausas:(id)sender;
+@property (strong, nonatomic) IBOutlet UIImageView *alternativaCorreta;
 
 @property (strong, nonatomic) IBOutlet UIImageView *imgSilencio;
 @property (strong, nonatomic) IBOutlet UIImageView *imgSom;
