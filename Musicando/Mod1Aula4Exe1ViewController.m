@@ -119,6 +119,12 @@
             case 5:
                 [self chamaMetodosFala5];
                 break;
+            case 6:
+                [self chamaMetodosFala6];
+                break;
+            case 7:
+                [self chamaMetodosFala7];
+                break;
                 
             default:
                 break;
@@ -133,34 +139,41 @@
 }
 
 
-//Explica Harmonia
+//Intro
 -(void)chamaMetodosFala0 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//Diferença entre Melodia
+//Explicação
 -(void)chamaMetodosFala1 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//TocaTreco e notas
+//Complemento
 -(void)chamaMetodosFala2 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+ 
+}
+
+//TocaTreco
+-(void)chamaMetodosFala3 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
-     //Verifica se as imagens colidiram e add em uma lista que verificará se todas tiveram colisao
-     [NSTimer scheduledTimerWithTimeInterval: 0.5
-                                      target: self
-                                    selector: @selector(checkColisaoRitmo:)
-                                    userInfo: nil
-                                     repeats: YES];
-     
-     [NSTimer scheduledTimerWithTimeInterval: 0.5
-                                      target: self
-                                    selector: @selector(checkColisaoMelodia:)
-                                    userInfo: nil
-                                     repeats: YES];
+    //Verifica se as imagens colidiram e add em uma lista que verificará se todas tiveram colisao
+    [NSTimer scheduledTimerWithTimeInterval: 0.5
+                                     target: self
+                                   selector: @selector(checkColisaoRitmo:)
+                                   userInfo: nil
+                                    repeats: YES];
+    
+    [NSTimer scheduledTimerWithTimeInterval: 0.5
+                                     target: self
+                                   selector: @selector(checkColisaoMelodia:)
+                                   userInfo: nil
+                                    repeats: YES];
     
     [NSTimer scheduledTimerWithTimeInterval: 0.5
                                      target: self
@@ -180,10 +193,11 @@
     [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote :self.viewGesturePassaFala:self.listaLiberaFala: 3];
 }
 
--(void)chamaMetodosFala3 {
+//Complemento
+-(void)chamaMetodosFala4 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    
-    
+
+    self.audioPlayer.stop;
     self.tocaTreco.hidden = YES;
     self.melodia.hidden = YES;
     self.ritmo.hidden = YES;
@@ -191,13 +205,13 @@
     self.telao.hidden = YES;
     self.lblSaidaTocaTreco.hidden = YES;
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//TocaTreco e Instrumentos
--(void)chamaMetodosFala4 {
+//Animacao pilares
+-(void)chamaMetodosFala5 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-
+    
     self.teto.hidden = NO;
     self.pilar1.hidden = NO;
     self.pilar2.hidden = NO;
@@ -208,25 +222,25 @@
                         options:  UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve
                      animations:^{
                          self.pilar1.frame = CGRectMake(self.pilar1.frame.origin.x,
-                                                      self.pilar1.frame.origin.y+200,
-                                                      self.pilar1.frame.size.width,
-                                                      self.pilar1.frame.size.height);
+                                                        self.pilar1.frame.origin.y+200,
+                                                        self.pilar1.frame.size.width,
+                                                        self.pilar1.frame.size.height);
                          
                          self.pilar2.frame = CGRectMake(self.pilar2.frame.origin.x,
-                                                   self.pilar2.frame.origin.y+200,
-                                                   self.pilar2.frame.size.width,
-                                                   self.pilar2.frame.size.height);
+                                                        self.pilar2.frame.origin.y+200,
+                                                        self.pilar2.frame.size.width,
+                                                        self.pilar2.frame.size.height);
                          
                          self.pilar3.frame = CGRectMake(self.pilar3.frame.origin.x,
-                                                   self.pilar3.frame.origin.y+200,
-                                                   self.pilar3.frame.size.width,
-                                                   self.pilar3.frame.size.height);
+                                                        self.pilar3.frame.origin.y+200,
+                                                        self.pilar3.frame.size.width,
+                                                        self.pilar3.frame.size.height);
                          
                          self.teto.frame = CGRectMake(self.teto.frame.origin.x,
-                                                        self.teto.frame.origin.y+200,
-                                                        self.teto.frame.size.width,
-                                                        self.teto.frame.size.height);
-
+                                                      self.teto.frame.origin.y+200,
+                                                      self.teto.frame.size.width,
+                                                      self.teto.frame.size.height);
+                         
                      }
                      completion:^(BOOL finished){
                          
@@ -235,7 +249,8 @@
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
--(void)chamaMetodosFala5 {
+//Complemento
+-(void)chamaMetodosFala6 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     self.teto.hidden = YES;
@@ -243,7 +258,13 @@
     self.pilar2.hidden = YES;
     self.pilar3.hidden = YES;
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Fala final
+-(void)chamaMetodosFala7 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 

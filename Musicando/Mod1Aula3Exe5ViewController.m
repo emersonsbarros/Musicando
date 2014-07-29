@@ -118,6 +118,15 @@
             case 5:
                 [self chamaMetodosFala5];
                 break;
+            case 6:
+                [self chamaMetodosFala6];
+                break;
+            case 7:
+                [self chamaMetodosFala7];
+                break;
+            case 8:
+                [self chamaMetodosFala8];
+                break;
                 
             default:
                 break;
@@ -131,20 +140,26 @@
     }
 }
 
-//Explica Harmonia
+//Intro Harmonia
 -(void)chamaMetodosFala0 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//Diferença entre Melodia
+//Definicao
 -(void)chamaMetodosFala1 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//TocaTreco e notas
+//Complemento
 -(void)chamaMetodosFala2 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:2.0f:self.viewGesturePassaFala];
+}
+
+//Tocatreco com harmonia e melodia
+-(void)chamaMetodosFala3 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Verifica se as imagens colidiram e add em uma lista que verificará se todas tiveram colisao
@@ -170,17 +185,25 @@
     [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote :self.viewGesturePassaFala:self.listaLiberaFala:2];
 }
 
--(void)chamaMetodosFala3 {
+//Complemento
+-(void)chamaMetodosFala4 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
+    self.audioPlayer.stop;
     self.harmonia.hidden = YES;
     self.melodia.hidden = YES;
     
+    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Complemento
+-(void)chamaMetodosFala5 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//TocaTreco e Instrumentos
--(void)chamaMetodosFala4 {
+//TocaTreco e instrumentos
+-(void)chamaMetodosFala6 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Verifica se as imagens colidiram e add em uma lista que verificará se todas tiveram colisao
@@ -206,14 +229,22 @@
     [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote :self.viewGesturePassaFala:self.listaLiberaFala:2];
 }
 
--(void)chamaMetodosFala5 {
+//Complemento
+-(void)chamaMetodosFala7 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
+    self.audioPlayer.stop;
     self.tocaTreco.hidden = YES;
     self.piano.hidden = YES;
     self.teclado.hidden = YES;
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:3.0f:self.viewGesturePassaFala];
+}
+
+//Fala final
+-(void)chamaMetodosFala8 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 
