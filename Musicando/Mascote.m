@@ -11,29 +11,19 @@
 @implementation Mascote
 
 
-//Singleton
-+(Mascote*)sharedManager{
-    static Mascote *mascote = nil;
-    if(!mascote){
-        mascote = [[super allocWithZone:nil]init];
-    }
-    return mascote;
-}
-
-
 -(id)init{
     self = [super init];
     if(self){
         self.listaDeConversas = [[NSMutableArray alloc]init];
-        
+        self.imagem = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"mascote.png"]];
+        self.nome = @"Meu mascote";
     }
     return self;
 }
 
 
-+(id)allocWithZone:(struct _NSZone *)zone{
-    return [self sharedManager];
-}
+
+
 
 
 @end

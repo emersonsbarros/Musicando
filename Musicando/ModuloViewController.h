@@ -9,12 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "Biblioteca.h"
 #import "Modulo.h"
+#import <QuartzCore/QuartzCore.h>
+#import "AulasViewController.h"
+
 
 @interface ModuloViewController : UIViewController
 
 //Biblioteca
 @property Biblioteca *bibliotecaDosModulos;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imgFundo;
 
 -(void)chamaStoryBoardAulas:(id)sender;
 

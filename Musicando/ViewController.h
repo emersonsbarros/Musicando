@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import "EfeitoImagem.h"
+#import "EfeitoMascote.h"
+#import <QuartzCore/QuartzCore.h>
+
 
 @interface ViewController : UIViewController
+
+
+
+@property NSMutableArray *listaImagensCai;
 
 @end

@@ -12,6 +12,7 @@
 @interface Conversa : NSObject
 
 @property int idView;
+@property NSString *nomeDaView;
 @property NSMutableArray *listaDeFalas;
 
 @end

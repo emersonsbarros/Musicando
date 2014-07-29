@@ -18,7 +18,8 @@
 
 @property Biblioteca *bibliotecaDosModulos;
 @property Aula *aulaAtual;
-@property (weak, nonatomic) IBOutlet UIView *viewExercicios;
+@property (strong, nonatomic) IBOutlet UIView *viewExercicios;
+
 @property CGRect posOriginalAula;
 
 @end

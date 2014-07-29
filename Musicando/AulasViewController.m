@@ -14,32 +14,18 @@
 
 @implementation AulasViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
     }
     return self;
 }
 
--(void)chamaExercicios:(id)sender{
-    Aula *button = sender;
-    self.aulaAtual = button;
-  
-    [UIView animateWithDuration:2.0
-                     animations:^(void){
-                         self.posOriginalAula = button.frame;
-                         CGRect move = CGRectMake(470, 70, 100, 150);
-                         self.aulaAtual.frame = move;
-                     } completion:^(BOOL finished){
-                         self.viewExercicios.hidden = NO;
-                         [self carregaExercicios];
-                         [self efeitoDescer];
-                     }];
-
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
+//Animação da view de exercícios
 -(void)efeitoDescer{
     
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected)];
@@ -51,20 +37,26 @@
 
 -(void)tapDetected{
     
-    [UIView animateWithDuration:2.0
+    [UIView animateWithDuration:1.0
                      animations:^(void){
                          self.aulaAtual.frame = self.posOriginalAula;
                          self.viewExercicios.hidden = YES;
+                         
                      } completion:^(BOOL finished){
-                       
+                         for(Aula *aulas in [Biblioteca sharedManager].moduloAtual.listaDeAulas){
+                             aulas.hidden = NO;
+                         }
                      }];
 }
 
 
 -(void)chamaStoryBoardExercicio:(id)sender{
+    
     Exercicio *button = sender;
     id object = [[NSClassFromString([button nomeView]) alloc]initWithNibName:[button nomeView] bundle:nil];
     
+    [Biblioteca sharedManager].exercicioAtual = button;
+
     CATransition* transition = [CATransition animation];
     transition.duration = 0.5;
     transition.type = kCATransitionFade;
@@ -77,50 +69,25 @@
 
 ////////////////////////// Metodos Carrega Exercicios e aulas ///////////////////////////
 
--(void)carregaExercicios{
-    
-    int contadorDistanciaEntreBotoes = 80;
-    
-    for(Exercicio *exerc in self.aulaAtual.listaDeExercicios){
-        
-        [exerc addTarget:self
-                 action:@selector(chamaStoryBoardExercicio:)
-        forControlEvents:UIControlEventTouchUpInside];
-        
-        [exerc setTitle:@"" forState:UIControlStateNormal];
-        exerc.frame = CGRectMake(contadorDistanciaEntreBotoes, 20.0, 100, 100);
-         [exerc setBackgroundImage:[exerc capa] forState:UIControlStateNormal];
-        
-        exerc.descricaoBotao =  [[UILabel alloc] initWithFrame: CGRectMake(-45,60,200,100)];
-        exerc.descricaoBotao.text = [exerc nome];
-        exerc.descricaoBotao.textAlignment = NSTextAlignmentCenter;
-        [exerc addSubview:exerc.descricaoBotao];
-
-        [[self viewExercicios] addSubview:exerc];
-        
-        contadorDistanciaEntreBotoes += 200;
-        
-    }
-}
-
+//Cria os botões das aulas e adiciona-os na view
 -(void)carregaAulas{
     
     int contadorDistanciaEntreBotoes = 80;
     
     for(Aula *aula in [Biblioteca sharedManager].moduloAtual.listaDeAulas){
         
-        [aula addTarget:self
-                 action:@selector(chamaExercicios:)
-                forControlEvents:UIControlEventTouchUpInside];
+        aula.layer.zPosition = +5;
+        //Quando a aula recebe o toque são mostrados seus exercícios
+        [aula addTarget:self action:@selector(chamaExercicios:) forControlEvents:UIControlEventTouchUpInside];
         
         aula.frame = CGRectMake(contadorDistanciaEntreBotoes, 100, 100, 150);
         [aula setBackgroundImage:[aula capa] forState:UIControlStateNormal];
         
         aula.descricaoBotao =  [[UILabel alloc] initWithFrame: CGRectMake(-45,110,200,100)];
         aula.descricaoBotao.text = [aula nome];
+        aula.descricaoBotao.font = [UIFont fontWithName:@"Papyrus" size:20];
         aula.descricaoBotao.textAlignment = NSTextAlignmentCenter;
         [aula addSubview:aula.descricaoBotao];
-        aula.layer.zPosition = -10;
         
         [[self view] addSubview:aula];
         
@@ -130,27 +97,90 @@
 
 }
 
+
+//Animação e mostra a view dos exercícios
+-(void)chamaExercicios:(id)sender{
+    Aula *button = sender;
+    self.aulaAtual = button;
+    [Biblioteca sharedManager].aulaAtual = button;
+    
+    for(Aula *aulas in [Biblioteca sharedManager].moduloAtual.listaDeAulas){
+        if([aulas.nome isEqualToString:self.aulaAtual.nome]){
+            
+        }else{
+            aulas.hidden = YES;
+        }
+    }
+    
+    [UIView animateWithDuration:1.0
+                     animations:^(void){
+                         self.posOriginalAula = button.frame;
+                         CGRect move = CGRectMake(470, 70, 100, 150);
+                         self.aulaAtual.frame = move;
+                     } completion:^(BOOL finished){
+                         self.viewExercicios.hidden = NO;
+                         
+                         //Chama o método para carregar os botões dos exercícios
+                         [self carregaExercicios];
+                         [self efeitoDescer];
+                     }];
+    
+}
+
+//Cria os botões dos exercícios e adiciona-os na view
+-(void)carregaExercicios{
+    
+    for (UIView *subView in self.viewExercicios.subviews){
+        [subView removeFromSuperview];
+    }
+    
+    int contadorDistanciaEntreBotoes = 80;
+    
+    for(Exercicio *exerc in [[[Biblioteca sharedManager] aulaAtual] listaDeExercicios]){
+        exerc.layer.zPosition = +5;
+        //Quando a aula recebe o toque será chamado seu storyboard
+        [exerc addTarget:self action:@selector(chamaStoryBoardExercicio:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [exerc setTitle:@"" forState:UIControlStateNormal];
+        exerc.frame = CGRectMake(contadorDistanciaEntreBotoes, 20.0, 100, 100);
+        [exerc setBackgroundImage:[exerc capa] forState:UIControlStateNormal];
+        
+        exerc.descricaoBotao =  [[UILabel alloc] initWithFrame: CGRectMake(-45,60,200,100)];
+        exerc.descricaoBotao.text = [exerc nome];
+        exerc.descricaoBotao.font = [UIFont fontWithName:@"Papyrus" size:20];
+        exerc.descricaoBotao.textAlignment = NSTextAlignmentCenter;
+        [exerc addSubview:exerc.descricaoBotao];
+        
+        [[self viewExercicios] addSubview: exerc];
+        
+        contadorDistanciaEntreBotoes += 200;
+        
+    }
+}
+
+
 /////////////////////////////////////////////////////////////////////////////////////////
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
+- (void)viewDidLoad{
     
+    [super viewDidLoad];
     [self carregaAulas];
 
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
     
-    [super viewDidDisappear:animated];
+    [super viewDidDisappear: animated];
+    
     [self bibliotecaDosModulos].moduloAtual = NULL;
+    [Biblioteca sharedManager].moduloAtual = NULL;
     
     [self.viewExercicios.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
     [self.view.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
 }
 
-- (void)didReceiveMemoryWarning
-{
+
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

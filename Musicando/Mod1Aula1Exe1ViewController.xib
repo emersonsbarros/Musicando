@@ -6,7 +6,36 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Mod1Aula1Exe1ViewController">
             <connections>
+                <outlet property="imagemDoMascote2" destination="IIA-0n-JtT" id="of6-a1-uOc"/>
+                <outlet property="imgAnimacaoCapoeira" destination="Iex-vv-Lj6" id="giK-P3-Yel"/>
+                <outlet property="imgAnimacaoCarnaval" destination="sf8-xb-GIh" id="KCX-LR-guU"/>
+                <outlet property="imgAnimacaoIndio" destination="Rur-WY-jCi" id="vmH-lA-Cc7"/>
+                <outlet property="imgBen1" destination="V2K-vb-h1g" id="AwS-2w-P4M"/>
+                <outlet property="imgBen2" destination="4On-l9-QmK" id="VsJ-ui-5SX"/>
+                <outlet property="imgBen3" destination="ZFI-MI-4uK" id="iFt-GB-yFC"/>
+                <outlet property="imgCapoeiraMusica" destination="HcU-pA-8B4" id="MvS-Ov-w4T"/>
+                <outlet property="imgCarnaval" destination="neP-ug-Gqj" id="nSZ-uf-quV"/>
+                <outlet property="imgCarroGrande" destination="D8J-KK-EMz" id="uXu-Cd-q5R"/>
+                <outlet property="imgFitaCarro" destination="grj-8A-2Rf" id="ION-vc-6OP"/>
+                <outlet property="imgFitaFuracao" destination="kk5-Ga-GqD" id="bZN-BO-H4p"/>
+                <outlet property="imgFitaGalo" destination="2Id-fM-wuG" id="0To-dq-7Hb"/>
+                <outlet property="imgGaloGrande" destination="ood-eM-K8o" id="BFH-o5-aTf"/>
+                <outlet property="imgGaloMao" destination="kiO-gf-bWy" id="11B-h4-H2h"/>
+                <outlet property="imgIndioMusica" destination="Mta-yl-FhM" id="2My-jy-hNQ"/>
+                <outlet property="imgMaoTocaTreco" destination="5GF-EF-sjt" id="cVA-T7-u55"/>
+                <outlet property="imgMaoTouch" destination="X0B-cV-0oK" id="Ot6-tN-qMD"/>
+                <outlet property="imgMascoteIntro" destination="B6J-TP-QgU" id="Nu1-7E-duM"/>
+                <outlet property="imgObjetoMusica1" destination="h5c-8C-Yz9" id="tmS-TO-cem"/>
+                <outlet property="imgObjetoMusica2" destination="9y3-YD-rhy" id="0qp-4J-XaM"/>
+                <outlet property="imgObjetoMusica3" destination="iVr-8O-c0J" id="Wvm-xf-WpK"/>
+                <outlet property="imgPipaGrande" destination="Vl0-NB-fqt" id="COj-Cl-ReQ"/>
+                <outlet property="imgTocaTreco" destination="9l5-36-ag6" id="fZ3-2l-t46"/>
+                <outlet property="lblFalaDoMascote" destination="0vx-5K-MzF" id="Jkh-KS-Gla"/>
+                <outlet property="outAlavancaTocaTreco" destination="1wH-j5-URZ" id="ZMV-fc-jSB"/>
+                <outlet property="outBtnComecar" destination="5cB-NT-e8B" id="k3J-x4-PRA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewGesturePassaFala" destination="F6H-tr-YnU" id="LNZ-z1-RYe"/>
+                <outlet property="viewInicialGesture" destination="dBz-Rs-4GG" id="LHj-xu-Acg"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -14,17 +43,185 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RJ.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="thH-Yn-gA0">
-                    <rect key="frame" x="-1" y="0.0" width="1024" height="768"/>
+                <imageView userInteractionEnabled="NO" alpha="0.34999999999999964" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RJ.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="thH-Yn-gA0">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="333" translatesAutoresizingMaskIntoConstraints="NO" id="0vx-5K-MzF">
+                    <rect key="frame" x="570" y="524" width="333" height="224"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IIA-0n-JtT">
+                    <rect key="frame" x="839" y="516" width="243" height="296"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tocaTreco.png" translatesAutoresizingMaskIntoConstraints="NO" id="9l5-36-ag6">
+                    <rect key="frame" x="20" y="492" width="491" height="256"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="galo.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Id-fM-wuG">
+                    <rect key="frame" x="285" y="344" width="84" height="81"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="carro.png" translatesAutoresizingMaskIntoConstraints="NO" id="grj-8A-2Rf">
+                    <rect key="frame" x="406" y="344" width="105" height="81"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="furacao.png" translatesAutoresizingMaskIntoConstraints="NO" id="kk5-Ga-GqD">
+                    <rect key="frame" x="549" y="344" width="80" height="81"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ventoPipa.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vl0-NB-fqt">
+                    <rect key="frame" x="-91" y="92" width="128" height="221"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="galo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ood-eM-K8o">
+                    <rect key="frame" x="-122" y="84" width="153" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="carro.png" translatesAutoresizingMaskIntoConstraints="NO" id="D8J-KK-EMz">
+                    <rect key="frame" x="-247" y="83" width="269" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F6H-tr-YnU">
+                    <rect key="frame" x="899" y="531" width="119" height="229"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dBz-Rs-4GG">
+                    <rect key="frame" x="149" y="145" width="742" height="502"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tela.png" translatesAutoresizingMaskIntoConstraints="NO" id="6eg-5Z-EF2">
+                            <rect key="frame" x="-8" y="-11" width="750" height="513"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cB-NT-e8B">
+                            <rect key="frame" x="322" y="406" width="141" height="67"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                            <state key="normal" title="Entendi">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnComecar:" destination="-1" eventType="touchUpInside" id="hdz-pp-nhY"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" alpha="0.5499999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gesturePassaFalaMascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="X0B-cV-0oK">
+                            <rect key="frame" x="142" y="180" width="145" height="244"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="B6J-TP-QgU">
+                            <rect key="frame" x="428" y="-11" width="275" height="350"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5499999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Há momentos que nosso mascote quer falar mais coisas, para isso basta tocar com o dedo quando ele estiver brilhando" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="374" translatesAutoresizingMaskIntoConstraints="NO" id="vRv-D0-l0z">
+                            <rect key="frame" x="16" y="8" width="374" height="154"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wH-j5-URZ">
+                    <rect key="frame" x="266" y="616" width="40" height="96"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="alavanca.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnAlavancaTocaTreco:" destination="-1" eventType="touchUpInside" id="CEo-A8-Uys"/>
+                    </connections>
+                </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cristalTimbre.png" translatesAutoresizingMaskIntoConstraints="NO" id="h5c-8C-Yz9">
+                    <rect key="frame" x="122" y="110" width="159" height="169"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="panelaMusica.png" translatesAutoresizingMaskIntoConstraints="NO" id="9y3-YD-rhy">
+                    <rect key="frame" x="361" y="110" width="159" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="palmas.png" translatesAutoresizingMaskIntoConstraints="NO" id="iVr-8O-c0J">
+                    <rect key="frame" x="630" y="93" width="159" height="142"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="galo.png" highlightedImage="4-2Pausa.png" translatesAutoresizingMaskIntoConstraints="NO" id="kiO-gf-bWy">
+                    <rect key="frame" x="62" y="234" width="118" height="113"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gesturePassaFalaMascoteTap.png" translatesAutoresizingMaskIntoConstraints="NO" id="5GF-EF-sjt">
+                    <rect key="frame" x="83" y="279" width="145" height="244"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="saudeMusica.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZFI-MI-4uK">
+                    <rect key="frame" x="-239" y="423" width="245" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lazerMusica.png" translatesAutoresizingMaskIntoConstraints="NO" id="4On-l9-QmK">
+                    <rect key="frame" x="-228" y="249" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aprendizadoMusica.png" translatesAutoresizingMaskIntoConstraints="NO" id="V2K-vb-h1g">
+                    <rect key="frame" x="-228" y="93" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tocaIndio.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mta-yl-FhM">
+                    <rect key="frame" x="-234" y="497" width="250" height="204"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="animaIndio1.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Rur-WY-jCi">
+                    <rect key="frame" x="-157" y="566" width="154" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="carnavalFesta.png" translatesAutoresizingMaskIntoConstraints="NO" id="neP-ug-Gqj">
+                    <rect key="frame" x="-220" y="305" width="264" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="carnavalframe1.gif" translatesAutoresizingMaskIntoConstraints="NO" id="sf8-xb-GIh">
+                    <rect key="frame" x="-220" y="279" width="216" height="175"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Capoeiraframe1.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Iex-vv-Lj6">
+                    <rect key="frame" x="-317" y="83" width="314" height="182"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CapoeiraJog.png" translatesAutoresizingMaskIntoConstraints="NO" id="HcU-pA-8B4">
+                    <rect key="frame" x="-140" y="93" width="162" height="138"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
         </view>
     </objects>
     <resources>
+        <image name="4-2Pausa.png" width="28" height="14"/>
+        <image name="CapoeiraJog.png" width="100" height="55"/>
+        <image name="Capoeiraframe1.gif" width="288" height="217"/>
         <image name="RJ.jpg" width="652" height="408"/>
+        <image name="alavanca.png" width="48" height="196"/>
+        <image name="animaIndio1.gif" width="106" height="190"/>
+        <image name="aprendizadoMusica.png" width="144" height="150"/>
+        <image name="carnavalFesta.png" width="147" height="150"/>
+        <image name="carnavalframe1.gif" width="274" height="291"/>
+        <image name="carro.png" width="640" height="320"/>
+        <image name="cristalTimbre.png" width="90" height="150"/>
+        <image name="furacao.png" width="113" height="150"/>
+        <image name="galo.png" width="135" height="150"/>
+        <image name="gesturePassaFalaMascote.png" width="320" height="640"/>
+        <image name="gesturePassaFalaMascoteTap.png" width="320" height="640"/>
+        <image name="lazerMusica.png" width="110" height="150"/>
+        <image name="mascote.png" width="1000" height="1000"/>
+        <image name="palmas.png" width="150" height="146"/>
+        <image name="panelaMusica.png" width="150" height="86"/>
+        <image name="saudeMusica.png" width="150" height="145"/>
+        <image name="tela.png" width="1024" height="680"/>
+        <image name="tocaIndio.png" width="474" height="640"/>
+        <image name="tocaTreco.png" width="786" height="495"/>
+        <image name="ventoPipa.png" width="320" height="640"/>
     </resources>
 </document>

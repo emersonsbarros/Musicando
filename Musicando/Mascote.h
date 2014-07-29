@@ -12,9 +12,9 @@
 
 //Atributos
 @property NSString *nome;
+@property UIImageView *imagem;
 @property NSMutableArray *listaDeConversas;
 
-//Métodos
-+(Mascote*)sharedManager;
+
 
 @end
