@@ -448,7 +448,7 @@
     [[mod1Aula3Exe4conversa1 listaDeFalas] addObject: mod1Aula3Exe4fala8];
     [[mod1Aula3Exe4conversa1 listaDeFalas] addObject: mod1Aula3Exe4fala9];
     [[mod1Aula3Exe4conversa1 listaDeFalas] addObject: mod1Aula3Exe4fala10];
-    [[[mod1Aula3Exe4 mascote] listaDeConversas] addObject:mod1Aula3Exe4conversa1];
+    [[[mod1Aula3Exe4 mascote] listaDeConversas] addObject: mod1Aula3Exe4conversa1];
  
 //POLIFONIA
     Exercicio *mod1Aula3Exe5 = [[Exercicio alloc] init:102 nome:@"Polifonia" nomeView:@"Mod1Aula3Exe5ViewController" experiencia:10 pontuacaoMaxima:10 :[UIImage imageNamed:@"exercicios.png"]];
@@ -603,7 +603,26 @@
     
 //Exercicios
     Exercicio *mod2Aula2Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução às Pausas" nomeView:@"Mod2Aula2Exe1ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
-    Exercicio *mod2Aula2Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando Pausas" nomeView:@"Mod2Aula2Exe12ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+//PRATICANDO AS PAUSAS
+    Exercicio *mod2Aula2Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando Pausas" nomeView:@"Mod2Aula2Exe2ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+    //Falas
+    Fala *mod2Aula2Exe2fala1 = [[Fala alloc] init];
+    mod2Aula2Exe2fala1.conteudo = @"FALA1";
+    
+    Fala *mod2Aula2Exe2fala2 = [[Fala alloc] init];
+    mod2Aula2Exe2fala2.conteudo = @"FALA2";
+    
+    Fala *mod2Aula2Exe2fala3 = [[Fala alloc] init];
+    mod2Aula2Exe2fala3.conteudo = @"FALA3";
+    
+    //Conversa
+    Conversa *mod2Aula2Exe2conversa1 = [[Conversa alloc] init];
+    [[mod2Aula2Exe2conversa1 listaDeFalas] addObject: mod2Aula2Exe2fala1];
+    [[mod2Aula2Exe2conversa1 listaDeFalas] addObject: mod2Aula2Exe2fala2];
+    [[mod2Aula2Exe2conversa1 listaDeFalas] addObject: mod2Aula2Exe2fala3];
+    [[[mod2Aula2Exe2 mascote] listaDeConversas] addObject: mod2Aula2Exe2conversa1];
     
 //Aula de Pausas
     Aula *mod2Aula2 = [[Aula alloc]init];
@@ -616,9 +635,69 @@
 ////////////////////////////////// Aula 3 //////////////////////////////////////
     
 //Exercicios
+    
+//INTRODUÇÃO AO PENTAGRAMA
     Exercicio *mod2Aula3Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução ao Pentagrama" nomeView:@"Mod2Aula3Exe1ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+    //Falas
+    Fala *mod2Aula3Exe1fala1 = [[Fala alloc] init];
+    mod2Aula3Exe1fala1.conteudo = @"FALA1";
+    
+    Fala *mod2Aula3Exe1fala2 = [[Fala alloc] init];
+    mod2Aula3Exe1fala2.conteudo = @"FALA2";
+    
+    Fala *mod2Aula3Exe1fala3 = [[Fala alloc] init];
+    mod2Aula3Exe1fala3.conteudo = @"FALA3";
+    
+    //Conversa
+    Conversa *mod2Aula3Exe1conversa1 = [[Conversa alloc] init];
+    [[mod2Aula3Exe1conversa1 listaDeFalas] addObject: mod2Aula3Exe1fala1];
+    [[mod2Aula3Exe1conversa1 listaDeFalas] addObject: mod2Aula3Exe1fala2];
+    [[mod2Aula3Exe1conversa1 listaDeFalas] addObject: mod2Aula3Exe1fala3];
+    [[[mod2Aula3Exe1 mascote] listaDeConversas] addObject: mod2Aula3Exe1conversa1];
+    
+
+//EXERCITANDO PENTAGRAMA
     Exercicio *mod2Aula3Exe2 = [[Exercicio alloc] init:202 nome:@"Exercitando" nomeView:@"Mod2Aula3Exe2ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+    //Falas
+    Fala *mod2Aula3Exe2fala1 = [[Fala alloc] init];
+    mod2Aula3Exe2fala1.conteudo = @"FALA1";
+    
+    Fala *mod2Aula3Exe2fala2 = [[Fala alloc] init];
+    mod2Aula3Exe2fala2.conteudo = @"FALA2";
+    
+    Fala *mod2Aula3Exe2fala3 = [[Fala alloc] init];
+    mod2Aula3Exe2fala3.conteudo = @"FALA3";
+    
+    //Conversa
+    Conversa *mod2Aula3Exe2conversa1 = [[Conversa alloc] init];
+    [[mod2Aula3Exe2conversa1 listaDeFalas] addObject: mod2Aula3Exe2fala1];
+    [[mod2Aula3Exe2conversa1 listaDeFalas] addObject: mod2Aula3Exe2fala2];
+    [[mod2Aula3Exe2conversa1 listaDeFalas] addObject: mod2Aula3Exe2fala3];
+    [[[mod2Aula3Exe2 mascote] listaDeConversas] addObject: mod2Aula3Exe2conversa1];
+    
+    
+//HISTÓRIA DO PENTAGRAMA
     Exercicio *mod2Aula3Exe3 = [[Exercicio alloc] init:202 nome:@"Pentagrama, como surgiu?" nomeView:@"Mod2Aula3Exe3ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+    //Falas
+    Fala *mod2Aula3Exe3fala1 = [[Fala alloc] init];
+    mod2Aula3Exe3fala1.conteudo = @"FALA1";
+    
+    Fala *mod2Aula3Exe3fala2 = [[Fala alloc] init];
+    mod2Aula3Exe3fala2.conteudo = @"FALA2";
+    
+    Fala *mod2Aula3Exe3fala3 = [[Fala alloc] init];
+    mod2Aula3Exe3fala3.conteudo = @"FALA3";
+    
+    //Conversa
+    Conversa *mod2Aula3Exe3conversa1 = [[Conversa alloc] init];
+    [[mod2Aula3Exe3conversa1 listaDeFalas] addObject: mod2Aula3Exe3fala1];
+    [[mod2Aula3Exe3conversa1 listaDeFalas] addObject: mod2Aula3Exe3fala2];
+    [[mod2Aula3Exe3conversa1 listaDeFalas] addObject: mod2Aula3Exe3fala3];
+    [[[mod2Aula3Exe3 mascote] listaDeConversas] addObject: mod2Aula3Exe3conversa1];
+    
     
 //Aula de Pentagrama
     Aula *mod2Aula3 = [[Aula alloc]init];
