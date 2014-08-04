@@ -27,6 +27,20 @@
 @property (strong, nonatomic) IBOutlet UIView *viewGesturePassaFala;
 @property (strong, nonatomic) IBOutlet UIImageView *imagemDoMascote;
 
+@property (strong, nonatomic) IBOutlet UIImageView *escadaDeTons;
+@property (strong, nonatomic) IBOutlet UIImageView *pentagrama;
+
+//Notas e mascote da escada
+@property (strong, nonatomic) IBOutlet UIImageView *mascote2;
+@property (strong, nonatomic) IBOutlet UIImageView *notaDo;
+@property (strong, nonatomic) IBOutlet UIImageView *notaRe;
+@property (strong, nonatomic) IBOutlet UIImageView *notaMi;
+@property (strong, nonatomic) IBOutlet UIImageView *notaFa;
+@property (strong, nonatomic) IBOutlet UIImageView *notaSol;
+@property (strong, nonatomic) IBOutlet UIImageView *notaLa;
+@property (strong, nonatomic) IBOutlet UIImageView *notaSi;
+
+
 /*===========================ATRIBUTOS=============================*/
 
 //Audio

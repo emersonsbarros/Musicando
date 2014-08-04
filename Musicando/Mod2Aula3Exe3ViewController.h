@@ -27,6 +27,12 @@
 @property (strong, nonatomic) IBOutlet UIView *viewGesturePassaFala;
 @property (strong, nonatomic) IBOutlet UIImageView *imagemDoMascote;
 
+@property (strong, nonatomic) IBOutlet UIImageView *cantoGregoriano;
+@property (strong, nonatomic) IBOutlet UIImageView *notacaoMusical;
+@property (strong, nonatomic) IBOutlet UIImageView *arezzo;
+
+
+
 /*===========================ATRIBUTOS=============================*/
 
 //Audio

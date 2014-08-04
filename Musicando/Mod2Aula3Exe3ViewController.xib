@@ -6,8 +6,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Mod2Aula3Exe3ViewController">
             <connections>
+                <outlet property="arezzo" destination="nuG-8C-PS7" id="9Ri-iw-zqg"/>
+                <outlet property="cantoGregoriano" destination="dlk-0I-Cy7" id="kb5-Sq-D2p"/>
                 <outlet property="imagemDoMascote" destination="5os-uu-hik" id="MUK-U4-PyJ"/>
                 <outlet property="lblFalaDoMascote" destination="R89-RS-Eey" id="3GX-hZ-Ymx"/>
+                <outlet property="notacaoMusical" destination="ck0-jG-8Ql" id="ePc-gn-h8d"/>
                 <outlet property="view" destination="2" id="3"/>
                 <outlet property="viewGesturePassaFala" destination="1we-sd-NTY" id="cjE-lo-rdg"/>
             </connections>
@@ -35,6 +38,18 @@
                     <rect key="frame" x="400" y="498" width="483" height="243"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cantoGregoriano.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dlk-0I-Cy7">
+                    <rect key="frame" x="531" y="-128" width="305" height="324"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notacaoMusical.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ck0-jG-8Ql">
+                    <rect key="frame" x="-82" y="250" width="305" height="225"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GuidodArezzo.png" translatesAutoresizingMaskIntoConstraints="NO" id="nuG-8C-PS7">
+                    <rect key="frame" x="48" y="-175" width="368" height="394"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -42,6 +57,9 @@
         </view>
     </objects>
     <resources>
+        <image name="GuidodArezzo.png" width="1000" height="1292"/>
         <image name="backFalaDoMascote.png" width="947" height="374"/>
+        <image name="cantoGregoriano.jpg" width="500" height="587"/>
+        <image name="notacaoMusical.jpg" width="300" height="224"/>
     </resources>
 </document>

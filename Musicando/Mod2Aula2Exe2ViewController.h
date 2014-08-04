@@ -27,6 +27,15 @@
 @property (strong, nonatomic) IBOutlet UIView *viewGesturePassaFala;
 @property (strong, nonatomic) IBOutlet UIImageView *imagemDoMascote;
 
+@property (strong, nonatomic) IBOutlet UIImageView *tocaTreco;
+
+@property (strong, nonatomic) IBOutlet UIImageView *imgPausa1;
+@property (strong, nonatomic) IBOutlet UIImageView *imgPausa2;
+@property (strong, nonatomic) IBOutlet UIImageView *imgPausa3;
+
+@property (strong, nonatomic) IBOutlet UIImageView *pedindoSilencio;
+
+
 /*===========================ATRIBUTOS=============================*/
 
 //Audio

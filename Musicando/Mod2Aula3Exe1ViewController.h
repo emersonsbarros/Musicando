@@ -28,6 +28,23 @@
 @property (strong, nonatomic) IBOutlet UIView *viewGesturePassaFala;
 @property (strong, nonatomic) IBOutlet UIImageView *imagemDoMascote;
 
+@property (strong, nonatomic) IBOutlet UIImageView *tocaTreco;
+@property (strong, nonatomic) IBOutlet UIImageView *notaSol;
+@property (strong, nonatomic) IBOutlet UIImageView *notaDo;
+
+
+//Pentagramas
+@property (strong, nonatomic) IBOutlet UIImageView *pentagrama;
+@property (strong, nonatomic) IBOutlet UIImageView *pentagramaCompleto;
+@property (strong, nonatomic) IBOutlet UIImageView *pentagramaParaLinhasComplementares;
+@property (strong, nonatomic) IBOutlet UIImageView *linhasSuplementares;
+
+
+//Setas
+@property (strong, nonatomic) IBOutlet UIImageView *seta1;
+@property (strong, nonatomic) IBOutlet UIImageView *seta2;
+@property (strong, nonatomic) IBOutlet UIImageView *seta3;
+
 /*===========================ATRIBUTOS=============================*/
 
 //Audio

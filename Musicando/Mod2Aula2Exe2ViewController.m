@@ -44,9 +44,9 @@
     self.listaImangesColisao = [[NSMutableArray alloc]init];
     
     //Adiciona imagens para colisao
-    //[self.listaImangesColisao addObject: self.melodia];
-    //[self.listaImangesColisao addObject: self.ritmo];
-    //[self.listaImangesColisao addObject: self.harmonia];
+    [self.listaImangesColisao addObject: self.imgPausa1];
+    [self.listaImangesColisao addObject: self.imgPausa2];
+    [self.listaImangesColisao addObject: self.imgPausa3];
     
     //Adiciona gesture ARRASTAR em todas imagens dessa lista
     [[EfeitoImagem sharedManager]addGesturePainImagens: self.listaImangesColisao];
@@ -111,6 +111,12 @@
             case 3:
                 [self chamaMetodosFala3];
                 break;
+            case 4:
+                [self chamaMetodosFala4];
+                break;
+            case 5:
+                [self chamaMetodosFala5];
+                break;
                 
             default:
                 break;
@@ -130,22 +136,154 @@
     [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//Explicação
+//Mostra ambiente
 -(void)chamaMetodosFala1 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    //Mostra troca treco + fumaça pra sensação de estar quebrado
+    self.tocaTreco.hidden = NO;
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"instrumentos" withExtension:@"mp3"];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    
+    [[self audioPlayer]play];
+    
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//Complemento
+//Explica tarefa
 -(void)chamaMetodosFala2 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    
+    //Verifica se as imagens colidiram e add em uma lista que verificará se todas tiveram colisao
+    [NSTimer scheduledTimerWithTimeInterval: 0.5
+                                     target: self
+                                   selector: @selector(checkColisaoPausa1:)
+                                   userInfo: nil
+                                    repeats: YES];
+    
+    [NSTimer scheduledTimerWithTimeInterval: 0.5
+                                     target: self
+                                   selector: @selector(checkColisaoPausa2:)
+                                   userInfo: nil
+                                    repeats: YES];
+    
+    [NSTimer scheduledTimerWithTimeInterval: 0.5
+                                     target: self
+                                   selector: @selector(checkColisaoPausa3:)
+                                   userInfo: nil
+                                    repeats: YES];
+    
+    //Habilita interação e mostra views
+    self.tocaTreco.userInteractionEnabled = YES;
+    self.imgPausa1.hidden = NO;
+    self.imgPausa2.hidden = NO;
+    self.imgPausa3.hidden = NO;
+    self.pedindoSilencio.hidden = NO;
+
+    
+    [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote :self.viewGesturePassaFala:self.listaLiberaFala: 3];
+}
+
+//Fala sobre a realização
+-(void)chamaMetodosFala3 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    [[self audioPlayer] stop];
+    
+    //Esconde
+    self.imgPausa1.hidden = YES;
+    self.imgPausa2.hidden = YES;
+    self.imgPausa3.hidden = YES;
+    self.pedindoSilencio.hidden = YES;
+    
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Complemento
--(void)chamaMetodosFala3 {
+-(void)chamaMetodosFala4 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Complemento
+-(void)chamaMetodosFala5 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+
+
+//==========================================================Colisões/Ações=========================================================//
+
+
+-(void) checkColisaoPausa1:(NSTimer *) theTimer{
+    id presentationLayer1 = self.tocaTreco.layer.presentationLayer;
+    id presentationLayer2 = self.imgPausa1.layer.presentationLayer;
+    BOOL nowIntersecting = CGRectIntersectsRect([presentationLayer1 frame], [presentationLayer2 frame]);
+    
+    if (nowIntersecting){
+        self.imgPausa1.hidden = true;
+        self.imgPausa1.frame = self.tocaTreco.frame;
+        [self.listaLiberaFala addObject:self.estadoAux1];
+        
+        [theTimer invalidate];
+        [self acaoColisaoPausa1];
+    }
+    
+}
+
+- (void)acaoColisaoPausa1{
+//    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"notasPausas" withExtension:@"mp3"];
+//    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+//    
+//    [[self audioPlayer]play];
+}
+
+-(void) checkColisaoPausa2:(NSTimer *) theTimer{
+    id presentationLayer1 = self.tocaTreco.layer.presentationLayer;
+    id presentationLayer2 = self.imgPausa2.layer.presentationLayer;
+    BOOL nowIntersecting = CGRectIntersectsRect([presentationLayer1 frame], [presentationLayer2 frame]);
+    
+    if (nowIntersecting){
+        self.imgPausa2.hidden = true;
+        self.imgPausa2.frame = self.tocaTreco.frame;
+        [self.listaLiberaFala addObject:self.estadoAux1];
+        
+        [theTimer invalidate];
+        [self acaoColisaoPausa2];
+    }
+    
+}
+
+- (void)acaoColisaoPausa2{
+//    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"happybirthdaySamba" withExtension:@"mp3"];
+//    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+//    
+//    [[self audioPlayer]play];
+}
+
+-(void) checkColisaoPausa3:(NSTimer *) theTimer{
+    id presentationLayer1 = self.tocaTreco.layer.presentationLayer;
+    id presentationLayer2 = self.imgPausa3.layer.presentationLayer;
+    BOOL nowIntersecting = CGRectIntersectsRect([presentationLayer1 frame], [presentationLayer2 frame]);
+    
+    if (nowIntersecting){
+        self.imgPausa3.hidden = true;
+        self.imgPausa3.frame = self.tocaTreco.frame;
+        [self.listaLiberaFala addObject:self.estadoAux1];
+        
+        [theTimer invalidate];
+        [self acaoColisaoPausa3];
+    }
+    
+}
+
+- (void)acaoColisaoPausa3{
+//    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"happibirthdayClassico" withExtension:@"mp3"];
+//    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+//    
+//    [[self audioPlayer]play];
 }
 
 @end

@@ -110,6 +110,9 @@
             case 3:
                 [self chamaMetodosFala3];
                 break;
+            case 4:
+                [self chamaMetodosFala4];
+                break;
                 
             default:
                 break;
@@ -129,20 +132,68 @@
     [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//Explicação
+//Canto gregoriano e arrezzo
 -(void)chamaMetodosFala1 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    self.cantoGregoriano.hidden = NO;
+    self.arezzo.hidden = NO;
+    
+    [UIView animateWithDuration:2.0
+                          delay:0.0
+                        options:  UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         self.cantoGregoriano.frame = CGRectMake(self.cantoGregoriano.frame.origin.x,
+                                                            self.cantoGregoriano.frame.origin.y+250,
+                                                            self.cantoGregoriano.frame.size.width,
+                                                            self.cantoGregoriano.frame.size.height);
+                         
+                         self.arezzo.frame = CGRectMake(self.arezzo.frame.origin.x,
+                                                            self.arezzo.frame.origin.y+250,
+                                                            self.arezzo.frame.size.width,
+                                                            self.arezzo.frame.size.height);
+                     }
+                     completion:^(BOOL finished){
+                     }];
+    
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
-//Complemento
+//Notacao usada
 -(void)chamaMetodosFala2 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    self.cantoGregoriano.hidden = YES;
+    self.arezzo.hidden = YES;
+    self.notacaoMusical.hidden = NO;
+    
+    [UIView animateWithDuration:2.0
+                          delay:0.0
+                        options:  UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         self.notacaoMusical.frame = CGRectMake(self.notacaoMusical.frame.origin.x+300,
+                                                                 self.notacaoMusical.frame.origin.y,
+                                                                 self.notacaoMusical.frame.size.width,
+                                                                 self.notacaoMusical.frame.size.height);
+                     }
+                     completion:^(BOOL finished){
+                     }];
+    
+    
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Complemento
 -(void)chamaMetodosFala3 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    self.notacaoMusical.hidden = YES;
+    
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Final
+-(void)chamaMetodosFala4 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
