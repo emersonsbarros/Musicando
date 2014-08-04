@@ -858,7 +858,21 @@
 		0B03193419520C5D00316D6B /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
-				2BB81252198F30A3006181E3 /* new */,
+				2BA07B3F198FC158006ADE1C /* linhasSuplementares.png */,
+				2BA07B40198FC158006ADE1C /* pentagramaComLinhasSuplementares.png */,
+				2BA07B41198FC158006ADE1C /* pentagramaParaLinhasSuplementares.png */,
+				2BB81255198F378F006181E3 /* GuidodArezzo.png */,
+				2BB81253198F34E2006181E3 /* bibliotecaBackground.jpg */,
+				2BB81248198F3085006181E3 /* cantoGregoriano.jpg */,
+				2BB81249198F3085006181E3 /* escadaDeTons.png */,
+				2BB8124A198F3085006181E3 /* notacaoMusical.jpg */,
+				2BB8124B198F3085006181E3 /* pedindoSilencio.jpg */,
+				2BB8124C198F3085006181E3 /* setaPraCima.png */,
+				2BB8123E198F3041006181E3 /* linhaDePentagrama.png */,
+				2BB8123F198F3041006181E3 /* linhasDePentagrama.png */,
+				2BB81240198F3041006181E3 /* numeradaLinhasPentagrama.png */,
+				2BB81241198F3041006181E3 /* pentagramaComEscadaDeTons.png */,
+				2BB81242198F3041006181E3 /* pentagramaCompleto.png */,
 				2BA3E2DD19871E9600455FFE /* pilarHarmonia.png */,
 				2BA3E2DE19871E9600455FFE /* pilarMelodia.png */,
 				2BA3E2DF19871E9600455FFE /* pilarRitmo.png */,
@@ -1166,28 +1180,6 @@
 				2B64FA2E1969228500BC57FD /* Mod2Aula3Exe3ViewController.xib */,
 			);
 			name = Aula3;
-			sourceTree = "<group>";
-		};
-		2BB81252198F30A3006181E3 /* new */ = {
-			isa = PBXGroup;
-			children = (
-				2BA07B3F198FC158006ADE1C /* linhasSuplementares.png */,
-				2BA07B40198FC158006ADE1C /* pentagramaComLinhasSuplementares.png */,
-				2BA07B41198FC158006ADE1C /* pentagramaParaLinhasSuplementares.png */,
-				2BB81255198F378F006181E3 /* GuidodArezzo.png */,
-				2BB81253198F34E2006181E3 /* bibliotecaBackground.jpg */,
-				2BB81248198F3085006181E3 /* cantoGregoriano.jpg */,
-				2BB81249198F3085006181E3 /* escadaDeTons.png */,
-				2BB8124A198F3085006181E3 /* notacaoMusical.jpg */,
-				2BB8124B198F3085006181E3 /* pedindoSilencio.jpg */,
-				2BB8124C198F3085006181E3 /* setaPraCima.png */,
-				2BB8123E198F3041006181E3 /* linhaDePentagrama.png */,
-				2BB8123F198F3041006181E3 /* linhasDePentagrama.png */,
-				2BB81240198F3041006181E3 /* numeradaLinhasPentagrama.png */,
-				2BB81241198F3041006181E3 /* pentagramaComEscadaDeTons.png */,
-				2BB81242198F3041006181E3 /* pentagramaCompleto.png */,
-			);
-			name = new;
 			sourceTree = "<group>";
 		};
 		3F608CB2196C7585001979E9 /* Composicao:Leitura */ = {
