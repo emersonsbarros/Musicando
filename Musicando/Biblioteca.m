@@ -448,7 +448,7 @@
     [[mod1Aula3Exe4conversa1 listaDeFalas] addObject: mod1Aula3Exe4fala8];
     [[mod1Aula3Exe4conversa1 listaDeFalas] addObject: mod1Aula3Exe4fala9];
     [[mod1Aula3Exe4conversa1 listaDeFalas] addObject: mod1Aula3Exe4fala10];
-    [[[mod1Aula3Exe4 mascote] listaDeConversas] addObject:mod1Aula3Exe4conversa1];
+    [[[mod1Aula3Exe4 mascote] listaDeConversas] addObject: mod1Aula3Exe4conversa1];
  
 //POLIFONIA
     Exercicio *mod1Aula3Exe5 = [[Exercicio alloc] init:102 nome:@"Polifonia" nomeView:@"Mod1Aula3Exe5ViewController" experiencia:10 pontuacaoMaxima:10 :[UIImage imageNamed:@"exercicios.png"]];
@@ -726,6 +726,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
 //Exercicios
     Exercicio *mod2Aula2Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução às Pausas" nomeView:@"Mod2Aula2Exe1ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
     
+<<<<<<< HEAD
 
 //Falas do Mascote
     //Falas
@@ -760,6 +761,35 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     
 Exercicio *mod2Aula2Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando Pausas" nomeView:@"Mod2Aula2Exe2ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
     
+=======
+//PRATICANDO AS PAUSAS
+    Exercicio *mod2Aula2Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando Pausas" nomeView:@"Mod2Aula2Exe2ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+    //Falas
+    Fala *mod2Aula2Exe2fala1 = [[Fala alloc] init];
+    mod2Aula2Exe2fala1.conteudo = @"Agora vamos exercitar o que aprendemos sobre pausas";
+    
+    Fala *mod2Aula2Exe2fala2 = [[Fala alloc] init];
+    mod2Aula2Exe2fala2.conteudo = @"Estamos numa biblioteca, ambiente que precisa do máximo SILÊNCIO. Mas parece que nosso tocatreco pifou e está fazendo o maior barulho...";
+    
+    Fala *mod2Aula2Exe2fala3 = [[Fala alloc] init];
+    mod2Aula2Exe2fala3.conteudo = @"Sua tarefa é arrastar as pausas para o tocatreco até que ele pare ou antes da bibliotecária chegar. É melhor começar...";
+    
+    Fala *mod2Aula2Exe2fala4 = [[Fala alloc] init];
+    mod2Aula2Exe2fala4.conteudo = @"Agora sim o silêncio permanece, graças a sua ajuda!";
+    
+    Fala *mod2Aula2Exe2fala5 = [[Fala alloc] init];
+    mod2Aula2Exe2fala5.conteudo = @"Mas vamos continuar nessa jornada e seguir para a próxima aula...";
+    
+    //Conversa
+    Conversa *mod2Aula2Exe2conversa1 = [[Conversa alloc] init];
+    [[mod2Aula2Exe2conversa1 listaDeFalas] addObject: mod2Aula2Exe2fala1];
+    [[mod2Aula2Exe2conversa1 listaDeFalas] addObject: mod2Aula2Exe2fala2];
+    [[mod2Aula2Exe2conversa1 listaDeFalas] addObject: mod2Aula2Exe2fala3];
+    [[mod2Aula2Exe2conversa1 listaDeFalas] addObject: mod2Aula2Exe2fala4];
+    [[mod2Aula2Exe2conversa1 listaDeFalas] addObject: mod2Aula2Exe2fala5];
+    [[[mod2Aula2Exe2 mascote] listaDeConversas] addObject: mod2Aula2Exe2conversa1];
+>>>>>>> emerson
     
 //Aula de Pausas
     Aula *mod2Aula2 = [[Aula alloc]init];
@@ -772,9 +802,117 @@ Exercicio *mod2Aula2Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando Pausas"
 ////////////////////////////////// Aula 3 //////////////////////////////////////
     
 //Exercicios
+    
+//INTRODUÇÃO AO PENTAGRAMA
     Exercicio *mod2Aula3Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução ao Pentagrama" nomeView:@"Mod2Aula3Exe1ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+//Falas
+    Fala *mod2Aula3Exe1fala1 = [[Fala alloc] init];
+    mod2Aula3Exe1fala1.conteudo = @"Já aprendemos o que são as notas, pausas e onde elas se encaixam. Mas afinal, onde escrevemos esses sinais? será que basta desenhá-los no papel e só? Vamos descobrir essas e outras repostas a seguir...";
+    
+    Fala *mod2Aula3Exe1fala2 = [[Fala alloc] init];
+    mod2Aula3Exe1fala2.conteudo = @"Existe um 'molde' para se organizar e ler todos os sinais que já aprendemos e que ainda vamos ver. É chamado de PAUTA ou PENTAGRAMA.";
+    
+    Fala *mod2Aula3Exe1fala3 = [[Fala alloc] init];
+    mod2Aula3Exe1fala3.conteudo = @"O PENTAGRAMA é este conjunto de cinco linhas e quatro espaços, deitados horizontalmente. Daqui pra frente tudo relacionado a notação da música terá a presença dele.";
+    
+    Fala *mod2Aula3Exe1fala4 = [[Fala alloc] init];
+    mod2Aula3Exe1fala4.conteudo = @"Contamos as linhas e os espaços SEMPRE de baixo pra cima.";
+    
+    Fala *mod2Aula3Exe1fala5 = [[Fala alloc] init];
+    mod2Aula3Exe1fala5.conteudo = @"Algumas vezes o PENTAGRAMA não é sulficiente para mostrar uma nota ou outro símbolo, aí aparecem as linhas e espaços SUPLEMENTARES que seguem a mesma regra das outras e servem de auxílio.";
+    
+    Fala *mod2Aula3Exe1fala6 = [[Fala alloc] init];
+    mod2Aula3Exe1fala6.conteudo = @"Para sabermos qual é cada nota dependerá sempre da LINHA ou ESPAÇO que ocupar no PENTAGRAMA.";
+    
+    Fala *mod2Aula3Exe1fala7 = [[Fala alloc] init];
+    mod2Aula3Exe1fala7.conteudo = @"Vejamos este exemplo, há uma nota na segunda linha. Pra nós ela representará o SOL, arraste ao tocatreco e veja seu som!";
+    
+    Fala *mod2Aula3Exe1fala8 = [[Fala alloc] init];
+    mod2Aula3Exe1fala8.conteudo = @"Agora temos uma nota no terceiro espaço representando o LÁ. Arraste novamente e veja o som!";
+
+    Fala *mod2Aula3Exe1fala9 = [[Fala alloc] init];
+    mod2Aula3Exe1fala9.conteudo = @"Não há segredo, de acordo com a linha ou espaço que estiver representará um único som ou pausa.";
+    
+    Fala *mod2Aula3Exe1fala10 = [[Fala alloc] init];
+    mod2Aula3Exe1fala10.conteudo = @"Algumas aulas a diante você perceberá que de acordo com o que o músico deseja tocar ou o próprio instrumento a ordem das notas pode ser deslocada, mas sempre seguirá o mesmo conceito.";
+    
+    Fala *mod2Aula3Exe1fala11 = [[Fala alloc] init];
+    mod2Aula3Exe1fala11.conteudo = @"Agora vamos treinar um pouco do que vimos até aqui...";
+
+//Conversa
+    Conversa *mod2Aula3Exe1conversa1 = [[Conversa alloc] init];
+    [[mod2Aula3Exe1conversa1 listaDeFalas] addObject: mod2Aula3Exe1fala1];
+    [[mod2Aula3Exe1conversa1 listaDeFalas] addObject: mod2Aula3Exe1fala2];
+    [[mod2Aula3Exe1conversa1 listaDeFalas] addObject: mod2Aula3Exe1fala3];
+    [[mod2Aula3Exe1conversa1 listaDeFalas] addObject: mod2Aula3Exe1fala4];
+    [[mod2Aula3Exe1conversa1 listaDeFalas] addObject: mod2Aula3Exe1fala5];
+    [[mod2Aula3Exe1conversa1 listaDeFalas] addObject: mod2Aula3Exe1fala6];
+    [[mod2Aula3Exe1conversa1 listaDeFalas] addObject: mod2Aula3Exe1fala7];
+    [[mod2Aula3Exe1conversa1 listaDeFalas] addObject: mod2Aula3Exe1fala8];
+    [[mod2Aula3Exe1conversa1 listaDeFalas] addObject: mod2Aula3Exe1fala9];
+    [[mod2Aula3Exe1conversa1 listaDeFalas] addObject: mod2Aula3Exe1fala10];
+    [[mod2Aula3Exe1conversa1 listaDeFalas] addObject: mod2Aula3Exe1fala11];
+    [[[mod2Aula3Exe1 mascote] listaDeConversas] addObject: mod2Aula3Exe1conversa1];
+    
+
+//EXERCITANDO PENTAGRAMA
     Exercicio *mod2Aula3Exe2 = [[Exercicio alloc] init:202 nome:@"Exercitando" nomeView:@"Mod2Aula3Exe2ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+//Falas
+    Fala *mod2Aula3Exe2fala1 = [[Fala alloc] init];
+    mod2Aula3Exe2fala1.conteudo = @"Agora vamos exercitar o que aprendemos sobre o pentagrama";
+    
+    Fala *mod2Aula3Exe2fala2 = [[Fala alloc] init];
+    mod2Aula3Exe2fala2.conteudo = @"Essa é a escada dos tons e infelizmente ela está apenas com o primeiro degrau.";
+    
+    Fala *mod2Aula3Exe2fala3 = [[Fala alloc] init];
+    mod2Aula3Exe2fala3.conteudo = @"Sua missão será reconstruir, arrastando cada nota para as linhas do pentagrama.";
+    
+    Fala *mod2Aula3Exe2fala4 = [[Fala alloc] init];
+    mod2Aula3Exe2fala4.conteudo = @"Finalmente minha 'outra' versão vai conseguir subir e tocar a escada de tons!";
+    
+    Fala *mod2Aula3Exe2fala5 = [[Fala alloc] init];
+    mod2Aula3Exe2fala5.conteudo = @"Depois de ter aprendido um pouco sobre o pentagrama, que tal conhecermos melhor sua história?";
+    
+//Conversa
+    Conversa *mod2Aula3Exe2conversa1 = [[Conversa alloc] init];
+    [[mod2Aula3Exe2conversa1 listaDeFalas] addObject: mod2Aula3Exe2fala1];
+    [[mod2Aula3Exe2conversa1 listaDeFalas] addObject: mod2Aula3Exe2fala2];
+    [[mod2Aula3Exe2conversa1 listaDeFalas] addObject: mod2Aula3Exe2fala3];
+    [[mod2Aula3Exe2conversa1 listaDeFalas] addObject: mod2Aula3Exe2fala4];
+    [[mod2Aula3Exe2conversa1 listaDeFalas] addObject: mod2Aula3Exe2fala5];
+    [[[mod2Aula3Exe2 mascote] listaDeConversas] addObject: mod2Aula3Exe2conversa1];
+    
+    
+//HISTÓRIA DO PENTAGRAMA
     Exercicio *mod2Aula3Exe3 = [[Exercicio alloc] init:202 nome:@"Pentagrama, como surgiu?" nomeView:@"Mod2Aula3Exe3ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+//Falas
+    Fala *mod2Aula3Exe3fala1 = [[Fala alloc] init];
+    mod2Aula3Exe3fala1.conteudo = @"Mas de onde será que surgiu o PENTAGRAMA? Vamos voltar ao século XI e descobrir...";
+    
+    Fala *mod2Aula3Exe3fala2 = [[Fala alloc] init];
+    mod2Aula3Exe3fala2.conteudo = @"O pentagrama que conhecemos hoje tem origem nos cantos gregorianos, criado pelo monge Guido D’Arezzo.";
+    
+    Fala *mod2Aula3Exe3fala3 = [[Fala alloc] init];
+    mod2Aula3Exe3fala3.conteudo = @"A notação existente usada até então foi substituida por UMA linha, onde eram escritas as notas.";
+    
+    Fala *mod2Aula3Exe3fala4 = [[Fala alloc] init];
+    mod2Aula3Exe3fala4.conteudo = @"A quantidade de linhas foi variando até o século XVII...";
+
+    Fala *mod2Aula3Exe3fala5 = [[Fala alloc] init];
+    mod2Aula3Exe3fala5.conteudo = @"Até que o sistema se normalizou nas cinco linhas que são usadas atualmente.";
+    
+//Conversa
+    Conversa *mod2Aula3Exe3conversa1 = [[Conversa alloc] init];
+    [[mod2Aula3Exe3conversa1 listaDeFalas] addObject: mod2Aula3Exe3fala1];
+    [[mod2Aula3Exe3conversa1 listaDeFalas] addObject: mod2Aula3Exe3fala2];
+    [[mod2Aula3Exe3conversa1 listaDeFalas] addObject: mod2Aula3Exe3fala3];
+    [[mod2Aula3Exe3conversa1 listaDeFalas] addObject: mod2Aula3Exe3fala4];
+    [[mod2Aula3Exe3conversa1 listaDeFalas] addObject: mod2Aula3Exe3fala5];
+    [[[mod2Aula3Exe3 mascote] listaDeConversas] addObject: mod2Aula3Exe3conversa1];
+    
     
 //Aula de Pentagrama
     Aula *mod2Aula3 = [[Aula alloc]init];
@@ -788,14 +926,275 @@ Exercicio *mod2Aula2Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando Pausas"
 ////////////////////////////////// Aula 4 //////////////////////////////////////
     
 //Exercicios
+//INTRO SIMBOLOGIA DAS NOTAS
     Exercicio *mod2Aula4Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução a simbologia das notas" nomeView:@"Mod2Aula4Exe1ViewController" experiencia:10 pontuacaoMaxima:10 :[UIImage imageNamed:@"exercicios.png"]];
+    
+//Falas
+    Fala *mod2Aula4Exe1fala1 = [[Fala alloc] init];
+    mod2Aula4Exe1fala1.conteudo = @"Já vimos e aprendemos sobre as notas, pausas e o tal do pentagrama onde elas são desenhadas...";
+    
+    Fala *mod2Aula4Exe1fala2 = [[Fala alloc] init];
+    mod2Aula4Exe1fala2.conteudo = @"Até aqui as notas e pausas são bloquinhos, que colocados no pentagrama tem seu som único.";
+    
+    Fala *mod2Aula4Exe1fala3 = [[Fala alloc] init];
+    mod2Aula4Exe1fala3.conteudo = @"E conforme subimos as linhas do pentagrama parece que o volume aumenta numa escala...";
+    
+    Fala *mod2Aula4Exe1fala4 = [[Fala alloc] init];
+    mod2Aula4Exe1fala4.conteudo = @"Mas está na hora de saber quais as verdadeiras figuras que representam cada uma.";
+    
+    Fala *mod2Aula4Exe1fala5 = [[Fala alloc] init];
+    mod2Aula4Exe1fala5.conteudo = @"Nem todas as notas têm a mesma duração...";
+    
+    Fala *mod2Aula4Exe1fala6 = [[Fala alloc] init];
+    mod2Aula4Exe1fala6.conteudo = @"Então, como saber qual é o tempo de cada uma?";
+    
+    Fala *mod2Aula4Exe1fala7 = [[Fala alloc] init];
+    mod2Aula4Exe1fala7.conteudo = @"Existem formas diferentes para representar cada tempo numa nota ou tempo.";
+    
+    Fala *mod2Aula4Exe1fala8 = [[Fala alloc] init];
+    mod2Aula4Exe1fala8.conteudo = @"São chamados de valores ou figuras. Vamos ver cada um, começando pela nota de 4 tempos.";
+    
+    Fala *mod2Aula4Exe1fala9 = [[Fala alloc] init];
+    mod2Aula4Exe1fala9.conteudo = @"Este círculo é a semibreve, quando ela aparece no pentagrama, significa que deve ser tocada por 4 tempos.";
+    
+    Fala *mod2Aula4Exe1fala10 = [[Fala alloc] init];
+    mod2Aula4Exe1fala10.conteudo = @"Assim como nas notas, as pausas também tem duração...";
+
+    Fala *mod2Aula4Exe1fala11 = [[Fala alloc] init];
+    mod2Aula4Exe1fala11.conteudo = @"A figura de pausa que corresponde à 4 tempos, é essa ao lado da semibreve.";
+    
+    Fala *mod2Aula4Exe1fala12 = [[Fala alloc] init];
+    mod2Aula4Exe1fala12.conteudo = @"Agora vamos pras figuras de nota e pausa que representam 2 tempos.";
+    
+    Fala *mod2Aula4Exe1fala13 = [[Fala alloc] init];
+    mod2Aula4Exe1fala13.conteudo = @"Sempre que este círculo com uma aste aparecer, representa a mínima.";
+    
+    Fala *mod2Aula4Exe1fala14 = [[Fala alloc] init];
+    mod2Aula4Exe1fala14.conteudo = @"Na sequência, aqui estão as figuras de 1 tempo.";
+    
+    Fala *mod2Aula4Exe1fala15 = [[Fala alloc] init];
+    mod2Aula4Exe1fala15.conteudo = @"Percebe que a nota agora de 1 tempo tem o círculo preenchido?";
+    
+    Fala *mod2Aula4Exe1fala16 = [[Fala alloc] init];
+    mod2Aula4Exe1fala16.conteudo = @"Esta figura representa a semínima";
+    
+    Fala *mod2Aula4Exe1fala17 = [[Fala alloc] init];
+    mod2Aula4Exe1fala17.conteudo = @"Quando precisamos de uma nota ou pausa de 1/2 tempo, as figuras são as seguintes...";
+    
+    Fala *mod2Aula4Exe1fala18 = [[Fala alloc] init];
+    mod2Aula4Exe1fala18.conteudo = @"Essa do lado esquero chama-se colcheia.";
+    
+    Fala *mod2Aula4Exe1fala19 = [[Fala alloc] init];
+    mod2Aula4Exe1fala19.conteudo = @"Para 1/4 de tempo a 'colcheia' é a figura a esquerda com sua respectiva pausa ao lado.";
+
+    Fala *mod2Aula4Exe1fala20 = [[Fala alloc] init];
+    mod2Aula4Exe1fala20.conteudo = @"Temos ainda a nota e pausa de 1/8, sendo que a nota é chamada de fusa.";
+    
+    Fala *mod2Aula4Exe1fala21 = [[Fala alloc] init];
+    mod2Aula4Exe1fala21.conteudo = @"E por fim a semifusa que é a nota de 1/16 junto a figura de sua pausa.";
+
+    Fala *mod2Aula4Exe1fala22 = [[Fala alloc] init];
+    mod2Aula4Exe1fala22.conteudo = @"Pra relembrar, essas são todas as figuras de notas e pausas junto ao seu tempo de duração.";
+    
+    //Conversa
+    Conversa *mod2Aula4Exe1conversa1 = [[Conversa alloc] init];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala1];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala2];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala3];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala4];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala5];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala6];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala7];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala8];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala9];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala10];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala11];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala12];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala13];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala14];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala15];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala16];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala17];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala18];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala19];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala20];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala21];
+    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala22];
+    [[[mod2Aula4Exe1 mascote] listaDeConversas] addObject: mod2Aula4Exe1conversa1];
+    
+    
+//APRESENTANDO IMAGEM DAS NOTAS
     Exercicio *mod2Aula4Exe2 = [[Exercicio alloc] init:202 nome:@"Apresentando a Imagem das notas" nomeView:@"Mod2Aula4Exe2ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+//Falas
+    Fala *mod2Aula4Exe2fala1 = [[Fala alloc] init];
+    mod2Aula4Exe2fala1.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe2fala2 = [[Fala alloc] init];
+    mod2Aula4Exe2fala2.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe2fala3 = [[Fala alloc] init];
+    mod2Aula4Exe2fala3.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe2fala4 = [[Fala alloc] init];
+    mod2Aula4Exe2fala4.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe2fala5 = [[Fala alloc] init];
+    mod2Aula4Exe2fala5.conteudo = @"FALA";
+    
+    //Conversa
+    Conversa *mod2Aula4Exe2conversa1 = [[Conversa alloc] init];
+    [[mod2Aula4Exe2conversa1 listaDeFalas] addObject: mod2Aula4Exe2fala1];
+    [[mod2Aula4Exe2conversa1 listaDeFalas] addObject: mod2Aula4Exe2fala2];
+    [[mod2Aula4Exe2conversa1 listaDeFalas] addObject: mod2Aula4Exe2fala3];
+    [[mod2Aula4Exe2conversa1 listaDeFalas] addObject: mod2Aula4Exe2fala4];
+    [[mod2Aula4Exe2conversa1 listaDeFalas] addObject: mod2Aula4Exe2fala5];
+    [[[mod2Aula4Exe2 mascote] listaDeConversas] addObject: mod2Aula4Exe2conversa1];
+ 
+    
+//TREINAMENTO IMAGEM NOTAS
     Exercicio *mod2Aula4Exe3 = [[Exercicio alloc] init:202 nome:@"Treinando com Imagem das notas" nomeView:@"Mod2Aula4Exe3ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+//Falas
+    Fala *mod2Aula4Exe3fala1 = [[Fala alloc] init];
+    mod2Aula4Exe3fala1.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe3fala2 = [[Fala alloc] init];
+    mod2Aula4Exe3fala2.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe3fala3 = [[Fala alloc] init];
+    mod2Aula4Exe3fala3.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe3fala4 = [[Fala alloc] init];
+    mod2Aula4Exe3fala4.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe3fala5 = [[Fala alloc] init];
+    mod2Aula4Exe3fala5.conteudo = @"FALA";
+    
+    //Conversa
+    Conversa *mod2Aula4Exe3conversa1 = [[Conversa alloc] init];
+    [[mod2Aula4Exe3conversa1 listaDeFalas] addObject: mod2Aula4Exe3fala1];
+    [[mod2Aula4Exe3conversa1 listaDeFalas] addObject: mod2Aula4Exe3fala2];
+    [[mod2Aula4Exe3conversa1 listaDeFalas] addObject: mod2Aula4Exe3fala3];
+    [[mod2Aula4Exe3conversa1 listaDeFalas] addObject: mod2Aula4Exe3fala4];
+    [[mod2Aula4Exe3conversa1 listaDeFalas] addObject: mod2Aula4Exe3fala5];
+    [[[mod2Aula3Exe3 mascote] listaDeConversas] addObject: mod2Aula4Exe3conversa1];
+
+    
+//TREINAMENTO
     Exercicio *mod2Aula4Exe4 = [[Exercicio alloc] init:202 nome:@"Treinamento" nomeView:@"Mod2Aula4Exe4ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+    //Falas
+    Fala *mod2Aula4Exe4fala1 = [[Fala alloc] init];
+    mod2Aula4Exe4fala1.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe4fala2 = [[Fala alloc] init];
+    mod2Aula4Exe4fala2.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe4fala3 = [[Fala alloc] init];
+    mod2Aula4Exe4fala3.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe4fala4 = [[Fala alloc] init];
+    mod2Aula4Exe4fala4.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe4fala5 = [[Fala alloc] init];
+    mod2Aula4Exe4fala5.conteudo = @"FALA";
+    
+    //Conversa
+    Conversa *mod2Aula4Exe4conversa1 = [[Conversa alloc] init];
+    [[mod2Aula4Exe4conversa1 listaDeFalas] addObject: mod2Aula4Exe4fala1];
+    [[mod2Aula4Exe4conversa1 listaDeFalas] addObject: mod2Aula4Exe4fala2];
+    [[mod2Aula4Exe4conversa1 listaDeFalas] addObject: mod2Aula4Exe4fala3];
+    [[mod2Aula4Exe4conversa1 listaDeFalas] addObject: mod2Aula4Exe4fala4];
+    [[mod2Aula4Exe4conversa1 listaDeFalas] addObject: mod2Aula4Exe4fala5];
+    [[[mod2Aula4Exe4 mascote] listaDeConversas] addObject: mod2Aula4Exe4conversa1];
+
+    
+//NOVAS IMGS DE NOTAS
     Exercicio *mod2Aula4Exe5 = [[Exercicio alloc] init:202 nome:@"Novas imagens de Notas" nomeView:@"Mod2Aula4Exe5ViewController" experiencia:10 pontuacaoMaxima:10 :[UIImage imageNamed:@"exercicios.png"]];
+    
+//Falas
+    Fala *mod2Aula4Exe5fala1 = [[Fala alloc] init];
+    mod2Aula4Exe5fala1.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe5fala2 = [[Fala alloc] init];
+    mod2Aula4Exe5fala2.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe5fala3 = [[Fala alloc] init];
+    mod2Aula4Exe5fala3.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe5fala4 = [[Fala alloc] init];
+    mod2Aula4Exe5fala4.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe5fala5 = [[Fala alloc] init];
+    mod2Aula4Exe5fala5.conteudo = @"FALA";
+    
+    //Conversa
+    Conversa *mod2Aula4Exe5conversa1 = [[Conversa alloc] init];
+    [[mod2Aula4Exe5conversa1 listaDeFalas] addObject: mod2Aula4Exe5fala1];
+    [[mod2Aula4Exe5conversa1 listaDeFalas] addObject: mod2Aula4Exe5fala2];
+    [[mod2Aula4Exe5conversa1 listaDeFalas] addObject: mod2Aula4Exe5fala3];
+    [[mod2Aula4Exe5conversa1 listaDeFalas] addObject: mod2Aula4Exe5fala4];
+    [[mod2Aula4Exe5conversa1 listaDeFalas] addObject: mod2Aula4Exe5fala5];
+    [[[mod2Aula4Exe5 mascote] listaDeConversas] addObject: mod2Aula4Exe5conversa1];
+    
+
+//SÍMBOLO DAS PAUSAS
     Exercicio *mod2Aula4Exe6 = [[Exercicio alloc] init:202 nome:@"Introdução aos símbolos das pausas" nomeView:@"Mod2Aula4Exe6ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+//Falas
+    Fala *mod2Aula4Exe6fala1 = [[Fala alloc] init];
+    mod2Aula4Exe6fala1.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe6fala2 = [[Fala alloc] init];
+    mod2Aula4Exe6fala2.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe6fala3 = [[Fala alloc] init];
+    mod2Aula4Exe6fala3.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe6fala4 = [[Fala alloc] init];
+    mod2Aula4Exe6fala4.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe6fala5 = [[Fala alloc] init];
+    mod2Aula4Exe6fala5.conteudo = @"FALA";
+
+    //Conversa
+    Conversa *mod2Aula4Exe6conversa1 = [[Conversa alloc] init];
+    [[mod2Aula4Exe6conversa1 listaDeFalas] addObject: mod2Aula4Exe6fala1];
+    [[mod2Aula4Exe6conversa1 listaDeFalas] addObject: mod2Aula4Exe6fala2];
+    [[mod2Aula4Exe6conversa1 listaDeFalas] addObject: mod2Aula4Exe6fala3];
+    [[mod2Aula4Exe6conversa1 listaDeFalas] addObject: mod2Aula4Exe6fala4];
+    [[mod2Aula4Exe6conversa1 listaDeFalas] addObject: mod2Aula4Exe6fala5];
+    [[[mod2Aula4Exe6 mascote] listaDeConversas] addObject: mod2Aula4Exe6conversa1];
+    
+    
+//RESUMO FINAL
     Exercicio *mod2Aula4Exe7 = [[Exercicio alloc] init:202 nome:@"Resumo final" nomeView:@"Mod2Aula4Exe7ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
 
+    //Falas
+    Fala *mod2Aula4Exe7fala1 = [[Fala alloc] init];
+    mod2Aula4Exe7fala1.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe7fala2 = [[Fala alloc] init];
+    mod2Aula4Exe7fala2.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe7fala3 = [[Fala alloc] init];
+    mod2Aula4Exe7fala3.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe7fala4 = [[Fala alloc] init];
+    mod2Aula4Exe7fala4.conteudo = @"FALA";
+    
+    Fala *mod2Aula4Exe7fala5 = [[Fala alloc] init];
+    mod2Aula4Exe7fala5.conteudo = @"FALA";
+    
+    //Conversa
+    Conversa *mod2Aula4Exe7conversa1 = [[Conversa alloc] init];
+    [[mod2Aula4Exe7conversa1 listaDeFalas] addObject: mod2Aula4Exe7fala1];
+    [[mod2Aula4Exe7conversa1 listaDeFalas] addObject: mod2Aula4Exe7fala2];
+    [[mod2Aula4Exe7conversa1 listaDeFalas] addObject: mod2Aula4Exe7fala3];
+    [[mod2Aula4Exe7conversa1 listaDeFalas] addObject: mod2Aula4Exe7fala4];
+    [[mod2Aula4Exe7conversa1 listaDeFalas] addObject: mod2Aula4Exe7fala5];
+    [[[mod2Aula4Exe7 mascote] listaDeConversas] addObject: mod2Aula4Exe7conversa1];
     
 //Aula de Notação nota/pausa
     Aula *mod2Aula4 = [[Aula alloc]init];
@@ -813,7 +1212,33 @@ Exercicio *mod2Aula2Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando Pausas"
 ////////////////////////////////// Aula 5 //////////////////////////////////////
     
 //Exercicios
+//INTRODUÇÃO OITAVAS
     Exercicio *mod2Aula5Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução às Oitavas" nomeView:@"Mod2Aula5Exe1ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+//Falas
+    Fala *mod2Aula5Exe1fala1 = [[Fala alloc] init];
+    mod2Aula5Exe1fala1.conteudo = @"FALA";
+    
+    Fala *mod2Aula5Exe1fala2 = [[Fala alloc] init];
+    mod2Aula5Exe1fala2.conteudo = @"FALA";
+    
+    Fala *mod2Aula5Exe1fala3 = [[Fala alloc] init];
+    mod2Aula5Exe1fala3.conteudo = @"FALA";
+    
+    Fala *mod2Aula5Exe1fala4 = [[Fala alloc] init];
+    mod2Aula5Exe1fala4.conteudo = @"FALA";
+    
+    Fala *mod2Aula5Exe1fala5 = [[Fala alloc] init];
+    mod2Aula5Exe1fala5.conteudo = @"FALA";
+    
+    //Conversa
+    Conversa *mod2Aula5Exe1conversa1 = [[Conversa alloc] init];
+    [[mod2Aula5Exe1conversa1 listaDeFalas] addObject: mod2Aula5Exe1fala1];
+    [[mod2Aula5Exe1conversa1 listaDeFalas] addObject: mod2Aula5Exe1fala2];
+    [[mod2Aula5Exe1conversa1 listaDeFalas] addObject: mod2Aula5Exe1fala3];
+    [[mod2Aula5Exe1conversa1 listaDeFalas] addObject: mod2Aula5Exe1fala4];
+    [[mod2Aula5Exe1conversa1 listaDeFalas] addObject: mod2Aula5Exe1fala5];
+    [[[mod2Aula5Exe1 mascote] listaDeConversas] addObject: mod2Aula5Exe1conversa1];
     
 //Aula de Oitavas
     Aula *mod2Aula5 = [[Aula alloc]init];
