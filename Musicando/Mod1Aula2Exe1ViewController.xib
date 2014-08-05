@@ -42,11 +42,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pGf-8Q-6cT">
-                    <rect key="frame" x="775" y="488" width="243" height="296"/>
+                    <rect key="frame" x="879" y="563" width="145" height="205"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dve-EP-hFU">
-                    <rect key="frame" x="835" y="503" width="119" height="229"/>
+                    <rect key="frame" x="874" y="551" width="150" height="229"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </view>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="colher.png" translatesAutoresizingMaskIntoConstraints="NO" id="jac-40-pyH">

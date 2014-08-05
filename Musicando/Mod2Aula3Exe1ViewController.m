@@ -26,13 +26,323 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    //Add barra Superior ao Xib
+    [[EfeitoBarraSuperior sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
+    [self iniciarComponentes];
+
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
+
+-(void)iniciarComponentes{
+    
+    //Habilita o gesture do mascote com a UIView que fica por cima dele
+    [self addGesturePassaFalaMascote: self.viewGesturePassaFala];
+    
+    //Inicia lista de imagens para colisão
+    self.listaImangesColisao = [[NSMutableArray alloc]init];
+    
+    //Adiciona imagens para colisao
+    [self.listaImangesColisao addObject: self.notaDo];
+    [self.listaImangesColisao addObject: self.notaSol];
+    
+    //Adiciona gesture ARRASTAR em todas imagens dessa lista
+    [[EfeitoImagem sharedManager]addGesturePainImagens: self.listaImangesColisao];
+    
+    //Inicia lista para liberar falas e auxiliares
+    self.listaLiberaFala = [[NSMutableArray alloc]init];
+    self.estadoAux1 = @"0";
+    self.estadoAux2 = @"0";
+    self.estadoAux3 = @"0";
+    
+    //Inicia auxiliares da biblioteca
+    self.contadorDeFalas = 0;
+    self.testaBiblio = [Biblioteca sharedManager];
+    self.testaConversa = self.testaBiblio.exercicioAtual.mascote.listaDeConversas.firstObject;
+    
+    //Usar sempre que quiser pular uma fala
+    [self pulaFalaMascote];
+    
+    //Imagem do mascote
+    self.imagemDoMascote.image = [[[[Biblioteca sharedManager] exercicioAtual] mascote] imagem].image;
+    [self.view addSubview: self.imagemDoMascote];
+    [self.view addSubview: self.lblFalaDoMascote];
+    
+    //Mascote começa a pular
+    [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando: self.imagemDoMascote];
+}
+
+//Adiciona gesture ao passar de fala a view que fica por cima do mascote
+-(void)addGesturePassaFalaMascote:(UIView*)viewGesture{
+    
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pulaFalaMascote)];
+    
+    singleTap.numberOfTouchesRequired = 1;
+    singleTap.enabled = NO;
+    viewGesture.userInteractionEnabled = NO;
+    
+    [viewGesture addGestureRecognizer: singleTap];
+}
+
+//Gerenciador das falas
+-(void)pulaFalaMascote{
+    
+    //Para não dar erro de NULL na ultima fala
+    int contadorMaximo = (int)self.testaConversa.listaDeFalas.count;
+    
+    if(self.contadorDeFalas == contadorMaximo){
+        NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
+        [[Biblioteca sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
+    }
+    
+    if(self.contadorDeFalas < contadorMaximo){
+        switch (self.contadorDeFalas) {
+            case 0:
+                [self chamaMetodosFala0];
+                break;
+            case 1:
+                [self chamaMetodosFala1];
+                break;
+            case 2:
+                [self chamaMetodosFala2];
+                break;
+            case 3:
+                [self chamaMetodosFala3];
+                break;
+            case 4:
+                [self chamaMetodosFala4];
+                break;
+            case 5:
+                [self chamaMetodosFala5];
+                break;
+            case 6:
+                [self chamaMetodosFala6];
+                break;
+            case 7:
+                [self chamaMetodosFala7];
+                break;
+            case 8:
+                [self chamaMetodosFala8];
+                break;
+            case 9:
+                [self chamaMetodosFala9];
+                break;
+            case 10:
+                [self chamaMetodosFala10];
+                break;
+                
+            default:
+                break;
+        }
+        
+        //Pega a fala atual de acordo com o contador e passa para o label
+        self.testaFala = [self.testaConversa.listaDeFalas objectAtIndex: self.contadorDeFalas];
+        self.lblFalaDoMascote.text = self.testaFala.conteudo;
+        
+        self.contadorDeFalas +=1;
+    }
+}
+
+//Intro
+-(void)chamaMetodosFala0 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Explicação, mostra primeiro desenho
+-(void)chamaMetodosFala1 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    self.pentagrama.hidden = NO;
+    
+    [UIView animateWithDuration:2.0
+                          delay:0.0
+                        options:  UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         self.pentagrama.frame = CGRectMake(self.pentagrama.frame.origin.x,
+                                                        self.pentagrama.frame.origin.y+230,
+                                                        self.pentagrama.frame.size.width,
+                                                        self.pentagrama.frame.size.height);
+                     }
+                     completion:^(BOOL finished){
+                     }];
+    
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Complemento
+-(void)chamaMetodosFala2 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    //Esconde o pentagrama simples, mostra o completo
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade: self.pentagrama];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade: self.pentagramaCompleto];
+    
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Setas direcionando a contagem de linhas e espaços
+-(void)chamaMetodosFala3 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+
+    //Mostra
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade: self.seta1];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade: self.seta2];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade: self.seta3];
+    
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Mostra pentagrama complementar
+-(void)chamaMetodosFala4 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    //Esconde setas e mostra pentagrama com linhas complementar
+    self.seta1.hidden = YES;
+    self.seta2.hidden = YES;
+    self.seta3.hidden = YES;
+    self.pentagramaCompleto.hidden = YES;
+    
+    //Pentagrama e linhas
+    self.pentagramaParaLinhasComplementares.hidden = NO;
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade: self.linhasSuplementares];
+    
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Complemento
+-(void)chamaMetodosFala5 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    self.linhasSuplementares.hidden = YES;
+    self.pentagramaCompleto.hidden = YES;
+    
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Mostra nota no pentagrama
+-(void)chamaMetodosFala6 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+
+    [NSTimer scheduledTimerWithTimeInterval: 0.5
+                                     target: self
+                                   selector: @selector(checkColisaoNotaSol:)
+                                   userInfo: nil
+                                    repeats: YES];
+    
+    //Habilita interação e mostra views
+    self.tocaTreco.userInteractionEnabled = YES;
+    self.tocaTreco.hidden = NO;
+    self.notaSol.hidden = NO;
+    
+    //Teste
+    self.pentagramaParaLinhasComplementares.hidden = YES;
+
+    
+    [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote :self.viewGesturePassaFala:self.listaLiberaFala: 1];
+
+}
+
+//Complemento
+-(void)chamaMetodosFala7 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    [NSTimer scheduledTimerWithTimeInterval: 0.5
+                                     target: self
+                                   selector: @selector(checkColisaoNotaDo:)
+                                   userInfo: nil
+                                    repeats: YES];
+    
+    //Habilita interação e mostra views
+    self.notaDo.hidden = NO;
+
+    
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Complemento
+-(void)chamaMetodosFala8 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+//Complemento
+-(void)chamaMetodosFala9 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    
+    self.pentagramaParaLinhasComplementares.hidden = YES;
+    self.tocaTreco.hidden = YES;
+    self.notaDo.hidden = YES;
+    self.notaSol.hidden = YES;
+    self.notaSol.hidden = YES;
+
+    
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+//Complemento
+-(void)chamaMetodosFala10 {
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+}
+
+
+
+
+
+
+
+//==========================================================Colisões/Ações=========================================================//
+
+
+-(void) checkColisaoNotaSol:(NSTimer *) theTimer{
+    id presentationLayer1 = self.tocaTreco.layer.presentationLayer;
+    id presentationLayer2 = self.notaSol.layer.presentationLayer;
+    BOOL nowIntersecting = CGRectIntersectsRect([presentationLayer1 frame], [presentationLayer2 frame]);
+    
+    if (nowIntersecting){
+        self.notaSol.hidden = true;
+        self.notaSol.frame = self.tocaTreco.frame;
+        [self.listaLiberaFala addObject:self.estadoAux1];
+        
+        [theTimer invalidate];
+        [self acaoColisaoNotaSol];
+    }
+    
+}
+
+- (void)acaoColisaoNotaSol{
+    //    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"notasPausas" withExtension:@"mp3"];
+    //    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    //
+    //    [[self audioPlayer]play];
+}
+
+-(void) checkColisaoNotaDo:(NSTimer *) theTimer{
+    id presentationLayer1 = self.tocaTreco.layer.presentationLayer;
+    id presentationLayer2 = self.notaDo.layer.presentationLayer;
+    BOOL nowIntersecting = CGRectIntersectsRect([presentationLayer1 frame], [presentationLayer2 frame]);
+    
+    if (nowIntersecting){
+        self.notaDo.hidden = true;
+        self.notaDo.frame = self.tocaTreco.frame;
+        [self.listaLiberaFala addObject:self.estadoAux1];
+        
+        [theTimer invalidate];
+        [self acaoColisaoNotaDo];
+    }
+    
+}
+
+- (void)acaoColisaoNotaDo{
+    //    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"happybirthdaySamba" withExtension:@"mp3"];
+    //    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    //
+    //    [[self audioPlayer]play];
+}
+
 
 @end

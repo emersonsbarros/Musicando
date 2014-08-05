@@ -12,9 +12,9 @@
 #import <AVFoundation/AVFoundation.h>
 #import "Nota.h"
 #import "Sinfonia.h"
+#import <QuartzCore/QuartzCore.h>
 #import "EfeitoImagem.h"
 #import "EfeitoMascote.h"
-#import <QuartzCore/QuartzCore.h>
 #import <SpriteKit/SpriteKit.h>
 #import "EfeitoBarraSuperior.h"
 

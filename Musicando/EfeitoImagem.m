@@ -190,7 +190,7 @@
     self.viewGesturePassaFala = viewGesturePassaFala;
     self.listaLiberaFala = lista;
     self.qtdColisoes = qtdColisao;
-    [NSTimer scheduledTimerWithTimeInterval: 0.5 target:self selector: @selector(verficaPulaFala:) userInfo: nil repeats: YES];
+    [NSTimer scheduledTimerWithTimeInterval: 0.2 target:self selector: @selector(verficaPulaFala:) userInfo: nil repeats: YES];
 }
 
 
@@ -209,6 +209,19 @@
     animationSequence.values = [self animationCGImagesArray:imgAddAnimacao];
     [imgAddAnimacao.layer addAnimation:animationSequence forKey:@"contents"];
 
+}
+
+-(void)addAnimacaoSprite:(NSArray*)listaSprite :(UIImageView*)imgAddAnimacao :(float)tempoTransicao :(float)qtdRepeticoes{
+    
+    imgAddAnimacao.animationImages = listaSprite;
+    CAKeyframeAnimation *animationSequence = [CAKeyframeAnimation animationWithKeyPath: @"contents"];
+    animationSequence.calculationMode = kCAAnimationDiscrete;
+    animationSequence.autoreverses = NO;
+    animationSequence.duration = tempoTransicao;
+    animationSequence.repeatCount = qtdRepeticoes;
+    animationSequence.values = [self animationCGImagesArray:imgAddAnimacao];
+    [imgAddAnimacao.layer addAnimation:animationSequence forKey:@"contents"];
+    
 }
 
 //Remove o sprite de uma imagem
