@@ -51,7 +51,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SFi-Za-Kji">
-                    <rect key="frame" x="781" y="472" width="243" height="296"/>
+                    <rect key="frame" x="781" y="506" width="243" height="262"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="384" translatesAutoresizingMaskIntoConstraints="NO" id="jcT-iD-kJc">
@@ -72,7 +72,7 @@
     </objects>
     <resources>
         <image name="backFalaDoMascote.png" width="947" height="374"/>
-        <image name="bibliotecaBackground.jpg" width="1280" height="720"/>
+        <image name="bibliotecaBackground.jpg" width="1024" height="680"/>
         <image name="novoTocaTreco.png" width="1784" height="916"/>
         <image name="pausaBloco.png" width="123" height="120"/>
         <image name="pedindoSilencio.jpg" width="250" height="362"/>

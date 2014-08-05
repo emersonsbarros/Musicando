@@ -1245,7 +1245,33 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
 ////////////////////////////////// Aula 6 //////////////////////////////////////
     
 //Exercicios
+//INTRODUÇÃO AS CLAVES
     Exercicio *mod2Aula6Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução às Claves" nomeView:@"Mod2Aula4Exe6ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+//Falas
+    Fala *mod2Aula6Exe1fala1 = [[Fala alloc] init];
+    mod2Aula6Exe1fala1.conteudo = @"FALA";
+    
+    Fala *mod2Aula6Exe1fala2 = [[Fala alloc] init];
+    mod2Aula6Exe1fala2.conteudo = @"FALA";
+    
+    Fala *mod2Aula6Exe1fala3 = [[Fala alloc] init];
+    mod2Aula6Exe1fala3.conteudo = @"FALA";
+    
+    Fala *mod2Aula6Exe1fala4 = [[Fala alloc] init];
+    mod2Aula6Exe1fala4.conteudo = @"FALA";
+    
+    Fala *mod2Aula6Exe1fala5 = [[Fala alloc] init];
+    mod2Aula6Exe1fala5.conteudo = @"FALA";
+    
+    //Conversa
+    Conversa *mod2Aula6Exe1conversa1 = [[Conversa alloc] init];
+    [[mod2Aula6Exe1conversa1 listaDeFalas] addObject: mod2Aula6Exe1fala1];
+    [[mod2Aula6Exe1conversa1 listaDeFalas] addObject: mod2Aula6Exe1fala2];
+    [[mod2Aula6Exe1conversa1 listaDeFalas] addObject: mod2Aula6Exe1fala3];
+    [[mod2Aula6Exe1conversa1 listaDeFalas] addObject: mod2Aula6Exe1fala4];
+    [[mod2Aula6Exe1conversa1 listaDeFalas] addObject: mod2Aula6Exe1fala5];
+    [[[mod2Aula6Exe1 mascote] listaDeConversas] addObject: mod2Aula6Exe1conversa1];
     
 //Aula de Claves
     Aula *mod2Aula6 = [[Aula alloc]init];
@@ -1258,12 +1284,178 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
 ////////////////////////////////// Aula 7 //////////////////////////////////////
     
 //Exercicios
+//INTRODUÇÃO AO COMPASSO
     Exercicio *mod2Aula7Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução ao Compasso" nomeView:@"Mod2Aula7Exe1ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+
+//Falas
+    Fala *mod2Aula7Exe1fala1 = [[Fala alloc] init];
+    mod2Aula7Exe1fala1.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe1fala2 = [[Fala alloc] init];
+    mod2Aula7Exe1fala2.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe1fala3 = [[Fala alloc] init];
+    mod2Aula7Exe1fala3.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe1fala4 = [[Fala alloc] init];
+    mod2Aula7Exe1fala4.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe1fala5 = [[Fala alloc] init];
+    mod2Aula7Exe1fala5.conteudo = @"FALA";
+    
+    //Conversa
+    Conversa *mod2Aula7Exe1conversa1 = [[Conversa alloc] init];
+    [[mod2Aula7Exe1conversa1 listaDeFalas] addObject: mod2Aula7Exe1fala1];
+    [[mod2Aula7Exe1conversa1 listaDeFalas] addObject: mod2Aula7Exe1fala2];
+    [[mod2Aula7Exe1conversa1 listaDeFalas] addObject: mod2Aula7Exe1fala3];
+    [[mod2Aula7Exe1conversa1 listaDeFalas] addObject: mod2Aula7Exe1fala4];
+    [[mod2Aula7Exe1conversa1 listaDeFalas] addObject: mod2Aula7Exe1fala5];
+    [[[mod2Aula7Exe1 mascote] listaDeConversas] addObject: mod2Aula7Exe1conversa1];
+    
+    
+//NÚMERO DE COMPASSO
     Exercicio *mod2Aula7Exe2 = [[Exercicio alloc] init:201 nome:@"Número de Compasso" nomeView:@"Mod2Aula7Exe2ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+//Falas
+    Fala *mod2Aula7Exe2fala1 = [[Fala alloc] init];
+    mod2Aula7Exe2fala1.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe2fala2 = [[Fala alloc] init];
+    mod2Aula7Exe2fala2.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe2fala3 = [[Fala alloc] init];
+    mod2Aula7Exe2fala3.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe2fala4 = [[Fala alloc] init];
+    mod2Aula7Exe2fala4.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe2fala5 = [[Fala alloc] init];
+    mod2Aula7Exe2fala5.conteudo = @"FALA";
+    
+    //Conversa
+    Conversa *mod2Aula7Exe2conversa1 = [[Conversa alloc] init];
+    [[mod2Aula7Exe2conversa1 listaDeFalas] addObject: mod2Aula7Exe2fala1];
+    [[mod2Aula7Exe2conversa1 listaDeFalas] addObject: mod2Aula7Exe2fala2];
+    [[mod2Aula7Exe2conversa1 listaDeFalas] addObject: mod2Aula7Exe2fala3];
+    [[mod2Aula7Exe2conversa1 listaDeFalas] addObject: mod2Aula7Exe2fala4];
+    [[mod2Aula7Exe2conversa1 listaDeFalas] addObject: mod2Aula7Exe2fala5];
+    [[[mod2Aula7Exe2 mascote] listaDeConversas] addObject: mod2Aula7Exe2conversa1];
+    
+    
+//UNIDADE DE TEMPO
     Exercicio *mod2Aula7Exe3 = [[Exercicio alloc] init:201 nome:@"Unidade de Tempo" nomeView:@"Mod2Aula7Exe3ViewController" experiencia:10 pontuacaoMaxima:10 :[UIImage imageNamed:@"exercicios.png"]];
+    
+    //Falas
+    Fala *mod2Aula7Exe3fala1 = [[Fala alloc] init];
+    mod2Aula7Exe3fala1.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe3fala2 = [[Fala alloc] init];
+    mod2Aula7Exe3fala2.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe3fala3 = [[Fala alloc] init];
+    mod2Aula7Exe3fala3.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe3fala4 = [[Fala alloc] init];
+    mod2Aula7Exe3fala4.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe3fala5 = [[Fala alloc] init];
+    mod2Aula7Exe3fala5.conteudo = @"FALA";
+    
+    //Conversa
+    Conversa *mod2Aula7Exe3conversa1 = [[Conversa alloc] init];
+    [[mod2Aula7Exe3conversa1 listaDeFalas] addObject: mod2Aula7Exe3fala1];
+    [[mod2Aula7Exe3conversa1 listaDeFalas] addObject: mod2Aula7Exe3fala2];
+    [[mod2Aula7Exe3conversa1 listaDeFalas] addObject: mod2Aula7Exe3fala3];
+    [[mod2Aula7Exe3conversa1 listaDeFalas] addObject: mod2Aula7Exe3fala4];
+    [[mod2Aula7Exe3conversa1 listaDeFalas] addObject: mod2Aula7Exe3fala5];
+    [[[mod2Aula7Exe3 mascote] listaDeConversas] addObject: mod2Aula7Exe3conversa1];
+    
+    
+//FÓRMULA DE COMPASSO
     Exercicio *mod2Aula7Exe4 = [[Exercicio alloc] init:201 nome:@"Fórmula de Compasso" nomeView:@"Mod2Aula7Exe4ViewController" experiencia:10 pontuacaoMaxima:10 :[UIImage imageNamed:@"exercicios.png"]];
+    
+    //Falas
+    Fala *mod2Aula7Exe4fala1 = [[Fala alloc] init];
+    mod2Aula7Exe3fala1.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe4fala2 = [[Fala alloc] init];
+    mod2Aula7Exe3fala2.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe4fala3 = [[Fala alloc] init];
+    mod2Aula7Exe3fala3.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe4fala4 = [[Fala alloc] init];
+    mod2Aula7Exe3fala4.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe4fala5 = [[Fala alloc] init];
+    mod2Aula7Exe3fala5.conteudo = @"FALA";
+    
+    //Conversa
+    Conversa *mod2Aula7Exe4conversa1 = [[Conversa alloc] init];
+    [[mod2Aula7Exe4conversa1 listaDeFalas] addObject: mod2Aula7Exe4fala1];
+    [[mod2Aula7Exe4conversa1 listaDeFalas] addObject: mod2Aula7Exe4fala2];
+    [[mod2Aula7Exe4conversa1 listaDeFalas] addObject: mod2Aula7Exe4fala3];
+    [[mod2Aula7Exe4conversa1 listaDeFalas] addObject: mod2Aula7Exe4fala4];
+    [[mod2Aula7Exe4conversa1 listaDeFalas] addObject: mod2Aula7Exe4fala5];
+    [[[mod2Aula7Exe4 mascote] listaDeConversas] addObject: mod2Aula7Exe4conversa1];
+    
+    
+//COMPLEMENTO
     Exercicio *mod2Aula7Exe5 = [[Exercicio alloc] init:201 nome:@"Complemento" nomeView:@"Mod2Aula7Exe5ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+    //Falas
+    Fala *mod2Aula7Exe5fala1 = [[Fala alloc] init];
+    mod2Aula7Exe5fala1.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe5fala2 = [[Fala alloc] init];
+    mod2Aula7Exe5fala2.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe5fala3 = [[Fala alloc] init];
+    mod2Aula7Exe5fala3.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe5fala4 = [[Fala alloc] init];
+    mod2Aula7Exe5fala4.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe5fala5 = [[Fala alloc] init];
+    mod2Aula7Exe5fala5.conteudo = @"FALA";
+    
+    //Conversa
+    Conversa *mod2Aula7Exe5conversa1 = [[Conversa alloc] init];
+    [[mod2Aula7Exe5conversa1 listaDeFalas] addObject: mod2Aula7Exe5fala1];
+    [[mod2Aula7Exe5conversa1 listaDeFalas] addObject: mod2Aula7Exe5fala2];
+    [[mod2Aula7Exe5conversa1 listaDeFalas] addObject: mod2Aula7Exe5fala3];
+    [[mod2Aula7Exe5conversa1 listaDeFalas] addObject: mod2Aula7Exe5fala4];
+    [[mod2Aula7Exe5conversa1 listaDeFalas] addObject: mod2Aula7Exe5fala5];
+    [[[mod2Aula7Exe5 mascote] listaDeConversas] addObject: mod2Aula7Exe5conversa1];
+    
+    
+//COMPASSO GESTUAL
     Exercicio *mod2Aula7Exe6 = [[Exercicio alloc] init:201 nome:@"Compasso Gestual" nomeView:@"Mod2Aula7Exe6ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+    //Falas
+    Fala *mod2Aula7Exe6fala1 = [[Fala alloc] init];
+    mod2Aula7Exe6fala1.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe6fala2 = [[Fala alloc] init];
+    mod2Aula7Exe6fala2.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe6fala3 = [[Fala alloc] init];
+    mod2Aula7Exe6fala3.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe6fala4 = [[Fala alloc] init];
+    mod2Aula7Exe6fala4.conteudo = @"FALA";
+    
+    Fala *mod2Aula7Exe6fala5 = [[Fala alloc] init];
+    mod2Aula7Exe6fala5.conteudo = @"FALA";
+    
+    //Conversa
+    Conversa *mod2Aula7Exe6conversa1 = [[Conversa alloc] init];
+    [[mod2Aula7Exe6conversa1 listaDeFalas] addObject: mod2Aula7Exe6fala1];
+    [[mod2Aula7Exe6conversa1 listaDeFalas] addObject: mod2Aula7Exe6fala2];
+    [[mod2Aula7Exe6conversa1 listaDeFalas] addObject: mod2Aula7Exe6fala3];
+    [[mod2Aula7Exe6conversa1 listaDeFalas] addObject: mod2Aula7Exe6fala4];
+    [[mod2Aula7Exe6conversa1 listaDeFalas] addObject: mod2Aula7Exe6fala5];
+    [[[mod2Aula7Exe6 mascote] listaDeConversas] addObject: mod2Aula7Exe6conversa1];
     
 //Aula de Compasso
     Aula *mod2Aula7 = [[Aula alloc]init];
@@ -1281,7 +1473,33 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
 ////////////////////////////////// Aula 8 //////////////////////////////////////
     
 //Exercicios
+//RESUMO PARTITURA
     Exercicio *mod2Aula8Exe1 = [[Exercicio alloc] init:201 nome:@"Resumo de Partitura" nomeView:@"Mod2Aula8Exe1ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+    //Falas
+    Fala *mod2Aula8Exe1fala1 = [[Fala alloc] init];
+    mod2Aula8Exe1fala1.conteudo = @"FALA";
+    
+    Fala *mod2Aula8Exe1fala2 = [[Fala alloc] init];
+    mod2Aula8Exe1fala2.conteudo = @"FALA";
+    
+    Fala *mod2Aula8Exe1fala3 = [[Fala alloc] init];
+    mod2Aula8Exe1fala3.conteudo = @"FALA";
+    
+    Fala *mod2Aula8Exe1fala4 = [[Fala alloc] init];
+    mod2Aula8Exe1fala4.conteudo = @"FALA";
+    
+    Fala *mod2Aula8Exe1fala5 = [[Fala alloc] init];
+    mod2Aula8Exe1fala5.conteudo = @"FALA";
+    
+    //Conversa
+    Conversa *mod2Aula8Exe1conversa1 = [[Conversa alloc] init];
+    [[mod2Aula8Exe1conversa1 listaDeFalas] addObject: mod2Aula8Exe1fala1];
+    [[mod2Aula8Exe1conversa1 listaDeFalas] addObject: mod2Aula8Exe1fala2];
+    [[mod2Aula8Exe1conversa1 listaDeFalas] addObject: mod2Aula8Exe1fala3];
+    [[mod2Aula8Exe1conversa1 listaDeFalas] addObject: mod2Aula8Exe1fala4];
+    [[mod2Aula8Exe1conversa1 listaDeFalas] addObject: mod2Aula8Exe1fala5];
+    [[[mod2Aula8Exe1 mascote] listaDeConversas] addObject: mod2Aula8Exe1conversa1];
     
 //Aula de Claves
     Aula *mod2Aula8 = [[Aula alloc]init];
