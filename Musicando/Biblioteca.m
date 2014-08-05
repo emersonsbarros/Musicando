@@ -586,8 +586,128 @@
     
 //Exercicios
     Exercicio *mod2Aula1Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução à Notas" nomeView:@"Mod2Aula1Exe1ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
-    Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Notas" nomeView:@"Mod2Aula1Exe2ViewController" experiencia:10 pontuacaoMaxima:10 :[UIImage imageNamed:@"exercicios.png"]];
-    Exercicio *mod2Aula1Exe3 = [[Exercicio alloc] init:202 nome:@"História das Notas" nomeView:@"Mod2Aula1Exe3ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+
+
+    //Falas do Mascote
+    //Falas
+    Fala *mod1Aula1Exe1fala1 = [[Fala alloc] init];
+    mod1Aula1Exe1fala1.conteudo = @"Agora vamos comecar a entrar no mundo das partituras, mais antes vamos falar sobre Notas!";
+    
+    Fala *mod1Aula1Exe1fala2 = [[Fala alloc] init];
+    mod1Aula1Exe1fala2.conteudo = @"Lembra aquela nossa aula sobre som, a nota musical pode ser chamanda assim, porem el retorna uma frequencia unica, meio confuso né, vamos a pratica";
+    
+    Fala *mod1Aula1Exe1fala3 = [[Fala alloc] init];
+    mod1Aula1Exe1fala3.conteudo = @"Toca nas teclas do Piano acima e veja que cada tecla corresponde a uma nota musical com uma frequencia constante, com um som unico e sem alteracoes";
+    
+    Fala *mod1Aula1Exe1fala4 = [[Fala alloc] init];
+    mod1Aula1Exe1fala4.conteudo = @"Assim como o som, a nota tem a sua duracao, o seu timbre depedendo do intrumento, a intensidade do volume, e a altura que é quando o som é grave ou agudo!";
+    
+    Fala *mod1Aula1Exe1fala5 = [[Fala alloc] init];
+    mod1Aula1Exe1fala5.conteudo = @"Para dividir essas notas com os 4 pilastres aprendidos até agora, criaram escalas para ajudar na aprendizagem e evitar erros de interpretacao, onde podemos imaginalá como uma escada!";
+    
+    Fala *mod1Aula1Exe1fala6 = [[Fala alloc] init];
+    mod1Aula1Exe1fala6.conteudo = @"Essa escala é divida em 7 notas, cada uma com seus respectivos pilares que as fazem diferenciar uma da outra, vamos ao exemplo";
+    
+    Fala *mod1Aula1Exe1fala7 = [[Fala alloc] init];
+    mod1Aula1Exe1fala7.conteudo = @"De um toque em cada imagem do mascote de baixo para cima e veja como uma se difere da outra, observe que quanto mais alto fica na escada, mais a nota fica aguda";
+    
+    Fala *mod1Aula1Exe1fala8 = [[Fala alloc] init];
+    mod1Aula1Exe1fala8.conteudo = @"Observamos que ao passar de cada degrau da escada, a nossa nota fica cada vez mais aguda e menos grave assim alterando a altura, logo juntando com os outros 3 pilastres essas notas formam uma escala!";
+    
+    Fala *mod1Aula1Exe1fala9 = [[Fala alloc] init];
+    mod1Aula1Exe1fala9.conteudo = @"Essas notas divididas dentro de uma escala ganham o nome aqui no Brasil de Dó – ré – mi – fá – sol – Lá – si";
+    
+    Fala *mod1Aula1Exe1fala10 = [[Fala alloc] init];
+    mod1Aula1Exe1fala10.conteudo = @"É interessante falar que em outros paises essas notas podem ganhar outro nome, como o EUA que usam os termos C – D – E – F – G – A – B para dividir as notas de uma escala";
+    
+    //Conversa
+    Conversa *mod2Aula1Exe1conversa1 = [[Conversa alloc] init];
+    [[mod2Aula1Exe1conversa1 listaDeFalas] addObject: mod1Aula1Exe1fala1];
+    [[mod2Aula1Exe1conversa1 listaDeFalas] addObject: mod1Aula1Exe1fala2];
+    [[mod2Aula1Exe1conversa1 listaDeFalas] addObject: mod1Aula1Exe1fala3];
+    [[mod2Aula1Exe1conversa1 listaDeFalas] addObject: mod1Aula1Exe1fala4];
+    [[mod2Aula1Exe1conversa1 listaDeFalas] addObject: mod1Aula1Exe1fala5];
+    [[mod2Aula1Exe1conversa1 listaDeFalas] addObject: mod1Aula1Exe1fala6];
+    [[mod2Aula1Exe1conversa1 listaDeFalas] addObject: mod1Aula1Exe1fala7];
+    [[mod2Aula1Exe1conversa1 listaDeFalas] addObject: mod1Aula1Exe1fala8];
+    [[mod2Aula1Exe1conversa1 listaDeFalas] addObject: mod1Aula1Exe1fala9];
+    [[mod2Aula1Exe1conversa1 listaDeFalas] addObject: mod1Aula1Exe1fala10];
+    
+    [[[mod2Aula1Exe1 mascote] listaDeConversas] addObject:mod2Aula1Exe1conversa1];
+
+    
+    
+////////////////////////////Exercicios
+Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Notas" nomeView:@"Mod2Aula1Exe2ViewController" experiencia:10 pontuacaoMaxima:10 :[UIImage imageNamed:@"exercicios.png"]];
+
+    //Falas do Mascote
+    //Falas
+    Fala *mod1Aula1Exe2fala1 = [[Fala alloc] init];
+    mod1Aula1Exe2fala1.conteudo = @"Agora vamos gravar bem o nome e a ordem dessas divisioes da escala";
+    
+    Fala *mod1Aula1Exe2fala2 = [[Fala alloc] init];
+    mod1Aula1Exe2fala2.conteudo = @"Então repita comigo Dó-Ré-Mi-Fa-So-La-Si! e acompanhe o audio";
+    
+    Fala *mod1Aula1Exe2fala3 = [[Fala alloc] init];
+    mod1Aula1Exe2fala3.conteudo = @"Ache dentro dessa sopa de letras o nome das 7 notas abrendidas até agora!";
+    
+    Fala *mod1Aula1Exe2fala4 = [[Fala alloc] init];
+    mod1Aula1Exe2fala4.conteudo = @"Heh Jow, É isso ai!, agora que voce já tem uma nocão, tente colocar as notas das plaquinhas acima na ordem correta em que aprendemos até aqui, parra isso arraste para os pontos pretos acima cada plaquinha";
+    
+    Fala *mod1Aula1Exe2fala5 = [[Fala alloc] init];
+    mod1Aula1Exe2fala5.conteudo = @"Oh ou! temos um problema o Toca Treco está Maluco e está jogando notas que não existem, e sua funcao e não deixar sair notas com os nomes errados, sempre que aparecer um nome diferente faca um gesto igual a imagem acima!";
+    
+    Fala *mod1Aula1Exe2fala6 = [[Fala alloc] init];
+    mod1Aula1Exe2fala6.conteudo = @"Ufa! voce conseguiu arrumar o Toca Treco, imagina a chiadeira dele fazendo notas que não existem!";
+
+    
+    //Conversa
+    Conversa *mod2Aula1Exe2conversa1 = [[Conversa alloc] init];
+    [[mod2Aula1Exe2conversa1 listaDeFalas] addObject: mod1Aula1Exe2fala1];
+    [[mod2Aula1Exe2conversa1 listaDeFalas] addObject: mod1Aula1Exe2fala2];
+    [[mod2Aula1Exe2conversa1 listaDeFalas] addObject: mod1Aula1Exe2fala3];
+    [[mod2Aula1Exe2conversa1 listaDeFalas] addObject: mod1Aula1Exe2fala4];
+    [[mod2Aula1Exe2conversa1 listaDeFalas] addObject: mod1Aula1Exe2fala5];
+    [[mod2Aula1Exe2conversa1 listaDeFalas] addObject: mod1Aula1Exe2fala6];
+    
+    [[[mod2Aula1Exe2 mascote] listaDeConversas] addObject:mod2Aula1Exe2conversa1];
+
+////////////////////////////Exercicios
+    
+  Exercicio *mod2Aula1Exe3 = [[Exercicio alloc] init:203 nome:@"História das Notas" nomeView:@"Mod2Aula1Exe3ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+    //Falas do Mascote
+    //Falas
+    
+    Fala *mod2Aula1Exe3fala0 = [[Fala alloc] init];
+    mod2Aula1Exe3fala0.conteudo = @"Bem, agora vamos falar um poquinho sobre a historia das notas Musicais, muitos tentaram chegar a um padrão mais somente no fim dos anos 1000 que chegaram ao que nós usamos hoje!";
+
+    Fala *mod2Aula1Exe3fala1 = [[Fala alloc] init];
+    mod2Aula1Exe3fala1.conteudo = @"A principio elas foram criadas por um Monge chamado Guido de Arezzo, que tirou de uma letra de musica latim os nomes das notas em homenagem ao Santo João";
+    
+    Fala *mod2Aula1Exe3fala2 = [[Fala alloc] init];
+    mod2Aula1Exe3fala2.conteudo = @"Ele percebeu que com a criacao de uma simples escala musical, facilitaria o aprendizado dos alunos e diminuia possiveis erros de interpretacoes de obras";
+    
+    Fala *mod2Aula1Exe3fala3 = [[Fala alloc] init];
+    mod2Aula1Exe3fala3.conteudo = @"Porem só bem depois no seculo 17 foi revisto os nomes das notas e a nota Dó foi criada e colocada no lugar do Ut!";
+    
+    Fala *mod2Aula1Exe3fala4 = [[Fala alloc] init];
+    mod2Aula1Exe3fala4.conteudo = @"Realmente as historias por parte da Musica me deixam muito curioso, ainda veremos mais ao longo da nossa Jornada!";
+    
+    
+    
+    //Conversa
+    Conversa *mod2Aula1Exe3conversa1 = [[Conversa alloc] init];
+    [[mod2Aula1Exe3conversa1 listaDeFalas] addObject: mod2Aula1Exe3fala0];
+    [[mod2Aula1Exe3conversa1 listaDeFalas] addObject: mod2Aula1Exe3fala1];
+    [[mod2Aula1Exe3conversa1 listaDeFalas] addObject: mod2Aula1Exe3fala2];
+    [[mod2Aula1Exe3conversa1 listaDeFalas] addObject: mod2Aula1Exe3fala3];
+    [[mod2Aula1Exe3conversa1 listaDeFalas] addObject: mod2Aula1Exe3fala4];
+    
+    [[[mod2Aula1Exe3 mascote] listaDeConversas] addObject:mod2Aula1Exe3conversa1];
+    
+    
+////////////////////////////////
     
 //Aula de Notas
     Aula *mod2Aula1 = [[Aula alloc]init];
@@ -599,11 +719,47 @@
 
     
     
+    
+    
 ////////////////////////////////// Aula 2 //////////////////////////////////////
     
 //Exercicios
     Exercicio *mod2Aula2Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução às Pausas" nomeView:@"Mod2Aula2Exe1ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
-    Exercicio *mod2Aula2Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando Pausas" nomeView:@"Mod2Aula2Exe12ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+
+//Falas do Mascote
+    //Falas
+    Fala *mod2Aula2Exe1fala1 = [[Fala alloc] init];
+    mod2Aula2Exe1fala1.conteudo = @"Agora falaremos sobre Pausas, elas são basicamente silencios que fazem por determinado tempo! Logo elas são diferentes de Sons ou Notas já que só possuem um pilar, a duracao!";
+    
+    Fala *mod2Aula2Exe1fala2 = [[Fala alloc] init];
+    mod2Aula2Exe1fala2.conteudo = @"A Pausa é um assunto bem simples mais de muita importancia, já que junto com as notas constroem um ritmo! Jogue as 2 Musicas no Toca Treco e observe com pausa e sem pausa como ritmo fica";
+    
+    Fala *mod2Aula2Exe1fala3 = [[Fala alloc] init];
+    mod2Aula2Exe1fala3.conteudo = @"Dentro do mundo da Musica as pausas podem se dividir em diversos tempos, ou seja o tempo de silencio que ela pode ter";
+    
+    Fala *mod2Aula2Exe1fala4 = [[Fala alloc] init];
+    mod2Aula2Exe1fala4.conteudo = @"Agora toque nos pontos pretos e veja o que acontece, e depois associe ao 3 elementos: Pausa, Som, Nota!";
+    
+    Fala *mod2Aula2Exe1fala5 = [[Fala alloc] init];
+    mod2Aula2Exe1fala5.conteudo = @"Muito bem! Agora vamos aprofundar mais um pouco que daqui a pouco viram os Pentagramas!";
+    
+    
+//Conversa
+    Conversa *mod2Aula2Exe1conversa1 = [[Conversa alloc] init];
+    [[mod2Aula2Exe1conversa1 listaDeFalas] addObject: mod2Aula2Exe1fala1];
+    [[mod2Aula2Exe1conversa1 listaDeFalas] addObject: mod2Aula2Exe1fala2];
+    [[mod2Aula2Exe1conversa1 listaDeFalas] addObject: mod2Aula2Exe1fala3];
+    [[mod2Aula2Exe1conversa1 listaDeFalas] addObject: mod2Aula2Exe1fala4];
+    [[mod2Aula2Exe1conversa1 listaDeFalas] addObject: mod2Aula2Exe1fala5];
+ 
+    
+    [[[mod2Aula2Exe1 mascote] listaDeConversas] addObject:mod2Aula2Exe1conversa1];
+
+//////////////////////////// EXERCICIOS 2 ////////////////////////
+    
+Exercicio *mod2Aula2Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando Pausas" nomeView:@"Mod2Aula2Exe2ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
     
 //Aula de Pausas
     Aula *mod2Aula2 = [[Aula alloc]init];
@@ -719,7 +875,7 @@
     //Cria o modulo Intermediario
     Modulo *moduloIntermediario = [[Modulo alloc]init];
     moduloIntermediario.nome = @"Intermediario";
-    moduloIntermediario.capa = [UIImage imageNamed:@"escada.png"];
+    moduloIntermediario.capa = [UIImage imageNamed:@"escadaModulo.png"];
     [[moduloIntermediario listaDeAulas]addObject: mod2Aula1];
     [[moduloIntermediario listaDeAulas]addObject: mod2Aula2];
     [[moduloIntermediario listaDeAulas]addObject: mod2Aula3];

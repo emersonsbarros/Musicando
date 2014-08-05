@@ -42,7 +42,7 @@
 //Adiciona e remove a animcao de um sprite
 -(void)addAnimacaoSprite:(NSArray*)listaSprite :(UIImageView*)imgAddAnimacao;
 -(void)removeAnimacaoSprite:(NSString*)nomeAnimacao :(UIImageView*)imgAddAnimacao;
-
+-(void)addAnimacaoSprite:(NSArray*)listaSprite :(UIImageView*)imgAddAnimacao :(float)tempoTransicao :(float)qtdRepeticoes;
 
 //Hidden em degrade
 -(void)hiddenYesEmDegrade:(UIView*)imgHidden;

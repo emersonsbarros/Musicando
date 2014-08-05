@@ -187,7 +187,7 @@
     if (nowIntersecting){
         self.imgGraficoGrave.hidden = true;
         self.lblVisorTocaTreco.text = @"Grave";
-        [self.listaLiberaFala addObject:self.estadoAux2];
+        [self.listaLiberaFala addObject:self.estadoAux1];
         
         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"P200 Piano A#2" withExtension:@"caf"];
         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
@@ -481,8 +481,8 @@
                                     repeats: YES];
     
     //Metodo que verifica o passar fala, nele tem que passar a qt de objetos que colidirá nessa fala, no caso 3
-    //[[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote2 :self.viewGesturePassaFala:self.listaLiberaFala:4];
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+    [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote2 :self.viewGesturePassaFala:self.listaLiberaFala:4];
+    
     
 }
 
@@ -841,7 +841,7 @@
     
     UIImageView *traco2 = [[UIImageView alloc]init];
     traco2.backgroundColor = [UIColor redColor];
-    traco2.frame = CGRectMake(26,210,5,40);
+    traco2.frame = CGRectMake(27,210,5,40);
     traco2.hidden = YES;
     [self.imgAmplitude addSubview:traco2];
     

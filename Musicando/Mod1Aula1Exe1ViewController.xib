@@ -53,10 +53,6 @@
                     <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IIA-0n-JtT">
-                    <rect key="frame" x="839" y="516" width="243" height="296"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tocaTreco.png" translatesAutoresizingMaskIntoConstraints="NO" id="9l5-36-ag6">
                     <rect key="frame" x="20" y="492" width="491" height="256"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -86,8 +82,14 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F6H-tr-YnU">
-                    <rect key="frame" x="899" y="531" width="119" height="229"/>
+                    <rect key="frame" x="883" y="569" width="141" height="199"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IIA-0n-JtT">
+                            <rect key="frame" x="-5" y="-6" width="146" height="205"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dBz-Rs-4GG">
                     <rect key="frame" x="149" y="145" width="742" height="502"/>
@@ -114,7 +116,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="B6J-TP-QgU">
-                            <rect key="frame" x="428" y="-11" width="275" height="350"/>
+                            <rect key="frame" x="500" y="35" width="172" height="239"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5499999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Há momentos que nosso mascote quer falar mais coisas, para isso basta tocar com o dedo quando ele estiver brilhando" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="374" translatesAutoresizingMaskIntoConstraints="NO" id="vRv-D0-l0z">
@@ -215,7 +217,7 @@
         <image name="gesturePassaFalaMascote.png" width="320" height="640"/>
         <image name="gesturePassaFalaMascoteTap.png" width="320" height="640"/>
         <image name="lazerMusica.png" width="110" height="150"/>
-        <image name="mascote.png" width="1000" height="1000"/>
+        <image name="mascote.png" width="460" height="623"/>
         <image name="palmas.png" width="150" height="146"/>
         <image name="panelaMusica.png" width="150" height="86"/>
         <image name="saudeMusica.png" width="150" height="145"/>

@@ -34,6 +34,10 @@
 -(void)chamaViewTransicaoExercicio:(UIViewController*)viewProxAula :(NSString*)nomeDaViewAtual;
 -(NSString*)retornaONomeDaProximaAula:(NSString*)nomeDaViewAtual;
 
+
+
+
+
 @end
 
 
