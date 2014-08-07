@@ -10,6 +10,12 @@
 		0B03193719520C5D00316D6B /* modulo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B03193519520C5D00316D6B /* modulo.png */; };
 		0B03193819520C5D00316D6B /* aula.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B03193619520C5D00316D6B /* aula.png */; };
 		0B03193B19521C0B00316D6B /* AulasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B03193A19521C0B00316D6B /* AulasViewController.m */; };
+		0BD9C9541993F97C0094E7D9 /* numeradaLinhasPentagrama.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BD9C9531993F97C0094E7D9 /* numeradaLinhasPentagrama.png */; };
+		0BD9C95B199412240094E7D9 /* pausa1-16Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BD9C956199412240094E7D9 /* pausa1-16Tempo.png */; };
+		0BD9C95C199412240094E7D9 /* pausa1-2Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BD9C957199412240094E7D9 /* pausa1-2Tempo.png */; };
+		0BD9C95D199412240094E7D9 /* pausa1-4Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BD9C958199412240094E7D9 /* pausa1-4Tempo.png */; };
+		0BD9C95E199412240094E7D9 /* pausa1-8Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BD9C959199412240094E7D9 /* pausa1-8Tempo.png */; };
+		0BD9C95F199412240094E7D9 /* pausa1Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BD9C95A199412240094E7D9 /* pausa1Tempo.png */; };
 		2B0041A6197EF99A00EB1D54 /* pausaBloco.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0041A5197EF99A00EB1D54 /* pausaBloco.png */; };
 		2B0041A8197EF9AD00EB1D54 /* conjuntoPessoas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B0041A7197EF9AD00EB1D54 /* conjuntoPessoas.jpg */; };
 		2B0041AA197EF9BC00EB1D54 /* conjuntoInstrumentos.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0041A9197EF9BC00EB1D54 /* conjuntoInstrumentos.png */; };
@@ -396,6 +402,12 @@
 		0B03193619520C5D00316D6B /* aula.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aula.png; sourceTree = "<group>"; };
 		0B03193919521C0B00316D6B /* AulasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AulasViewController.h; sourceTree = "<group>"; };
 		0B03193A19521C0B00316D6B /* AulasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AulasViewController.m; sourceTree = "<group>"; };
+		0BD9C9531993F97C0094E7D9 /* numeradaLinhasPentagrama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = numeradaLinhasPentagrama.png; sourceTree = "<group>"; };
+		0BD9C956199412240094E7D9 /* pausa1-16Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pausa1-16Tempo.png"; sourceTree = "<group>"; };
+		0BD9C957199412240094E7D9 /* pausa1-2Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pausa1-2Tempo.png"; sourceTree = "<group>"; };
+		0BD9C958199412240094E7D9 /* pausa1-4Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pausa1-4Tempo.png"; sourceTree = "<group>"; };
+		0BD9C959199412240094E7D9 /* pausa1-8Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pausa1-8Tempo.png"; sourceTree = "<group>"; };
+		0BD9C95A199412240094E7D9 /* pausa1Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pausa1Tempo.png; sourceTree = "<group>"; };
 		2B0041A5197EF99A00EB1D54 /* pausaBloco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pausaBloco.png; sourceTree = "<group>"; };
 		2B0041A7197EF9AD00EB1D54 /* conjuntoPessoas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = conjuntoPessoas.jpg; sourceTree = "<group>"; };
 		2B0041A9197EF9BC00EB1D54 /* conjuntoInstrumentos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = conjuntoInstrumentos.png; sourceTree = "<group>"; };
@@ -868,6 +880,7 @@
 		0B03193419520C5D00316D6B /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				0BD9C9531993F97C0094E7D9 /* numeradaLinhasPentagrama.png */,
 				2BA3E2DD19871E9600455FFE /* pilarHarmonia.png */,
 				2BA3E2DE19871E9600455FFE /* pilarMelodia.png */,
 				2BA3E2DF19871E9600455FFE /* pilarRitmo.png */,
@@ -990,9 +1003,22 @@
 				3FB8D9B4198FF8D600C8A520 /* bolaPausa.png */,
 				3FB8D9B5198FF8D600C8A520 /* bolaSom.png */,
 				3FB8D9B9198FFC1300C8A520 /* x.png */,
+				0BD9C955199412240094E7D9 /* pausasQualidade */,
 			);
 			name = Imagens;
 			path = Musicando/Imagens;
+			sourceTree = "<group>";
+		};
+		0BD9C955199412240094E7D9 /* pausasQualidade */ = {
+			isa = PBXGroup;
+			children = (
+				0BD9C956199412240094E7D9 /* pausa1-16Tempo.png */,
+				0BD9C957199412240094E7D9 /* pausa1-2Tempo.png */,
+				0BD9C958199412240094E7D9 /* pausa1-4Tempo.png */,
+				0BD9C959199412240094E7D9 /* pausa1-8Tempo.png */,
+				0BD9C95A199412240094E7D9 /* pausa1Tempo.png */,
+			);
+			path = pausasQualidade;
 			sourceTree = "<group>";
 		};
 		2B64F9DE19691F8600BC57FD /* Iniciante */ = {
@@ -1863,6 +1889,7 @@
 				2B64FA211969224F00BC57FD /* Mod2Aula2Exe2ViewController.xib in Resources */,
 				2B0041C5197EFCB400EB1D54 /* sambaSimbolo.jpg in Resources */,
 				3FAA1FEC196D08A000C32F03 /* ventoPipa.png in Resources */,
+				0BD9C95D199412240094E7D9 /* pausa1-4Tempo.png in Resources */,
 				2B64FA001969215900BC57FD /* Mod1Aula4Exe1ViewController.xib in Resources */,
 				3FD9741819744097002EB77A /* panela.png in Resources */,
 				2B64FA621969232B00BC57FD /* Mod2Aula7Exe1ViewController.xib in Resources */,
@@ -1883,6 +1910,7 @@
 				3F7B679E197CA17B0095CF0F /* carnavalframe5.gif in Resources */,
 				3F608DCE196C7585001979E9 /* P200 Piano A#3.caf in Resources */,
 				3F608D65196C7585001979E9 /* mib1.caf in Resources */,
+				0BD9C95F199412240094E7D9 /* pausa1Tempo.png in Resources */,
 				3FAA1FE4196D034F00C32F03 /* vento.wav in Resources */,
 				2BA3E2D21986DA9800455FFE /* harmoniaPiano.wav in Resources */,
 				3F608D7F196C7585001979E9 /* semibreve.png in Resources */,
@@ -1906,6 +1934,7 @@
 				3F608D85196C7585001979E9 /* 2.png in Resources */,
 				3F608D75196C7585001979E9 /* dot.gif in Resources */,
 				3F608D5B196C7585001979E9 /* do1.caf in Resources */,
+				0BD9C95C199412240094E7D9 /* pausa1-2Tempo.png in Resources */,
 				2B64FA3A196922A400BC57FD /* Mod2Aula4Exe2ViewController.xib in Resources */,
 				2B0041AE197EF9D300EB1D54 /* doBloco.png in Resources */,
 				2BA3E2E119871E9600455FFE /* pilarHarmonia.png in Resources */,
@@ -1955,6 +1984,7 @@
 				2B0041AA197EF9BC00EB1D54 /* conjuntoInstrumentos.png in Resources */,
 				2B64F9EB196920D000BC57FD /* Mod1Aula3Exe1ViewController.xib in Resources */,
 				3F608DD8196C7585001979E9 /* P200 Piano D5.caf in Resources */,
+				0BD9C95B199412240094E7D9 /* pausa1-16Tempo.png in Resources */,
 				3F608DDD196C7585001979E9 /* P200 Piano F#5.caf in Resources */,
 				3FAABF02197E1DC800AAD8FD /* pianoTimbre.png in Resources */,
 				3FDE64C819762B4100EECEE8 /* spark.png in Resources */,
@@ -2017,6 +2047,7 @@
 				3F7B67B5197CF7520095CF0F /* tela.png in Resources */,
 				3F70E5D01974E1FE00535869 /* teclaPiano.png in Resources */,
 				0B03193819520C5D00316D6B /* aula.png in Resources */,
+				0BD9C95E199412240094E7D9 /* pausa1-8Tempo.png in Resources */,
 				3F70E5D11974E1FE00535869 /* telefoneFixo.png in Resources */,
 				3F608DA5196C7585001979E9 /* cavaleiros.xml in Resources */,
 				2B0FDB3B196A51AC00228116 /* mascote.png in Resources */,
@@ -2034,6 +2065,7 @@
 				3FACD01B198B3ED5006DEC61 /* escalaInteira.png in Resources */,
 				2B64FA7B1969235B00BC57FD /* Mod2Aula7Exe6ViewController.xib in Resources */,
 				3FAABF0B197E315B00AAD8FD /* frequenciaFlauta.jpg in Resources */,
+				0BD9C9541993F97C0094E7D9 /* numeradaLinhasPentagrama.png in Resources */,
 				3F608D7C196C7585001979E9 /* colcheia.png in Resources */,
 				3FAABF0D197E315B00AAD8FD /* frequenciaViolino.jpg in Resources */,
 				3FB8D9BA198FFC1300C8A520 /* x.png in Resources */,

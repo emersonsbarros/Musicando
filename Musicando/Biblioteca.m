@@ -1135,32 +1135,57 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     
 
 //SÍMBOLO DAS PAUSAS
-    Exercicio *mod2Aula4Exe6 = [[Exercicio alloc] init:202 nome:@"Introdução aos símbolos das pausas" nomeView:@"Mod2Aula4Exe6ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod2Aula4Exe6 = [[Exercicio alloc] init:202 nome:@"Símbolos das pausas" nomeView:@"Mod2Aula4Exe6ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
     
 //Falas
     Fala *mod2Aula4Exe6fala1 = [[Fala alloc] init];
-    mod2Aula4Exe6fala1.conteudo = @"FALA";
+    mod2Aula4Exe6fala1.conteudo = @"Lembra da nossa introducao sobre Pausas e que a pausa só possui um pilar que é a duracao, então agora é hora de dar nome aos Bois!";
     
     Fala *mod2Aula4Exe6fala2 = [[Fala alloc] init];
-    mod2Aula4Exe6fala2.conteudo = @"FALA";
+    mod2Aula4Exe6fala2.conteudo = @"As pausas assim como as notas recebem um tipo de imagem que corresponde ao sua duracao, por exemplo a primeira que vemos é a de 4 tempos e depois a de 2";
     
     Fala *mod2Aula4Exe6fala3 = [[Fala alloc] init];
-    mod2Aula4Exe6fala3.conteudo = @"FALA";
+    mod2Aula4Exe6fala3.conteudo =  @"Só que nesse caso a diferenca não está entre as formas da imagem, mais sim no posicionamento no pentagrama, repare que a pausa de 2 tempos fica encostada na linha de baixo e a de 4 tempos na linha cima";
     
     Fala *mod2Aula4Exe6fala4 = [[Fala alloc] init];
-    mod2Aula4Exe6fala4.conteudo = @"FALA";
-    
-    Fala *mod2Aula4Exe6fala5 = [[Fala alloc] init];
-    mod2Aula4Exe6fala5.conteudo = @"FALA";
+    mod2Aula4Exe6fala4.conteudo =  @"Uma maneira facil de lembrar a posicao certa de cada uma é que a de duracao mais alta fica a cima da de menor tempo, pois seu pilar duracao é maior!";
 
-    //Conversa
+    Fala *mod2Aula4Exe6fala5 = [[Fala alloc] init];
+    mod2Aula4Exe6fala5.conteudo = @"Depois vem a imagem de 1 tempo que tem uma imagem unica, como se fosse um raio!";
+    
+    
+    Fala *mod2Aula4Exe6fala6 = [[Fala alloc] init];
+    mod2Aula4Exe6fala6.conteudo = @"Depois vai se diminuindo os tempos e aparecendo novas imagens, onde segue essa ordem acima!";
+    
+    Fala *mod2Aula4Exe6fala7 = [[Fala alloc] init];
+    mod2Aula4Exe6fala7.conteudo = @"É interessante reparar que depois da nota de 1/2 tempo a imagem se mantem, porem vai se adicionando perninhas a imagem, onde a quantidade delas está relacionado ao quanto vc divide esse 0.5 tempo";
+    
+    Fala *mod2Aula4Exe6fala8 = [[Fala alloc] init];
+    mod2Aula4Exe6fala8.conteudo = @"Por exemplo, se aparecer 2 pernas, voce esta dividindo esse 0.5 tempo em 2, logo vira 1/4 ou 0.25 tempos, e assim sucessivamente";
+    
+    Fala *mod2Aula4Exe6fala9 = [[Fala alloc] init];
+    mod2Aula4Exe6fala9.conteudo = @"Lembrando que as Pausas sempre ficam no meio do Pentagrama, porque elas tem somente o pilar de duracao e não o de altura, assim não se preocupa com o nome da nota dentro da escala!";
+    
+    Fala *mod2Aula4Exe6fala10 = [[Fala alloc] init];
+    mod2Aula4Exe6fala10.conteudo = @"Agora vamos treinar um pouco, ligue essas imagens de Pausa ao seu respectivo tempo!";
+    
+    Fala *mod2Aula4Exe6fala11 = [[Fala alloc] init];
+    mod2Aula4Exe6fala11.conteudo = @"Muito bem! Agora que voce já sabe a simbologia das notas em pausas logo voce aprenderá o nome especifico dado para cada imagem dessa!";
+    
     Conversa *mod2Aula4Exe6conversa1 = [[Conversa alloc] init];
     [[mod2Aula4Exe6conversa1 listaDeFalas] addObject: mod2Aula4Exe6fala1];
     [[mod2Aula4Exe6conversa1 listaDeFalas] addObject: mod2Aula4Exe6fala2];
     [[mod2Aula4Exe6conversa1 listaDeFalas] addObject: mod2Aula4Exe6fala3];
     [[mod2Aula4Exe6conversa1 listaDeFalas] addObject: mod2Aula4Exe6fala4];
     [[mod2Aula4Exe6conversa1 listaDeFalas] addObject: mod2Aula4Exe6fala5];
-    [[[mod2Aula4Exe6 mascote] listaDeConversas] addObject: mod2Aula4Exe6conversa1];
+    [[mod2Aula4Exe6conversa1 listaDeFalas] addObject: mod2Aula4Exe6fala6];
+    [[mod2Aula4Exe6conversa1 listaDeFalas] addObject: mod2Aula4Exe6fala7];
+    [[mod2Aula4Exe6conversa1 listaDeFalas] addObject: mod2Aula4Exe6fala8];
+    [[mod2Aula4Exe6conversa1 listaDeFalas] addObject: mod2Aula4Exe6fala9];
+    [[mod2Aula4Exe6conversa1 listaDeFalas] addObject: mod2Aula4Exe6fala10];
+    [[mod2Aula4Exe6conversa1 listaDeFalas] addObject: mod2Aula4Exe6fala11];
+    
+    [[[mod2Aula4Exe6 mascote] listaDeConversas] addObject:mod2Aula4Exe6conversa1];
     
     
 //RESUMO FINAL
@@ -1196,12 +1221,12 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     mod2Aula4.nome = @"Notação nota/pausa";
     mod2Aula4.capa = [UIImage imageNamed:@"aula.png"];
     [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe1];
-    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe2];
-    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe3];
-    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe4];
-    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe5];
+//    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe2];
+//    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe3];
+//    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe4];
+//    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe5];
     [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe6];
-    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe7];
+//    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe7];
 
     
 ////////////////////////////////// Aula 5 //////////////////////////////////////
