@@ -12,10 +12,7 @@
 
 @interface TransicaoExercicioViewController : UIViewController
 
-
 @property NSMutableArray *listaImagensCai;
-
-
 @property (weak, nonatomic) IBOutlet UILabel *txtProximaAula;
 
 @end

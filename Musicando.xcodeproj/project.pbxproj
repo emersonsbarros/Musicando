@@ -192,8 +192,6 @@
 		3FAC5922197F5BE8001B762F /* BarraSuperiorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FAC5920197F5BE8001B762F /* BarraSuperiorViewController.xib */; };
 		3FAC5925197F7146001B762F /* EfeitoBarraSuperior.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC5924197F7146001B762F /* EfeitoBarraSuperior.m */; };
 		3FAC5929197F7923001B762F /* BibliotecaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC5928197F7923001B762F /* BibliotecaViewController.m */; };
-		3FAC668F1984ADD700BED55E /* TransicaoExercicioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC668D1984ADD700BED55E /* TransicaoExercicioViewController.m */; };
-		3FAC66901984ADD700BED55E /* TransicaoExercicioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FAC668E1984ADD700BED55E /* TransicaoExercicioViewController.xib */; };
 		3FAD24521973843A00DEDFF8 /* EfeitoImagem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD24511973843A00DEDFF8 /* EfeitoImagem.m */; };
 		3FAD24551973975500DEDFF8 /* EfeitoMascote.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD24541973975500DEDFF8 /* EfeitoMascote.m */; };
 		3FAD24591973AD8200DEDFF8 /* Mod1Aula2Exe2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD24571973AD8200DEDFF8 /* Mod1Aula2Exe2ViewController.m */; };
@@ -416,6 +414,8 @@
 		A84855B51994137D00C5F0A3 /* violaoPonto.wav in Resources */ = {isa = PBXBuildFile; fileRef = A84855871994137D00C5F0A3 /* violaoPonto.wav */; };
 		A84855BA1994146500C5F0A3 /* ComposicaoPartituraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A84855B71994146500C5F0A3 /* ComposicaoPartituraViewController.m */; };
 		A84855BB1994146500C5F0A3 /* LeituraPartituraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A84855B91994146500C5F0A3 /* LeituraPartituraViewController.m */; };
+		A84855BF199416D100C5F0A3 /* TransicaoExercicioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A84855BD199416D100C5F0A3 /* TransicaoExercicioViewController.m */; };
+		A84855C0199416D100C5F0A3 /* TransicaoExercicioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84855BE199416D100C5F0A3 /* TransicaoExercicioViewController.xib */; };
 		A8C3F0A3194B72A400E78899 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C3F0A2194B72A400E78899 /* Foundation.framework */; };
 		A8C3F0A5194B72A400E78899 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C3F0A4194B72A400E78899 /* CoreGraphics.framework */; };
 		A8C3F0A7194B72A400E78899 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C3F0A6194B72A400E78899 /* UIKit.framework */; };
@@ -675,9 +675,6 @@
 		3FAC5924197F7146001B762F /* EfeitoBarraSuperior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoBarraSuperior.m; sourceTree = "<group>"; };
 		3FAC5927197F7923001B762F /* BibliotecaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BibliotecaViewController.h; sourceTree = "<group>"; };
 		3FAC5928197F7923001B762F /* BibliotecaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BibliotecaViewController.m; sourceTree = "<group>"; };
-		3FAC668C1984ADD700BED55E /* TransicaoExercicioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransicaoExercicioViewController.h; sourceTree = "<group>"; };
-		3FAC668D1984ADD700BED55E /* TransicaoExercicioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransicaoExercicioViewController.m; sourceTree = "<group>"; };
-		3FAC668E1984ADD700BED55E /* TransicaoExercicioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransicaoExercicioViewController.xib; sourceTree = "<group>"; };
 		3FAD24501973843A00DEDFF8 /* EfeitoImagem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoImagem.h; sourceTree = "<group>"; };
 		3FAD24511973843A00DEDFF8 /* EfeitoImagem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoImagem.m; sourceTree = "<group>"; };
 		3FAD24531973975500DEDFF8 /* EfeitoMascote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoMascote.h; sourceTree = "<group>"; };
@@ -918,6 +915,9 @@
 		A84855B71994146500C5F0A3 /* ComposicaoPartituraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposicaoPartituraViewController.m; sourceTree = "<group>"; };
 		A84855B81994146500C5F0A3 /* LeituraPartituraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeituraPartituraViewController.h; sourceTree = "<group>"; };
 		A84855B91994146500C5F0A3 /* LeituraPartituraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeituraPartituraViewController.m; sourceTree = "<group>"; };
+		A84855BC199416D100C5F0A3 /* TransicaoExercicioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransicaoExercicioViewController.h; sourceTree = "<group>"; };
+		A84855BD199416D100C5F0A3 /* TransicaoExercicioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransicaoExercicioViewController.m; sourceTree = "<group>"; };
+		A84855BE199416D100C5F0A3 /* TransicaoExercicioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransicaoExercicioViewController.xib; sourceTree = "<group>"; };
 		A8C3F09F194B72A400E78899 /* Musicando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musicando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C3F0A2194B72A400E78899 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A8C3F0A4194B72A400E78899 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1468,9 +1468,9 @@
 		3FAC66911984B63F00BED55E /* TransicaoExerciciosView */ = {
 			isa = PBXGroup;
 			children = (
-				3FAC668C1984ADD700BED55E /* TransicaoExercicioViewController.h */,
-				3FAC668D1984ADD700BED55E /* TransicaoExercicioViewController.m */,
-				3FAC668E1984ADD700BED55E /* TransicaoExercicioViewController.xib */,
+				A84855BC199416D100C5F0A3 /* TransicaoExercicioViewController.h */,
+				A84855BD199416D100C5F0A3 /* TransicaoExercicioViewController.m */,
+				A84855BE199416D100C5F0A3 /* TransicaoExercicioViewController.xib */,
 			);
 			name = TransicaoExerciciosView;
 			sourceTree = "<group>";
@@ -2052,7 +2052,6 @@
 				A848551E1994119600C5F0A3 /* notaSeminima.png in Resources */,
 				3F608D7F196C7585001979E9 /* semibreve.png in Resources */,
 				3F608DD2196C7585001979E9 /* P200 Piano C10.caf in Resources */,
-				3FAC66901984ADD700BED55E /* TransicaoExercicioViewController.xib in Resources */,
 				A84855321994119600C5F0A3 /* pilarRitmo.png in Resources */,
 				A84855921994137D00C5F0A3 /* coral.mp3 in Resources */,
 				3F608DE1196C7585001979E9 /* Piano.plist in Resources */,
@@ -2202,6 +2201,7 @@
 				A84854C61994119600C5F0A3 /* biblioteca.png in Resources */,
 				2B64FA53196922D500BC57FD /* Mod2Aula4Exe7ViewController.xib in Resources */,
 				A84855A71994137D00C5F0A3 /* musicaMixaIntroducao.wav in Resources */,
+				A84855C0199416D100C5F0A3 /* TransicaoExercicioViewController.xib in Resources */,
 				3F608DAB196C7585001979E9 /* fantasma.xml in Resources */,
 				3F608DE0196C7585001979E9 /* P200 Piano G#9.caf in Resources */,
 				A84855441994119600C5F0A3 /* tartaruga.png in Resources */,
@@ -2386,8 +2386,8 @@
 				0B03193B19521C0B00316D6B /* AulasViewController.m in Sources */,
 				3FAD24521973843A00DEDFF8 /* EfeitoImagem.m in Sources */,
 				3F608DCC196C7585001979E9 /* Partitura.m in Sources */,
+				A84855BF199416D100C5F0A3 /* TransicaoExercicioViewController.m in Sources */,
 				3FAC5929197F7923001B762F /* BibliotecaViewController.m in Sources */,
-				3FAC668F1984ADD700BED55E /* TransicaoExercicioViewController.m in Sources */,
 				2B64FA7F1969236D00BC57FD /* Mod2Aula8Exe1ViewController.m in Sources */,
 				2B64FA0C1969220C00BC57FD /* Mod2Aula1Exe1ViewController.m in Sources */,
 				2B64FA201969224F00BC57FD /* Mod2Aula2Exe2ViewController.m in Sources */,
