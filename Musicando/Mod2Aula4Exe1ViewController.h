@@ -27,6 +27,21 @@
 @property (strong, nonatomic) IBOutlet UIView *viewGesturePassaFala;
 @property (strong, nonatomic) IBOutlet UIImageView *imagemDoMascote;
 
+
+//Notas
+@property (weak, nonatomic) IBOutlet UIImageView *notaSemibreve;
+@property (weak, nonatomic) IBOutlet UIImageView *notaMinima;
+@property (weak, nonatomic) IBOutlet UIImageView *notaSeminima;
+@property (weak, nonatomic) IBOutlet UIImageView *notaColcheia;
+@property (weak, nonatomic) IBOutlet UIImageView *notaSemicolheia;
+@property (weak, nonatomic) IBOutlet UIImageView *notaFusa;
+@property (weak, nonatomic) IBOutlet UIImageView *notaSemifusa;
+
+@property (weak, nonatomic) IBOutlet UIImageView *notaBloco1;
+@property (weak, nonatomic) IBOutlet UIImageView *notaBloco2;
+@property (weak, nonatomic) IBOutlet UIImageView *notaBloco3;
+
+
 /*===========================ATRIBUTOS=============================*/
 
 //Audio

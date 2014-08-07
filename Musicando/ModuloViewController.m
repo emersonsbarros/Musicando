@@ -32,17 +32,23 @@
     Modulo *button =  sender;
     [Biblioteca sharedManager].moduloAtual = button;
     
-
     [self performSegueWithIdentifier:@"chamaAulas" sender:self];
+    
+    
 //    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
 //    UINavigationController *vc = [sb instantiateViewControllerWithIdentifier:@"aulas"];
 //    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([[segue identifier] isEqualToString:@"chamaAulas"]){
-        
-    }
+//    AulasViewController *aul = [[AulasViewController alloc]init];
+//    [self.navigationController pushViewController:aul animated:NO];
+    
+//    if([[segue identifier] isEqualToString:@"chamaAulas"]){
+//        AulasViewController *aul = segue.destinationViewController;
+//        //[self performSegueWithIdentifier:@"chamaAulas" sender:self];
+//    }
 
 }
 

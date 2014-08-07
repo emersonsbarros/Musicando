@@ -8,6 +8,16 @@
             <connections>
                 <outlet property="imagemDoMascote" destination="j14-xd-2Gd" id="tXT-Cj-w8I"/>
                 <outlet property="lblFalaDoMascote" destination="FyH-F6-1Vc" id="s69-2A-1W0"/>
+                <outlet property="notaBloco1" destination="gJ2-Fb-pqd" id="SBZ-Uw-NAQ"/>
+                <outlet property="notaBloco2" destination="GPr-ph-Tlo" id="pZ4-tU-9aI"/>
+                <outlet property="notaBloco3" destination="0Yq-uI-yPr" id="WSg-52-btR"/>
+                <outlet property="notaColcheia" destination="bmx-2X-6EW" id="lnX-hQ-uil"/>
+                <outlet property="notaFusa" destination="6wS-Az-3jr" id="2gU-oR-cj6"/>
+                <outlet property="notaMinima" destination="RVJ-bt-e4r" id="YgB-CS-h9X"/>
+                <outlet property="notaSemibreve" destination="NV4-54-GQn" id="Yz0-B3-cIQ"/>
+                <outlet property="notaSemicolheia" destination="gWN-iX-ztJ" id="JcW-e1-hgZ"/>
+                <outlet property="notaSemifusa" destination="Zbe-80-h8K" id="sUf-tB-frs"/>
+                <outlet property="notaSeminima" destination="cLi-uQ-eLa" id="3IX-IL-7UE"/>
                 <outlet property="view" destination="2" id="3"/>
                 <outlet property="viewGesturePassaFala" destination="HUT-nY-lLj" id="PxX-VV-qN6"/>
             </connections>
@@ -18,23 +28,87 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HUT-nY-lLj">
-                    <rect key="frame" x="843" y="552" width="119" height="229"/>
+                    <rect key="frame" x="837" y="527" width="135" height="217"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </view>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="456" translatesAutoresizingMaskIntoConstraints="NO" id="FyH-F6-1Vc">
-                    <rect key="frame" x="416" y="500" width="456" height="241"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j14-xd-2Gd">
+                    <rect key="frame" x="804" y="523" width="200" height="225"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="393" translatesAutoresizingMaskIntoConstraints="NO" id="FyH-F6-1Vc">
+                    <rect key="frame" x="388" y="523" width="393" height="225"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j14-xd-2Gd">
-                    <rect key="frame" x="781" y="474" width="243" height="296"/>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notaSemicolcheia.png" translatesAutoresizingMaskIntoConstraints="NO" id="gWN-iX-ztJ">
+                    <rect key="frame" x="543" y="279" width="100" height="150"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notaSemibreve.png" translatesAutoresizingMaskIntoConstraints="NO" id="NV4-54-GQn">
+                    <rect key="frame" x="80" y="383" width="50" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="138" placeholderIntrinsicHeight="384" image="notaMinima.png" translatesAutoresizingMaskIntoConstraints="NO" id="RVJ-bt-e4r">
+                    <rect key="frame" x="193" y="278" width="50" height="150"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notaSeminima.png" translatesAutoresizingMaskIntoConstraints="NO" id="cLi-uQ-eLa">
+                    <rect key="frame" x="302" y="278" width="50" height="150"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notaFusa.png" translatesAutoresizingMaskIntoConstraints="NO" id="6wS-Az-3jr">
+                    <rect key="frame" x="699" y="278" width="100" height="150"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notaColcheia.png" translatesAutoresizingMaskIntoConstraints="NO" id="bmx-2X-6EW">
+                    <rect key="frame" x="411" y="278" width="100" height="150"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notaSemifusa.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zbe-80-h8K">
+                    <rect key="frame" x="860" y="278" width="100" height="150"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doBloco.png" translatesAutoresizingMaskIntoConstraints="NO" id="gJ2-Fb-pqd">
+                    <rect key="frame" x="345" y="-169" width="80" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reBloco.png" translatesAutoresizingMaskIntoConstraints="NO" id="GPr-ph-Tlo">
+                    <rect key="frame" x="475" y="-119" width="80" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="miBloco.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Yq-uI-yPr">
+                    <rect key="frame" x="603" y="-80" width="80" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="telao.png" translatesAutoresizingMaskIntoConstraints="NO" id="SuF-Zr-EwF">
+                    <rect key="frame" x="312" y="31" width="400" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3x-fK-VkH">
+                    <rect key="frame" x="469" y="157" width="42" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
         </view>
     </objects>
+    <resources>
+        <image name="doBloco.png" width="120" height="120"/>
+        <image name="miBloco.png" width="120" height="120"/>
+        <image name="notaColcheia.png" width="256" height="384"/>
+        <image name="notaFusa.png" width="256" height="450"/>
+        <image name="notaMinima.png" width="138" height="384"/>
+        <image name="notaSemibreve.png" width="161" height="107"/>
+        <image name="notaSemicolcheia.png" width="256" height="450"/>
+        <image name="notaSemifusa.png" width="256" height="450"/>
+        <image name="notaSeminima.png" width="138" height="384"/>
+        <image name="reBloco.png" width="120" height="120"/>
+        <image name="telao.png" width="723" height="477"/>
+    </resources>
 </document>

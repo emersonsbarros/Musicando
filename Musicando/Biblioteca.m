@@ -929,7 +929,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     mod2Aula4Exe1fala1.conteudo = @"Já vimos e aprendemos sobre as notas, pausas e o tal do pentagrama onde elas são desenhadas...";
     
     Fala *mod2Aula4Exe1fala2 = [[Fala alloc] init];
-    mod2Aula4Exe1fala2.conteudo = @"Até aqui as notas e pausas são bloquinhos, que colocados no pentagrama tem seu som único.";
+    mod2Aula4Exe1fala2.conteudo = @"Até aqui as notas são bloquinhos, que colocados no pentagrama tem seu som único.";
     
     Fala *mod2Aula4Exe1fala3 = [[Fala alloc] init];
     mod2Aula4Exe1fala3.conteudo = @"E conforme subimos as linhas do pentagrama parece que o volume aumenta numa escala...";
@@ -938,13 +938,13 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     mod2Aula4Exe1fala4.conteudo = @"Mas está na hora de saber quais as verdadeiras figuras que representam cada uma.";
     
     Fala *mod2Aula4Exe1fala5 = [[Fala alloc] init];
-    mod2Aula4Exe1fala5.conteudo = @"Nem todas as notas têm a mesma duração...";
+    mod2Aula4Exe1fala5.conteudo = @"Começaremos pelas notas, já que elas não têm a mesma duração..";
     
     Fala *mod2Aula4Exe1fala6 = [[Fala alloc] init];
-    mod2Aula4Exe1fala6.conteudo = @"Então, como saber qual é o tempo de cada uma?";
+    mod2Aula4Exe1fala6.conteudo = @"Como saber qual é o tempo de cada uma?";
     
     Fala *mod2Aula4Exe1fala7 = [[Fala alloc] init];
-    mod2Aula4Exe1fala7.conteudo = @"Existem formas diferentes para representar cada tempo numa nota ou tempo.";
+    mod2Aula4Exe1fala7.conteudo = @"Existem formas diferentes para representar cada tempo numa nota.";
     
     Fala *mod2Aula4Exe1fala8 = [[Fala alloc] init];
     mod2Aula4Exe1fala8.conteudo = @"São chamados de valores ou figuras. Vamos ver cada um, começando pela nota de 4 tempos.";
@@ -953,43 +953,40 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     mod2Aula4Exe1fala9.conteudo = @"Este círculo é a semibreve, quando ela aparece no pentagrama, significa que deve ser tocada por 4 tempos.";
     
     Fala *mod2Aula4Exe1fala10 = [[Fala alloc] init];
-    mod2Aula4Exe1fala10.conteudo = @"Assim como nas notas, as pausas também tem duração...";
-
+    mod2Aula4Exe1fala10.conteudo = @"Agora vamos pra figura de nota que representa 2 tempos.";
+    
     Fala *mod2Aula4Exe1fala11 = [[Fala alloc] init];
-    mod2Aula4Exe1fala11.conteudo = @"A figura de pausa que corresponde à 4 tempos, é essa ao lado da semibreve.";
+    mod2Aula4Exe1fala11.conteudo = @"Sempre que este círculo com uma aste aparecer, representa a mínima.";
     
     Fala *mod2Aula4Exe1fala12 = [[Fala alloc] init];
-    mod2Aula4Exe1fala12.conteudo = @"Agora vamos pras figuras de nota e pausa que representam 2 tempos.";
+    mod2Aula4Exe1fala12.conteudo = @"Na sequência, aqui está figura da nota de um 1 tempo.";
     
     Fala *mod2Aula4Exe1fala13 = [[Fala alloc] init];
-    mod2Aula4Exe1fala13.conteudo = @"Sempre que este círculo com uma aste aparecer, representa a mínima.";
+    mod2Aula4Exe1fala13.conteudo = @"Percebe que a nota agora de 1 tempo tem o círculo preenchido?";
     
     Fala *mod2Aula4Exe1fala14 = [[Fala alloc] init];
-    mod2Aula4Exe1fala14.conteudo = @"Na sequência, aqui estão as figuras de 1 tempo.";
+    mod2Aula4Exe1fala14.conteudo = @"Esta figura representa a semínima!";
     
     Fala *mod2Aula4Exe1fala15 = [[Fala alloc] init];
-    mod2Aula4Exe1fala15.conteudo = @"Percebe que a nota agora de 1 tempo tem o círculo preenchido?";
+    mod2Aula4Exe1fala15.conteudo = @"Quando precisamos de uma nota de 1/2 tempo, temos uma figura parecidada com a anterior, só que com um risco a mais.";
     
     Fala *mod2Aula4Exe1fala16 = [[Fala alloc] init];
-    mod2Aula4Exe1fala16.conteudo = @"Esta figura representa a semínima";
+    mod2Aula4Exe1fala16.conteudo = @"Chamamos de colcheia!";
     
     Fala *mod2Aula4Exe1fala17 = [[Fala alloc] init];
-    mod2Aula4Exe1fala17.conteudo = @"Quando precisamos de uma nota ou pausa de 1/2 tempo, as figuras são as seguintes...";
+    mod2Aula4Exe1fala17.conteudo = @"Para 1/4 de tempo a 'Semicolcheia' é a figura que usamos.";
     
     Fala *mod2Aula4Exe1fala18 = [[Fala alloc] init];
-    mod2Aula4Exe1fala18.conteudo = @"Essa do lado esquero chama-se colcheia.";
-    
+    mod2Aula4Exe1fala18.conteudo = @"Percebe que segue o mesmo desenho da anterior, mas novamente com um risco a mais?";
+
     Fala *mod2Aula4Exe1fala19 = [[Fala alloc] init];
-    mod2Aula4Exe1fala19.conteudo = @"Para 1/4 de tempo a 'colcheia' é a figura a esquerda com sua respectiva pausa ao lado.";
-
-    Fala *mod2Aula4Exe1fala20 = [[Fala alloc] init];
-    mod2Aula4Exe1fala20.conteudo = @"Temos ainda a nota e pausa de 1/8, sendo que a nota é chamada de fusa.";
+    mod2Aula4Exe1fala19.conteudo = @"Temos ainda a nota de 1/8, sendo chamada de fusa.";
     
-    Fala *mod2Aula4Exe1fala21 = [[Fala alloc] init];
-    mod2Aula4Exe1fala21.conteudo = @"E por fim a semifusa que é a nota de 1/16 junto a figura de sua pausa.";
+    Fala *mod2Aula4Exe1fala20 = [[Fala alloc] init];
+    mod2Aula4Exe1fala20.conteudo = @"E por fim a semifusa que é a nota de 1/16.";
 
-    Fala *mod2Aula4Exe1fala22 = [[Fala alloc] init];
-    mod2Aula4Exe1fala22.conteudo = @"Pra relembrar, essas são todas as figuras de notas e pausas junto ao seu tempo de duração.";
+    Fala *mod2Aula4Exe1fala21 = [[Fala alloc] init];
+    mod2Aula4Exe1fala21.conteudo = @"Pra relembrar, essas são todas as figuras de notas e pausas junto ao seu tempo de duração.";
     
     //Conversa
     Conversa *mod2Aula4Exe1conversa1 = [[Conversa alloc] init];
@@ -1014,7 +1011,6 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala19];
     [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala20];
     [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala21];
-    [[mod2Aula4Exe1conversa1 listaDeFalas] addObject: mod2Aula4Exe1fala22];
     [[[mod2Aula4Exe1 mascote] listaDeConversas] addObject: mod2Aula4Exe1conversa1];
     
     
