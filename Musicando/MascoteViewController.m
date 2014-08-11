@@ -64,13 +64,9 @@
     self.testaConversa = self.testaBiblio.exercicioAtual.mascote.listaDeConversas.firstObject;
     self.imagemDoMascote2.image = [[[[Biblioteca sharedManager] exercicioAtual] mascote] imagem].image;
     
-       
     
 }
 
--(void)pulaFalaMascote{
-    NSLog(@"ddf");
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -78,13 +74,33 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)passaView{
+    
+    
+    [[EfeitoTransicao sharedManager]chamaTransicaoPaginaDireita:self.controller];
+    
+    [NSTimer scheduledTimerWithTimeInterval:0.0
+                                         target:self.controller
+                                       selector:self.metodo
+                                       userInfo:nil
+                                        repeats:NO];
+    
+    
+}
+
+
+
 -(void)addGesturePassaFalaMascote:(UIView*)viewGesture :(SEL)metodoPassaFala :(UIViewController*)cont{
     
-    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:cont action:metodoPassaFala];
+    self.metodo = metodoPassaFala;
+    self.controller = cont;
+    
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(passaView)];
     singleTap.numberOfTouchesRequired = 1;
     singleTap.enabled = NO;
     viewGesture.userInteractionEnabled = NO;
     [viewGesture addGestureRecognizer:singleTap];
+    
 }
 
 -(void)addBarraSuperioAoXib:(UIViewController*)viewAtual :(Exercicio*)exer{

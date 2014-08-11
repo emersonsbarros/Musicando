@@ -7,16 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EfeitoBarraSuperior.h"
+#import "BarraSuperiorViewController.h"
 #import "BibliotecaViewController.h"
+#import "Exercicio.h"
+#import "Conversa.h"
 
 @interface BarraSuperiorViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *btnHome;
 - (IBAction)btnActionHome:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UILabel *txtAulaAtual;
 @property (weak, nonatomic) IBOutlet UILabel *txtNumeroAulas;
 @property (weak, nonatomic) IBOutlet UILabel *txtNumeroAulaAtual;
+
+@property NSString *textoAulaAtual;
+@property NSString *textoNumeroAulas;
+@property NSString *textoNumeroAulasAtual;
+
+-(void)addBarraSuperioAoXib:(UIViewController*)viewAtual :(Exercicio*)exer;
+-(void)retornaViewDoExercicio:(UIViewController*)viewController;
 
 
 +(BarraSuperiorViewController*)sharedManager;

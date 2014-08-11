@@ -26,7 +26,7 @@
     [super viewDidLoad];
     
     //Add barra Superior ao Xib
-    [[EfeitoBarraSuperior sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
+    [[BarraSuperiorViewController sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
     [self iniciarComponentes];
 }
 
@@ -93,7 +93,7 @@
     
     if(self.contadorDeFalas == contadorMaximo){
         NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
-        [[Biblioteca sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
+        [[EfeitoTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
     }
     
     if(self.contadorDeFalas < contadorMaximo){

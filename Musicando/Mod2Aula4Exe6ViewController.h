@@ -13,12 +13,12 @@
 #import "Fala.h"
 #import "EfeitoImagem.h"
 #import "EfeitoMascote.h"
-#import "EfeitoBarraSuperior.h"
+#import "BarraSuperiorViewController.h"
 #import "Nota.h"
 #import "Sinfonia.h"
 #import <QuartzCore/QuartzCore.h>
 #import <AVFoundation/AVFoundation.h>
-
+#import "EfeitoTransicao.h"
 
 @interface Mod2Aula4Exe6ViewController : UIViewController
 

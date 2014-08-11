@@ -10,7 +10,8 @@
 #import "Fala.h"
 #import "EfeitoMascote.h"
 #import "EfeitoImagem.h"
-#import "EfeitoBarraSuperior.h"
+#import "EfeitoTransicao.h"
+#import "BarraSuperiorViewController.h"
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 

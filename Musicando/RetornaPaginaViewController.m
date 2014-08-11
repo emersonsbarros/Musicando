@@ -51,6 +51,7 @@
 }
 
 -(void)retornaViewDoExercicio:(UIViewController*)viewController{
+    
     for(UIView *img in viewController.view.subviews){
         if((img.tag == 1000)||(img.tag == 1001)||(img.tag == 1002)||(img.tag == 1003)) {
         }else {
@@ -62,26 +63,28 @@
 
 -(void)voltaView{
     
-    NSLog(@"string %d",self.contadorDeFalas);
+    
+    if([MascoteViewController sharedManager].contadorDeFalas >1){
+        
+        [self retornaViewDoExercicio:self.cont];
+        
+        [MascoteViewController sharedManager].contadorDeFalas = [MascoteViewController sharedManager].contadorDeFalas -2;
+        
+        
+        [[EfeitoTransicao sharedManager]chamaTransicaoPaginaTopo:self.cont];
 
-    self.contadorDeFalas = [MascoteViewController sharedManager].contadorDeFalas;
-    
-    NSLog(@"dep %d",self.contadorDeFalas);
-    
-    if(self.contadorDeFalas >1){
-        [self retornaViewDoExercicio:self];
-        self.contadorDeFalas = self.contadorDeFalas -2;
         
         [NSTimer scheduledTimerWithTimeInterval:0.0
                                          target:self.cont
                                        selector:self.metodo
                                        userInfo:nil
                                         repeats:NO];
-        
-        [[EfeitoTransicao sharedManager]chamaTransicaoPaginaTopo:self];
-        
-    }
     
+        
+       
+        
+}
+
 }
 
 -(void)addGesturePassaFalaMascote:(UIView*)viewVoltaFala :(int)contadorFala :(SEL)nomeMetodo :(UIViewController*)cont{
@@ -113,6 +116,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

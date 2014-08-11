@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Exercicio.h"
+#import "Biblioteca.h"
+
 
 @interface EfeitoTransicao : NSObject
 
@@ -16,5 +19,10 @@
 -(void)chamaTransicaoPaginaDireita:(UIViewController*)controller;
 -(void)chamaTransicaoPaginaTopo:(UIViewController*)controller;
 
+-(void)finalizaExercicio:(UIViewController*)contr;
+-(Exercicio*)retornaIndiceExercicioModuloBasico:(NSString*)nomeView;
+-(void)chamaOProximoExercicio:(UIViewController*)viewAntiga :(NSString*)nomeDaViewAtual;
+-(void)chamaViewTransicaoExercicio:(UIViewController*)viewProxAula :(NSString*)nomeDaViewAtual;
+-(NSString*)retornaONomeDaProximaAula:(NSString*)nomeDaViewAtual;
 
 @end

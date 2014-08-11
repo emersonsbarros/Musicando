@@ -23,4 +23,6 @@
 -(void)addBarraSuperioAoXib:(UIViewController*)viewAtual :(Exercicio*)exer;
 
 -(void)addGesturePassaFalaMascote:(UIView*)viewVoltaFala :(int)contadorFala :(SEL)nomeMetodo :(UIViewController*)cont;
+
+
 @end

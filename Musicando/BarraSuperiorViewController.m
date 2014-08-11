@@ -55,8 +55,8 @@
 {
     [super viewDidLoad];
     
-    self.txtAulaAtual.text = [[EfeitoBarraSuperior sharedManager]textoAulaAtual];
-    self.txtNumeroAulas.text = [[EfeitoBarraSuperior sharedManager]textoNumeroAulas];
+    self.txtAulaAtual.text = self.textoAulaAtual;
+    self.txtNumeroAulas.text = self.textoNumeroAulas;
     self.txtNumeroAulaAtual.text = @"1";
     
 
@@ -69,19 +69,29 @@
 }
 
 - (IBAction)btnActionHome:(id)sender {
-//    BibliotecaViewController *myViewController = [[UIStoryboard storyboardWithName:@"Main_iPad" bundle:NULL] instantiateViewControllerWithIdentifier:@"biblioteca"];
-//    [self transitionFromViewController:self toViewController:myViewController duration:0.0 options:1 animations:NULL completion:NULL];
-    
-//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
-//    BibliotecaViewController *initViewController = [storyBoard instantiateInitialViewController];
-//    [self.window setRootViewController:initViewController];
-
 
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
-    //UINavigationController *vc = [sb instantiateViewControllerWithIdentifier:@"biblioteca"];
     UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"biblioteca"];
     vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:vc animated:YES completion:NULL];
 
 }
+
+-(void)addBarraSuperioAoXib:(UIViewController*)viewAtual :(Exercicio*)exer{
+    
+    Conversa *conv = [[[exer mascote ]listaDeConversas]objectAtIndex:0];
+   
+    self.textoAulaAtual = exer.nome;
+    self.textoNumeroAulas = [NSString stringWithFormat:@"%d",conv.listaDeFalas.count];
+    
+    BarraSuperiorViewController *bar = [[BarraSuperiorViewController alloc]init];
+    bar.view.layer.zPosition = +5;
+    [viewAtual addChildViewController:bar];
+    [viewAtual.view addSubview:bar.view];
+}
+
+
+
+
+
 @end

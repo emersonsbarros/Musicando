@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B03193B19521C0B00316D6B /* AulasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B03193A19521C0B00316D6B /* AulasViewController.m */; };
+		0B215C501999572F007230B7 /* EfeitoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B215C4F1999572F007230B7 /* EfeitoPlayer.m */; };
 		2B64F9E41969207E00BC57FD /* Mod1Aula2Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64F9E21969207E00BC57FD /* Mod1Aula2Exe1ViewController.m */; };
 		2B64F9E51969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64F9E31969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib */; };
 		2B64F9EA196920D000BC57FD /* Mod1Aula3Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64F9E8196920D000BC57FD /* Mod1Aula3Exe1ViewController.m */; };
@@ -190,7 +191,6 @@
 		3FA3CC96197A3D2200E1FCFB /* notaParaRosto.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA3CC95197A3D2200E1FCFB /* notaParaRosto.png */; };
 		3FAC5921197F5BE8001B762F /* BarraSuperiorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC591F197F5BE8001B762F /* BarraSuperiorViewController.m */; };
 		3FAC5922197F5BE8001B762F /* BarraSuperiorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FAC5920197F5BE8001B762F /* BarraSuperiorViewController.xib */; };
-		3FAC5925197F7146001B762F /* EfeitoBarraSuperior.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC5924197F7146001B762F /* EfeitoBarraSuperior.m */; };
 		3FAC5929197F7923001B762F /* BibliotecaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC5928197F7923001B762F /* BibliotecaViewController.m */; };
 		3FAD24521973843A00DEDFF8 /* EfeitoImagem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD24511973843A00DEDFF8 /* EfeitoImagem.m */; };
 		3FAD24551973975500DEDFF8 /* EfeitoMascote.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD24541973975500DEDFF8 /* EfeitoMascote.m */; };
@@ -455,6 +455,8 @@
 /* Begin PBXFileReference section */
 		0B03193919521C0B00316D6B /* AulasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AulasViewController.h; sourceTree = "<group>"; };
 		0B03193A19521C0B00316D6B /* AulasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AulasViewController.m; sourceTree = "<group>"; };
+		0B215C4E1999572F007230B7 /* EfeitoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoPlayer.h; sourceTree = "<group>"; };
+		0B215C4F1999572F007230B7 /* EfeitoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoPlayer.m; sourceTree = "<group>"; };
 		2B64F9E11969207E00BC57FD /* Mod1Aula2Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula2Exe1ViewController.h; sourceTree = "<group>"; };
 		2B64F9E21969207E00BC57FD /* Mod1Aula2Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula2Exe1ViewController.m; sourceTree = "<group>"; };
 		2B64F9E31969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula2Exe1ViewController.xib; sourceTree = "<group>"; };
@@ -680,8 +682,6 @@
 		3FAC591E197F5BE8001B762F /* BarraSuperiorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarraSuperiorViewController.h; sourceTree = "<group>"; };
 		3FAC591F197F5BE8001B762F /* BarraSuperiorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarraSuperiorViewController.m; sourceTree = "<group>"; };
 		3FAC5920197F5BE8001B762F /* BarraSuperiorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarraSuperiorViewController.xib; sourceTree = "<group>"; };
-		3FAC5923197F7146001B762F /* EfeitoBarraSuperior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoBarraSuperior.h; sourceTree = "<group>"; };
-		3FAC5924197F7146001B762F /* EfeitoBarraSuperior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoBarraSuperior.m; sourceTree = "<group>"; };
 		3FAC5927197F7923001B762F /* BibliotecaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BibliotecaViewController.h; sourceTree = "<group>"; };
 		3FAC5928197F7923001B762F /* BibliotecaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BibliotecaViewController.m; sourceTree = "<group>"; };
 		3FAD24501973843A00DEDFF8 /* EfeitoImagem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoImagem.h; sourceTree = "<group>"; };
@@ -990,6 +990,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B215C5119995F98007230B7 /* Efeitos */ = {
+			isa = PBXGroup;
+			children = (
+				3FAD24531973975500DEDFF8 /* EfeitoMascote.h */,
+				3FAD24541973975500DEDFF8 /* EfeitoMascote.m */,
+				3FAD24501973843A00DEDFF8 /* EfeitoImagem.h */,
+				3FAD24511973843A00DEDFF8 /* EfeitoImagem.m */,
+				3FADEE601998688C00352D2C /* EfeitoTransicao.h */,
+				3FADEE611998688C00352D2C /* EfeitoTransicao.m */,
+				0B215C4E1999572F007230B7 /* EfeitoPlayer.h */,
+				0B215C4F1999572F007230B7 /* EfeitoPlayer.m */,
+			);
+			name = Efeitos;
+			sourceTree = "<group>";
+		};
+		0B215C5219996029007230B7 /* MascteView */ = {
+			isa = PBXGroup;
+			children = (
+				3FCC29121995A9DE000B951F /* MascoteViewController.h */,
+				3FCC29131995A9DE000B951F /* MascoteViewController.m */,
+				3FCC29141995A9DE000B951F /* MascoteViewController.xib */,
+			);
+			name = MascteView;
+			sourceTree = "<group>";
+		};
+		0B215C5319996035007230B7 /* RetornaPaginaView */ = {
+			isa = PBXGroup;
+			children = (
+				3FD3253319971DEE004A0262 /* RetornaPaginaViewController.h */,
+				3FD3253419971DEE004A0262 /* RetornaPaginaViewController.m */,
+				3FD3253519971DEE004A0262 /* RetornaPaginaViewController.xib */,
+			);
+			name = RetornaPaginaView;
+			sourceTree = "<group>";
+		};
 		2B64F9DE19691F8600BC57FD /* Iniciante */ = {
 			isa = PBXGroup;
 			children = (
@@ -1559,12 +1594,6 @@
 			children = (
 				A8C3F0BA194B72A400E78899 /* ViewController.h */,
 				A8C3F0BB194B72A400E78899 /* ViewController.m */,
-				3FCC29121995A9DE000B951F /* MascoteViewController.h */,
-				3FCC29131995A9DE000B951F /* MascoteViewController.m */,
-				3FCC29141995A9DE000B951F /* MascoteViewController.xib */,
-				3FD3253319971DEE004A0262 /* RetornaPaginaViewController.h */,
-				3FD3253419971DEE004A0262 /* RetornaPaginaViewController.m */,
-				3FD3253519971DEE004A0262 /* RetornaPaginaViewController.xib */,
 			);
 			name = MenuPrincipalView;
 			sourceTree = "<group>";
@@ -1599,20 +1628,13 @@
 		A83ED3E31952088D006CB6A4 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				A83ED3C619520810006CB6A4 /* Biblioteca.h */,
+				A83ED3C719520810006CB6A4 /* Biblioteca.m */,
 				3FD7EA3619529578005F089A /* Usuario */,
 				3FD7EA3519529551005F089A /* Glossario */,
 				3FD7EA33195294FC005F089A /* Corpo */,
 				3FD7EA3419529523005F089A /* Mascote */,
-				3FAD24531973975500DEDFF8 /* EfeitoMascote.h */,
-				3FAD24541973975500DEDFF8 /* EfeitoMascote.m */,
-				3FAD24501973843A00DEDFF8 /* EfeitoImagem.h */,
-				3FAD24511973843A00DEDFF8 /* EfeitoImagem.m */,
-				A83ED3C619520810006CB6A4 /* Biblioteca.h */,
-				A83ED3C719520810006CB6A4 /* Biblioteca.m */,
-				3FAC5923197F7146001B762F /* EfeitoBarraSuperior.h */,
-				3FAC5924197F7146001B762F /* EfeitoBarraSuperior.m */,
-				3FADEE601998688C00352D2C /* EfeitoTransicao.h */,
-				3FADEE611998688C00352D2C /* EfeitoTransicao.m */,
+				0B215C5119995F98007230B7 /* Efeitos */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -1936,12 +1958,14 @@
 		A8C3F102194B7B2500E78899 /* Controlador */ = {
 			isa = PBXGroup;
 			children = (
-				3FAC66911984B63F00BED55E /* TransicaoExerciciosView */,
-				3FAAE944198365010053DD23 /* BarraView */,
+				0B215C5319996035007230B7 /* RetornaPaginaView */,
+				0B215C5219996029007230B7 /* MascteView */,
 				3FAC5926197F78F8001B762F /* BibliotecaView */,
 				3FD7EA3919529625005F089A /* AulasView */,
 				3FD7EA38195295F9005F089A /* ModuloView */,
 				3FD7EA37195295E7005F089A /* MenuPrincipalView */,
+				3FAC66911984B63F00BED55E /* TransicaoExerciciosView */,
+				3FAAE944198365010053DD23 /* BarraView */,
 				3FD7EA3A19529661005F089A /* Exercicios */,
 			);
 			name = Controlador;
@@ -2416,6 +2440,7 @@
 				2B64FA2F1969228500BC57FD /* Mod2Aula3Exe3ViewController.m in Sources */,
 				3FD3253619971DEE004A0262 /* RetornaPaginaViewController.m in Sources */,
 				A804EEE1194F6D4A00DB14A9 /* ModuloViewController.m in Sources */,
+				0B215C501999572F007230B7 /* EfeitoPlayer.m in Sources */,
 				A84855BA1994146500C5F0A3 /* ComposicaoPartituraViewController.m in Sources */,
 				2B64F9FF1969215900BC57FD /* Mod1Aula4Exe1ViewController.m in Sources */,
 				A8C3F0B3194B72A400E78899 /* AppDelegate.m in Sources */,
@@ -2451,7 +2476,6 @@
 				2B64FA111969221C00BC57FD /* Mod2Aula1Exe2ViewController.m in Sources */,
 				A83ED3E219520810006CB6A4 /* Usuario.m in Sources */,
 				3F608D58196C7585001979E9 /* DataBaseInstrumento.m in Sources */,
-				3FAC5925197F7146001B762F /* EfeitoBarraSuperior.m in Sources */,
 				A83ED3DF19520810006CB6A4 /* Glossario.m in Sources */,
 				A83ED3DC19520810006CB6A4 /* Exercicio.m in Sources */,
 				2B64F9EA196920D000BC57FD /* Mod1Aula3Exe1ViewController.m in Sources */,

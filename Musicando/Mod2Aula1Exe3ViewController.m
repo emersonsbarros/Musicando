@@ -33,7 +33,7 @@
 
 
     //Add barra Superior ao Xib
-    [[EfeitoBarraSuperior sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
+    [[BarraSuperiorViewController sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
     
     
     [self addGesturePassaFalaMascote:self.viewGesturePassaFala];
@@ -158,7 +158,7 @@
     
     if(self.contadorDeFalas == contadorMaximo){
         NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
-        [[Biblioteca sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
+        [[EfeitoTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
     }
     
     if(self.contadorDeFalas < contadorMaximo){

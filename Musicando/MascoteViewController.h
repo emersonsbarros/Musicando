@@ -12,6 +12,7 @@
 #import "Biblioteca.h"
 #import "Conversa.h"
 #import "Fala.h"
+#import "EfeitoTransicao.h"
 
 @interface MascoteViewController : UIViewController
 
@@ -23,6 +24,9 @@
 @property Conversa *testaConversa;
 @property Fala *testaFala;
 @property int contadorDeFalas;
+@property SEL metodo;
+@property UIViewController *controller;
+
 //Mascote (img,view,label)
 @property (strong, nonatomic) IBOutlet UIImageView *imagemDoMascote2;
 @property (weak, nonatomic) IBOutlet UILabel *lblFalaDoMascote;

@@ -13,10 +13,11 @@
 #import "Sinfonia.h"
 #import "EfeitoImagem.h"
 #import "EfeitoMascote.h"
-#import "EfeitoBarraSuperior.h"
+#import "BarraSuperiorViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import <SpriteKit/SpriteKit.h>
 #import <UIKit/UIKit.h>
+#import "EfeitoTransicao.h"
 
 @interface Mod1Aula3Exe2ViewController : UIViewController
 

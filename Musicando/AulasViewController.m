@@ -96,7 +96,9 @@
 //Cria os botões dos exercícios e adiciona-os na view
 -(void)carregaExercicios{
     
-    int contadorDistanciaEntreBotoes = 80;
+    int contadorDistanciaEntreBotoes = 110;
+    int contadorDistanciaQuebraLinhas = 20;
+    int indice=1;
     
     for(Exercicio *exerc in [[[Biblioteca sharedManager] aulaAtual] listaDeExercicios]){
         
@@ -104,7 +106,7 @@
         [exerc addTarget:self action:@selector(chamaStoryBoardExercicio:) forControlEvents:UIControlEventTouchUpInside];
         
         [exerc setTitle:@"" forState:UIControlStateNormal];
-        exerc.frame = CGRectMake(contadorDistanciaEntreBotoes, 20.0, 100, 100);
+        exerc.frame = CGRectMake(contadorDistanciaEntreBotoes, contadorDistanciaQuebraLinhas, 100, 100);
         [exerc setBackgroundImage:[exerc capa] forState:UIControlStateNormal];
         
         exerc.descricaoBotao =  [[UILabel alloc] initWithFrame: CGRectMake(-45,60,200,100)];
@@ -112,6 +114,7 @@
         exerc.descricaoBotao.font = [UIFont fontWithName:@"Papyrus" size:20];
         exerc.descricaoBotao.textColor = [UIColor whiteColor];
         exerc.descricaoBotao.textAlignment = NSTextAlignmentCenter;
+        exerc.descricaoBotao.numberOfLines = 3;
         [exerc addSubview:exerc.descricaoBotao];
         
         [[self viewExercicios] addSubview: exerc];
@@ -120,6 +123,13 @@
         
         contadorDistanciaEntreBotoes += 200;
         
+        
+        if(indice % 4 == 0){
+            contadorDistanciaQuebraLinhas += 200;
+            contadorDistanciaEntreBotoes = 110;
+        }
+        
+        indice += 1;
     }
 }
 

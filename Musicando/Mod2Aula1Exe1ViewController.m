@@ -33,7 +33,7 @@
     // Do any additional setup after loading the view from its nib.
     
     //Add barra Superior ao Xib
-    [[EfeitoBarraSuperior sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
+    [[BarraSuperiorViewController sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
     
     //Habilita o gesture do mascote com a UIView que fica por cima dele
     //Coloquei essa view para colocar o gesture de pular fala, pois com animation atrapalha
@@ -78,7 +78,7 @@
     
     if(self.contadorDeFalas == contadorMaximo){
         NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
-        [[Biblioteca sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
+        [[EfeitoTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
     }
     
     if(self.contadorDeFalas < contadorMaximo){

@@ -28,7 +28,7 @@
 
 -(void)chamaProximaAula{
     NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
-    [[Biblioteca sharedManager]chamaOProximoExercicio:self:proxExercicio];
+    [[EfeitoTransicao sharedManager]chamaOProximoExercicio:self:proxExercicio];
 }
 
 - (void)viewDidLoad
@@ -38,7 +38,7 @@
     [self performSelector:@selector(lacoCaindoNotas) withObject:NULL afterDelay:0.1];
     
     self.txtProximaAula.textAlignment = NSTextAlignmentCenter;
-    self.txtProximaAula.text = [[Biblioteca sharedManager]retornaONomeDaProximaAula:[[Biblioteca sharedManager]exercicioAtual].nomeView];
+    self.txtProximaAula.text = [[EfeitoTransicao sharedManager]retornaONomeDaProximaAula:[[Biblioteca sharedManager]exercicioAtual].nomeView];
     
     [NSTimer scheduledTimerWithTimeInterval: 8.0
                                      target: self

@@ -30,7 +30,7 @@
 -(void)viewDidDisappear:(BOOL)animated {
     
     [super viewDidDisappear: animated];
-    [[EfeitoImagem sharedManager]finalizaExercicio:self :self.audioPlayer];
+    [[EfeitoTransicao sharedManager]finalizaExercicio:self];
    
 }
 
@@ -38,7 +38,7 @@
     [super viewDidLoad];
     
     //Add barra Superior ao Xib
-    [[EfeitoBarraSuperior sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
+    [[BarraSuperiorViewController sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
     [[MascoteViewController sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
     [[RetornaPaginaViewController sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
     
@@ -48,10 +48,11 @@
     self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
     //[self addGesturePassaFalaMascote:self.viewGesturePassaFala:[RetornaPaginaViewController sharedManager].viewRetornaPagina];
     
-    SEL selectors1 = @selector(pulaFalaMascote);
     
+    SEL selectors1 = @selector(pulaFalaMascote);
     [[MascoteViewController sharedManager]addGesturePassaFalaMascote:self.viewGesturePassaFala :selectors1:self];
     [[RetornaPaginaViewController sharedManager]addGesturePassaFalaMascote:[RetornaPaginaViewController sharedManager].viewRetornaPagina :self.contadorDeFalas :selectors1 :self];
+    
     
     //Lista para cair animcao/colisao
     self.listaImagensCai = [[NSMutableArray alloc]init];
@@ -75,7 +76,7 @@
     self.estadoAux3 = @"0";
     
     //Biblioteca
-    self.contadorDeFalas = [MascoteViewController sharedManager].contadorDeFalas;
+    //self.contadorDeFalas = [MascoteViewController sharedManager].contadorDeFalas;
     self.lblFalaDoMascote = [MascoteViewController sharedManager].lblFalaDoMascote;
     self.testaBiblio = [MascoteViewController sharedManager].testaBiblio;
     self.testaConversa = [MascoteViewController sharedManager].testaConversa;
@@ -95,103 +96,6 @@
     [super didReceiveMemoryWarning];
 }
 
-
-/////////////////////////////////// ANIMACAO INTRODUCAO GESTURE ////////////////////////////////////////
-
-//Botao que aparece na view introducao
-//- (IBAction)btnComecar:(id)sender {
-//    
-//    
-//    ////////////remove animacoes da intro---> só é usado nessa view///////////
-//    [[EfeitoImagem sharedManager]removeTodasAnimacoesView:self.imgMaoTouch];
-//    [[EfeitoMascote sharedManager]removeBrilho:self.imgMascoteIntro:self.viewGesturePassaFala];
-//    [[EfeitoImagem sharedManager]removeTodasAnimacoesView:self.imgMascoteIntro];
-//    /////////////////////////////////////////////////////////////////////////
-//    
-//    
-//    //Oculta a intro
-//    self.viewInicialGesture.hidden = YES;
-//    
-//    //Habilita o gesture do mascote com a UIView que fica por cima dele
-//    //Coloquei essa view para colocar o gesture de pular fala, pois com animation atrapalha
-//   // [self addGesturePassaFalaMascote:self.viewGesturePassaFala];
-//    
-//    
-//    //Lista para cair animcao/colisao
-//    self.listaImagensCai = [[NSMutableArray alloc]init];
-//    self.listaImangesColisao = [[NSMutableArray alloc]init];
-//    //Add imagens que faram colisao
-//    [self.listaImangesColisao addObject:self.imgFitaFuracao];
-//    [self.listaImangesColisao addObject:self.imgFitaGalo];
-//    [self.listaImangesColisao addObject:self.imgFitaCarro];
-//    [self.listaImangesColisao addObject:self.imgObjetoMusica1];
-//    [self.listaImangesColisao addObject:self.imgObjetoMusica2];
-//    [self.listaImangesColisao addObject:self.imgObjetoMusica3];
-//    //Add gesture arrastar em todas imagens dessa lista
-//    [[EfeitoImagem sharedManager]addGesturePainImagens:self.listaImangesColisao];
-//    
-//    
-//    //Lista para saber se as colisoes na tela foram feitas p/ ir na prox fala
-//    self.listaLiberaFala = [[NSMutableArray alloc]init];
-//    //seta com alguma coisa para add uma coisa nao nula
-//    self.estadoAux1 = @"0";
-//    self.estadoAux2 = @"0";
-//    self.estadoAux3 = @"0";
-//    
-//    //Biblioteca
-//    self.contadorDeFalas = 0;
-//    self.testaBiblio = [Biblioteca sharedManager];
-//    self.testaConversa = self.testaBiblio.exercicioAtual.mascote.listaDeConversas.firstObject;
-//    //Usar sempre que quiser pular uma fala,no caso tem que passar para pegar a primeira fala
-//    [self pulaFalaMascote];
-//    //Imagem do mascote
-//    self.imagemDoMascote2 = [[[[Biblioteca sharedManager] exercicioAtual] mascote] imagem];
-//    //Add animacao de pular o mascote
-//    [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote2];
-//
-//    //Animcao para cair notas
-//    [self lacoCaindoNotas];
-//    
-//}
-
-//-(void)animacaoMaoMascote {
-//    
-//    //Add brilho e pulo a esse mascote que está na tela de intruducao
-//    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imgMascoteIntro:2.0f:self.viewGesturePassaFala];
-//    [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imgMascoteIntro];
-//    
-//    //Altera a profundidade da mão para poder ficar na frente da imagem do mascote
-//    self.imgMaoTouch.layer.zPosition = 10;
-//    
-//    
-//    //Animcao da mão até o mascote
-//    [UIView animateWithDuration:2.0
-//                          delay:3.0
-//                        options:  UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve
-//                     animations:^{
-//                         
-//                        CGRect moveGalo = CGRectMake(self.imgMaoTouch.frame.origin.x+380,
-//                                                      self.imgMaoTouch.frame.origin.y-40,
-//                                                      self.imgMaoTouch.frame.size.width,
-//                                                      self.imgMaoTouch.frame.size.height);
-//                         self.imgMaoTouch.frame = moveGalo;
-//                         
-//                     }
-//                     completion:^(BOOL finished){
-//                         //Add sprite as imagem da mão e comeca (tem uma parar no EfeitoImagem caso necesario)
-//                         UIImage *image1 = [UIImage imageNamed:@"gesturePassaFalaMascote.png"];
-//                         UIImage *image2 = [UIImage imageNamed:@"gesturePassaFalaMascoteTap.png"];
-//                         NSArray *imageArray = [NSArray arrayWithObjects:image1,image2,nil];
-//                         [[EfeitoImagem sharedManager]addAnimacaoSprite:imageArray:self.imgMaoTouch];
-//                         
-//                         //mostra o botao comecar
-//                         self.outBtnComecar.hidden = NO;
-//                         
-//                     }];
-//
-//    
-//    
-//}
 
 //////////////////////////// Colisoes //////////////////////////////
 
@@ -277,8 +181,7 @@
         [self.listaLiberaFala addObject:self.estadoAux1];
         
         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"musicaCristal" withExtension:@"mp3"];
-        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-        [[self audioPlayer]play];
+        [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
         
         [theTimer invalidate];
     }
@@ -297,8 +200,7 @@
         [self.listaLiberaFala addObject:self.estadoAux2];
         
         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"musicaPanela" withExtension:@"mp3"];
-        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-        [[self audioPlayer]play];
+        [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
         
         [theTimer invalidate];
     }
@@ -317,8 +219,7 @@
         [self.listaLiberaFala addObject:self.estadoAux3];
         
         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"musicaPalmas" withExtension:@"mp3"];
-        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-        [[self audioPlayer]play];
+        [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
         
         [theTimer invalidate];
     }
@@ -348,20 +249,17 @@
 
 -(void)tocaIndio{
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"indio" withExtension:@"mp3"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
 }
 
 -(void)tocaCarnaval{
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"carnaval" withExtension:@"mp3"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
 }
 
 -(void)tocaCapoeira{
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"capoeira" withExtension:@"mp3"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
 }
 
 -(void)chamaMetodosFala2 {
@@ -501,7 +399,7 @@
 -(void)chamaMetodosFala3 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
-    [[self audioPlayer]stop];
+    [[EfeitoPlayer sharedManager]stopAudio];
     
     //Tira e mostra imagem oculta
     [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgIndioMusica];
@@ -582,7 +480,7 @@
     
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
-    [[self audioPlayer]stop];
+    [[EfeitoPlayer sharedManager]stopAudio];
     
     [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgPipaGrande];
     [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgCarroGrande];
@@ -634,8 +532,7 @@
                      }
                      completion:^(BOOL finished){
                          self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"musicaMixaIntroducao" withExtension:@"wav"];
-                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-                         [[self audioPlayer]play];
+                         [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
                          
                          [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:8.0f:self.viewGesturePassaFala];
                      }];
@@ -648,7 +545,7 @@
     
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
 
-    [[self audioPlayer]stop];
+    [[EfeitoPlayer sharedManager]stopAudio];
     
     [[EfeitoImagem sharedManager]removeTodasAnimacoesView:self.imgPipaGrande];
     [[EfeitoImagem sharedManager]removeTodasAnimacoesView:self.imgCarroGrande];
@@ -705,7 +602,7 @@
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
     
-    [[self audioPlayer]stop];
+    [[EfeitoPlayer sharedManager]stopAudio];
     
     [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgObjetoMusica1];
     [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgObjetoMusica2];
@@ -779,15 +676,16 @@
     //Usa pra não dar erro de nulo na ultima fala
     int contadorMaximo = (int)self.testaConversa.listaDeFalas.count;
     
-    [[BarraSuperiorViewController sharedManager]txtNumeroAulaAtual].text = [NSString stringWithFormat:@"%d",1+self.contadorDeFalas];
+    [[BarraSuperiorViewController sharedManager]txtNumeroAulaAtual].text = [NSString stringWithFormat:@"%d",1+[MascoteViewController sharedManager].contadorDeFalas];
     
-    if(self.contadorDeFalas == contadorMaximo){
+    if([MascoteViewController sharedManager].contadorDeFalas == contadorMaximo){
         NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
-        [[Biblioteca sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
+        [[EfeitoTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
     }
     
-    if(self.contadorDeFalas < contadorMaximo){
-        switch (self.contadorDeFalas) {
+    if([MascoteViewController sharedManager].contadorDeFalas < contadorMaximo){
+        switch ([MascoteViewController sharedManager].contadorDeFalas) {
+                
             case 0:
                 [self chamaMetodosFala0];
                 break;
@@ -822,12 +720,13 @@
                 break;
         }
 
-        self.testaFala = [self.testaConversa.listaDeFalas objectAtIndex:self.contadorDeFalas];
+        
+        self.testaFala = [self.testaConversa.listaDeFalas objectAtIndex:[MascoteViewController sharedManager].contadorDeFalas];
         self.lblFalaDoMascote.text = self.testaFala.conteudo;
         
         self.contadorDeFalas +=1;
+        [MascoteViewController sharedManager].contadorDeFalas += 1;
         
-        [[EfeitoTransicao sharedManager]chamaTransicaoPaginaDireita:self];
     }
 }
 
@@ -893,8 +792,8 @@
     
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"galo" withExtension:@"wav"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
+
     
     [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgGaloGrande];
     [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgCarroGrande];
@@ -907,9 +806,8 @@
 
 - (void)acaoColisaoCarro {
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"carro" withExtension:@"wav"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
+
     
     [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgCarroGrande];
     [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgGaloGrande];
@@ -922,10 +820,8 @@
 
 - (void)acaoColisaoVento {
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"vento" withExtension:@"wav"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    
-    [[self audioPlayer]play];
-    [[self audioPlayer]setVolume:5.0];
+    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]ajustaVolume:5.0];
     
     [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgPipaGrande];
     [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgGaloGrande];
@@ -1051,8 +947,7 @@
 
 
 -(void)animacaoCaindoNotas:(UIImageView*)notaCaindo :(float)duracao :(CGFloat)posX :(CGFloat)posY :(float)tempoDemrora :(NSString*)nomeNota{
-    //UIViewAnimationOptionAutoreverse ,UIViewAnimationOptionCurveEaseInOut,UIViewAnimationOptionTransitionCrossDissolv
-    
+       
     [UIView animateWithDuration:duracao
                           delay:tempoDemrora
                         options:  UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionTransitionCrossDissolve

@@ -16,8 +16,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "EfeitoImagem.h"
 #import "EfeitoMascote.h"
-#import "EfeitoBarraSuperior.h"
-
+#import "BarraSuperiorViewController.h"
+#import "EfeitoTransicao.h"
 @interface Mod2Aula2Exe1ViewController : UIViewController
 
 

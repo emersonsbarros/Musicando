@@ -29,10 +29,6 @@
 +(Biblioteca*)sharedManager;
 -(void)instanciaAulasDoProjeto;
 
--(Exercicio*)retornaIndiceExercicioModuloBasico:(NSString*)nomeView;
--(void)chamaOProximoExercicio:(UIViewController*)viewAntiga :(NSString*)nomeDaViewAtual;
--(void)chamaViewTransicaoExercicio:(UIViewController*)viewProxAula :(NSString*)nomeDaViewAtual;
--(NSString*)retornaONomeDaProximaAula:(NSString*)nomeDaViewAtual;
 
 
 

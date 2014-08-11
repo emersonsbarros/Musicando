@@ -5,6 +5,7 @@
 //  Created by Emerson Barros on 06/07/14.
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
+
 #import "Biblioteca.h"
 #import "Conversa.h"
 #import "Fala.h"
@@ -13,11 +14,11 @@
 #import "Sinfonia.h"
 #import "EfeitoImagem.h"
 #import "EfeitoMascote.h"
-#import "EfeitoBarraSuperior.h"
+#import "BarraSuperiorViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import <SpriteKit/SpriteKit.h>
 #import <UIKit/UIKit.h>
-
+#import "EfeitoTransicao.h"
 @interface Mod2Aula7Exe5ViewController : UIViewController
 
 /*==============================VIEWS===============================*/

@@ -16,10 +16,11 @@
 #import "EfeitoImagem.h"
 #import "EfeitoMascote.h"
 #import <SpriteKit/SpriteKit.h>
-#import "EfeitoBarraSuperior.h"
+#import "BarraSuperiorViewController.h"
 #import "MascoteViewController.h"
 #import "RetornaPaginaViewController.h"
 #import "EfeitoTransicao.h"
+#import "EfeitoPlayer.h"
 
 
 
@@ -52,10 +53,6 @@
 - (IBAction)btnAlavancaTocaTreco:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *outAlavancaTocaTreco;
 @property float lastRotation;
-
-
-//Atributos para tocar audio
-@property AVAudioPlayer *audioPlayer;
 @property NSURL *caminhoDoAudio;
 
 
