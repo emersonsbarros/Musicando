@@ -14,8 +14,13 @@
 
 
 @property NSString *textoAulaAtual;
+@property NSString *textoNumeroAulas;
+@property NSString *textoNumeroAulasAtual;
+
 
 +(EfeitoBarraSuperior*)sharedManager;
 -(void)addBarraSuperioAoXib:(UIViewController*)viewAtual :(Exercicio*)exer;
+-(void)retornaViewDoExercicio:(UIViewController*)viewController;
+
 
 @end

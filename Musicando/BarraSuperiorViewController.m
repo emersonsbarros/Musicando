@@ -23,6 +23,29 @@
     return self;
 }
 
+
+//Singleton
++(BarraSuperiorViewController*)sharedManager{
+    static BarraSuperiorViewController *mascote = nil;
+    if(!mascote){
+        mascote = [[super allocWithZone:nil] init];
+    }
+    return mascote;
+}
+
+-(id)init{
+    self = [super init];
+    if(self){
+        
+    }
+    return self;
+}
+
++(id)allocWithZone:(struct _NSZone *)zone{
+    return [self sharedManager];
+}
+
+
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }
@@ -33,6 +56,8 @@
     [super viewDidLoad];
     
     self.txtAulaAtual.text = [[EfeitoBarraSuperior sharedManager]textoAulaAtual];
+    self.txtNumeroAulas.text = [[EfeitoBarraSuperior sharedManager]textoNumeroAulas];
+    self.txtNumeroAulaAtual.text = @"1";
     
 
 }
@@ -53,7 +78,8 @@
 
 
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
-    UINavigationController *vc = [sb instantiateViewControllerWithIdentifier:@"biblioteca"];
+    //UINavigationController *vc = [sb instantiateViewControllerWithIdentifier:@"biblioteca"];
+    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"biblioteca"];
     vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:vc animated:YES completion:NULL];
 

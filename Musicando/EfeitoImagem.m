@@ -140,6 +140,17 @@
 
 
 /////////////////////////// Remove Animacoes ///////////////////////////////
+//Remove todas animacoes do ViewController
+-(void)finalizaExercicio:(UIViewController*)contr :(AVAudioPlayer*)player{
+    for(UIView *img in contr.view.subviews){
+        img.alpha = 1;
+        [img.layer removeAllAnimations];
+    }
+    [player stop];
+    [contr.view removeFromSuperview];
+  
+}
+
 //Remove img
 -(void)removeTodasAnimacoesView:(UIView*)img{
     [UIView animateWithDuration:1.0

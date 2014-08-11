@@ -15,5 +15,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnHome;
 - (IBAction)btnActionHome:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *txtAulaAtual;
+@property (weak, nonatomic) IBOutlet UILabel *txtNumeroAulas;
+@property (weak, nonatomic) IBOutlet UILabel *txtNumeroAulaAtual;
+
+
++(BarraSuperiorViewController*)sharedManager;
 
 @end

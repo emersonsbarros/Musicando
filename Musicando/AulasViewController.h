@@ -15,11 +15,18 @@
 @interface AulasViewController : UIViewController {
     
 }
+- (IBAction)btnVoltarAulas:(id)sender;
 
 @property Biblioteca *bibliotecaDosModulos;
 @property Aula *aulaAtual;
 @property (strong, nonatomic) IBOutlet UIView *viewExercicios;
 
+@property NSMutableArray *listaAulas;
+@property NSMutableArray *listaExercicios;
+
+
+
 @property CGRect posOriginalAula;
+
 
 @end

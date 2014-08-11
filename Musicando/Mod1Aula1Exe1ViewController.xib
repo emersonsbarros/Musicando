@@ -6,7 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Mod1Aula1Exe1ViewController">
             <connections>
-                <outlet property="imagemDoMascote2" destination="IIA-0n-JtT" id="of6-a1-uOc"/>
                 <outlet property="imgAnimacaoCapoeira" destination="Iex-vv-Lj6" id="giK-P3-Yel"/>
                 <outlet property="imgAnimacaoCarnaval" destination="sf8-xb-GIh" id="KCX-LR-guU"/>
                 <outlet property="imgAnimacaoIndio" destination="Rur-WY-jCi" id="vmH-lA-Cc7"/>
@@ -30,11 +29,9 @@
                 <outlet property="imgObjetoMusica3" destination="iVr-8O-c0J" id="Wvm-xf-WpK"/>
                 <outlet property="imgPipaGrande" destination="Vl0-NB-fqt" id="COj-Cl-ReQ"/>
                 <outlet property="imgTocaTreco" destination="9l5-36-ag6" id="fZ3-2l-t46"/>
-                <outlet property="lblFalaDoMascote" destination="0vx-5K-MzF" id="Jkh-KS-Gla"/>
                 <outlet property="outAlavancaTocaTreco" destination="1wH-j5-URZ" id="ZMV-fc-jSB"/>
                 <outlet property="outBtnComecar" destination="5cB-NT-e8B" id="k3J-x4-PRA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="viewGesturePassaFala" destination="F6H-tr-YnU" id="LNZ-z1-RYe"/>
                 <outlet property="viewInicialGesture" destination="dBz-Rs-4GG" id="LHj-xu-Acg"/>
             </connections>
         </placeholder>
@@ -43,16 +40,10 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" alpha="0.34999999999999964" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RJ.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="thH-Yn-gA0">
+                <imageView userInteractionEnabled="NO" alpha="0.34999999999999964" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RJ.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="thH-Yn-gA0">
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="333" translatesAutoresizingMaskIntoConstraints="NO" id="0vx-5K-MzF">
-                    <rect key="frame" x="570" y="524" width="333" height="224"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tocaTreco.png" translatesAutoresizingMaskIntoConstraints="NO" id="9l5-36-ag6">
                     <rect key="frame" x="20" y="492" width="491" height="256"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -81,17 +72,7 @@
                     <rect key="frame" x="-247" y="83" width="269" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F6H-tr-YnU">
-                    <rect key="frame" x="883" y="569" width="141" height="199"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IIA-0n-JtT">
-                            <rect key="frame" x="-5" y="-6" width="146" height="205"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                    </subviews>
-                </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dBz-Rs-4GG">
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dBz-Rs-4GG">
                     <rect key="frame" x="149" y="145" width="742" height="502"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>

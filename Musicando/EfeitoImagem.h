@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 #import "EfeitoMascote.h"
 
 @interface EfeitoImagem : NSObject {
@@ -27,6 +28,7 @@
 -(void)removeTodasAnimacoesView:(UIView*)img;
 //Remove as animacoes de uma lista de imagens
 -(void)removeTodasAnimacoesViewLista:(NSMutableArray*)listaImg;
+-(void)finalizaExercicio:(UIViewController*)contr :(AVAudioPlayer*)player;
 
 
 //chama o nstimer para verficar sempre se todas colisoes necessarias foram feitas para poder passar de fala,

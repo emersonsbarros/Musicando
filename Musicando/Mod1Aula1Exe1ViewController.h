@@ -17,6 +17,11 @@
 #import "EfeitoMascote.h"
 #import <SpriteKit/SpriteKit.h>
 #import "EfeitoBarraSuperior.h"
+#import "MascoteViewController.h"
+#import "RetornaPaginaViewController.h"
+#import "EfeitoTransicao.h"
+
+
 
 @interface Mod1Aula1Exe1ViewController : UIViewController <UIGestureRecognizerDelegate>
 
@@ -30,15 +35,16 @@
 @property Fala *testaFala;
 @property int contadorDeFalas;
 //Mascote (img,view,label)
-@property (strong, nonatomic) IBOutlet UIImageView *imagemDoMascote2;
-@property (weak, nonatomic) IBOutlet UILabel *lblFalaDoMascote;
-@property (weak, nonatomic) IBOutlet UIView *viewGesturePassaFala;
+@property UIImageView *imagemDoMascote2;
+@property  UILabel *lblFalaDoMascote;
+@property UIView *viewGesturePassaFala;
 //Auxilia para liberar a fala qd todas as colisoes que vc quer acontecerem
 @property NSMutableArray *listaLiberaFala;
 @property NSString *estadoAux1;
 @property NSString *estadoAux2;
 @property NSString *estadoAux3;
 //-------------------------------------------------------------------------//
+
 
 
 //Toca Treco

@@ -7,6 +7,7 @@
 //
 
 #import "EfeitoBarraSuperior.h"
+#import "Conversa.h"
 
 @implementation EfeitoBarraSuperior
 
@@ -37,13 +38,27 @@
 -(void)addBarraSuperioAoXib:(UIViewController*)viewAtual :(Exercicio*)exer{
     
     self.textoAulaAtual = exer.nome ;
-    
+    Conversa *conv = [[[exer mascote ]listaDeConversas]objectAtIndex:0];
+    self.textoNumeroAulas = [NSString stringWithFormat:@"%d",conv.listaDeFalas.count];
+        
     BarraSuperiorViewController *bar = [[BarraSuperiorViewController alloc]init];
     bar.view.layer.zPosition = +5;
     [viewAtual addChildViewController:bar];
-    //[bar didMoveToParentViewController:self];
     [viewAtual.view addSubview:bar.view];
 }
+
+
+-(void)retornaViewDoExercicio:(UIViewController*)viewController{
+    for(UIView *img in viewController.view.subviews){
+        if((img.tag == 1000)||(img.tag == 1001)||(img.tag == 1002)||(img.tag == 1003)) {
+        }else {
+            img.hidden = YES;
+        }
+    }
+}
+
+
+
 
 
 
