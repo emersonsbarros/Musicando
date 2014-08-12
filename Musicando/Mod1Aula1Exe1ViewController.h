@@ -5,26 +5,24 @@
 //  Created by Vinicius Resende Fialho on 19/06/14.
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
+
+#import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <QuartzCore/QuartzCore.h>
 #import "Biblioteca.h"
 #import "Conversa.h"
 #import "Fala.h"
-#import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
 #import "Nota.h"
 #import "Sinfonia.h"
-#import <QuartzCore/QuartzCore.h>
 #import "EfeitoImagem.h"
 #import "EfeitoMascote.h"
-#import <SpriteKit/SpriteKit.h>
-#import "BarraSuperiorViewController.h"
-#import "MascoteViewController.h"
-#import "RetornaPaginaViewController.h"
 #import "EfeitoTransicao.h"
 #import "EfeitoPlayer.h"
+#import "EfeitoComponeteView.h"
 
 
 
-@interface Mod1Aula1Exe1ViewController : UIViewController <UIGestureRecognizerDelegate>
+@interface Mod1Aula1Exe1ViewController : UIViewController
 
 //--------------- CODIGO QUE REPETE EM TODAS AS VIEWS ---------------------//
 //////////////////Codigo mutavel/////////////////
@@ -34,7 +32,6 @@
 @property Biblioteca *testaBiblio;
 @property Conversa *testaConversa;
 @property Fala *testaFala;
-@property int contadorDeFalas;
 //Mascote (img,view,label)
 @property UIImageView *imagemDoMascote2;
 @property  UILabel *lblFalaDoMascote;
@@ -42,8 +39,6 @@
 //Auxilia para liberar a fala qd todas as colisoes que vc quer acontecerem
 @property NSMutableArray *listaLiberaFala;
 @property NSString *estadoAux1;
-@property NSString *estadoAux2;
-@property NSString *estadoAux3;
 //-------------------------------------------------------------------------//
 
 
@@ -65,15 +60,13 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgObjetoMusica1;
 
 
+
 //Imagens que fazem animacao sem colisao
 @property (weak, nonatomic) IBOutlet UIImageView *imgGaloGrande;
 @property (weak, nonatomic) IBOutlet UIImageView *imgPipaGrande;
 @property (weak, nonatomic) IBOutlet UIImageView *imgCarroGrande;
 
 
-//Intro gesture de como passar fala
-- (IBAction)btnComecar:(id)sender;
-@property (weak, nonatomic) IBOutlet UIButton *outBtnComecar;
 
 @property (weak, nonatomic) IBOutlet UIView *viewInicialGesture;
 @property (weak, nonatomic) IBOutlet UIImageView *imgMaoTouch;

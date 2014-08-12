@@ -30,7 +30,6 @@
                 <outlet property="imgPipaGrande" destination="Vl0-NB-fqt" id="COj-Cl-ReQ"/>
                 <outlet property="imgTocaTreco" destination="9l5-36-ag6" id="fZ3-2l-t46"/>
                 <outlet property="outAlavancaTocaTreco" destination="1wH-j5-URZ" id="ZMV-fc-jSB"/>
-                <outlet property="outBtnComecar" destination="5cB-NT-e8B" id="k3J-x4-PRA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewInicialGesture" destination="dBz-Rs-4GG" id="LHj-xu-Acg"/>
             </connections>
@@ -88,9 +87,6 @@
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
-                            <connections>
-                                <action selector="btnComecar:" destination="-1" eventType="touchUpInside" id="hdz-pp-nhY"/>
-                            </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" alpha="0.5499999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gesturePassaFalaMascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="X0B-cV-0oK">
                             <rect key="frame" x="142" y="180" width="145" height="244"/>

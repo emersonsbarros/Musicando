@@ -71,6 +71,7 @@
 		2B64FA801969236D00BC57FD /* Mod2Aula8Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA7E1969236D00BC57FD /* Mod2Aula8Exe1ViewController.xib */; };
 		2B64FA84196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA82196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m */; };
 		2B64FA85196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA83196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib */; };
+		3F03108F1999D8F500570B8A /* EfeitoComponeteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F03108E1999D8F500570B8A /* EfeitoComponeteView.m */; };
 		3F608CA1196C5B7D001979E9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F608CA0196C5B7D001979E9 /* AudioToolbox.framework */; };
 		3F608CA3196C5B85001979E9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F608CA2196C5B85001979E9 /* OpenAL.framework */; };
 		3F608CA5196C5B8D001979E9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F608CA4196C5B8D001979E9 /* QuartzCore.framework */; };
@@ -550,6 +551,8 @@
 		2B64FA81196923FA00BC57FD /* Mod1Aula3Exe5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula3Exe5ViewController.h; sourceTree = "<group>"; };
 		2B64FA82196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula3Exe5ViewController.m; sourceTree = "<group>"; };
 		2B64FA83196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula3Exe5ViewController.xib; sourceTree = "<group>"; };
+		3F03108D1999D8F500570B8A /* EfeitoComponeteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoComponeteView.h; sourceTree = "<group>"; };
+		3F03108E1999D8F500570B8A /* EfeitoComponeteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoComponeteView.m; sourceTree = "<group>"; };
 		3F608CA0196C5B7D001979E9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3F608CA2196C5B85001979E9 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		3F608CA4196C5B8D001979E9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -1001,6 +1004,8 @@
 				3FADEE611998688C00352D2C /* EfeitoTransicao.m */,
 				0B215C4E1999572F007230B7 /* EfeitoPlayer.h */,
 				0B215C4F1999572F007230B7 /* EfeitoPlayer.m */,
+				3F03108D1999D8F500570B8A /* EfeitoComponeteView.h */,
+				3F03108E1999D8F500570B8A /* EfeitoComponeteView.m */,
 			);
 			name = Efeitos;
 			sourceTree = "<group>";
@@ -1960,12 +1965,12 @@
 			children = (
 				0B215C5319996035007230B7 /* RetornaPaginaView */,
 				0B215C5219996029007230B7 /* MascteView */,
+				3FAAE944198365010053DD23 /* BarraView */,
+				3FAC66911984B63F00BED55E /* TransicaoExerciciosView */,
 				3FAC5926197F78F8001B762F /* BibliotecaView */,
 				3FD7EA3919529625005F089A /* AulasView */,
 				3FD7EA38195295F9005F089A /* ModuloView */,
 				3FD7EA37195295E7005F089A /* MenuPrincipalView */,
-				3FAC66911984B63F00BED55E /* TransicaoExerciciosView */,
-				3FAAE944198365010053DD23 /* BarraView */,
 				3FD7EA3A19529661005F089A /* Exercicios */,
 			);
 			name = Controlador;
@@ -2423,6 +2428,7 @@
 				3F608D59196C7585001979E9 /* DataBaseNotaPadrao.m in Sources */,
 				3F608D96196C7585001979E9 /* Instrumento.m in Sources */,
 				2B64FA751969235000BC57FD /* Mod2Aula7Exe5ViewController.m in Sources */,
+				3F03108F1999D8F500570B8A /* EfeitoComponeteView.m in Sources */,
 				2B64FA84196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m in Sources */,
 				3F608DE2196C7585001979E9 /* Sinfonia.m in Sources */,
 				3FAD24551973975500DEDFF8 /* EfeitoMascote.m in Sources */,

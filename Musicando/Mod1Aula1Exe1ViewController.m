@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
 #import "Mod1Aula1Exe1ViewController.h"
-#import "BarraSuperiorViewController.h"
+
 
 @interface Mod1Aula1Exe1ViewController ()
 
@@ -37,21 +37,18 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-    //Add barra Superior ao Xib
-    [[BarraSuperiorViewController sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
-    [[MascoteViewController sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
-    [[RetornaPaginaViewController sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
-    
+    //Add barra,Mascote,View de Retornar Pagina ao Xib
+    [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
     
     //Habilita o gesture do mascote com a UIView que fica por cima dele
     //Coloquei essa view para colocar o gesture de pular fala, pois com animation atrapalha
     self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
-    //[self addGesturePassaFalaMascote:self.viewGesturePassaFala:[RetornaPaginaViewController sharedManager].viewRetornaPagina];
+
     
-    
+    //Cria Seletor e manda ele como paramentro para outros View Controllers poderem usar
     SEL selectors1 = @selector(pulaFalaMascote);
     [[MascoteViewController sharedManager]addGesturePassaFalaMascote:self.viewGesturePassaFala :selectors1:self];
-    [[RetornaPaginaViewController sharedManager]addGesturePassaFalaMascote:[RetornaPaginaViewController sharedManager].viewRetornaPagina :self.contadorDeFalas :selectors1 :self];
+    [[RetornaPaginaViewController sharedManager]addGesturePassaFalaMascote:[RetornaPaginaViewController sharedManager].viewRetornaPagina:selectors1:self];
     
     
     //Lista para cair animcao/colisao
@@ -72,22 +69,17 @@
     self.listaLiberaFala = [[NSMutableArray alloc]init];
     //seta com alguma coisa para add uma coisa nao nula
     self.estadoAux1 = @"0";
-    self.estadoAux2 = @"0";
-    self.estadoAux3 = @"0";
+    
     
     //Biblioteca
-    //self.contadorDeFalas = [MascoteViewController sharedManager].contadorDeFalas;
     self.lblFalaDoMascote = [MascoteViewController sharedManager].lblFalaDoMascote;
     self.testaBiblio = [MascoteViewController sharedManager].testaBiblio;
     self.testaConversa = [MascoteViewController sharedManager].testaConversa;
     self.imagemDoMascote2 = [MascoteViewController sharedManager].imagemDoMascote2;
     [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote2];
     
+    
     [self pulaFalaMascote];
-    
-    //Animcao para cair notas
-    [self lacoCaindoNotas];
-    
     
 }
 
@@ -139,7 +131,7 @@
     if (nowIntersecting){
         self.imgFitaCarro.hidden = true;
         self.imgFitaCarro.frame = self.imgFitaCarro.frame;
-        [self.listaLiberaFala addObject:self.estadoAux2];
+        [self.listaLiberaFala addObject:self.estadoAux1];
         [theTimer invalidate];
         [self acaoColisaoCarro];
     }
@@ -162,7 +154,7 @@
     if (nowIntersecting){
         self.imgFitaFuracao.hidden = true;
         self.imgFitaFuracao.frame = self.imgFitaFuracao.frame;
-        [self.listaLiberaFala addObject:self.estadoAux3];
+        [self.listaLiberaFala addObject:self.estadoAux1];
         [theTimer invalidate];
         [self acaoColisaoVento];
     }
@@ -197,7 +189,7 @@
     if (nowIntersecting){
         self.imgObjetoMusica2.hidden = true;
         self.imgObjetoMusica2.frame = self.imgObjetoMusica2.frame;
-        [self.listaLiberaFala addObject:self.estadoAux2];
+        [self.listaLiberaFala addObject:self.estadoAux1];
         
         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"musicaPanela" withExtension:@"mp3"];
         [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
@@ -216,7 +208,7 @@
     if (nowIntersecting){
         self.imgObjetoMusica3.hidden = true;
         self.imgObjetoMusica3.frame = self.imgObjetoMusica3.frame;
-        [self.listaLiberaFala addObject:self.estadoAux3];
+        [self.listaLiberaFala addObject:self.estadoAux1];
         
         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"musicaPalmas" withExtension:@"mp3"];
         [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
@@ -239,27 +231,16 @@
 
 
 -(void)chamaMetodosFala0 {
+    
+    //Animcao para cair notas
+    [self lacoCaindoNotas];
+    
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
 }
 
 -(void)chamaMetodosFala1 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
-}
-
--(void)tocaIndio{
-    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"indio" withExtension:@"mp3"];
-    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
-}
-
--(void)tocaCarnaval{
-    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"carnaval" withExtension:@"mp3"];
-    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
-}
-
--(void)tocaCapoeira{
-    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"capoeira" withExtension:@"mp3"];
-    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
 }
 
 -(void)chamaMetodosFala2 {
@@ -496,31 +477,6 @@
     
 }
 
-//-(void)rotate:(id)sender {
-//    
-//    
-//    UIRotationGestureRecognizer *rotationRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(rotate:)];
-//    [rotationRecognizer setDelegate:self];
-//    [self.outAlavancaTocaTreco addGestureRecognizer:rotationRecognizer];
-//    
-//    //lastRotation is a cgfloat member variable
-//    
-//    if([(UIRotationGestureRecognizer*)sender state] == UIGestureRecognizerStateEnded) {
-//        _lastRotation = 0.0;
-//        return;
-//    }
-//    
-//    CGFloat rotation = 0.0 - (_lastRotation - [(UIRotationGestureRecognizer*)sender rotation]);
-//    
-//    CGAffineTransform currentTransform = self.outAlavancaTocaTreco.transform;
-//    CGAffineTransform newTransform = CGAffineTransformRotate(currentTransform,rotation);
-//    
-//    [self.outAlavancaTocaTreco setTransform:newTransform];
-//    
-//    _lastRotation = [(UIRotationGestureRecognizer*)sender rotation];
-//}
-
-
 - (IBAction)btnAlavancaTocaTreco:(id)sender {
     
     
@@ -662,10 +618,6 @@
 
 -(void)chamaMetodosFala9 {
     
-//    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgBen3];
-//    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgBen2];
-//    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgBen1];
-    
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
 }
@@ -724,49 +676,28 @@
         self.testaFala = [self.testaConversa.listaDeFalas objectAtIndex:[MascoteViewController sharedManager].contadorDeFalas];
         self.lblFalaDoMascote.text = self.testaFala.conteudo;
         
-        self.contadorDeFalas +=1;
         [MascoteViewController sharedManager].contadorDeFalas += 1;
         
     }
 }
 
 
-//-(void)voltaView{
-//  
-////    SEL selectors1 = NSSelectorFromString(@"pulaFalaMascote");
-////    
-////    [self performSelector:selectors1 withObject:NULL afterDelay:0.0];
-//
-//    if(self.contadorDeFalas >1){
-//        [[EfeitoBarraSuperior sharedManager]retornaViewDoExercicio:self];
-//        self.contadorDeFalas = self.contadorDeFalas -2;
-//        [self pulaFalaMascote];
-//        
-//        [[EfeitoTransicao sharedManager]chamaTransicaoPaginaTopo:self];
-//    }
-//    
-//}
-
-
-////Add gesture passar de fala a view que fica por cima do mascote, usei por cauda do problema da animacao
-//-(void)addGesturePassaFalaMascote:(UIView*)viewGesture :(UIView*)viewVoltaFala{
-//    
-//    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pulaFalaMascote)];
-//    singleTap.numberOfTouchesRequired = 1;
-//    singleTap.enabled = NO;
-//    viewGesture.userInteractionEnabled = NO;
-//    [viewGesture addGestureRecognizer:singleTap];
-//    
-//    
-//    UISwipeGestureRecognizer *singleTap2 = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(voltaView)];
-//    singleTap2.numberOfTouchesRequired = 1;
-//    singleTap2.direction = UISwipeGestureRecognizerDirectionRight;
-//    viewVoltaFala.userInteractionEnabled = YES;
-//    [viewVoltaFala addGestureRecognizer:singleTap2];
-//
-//}
-
 ////////////////////////// ACOES DA COLISAO ////////////////////////
+
+-(void)tocaIndio{
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"indio" withExtension:@"mp3"];
+    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
+}
+
+-(void)tocaCarnaval{
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"carnaval" withExtension:@"mp3"];
+    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
+}
+
+-(void)tocaCapoeira{
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"capoeira" withExtension:@"mp3"];
+    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
+}
 
 //Fazem as imagens sairem da esquerda até direita, no caso o Galo,Carro,Vento
 -(void)deslocaImagemGrandeParaDireita:(UIImageView*)imgGrande :(float)duracaoAnimacao{

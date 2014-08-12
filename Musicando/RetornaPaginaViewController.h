@@ -22,7 +22,7 @@
 +(RetornaPaginaViewController*)sharedManager;
 -(void)addBarraSuperioAoXib:(UIViewController*)viewAtual :(Exercicio*)exer;
 
--(void)addGesturePassaFalaMascote:(UIView*)viewVoltaFala :(int)contadorFala :(SEL)nomeMetodo :(UIViewController*)cont;
+-(void)addGesturePassaFalaMascote:(UIView*)viewVoltaFala :(SEL)nomeMetodo :(UIViewController*)cont;
 
 
 @end

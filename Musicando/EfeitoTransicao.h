@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Exercicio.h"
 #import "Biblioteca.h"
-
+#import "TransicaoExercicioViewController.h"
 
 @interface EfeitoTransicao : NSObject
 

@@ -79,15 +79,11 @@
                                        selector:self.metodo
                                        userInfo:nil
                                         repeats:NO];
-    
-        
-       
-        
+
+    }
 }
 
-}
-
--(void)addGesturePassaFalaMascote:(UIView*)viewVoltaFala :(int)contadorFala :(SEL)nomeMetodo :(UIViewController*)cont{
+-(void)addGesturePassaFalaMascote:(UIView*)viewVoltaFala :(SEL)nomeMetodo :(UIViewController*)cont{
     
     self.metodo = nomeMetodo;
     self.cont = cont;

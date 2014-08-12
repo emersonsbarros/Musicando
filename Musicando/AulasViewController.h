@@ -11,6 +11,7 @@
 #import "Modulo.h"
 #import "Aula.h"
 #import "Exercicio.h"
+#import "EfeitoImagem.h"
 
 @interface AulasViewController : UIViewController {
     

@@ -13,7 +13,7 @@
 #import "Modulo.h"
 #import "Aula.h"
 #import "Exercicio.h"
-#import "TransicaoExercicioViewController.h"
+
 
 @interface Biblioteca : NSObject
 
