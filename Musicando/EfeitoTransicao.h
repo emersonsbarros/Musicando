@@ -10,6 +10,7 @@
 #import "Exercicio.h"
 #import "Biblioteca.h"
 #import "TransicaoExercicioViewController.h"
+#import "BarraSuperiorViewController.h"
 
 @interface EfeitoTransicao : NSObject
 

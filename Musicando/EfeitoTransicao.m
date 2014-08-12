@@ -76,6 +76,7 @@
     Exercicio *prox = [self retornaIndiceExercicioModuloBasico:nomeDaViewAtual];
     id object = [[NSClassFromString(prox.nomeView) alloc]initWithNibName:[prox nomeView] bundle:nil];
     [Biblioteca sharedManager].exercicioAtual = prox;
+    [BarraSuperiorViewController sharedManager].txtAulaAtual.text = prox.nome;
     
     CATransition* transition = [CATransition animation];
     transition.duration = 1.5;
@@ -100,6 +101,8 @@
     transition.subtype = kCATransitionFromBottom;
     [viewProxAula.view.window.layer addAnimation:transition forKey:kCATransition];
     [viewProxAula presentViewController:trans animated:NO completion:nil];
+    
+    viewProxAula = nil;
     
 }
 

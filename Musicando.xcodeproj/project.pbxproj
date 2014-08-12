@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B03193B19521C0B00316D6B /* AulasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B03193A19521C0B00316D6B /* AulasViewController.m */; };
 		0B215C501999572F007230B7 /* EfeitoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B215C4F1999572F007230B7 /* EfeitoPlayer.m */; };
+		0B99B637199AAB4000F9A799 /* EfeitoNotaAnimada.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B99B636199AAB4000F9A799 /* EfeitoNotaAnimada.m */; };
 		2B64F9E41969207E00BC57FD /* Mod1Aula2Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64F9E21969207E00BC57FD /* Mod1Aula2Exe1ViewController.m */; };
 		2B64F9E51969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64F9E31969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib */; };
 		2B64F9EA196920D000BC57FD /* Mod1Aula3Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64F9E8196920D000BC57FD /* Mod1Aula3Exe1ViewController.m */; };
@@ -458,6 +459,8 @@
 		0B03193A19521C0B00316D6B /* AulasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AulasViewController.m; sourceTree = "<group>"; };
 		0B215C4E1999572F007230B7 /* EfeitoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoPlayer.h; sourceTree = "<group>"; };
 		0B215C4F1999572F007230B7 /* EfeitoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoPlayer.m; sourceTree = "<group>"; };
+		0B99B635199AAB4000F9A799 /* EfeitoNotaAnimada.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoNotaAnimada.h; sourceTree = "<group>"; };
+		0B99B636199AAB4000F9A799 /* EfeitoNotaAnimada.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoNotaAnimada.m; sourceTree = "<group>"; };
 		2B64F9E11969207E00BC57FD /* Mod1Aula2Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula2Exe1ViewController.h; sourceTree = "<group>"; };
 		2B64F9E21969207E00BC57FD /* Mod1Aula2Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula2Exe1ViewController.m; sourceTree = "<group>"; };
 		2B64F9E31969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula2Exe1ViewController.xib; sourceTree = "<group>"; };
@@ -1006,6 +1009,8 @@
 				0B215C4F1999572F007230B7 /* EfeitoPlayer.m */,
 				3F03108D1999D8F500570B8A /* EfeitoComponeteView.h */,
 				3F03108E1999D8F500570B8A /* EfeitoComponeteView.m */,
+				0B99B635199AAB4000F9A799 /* EfeitoNotaAnimada.h */,
+				0B99B636199AAB4000F9A799 /* EfeitoNotaAnimada.m */,
 			);
 			name = Efeitos;
 			sourceTree = "<group>";
@@ -2455,6 +2460,7 @@
 				2B64FA661969233700BC57FD /* Mod2Aula7Exe2ViewController.m in Sources */,
 				2B64FA3E196922AD00BC57FD /* Mod2Aula4Exe3ViewController.m in Sources */,
 				3F608DE4196C7585001979E9 /* SoundBankPlayer.m in Sources */,
+				0B99B637199AAB4000F9A799 /* EfeitoNotaAnimada.m in Sources */,
 				0B03193B19521C0B00316D6B /* AulasViewController.m in Sources */,
 				3FAD24521973843A00DEDFF8 /* EfeitoImagem.m in Sources */,
 				3F608DCC196C7585001979E9 /* Partitura.m in Sources */,

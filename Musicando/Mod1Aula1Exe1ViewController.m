@@ -52,7 +52,6 @@
     
     
     //Lista para cair animcao/colisao
-    self.listaImagensCai = [[NSMutableArray alloc]init];
     self.listaImangesColisao = [[NSMutableArray alloc]init];
     //Add imagens que faram colisao
     [self.listaImangesColisao addObject:self.imgFitaFuracao];
@@ -233,7 +232,7 @@
 -(void)chamaMetodosFala0 {
     
     //Animcao para cair notas
-    [self lacoCaindoNotas];
+    [[EfeitoNotaAnimada sharedManager]animacaoCaiNotaIdaVolta:self];
     
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
 }
@@ -247,8 +246,8 @@
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
     //Remove todas as animacoes que estao na lista, no caso estou tirando as notas que caiem
-    [[EfeitoImagem sharedManager]removeTodasAnimacoesViewLista:self.listaImagensCai];
-    
+    [[EfeitoNotaAnimada sharedManager]removeAnimacao];
+
     //Mostra imagem oculta
     [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgIndioMusica];
     [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgCarnaval];
@@ -521,8 +520,9 @@
     
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
-    [[EfeitoImagem sharedManager]removeTodasAnimacoesViewLista:self.listaImagensCai];
-    
+    //Remove todas as animacoes que estao na lista, no caso estou tirando as notas que caiem
+    [[EfeitoNotaAnimada sharedManager]removeAnimacao];
+
     
     [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgObjetoMusica1];
     [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgObjetoMusica2];
@@ -764,138 +764,7 @@
 
 
 //////////////////////////////// METODOS NOTAS CAINDO /////////////////////////
-//Toca audio Nota
--(void)tocaNotaPulando:(NSString*)nomeNota{
-    Nota *aux = [[Nota alloc]init];
-    aux.nomeNota = nomeNota;
-    aux.oitava = @"5";
-    aux.tom = @"";
-    aux.tipoNota = @"quarter";
-    self.listaSons = [[NSMutableArray alloc]init];
-    [self.listaSons addObject:aux];
-    [[Sinfonia sharedManager]tocarUmaNota:self.listaSons:@"Piano"];
-}
 
--(NSMutableArray*)addFormaAleatoria{
-    
-    NSMutableArray *storeArray = [[NSMutableArray alloc] init];
-    BOOL record = NO;
-    int x;
-    
-    for (int i=0; [storeArray count] < 13; i++) //Loop for generate different random values
-    {
-        x = arc4random() % 13;//generating random number
-        if(i==0)//for first time
-        {
-            [storeArray addObject:[NSNumber numberWithInt:x]];
-        }
-        else
-        {
-            for (int j=0; j<= [storeArray count]-1; j++)
-            {
-                if (x ==[[storeArray objectAtIndex:j] intValue])
-                    record = YES;
-            }
-            
-            if (record == YES)
-            {
-                record = NO;
-            }
-            else
-            {
-                [storeArray addObject:[NSNumber numberWithInt:x]];
-            }
-        }
-    }
-
-    return storeArray;
-
-}
-
--(void)lacoCaindoNotas{
-    
-    self.duracao = 3.0;
-    self.delay = 0.0;
-    self.posX = -100;
-    CGFloat posY=0;
-    NSString *nomeNota;
-    NSMutableArray *contaAl = [self addFormaAleatoria];
-
-        for(int i=0;i<13;i++){
-            UIImageView *notaCaindo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"notaParaRosto.png"]];
-            UIImageView *carinha = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"notaCaraPausaSom.png"]];
-            carinha.frame = CGRectMake(carinha.frame.origin.x+13,
-                                       carinha.frame.origin.y+130,
-                                       30,
-                                       30);
-            [notaCaindo addSubview:carinha];
-            
-            //Add sprite as imagem da mão e comeca (tem uma parar no EfeitoImagem caso necesario)
-            UIImage *image1 = [UIImage imageNamed:@"notaCaraPausaSom.png"];
-            UIImage *image2 = [UIImage imageNamed:@"notaCaraTocaSom.png"];
-            NSArray *imageArray = [NSArray arrayWithObjects:image1,image2,nil];
-            [[EfeitoImagem sharedManager]addAnimacaoSprite:imageArray:carinha];
-            
-            notaCaindo.frame = CGRectMake(self.posX,-100,notaCaindo.frame.size.width+40,notaCaindo.frame.size.height+70);
-            [[self listaImagensCai]addObject:notaCaindo];
-            [self.view addSubview:notaCaindo];
-            
-            switch (i) {
-                case 1:
-                    nomeNota = @"C";
-                    break;
-                case 2:
-                    nomeNota = @"D";
-                    break;
-                case 3:
-                    nomeNota = @"E";
-                    break;
-                case 4:
-                    nomeNota = @"F";
-                    break;
-                case 5:
-                    nomeNota = @"G";
-                    break;
-                case 6:
-                    nomeNota = @"A";
-                    break;
-                default:
-                    break;
-            }
-            if(i<5) posY = 540;
-            else posY = 340;
-            
-            
-            self.posX += 100;
-            [self animacaoCaindoNotas:notaCaindo:self.duracao:self.posX:posY:self.delay:nomeNota];
-            self.delay = [[contaAl objectAtIndex:i]floatValue];
-
-            
-        }
-    
-}
-
-
-
--(void)animacaoCaindoNotas:(UIImageView*)notaCaindo :(float)duracao :(CGFloat)posX :(CGFloat)posY :(float)tempoDemrora :(NSString*)nomeNota{
-       
-    [UIView animateWithDuration:duracao
-                          delay:tempoDemrora
-                        options:  UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionTransitionCrossDissolve
-                     animations:^{
-                         [notaCaindo.layer removeAnimationForKey:@"1"];
-                         CGRect moveGalo = CGRectMake(posX,
-                                                      posY,
-                                                      notaCaindo.frame.size.width,
-                                                      notaCaindo.frame.size.height);
-                         notaCaindo.frame = moveGalo;
-                      }
-                     completion:^(BOOL finished){
-                         notaCaindo.hidden = YES;
-                     }];
-    
-    
-}
 
 
 @end

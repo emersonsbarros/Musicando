@@ -1,71 +1,96 @@
 //
-//  TransicaoExercicioViewController.m
+//  EfeitoNotaAnimada.m
 //  Musicando
 //
-//  Created by Vinicius Resende Fialho on 27/07/14.
+//  Created by VINICIUS RESENDE FIALHO on 12/08/14.
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
 
-#import "TransicaoExercicioViewController.h"
+#import "EfeitoNotaAnimada.h"
 
-@interface TransicaoExercicioViewController ()
+@implementation EfeitoNotaAnimada
 
-@end
+//Singleton
++(EfeitoNotaAnimada*)sharedManager{
+    static EfeitoNotaAnimada *mascote = nil;
+    if(!mascote){
+        mascote = [[super allocWithZone:nil] init];
+    }
+    return mascote;
+}
 
-@implementation TransicaoExercicioViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+-(id)init{
+    self = [super init];
+    if(self){
+        
     }
     return self;
 }
 
-- (BOOL)prefersStatusBarHidden {
-    return YES;
-}
 
--(void)chamaProximaAula{
-    
-    NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
-    [[EfeitoTransicao sharedManager]chamaOProximoExercicio:self:proxExercicio];
-    
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    [self performSelector:@selector(lacoCaindoNotas) withObject:NULL afterDelay:0.1];
-    
-    self.txtProximaAula.textAlignment = NSTextAlignmentCenter;
-    self.txtProximaAula.text = [[EfeitoTransicao sharedManager]retornaONomeDaProximaAula:[[Biblioteca sharedManager]exercicioAtual].nomeView];
-    
-
-    [NSTimer scheduledTimerWithTimeInterval: 8.0
-                                     target: self
-                                   selector: @selector(chamaProximaAula)
-                                   userInfo: nil
-                                    repeats: NO];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
++(id)allocWithZone:(struct _NSZone *)zone{
+    return [self sharedManager];
 }
 
 
-//////////////////////////////// METODOS NOTAS CAINDO /////////////////////////
 
--(void)lacoCaindoNotas{
+
+-(void)tocaNotaPulando:(NSString*)nomeNota{
+    Nota *aux = [[Nota alloc]init];
+    aux.nomeNota = nomeNota;
+    aux.oitava = @"5";
+    aux.tom = @"";
+    aux.tipoNota = @"quarter";
+    self.listaSons = [[NSMutableArray alloc]init];
+    [self.listaSons addObject:aux];
+    [[Sinfonia sharedManager]tocarUmaNota:self.listaSons:@"Piano"];
+}
+
+-(NSMutableArray*)addFormaAleatoria{
     
-    float duracao = 1.0;
-    float delay = 0.0;
-    float posX = -100;
-    CGFloat posY= 400;
+    NSMutableArray *storeArray = [[NSMutableArray alloc] init];
+    BOOL record = NO;
+    int x;
+    
+    for (int i=0; [storeArray count] < 13; i++) //Loop for generate different random values
+    {
+        x = arc4random() % 13;//generating random number
+        if(i==0)//for first time
+        {
+            [storeArray addObject:[NSNumber numberWithInt:x]];
+        }
+        else
+        {
+            for (int j=0; j<= [storeArray count]-1; j++)
+            {
+                if (x ==[[storeArray objectAtIndex:j] intValue])
+                    record = YES;
+            }
+            
+            if (record == YES)
+            {
+                record = NO;
+            }
+            else
+            {
+                [storeArray addObject:[NSNumber numberWithInt:x]];
+            }
+        }
+    }
+    
+    return storeArray;
+    
+}
+
+-(void)animacaoCaiNotaIdaVolta:(UIViewController*)controler{
+    
+    self.duracao = 3.0;
+    self.delay = 0.0;
+    self.posX = -100;
+    CGFloat posY=0;
     NSString *nomeNota;
+    NSMutableArray *contaAl = [self addFormaAleatoria];
+    self.listaImagensCai = [[NSMutableArray alloc]init];
     
     for(int i=0;i<13;i++){
         UIImageView *notaCaindo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"notaParaRosto.png"]];
@@ -82,9 +107,9 @@
         NSArray *imageArray = [NSArray arrayWithObjects:image1,image2,nil];
         [[EfeitoImagem sharedManager]addAnimacaoSprite:imageArray:carinha];
         
-        notaCaindo.frame = CGRectMake(posX,450,notaCaindo.frame.size.width+40,notaCaindo.frame.size.height+70);
+        notaCaindo.frame = CGRectMake(self.posX,-100,notaCaindo.frame.size.width+40,notaCaindo.frame.size.height+70);
         [[self listaImagensCai]addObject:notaCaindo];
-        [self.view addSubview:notaCaindo];
+        [controler.view addSubview:notaCaindo];
         
         switch (i) {
             case 1:
@@ -108,22 +133,19 @@
             default:
                 break;
         }
+        if(i<5) posY = 540;
+        else posY = 340;
         
-        posY = 600;
         
-        
-        [self animacaoCaindoNotas:notaCaindo:duracao:posX:posY:delay:nomeNota];
-        posX += 100;
-        delay += 0.1;
-        
+        self.posX += 100;
+        [self animacaoCaindoNotas:notaCaindo:self.duracao:self.posX:posY:self.delay:nomeNota];
+        self.delay = [[contaAl objectAtIndex:i]floatValue];
         
     }
-    
 }
 
 
 -(void)animacaoCaindoNotas:(UIImageView*)notaCaindo :(float)duracao :(CGFloat)posX :(CGFloat)posY :(float)tempoDemrora :(NSString*)nomeNota{
-    //UIViewAnimationOptionAutoreverse ,UIViewAnimationOptionCurveEaseInOut,UIViewAnimationOptionTransitionCrossDissolv
     
     [UIView animateWithDuration:duracao
                           delay:tempoDemrora
@@ -142,5 +164,13 @@
     
     
 }
+
+-(void)removeAnimacao{
+    for(UIImageView *img in self.listaImagensCai){
+        img.hidden = YES;
+        [img.layer removeAllAnimations];
+    }
+}
+
 
 @end

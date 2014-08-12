@@ -19,6 +19,7 @@
 #import "EfeitoTransicao.h"
 #import "EfeitoPlayer.h"
 #import "EfeitoComponeteView.h"
+#import "EfeitoNotaAnimada.h"
 
 
 
@@ -96,13 +97,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgCapoeiraMusica;
 @property (weak, nonatomic) IBOutlet UIImageView *imgAnimacaoCapoeira;
 
-
-//Atributos para Animacao chover objetos
-@property NSMutableArray *listaSons;
-@property CGFloat posX;
-@property float delay;
-@property float duracao;
-@property NSMutableArray *listaImagensCai;
 
 
 

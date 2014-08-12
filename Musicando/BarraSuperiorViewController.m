@@ -59,7 +59,6 @@
     self.txtNumeroAulas.text = self.textoNumeroAulas;
     self.txtNumeroAulaAtual.text = @"1";
     
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,7 +79,7 @@
 -(void)addBarraSuperioAoXib:(UIViewController*)viewAtual :(Exercicio*)exer{
     
     Conversa *conv = [[[exer mascote ]listaDeConversas]objectAtIndex:0];
-   
+
     self.textoAulaAtual = exer.nome;
     self.textoNumeroAulas = [NSString stringWithFormat:@"%d",conv.listaDeFalas.count];
     
