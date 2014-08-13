@@ -22,7 +22,10 @@
 @property NSMutableArray *listaImagensCai;
 
 +(EfeitoNotaAnimada*)sharedManager;
+
 -(void)animacaoCaiNotaIdaVolta:(UIViewController*)controler;
+-(void)animacaoCaiNotaOndas:(UIViewController*)controler;
+
 -(void)removeAnimacao;
 
 @end

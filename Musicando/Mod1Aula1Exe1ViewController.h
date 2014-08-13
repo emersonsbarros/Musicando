@@ -25,6 +25,7 @@
 
 @interface Mod1Aula1Exe1ViewController : UIViewController
 
+
 //--------------- CODIGO QUE REPETE EM TODAS AS VIEWS ---------------------//
 //////////////////Codigo mutavel/////////////////
 //lista de todas imagens que precisam de colisao
@@ -45,10 +46,12 @@
 
 
 //Toca Treco
-@property (weak, nonatomic) IBOutlet UIImageView *imgTocaTreco;
+@property UIImageView *imgTocaTreco;
 - (IBAction)btnAlavancaTocaTreco:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *outAlavancaTocaTreco;
-@property float lastRotation;
+
+
+
 @property NSURL *caminhoDoAudio;
 
 
@@ -69,9 +72,7 @@
 
 
 
-@property (weak, nonatomic) IBOutlet UIView *viewInicialGesture;
-@property (weak, nonatomic) IBOutlet UIImageView *imgMaoTouch;
-@property (weak, nonatomic) IBOutlet UIImageView *imgMascoteIntro;
+
 @property (weak, nonatomic) IBOutlet UIImageView *imgMaoTocaTreco;
 @property (weak, nonatomic) IBOutlet UIImageView *imgGaloMao;
 
@@ -88,10 +89,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgAnimacaoIndio;
 
 
-
 @property (weak, nonatomic) IBOutlet UIImageView *imgCarnaval;
 @property (weak, nonatomic) IBOutlet UIImageView *imgAnimacaoCarnaval;
-
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgCapoeiraMusica;

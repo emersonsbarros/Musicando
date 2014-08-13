@@ -40,6 +40,11 @@
     return self;
 }
 
++(id)allocWithZone:(struct _NSZone *)zone{
+    return [self sharedManager];
+}
+
+
 -(void)addBarraSuperioAoXib:(UIViewController*)viewAtual :(Exercicio*)exer{
     
     RetornaPaginaViewController *bar = [[RetornaPaginaViewController alloc]init];
@@ -97,9 +102,6 @@
     
 }
 
-+(id)allocWithZone:(struct _NSZone *)zone{
-    return [self sharedManager];
-}
 
 
 -(void)viewDidDisappear:(BOOL)animated {

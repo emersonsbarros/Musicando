@@ -11,6 +11,7 @@
 #import "BarraSuperiorViewController.h"
 #import "MascoteViewController.h"
 #import "RetornaPaginaViewController.h"
+#import "TocaTrecoViewController.h"
 
 @interface EfeitoComponeteView : NSObject
 

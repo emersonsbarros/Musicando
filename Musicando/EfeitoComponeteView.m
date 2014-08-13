@@ -40,7 +40,24 @@
     [[BarraSuperiorViewController sharedManager]addBarraSuperioAoXib:controller:exer];
     [[MascoteViewController sharedManager]addBarraSuperioAoXib:controller:exer];
     [[RetornaPaginaViewController sharedManager]addBarraSuperioAoXib:controller:exer];
+    [[TocaTrecoViewController sharedManager]addBarraSuperioAoXib:controller:exer];
+    
+    for(UIView *view in controller.view.subviews){
+        if(view.tag == 1000){
+            [controller.view insertSubview:[MascoteViewController sharedManager].view atIndex:1];
+            break;
+        }else{
+            [controller.view insertSubview:[MascoteViewController sharedManager].view atIndex:0];
+        }
+    }
     
 }
 
+
+
+
+
 @end
+
+
+

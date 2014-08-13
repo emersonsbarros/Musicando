@@ -54,7 +54,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"entr");
+   
     self.txtAulaAtual.text = self.textoAulaAtual;
     self.txtNumeroAulas.text = self.textoNumeroAulas;
     self.txtNumeroAulaAtual.text = @"1";

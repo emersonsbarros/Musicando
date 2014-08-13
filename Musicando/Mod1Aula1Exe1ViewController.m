@@ -39,7 +39,8 @@
     
     //Add barra,Mascote,View de Retornar Pagina ao Xib
     [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
-    
+    self.imgTocaTreco = [TocaTrecoViewController sharedManager].imgTocaTreco;
+
     //Habilita o gesture do mascote com a UIView que fica por cima dele
     //Coloquei essa view para colocar o gesture de pular fala, pois com animation atrapalha
     self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
@@ -275,6 +276,7 @@
     UIImage *image11 = [UIImage imageNamed:@"Capoeiraframe3.gif"];
     NSArray *imageArray3 = [NSArray arrayWithObjects:image9,image10,image11,nil];
     [[EfeitoImagem sharedManager]addAnimacaoSprite:imageArray3:self.imgAnimacaoCapoeira];
+    
     
     [UIView animateWithDuration:2.0
                           delay:0.0
@@ -522,7 +524,6 @@
     
     //Remove todas as animacoes que estao na lista, no caso estou tirando as notas que caiem
     [[EfeitoNotaAnimada sharedManager]removeAnimacao];
-
     
     [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgObjetoMusica1];
     [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgObjetoMusica2];
@@ -762,8 +763,6 @@
     [self deslocaImagemGrandeParaDireita:self.imgPipaGrande:7.0];
 }
 
-
-//////////////////////////////// METODOS NOTAS CAINDO /////////////////////////
 
 
 

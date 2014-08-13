@@ -102,6 +102,11 @@
     [viewProxAula.view.window.layer addAnimation:transition forKey:kCATransition];
     [viewProxAula presentViewController:trans animated:NO completion:nil];
     
+    
+    for(UIView *view in viewProxAula.view.subviews){
+        [view removeFromSuperview];
+    }
+    
     viewProxAula = nil;
     
 }
