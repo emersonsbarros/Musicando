@@ -37,10 +37,11 @@
 //Add os componetes para uma view de exercicio
 -(void)addComponetesViewExercicio:(UIViewController*)controller :(Exercicio*)exer{
     
+    [[TocaTrecoViewController sharedManager]addBarraSuperioAoXib:controller:exer];
     [[BarraSuperiorViewController sharedManager]addBarraSuperioAoXib:controller:exer];
     [[MascoteViewController sharedManager]addBarraSuperioAoXib:controller:exer];
     [[RetornaPaginaViewController sharedManager]addBarraSuperioAoXib:controller:exer];
-    [[TocaTrecoViewController sharedManager]addBarraSuperioAoXib:controller:exer];
+    
     
     for(UIView *view in controller.view.subviews){
         if(view.tag == 1000){
@@ -50,6 +51,14 @@
             [controller.view insertSubview:[MascoteViewController sharedManager].view atIndex:0];
         }
     }
+    
+    for(UIView *view in controller.view.subviews){
+        if(view.tag == 2222){
+            [controller.view insertSubview:[TocaTrecoViewController sharedManager].view atIndex:0];
+            break;
+        }
+    }
+    
     
 }
 

@@ -1,3 +1,4 @@
+
 //
 //  TocaTrecoViewController.m
 //  Musicando
@@ -48,8 +49,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -61,10 +64,12 @@
     
     TocaTrecoViewController *bar = [[TocaTrecoViewController alloc]init];
     bar.view.layer.zPosition = 0;
+    bar.view.frame = CGRectMake(0, 0, bar.view.frame.size.width,bar.view.frame.size.height);
+    
     [viewAtual addChildViewController:bar];
-    bar.view.frame = CGRectMake(0, 370, bar.view.frame.size.width,bar.view.frame.size.height);
     [viewAtual.view addSubview:bar.view];
     
 }
+
 
 @end

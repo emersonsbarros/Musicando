@@ -87,7 +87,7 @@
     self.duracao = 3.0;
     self.delay = 0.0;
     self.posX = -100;
-    CGFloat posY=0;
+    CGFloat posY=70;
     NSString *nomeNota;
     NSMutableArray *contaAl = [self addFormaAleatoria];
     self.listaImagensCai = [[NSMutableArray alloc]init];
@@ -107,7 +107,7 @@
         NSArray *imageArray = [NSArray arrayWithObjects:image1,image2,nil];
         [[EfeitoImagem sharedManager]addAnimacaoSprite:imageArray:carinha];
         
-        notaCaindo.frame = CGRectMake(self.posX,-100,notaCaindo.frame.size.width+40,notaCaindo.frame.size.height+70);
+        notaCaindo.frame = CGRectMake(self.posX,70,notaCaindo.frame.size.width+40,notaCaindo.frame.size.height+70);
         [[self listaImagensCai]addObject:notaCaindo];
         [controler.view addSubview:notaCaindo];
         

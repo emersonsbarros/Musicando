@@ -39,11 +39,13 @@
     
     //Add barra,Mascote,View de Retornar Pagina ao Xib
     [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
-    self.imgTocaTreco = [TocaTrecoViewController sharedManager].imgTocaTreco;
-
-    //Habilita o gesture do mascote com a UIView que fica por cima dele
-    //Coloquei essa view para colocar o gesture de pular fala, pois com animation atrapalha
     self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
+    self.imgTocaTreco = [TocaTrecoViewController sharedManager].imgTocaTreco;
+    //self.imgTocaTreco.frame = CGRectMake(0, 0,  self.imgTocaTreco.frame.size.width, self.imgTocaTreco.frame.size.height);
+    
+    
+    NSLog(@"valo = %f",self.imgTocaTreco.frame.origin.y);
+    NSLog(@"x = %f",self.imgTocaTreco.frame.origin.x);
 
     
     //Cria Seletor e manda ele como paramentro para outros View Controllers poderem usar
@@ -105,6 +107,8 @@
     }
     
     if (nowIntersecting){
+
+        
         self.imgFitaGalo.hidden = true;
         self.imgFitaGalo.frame = self.imgTocaTreco.frame;
         [self.listaLiberaFala addObject:self.estadoAux1];
@@ -235,12 +239,12 @@
     //Animcao para cair notas
     [[EfeitoNotaAnimada sharedManager]animacaoCaiNotaIdaVolta:self];
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
 }
 
 -(void)chamaMetodosFala1 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
 }
 
 -(void)chamaMetodosFala2 {

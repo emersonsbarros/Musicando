@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0B03193B19521C0B00316D6B /* AulasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B03193A19521C0B00316D6B /* AulasViewController.m */; };
 		0B215C501999572F007230B7 /* EfeitoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B215C4F1999572F007230B7 /* EfeitoPlayer.m */; };
+		0B9709BC199BE944008C3B2A /* TocaTrecoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9709BA199BE944008C3B2A /* TocaTrecoViewController.m */; };
+		0B9709BD199BE944008C3B2A /* TocaTrecoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9709BB199BE944008C3B2A /* TocaTrecoViewController.xib */; };
 		0B99B637199AAB4000F9A799 /* EfeitoNotaAnimada.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B99B636199AAB4000F9A799 /* EfeitoNotaAnimada.m */; };
 		2B64F9E41969207E00BC57FD /* Mod1Aula2Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64F9E21969207E00BC57FD /* Mod1Aula2Exe1ViewController.m */; };
 		2B64F9E51969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64F9E31969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib */; };
@@ -198,8 +200,6 @@
 		3FAD24551973975500DEDFF8 /* EfeitoMascote.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD24541973975500DEDFF8 /* EfeitoMascote.m */; };
 		3FAD24591973AD8200DEDFF8 /* Mod1Aula2Exe2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD24571973AD8200DEDFF8 /* Mod1Aula2Exe2ViewController.m */; };
 		3FAD245A1973AD8200DEDFF8 /* Mod1Aula2Exe2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FAD24581973AD8200DEDFF8 /* Mod1Aula2Exe2ViewController.xib */; };
-		3FAD54BA199B212600475CEA /* TocaTrecoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD54B8199B212600475CEA /* TocaTrecoViewController.m */; };
-		3FAD54BB199B212600475CEA /* TocaTrecoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FAD54B9199B212600475CEA /* TocaTrecoViewController.xib */; };
 		3FAD54BD199B26FD00475CEA /* fundoPapiro.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FAD54BC199B26FD00475CEA /* fundoPapiro.png */; };
 		3FAD54C3199B3F8C00475CEA /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FAD54C2199B3F8C00475CEA /* home.png */; };
 		3FADEE621998688C00352D2C /* EfeitoTransicao.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FADEE611998688C00352D2C /* EfeitoTransicao.m */; };
@@ -463,6 +463,9 @@
 		0B03193A19521C0B00316D6B /* AulasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AulasViewController.m; sourceTree = "<group>"; };
 		0B215C4E1999572F007230B7 /* EfeitoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoPlayer.h; sourceTree = "<group>"; };
 		0B215C4F1999572F007230B7 /* EfeitoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoPlayer.m; sourceTree = "<group>"; };
+		0B9709B9199BE944008C3B2A /* TocaTrecoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TocaTrecoViewController.h; sourceTree = "<group>"; };
+		0B9709BA199BE944008C3B2A /* TocaTrecoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TocaTrecoViewController.m; sourceTree = "<group>"; };
+		0B9709BB199BE944008C3B2A /* TocaTrecoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TocaTrecoViewController.xib; sourceTree = "<group>"; };
 		0B99B635199AAB4000F9A799 /* EfeitoNotaAnimada.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoNotaAnimada.h; sourceTree = "<group>"; };
 		0B99B636199AAB4000F9A799 /* EfeitoNotaAnimada.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoNotaAnimada.m; sourceTree = "<group>"; };
 		2B64F9E11969207E00BC57FD /* Mod1Aula2Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula2Exe1ViewController.h; sourceTree = "<group>"; };
@@ -701,9 +704,6 @@
 		3FAD24561973AD8200DEDFF8 /* Mod1Aula2Exe2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula2Exe2ViewController.h; sourceTree = "<group>"; };
 		3FAD24571973AD8200DEDFF8 /* Mod1Aula2Exe2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula2Exe2ViewController.m; sourceTree = "<group>"; };
 		3FAD24581973AD8200DEDFF8 /* Mod1Aula2Exe2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula2Exe2ViewController.xib; sourceTree = "<group>"; };
-		3FAD54B7199B212600475CEA /* TocaTrecoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TocaTrecoViewController.h; sourceTree = "<group>"; };
-		3FAD54B8199B212600475CEA /* TocaTrecoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TocaTrecoViewController.m; sourceTree = "<group>"; };
-		3FAD54B9199B212600475CEA /* TocaTrecoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TocaTrecoViewController.xib; sourceTree = "<group>"; };
 		3FAD54BC199B26FD00475CEA /* fundoPapiro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fundoPapiro.png; sourceTree = "<group>"; };
 		3FAD54C2199B3F8C00475CEA /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		3FADEE601998688C00352D2C /* EfeitoTransicao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoTransicao.h; sourceTree = "<group>"; };
@@ -1037,12 +1037,12 @@
 		0B215C5319996035007230B7 /* RetornaPaginaView */ = {
 			isa = PBXGroup;
 			children = (
+				3FD3253519971DEE004A0262 /* RetornaPaginaViewController.xib */,
 				3FD3253319971DEE004A0262 /* RetornaPaginaViewController.h */,
 				3FD3253419971DEE004A0262 /* RetornaPaginaViewController.m */,
-				3FD3253519971DEE004A0262 /* RetornaPaginaViewController.xib */,
-				3FAD54B7199B212600475CEA /* TocaTrecoViewController.h */,
-				3FAD54B8199B212600475CEA /* TocaTrecoViewController.m */,
-				3FAD54B9199B212600475CEA /* TocaTrecoViewController.xib */,
+				0B9709B9199BE944008C3B2A /* TocaTrecoViewController.h */,
+				0B9709BA199BE944008C3B2A /* TocaTrecoViewController.m */,
+				0B9709BB199BE944008C3B2A /* TocaTrecoViewController.xib */,
 			);
 			name = RetornaPaginaView;
 			sourceTree = "<group>";
@@ -2100,7 +2100,6 @@
 				A848559E1994137D00C5F0A3 /* helicoptero.wav in Resources */,
 				3FD3253019970424004A0262 /* frequenciaFlauta.jpg in Resources */,
 				3F608DB8196C7585001979E9 /* nokia.xml in Resources */,
-				3FAD54BB199B212600475CEA /* TocaTrecoViewController.xib in Resources */,
 				A84855271994119600C5F0A3 /* pedindoSilencio.jpg in Resources */,
 				3FCC29161995A9DE000B951F /* MascoteViewController.xib in Resources */,
 				A84855311994119600C5F0A3 /* pilarMelodia.png in Resources */,
@@ -2311,6 +2310,7 @@
 				2B64FA44196922B800BC57FD /* Mod2Aula4Exe4ViewController.xib in Resources */,
 				A848553F1994119600C5F0A3 /* silencio.jpg in Resources */,
 				3F608DAA196C7585001979E9 /* et.xml in Resources */,
+				0B9709BD199BE944008C3B2A /* TocaTrecoViewController.xib in Resources */,
 				A84855451994119600C5F0A3 /* teclado7Notas.png in Resources */,
 				3F608D6E196C7585001979E9 /* 6a - A.caf in Resources */,
 				A84854D81994119600C5F0A3 /* carro.png in Resources */,
@@ -2456,7 +2456,7 @@
 				3FAD24551973975500DEDFF8 /* EfeitoMascote.m in Sources */,
 				2B64FA7A1969235B00BC57FD /* Mod2Aula7Exe6ViewController.m in Sources */,
 				2B64FA161969222600BC57FD /* Mod2Aula1Exe3ViewController.m in Sources */,
-				3FAD54BA199B212600475CEA /* TocaTrecoViewController.m in Sources */,
+				0B9709BC199BE944008C3B2A /* TocaTrecoViewController.m in Sources */,
 				2B64FA4D196922C900BC57FD /* Mod2Aula4Exe6ViewController.m in Sources */,
 				3FCC29151995A9DE000B951F /* MascoteViewController.m in Sources */,
 				2B64FA39196922A400BC57FD /* Mod2Aula4Exe2ViewController.m in Sources */,

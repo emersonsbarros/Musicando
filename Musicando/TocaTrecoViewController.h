@@ -13,7 +13,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgTocaTreco;
-@property (weak, nonatomic) IBOutlet UIImageView *fundoTelaTocaTreco;
+
 
 
 +(TocaTrecoViewController*)sharedManager;
