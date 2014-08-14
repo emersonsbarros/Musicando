@@ -75,6 +75,12 @@
 		2B64FA84196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA82196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m */; };
 		2B64FA85196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA83196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib */; };
 		3F03108F1999D8F500570B8A /* EfeitoComponeteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F03108E1999D8F500570B8A /* EfeitoComponeteView.m */; };
+		3F43A314199C84700038D1E9 /* iconeEditor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F43A311199C84700038D1E9 /* iconeEditor.png */; };
+		3F43A315199C84700038D1E9 /* iconeInstrumento.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F43A312199C84700038D1E9 /* iconeInstrumento.png */; };
+		3F43A316199C84700038D1E9 /* iconeJogos.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F43A313199C84700038D1E9 /* iconeJogos.png */; };
+		3F43A318199C85BD0038D1E9 /* iconeLeitor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F43A317199C85BD0038D1E9 /* iconeLeitor.png */; };
+		3F43A31C199C8AB20038D1E9 /* EstudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43A31B199C8AB20038D1E9 /* EstudioViewController.m */; };
+		3F5DF426199C6945001B5434 /* setaRetornaPagina.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F5DF425199C6945001B5434 /* setaRetornaPagina.png */; };
 		3F608CA1196C5B7D001979E9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F608CA0196C5B7D001979E9 /* AudioToolbox.framework */; };
 		3F608CA3196C5B85001979E9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F608CA2196C5B85001979E9 /* OpenAL.framework */; };
 		3F608CA5196C5B8D001979E9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F608CA4196C5B8D001979E9 /* QuartzCore.framework */; };
@@ -439,7 +445,7 @@
 		A8C3F0B3194B72A400E78899 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C3F0B2194B72A400E78899 /* AppDelegate.m */; };
 		A8C3F0B6194B72A400E78899 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C3F0B4194B72A400E78899 /* Main_iPhone.storyboard */; };
 		A8C3F0B9194B72A400E78899 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C3F0B7194B72A400E78899 /* Main_iPad.storyboard */; };
-		A8C3F0BC194B72A400E78899 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C3F0BB194B72A400E78899 /* ViewController.m */; };
+		A8C3F0BC194B72A400E78899 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C3F0BB194B72A400E78899 /* MenuViewController.m */; };
 		A8C3F0BE194B72A400E78899 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C3F0BD194B72A400E78899 /* Images.xcassets */; };
 		A8C3F0C5194B72A400E78899 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C3F0C4194B72A400E78899 /* XCTest.framework */; };
 		A8C3F0C6194B72A400E78899 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C3F0A2194B72A400E78899 /* Foundation.framework */; };
@@ -563,6 +569,13 @@
 		2B64FA83196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula3Exe5ViewController.xib; sourceTree = "<group>"; };
 		3F03108D1999D8F500570B8A /* EfeitoComponeteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoComponeteView.h; sourceTree = "<group>"; };
 		3F03108E1999D8F500570B8A /* EfeitoComponeteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoComponeteView.m; sourceTree = "<group>"; };
+		3F43A311199C84700038D1E9 /* iconeEditor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconeEditor.png; sourceTree = "<group>"; };
+		3F43A312199C84700038D1E9 /* iconeInstrumento.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconeInstrumento.png; sourceTree = "<group>"; };
+		3F43A313199C84700038D1E9 /* iconeJogos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconeJogos.png; sourceTree = "<group>"; };
+		3F43A317199C85BD0038D1E9 /* iconeLeitor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconeLeitor.png; sourceTree = "<group>"; };
+		3F43A31A199C8AB20038D1E9 /* EstudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EstudioViewController.h; sourceTree = "<group>"; };
+		3F43A31B199C8AB20038D1E9 /* EstudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EstudioViewController.m; sourceTree = "<group>"; };
+		3F5DF425199C6945001B5434 /* setaRetornaPagina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setaRetornaPagina.png; sourceTree = "<group>"; };
 		3F608CA0196C5B7D001979E9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3F608CA2196C5B85001979E9 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		3F608CA4196C5B8D001979E9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -966,8 +979,8 @@
 		A8C3F0B2194B72A400E78899 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A8C3F0B5194B72A400E78899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		A8C3F0B8194B72A400E78899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		A8C3F0BA194B72A400E78899 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A8C3F0BB194B72A400E78899 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A8C3F0BA194B72A400E78899 /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		A8C3F0BB194B72A400E78899 /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		A8C3F0BD194B72A400E78899 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A8C3F0C3194B72A400E78899 /* MusicandoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicandoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C3F0C4194B72A400E78899 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -1037,12 +1050,9 @@
 		0B215C5319996035007230B7 /* RetornaPaginaView */ = {
 			isa = PBXGroup;
 			children = (
-				3FD3253519971DEE004A0262 /* RetornaPaginaViewController.xib */,
 				3FD3253319971DEE004A0262 /* RetornaPaginaViewController.h */,
 				3FD3253419971DEE004A0262 /* RetornaPaginaViewController.m */,
-				0B9709B9199BE944008C3B2A /* TocaTrecoViewController.h */,
-				0B9709BA199BE944008C3B2A /* TocaTrecoViewController.m */,
-				0B9709BB199BE944008C3B2A /* TocaTrecoViewController.xib */,
+				3FD3253519971DEE004A0262 /* RetornaPaginaViewController.xib */,
 			);
 			name = RetornaPaginaView;
 			sourceTree = "<group>";
@@ -1244,6 +1254,25 @@
 				2B64FA2E1969228500BC57FD /* Mod2Aula3Exe3ViewController.xib */,
 			);
 			name = Aula3;
+			sourceTree = "<group>";
+		};
+		3F43A319199C8A8A0038D1E9 /* EstudioView */ = {
+			isa = PBXGroup;
+			children = (
+				3F43A31A199C8AB20038D1E9 /* EstudioViewController.h */,
+				3F43A31B199C8AB20038D1E9 /* EstudioViewController.m */,
+			);
+			name = EstudioView;
+			sourceTree = "<group>";
+		};
+		3F5DF427199C6A33001B5434 /* TocaTrecoView */ = {
+			isa = PBXGroup;
+			children = (
+				0B9709B9199BE944008C3B2A /* TocaTrecoViewController.h */,
+				0B9709BA199BE944008C3B2A /* TocaTrecoViewController.m */,
+				0B9709BB199BE944008C3B2A /* TocaTrecoViewController.xib */,
+			);
+			name = TocaTrecoView;
 			sourceTree = "<group>";
 		};
 		3F608CB2196C7585001979E9 /* Composicao:Leitura */ = {
@@ -1614,8 +1643,8 @@
 		3FD7EA37195295E7005F089A /* MenuPrincipalView */ = {
 			isa = PBXGroup;
 			children = (
-				A8C3F0BA194B72A400E78899 /* ViewController.h */,
-				A8C3F0BB194B72A400E78899 /* ViewController.m */,
+				A8C3F0BA194B72A400E78899 /* MenuViewController.h */,
+				A8C3F0BB194B72A400E78899 /* MenuViewController.m */,
 			);
 			name = MenuPrincipalView;
 			sourceTree = "<group>";
@@ -1664,6 +1693,11 @@
 		A848541E1994119600C5F0A3 /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				3F43A317199C85BD0038D1E9 /* iconeLeitor.png */,
+				3F43A311199C84700038D1E9 /* iconeEditor.png */,
+				3F43A312199C84700038D1E9 /* iconeInstrumento.png */,
+				3F43A313199C84700038D1E9 /* iconeJogos.png */,
+				3F5DF425199C6945001B5434 /* setaRetornaPagina.png */,
 				3FAD54C2199B3F8C00475CEA /* home.png */,
 				3FAD54BC199B26FD00475CEA /* fundoPapiro.png */,
 				3FD3252D1996F8A2004A0262 /* rasgado.png */,
@@ -1982,10 +2016,12 @@
 		A8C3F102194B7B2500E78899 /* Controlador */ = {
 			isa = PBXGroup;
 			children = (
+				3F5DF427199C6A33001B5434 /* TocaTrecoView */,
 				0B215C5319996035007230B7 /* RetornaPaginaView */,
 				0B215C5219996029007230B7 /* MascteView */,
 				3FAAE944198365010053DD23 /* BarraView */,
 				3FAC66911984B63F00BED55E /* TransicaoExerciciosView */,
+				3F43A319199C8A8A0038D1E9 /* EstudioView */,
 				3FAC5926197F78F8001B762F /* BibliotecaView */,
 				3FD7EA3919529625005F089A /* AulasView */,
 				3FD7EA38195295F9005F089A /* ModuloView */,
@@ -2078,6 +2114,7 @@
 				A848558E1994137D00C5F0A3 /* carnaval.mp3 in Resources */,
 				2B64FA6C1969233F00BC57FD /* Mod2Aula7Exe3ViewController.xib in Resources */,
 				A8C3F0B9194B72A400E78899 /* Main_iPad.storyboard in Resources */,
+				3F43A314199C84700038D1E9 /* iconeEditor.png in Resources */,
 				A84855001994119600C5F0A3 /* graficoGraveCortado.jpg in Resources */,
 				3F608DD3196C7585001979E9 /* P200 Piano C7.caf in Resources */,
 				A84855971994137D00C5F0A3 /* escalaPiano3AOitava.wav in Resources */,
@@ -2122,9 +2159,11 @@
 				A84854FC1994119600C5F0A3 /* gesturePassaFalaMascoteTap.png in Resources */,
 				A84854CB1994119600C5F0A3 /* brilhoParticula.sks in Resources */,
 				A84855A61994137D00C5F0A3 /* musicaManeira.mp3 in Resources */,
+				3F43A315199C84700038D1E9 /* iconeInstrumento.png in Resources */,
 				A84855151994119600C5F0A3 /* notaFusa.png in Resources */,
 				A84854FF1994119600C5F0A3 /* graficoGrave.jpg in Resources */,
 				A84855251994119600C5F0A3 /* PassarosVaral.png in Resources */,
+				3F5DF426199C6945001B5434 /* setaRetornaPagina.png in Resources */,
 				A84854DE1994119600C5F0A3 /* conjuntoNotasPausas.png in Resources */,
 				A8C3F0BE194B72A400E78899 /* Images.xcassets in Resources */,
 				3F608DCE196C7585001979E9 /* P200 Piano A#3.caf in Resources */,
@@ -2223,6 +2262,7 @@
 				A84854BE1994119600C5F0A3 /* animaIndio2.gif in Resources */,
 				A84854F31994119600C5F0A3 /* flauta.png in Resources */,
 				3F608D81196C7585001979E9 /* semifusa.png in Resources */,
+				3F43A318199C85BD0038D1E9 /* iconeLeitor.png in Resources */,
 				A848558B1994137D00C5F0A3 /* barulhoBasePilar.wav in Resources */,
 				3F608DA7196C7585001979E9 /* chefao.xml in Resources */,
 				2B64F9EB196920D000BC57FD /* Mod1Aula3Exe1ViewController.xib in Resources */,
@@ -2353,6 +2393,7 @@
 				3F608DCF196C7585001979E9 /* P200 Piano A#4.caf in Resources */,
 				A84855171994119600C5F0A3 /* notaMusical.png in Resources */,
 				A84854D31994119600C5F0A3 /* carnavalframe2.gif in Resources */,
+				3F43A316199C84700038D1E9 /* iconeJogos.png in Resources */,
 				A84854FB1994119600C5F0A3 /* gesturePassaFalaMascote.png in Resources */,
 				3F608DC1196C7585001979E9 /* Song_of_Storms.xml in Resources */,
 				A84855231994119600C5F0A3 /* panela.png in Resources */,
@@ -2443,9 +2484,10 @@
 			files = (
 				2B64FA251969226F00BC57FD /* Mod2Aula3Exe1ViewController.m in Sources */,
 				2B64FA701969234700BC57FD /* Mod2Aula7Exe4ViewController.m in Sources */,
-				A8C3F0BC194B72A400E78899 /* ViewController.m in Sources */,
+				A8C3F0BC194B72A400E78899 /* MenuViewController.m in Sources */,
 				A83ED3D819520810006CB6A4 /* Mascote.m in Sources */,
 				3F608D99196C7585001979E9 /* NotaEdicaoGesture.m in Sources */,
+				3F43A31C199C8AB20038D1E9 /* EstudioViewController.m in Sources */,
 				A84855BB1994146500C5F0A3 /* LeituraPartituraViewController.m in Sources */,
 				3F608D59196C7585001979E9 /* DataBaseNotaPadrao.m in Sources */,
 				3F608D96196C7585001979E9 /* Instrumento.m in Sources */,

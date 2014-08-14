@@ -41,12 +41,7 @@
     [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
     self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
     self.imgTocaTreco = [TocaTrecoViewController sharedManager].imgTocaTreco;
-    //self.imgTocaTreco.frame = CGRectMake(0, 0,  self.imgTocaTreco.frame.size.width, self.imgTocaTreco.frame.size.height);
     
-    
-    NSLog(@"valo = %f",self.imgTocaTreco.frame.origin.y);
-    NSLog(@"x = %f",self.imgTocaTreco.frame.origin.x);
-
     
     //Cria Seletor e manda ele como paramentro para outros View Controllers poderem usar
     SEL selectors1 = @selector(pulaFalaMascote);

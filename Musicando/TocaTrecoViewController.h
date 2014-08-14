@@ -12,8 +12,7 @@
 @interface TocaTrecoViewController : UIViewController
 
 
-@property (weak, nonatomic) IBOutlet UIImageView *imgTocaTreco;
-
+@property (weak, nonatomic) IBOutlet UIView *imgTocaTreco;
 
 
 +(TocaTrecoViewController*)sharedManager;

@@ -59,6 +59,9 @@
         }
     }
     
+    //UIView *toca = (UIView*)[[TocaTrecoViewController sharedManager].view viewWithTag:2223];
+    //[controller.view insertSubview:toca aboveSubview:[BarraSuperiorViewController sharedManager].view];
+    
     
 }
 

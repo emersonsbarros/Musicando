@@ -23,6 +23,10 @@
     return self;
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 -(Nota*)retornaNotaCriadaPeloUsuario:(float)j :(UIImageView*)t :(UIImageView*)t2 :(UIImageView*)ultimoTraco{
     
     Nota *aux;
@@ -911,6 +915,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.scrollEdicao.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"fundoPapiro.png"]];
     
     listaNotasEdicao = [[NSMutableArray alloc]init];
     

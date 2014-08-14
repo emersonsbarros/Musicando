@@ -38,6 +38,7 @@
 @property UIImageView *imagemDoMascote2;
 @property  UILabel *lblFalaDoMascote;
 @property UIView *viewGesturePassaFala;
+@property UIView *imgTocaTreco;
 //Auxilia para liberar a fala qd todas as colisoes que vc quer acontecerem
 @property NSMutableArray *listaLiberaFala;
 @property NSString *estadoAux1;
@@ -46,7 +47,6 @@
 
 
 //Toca Treco
-@property UIImageView *imgTocaTreco;
 - (IBAction)btnAlavancaTocaTreco:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *outAlavancaTocaTreco;
 

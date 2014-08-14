@@ -50,7 +50,7 @@
     RetornaPaginaViewController *bar = [[RetornaPaginaViewController alloc]init];
     bar.view.layer.zPosition = 0;
     [viewAtual addChildViewController:bar];
-    bar.view.frame = CGRectMake(0, 740, bar.view.frame.size.width,bar.view.frame.size.height);
+    bar.view.frame = CGRectMake(0, 730, bar.view.frame.size.width,bar.view.frame.size.height);
     [viewAtual.view addSubview:bar.view];
     
 }

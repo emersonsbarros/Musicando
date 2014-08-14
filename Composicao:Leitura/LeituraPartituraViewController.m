@@ -14,6 +14,10 @@
 
 @implementation LeituraPartituraViewController
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 -(void)atualizaBarraScroll{
     if([Sinfonia sharedManager].compassoAtual < [Sinfonia sharedManager].numeroTotalCompassos){
         if (([Sinfonia sharedManager].compassoAtual % 8 == 0)&&([Sinfonia sharedManager].compassoAtual != self.auxContadorScroll)){
@@ -90,6 +94,8 @@
 
 
 - (void) viewDidLoad{
+    
+    self.scroll.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"fundoPapiro.png"]];
     
     [Sinfonia sharedManager].contadorScrollDesloca = 500;
     [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(atualizaBarraScroll) userInfo:nil repeats:YES];

@@ -41,8 +41,8 @@
 -(void)desenhaContornoPartituraParaEdicao{
     
     float posVerticaRiscoPentagrama = 60.0f;
-    float espacamentoRiscoPentagrama = 35.0f;
-    float espacamentoEntrePentagrama = 10.0f;
+    float espacamentoRiscoPentagrama = 40.0f;
+    float espacamentoEntrePentagrama = 20.0f;
     
     float posVerticalColuna = 0.0f;
     float espacamentoColunaPentagrama = 260.0f;
@@ -75,10 +75,12 @@
             UIImageView *linha = [[UIImageView alloc]
                                   initWithFrame:CGRectMake(0.0f, posVerticaRiscoPentagrama + espacamentoRiscoPentagrama, 1500, 2.0f)];
             posVerticaRiscoPentagrama = posVerticaRiscoPentagrama + espacamentoRiscoPentagrama;
-            linha.backgroundColor = [UIColor redColor];
+            linha.backgroundColor = [UIColor blackColor];
+            linha.alpha = 0.1;
             
             if((i>=5)&&(i<10)){
                 linha.backgroundColor = [UIColor blackColor];
+                linha.alpha = 1.0;
             }
             
             [ self.listaImagensTracoPentagrama addObject:linha];
