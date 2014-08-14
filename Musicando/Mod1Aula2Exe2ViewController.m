@@ -31,14 +31,18 @@
 {
     [super viewDidLoad];
     
-    //Add barra Superior ao Xib
-    [[BarraSuperiorViewController sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
+    //Add barra,Mascote,View de Retornar Pagina ao Xib
+    [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
+    self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
+    self.imgTocaTreco = [TocaTrecoViewController sharedManager].imgTocaTreco;
     
-    //Habilita o gesture do mascote com a UIView que fica por cima dele
-    //Coloquei essa view para colocar o gesture de pular fala, pois com animation atrapalha
-    [self addGesturePassaFalaMascote:self.viewGesturePassaFala];
     
-    self.listaImagensCai = [[NSMutableArray alloc]init];
+    //Cria Seletor e manda ele como paramentro para outros View Controllers poderem usar
+    SEL selectors1 = @selector(pulaFalaMascote);
+    [[MascoteViewController sharedManager]addGesturePassaFalaMascote:self.viewGesturePassaFala :selectors1:self];
+    [[RetornaPaginaViewController sharedManager]addGesturePassaFalaMascote:[RetornaPaginaViewController sharedManager].viewRetornaPagina:selectors1:self];
+    
+    
     self.listaImagensColisao = [[NSMutableArray alloc]init];
     [self.listaImagensColisao addObject:self.imgApito];
     [self.listaImagensColisao addObject:self.imgTeclaPiano];
@@ -58,21 +62,17 @@
     self.listaLiberaFala = [[NSMutableArray alloc]init];
     //seta com alguma coisa para add uma coisa nao nula
     self.estadoAux1 = @"0";
-    self.estadoAux2 = @"0";
-    self.estadoAux3 = @"0";
-    self.estadoAux4 = @"0";
     
     
     //Biblioteca
-    self.contadorDeFalas = 0;
-    self.testaBiblio = [Biblioteca sharedManager];
-    self.testaConversa = self.testaBiblio.exercicioAtual.mascote.listaDeConversas.firstObject;
-    //Usar sempre que quiser pular uma fala,no caso tem que passar para pegar a primeira fala
-    [self pulaFalaMascote];
-    //Imagem do mascote
-    self.imagemDoMascote2.image = [[[[Biblioteca sharedManager] exercicioAtual] mascote] imagem].image;
-    //Add animacao de pular o mascote
+    self.lblFalaDoMascote = [MascoteViewController sharedManager].lblFalaDoMascote;
+    self.testaBiblio = [MascoteViewController sharedManager].testaBiblio;
+    self.testaConversa = [MascoteViewController sharedManager].testaConversa;
+    self.imagemDoMascote2 = [MascoteViewController sharedManager].imagemDoMascote2;
     [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote2];
+    
+    
+    [self pulaFalaMascote];
 
     
 }
@@ -109,7 +109,7 @@
         self.imgTelefone.hidden = true;
         self.imgTelefone.frame = self.imgTelefone.frame;
         self.lblVisorTocaTreco.text = @"Agudo";
-        [self.listaLiberaFala addObject:self.estadoAux2];
+        [self.listaLiberaFala addObject:self.estadoAux1];
         
         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"telefone" withExtension:@"mp3"];
         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
@@ -129,7 +129,7 @@
         self.imgLeao.hidden = true;
         self.imgLeao.frame = self.imgLeao.frame;
         self.lblVisorTocaTreco.text = @"Grave";
-        [self.listaLiberaFala addObject:self.estadoAux3];
+        [self.listaLiberaFala addObject:self.estadoAux1];
         
         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"leao" withExtension:@"wav"];
         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
@@ -149,7 +149,7 @@
         self.imgApito.hidden = true;
         self.imgApito.frame = self.imgApito.frame;
         self.lblVisorTocaTreco.text = @"Agudo";
-        [self.listaLiberaFala addObject:self.estadoAux4];
+        [self.listaLiberaFala addObject:self.estadoAux1];
         
         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"apito" withExtension:@"wav"];
         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
@@ -215,7 +215,7 @@
                                                self.imgPianoTimbre.frame.size.width,
                                                self.imgPianoTimbre.frame.size.height);
         [[EfeitoImagem sharedManager]tiraGestureObjeto:self.imgPianoTimbre];
-        [self.listaLiberaFala addObject:self.estadoAux2];
+        [self.listaLiberaFala addObject:self.estadoAux1];
     
         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"pianoPonto" withExtension:@"mp3"];
         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
@@ -273,7 +273,7 @@
                                                  self.imgCristalTimbre.frame.size.width,
                                                  self.imgCristalTimbre.frame.size.height);
         [[EfeitoImagem sharedManager]tiraGestureObjeto:self.imgCristalTimbre];
-        [self.listaLiberaFala addObject:self.estadoAux2];
+        [self.listaLiberaFala addObject:self.estadoAux1];
         
         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"musicaCristal" withExtension:@"mp3"];
         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
@@ -332,7 +332,7 @@
                                                 self.imgViolaoTimbre.frame.size.width,
                                                 self.imgViolaoTimbre.frame.size.height);
         [[EfeitoImagem sharedManager]tiraGestureObjeto:self.imgViolaoTimbre];
-        [self.listaLiberaFala addObject:self.estadoAux2];
+        [self.listaLiberaFala addObject:self.estadoAux1];
         
         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"violaoPonto" withExtension:@"wav"];
         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
@@ -906,7 +906,7 @@
                      }
                      completion:^(BOOL finished){
                          
-                         [self.listaLiberaFala addObject:self.estadoAux2];
+                         [self.listaLiberaFala addObject:self.estadoAux1];
                      }];
 }
 
@@ -926,7 +926,7 @@
                      }
                      completion:^(BOOL finished){
                          
-                         [self.listaLiberaFala addObject:self.estadoAux2];
+                         [self.listaLiberaFala addObject:self.estadoAux1];
                      }];
 }
 
@@ -963,16 +963,20 @@
 }
 
 
+
 -(void)pulaFalaMascote{
-    int contadorMaximo = self.testaConversa.listaDeFalas.count;
+    //Usa pra não dar erro de nulo na ultima fala
+    int contadorMaximo = (int)self.testaConversa.listaDeFalas.count;
     
-    if(self.contadorDeFalas == contadorMaximo){
+    [[BarraSuperiorViewController sharedManager]txtNumeroAulaAtual].text = [NSString stringWithFormat:@"%d",1+[MascoteViewController sharedManager].contadorDeFalas];
+    
+    if([MascoteViewController sharedManager].contadorDeFalas == contadorMaximo){
         NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
         [[EfeitoTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
     }
 
-    if(self.contadorDeFalas < contadorMaximo){
-        switch (self.contadorDeFalas) {
+    if([MascoteViewController sharedManager].contadorDeFalas < contadorMaximo){
+        switch ([MascoteViewController sharedManager].contadorDeFalas) {
             case 0:
                 [self chamaMetodosFala1];
                 break;
@@ -1016,10 +1020,10 @@
                 break;
         }
         
-        self.testaFala = [self.testaConversa.listaDeFalas objectAtIndex:self.contadorDeFalas];
+        self.testaFala = [self.testaConversa.listaDeFalas objectAtIndex:[MascoteViewController sharedManager].contadorDeFalas];
         self.lblFalaDoMascote.text = self.testaFala.conteudo;
         
-        self.contadorDeFalas +=1;
+        [MascoteViewController sharedManager].contadorDeFalas += 1;
     }
 }
 
@@ -1104,96 +1108,6 @@
 
                      }];
 }
-
-
-
-//////////////////////////////// METODOS NOTAS CAINDO /////////////////////////
-
--(void)lacoCaindoNotas{
-    
-    float duracao = 3.0;
-    float delay = 0.0;
-    float posX = -100;
-    CGFloat posY=0;
-    NSString *nomeNota;
-    
-    for(int i=0;i<13;i++){
-        UIImageView *notaCaindo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"notaParaRosto.png"]];
-        UIImageView *carinha = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"notaCaraPausaSom.png"]];
-        carinha.frame = CGRectMake(carinha.frame.origin.x+13,
-                                   carinha.frame.origin.y+130,
-                                   30,
-                                   30);
-        [notaCaindo addSubview:carinha];
-        
-        //Add sprite as imagem da mão e comeca (tem uma parar no EfeitoImagem caso necesario)
-        UIImage *image1 = [UIImage imageNamed:@"notaCaraPausaSom.png"];
-        UIImage *image2 = [UIImage imageNamed:@"notaCaraTocaSom.png"];
-        NSArray *imageArray = [NSArray arrayWithObjects:image1,image2,nil];
-        [[EfeitoImagem sharedManager]addAnimacaoSprite:imageArray:carinha];
-        
-        notaCaindo.frame = CGRectMake(posX,-100,notaCaindo.frame.size.width+40,notaCaindo.frame.size.height+70);
-        [[self listaImagensCai]addObject:notaCaindo];
-        [self.view addSubview:notaCaindo];
-        
-        switch (i) {
-            case 1:
-                nomeNota = @"C";
-                break;
-            case 2:
-                nomeNota = @"D";
-                break;
-            case 3:
-                nomeNota = @"E";
-                break;
-            case 4:
-                nomeNota = @"F";
-                break;
-            case 5:
-                nomeNota = @"G";
-                break;
-            case 6:
-                nomeNota = @"A";
-                break;
-            default:
-                break;
-        }
-        
-        posY = 340;
-        
-        
-        [self animacaoCaindoNotas:notaCaindo:duracao:posX:posY:delay:nomeNota];
-        posX += 100;
-        delay += 0.5;
-        
-        
-    }
-    
-}
-
-
-
--(void)animacaoCaindoNotas:(UIImageView*)notaCaindo :(float)duracao :(CGFloat)posX :(CGFloat)posY :(float)tempoDemrora :(NSString*)nomeNota{
-    //UIViewAnimationOptionAutoreverse ,UIViewAnimationOptionCurveEaseInOut,UIViewAnimationOptionTransitionCrossDissolv
-    
-    [UIView animateWithDuration:duracao
-                          delay:tempoDemrora
-                        options:  UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionTransitionCrossDissolve
-                     animations:^{
-                         [notaCaindo.layer removeAnimationForKey:@"1"];
-                         CGRect moveGalo = CGRectMake(posX,
-                                                      posY,
-                                                      notaCaindo.frame.size.width,
-                                                      notaCaindo.frame.size.height);
-                         notaCaindo.frame = moveGalo;
-                     }
-                     completion:^(BOOL finished){
-                         notaCaindo.hidden = YES;
-                     }];
-    
-    
-}
-
 
 
 

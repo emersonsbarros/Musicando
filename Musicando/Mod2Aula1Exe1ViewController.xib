@@ -7,11 +7,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Mod2Aula1Exe1ViewController">
             <connections>
                 <outlet property="base" destination="Sh2-9W-pQk" id="LEh-nS-8ne"/>
-                <outlet property="imagemDoMascote2" destination="J4t-rY-vnp" id="9XB-Ra-Afh"/>
                 <outlet property="imgBandeira" destination="B8G-cY-lH0" id="NMu-c2-ZSC"/>
                 <outlet property="imgEscada" destination="FO8-Gs-L91" id="dWg-3f-drF"/>
                 <outlet property="imgPassaroParitura" destination="iQq-PG-ZJ0" id="owY-sC-mxt"/>
-                <outlet property="lblFalaDoMascote" destination="24G-wA-wn9" id="WGy-5A-SlS"/>
                 <outlet property="lblPadraoAmericano" destination="ce6-Ue-1E8" id="ED4-Pp-STe"/>
                 <outlet property="outDo" destination="fEW-Tm-800" id="9tA-4B-uiU"/>
                 <outlet property="outFa" destination="SwU-Ze-yJw" id="VMG-Br-JIQ"/>
@@ -26,7 +24,6 @@
                 <outlet property="pilar4" destination="EUF-5A-4Jl" id="axV-pq-u1H"/>
                 <outlet property="view" destination="2" id="3"/>
                 <outlet property="viewEscada" destination="Sbz-TT-0VJ" id="uFw-HQ-vwX"/>
-                <outlet property="viewGesturePassaFala" destination="iZf-qp-ueA" id="cHi-uN-zJ8"/>
                 <outlet property="viewPiano" destination="ag8-SE-Uux" id="LBW-42-agn"/>
             </connections>
         </placeholder>
@@ -35,20 +32,10 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="568" translatesAutoresizingMaskIntoConstraints="NO" id="24G-wA-wn9">
-                    <rect key="frame" x="306" y="531" width="568" height="224"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4t-rY-vnp">
-                    <rect key="frame" x="879" y="563" width="145" height="205"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView userInteractionEnabled="NO" alpha="0.34999999403953552" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundoPapiro.png" translatesAutoresizingMaskIntoConstraints="NO" id="g3N-sK-WAh">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iZf-qp-ueA">
-                    <rect key="frame" x="897" y="568" width="119" height="200"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </view>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PassarosVaral.png" translatesAutoresizingMaskIntoConstraints="NO" id="iQq-PG-ZJ0">
                     <rect key="frame" x="0.0" y="154" width="1030" height="278"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -298,6 +285,7 @@
         <image name="PassarosVaral.png" width="1280" height="324"/>
         <image name="bandeiraEUA.jpg" width="150" height="84"/>
         <image name="escadaNota.png" width="224" height="144"/>
+        <image name="fundoPapiro.png" width="1651" height="975"/>
         <image name="mascote.png" width="460" height="623"/>
         <image name="pilar.png" width="320" height="640"/>
         <image name="teclaPiano.png" width="150" height="93"/>

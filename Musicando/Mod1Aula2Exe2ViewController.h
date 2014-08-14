@@ -6,42 +6,45 @@
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <QuartzCore/QuartzCore.h>
 #import "Biblioteca.h"
 #import "Conversa.h"
 #import "Fala.h"
-#import "EfeitoMascote.h"
+#import "Nota.h"
+#import "Sinfonia.h"
 #import "EfeitoImagem.h"
+#import "EfeitoMascote.h"
 #import "EfeitoTransicao.h"
-#import <AVFoundation/AVFoundation.h>
-#import "BarraSuperiorViewController.h"
-#import <UIKit/UIKit.h>
+#import "EfeitoPlayer.h"
+#import "EfeitoComponeteView.h"
+#import "EfeitoNotaAnimada.h"
 
 @interface Mod1Aula2Exe2ViewController : UIViewController
 
 
 @property NSMutableArray *listaImagensColisao;
-@property (weak, nonatomic) IBOutlet UIView *viewGesturePassaFala;
-@property (weak, nonatomic) IBOutlet UIImageView *imagemDoMascote2;
-@property (weak, nonatomic) IBOutlet UILabel *lblFalaDoMascote;
-@property NSMutableArray *listaImagensCai;
-
+@property UIView *viewGesturePassaFala;
+@property UIImageView *imagemDoMascote2;
+@property UILabel *lblFalaDoMascote;
+@property  UIView *imgTocaTreco;
 @property Biblioteca *testaBiblio;
 @property Conversa *testaConversa;
 @property Fala *testaFala;
 @property int contadorDeFalas;
 
+
 //Atributos para tocar audio
 @property AVAudioPlayer *audioPlayer;
 @property NSURL *caminhoDoAudio;
+
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgTeclaPiano;
 @property (weak, nonatomic) IBOutlet UIImageView *imgApito;
 @property (weak, nonatomic) IBOutlet UIImageView *imgTelefone;
 @property (weak, nonatomic) IBOutlet UIImageView *imgLeao;
-@property (weak, nonatomic) IBOutlet UIImageView *imgTocaTreco;
 @property (weak, nonatomic) IBOutlet UILabel *lblVisorTocaTreco;
-
-
 @property (weak, nonatomic) IBOutlet UIImageView *imgFrequencia;
 
 
@@ -54,9 +57,6 @@
 
 @property NSMutableArray *listaLiberaFala;
 @property NSString *estadoAux1;
-@property NSString *estadoAux2;
-@property NSString *estadoAux3;
-@property NSString *estadoAux4;
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgPilar1Altura;

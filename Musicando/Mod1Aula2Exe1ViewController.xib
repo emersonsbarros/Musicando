@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -7,7 +7,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Mod1Aula2Exe1ViewController">
             <connections>
                 <outlet property="base" destination="eO9-H3-Juc" id="8ZR-Oq-jEe"/>
-                <outlet property="imagemDoMascote2" destination="pGf-8Q-6cT" id="fcu-ha-MRD"/>
                 <outlet property="imgAstronauta" destination="bXA-sU-BbG" id="uSX-ke-70B"/>
                 <outlet property="imgColher" destination="jac-40-pyH" id="EgZ-QL-Knz"/>
                 <outlet property="imgExplosao" destination="Kva-1T-WlU" id="tKa-pj-YZ9"/>
@@ -15,15 +14,12 @@
                 <outlet property="imgOuvindo" destination="idj-5I-2NU" id="gzB-tN-fQS"/>
                 <outlet property="imgPanela" destination="arb-wR-6mb" id="hsJ-Yy-tdE"/>
                 <outlet property="imgSatelite" destination="oV8-xv-1yM" id="ofC-Gf-8Yl"/>
-                <outlet property="imgTocaTreco" destination="dAq-0L-2Qz" id="MVM-Xb-ZlT"/>
                 <outlet property="imgVibracao" destination="8rn-68-I5B" id="TBD-pu-41O"/>
-                <outlet property="lblFalaDoMascote" destination="xxO-XL-ZTs" id="EB5-Mt-N2O"/>
                 <outlet property="pilar1" destination="82a-cO-GIp" id="DPA-qa-jjZ"/>
                 <outlet property="pilar2" destination="gaZ-Cn-Qrs" id="6XV-Lk-tZk"/>
                 <outlet property="pilar3" destination="0tC-KN-utz" id="rSZ-8P-BhK"/>
                 <outlet property="pilar4" destination="wj1-27-IgR" id="4NI-4a-qOZ"/>
                 <outlet property="view" destination="2" id="3"/>
-                <outlet property="viewGesturePassaFala" destination="dve-EP-hFU" id="sgS-f9-urN"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -31,24 +27,10 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tocaTreco.png" translatesAutoresizingMaskIntoConstraints="NO" id="dAq-0L-2Qz">
-                    <rect key="frame" x="20" y="496" width="490" height="262"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView userInteractionEnabled="NO" alpha="0.34999999403953552" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundoPapiro.png" translatesAutoresizingMaskIntoConstraints="NO" id="SIb-a2-M9x">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="471" translatesAutoresizingMaskIntoConstraints="NO" id="xxO-XL-ZTs">
-                    <rect key="frame" x="368" y="496" width="471" height="272"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="20"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pGf-8Q-6cT">
-                    <rect key="frame" x="879" y="563" width="145" height="205"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dve-EP-hFU">
-                    <rect key="frame" x="874" y="551" width="150" height="229"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </view>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="colher.png" translatesAutoresizingMaskIntoConstraints="NO" id="jac-40-pyH">
                     <rect key="frame" x="228" y="62" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -112,12 +94,12 @@
         <image name="astronauta.png" width="131" height="150"/>
         <image name="colher.png" width="150" height="75"/>
         <image name="explosao.png" width="150" height="114"/>
+        <image name="fundoPapiro.png" width="1651" height="975"/>
         <image name="gesturePassaFalaMascote.png" width="320" height="640"/>
         <image name="ouvindo.png" width="640" height="372"/>
         <image name="panela.png" width="150" height="75"/>
         <image name="pilar.png" width="320" height="640"/>
         <image name="satelite.png" width="150" height="109"/>
-        <image name="tocaTreco.png" width="786" height="495"/>
         <image name="vibracao.png" width="640" height="372"/>
     </resources>
 </document>

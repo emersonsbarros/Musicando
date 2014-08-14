@@ -186,13 +186,18 @@
 }
 
 -(void)pararPlayerPartitura{
-    Nota *nota = [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]objectAtIndex:auxIndiceNotas-1];
     
-    self.contadorScrollDesloca = 500;
-    self.compassoAtual = 0;
+    if([self listaPartiturasSinfonia].count > 0){
+        
+        Nota *nota = [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]objectAtIndex:auxIndiceNotas-1];
+        
+        self.contadorScrollDesloca = 500;
+        self.compassoAtual = 0;
+        
+        nota.imagemNota.alpha = 1.0;
+        auxIndiceNotas = [[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura].count;
+    }
     
-    nota.imagemNota.alpha = 1.0;
-    auxIndiceNotas = [[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura].count;
 }
 
 ///////////////////////////////  Piano  ///////////////////////////////////////////////
@@ -371,7 +376,7 @@
         [_soundBankPlayer queueNote:retornaNotadoXML gain:volume];
         [_soundBankPlayer playQueuedNotes];
 
-
+        
         auxIndiceNotas++;
         NSLog(@"notas %d %f %d",auxIndiceNotas,tempo,retornaNotadoXML);
 

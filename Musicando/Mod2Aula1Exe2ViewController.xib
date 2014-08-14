@@ -13,11 +13,9 @@
                 <outlet property="gestureRe" destination="AcZ-y4-dab" id="d1T-1d-df5"/>
                 <outlet property="gestureSi" destination="RVf-vp-uXd" id="xr7-z0-sTH"/>
                 <outlet property="gestureSol" destination="ttD-Xm-F2s" id="gOc-Nz-UyU"/>
-                <outlet property="imagemDoMascote2" destination="jaW-OQ-yzn" id="OyC-SJ-Dfm"/>
                 <outlet property="imgEscala" destination="HND-Lp-xOI" id="aw7-vl-Bax"/>
                 <outlet property="imgMaoGesture" destination="Clf-a5-9xp" id="vdb-ml-G4K"/>
                 <outlet property="imgTocaTreco" destination="uVu-Fk-ip0" id="9dD-I7-00I"/>
-                <outlet property="lblFalaDoMascote" destination="8pi-kt-6ep" id="Pp5-hT-WNU"/>
                 <outlet property="placaDo" destination="a9S-eJ-WaA" id="2PH-ke-zU5"/>
                 <outlet property="placaFa" destination="5w2-6Y-RK4" id="cys-Hp-6gn"/>
                 <outlet property="placaLa" destination="Tej-lW-qiW" id="dQF-RS-KtL"/>
@@ -39,7 +37,6 @@
                 <outlet property="txtNomeNota" destination="txE-hY-oII" id="V2R-od-Onn"/>
                 <outlet property="view" destination="2" id="3"/>
                 <outlet property="viewCacaPalavras" destination="eeN-eQ-c2n" id="4iN-bF-Nez"/>
-                <outlet property="viewGesturePassaFala" destination="SpU-rm-Hma" id="6S2-cG-oXU"/>
                 <outlet property="viewPlaquinhas" destination="FYi-4k-0Et" id="KY3-w4-Mni"/>
                 <outlet property="viewTocaTreco" destination="Ygc-4j-sak" id="lu5-1d-QCr"/>
             </connections>
@@ -49,20 +46,10 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="579" translatesAutoresizingMaskIntoConstraints="NO" id="8pi-kt-6ep">
-                    <rect key="frame" x="285" y="545" width="579" height="217"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jaW-OQ-yzn">
-                    <rect key="frame" x="879" y="563" width="145" height="205"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView userInteractionEnabled="NO" alpha="0.34999999403953552" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundoPapiro.png" translatesAutoresizingMaskIntoConstraints="NO" id="YV4-8P-qR5">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SpU-rm-Hma">
-                    <rect key="frame" x="897" y="568" width="119" height="200"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </view>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="escalaInteira.png" translatesAutoresizingMaskIntoConstraints="NO" id="HND-Lp-xOI">
                     <rect key="frame" x="266" y="195" width="492" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -305,6 +292,7 @@
     </objects>
     <resources>
         <image name="escalaInteira.png" width="400" height="70"/>
+        <image name="fundoPapiro.png" width="1651" height="975"/>
         <image name="gesturePassaFalaMascote.png" width="320" height="640"/>
         <image name="novoTocaTreco.png" width="1784" height="916"/>
         <image name="ponto.png" width="150" height="101"/>

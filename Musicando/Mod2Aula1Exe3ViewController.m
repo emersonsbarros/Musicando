@@ -27,16 +27,24 @@
     return YES;
 }
 
+
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
 
-    //Add barra Superior ao Xib
-    [[BarraSuperiorViewController sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
+    //Add barra,Mascote,View de Retornar Pagina ao Xib
+    [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
+    self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
     
     
-    [self addGesturePassaFalaMascote:self.viewGesturePassaFala];
+    //Cria Seletor e manda ele como paramentro para outros View Controllers poderem usar
+    SEL selectors1 = @selector(pulaFalaMascote);
+    [[MascoteViewController sharedManager]addGesturePassaFalaMascote:self.viewGesturePassaFala :selectors1:self];
+    [[RetornaPaginaViewController sharedManager]addGesturePassaFalaMascote:[RetornaPaginaViewController sharedManager].viewRetornaPagina:selectors1:self];
+    
     
     
     self.listaImangesColisao = [[NSMutableArray alloc]init];
@@ -50,18 +58,18 @@
     self.listaLiberaFala = [[NSMutableArray alloc]init];
     //seta com alguma coisa para add uma coisa nao nula
     self.estadoAux1 = @"0";
- 
+    
     
     //Biblioteca
-    self.contadorDeFalas = 0;
-    self.testaBiblio = [Biblioteca sharedManager];
-    self.testaConversa = self.testaBiblio.exercicioAtual.mascote.listaDeConversas.firstObject;
-    //Usar sempre que quiser pular uma fala,no caso tem que passar para pegar a primeira fala
-    [self pulaFalaMascote];
-    //Imagem do mascote
-    self.imagemDoMascote2.image = [[[[Biblioteca sharedManager] exercicioAtual] mascote] imagem].image;
-    //Add animacao de pular o mascote
+    self.lblFalaDoMascote = [MascoteViewController sharedManager].lblFalaDoMascote;
+    self.testaBiblio = [MascoteViewController sharedManager].testaBiblio;
+    self.testaConversa = [MascoteViewController sharedManager].testaConversa;
+    self.imagemDoMascote2 = [MascoteViewController sharedManager].imagemDoMascote2;
     [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote2];
+    
+    
+    [self pulaFalaMascote];
+
     
 }
 
@@ -156,13 +164,14 @@
     //Usa pra não dar erro de nulo na ultima fala
     int contadorMaximo = (int)self.testaConversa.listaDeFalas.count;
     
-    if(self.contadorDeFalas == contadorMaximo){
+    [[BarraSuperiorViewController sharedManager]txtNumeroAulaAtual].text = [NSString stringWithFormat:@"%d",1+[MascoteViewController sharedManager].contadorDeFalas];
+    
+    if([MascoteViewController sharedManager].contadorDeFalas == contadorMaximo){
         NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
         [[EfeitoTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
     }
-    
-    if(self.contadorDeFalas < contadorMaximo){
-        switch (self.contadorDeFalas) {
+    if([MascoteViewController sharedManager].contadorDeFalas < contadorMaximo){
+        switch ([MascoteViewController sharedManager].contadorDeFalas) {
             case 0:
                 [self chamaMetodosFala0];
                 break;
@@ -187,10 +196,10 @@
                 break;
         }
         
-        self.testaFala = [self.testaConversa.listaDeFalas objectAtIndex:self.contadorDeFalas];
+        self.testaFala = [self.testaConversa.listaDeFalas objectAtIndex:[MascoteViewController sharedManager].contadorDeFalas];
         self.lblFalaDoMascote.text = self.testaFala.conteudo;
         
-        self.contadorDeFalas +=1;
+        [MascoteViewController sharedManager].contadorDeFalas += 1;
     }
 }
 

@@ -168,7 +168,7 @@
 		3F608DB8196C7585001979E9 /* nokia.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3F608D24196C7585001979E9 /* nokia.xml */; };
 		3F608DB9196C7585001979E9 /* palmeiras.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3F608D25196C7585001979E9 /* palmeiras.xml */; };
 		3F608DBA196C7585001979E9 /* parabens.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3F608D26196C7585001979E9 /* parabens.xml */; };
-		3F608DC0196C7585001979E9 /* simp.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3F608D2C196C7585001979E9 /* simp.xml */; };
+		3F608DC0196C7585001979E9 /* simpson.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3F608D2C196C7585001979E9 /* simpson.xml */; };
 		3F608DC1196C7585001979E9 /* Song_of_Storms.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3F608D2D196C7585001979E9 /* Song_of_Storms.xml */; };
 		3F608DC3196C7585001979E9 /* ticofuba.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3F608D2F196C7585001979E9 /* ticofuba.xml */; };
 		3F608DC4196C7585001979E9 /* titanic.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3F608D30196C7585001979E9 /* titanic.xml */; };
@@ -670,7 +670,7 @@
 		3F608D24196C7585001979E9 /* nokia.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = nokia.xml; sourceTree = "<group>"; };
 		3F608D25196C7585001979E9 /* palmeiras.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = palmeiras.xml; sourceTree = "<group>"; };
 		3F608D26196C7585001979E9 /* parabens.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = parabens.xml; sourceTree = "<group>"; };
-		3F608D2C196C7585001979E9 /* simp.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = simp.xml; sourceTree = "<group>"; };
+		3F608D2C196C7585001979E9 /* simpson.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = simpson.xml; sourceTree = "<group>"; };
 		3F608D2D196C7585001979E9 /* Song_of_Storms.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Song_of_Storms.xml; sourceTree = "<group>"; };
 		3F608D2F196C7585001979E9 /* ticofuba.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ticofuba.xml; sourceTree = "<group>"; };
 		3F608D30196C7585001979E9 /* titanic.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = titanic.xml; sourceTree = "<group>"; };
@@ -1435,7 +1435,7 @@
 				3F608D24196C7585001979E9 /* nokia.xml */,
 				3F608D25196C7585001979E9 /* palmeiras.xml */,
 				3F608D26196C7585001979E9 /* parabens.xml */,
-				3F608D2C196C7585001979E9 /* simp.xml */,
+				3F608D2C196C7585001979E9 /* simpson.xml */,
 				3F608D2D196C7585001979E9 /* Song_of_Storms.xml */,
 				3F608D2F196C7585001979E9 /* ticofuba.xml */,
 				3F608D30196C7585001979E9 /* titanic.xml */,
@@ -2236,7 +2236,7 @@
 				A84855071994119600C5F0A3 /* linhaDePentagrama.png in Resources */,
 				A84854D11994119600C5F0A3 /* carnavalFesta.png in Resources */,
 				A84855541994119600C5F0A3 /* violaoTimbre.png in Resources */,
-				3F608DC0196C7585001979E9 /* simp.xml in Resources */,
+				3F608DC0196C7585001979E9 /* simpson.xml in Resources */,
 				3F608D9E196C7585001979E9 /* asa.xml in Resources */,
 				3F608D91196C7585001979E9 /* seminimaPausa.png in Resources */,
 				A84855031994119600C5F0A3 /* ideiasMonge.png in Resources */,

@@ -83,6 +83,7 @@
 @property NSMutableArray *listaPartiturasSinfonia;
 @property NSString *numeroCompassos;
 
+
 //////////////////// ATRIBUTOS XML //////////////////////////
 
 

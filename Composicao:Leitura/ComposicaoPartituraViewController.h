@@ -28,6 +28,9 @@
 - (IBAction)limparNotasPartituraEdicao:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollEdicao;
+@property float posNotaTocando;
+@property int contadorIndiceNota;
+@property CGPoint posOriginalScroll;
 
 - (IBAction)semibreveBotao:(id)sender;
 - (IBAction)minimaBotao:(id)sender;

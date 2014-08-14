@@ -151,6 +151,7 @@
     float posX = -100;
     CGFloat posY=0;
     NSString *nomeNota;
+    self.listaImagensCai = [[NSMutableArray alloc]init];
     
     for(int i=0;i<13;i++){
         UIImageView *notaCaindo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"notaParaRosto.png"]];

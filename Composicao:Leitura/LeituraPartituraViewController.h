@@ -13,7 +13,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 
-@interface LeituraPartituraViewController : UIViewController <UIScrollViewDelegate> {
+@interface LeituraPartituraViewController : UIViewController <UIScrollViewDelegate,UITableViewDataSource, UITableViewDelegate> {
     
 }
 
@@ -29,5 +29,14 @@
 
 - (IBAction)botaoAlteraVelocidade:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UITableView *tabelaNomePartituras;
+@property NSMutableArray *listaPartituras;
+@property NSString *nomePartituraAtual;
+
+
+- (IBAction)btnTabelaPartituras:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *outTabelaPartituras;
+@property BOOL auxTabelaHidden;
+@property (weak, nonatomic) IBOutlet UIView *viewTabelaPartituras;
 
 @end

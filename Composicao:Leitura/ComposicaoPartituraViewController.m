@@ -12,6 +12,15 @@
 
 @end
 
+
+#define n64th 0.0620
+#define n32th 0.120
+#define n16th 0.20
+#define eighth 0.4
+#define quarter 1.0
+#define half 1.5
+#define whole 3.5
+
 @implementation ComposicaoPartituraViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -25,6 +34,10 @@
 
 - (BOOL)prefersStatusBarHidden {
     return YES;
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [[Sinfonia sharedManager]pararPlayerPartitura];
 }
 
 -(Nota*)retornaNotaCriadaPeloUsuario:(float)j :(UIImageView*)t :(UIImageView*)t2 :(UIImageView*)ultimoTraco{
@@ -792,8 +805,54 @@
 }
 
 
+-(void)atualizaPosicaoTocando{
+  
+    Nota *notaAtual = [listaNotasEdicao objectAtIndex:self.contadorIndiceNota];
+    self.posNotaTocando = notaAtual.imagemNota.frame.origin.x;
+
+    
+    NSString *tempoNota = notaAtual.tipoNota;
+    float tempo = 0.0;
+    
+    if([tempoNota isEqualToString:@"64th"]){
+        tempo = n64th;
+    }else if([tempoNota isEqualToString:@"32th"]){
+        tempo = n32th;
+    }else if([tempoNota isEqualToString:@"16th"]){
+        tempo = n16th;
+    }else if([tempoNota isEqualToString:@"eighth"]){
+        tempo = eighth;
+    }else if([tempoNota isEqualToString:@"quarter"]){
+        tempo = quarter;
+    }else if([tempoNota isEqualToString:@"half"]){
+        tempo = half;
+    }else if([tempoNota isEqualToString:@"whole"]){
+        tempo = whole;
+    }else{
+    }
+
+
+    if(listaNotasEdicao.count-1 != self.contadorIndiceNota){
+        CGPoint bottomOffset = CGPointMake((self.posNotaTocando-350),0);
+        [[self scrollEdicao] setContentOffset:bottomOffset animated:YES];
+        
+        self.contadorIndiceNota++;
+        [NSTimer scheduledTimerWithTimeInterval:tempo
+                                         target: self
+                                       selector: @selector(atualizaPosicaoTocando)
+                                       userInfo: nil
+                                        repeats: NO];
+    }
+
+}
 
 - (IBAction)tocarTodasNoras:(id)sender {
+    
+    self.contadorIndiceNota = 0;
+    self.posOriginalScroll = self.scrollEdicao.contentOffset;
+    if(listaNotasEdicao.count != 0)[self atualizaPosicaoTocando];
+    
+    
     if([listaNotasEdicao lastObject] != NULL)[[Sinfonia sharedManager]tocarTodasNotasEdicao:listaNotasEdicao:@"Piano"];
 }
 
@@ -812,6 +871,7 @@
                 
             }
         }
+        
         [[Sinfonia sharedManager]pararPlayerPartitura];
         listaNotasEdicao = [[NSMutableArray alloc]init];
         CGPoint bottomOffset = CGPointMake(0,0);
@@ -916,7 +976,7 @@
 {
     [super viewDidLoad];
     
-    self.scrollEdicao.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"fundoPapiro.png"]];
+   // self.scrollEdicao.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"fundoPapiro.png"]];
     
     listaNotasEdicao = [[NSMutableArray alloc]init];
     
