@@ -1110,14 +1110,14 @@
 			name = Efeitos;
 			sourceTree = "<group>";
 		};
-		0B215C5219996029007230B7 /* MascteView */ = {
+		0B215C5219996029007230B7 /* MascoteView */ = {
 			isa = PBXGroup;
 			children = (
 				3FCC29121995A9DE000B951F /* MascoteViewController.h */,
 				3FCC29131995A9DE000B951F /* MascoteViewController.m */,
 				3FCC29141995A9DE000B951F /* MascoteViewController.xib */,
 			);
-			name = MascteView;
+			name = MascoteView;
 			sourceTree = "<group>";
 		};
 		0B215C5319996035007230B7 /* RetornaPaginaView */ = {
@@ -2155,7 +2155,7 @@
 			children = (
 				3F5DF427199C6A33001B5434 /* TocaTrecoView */,
 				0B215C5319996035007230B7 /* RetornaPaginaView */,
-				0B215C5219996029007230B7 /* MascteView */,
+				0B215C5219996029007230B7 /* MascoteView */,
 				3FAAE944198365010053DD23 /* BarraView */,
 				3FAC66911984B63F00BED55E /* TransicaoExerciciosView */,
 				3F43A319199C8A8A0038D1E9 /* EstudioView */,
