@@ -107,13 +107,19 @@
     
     [[[mod1Aula1Exe1 mascote] listaDeConversas] addObject:mod1Aula1Exe1conversa1];
     
+////////////////////////////// JOGO 1 ////////////////////////////////////
+    
+    Exercicio *mod1Aula1Exe1Jogo = [[Exercicio alloc] init:101 nome:@"Jogo Musica" nomeView:@"JogoScrollMusicalViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+
     
 //Aula de Musicalização
     Aula *mod1Aula1 = [[Aula alloc]init];
     mod1Aula1.nome = @"Musicalização";
     mod1Aula1.capa = [UIImage imageNamed:@"aula.png"];
     [[mod1Aula1 listaDeExercicios]addObject: mod1Aula1Exe1];
-
+    [[mod1Aula1 listaDeExercicios]addObject: mod1Aula1Exe1Jogo];
+    
     
 ////////////////////////////////// Aula 2 //////////////////////////////////////
     

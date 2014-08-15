@@ -198,6 +198,27 @@
 		3F608DE2196C7585001979E9 /* Sinfonia.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F608D51196C7585001979E9 /* Sinfonia.m */; };
 		3F608DE3196C7585001979E9 /* OpenALSupport.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F608D53196C7585001979E9 /* OpenALSupport.c */; };
 		3F608DE4196C7585001979E9 /* SoundBankPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F608D56196C7585001979E9 /* SoundBankPlayer.m */; };
+		3F758D34199DADF700CAA255 /* JogoScrollMusicalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F758D32199DADF700CAA255 /* JogoScrollMusicalViewController.m */; };
+		3F758D35199DADF700CAA255 /* JogoScrollMusicalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F758D33199DADF700CAA255 /* JogoScrollMusicalViewController.xib */; };
+		3F758D38199DB39700CAA255 /* JogoScrollMusica.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F758D37199DB39700CAA255 /* JogoScrollMusica.m */; };
+		3F902C8D199DBA2100FDF84A /* pisoPedra.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F902C8C199DBA2100FDF84A /* pisoPedra.png */; };
+		3F902CA2199DD8C800FDF84A /* movement.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F902C90199DD8C800FDF84A /* movement.jpg */; };
+		3F902CA3199DD8C800FDF84A /* movement.pxm in Resources */ = {isa = PBXBuildFile; fileRef = 3F902C91199DD8C800FDF84A /* movement.pxm */; };
+		3F902CA4199DD8C800FDF84A /* ParallaxBackgroundExample.pxm in Resources */ = {isa = PBXBuildFile; fileRef = 3F902C92199DD8C800FDF84A /* ParallaxBackgroundExample.pxm */; };
+		3F902CA5199DD8C800FDF84A /* pBackgroundHorizontal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F902C93199DD8C800FDF84A /* pBackgroundHorizontal.png */; };
+		3F902CA6199DD8C800FDF84A /* pBackgroundHorizontal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F902C94199DD8C800FDF84A /* pBackgroundHorizontal@2x.png */; };
+		3F902CA7199DD8C800FDF84A /* pBackgroundVertical.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F902C95199DD8C800FDF84A /* pBackgroundVertical.png */; };
+		3F902CA8199DD8C800FDF84A /* pBackgroundVertical@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F902C96199DD8C800FDF84A /* pBackgroundVertical@2x.png */; };
+		3F902CA9199DD8C800FDF84A /* pForegroundHorizontal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F902C97199DD8C800FDF84A /* pForegroundHorizontal.png */; };
+		3F902CAA199DD8C800FDF84A /* pForegroundHorizontal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F902C98199DD8C800FDF84A /* pForegroundHorizontal@2x.png */; };
+		3F902CAB199DD8C800FDF84A /* pForegroundVertical.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F902C99199DD8C800FDF84A /* pForegroundVertical.png */; };
+		3F902CAC199DD8C800FDF84A /* pForegroundVertical@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F902C9A199DD8C800FDF84A /* pForegroundVertical@2x.png */; };
+		3F902CAD199DD8C800FDF84A /* pMiddleHorizontal.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F902C9B199DD8C800FDF84A /* pMiddleHorizontal.png */; };
+		3F902CAE199DD8C800FDF84A /* pMiddleHorizontal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F902C9C199DD8C800FDF84A /* pMiddleHorizontal@2x.png */; };
+		3F902CAF199DD8C800FDF84A /* pMiddleVertical.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F902C9D199DD8C800FDF84A /* pMiddleVertical.png */; };
+		3F902CB0199DD8C800FDF84A /* pMiddleVertical@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F902C9E199DD8C800FDF84A /* pMiddleVertical@2x.png */; };
+		3F902CB1199DD8C800FDF84A /* vertical.pxm in Resources */ = {isa = PBXBuildFile; fileRef = 3F902C9F199DD8C800FDF84A /* vertical.pxm */; };
+		3F902CB2199DD8C800FDF84A /* PBParallaxScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F902CA1199DD8C800FDF84A /* PBParallaxScrolling.m */; };
 		3FA3CC96197A3D2200E1FCFB /* notaParaRosto.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA3CC95197A3D2200E1FCFB /* notaParaRosto.png */; };
 		3FAC5921197F5BE8001B762F /* BarraSuperiorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC591F197F5BE8001B762F /* BarraSuperiorViewController.m */; };
 		3FAC5922197F5BE8001B762F /* BarraSuperiorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FAC5920197F5BE8001B762F /* BarraSuperiorViewController.xib */; };
@@ -704,6 +725,30 @@
 		3F608D54196C7585001979E9 /* OpenALSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenALSupport.h; sourceTree = "<group>"; };
 		3F608D55196C7585001979E9 /* SoundBankPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundBankPlayer.h; sourceTree = "<group>"; };
 		3F608D56196C7585001979E9 /* SoundBankPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundBankPlayer.m; sourceTree = "<group>"; };
+		3F758D31199DADF700CAA255 /* JogoScrollMusicalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JogoScrollMusicalViewController.h; sourceTree = "<group>"; };
+		3F758D32199DADF700CAA255 /* JogoScrollMusicalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JogoScrollMusicalViewController.m; sourceTree = "<group>"; };
+		3F758D33199DADF700CAA255 /* JogoScrollMusicalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JogoScrollMusicalViewController.xib; sourceTree = "<group>"; };
+		3F758D36199DB39700CAA255 /* JogoScrollMusica.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JogoScrollMusica.h; sourceTree = "<group>"; };
+		3F758D37199DB39700CAA255 /* JogoScrollMusica.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JogoScrollMusica.m; sourceTree = "<group>"; };
+		3F902C8C199DBA2100FDF84A /* pisoPedra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pisoPedra.png; sourceTree = "<group>"; };
+		3F902C90199DD8C800FDF84A /* movement.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = movement.jpg; sourceTree = "<group>"; };
+		3F902C91199DD8C800FDF84A /* movement.pxm */ = {isa = PBXFileReference; lastKnownFileType = file; path = movement.pxm; sourceTree = "<group>"; };
+		3F902C92199DD8C800FDF84A /* ParallaxBackgroundExample.pxm */ = {isa = PBXFileReference; lastKnownFileType = file; path = ParallaxBackgroundExample.pxm; sourceTree = "<group>"; };
+		3F902C93199DD8C800FDF84A /* pBackgroundHorizontal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pBackgroundHorizontal.png; sourceTree = "<group>"; };
+		3F902C94199DD8C800FDF84A /* pBackgroundHorizontal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pBackgroundHorizontal@2x.png"; sourceTree = "<group>"; };
+		3F902C95199DD8C800FDF84A /* pBackgroundVertical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pBackgroundVertical.png; sourceTree = "<group>"; };
+		3F902C96199DD8C800FDF84A /* pBackgroundVertical@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pBackgroundVertical@2x.png"; sourceTree = "<group>"; };
+		3F902C97199DD8C800FDF84A /* pForegroundHorizontal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pForegroundHorizontal.png; sourceTree = "<group>"; };
+		3F902C98199DD8C800FDF84A /* pForegroundHorizontal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pForegroundHorizontal@2x.png"; sourceTree = "<group>"; };
+		3F902C99199DD8C800FDF84A /* pForegroundVertical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pForegroundVertical.png; sourceTree = "<group>"; };
+		3F902C9A199DD8C800FDF84A /* pForegroundVertical@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pForegroundVertical@2x.png"; sourceTree = "<group>"; };
+		3F902C9B199DD8C800FDF84A /* pMiddleHorizontal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pMiddleHorizontal.png; sourceTree = "<group>"; };
+		3F902C9C199DD8C800FDF84A /* pMiddleHorizontal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pMiddleHorizontal@2x.png"; sourceTree = "<group>"; };
+		3F902C9D199DD8C800FDF84A /* pMiddleVertical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pMiddleVertical.png; sourceTree = "<group>"; };
+		3F902C9E199DD8C800FDF84A /* pMiddleVertical@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pMiddleVertical@2x.png"; sourceTree = "<group>"; };
+		3F902C9F199DD8C800FDF84A /* vertical.pxm */ = {isa = PBXFileReference; lastKnownFileType = file; path = vertical.pxm; sourceTree = "<group>"; };
+		3F902CA0199DD8C800FDF84A /* PBParallaxScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBParallaxScrolling.h; sourceTree = "<group>"; };
+		3F902CA1199DD8C800FDF84A /* PBParallaxScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBParallaxScrolling.m; sourceTree = "<group>"; };
 		3FA3CC95197A3D2200E1FCFB /* notaParaRosto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notaParaRosto.png; sourceTree = "<group>"; };
 		3FAC591E197F5BE8001B762F /* BarraSuperiorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarraSuperiorViewController.h; sourceTree = "<group>"; };
 		3FAC591F197F5BE8001B762F /* BarraSuperiorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarraSuperiorViewController.m; sourceTree = "<group>"; };
@@ -1484,6 +1529,29 @@
 			path = SoundBankPlayer;
 			sourceTree = "<group>";
 		};
+		3F902C8F199DD8C800FDF84A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				3F902C90199DD8C800FDF84A /* movement.jpg */,
+				3F902C91199DD8C800FDF84A /* movement.pxm */,
+				3F902C92199DD8C800FDF84A /* ParallaxBackgroundExample.pxm */,
+				3F902C93199DD8C800FDF84A /* pBackgroundHorizontal.png */,
+				3F902C94199DD8C800FDF84A /* pBackgroundHorizontal@2x.png */,
+				3F902C95199DD8C800FDF84A /* pBackgroundVertical.png */,
+				3F902C96199DD8C800FDF84A /* pBackgroundVertical@2x.png */,
+				3F902C97199DD8C800FDF84A /* pForegroundHorizontal.png */,
+				3F902C98199DD8C800FDF84A /* pForegroundHorizontal@2x.png */,
+				3F902C99199DD8C800FDF84A /* pForegroundVertical.png */,
+				3F902C9A199DD8C800FDF84A /* pForegroundVertical@2x.png */,
+				3F902C9B199DD8C800FDF84A /* pMiddleHorizontal.png */,
+				3F902C9C199DD8C800FDF84A /* pMiddleHorizontal@2x.png */,
+				3F902C9D199DD8C800FDF84A /* pMiddleVertical.png */,
+				3F902C9E199DD8C800FDF84A /* pMiddleVertical@2x.png */,
+				3F902C9F199DD8C800FDF84A /* vertical.pxm */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		3FAA1FD9196CE87700C32F03 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -1588,6 +1656,14 @@
 				3FD7EA2E19529126005F089A /* Mod1Aula1Exe1ViewController.h */,
 				3FD7EA2F19529126005F089A /* Mod1Aula1Exe1ViewController.m */,
 				3FD7EA3019529126005F089A /* Mod1Aula1Exe1ViewController.xib */,
+				3F758D31199DADF700CAA255 /* JogoScrollMusicalViewController.h */,
+				3F758D32199DADF700CAA255 /* JogoScrollMusicalViewController.m */,
+				3F758D33199DADF700CAA255 /* JogoScrollMusicalViewController.xib */,
+				3F758D36199DB39700CAA255 /* JogoScrollMusica.h */,
+				3F758D37199DB39700CAA255 /* JogoScrollMusica.m */,
+				3F902C8F199DD8C800FDF84A /* images */,
+				3F902CA0199DD8C800FDF84A /* PBParallaxScrolling.h */,
+				3F902CA1199DD8C800FDF84A /* PBParallaxScrolling.m */,
 			);
 			name = Aula1;
 			sourceTree = "<group>";
@@ -1693,6 +1769,7 @@
 		A848541E1994119600C5F0A3 /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				3F902C8C199DBA2100FDF84A /* pisoPedra.png */,
 				3F43A317199C85BD0038D1E9 /* iconeLeitor.png */,
 				3F43A311199C84700038D1E9 /* iconeEditor.png */,
 				3F43A312199C84700038D1E9 /* iconeInstrumento.png */,
@@ -2119,6 +2196,7 @@
 				3F608DD3196C7585001979E9 /* P200 Piano C7.caf in Resources */,
 				A84855971994137D00C5F0A3 /* escalaPiano3AOitava.wav in Resources */,
 				3F608D62196C7585001979E9 /* la1.caf in Resources */,
+				3F902CA5199DD8C800FDF84A /* pBackgroundHorizontal.png in Resources */,
 				3F608D6C196C7585001979E9 /* 5 - B.caf in Resources */,
 				A84855891994137D00C5F0A3 /* animalRuminando.wav in Resources */,
 				A84854CA1994119600C5F0A3 /* bolaSom.png in Resources */,
@@ -2134,6 +2212,7 @@
 				A848552F1994119600C5F0A3 /* pilar.png in Resources */,
 				3F608DD9196C7585001979E9 /* P200 Piano D6.caf in Resources */,
 				3F608DAF196C7585001979E9 /* heyjude.xml in Resources */,
+				3F902CAD199DD8C800FDF84A /* pMiddleHorizontal.png in Resources */,
 				A848559E1994137D00C5F0A3 /* helicoptero.wav in Resources */,
 				3FD3253019970424004A0262 /* frequenciaFlauta.jpg in Resources */,
 				3F608DB8196C7585001979E9 /* nokia.xml in Resources */,
@@ -2154,6 +2233,7 @@
 				2B64FA621969232B00BC57FD /* Mod2Aula7Exe1ViewController.xib in Resources */,
 				3F608D71196C7585001979E9 /* natural.plist in Resources */,
 				3F608DD7196C7585001979E9 /* P200 Piano D4.caf in Resources */,
+				3F902CB1199DD8C800FDF84A /* vertical.pxm in Resources */,
 				3F608D60196C7585001979E9 /* fad3.caf in Resources */,
 				3F608D7E196C7585001979E9 /* minima.png in Resources */,
 				A84854FC1994119600C5F0A3 /* gesturePassaFalaMascoteTap.png in Resources */,
@@ -2180,6 +2260,8 @@
 				3FAD54C3199B3F8C00475CEA /* home.png in Resources */,
 				A84855431994119600C5F0A3 /* spark.png in Resources */,
 				A84855011994119600C5F0A3 /* GuidodArezzo.png in Resources */,
+				3F758D35199DADF700CAA255 /* JogoScrollMusicalViewController.xib in Resources */,
+				3F902CA7199DD8C800FDF84A /* pBackgroundVertical.png in Resources */,
 				2B64FA801969236D00BC57FD /* Mod2Aula8Exe1ViewController.xib in Resources */,
 				A84855961994137D00C5F0A3 /* escalaFlauta.wav in Resources */,
 				2B64FA2B1969227A00BC57FD /* Mod2Aula3Exe2ViewController.xib in Resources */,
@@ -2187,6 +2269,7 @@
 				3F608D8D196C7585001979E9 /* colcheiaPausa.png in Resources */,
 				3F608DDC196C7585001979E9 /* P200 Piano F#4.caf in Resources */,
 				3F608DD1196C7585001979E9 /* P200 Piano A#7.caf in Resources */,
+				3F902CA4199DD8C800FDF84A /* ParallaxBackgroundExample.pxm in Resources */,
 				A84854C21994119600C5F0A3 /* aula.png in Resources */,
 				3F608DCD196C7585001979E9 /* P200 Piano A#2.caf in Resources */,
 				A84854DD1994119600C5F0A3 /* conjuntoInstrumentos.png in Resources */,
@@ -2216,12 +2299,14 @@
 				3F608DA2196C7585001979E9 /* Beethoven-Fur Elise.xml in Resources */,
 				A84854E51994119600C5F0A3 /* escadaModulo.png in Resources */,
 				3F608D7B196C7585001979E9 /* linha.jpg in Resources */,
+				3F902CAE199DD8C800FDF84A /* pMiddleHorizontal@2x.png in Resources */,
 				A84855951994137D00C5F0A3 /* do3C.wav in Resources */,
 				A84855141994119600C5F0A3 /* notaColcheia.png in Resources */,
 				A84854D41994119600C5F0A3 /* carnavalframe3.gif in Resources */,
 				A84855AB1994137D00C5F0A3 /* notaA4.caf in Resources */,
 				A84854CC1994119600C5F0A3 /* cantoGregoriano.jpg in Resources */,
 				A84855061994119600C5F0A3 /* leao.png in Resources */,
+				3F902CA8199DD8C800FDF84A /* pBackgroundVertical@2x.png in Resources */,
 				A848554A1994119600C5F0A3 /* telefoneFixo.png in Resources */,
 				3F608D95196C7585001979E9 /* Video_Games_ENDING.xml in Resources */,
 				A84855331994119600C5F0A3 /* reBloco.png in Resources */,
@@ -2287,6 +2372,7 @@
 				3F608D74196C7585001979E9 /* bemol.png in Resources */,
 				A84855941994137D00C5F0A3 /* corridaTartaruga.wav in Resources */,
 				A84855391994119600C5F0A3 /* sambaSimbolo.jpg in Resources */,
+				3F902CA6199DD8C800FDF84A /* pBackgroundHorizontal@2x.png in Resources */,
 				A84854D91994119600C5F0A3 /* chegadaLinha.png in Resources */,
 				3F608D64196C7585001979E9 /* la3.caf in Resources */,
 				3F608D67196C7585001979E9 /* mib3.caf in Resources */,
@@ -2303,7 +2389,9 @@
 				3F608D90196C7585001979E9 /* semifusaPausa.png in Resources */,
 				A84854E31994119600C5F0A3 /* elevador.png in Resources */,
 				A84854EA1994119600C5F0A3 /* escalaLa.png in Resources */,
+				3F902CB0199DD8C800FDF84A /* pMiddleVertical@2x.png in Resources */,
 				A848559C1994137D00C5F0A3 /* happybirthdaySamba.mp3 in Resources */,
+				3F902CAB199DD8C800FDF84A /* pForegroundVertical.png in Resources */,
 				2B64FA711969234700BC57FD /* Mod2Aula7Exe4ViewController.xib in Resources */,
 				3FAC5922197F5BE8001B762F /* BarraSuperiorViewController.xib in Resources */,
 				3F608DD0196C7585001979E9 /* P200 Piano A#5.caf in Resources */,
@@ -2312,6 +2400,7 @@
 				3F608DD4196C7585001979E9 /* P200 Piano D#8.caf in Resources */,
 				A84855A01994137D00C5F0A3 /* instrumentos.mp3 in Resources */,
 				A8C3F0AD194B72A400E78899 /* InfoPlist.strings in Resources */,
+				3F902CA9199DD8C800FDF84A /* pForegroundHorizontal.png in Resources */,
 				A84855411994119600C5F0A3 /* solBloco.png in Resources */,
 				A84855131994119600C5F0A3 /* notacaoMusical.jpg in Resources */,
 				A84854C01994119600C5F0A3 /* aprendizadoMusica.png in Resources */,
@@ -2338,6 +2427,7 @@
 				2B64FA351969229D00BC57FD /* Mod2Aula4Exe1ViewController.xib in Resources */,
 				3F608DA5196C7585001979E9 /* cavaleiros.xml in Resources */,
 				2B64F9F0196920DB00BC57FD /* Mod1Aula3Exe2ViewController.xib in Resources */,
+				3F902CAA199DD8C800FDF84A /* pForegroundHorizontal@2x.png in Resources */,
 				A848552B1994119600C5F0A3 /* pentagramaParaLinhasSuplementares.png in Resources */,
 				3F608D6D196C7585001979E9 /* 6 - E.caf in Resources */,
 				A84854D61994119600C5F0A3 /* carnavalframe5.gif in Resources */,
@@ -2346,6 +2436,7 @@
 				3F608DC4196C7585001979E9 /* titanic.xml in Resources */,
 				A84854DA1994119600C5F0A3 /* classicoSimbolo.jpg in Resources */,
 				A848552C1994119600C5F0A3 /* piano.png in Resources */,
+				3F902CA3199DD8C800FDF84A /* movement.pxm in Resources */,
 				A84854FD1994119600C5F0A3 /* graficoAgudo.jpg in Resources */,
 				2B64FA44196922B800BC57FD /* Mod2Aula4Exe4ViewController.xib in Resources */,
 				A848553F1994119600C5F0A3 /* silencio.jpg in Resources */,
@@ -2392,6 +2483,7 @@
 				A84855AD1994137D00C5F0A3 /* panela.mp3 in Resources */,
 				3F608DCF196C7585001979E9 /* P200 Piano A#4.caf in Resources */,
 				A84855171994119600C5F0A3 /* notaMusical.png in Resources */,
+				3F902C8D199DBA2100FDF84A /* pisoPedra.png in Resources */,
 				A84854D31994119600C5F0A3 /* carnavalframe2.gif in Resources */,
 				3F43A316199C84700038D1E9 /* iconeJogos.png in Resources */,
 				A84854FB1994119600C5F0A3 /* gesturePassaFalaMascote.png in Resources */,
@@ -2407,6 +2499,7 @@
 				A848554F1994119600C5F0A3 /* tocaTreco3.png in Resources */,
 				A84854BD1994119600C5F0A3 /* animaIndio1.gif in Resources */,
 				3FD7EA3219529126005F089A /* Mod1Aula1Exe1ViewController.xib in Resources */,
+				3F902CA2199DD8C800FDF84A /* movement.jpg in Resources */,
 				A84855AF1994137D00C5F0A3 /* re3D.wav in Resources */,
 				A84855881994137D00C5F0A3 /* acordesViolao.wav in Resources */,
 				A84855101994119600C5F0A3 /* molduraBarraSuoerior3.png in Resources */,
@@ -2418,6 +2511,7 @@
 				3F608DB2196C7585001979E9 /* lepo.xml in Resources */,
 				A848551D1994119600C5F0A3 /* notaSemifusa.png in Resources */,
 				A84855491994119600C5F0A3 /* telao.png in Resources */,
+				3F902CAF199DD8C800FDF84A /* pMiddleVertical.png in Resources */,
 				3F608DC3196C7585001979E9 /* ticofuba.xml in Resources */,
 				2B64F9E51969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib in Resources */,
 				3F608DD6196C7585001979E9 /* P200 Piano D3.caf in Resources */,
@@ -2449,6 +2543,7 @@
 				A848552A1994119600C5F0A3 /* pentagramaCompleto.png in Resources */,
 				2B64FA5D1969230400BC57FD /* Mod2Aula6Exe1ViewController.xib in Resources */,
 				A84854E11994119600C5F0A3 /* cristalTimbre.png in Resources */,
+				3F902CAC199DD8C800FDF84A /* pForegroundVertical@2x.png in Resources */,
 				A84855401994119600C5F0A3 /* silencioPausa.png in Resources */,
 				A84855A51994137D00C5F0A3 /* musicaCristal.mp3 in Resources */,
 				A848558F1994137D00C5F0A3 /* carro.wav in Resources */,
@@ -2486,6 +2581,7 @@
 				2B64FA701969234700BC57FD /* Mod2Aula7Exe4ViewController.m in Sources */,
 				A8C3F0BC194B72A400E78899 /* MenuViewController.m in Sources */,
 				A83ED3D819520810006CB6A4 /* Mascote.m in Sources */,
+				3F758D38199DB39700CAA255 /* JogoScrollMusica.m in Sources */,
 				3F608D99196C7585001979E9 /* NotaEdicaoGesture.m in Sources */,
 				3F43A31C199C8AB20038D1E9 /* EstudioViewController.m in Sources */,
 				A84855BB1994146500C5F0A3 /* LeituraPartituraViewController.m in Sources */,
@@ -2535,6 +2631,8 @@
 				2B64FA5C1969230400BC57FD /* Mod2Aula6Exe1ViewController.m in Sources */,
 				2B64FA6B1969233F00BC57FD /* Mod2Aula7Exe3ViewController.m in Sources */,
 				2B64F9F4196920F100BC57FD /* Mod1Aula3Exe3ViewController.m in Sources */,
+				3F902CB2199DD8C800FDF84A /* PBParallaxScrolling.m in Sources */,
+				3F758D34199DADF700CAA255 /* JogoScrollMusicalViewController.m in Sources */,
 				2B64F9F9196920FA00BC57FD /* Mod1Aula3Exe4ViewController.m in Sources */,
 				2B64FA1B1969224200BC57FD /* Mod2Aula2Exe1ViewController.m in Sources */,
 				2B64FA341969229D00BC57FD /* Mod2Aula4Exe1ViewController.m in Sources */,
