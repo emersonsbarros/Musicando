@@ -266,8 +266,7 @@
 
 -(void)update:(CFTimeInterval)currentTime {
     
-    NSLog(@"valor %f",currentTime);
-    [self.parallaxBackground update:1];
+    [self.parallaxBackground update:currentTime];
     
     self.AuxdistanciaPercorrida += 1;
     
