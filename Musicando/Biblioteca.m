@@ -659,6 +659,9 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     
     [[[mod2Aula1Exe3 mascote] listaDeConversas] addObject:mod2Aula1Exe3conversa1];
     
+//Jogo
+    Exercicio *mod2Aula1Exe4 = [[Exercicio alloc] init:201 nome:@"Game Notas" nomeView:@"GameBlocosViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
     
 ////////////////////////////////
     
@@ -669,6 +672,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     [[mod2Aula1 listaDeExercicios]addObject: mod2Aula1Exe1];
     [[mod2Aula1 listaDeExercicios]addObject: mod2Aula1Exe2];
     [[mod2Aula1 listaDeExercicios]addObject: mod2Aula1Exe3];
+    [[mod2Aula1 listaDeExercicios]addObject: mod2Aula1Exe4];
 
     
     
@@ -861,6 +865,9 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     [[mod2Aula3Exe3conversa1 listaDeFalas] addObject: mod2Aula3Exe3fala5];
     [[[mod2Aula3Exe3 mascote] listaDeConversas] addObject: mod2Aula3Exe3conversa1];
     
+//Jogo
+Exercicio *mod2Aula3Exe4 = [[Exercicio alloc] init:201 nome:@"Game Escada" nomeView:@"EscadaDeNotasViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
     
 //Aula de Pentagrama
     Aula *mod2Aula3 = [[Aula alloc]init];
@@ -869,6 +876,8 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     [[mod2Aula3 listaDeExercicios]addObject: mod2Aula3Exe1];
     [[mod2Aula3 listaDeExercicios]addObject: mod2Aula3Exe2];
     [[mod2Aula3 listaDeExercicios]addObject: mod2Aula3Exe3];
+    [[mod2Aula3 listaDeExercicios]addObject: mod2Aula3Exe4];
+
 
 
 ////////////////////////////////// Aula 4 //////////////////////////////////////
