@@ -35,7 +35,14 @@
         self.parallaxBackground = parallax;
         [self addChild:parallax];
 
-   
+        
+        self.velocidadeMonstro = 4;
+        self.distanciaPercorrida = 0;
+        self.sorteaMonstro = 0;
+        self.AuxdistanciaPercorrida =0;
+        
+        
+        [self addChild:[self botaoHomenRetorna]];
         [self criaPiso];
         [self criaMascote];
 
@@ -43,6 +50,111 @@
     }
     
     return self;
+}
+
+
+
+-(void)criaMorte {
+    
+    SKTexture *texturaPiso = [SKTexture textureWithImageNamed:@"ruido.png"];
+    self.morte = [SKSpriteNode spriteNodeWithTexture:texturaPiso size:CGSizeMake(200,200)];
+    self.morte.name = @"Morte";
+    self.morte.position = CGPointMake(800,100);
+    self.morte.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(150,150)];
+    self.morte.physicsBody.dynamic = YES;
+    self.morte.physicsBody.affectedByGravity =NO;
+    self.morte.physicsBody.allowsRotation =NO;
+    self.morte.physicsBody.density = 0.1f;
+    self.morte.physicsBody.restitution =0.0;
+    self.morte.physicsBody.usesPreciseCollisionDetection = YES;
+    self.morte.physicsBody.categoryBitMask = monstroNivel1Category;
+    self.morte.physicsBody.contactTestBitMask = mascoteCategory;
+    self.morte.physicsBody.velocity = CGVectorMake(0,0);
+    
+    SKAction *acaoMover = [SKAction moveTo:CGPointMake(-800, self.morte.position.y) duration:self.velocidadeMonstro];
+    SKAction *acaoRemover = [SKAction removeFromParent];
+    [self.morte runAction:[SKAction sequence:@[acaoMover,acaoRemover]]];
+    
+
+    [self addChild:self.morte];
+    
+}
+
+-(void)criaDragao {
+    
+    SKTexture *texturaPiso = [SKTexture textureWithImageNamed:@"ruido.png"];
+    self.dragao = [SKSpriteNode spriteNodeWithTexture:texturaPiso size:CGSizeMake(200,200)];
+    self.dragao.name = @"Dragao";
+    self.dragao.position = CGPointMake(800,300);
+    self.dragao.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(150,150)];
+    self.dragao.physicsBody.dynamic = YES;
+    self.dragao.physicsBody.affectedByGravity =NO;
+    self.dragao.physicsBody.allowsRotation =NO;
+    self.dragao.physicsBody.density = 0.1f;
+    self.dragao.physicsBody.restitution =0.0;
+    self.dragao.physicsBody.usesPreciseCollisionDetection = YES;
+    self.dragao.physicsBody.categoryBitMask = monstroNivel2Category;
+    self.dragao.physicsBody.contactTestBitMask = mascoteCategory;
+    
+
+    SKAction *acaoMover = [SKAction moveTo:CGPointMake(-800, self.dragao.position.y) duration:self.velocidadeMonstro];
+    SKAction *acaoRemover = [SKAction removeFromParent];
+    [self.dragao runAction:[SKAction sequence:@[acaoMover,acaoRemover]]];
+    
+
+    [self addChild:self.dragao];
+    
+}
+
+-(void)criaMaicon {
+    
+    SKTexture *texturaPiso = [SKTexture textureWithImageNamed:@"ruido.png"];
+    self.maicon = [SKSpriteNode spriteNodeWithTexture:texturaPiso size:CGSizeMake(200,200)];
+    self.maicon.name = @"Maicon";
+    self.maicon.position = CGPointMake(800,500);
+    self.maicon.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(150,150)];
+    self.maicon.physicsBody.dynamic = YES;
+    self.maicon.physicsBody.affectedByGravity =NO;
+    self.maicon.physicsBody.allowsRotation =NO;
+    self.maicon.physicsBody.density = 0.1f;
+    self.maicon.physicsBody.usesPreciseCollisionDetection = YES;
+    self.maicon.physicsBody.categoryBitMask = monstroNivel3Category;
+    self.maicon.physicsBody.contactTestBitMask = mascoteCategory;
+    self.maicon.physicsBody.velocity = CGVectorMake(0,0);
+    
+    SKAction *acaoMover = [SKAction moveTo:CGPointMake(-800, self.maicon.position.y) duration:self.velocidadeMonstro];
+    SKAction *acaoRemover = [SKAction removeFromParent];
+    [self.maicon runAction:[SKAction sequence:@[acaoMover,acaoRemover]]];
+    
+    
+    [self addChild:self.maicon];
+    
+}
+
+-(void)criaGargula {
+    
+    
+    SKTexture *texturaPiso = [SKTexture textureWithImageNamed:@"ruido.png"];
+    self.gargula = [SKSpriteNode spriteNodeWithTexture:texturaPiso size:CGSizeMake(200,200)];
+    self.gargula.name = @"Gargula";
+    self.gargula.position = CGPointMake(800,700);
+    self.gargula.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(150,150)];
+    self.gargula.physicsBody.dynamic = YES;
+    self.gargula.physicsBody.affectedByGravity =NO;
+    self.gargula.physicsBody.allowsRotation =NO;
+    self.gargula.physicsBody.density = 0.1f;
+    self.gargula.physicsBody.restitution =0.2;
+    self.gargula.physicsBody.usesPreciseCollisionDetection = YES;
+    self.gargula.physicsBody.categoryBitMask = monstroNivel4Category;
+    self.gargula.physicsBody.contactTestBitMask = mascoteCategory;
+    self.gargula.physicsBody.velocity = CGVectorMake(0,0);
+    
+    SKAction *acaoMover = [SKAction moveTo:CGPointMake(-800, self.gargula.position.y) duration:self.velocidadeMonstro];
+    SKAction *acaoRemover = [SKAction removeFromParent];
+    [self.gargula runAction:[SKAction sequence:@[acaoMover,acaoRemover]]];
+    
+    [self addChild:self.gargula];
+    
 }
 
 
@@ -73,8 +185,6 @@
 
 -(void)criaMascote{
     
-    
-    
     SKTexture *texturaPiso2 = [SKTexture textureWithImageNamed:@"mascote.png"];
     self.man = [SKSpriteNode spriteNodeWithTexture:texturaPiso2 size:CGSizeMake(200,50)];
     self.man.name = @"HumanWhite";
@@ -86,11 +196,21 @@
     self.man.physicsBody.allowsRotation =NO;
     self.man.physicsBody.density = 0.2f;
     self.man.physicsBody.usesPreciseCollisionDetection = YES;
-    self.man.physicsBody.restitution =1;
+    self.man.physicsBody.restitution =0;
     self.man.physicsBody.categoryBitMask = mascoteCategory;
     self.man.physicsBody.contactTestBitMask = pisoCategory ;
 
     [self addChild:self.man];
+}
+
+- (SKSpriteNode *)botaoHomenRetorna{
+   
+
+    self.btnPula = [SKSpriteNode spriteNodeWithColor:[UIColor clearColor] size:CGSizeMake(1024,768)];
+    self.btnPula.position = CGPointMake(520,380);
+    self.btnPula.name = @"pulaMascote";//how the node is identified later
+    self.btnPula.zPosition = +5.0;
+    return self.btnPula;
 }
 
 //-(void)centerOnNode:(SKNode*)node {
@@ -121,8 +241,7 @@
     CGPoint location = [touch locationInNode:self];
     SKNode *node = [self nodeAtPoint:location];
     
-   
-    [self.parallaxBackground reverseMovementDirection];
+//    [self.parallaxBackground reverseMovementDirection];
 //    if ([node.name isEqualToString:@"flyHeroe"]) {
 //        
 //        if(self.tempoPassaroBonus >1){
@@ -138,12 +257,57 @@
 //        
 //    }
     
+    
+    if ([node.name isEqualToString:@"pulaMascote"]) {
+        [self.man.physicsBody applyForce:CGVectorMake(0, 500)];
+    }
+    
 }
 
 -(void)update:(CFTimeInterval)currentTime {
     
-    
     [self.parallaxBackground update:currentTime];
+    
+    self.AuxdistanciaPercorrida += 1;
+    
+    
+    if(self.AuxdistanciaPercorrida % 40 == 0 ){
+        self.distanciaPercorrida += 1;
+        
+        if(self.distanciaPercorrida % 1 == 0){
+            
+        self.sorteaMonstro = arc4random()%4;
+                
+                switch (self.sorteaMonstro) {
+                    case 0:
+                        [self criaMorte];
+                        [self criaDragao];
+                        [self criaGargula];
+                        break;
+                    case 1:
+                        [self criaMorte];
+                        [self criaDragao];
+                        [self criaMaicon];
+                        break;
+                    case 2:
+                        [self criaMorte];
+                        [self criaDragao];
+                        [self criaMaicon];
+                        break;
+                        
+                    case 3:
+                        [self criaGargula];
+                        [self criaDragao];
+                        [self criaMaicon];
+                        break;
+                }
+            
+        }
+    }
+    
+   
+    
+    
 }
 
 

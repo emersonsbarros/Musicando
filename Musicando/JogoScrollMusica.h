@@ -10,7 +10,11 @@
 #import "PBParallaxScrolling.h"
 
 static const UInt32 mascoteCategory = 0x1 << 0;
-static const UInt32 pisoCategory = 0x1 << 2;
+static const UInt32 pisoCategory = 0x1 << 1;
+static const UInt32 monstroNivel1Category = 0x1 << 2;
+static const UInt32 monstroNivel2Category = 0x1 << 3;
+static const UInt32 monstroNivel3Category = 0x1 << 4;
+static const UInt32 monstroNivel4Category = 0x1 << 5;
 
 @interface JogoScrollMusica : SKScene <SKPhysicsContactDelegate>{
    
@@ -20,8 +24,17 @@ static const UInt32 pisoCategory = 0x1 << 2;
 @property (nonatomic, strong) PBParallaxScrolling * parallaxBackground;
 @property SKSpriteNode *man;
 @property SKSpriteNode *piso;
+@property SKSpriteNode *btnPula;
 
--(id)initWithSize:(CGSize)size andDirection: (PBParallaxBackgroundDirection) direction;
+@property SKSpriteNode *maicon;
+@property SKSpriteNode *gargula;
+@property SKSpriteNode *dragao;
+@property SKSpriteNode *morte;
+@property float velocidadeMonstro;
+@property int distanciaPercorrida;
+@property int AuxdistanciaPercorrida;
+@property int sorteaMonstro;
+
 
 
 @end
