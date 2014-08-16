@@ -27,9 +27,16 @@
     return YES;
 }
 
+
+-(void)viewDidDisappear:(BOOL)animated {
+    
+    [super viewDidDisappear: animated];
+    [[EfeitoTransicao sharedManager]finalizaExercicio:self];
+    
+}
+
 - (void)viewDidLoad{
     [super viewDidLoad];
-    
     
     //Add barra,Mascote,View de Retornar Pagina ao Xib
     [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];

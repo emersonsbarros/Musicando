@@ -53,6 +53,14 @@
     
 }
 
+-(void)atualizaExericioMascote{
+    
+    self.contadorDeFalas = 0;
+    self.testaBiblio = [Biblioteca sharedManager];
+    self.testaConversa = self.testaBiblio.exercicioAtual.mascote.listaDeConversas.firstObject;
+    self.imagemDoMascote2.image = [[[[Biblioteca sharedManager] exercicioAtual] mascote] imagem].image;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

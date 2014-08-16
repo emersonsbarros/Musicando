@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -7,7 +7,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Mod2Aula2Exe1ViewController">
             <connections>
                 <outlet property="base" destination="Hht-Mg-dK5" id="Mee-qh-vfh"/>
-                <outlet property="imagemDoMascote2" destination="8Z8-gv-Wat" id="oce-dr-Ew2"/>
                 <outlet property="imgColisaoNota" destination="S0r-57-96r" id="8Az-2U-vYJ"/>
                 <outlet property="imgColisaoPausa" destination="4ec-b3-Rx0" id="epY-rL-z5a"/>
                 <outlet property="imgColisaoSom" destination="ZRC-pO-dIZ" id="Ypu-rZ-7bg"/>
@@ -19,11 +18,8 @@
                 <outlet property="imgPontoNota" destination="KZm-m3-eVf" id="HcJ-17-4Vf"/>
                 <outlet property="imgPontoPausa" destination="aCT-dP-pZ7" id="bjm-yV-sHt"/>
                 <outlet property="imgPontoSom" destination="QSO-z2-XDM" id="so2-6b-PbS"/>
-                <outlet property="imgTocaTreco" destination="KF7-7v-qXw" id="vdS-eS-YLU"/>
-                <outlet property="lblFalaDoMascote" destination="Wtd-lx-JKf" id="qmL-cb-hSW"/>
                 <outlet property="pilar3" destination="7kx-fT-TmK" id="Vus-hB-wZx"/>
                 <outlet property="view" destination="2" id="3"/>
-                <outlet property="viewGesturePassaFala" destination="8uy-LC-cj4" id="BPr-vk-wXQ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -31,20 +27,6 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Z8-gv-Wat">
-                    <rect key="frame" x="878" y="563" width="146" height="205"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8uy-LC-cj4">
-                    <rect key="frame" x="883" y="563" width="141" height="199"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </view>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="vvbcvbcvb" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="443" translatesAutoresizingMaskIntoConstraints="NO" id="Wtd-lx-JKf">
-                    <rect key="frame" x="432" y="546" width="443" height="214"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hht-Mg-dK5">
                     <rect key="frame" x="55" y="-44" width="617" height="59"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -52,10 +34,6 @@
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notaMusical.png" translatesAutoresizingMaskIntoConstraints="NO" id="9QX-1d-CYh">
                     <rect key="frame" x="39" y="0.0" width="84" height="57"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="novoTocaTreco.png" translatesAutoresizingMaskIntoConstraints="NO" id="KF7-7v-qXw">
-                    <rect key="frame" x="0.0" y="476" width="412" height="260"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bolaPausa.png" translatesAutoresizingMaskIntoConstraints="NO" id="LO3-K6-FtG">
@@ -113,7 +91,6 @@
         <image name="bolaPausa.png" width="150" height="150"/>
         <image name="bolaSom.png" width="150" height="150"/>
         <image name="notaMusical.png" width="124" height="150"/>
-        <image name="novoTocaTreco.png" width="1784" height="916"/>
         <image name="pilar.png" width="320" height="640"/>
         <image name="ponto.png" width="150" height="101"/>
         <image name="relogioPausa.png" width="148" height="150"/>

@@ -26,8 +26,8 @@
 @property NSString *textoNumeroAulasAtual;
 
 -(void)addBarraSuperioAoXib:(UIViewController*)viewAtual :(Exercicio*)exer;
--(void)retornaViewDoExercicio:(UIViewController*)viewController;
 
+-(void)atualizaExericioBarra;
 
 +(BarraSuperiorViewController*)sharedManager;
 

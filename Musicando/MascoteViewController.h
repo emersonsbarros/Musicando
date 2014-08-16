@@ -36,7 +36,7 @@
 -(void)addBarraSuperioAoXib:(UIViewController*)viewAtual :(Exercicio*)exer;
 @property (weak, nonatomic) IBOutlet UIImageView *imgFundoTexto;
 
-
+-(void)atualizaExericioMascote;
 
 -(void)addGesturePassaFalaMascote:(UIView*)viewGesture :(SEL)metodoPassaFala :(UIViewController*)cont;
 

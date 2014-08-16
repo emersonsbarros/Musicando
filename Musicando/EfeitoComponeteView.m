@@ -42,7 +42,11 @@
     [[MascoteViewController sharedManager]addBarraSuperioAoXib:controller:exer];
     [[RetornaPaginaViewController sharedManager]addBarraSuperioAoXib:controller:exer];
     
+    [[BarraSuperiorViewController sharedManager]atualizaExericioBarra];
+    [[MascoteViewController sharedManager]atualizaExericioMascote];
     
+    [MascoteViewController sharedManager].imagemDoMascote2.alpha = 1.0;
+     
     for(UIView *view in controller.view.subviews){
         if(view.tag == 1000){
             [controller.view insertSubview:[MascoteViewController sharedManager].view atIndex:1];

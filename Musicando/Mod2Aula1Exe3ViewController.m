@@ -28,7 +28,12 @@
 }
 
 
-
+-(void)viewDidDisappear:(BOOL)animated {
+    
+    [super viewDidDisappear: animated];
+    [[EfeitoTransicao sharedManager]finalizaExercicio:self];
+    
+}
 
 - (void)viewDidLoad
 {
@@ -39,12 +44,10 @@
     [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
     self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
     
-    
     //Cria Seletor e manda ele como paramentro para outros View Controllers poderem usar
     SEL selectors1 = @selector(pulaFalaMascote);
     [[MascoteViewController sharedManager]addGesturePassaFalaMascote:self.viewGesturePassaFala :selectors1:self];
     [[RetornaPaginaViewController sharedManager]addGesturePassaFalaMascote:[RetornaPaginaViewController sharedManager].viewRetornaPagina:selectors1:self];
-    
     
     
     self.listaImangesColisao = [[NSMutableArray alloc]init];

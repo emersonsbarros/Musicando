@@ -1663,9 +1663,9 @@
 				3F758D33199DADF700CAA255 /* JogoScrollMusicalViewController.xib */,
 				3F758D36199DB39700CAA255 /* JogoScrollMusica.h */,
 				3F758D37199DB39700CAA255 /* JogoScrollMusica.m */,
-				3F902C8F199DD8C800FDF84A /* images */,
 				3F902CA0199DD8C800FDF84A /* PBParallaxScrolling.h */,
 				3F902CA1199DD8C800FDF84A /* PBParallaxScrolling.m */,
+				3F902C8F199DD8C800FDF84A /* images */,
 			);
 			name = Aula1;
 			sourceTree = "<group>";

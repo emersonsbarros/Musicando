@@ -6,18 +6,22 @@
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <QuartzCore/QuartzCore.h>
 #import "Biblioteca.h"
 #import "Conversa.h"
 #import "Fala.h"
-#import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
 #import "Nota.h"
 #import "Sinfonia.h"
-#import <QuartzCore/QuartzCore.h>
 #import "EfeitoImagem.h"
 #import "EfeitoMascote.h"
-#import "BarraSuperiorViewController.h"
 #import "EfeitoTransicao.h"
+#import "EfeitoPlayer.h"
+#import "EfeitoComponeteView.h"
+#import "EfeitoNotaAnimada.h"
+
+
 @interface Mod2Aula2Exe1ViewController : UIViewController
 
 
@@ -31,12 +35,13 @@
 @property Fala *testaFala;
 @property int contadorDeFalas;
 //Mascote (img,view,label)
-@property (strong, nonatomic) IBOutlet UIImageView *imagemDoMascote2;
-@property (weak, nonatomic) IBOutlet UILabel *lblFalaDoMascote;
-@property (weak, nonatomic) IBOutlet UIView *viewGesturePassaFala;
+@property UIImageView *imagemDoMascote2;
+@property UILabel *lblFalaDoMascote;
+@property UIView *viewGesturePassaFala;
 //Auxilia para liberar a fala qd todas as colisoes que vc quer acontecerem
 @property NSMutableArray *listaLiberaFala;
 @property NSString *estadoAux1;
+@property UIView *imgTocaTreco;
 
 //-------------------------------------------------------------------------//
 
@@ -50,7 +55,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *base;
 
 
-@property (weak, nonatomic) IBOutlet UIImageView *imgTocaTreco;
 @property (weak, nonatomic) IBOutlet UIImageView *imgNotaSemPausa;
 @property (weak, nonatomic) IBOutlet UIImageView *imgNotaComPausa;
 @property NSMutableArray *listaSons;
