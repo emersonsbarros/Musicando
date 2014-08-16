@@ -30,10 +30,17 @@ static const UInt32 monstroNivel4Category = 0x1 << 5;
 @property SKSpriteNode *gargula;
 @property SKSpriteNode *dragao;
 @property SKSpriteNode *morte;
+@property SKSpriteNode *casa;
+
+@property SKLabelNode *textoDistancia;
+@property SKSpriteNode *iconeDistancia;
+
+
 @property float velocidadeMonstro;
 @property int distanciaPercorrida;
 @property int AuxdistanciaPercorrida;
 @property int sorteaMonstro;
+@property int contadorPontos;
 
 
 

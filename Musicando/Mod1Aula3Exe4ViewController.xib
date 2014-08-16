@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -7,14 +7,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Mod1Aula3Exe4ViewController">
             <connections>
                 <outlet property="flauta" destination="1Bz-Nv-SpI" id="uNp-hN-P8m"/>
-                <outlet property="imagemDoMascote" destination="SIc-B4-3qz" id="9MY-0o-UJN"/>
-                <outlet property="lblFalaDoMascote" destination="bic-uG-jlb" id="ZZX-CH-5UJ"/>
                 <outlet property="notaMelodia" destination="Zp6-7D-Zdk" id="I8a-2y-9ZK"/>
                 <outlet property="notasDeHarmonia" destination="JDL-2J-dPK" id="Yjz-e8-raA"/>
                 <outlet property="notasHarmonia" destination="3ea-U3-f9d" id="DL9-G2-BT2"/>
                 <outlet property="tocaTreco" destination="tcR-ss-0aW" id="o3c-qn-Yjw"/>
                 <outlet property="view" destination="2" id="3"/>
-                <outlet property="viewGesturePassaFala" destination="Sv9-rU-47Q" id="bFr-S5-DTh"/>
                 <outlet property="violao" destination="ZMI-Gy-xRZ" id="JJV-21-3As"/>
                 <outlet property="vitrola" destination="wLL-bR-PWi" id="uFQ-A3-lfF"/>
             </connections>
@@ -24,20 +21,6 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="483" translatesAutoresizingMaskIntoConstraints="NO" id="bic-uG-jlb">
-                    <rect key="frame" x="381" y="502" width="483" height="265"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SIc-B4-3qz">
-                    <rect key="frame" x="798" y="472" width="243" height="296"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sv9-rU-47Q">
-                    <rect key="frame" x="860" y="550" width="119" height="229"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </view>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="novoTocaTreco.png" translatesAutoresizingMaskIntoConstraints="NO" id="tcR-ss-0aW">
                     <rect key="frame" x="20" y="580" width="313" height="168"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -58,10 +41,6 @@
                     <rect key="frame" x="468" y="294" width="211" height="179"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backFalaDoMascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="fUm-qE-du0">
-                    <rect key="frame" x="381" y="502" width="483" height="243"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vitrola.png" translatesAutoresizingMaskIntoConstraints="NO" id="wLL-bR-PWi">
                     <rect key="frame" x="516" y="149" width="337" height="289"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -77,7 +56,6 @@
         </view>
     </objects>
     <resources>
-        <image name="backFalaDoMascote.png" width="947" height="374"/>
         <image name="flauta.png" width="436" height="445"/>
         <image name="mascote.png" width="460" height="623"/>
         <image name="notas.jpg" width="200" height="200"/>

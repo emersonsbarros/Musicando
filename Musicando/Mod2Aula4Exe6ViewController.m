@@ -51,18 +51,32 @@
     return self;
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
+
+-(void)viewDidDisappear:(BOOL)animated {
+    
+    [super viewDidDisappear: animated];
+    [[EfeitoTransicao sharedManager]finalizaExercicio:self];
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    //Add barra Superior ao Xib
-    [[BarraSuperiorViewController sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
+    ///Add barra,Mascote,View de Retornar Pagina ao Xib
+    [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
+    self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
     
-    //Habilita o gesture do mascote com a UIView que fica por cima dele
-    //Coloquei essa view para colocar o gesture de pular fala, pois com animation atrapalha
-    [self addGesturePassaFalaMascote:self.viewGesturePassaFala];
-    
+    //Cria Seletor e manda ele como paramentro para outros View Controllers poderem usar
+    SEL selectors1 = @selector(pulaFalaMascote);
+    [[MascoteViewController sharedManager]addGesturePassaFalaMascote:self.viewGesturePassaFala :selectors1:self];
+    [[RetornaPaginaViewController sharedManager]addGesturePassaFalaMascote:[RetornaPaginaViewController sharedManager].viewRetornaPagina:selectors1:self];
+
     
     //Lista para cair animcao/colisao
     self.listaImangesColisao = [[NSMutableArray alloc]init];
@@ -86,16 +100,13 @@
     
     
     //Biblioteca
-    self.contadorDeFalas = 0;
-    self.testaBiblio = [Biblioteca sharedManager];
-    self.testaConversa = self.testaBiblio.exercicioAtual.mascote.listaDeConversas.firstObject;
-    //Usar sempre que quiser pular uma fala,no caso tem que passar para pegar a primeira fala
-    [self pulaFalaMascote];
-    //Imagem do mascote
-    self.imagemDoMascote2.image = [[[[Biblioteca sharedManager] exercicioAtual] mascote] imagem].image;
-    //Add animacao de pular o mascote
+    self.lblFalaDoMascote = [MascoteViewController sharedManager].lblFalaDoMascote;
+    self.testaBiblio = [MascoteViewController sharedManager].testaBiblio;
+    self.testaConversa = [MascoteViewController sharedManager].testaConversa;
+    self.imagemDoMascote2 = [MascoteViewController sharedManager].imagemDoMascote2;
     [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote2];
     
+    [self pulaFalaMascote];
     
 }
 
@@ -242,14 +253,14 @@
     //Usa pra não dar erro de nulo na ultima fala
     int contadorMaximo = (int)self.testaConversa.listaDeFalas.count;
     
+    [[BarraSuperiorViewController sharedManager]txtNumeroAulaAtual].text = [NSString stringWithFormat:@"%d",1+[MascoteViewController sharedManager].contadorDeFalas];
     
-    if(self.contadorDeFalas == contadorMaximo){
+    if([MascoteViewController sharedManager].contadorDeFalas == contadorMaximo){
         NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
         [[EfeitoTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
     }
-    
-    if(self.contadorDeFalas < contadorMaximo){
-        switch (self.contadorDeFalas) {
+    if([MascoteViewController sharedManager].contadorDeFalas < contadorMaximo){
+        switch ([MascoteViewController sharedManager].contadorDeFalas) {
             case 0:
                 [self performSelector:@selector(chamaMetodosFala0) withObject:NULL afterDelay:0.2];
                 break;
@@ -290,24 +301,13 @@
                 break;
         }
         
-        self.testaFala = [self.testaConversa.listaDeFalas objectAtIndex:self.contadorDeFalas];
+        self.testaFala = [self.testaConversa.listaDeFalas objectAtIndex:[MascoteViewController sharedManager].contadorDeFalas];
         self.lblFalaDoMascote.text = self.testaFala.conteudo;
+        [MascoteViewController sharedManager].contadorDeFalas += 1;
         
-        self.contadorDeFalas +=1;
     }
 }
 
-
-//Add gesture passar de fala a view que fica por cima do mascote, usei por cauda do problema da animacao
--(void)addGesturePassaFalaMascote:(UIView*)viewGesture{
-    
-    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pulaFalaMascote)];
-    singleTap.numberOfTouchesRequired = 1;
-    singleTap.enabled = NO;
-    viewGesture.userInteractionEnabled = NO;
-    [viewGesture addGestureRecognizer:singleTap];
-    
-}
 
 -(void)chamaMetodosFala0{
     

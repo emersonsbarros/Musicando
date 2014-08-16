@@ -406,15 +406,6 @@
 }
 
 
--(void)addGesturePassaFalaMascote:(UIView*)imgMascote{
-    
-    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pulaFalaMascote)];
-    singleTap.numberOfTouchesRequired = 1;
-    imgMascote.userInteractionEnabled = YES;
-    [imgMascote addGestureRecognizer:singleTap];
-    
-
-}
 
 - (void)didReceiveMemoryWarning
 {

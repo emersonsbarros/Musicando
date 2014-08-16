@@ -15,6 +15,11 @@
 @implementation JogoScrollMusica
 
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
+
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         
@@ -40,7 +45,22 @@
         self.distanciaPercorrida = 0;
         self.sorteaMonstro = 0;
         self.AuxdistanciaPercorrida =0;
+        self.contadorPontos = 0;
         
+        self.textoDistancia = [[SKLabelNode alloc]init];
+        self.textoDistancia.fontColor = [UIColor blackColor];
+        self.textoDistancia.fontSize = 25.0f;
+        self.textoDistancia.position = CGPointMake(500,670);
+        self.textoDistancia.zPosition = 2;
+        self.textoDistancia.text = @"0";
+        self.textoDistancia.fontName = @"Marker Felt Thin";
+        [self addChild:self.textoDistancia];
+        
+        SKTexture *texturaPiso = [SKTexture textureWithImageNamed:@"casaMusica.png"];
+        self.iconeDistancia = [SKSpriteNode spriteNodeWithTexture:texturaPiso size:CGSizeMake(50,50)];
+        self.iconeDistancia.name = @"Morte";
+        self.iconeDistancia.position = CGPointMake(450,680);
+        [self addChild:self.iconeDistancia];
         
         [self addChild:[self botaoHomenRetorna]];
         [self criaPiso];
@@ -57,10 +77,10 @@
 -(void)criaMorte {
     
     SKTexture *texturaPiso = [SKTexture textureWithImageNamed:@"ruido.png"];
-    self.morte = [SKSpriteNode spriteNodeWithTexture:texturaPiso size:CGSizeMake(200,200)];
+    self.morte = [SKSpriteNode spriteNodeWithTexture:texturaPiso size:CGSizeMake(150,150)];
     self.morte.name = @"Morte";
     self.morte.position = CGPointMake(800,100);
-    self.morte.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(150,150)];
+    self.morte.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(100,100)];
     self.morte.physicsBody.dynamic = YES;
     self.morte.physicsBody.affectedByGravity =NO;
     self.morte.physicsBody.allowsRotation =NO;
@@ -83,10 +103,10 @@
 -(void)criaDragao {
     
     SKTexture *texturaPiso = [SKTexture textureWithImageNamed:@"ruido.png"];
-    self.dragao = [SKSpriteNode spriteNodeWithTexture:texturaPiso size:CGSizeMake(200,200)];
+    self.dragao = [SKSpriteNode spriteNodeWithTexture:texturaPiso size:CGSizeMake(150,150)];
     self.dragao.name = @"Dragao";
     self.dragao.position = CGPointMake(800,300);
-    self.dragao.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(150,150)];
+    self.dragao.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(100,100)];
     self.dragao.physicsBody.dynamic = YES;
     self.dragao.physicsBody.affectedByGravity =NO;
     self.dragao.physicsBody.allowsRotation =NO;
@@ -109,10 +129,10 @@
 -(void)criaMaicon {
     
     SKTexture *texturaPiso = [SKTexture textureWithImageNamed:@"ruido.png"];
-    self.maicon = [SKSpriteNode spriteNodeWithTexture:texturaPiso size:CGSizeMake(200,200)];
+    self.maicon = [SKSpriteNode spriteNodeWithTexture:texturaPiso size:CGSizeMake(150,150)];
     self.maicon.name = @"Maicon";
     self.maicon.position = CGPointMake(800,500);
-    self.maicon.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(150,150)];
+    self.maicon.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(100,100)];
     self.maicon.physicsBody.dynamic = YES;
     self.maicon.physicsBody.affectedByGravity =NO;
     self.maicon.physicsBody.allowsRotation =NO;
@@ -121,6 +141,7 @@
     self.maicon.physicsBody.categoryBitMask = monstroNivel3Category;
     self.maicon.physicsBody.contactTestBitMask = mascoteCategory;
     self.maicon.physicsBody.velocity = CGVectorMake(0,0);
+    
     
     SKAction *acaoMover = [SKAction moveTo:CGPointMake(-800, self.maicon.position.y) duration:self.velocidadeMonstro];
     SKAction *acaoRemover = [SKAction removeFromParent];
@@ -133,12 +154,11 @@
 
 -(void)criaGargula {
     
-    
     SKTexture *texturaPiso = [SKTexture textureWithImageNamed:@"ruido.png"];
-    self.gargula = [SKSpriteNode spriteNodeWithTexture:texturaPiso size:CGSizeMake(200,200)];
+    self.gargula = [SKSpriteNode spriteNodeWithTexture:texturaPiso size:CGSizeMake(150,150)];
     self.gargula.name = @"Gargula";
     self.gargula.position = CGPointMake(800,700);
-    self.gargula.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(150,150)];
+    self.gargula.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(100,100)];
     self.gargula.physicsBody.dynamic = YES;
     self.gargula.physicsBody.affectedByGravity =NO;
     self.gargula.physicsBody.allowsRotation =NO;
@@ -157,6 +177,24 @@
     
 }
 
+-(void)criaCasa {
+    
+    SKTexture *texturaPiso = [SKTexture textureWithImageNamed:@"casaMusica.png"];
+    self.casa = [SKSpriteNode spriteNodeWithTexture:texturaPiso size:CGSizeMake(400,400)];
+    self.casa.name = @"Casa";
+    self.casa.position = CGPointMake(1100,225);
+    self.casa.zPosition = -1.0;
+    
+    SKAction *acaoMover = [SKAction moveTo:CGPointMake(-800, self.casa.position.y) duration:6];
+    SKAction *acaoRemover = [SKAction removeFromParent];
+    [self.casa runAction:[SKAction sequence:@[acaoMover,acaoRemover]]];
+    [self addChild:self.casa];
+    
+    self.contadorPontos += 1;
+    self.textoDistancia.text = [NSString stringWithFormat:@"%d", self.contadorPontos];
+   
+    
+}
 
 -(void)criaPiso{
     
@@ -189,12 +227,12 @@
     self.man = [SKSpriteNode spriteNodeWithTexture:texturaPiso2 size:CGSizeMake(200,50)];
     self.man.name = @"HumanWhite";
     [self.man setSize:CGSizeMake(100,150)];
-    self.man.position = CGPointMake(100, 400);
+    self.man.position = CGPointMake(200, 700);
     self.man.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.man.size.width/2];
     self.man.physicsBody.dynamic = YES;
     self.man.physicsBody.affectedByGravity =YES;
     self.man.physicsBody.allowsRotation =NO;
-    self.man.physicsBody.density = 0.2f;
+    self.man.physicsBody.density = 0.1f;
     self.man.physicsBody.usesPreciseCollisionDetection = YES;
     self.man.physicsBody.restitution =0;
     self.man.physicsBody.categoryBitMask = mascoteCategory;
@@ -259,7 +297,7 @@
     
     
     if ([node.name isEqualToString:@"pulaMascote"]) {
-        [self.man.physicsBody applyForce:CGVectorMake(0, 500)];
+        [self.man.physicsBody applyForce:CGVectorMake(0, 1000)];
     }
     
 }
@@ -274,9 +312,9 @@
     if(self.AuxdistanciaPercorrida % 40 == 0 ){
         self.distanciaPercorrida += 1;
         
-        if(self.distanciaPercorrida % 1 == 0){
+        if(self.distanciaPercorrida % 8 == 0){
             
-        self.sorteaMonstro = arc4random()%4;
+        self.sorteaMonstro = arc4random()%5;
                 
                 switch (self.sorteaMonstro) {
                     case 0:
@@ -300,9 +338,19 @@
                         [self criaDragao];
                         [self criaMaicon];
                         break;
+                    case 4:
+                        [self criaGargula];
+                        [self criaMorte];
+                        [self criaMaicon];
+                        break;
                 }
             
         }
+        
+        if(self.distanciaPercorrida % 16 == 0){
+            [self criaCasa];
+        }
+        
     }
     
    
@@ -329,7 +377,15 @@
     
     if ((firstBody.categoryBitMask & mascoteCategory) !=0) {
         if((secondBody.categoryBitMask & pisoCategory)!=0){
-            //[self.man.physicsBody applyImpulse:CGVectorMake(10,0)];
+           // NSLog(@"m1");
+        }else if((secondBody.categoryBitMask & monstroNivel1Category)!=0){
+            NSLog(@"m1");
+        }else if((secondBody.categoryBitMask & monstroNivel2Category)!=0){
+            NSLog(@"m2");
+        }else if((secondBody.categoryBitMask & monstroNivel3Category)!=0){
+            NSLog(@"m3");
+        }else if((secondBody.categoryBitMask & monstroNivel4Category)!=0){
+            NSLog(@"m4");
         }
     }
     

@@ -41,6 +41,7 @@
 @property NSString *estadoAux1;
 @property  UIView *imgTocaTreco;
 
+
 @property NSMutableArray *listaImagensColisao;
 @property (weak, nonatomic) IBOutlet UIImageView *imgColher;
 @property (weak, nonatomic) IBOutlet UIImageView *imgPanela;

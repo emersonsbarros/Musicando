@@ -5,27 +5,30 @@
 //  Created by Emerson Barros on 06/07/14.
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
+#import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <QuartzCore/QuartzCore.h>
 #import "Biblioteca.h"
 #import "Conversa.h"
 #import "Fala.h"
-#import <AVFoundation/AVFoundation.h>
 #import "Nota.h"
 #import "Sinfonia.h"
 #import "EfeitoImagem.h"
 #import "EfeitoMascote.h"
-#import "BarraSuperiorViewController.h"
-#import <QuartzCore/QuartzCore.h>
-#import <SpriteKit/SpriteKit.h>
-#import <UIKit/UIKit.h>
 #import "EfeitoTransicao.h"
+#import "EfeitoPlayer.h"
+#import "EfeitoComponeteView.h"
+#import "EfeitoNotaAnimada.h"
+
+
 @interface Mod2Aula3Exe3ViewController : UIViewController
 
 /*==============================VIEWS===============================*/
 
 //Mascote: Imagem, label e gesture
-@property (strong, nonatomic) IBOutlet UILabel *lblFalaDoMascote;
-@property (strong, nonatomic) IBOutlet UIView *viewGesturePassaFala;
-@property (strong, nonatomic) IBOutlet UIImageView *imagemDoMascote;
+@property  UILabel *lblFalaDoMascote;
+@property  UIView *viewGesturePassaFala;
+@property  UIImageView *imagemDoMascote;
 
 @property (strong, nonatomic) IBOutlet UIImageView *cantoGregoriano;
 @property (strong, nonatomic) IBOutlet UIImageView *notacaoMusical;

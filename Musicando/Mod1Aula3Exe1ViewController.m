@@ -23,6 +23,18 @@
     
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
+
+-(void)viewDidDisappear:(BOOL)animated {
+    
+    [super viewDidDisappear: animated];
+    [[EfeitoTransicao sharedManager]finalizaExercicio:self];
+    
+}
+
 - (void)viewDidLoad{
     
     [super viewDidLoad];
@@ -40,56 +52,43 @@
 
 -(void)iniciarComponentes{
     
-    //Habilita o gesture do mascote com a UIView que fica por cima dele
-    [self addGesturePassaFalaMascote: self.viewGesturePassaFala];
+    //Add barra,Mascote,View de Retornar Pagina ao Xib
+    [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
+    self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
+    
+    
+    //Cria Seletor e manda ele como paramentro para outros View Controllers poderem usar
+    SEL selectors1 = @selector(pulaFalaMascote);
+    [[MascoteViewController sharedManager]addGesturePassaFalaMascote:self.viewGesturePassaFala :selectors1:self];
+    [[RetornaPaginaViewController sharedManager]addGesturePassaFalaMascote:[RetornaPaginaViewController sharedManager].viewRetornaPagina:selectors1:self];
     
     //Inicia lista de imagens para colisão
     self.listaImangesColisao = [[NSMutableArray alloc]init];
-    
     //Adiciona imagens para colisao
     //[self.listaImangesColisao addObject: self.notaMelodia];
     //[self.listaImangesColisao addObject: self.notasHarmonia];
     //[self.listaImangesColisao addObject: self.violao];
     //[self.listaImangesColisao addObject: self.flauta];
-    
     //Adiciona gesture ARRASTAR em todas imagens dessa lista
     [[EfeitoImagem sharedManager]addGesturePainImagens: self.listaImangesColisao];
     
-    //Inicia lista para liberar falas e auxiliares
+    
+    //Lista para saber se as colisoes na tela foram feitas p/ ir na prox fala
     self.listaLiberaFala = [[NSMutableArray alloc]init];
+    //seta com alguma coisa para add uma coisa nao nula
     self.estadoAux1 = @"0";
-    self.estadoAux2 = @"0";
-    self.estadoAux3 = @"0";
     
-    //Inicia auxiliares da biblioteca
-    self.contadorDeFalas = 0;
-    self.testaBiblio = [Biblioteca sharedManager];
-    self.testaConversa = self.testaBiblio.exercicioAtual.mascote.listaDeConversas.firstObject;
     
-    //Usar sempre que quiser pular uma fala
+    //Biblioteca
+    self.lblFalaDoMascote = [MascoteViewController sharedManager].lblFalaDoMascote;
+    self.testaBiblio = [MascoteViewController sharedManager].testaBiblio;
+    self.testaConversa = [MascoteViewController sharedManager].testaConversa;
+    self.imagemDoMascote = [MascoteViewController sharedManager].imagemDoMascote2;
+    [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote];
+    
+    
     [self pulaFalaMascote];
-    
-    //Imagem do mascote
-    self.imagemDoMascote.image = [[[[Biblioteca sharedManager] exercicioAtual] mascote] imagem].image;
-    [self.view addSubview: self.imagemDoMascote];
-    [self.view addSubview: self.lblFalaDoMascote];
-    
-    //Mascote começa a pular
-    [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando: self.imagemDoMascote];
 }
-
-//Adiciona gesture ao passar de fala a view que fica por cima do mascote
--(void)addGesturePassaFalaMascote:(UIView*)viewGesture{
-    
-    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pulaFalaMascote)];
-    
-    singleTap.numberOfTouchesRequired = 1;
-    singleTap.enabled = NO;
-    viewGesture.userInteractionEnabled = NO;
-    
-    [viewGesture addGestureRecognizer: singleTap];
-}
-
 
 
 ///////////////////////////////////////////////  FALAS ///////////////////////////////////////////////
@@ -100,16 +99,18 @@
 //Gerenciador das falas
 -(void)pulaFalaMascote{
     
-    //Para não dar erro de NULL na ultima fala
+    //Usa pra não dar erro de nulo na ultima fala
     int contadorMaximo = (int)self.testaConversa.listaDeFalas.count;
     
-    if(self.contadorDeFalas == contadorMaximo){
+    [[BarraSuperiorViewController sharedManager]txtNumeroAulaAtual].text = [NSString stringWithFormat:@"%d",1+[MascoteViewController sharedManager].contadorDeFalas];
+    
+    if([MascoteViewController sharedManager].contadorDeFalas == contadorMaximo){
         NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
         [[EfeitoTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
     }
     
-    if(self.contadorDeFalas < contadorMaximo){
-        switch (self.contadorDeFalas) {
+    if([MascoteViewController sharedManager].contadorDeFalas < contadorMaximo){
+        switch ([MascoteViewController sharedManager].contadorDeFalas) {
             case 0:
                 [self chamaMetodosFala0];
                 break;
@@ -139,11 +140,10 @@
                 break;
         }
         
-        //Pega a fala atual de acordo com o contador e passa para o label
-        self.testaFala = [self.testaConversa.listaDeFalas objectAtIndex: self.contadorDeFalas];
+        self.testaFala = [self.testaConversa.listaDeFalas objectAtIndex:[MascoteViewController sharedManager].contadorDeFalas];
         self.lblFalaDoMascote.text = self.testaFala.conteudo;
         
-        self.contadorDeFalas +=1;
+        [MascoteViewController sharedManager].contadorDeFalas += 1;
     }
 }
 
@@ -210,7 +210,7 @@
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Para a música
-    self.audioPlayer.stop;
+    [[self audioPlayer]stop];
     
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
@@ -249,7 +249,7 @@
     //Remove animação da vitrola
     [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.alternativaCorreta];
     self.viewDeExercitar.hidden = YES;
-    self.audioPlayer.stop;
+    [[self audioPlayer]stop];
     
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:3.0f:self.viewGesturePassaFala];
 }
@@ -291,7 +291,7 @@
                          self.imgBlocoDo.frame = CGRectMake(800, self.imgBlocoDo.frame.origin.y, self.imgBlocoDo.frame.size.width, self.imgBlocoDo.frame.size.height);
                          self.imgBlocoPausa.frame = CGRectMake(750, self.imgBlocoPausa.frame.origin.y, self.imgBlocoPausa.frame.size.width, self.imgBlocoPausa.frame.size.height);
                      } completion:^(BOOL finished){
-                         self.audioPlayer.play;
+                         [[self audioPlayer]play];
                          self.imgBlocoDo.hidden = YES;
                          self.imgBlocoPausa.hidden = YES;
                      }];
@@ -324,7 +324,7 @@
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"instrumentos" withExtension:@"mp3"];
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    self.audioPlayer.play;
+    [[self audioPlayer]play];
 }
 
 - (IBAction)coral:(id)sender {
@@ -332,7 +332,7 @@
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"coral" withExtension:@"mp3"];
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    self.audioPlayer.play;
+    [[self audioPlayer]play];
 }
 
 - (IBAction)notasPausas:(id)sender {
@@ -353,7 +353,7 @@
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"notasPausas" withExtension:@"mp3"];
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    self.audioPlayer.play;
+    [[self audioPlayer]play];
 \
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -7,13 +7,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Mod1Aula3Exe3ViewController">
             <connections>
                 <outlet property="alternativaCorreta" destination="AEg-hF-VJ3" id="d2x-e8-67A"/>
-                <outlet property="imagemDoMascote" destination="PpM-4A-dgE" id="OeS-th-23R"/>
                 <outlet property="imgNota1" destination="det-0k-WIO" id="qoj-9G-h56"/>
                 <outlet property="imgNota2" destination="3mt-Ww-QbX" id="vaz-Oa-RfZ"/>
                 <outlet property="imgNota3" destination="feP-8o-zyv" id="fKV-5C-aXd"/>
                 <outlet property="imgNota4" destination="0s8-Mg-1b9" id="3fo-fn-Qwf"/>
                 <outlet property="imgNota5" destination="uph-XY-k2a" id="VWm-DR-5ye"/>
-                <outlet property="lblFalaDoMascote" destination="72k-5q-jAW" id="DkA-G0-l4d"/>
                 <outlet property="notasDeMelodia" destination="Dx0-aP-lVy" id="IXn-k0-eqL"/>
                 <outlet property="outFlauta" destination="Tr7-qV-rdk" id="9LW-B8-4HQ"/>
                 <outlet property="outPiano" destination="AJz-Hd-8ZK" id="IcS-Qt-1xF"/>
@@ -22,7 +20,6 @@
                 <outlet property="outViolaco" destination="OzY-al-ed5" id="rfE-mW-f1h"/>
                 <outlet property="view" destination="2" id="3"/>
                 <outlet property="viewDeExercitar" destination="YcL-ID-iBw" id="JEl-6E-ehw"/>
-                <outlet property="viewGesturePassaFala" destination="AJX-cq-cJ5" id="n20-3E-Nlo"/>
                 <outlet property="vitrola" destination="JWp-uu-cJj" id="tVi-rM-U8l"/>
             </connections>
         </placeholder>
@@ -31,17 +28,6 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descobrimos como uma música é formada e como o ritmo pode alterar seu tempo e velocidade. Vamos agora saber onde se encaixa." lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="605" translatesAutoresizingMaskIntoConstraints="NO" id="72k-5q-jAW">
-                    <rect key="frame" x="219" y="568" width="605" height="180"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="PpM-4A-dgE">
-                    <rect key="frame" x="824" y="568" width="200" height="200"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vitrola.png" translatesAutoresizingMaskIntoConstraints="NO" id="JWp-uu-cJj">
                     <rect key="frame" x="526" y="178" width="337" height="289"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -127,14 +113,6 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AJX-cq-cJ5">
-                    <rect key="frame" x="871" y="553" width="119" height="229"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </view>
-                <imageView userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backFalaDoMascote.png" translatesAutoresizingMaskIntoConstraints="NO" id="6ZI-K7-jTI">
-                    <rect key="frame" x="132" y="553" width="731" height="195"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notasDeMelodia.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dx0-aP-lVy">
                     <rect key="frame" x="145" y="202" width="463" height="127"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -146,12 +124,10 @@
         </view>
     </objects>
     <resources>
-        <image name="backFalaDoMascote.png" width="947" height="374"/>
         <image name="contornoAlternativaCorreta.png" width="725" height="725"/>
         <image name="doBloco.png" width="120" height="120"/>
         <image name="faBloco.png" width="120" height="120"/>
         <image name="flauta.png" width="436" height="445"/>
-        <image name="mascote.png" width="460" height="623"/>
         <image name="notasDeMelodia.png" width="1117" height="287"/>
         <image name="novoTocaTreco.png" width="1784" height="916"/>
         <image name="pausaBloco.png" width="123" height="120"/>

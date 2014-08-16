@@ -27,6 +27,15 @@
     return YES;
 }
 
+
+-(void)viewDidDisappear:(BOOL)animated {
+    
+    [super viewDidDisappear: animated];
+    [[EfeitoTransicao sharedManager]finalizaExercicio:self];
+    
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -307,16 +316,6 @@
 }
 //////////////////////////////////////// METODOS FALA ////////////////////////////////////////
 
-//Add gesture passar de fala a view que fica por cima do mascote, usei por cauda do problema da animacao
--(void)addGesturePassaFalaMascote:(UIView*)viewGesture{
-    
-    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pulaFalaMascote)];
-    singleTap.numberOfTouchesRequired = 1;
-    singleTap.enabled = NO;
-    viewGesture.userInteractionEnabled = NO;
-    [viewGesture addGestureRecognizer:singleTap];
-    
-}
 
 //Gerencia o passa de falas
 -(void)pulaFalaMascote{
