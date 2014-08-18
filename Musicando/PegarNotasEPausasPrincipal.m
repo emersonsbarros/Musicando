@@ -7,11 +7,13 @@
 //
 
 #import "PegarNotasEPausasPrincipal.h"
+#define GRAVIDADE_MUNDO -10
+
 
 @implementation PegarNotasEPausasPrincipal
 
 -(id)initWithSize:(CGSize)size{
-    if (self = [super initWithSize:size]) {
+    if (self = [super initWithSize:size]){
         
         //Configura física do mundo
         self.physicsWorld.contactDelegate = self;
@@ -19,17 +21,14 @@
         
         //Inicia zerado auxiliar para pausa, contadores de tempo e pontuação
         self.estadoPauseJogo = 0;
-        self.tempoEncerrado = NO;
-        self.escalaCerta = NO;
         
         self.tempoPercorrido = 0;
         self.auxTempoPercorrido = 0;
         self.pontuacaoJogadorAtual = 0;
         
         //Inicia lista de notas e indice para sorteio
-        self.listaDesimbolosMusicais = [[NSMutableArray alloc] initWithObjects: @"Do", @"Re", @"Mi", @"Fa", @"Sol", @"La", @"Si", @"P4", @"P2", @"P1", @"P12", @"P14", @"P18", @"P16", nil];
-        self.indiceNotaSorteada = 0;
-        [self sortearQuantidadeDeNotas];
+        self.listaDeSimbolosMusicais = [[NSMutableArray alloc] initWithObjects: @"Do", @"Re", @"Mi", @"Fa", @"Sol", @"La", @"Si", @"P4", @"P2", @"P1", @"P12", @"P14", @"P18", @"P16", nil];
+        self.indiceSimboloSorteado = 0;
         
         //Inicia primeiros nós
         [self carregarPrimeirosComponentes];
@@ -70,25 +69,6 @@
     self.labelDePontuacao.text = [NSString stringWithFormat: @"%d", self.pontuacaoJogadorAtual];
     self.labelDePontuacao.fontName = @"Marker Felt Thin";
     [self addChild: self.labelDePontuacao];
-    
-    self.stringDeTempo = [[SKLabelNode alloc]init];
-    self.stringDeTempo.fontColor = [UIColor blackColor];
-    self.stringDeTempo.fontSize = 50.0f;
-    self.stringDeTempo.position = CGPointMake(840, 650);
-    self.stringDeTempo.zPosition = 2;
-    self.stringDeTempo.text = @"Tempo:";
-    self.stringDeTempo.fontName = @"Marker Felt Thin";
-    [self addChild: self.stringDeTempo];
-    
-    self.labelDeTempo = [[SKLabelNode alloc]init];
-    self.labelDeTempo.fontColor = [UIColor blackColor];
-    self.labelDeTempo.fontSize = 50.0f;
-    self.labelDeTempo.position = CGPointMake(940, 650);
-    self.labelDeTempo.zPosition = 2;
-    self.labelDeTempo.text = [NSString stringWithFormat: @"%d", self.tempoPercorrido];
-    self.labelDeTempo.fontName = @"Marker Felt Thin";
-    [self addChild: self.labelDeTempo];
-    
 }
 
 
