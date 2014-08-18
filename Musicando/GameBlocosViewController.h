@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 #import "GameBlocosPrincipal.h"
+#import "GameOverViewController.h"
+
 
 @interface GameBlocosViewController : UIViewController
 

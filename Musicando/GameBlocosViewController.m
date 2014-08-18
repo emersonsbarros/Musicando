@@ -7,6 +7,7 @@
 //
 
 #import "GameBlocosViewController.h"
+#import "Biblioteca.h"
 
 @interface GameBlocosViewController ()
 
@@ -16,6 +17,10 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
+    //Gamer para SpriteKit
+    [[GameOverViewController sharedManager]addBarraSuperioAoXibOculto:self:[Biblioteca sharedManager].exercicioAtual];
+
     
     //Configure the view.
     SKView * skView = (SKView *)self.view;

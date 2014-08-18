@@ -40,6 +40,11 @@
     return self;
 }
 
+-(void)gameOver{
+    [[GameOverViewController sharedManager]gameOverParaUmaCena].view.hidden = NO;
+    //[self pausaJogo];
+    //[self.audioPlayer stop];
+}
 
 -(void)carregarPrimeirosComponentes{
     
@@ -167,7 +172,7 @@
             }else if([blocoNota.name isEqualToString:@"Dor"] || [blocoNota.name isEqualToString:@"Rir"] || [blocoNota.name isEqualToString:@"Mou"] || [blocoNota.name isEqualToString:@"Fê"] || [blocoNota.name isEqualToString:@"Sou"] || [blocoNota.name isEqualToString:@"Lú"] || [blocoNota.name isEqualToString:@"Sir"]){
                 
                 NSLog(@"Colidiu nota errada com tocatreco - %@", blocoNota.name);
-                NSLog(@"Chama cena de GameOver!");
+                [self gameOver];
 
             }
 //COLISAO NO CHÃO
@@ -179,13 +184,13 @@
                 }if([blocoNota.name isEqualToString:@"Dó"] || [blocoNota.name isEqualToString:@"Ré"] || [blocoNota.name isEqualToString:@"Mi"] || [blocoNota.name isEqualToString:@"Fá"] || [blocoNota.name isEqualToString:@"Sol"] || [blocoNota.name isEqualToString:@"Lá"] || [blocoNota.name isEqualToString:@"Si"]){
                 
                     NSLog(@"Colidiu com o chão nota certa - %@", blocoNota.name);
-                    
+                    [self gameOver];
             
             //NOTAS ERRADAS
                 }else if([blocoNota.name isEqualToString:@"Dor"] || [blocoNota.name isEqualToString:@"Rir"] || [blocoNota.name isEqualToString:@"Mou"] || [blocoNota.name isEqualToString:@"Fê"] || [blocoNota.name isEqualToString:@"Sou"] || [blocoNota.name isEqualToString:@"Lú"] || [blocoNota.name isEqualToString:@"Sir"]){
                 
                     NSLog(@"Colidiu com o chão nota errada - %@", blocoNota.name);
-                    NSLog(@"Chama cena de GameOver!");
+                    
 
                     if (blocoNota.position.y > piso.position.y+50) {
 
@@ -362,8 +367,8 @@
     SKTexture *texturaTocaTreco = [SKTexture textureWithImageNamed: @"bocaDoTocaTreco.png"];
     self.tocaTrecoPrincipal = [SKSpriteNode spriteNodeWithTexture: texturaTocaTreco size: CGSizeMake(840, 400)];
     
-    [tocaTreco addChild: self.tocaTrecoPrincipal];
-    [self addChild: tocaTreco];
+//    [tocaTreco addChild: self.tocaTrecoPrincipal];
+//    [self addChild: tocaTreco];
 
 }
 

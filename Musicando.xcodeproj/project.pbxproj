@@ -1168,9 +1168,9 @@
 			isa = PBXGroup;
 			children = (
 				0BA27C4419A2917800D21948 /* GameBlocosPrincipal.h */,
+				0BA27C4B19A2917800D21948 /* GameBlocosPrincipal.m */,
 				0BA27C4719A2917800D21948 /* GameBlocosViewController.h */,
 				0BA27C4819A2917800D21948 /* GameBlocosViewController.m */,
-				0BA27C4B19A2917800D21948 /* GameBlocosPrincipal.m */,
 				0BA27C4C19A2917800D21948 /* GameBlocosViewController.xib */,
 			);
 			name = "Game Nota";
