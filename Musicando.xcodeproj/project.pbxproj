@@ -14,6 +14,20 @@
 		0B99B637199AAB4000F9A799 /* EfeitoNotaAnimada.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B99B636199AAB4000F9A799 /* EfeitoNotaAnimada.m */; };
 		0BA27C4019A2755000D21948 /* EfeitoFala.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA27C3F19A2755000D21948 /* EfeitoFala.m */; };
 		0BA27C4219A2911A00D21948 /* iconeSomFala.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA27C4119A2911A00D21948 /* iconeSomFala.png */; };
+		0BA27C4D19A2917900D21948 /* EscadaDeNotasPrincipal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA27C4519A2917800D21948 /* EscadaDeNotasPrincipal.m */; };
+		0BA27C4E19A2917900D21948 /* EscadaDeNotasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA27C4619A2917800D21948 /* EscadaDeNotasViewController.xib */; };
+		0BA27C4F19A2917900D21948 /* GameBlocosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA27C4819A2917800D21948 /* GameBlocosViewController.m */; };
+		0BA27C5019A2917900D21948 /* EscadaDeNotasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA27C4A19A2917800D21948 /* EscadaDeNotasViewController.m */; };
+		0BA27C5119A2917900D21948 /* GameBlocosPrincipal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA27C4B19A2917800D21948 /* GameBlocosPrincipal.m */; };
+		0BA27C5219A2917900D21948 /* GameBlocosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BA27C4C19A2917800D21948 /* GameBlocosViewController.xib */; };
+		0BA27C5C19A2938A00D21948 /* Do.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA27C5519A2938A00D21948 /* Do.png */; };
+		0BA27C5D19A2938A00D21948 /* Fa.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA27C5619A2938A00D21948 /* Fa.png */; };
+		0BA27C5E19A2938A00D21948 /* La.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA27C5719A2938A00D21948 /* La.png */; };
+		0BA27C5F19A2938A00D21948 /* Mi.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA27C5819A2938A00D21948 /* Mi.png */; };
+		0BA27C6019A2938A00D21948 /* Re.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA27C5919A2938A00D21948 /* Re.png */; };
+		0BA27C6119A2938A00D21948 /* Si.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA27C5A19A2938A00D21948 /* Si.png */; };
+		0BA27C6219A2938A00D21948 /* Sol.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA27C5B19A2938A00D21948 /* Sol.png */; };
+		0BA27C6419A293A600D21948 /* papelAntigo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0BA27C6319A293A600D21948 /* papelAntigo.jpg */; };
 		0BA369DB199E862300B53D46 /* ruido.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA369DA199E862300B53D46 /* ruido.png */; };
 		2B64F9E41969207E00BC57FD /* Mod1Aula2Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64F9E21969207E00BC57FD /* Mod1Aula2Exe1ViewController.m */; };
 		2B64F9E51969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64F9E31969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib */; };
@@ -504,6 +518,24 @@
 		0BA27C3E19A2755000D21948 /* EfeitoFala.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoFala.h; sourceTree = "<group>"; };
 		0BA27C3F19A2755000D21948 /* EfeitoFala.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoFala.m; sourceTree = "<group>"; };
 		0BA27C4119A2911A00D21948 /* iconeSomFala.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconeSomFala.png; sourceTree = "<group>"; };
+		0BA27C4319A2917800D21948 /* EscadaDeNotasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EscadaDeNotasViewController.h; sourceTree = "<group>"; };
+		0BA27C4419A2917800D21948 /* GameBlocosPrincipal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBlocosPrincipal.h; sourceTree = "<group>"; };
+		0BA27C4519A2917800D21948 /* EscadaDeNotasPrincipal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EscadaDeNotasPrincipal.m; sourceTree = "<group>"; };
+		0BA27C4619A2917800D21948 /* EscadaDeNotasViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EscadaDeNotasViewController.xib; sourceTree = "<group>"; };
+		0BA27C4719A2917800D21948 /* GameBlocosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBlocosViewController.h; sourceTree = "<group>"; };
+		0BA27C4819A2917800D21948 /* GameBlocosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBlocosViewController.m; sourceTree = "<group>"; };
+		0BA27C4919A2917800D21948 /* EscadaDeNotasPrincipal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EscadaDeNotasPrincipal.h; sourceTree = "<group>"; };
+		0BA27C4A19A2917800D21948 /* EscadaDeNotasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EscadaDeNotasViewController.m; sourceTree = "<group>"; };
+		0BA27C4B19A2917800D21948 /* GameBlocosPrincipal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBlocosPrincipal.m; sourceTree = "<group>"; };
+		0BA27C4C19A2917800D21948 /* GameBlocosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameBlocosViewController.xib; sourceTree = "<group>"; };
+		0BA27C5519A2938A00D21948 /* Do.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Do.png; sourceTree = "<group>"; };
+		0BA27C5619A2938A00D21948 /* Fa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fa.png; sourceTree = "<group>"; };
+		0BA27C5719A2938A00D21948 /* La.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = La.png; sourceTree = "<group>"; };
+		0BA27C5819A2938A00D21948 /* Mi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mi.png; sourceTree = "<group>"; };
+		0BA27C5919A2938A00D21948 /* Re.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Re.png; sourceTree = "<group>"; };
+		0BA27C5A19A2938A00D21948 /* Si.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Si.png; sourceTree = "<group>"; };
+		0BA27C5B19A2938A00D21948 /* Sol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sol.png; sourceTree = "<group>"; };
+		0BA27C6319A293A600D21948 /* papelAntigo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = papelAntigo.jpg; sourceTree = "<group>"; };
 		0BA369DA199E862300B53D46 /* ruido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ruido.png; sourceTree = "<group>"; };
 		2B64F9E11969207E00BC57FD /* Mod1Aula2Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula2Exe1ViewController.h; sourceTree = "<group>"; };
 		2B64F9E21969207E00BC57FD /* Mod1Aula2Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula2Exe1ViewController.m; sourceTree = "<group>"; };
@@ -1120,6 +1152,30 @@
 			name = RetornaPaginaView;
 			sourceTree = "<group>";
 		};
+		0BA27C5319A2918000D21948 /* Game Escala */ = {
+			isa = PBXGroup;
+			children = (
+				0BA27C4319A2917800D21948 /* EscadaDeNotasViewController.h */,
+				0BA27C4519A2917800D21948 /* EscadaDeNotasPrincipal.m */,
+				0BA27C4619A2917800D21948 /* EscadaDeNotasViewController.xib */,
+				0BA27C4919A2917800D21948 /* EscadaDeNotasPrincipal.h */,
+				0BA27C4A19A2917800D21948 /* EscadaDeNotasViewController.m */,
+			);
+			name = "Game Escala";
+			sourceTree = "<group>";
+		};
+		0BA27C5419A2919400D21948 /* Game Nota */ = {
+			isa = PBXGroup;
+			children = (
+				0BA27C4419A2917800D21948 /* GameBlocosPrincipal.h */,
+				0BA27C4719A2917800D21948 /* GameBlocosViewController.h */,
+				0BA27C4819A2917800D21948 /* GameBlocosViewController.m */,
+				0BA27C4B19A2917800D21948 /* GameBlocosPrincipal.m */,
+				0BA27C4C19A2917800D21948 /* GameBlocosViewController.xib */,
+			);
+			name = "Game Nota";
+			sourceTree = "<group>";
+		};
 		2B64F9DE19691F8600BC57FD /* Iniciante */ = {
 			isa = PBXGroup;
 			children = (
@@ -1197,6 +1253,7 @@
 		2B64FA011969217300BC57FD /* Aula1 */ = {
 			isa = PBXGroup;
 			children = (
+				0BA27C5419A2919400D21948 /* Game Nota */,
 				2B64FA091969220C00BC57FD /* Mod2Aula1Exe1ViewController.h */,
 				2B64FA0A1969220C00BC57FD /* Mod2Aula1Exe1ViewController.m */,
 				2B64FA0B1969220C00BC57FD /* Mod2Aula1Exe1ViewController.xib */,
@@ -1312,6 +1369,7 @@
 		2B64FA08196921C200BC57FD /* Aula3 */ = {
 			isa = PBXGroup;
 			children = (
+				0BA27C5319A2918000D21948 /* Game Escala */,
 				2B64FA221969226F00BC57FD /* Mod2Aula3Exe1ViewController.h */,
 				2B64FA231969226F00BC57FD /* Mod2Aula3Exe1ViewController.m */,
 				2B64FA241969226F00BC57FD /* Mod2Aula3Exe1ViewController.xib */,
@@ -1793,6 +1851,14 @@
 		A848541E1994119600C5F0A3 /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				0BA27C6319A293A600D21948 /* papelAntigo.jpg */,
+				0BA27C5519A2938A00D21948 /* Do.png */,
+				0BA27C5619A2938A00D21948 /* Fa.png */,
+				0BA27C5719A2938A00D21948 /* La.png */,
+				0BA27C5819A2938A00D21948 /* Mi.png */,
+				0BA27C5919A2938A00D21948 /* Re.png */,
+				0BA27C5A19A2938A00D21948 /* Si.png */,
+				0BA27C5B19A2938A00D21948 /* Sol.png */,
 				0BA27C4119A2911A00D21948 /* iconeSomFala.png */,
 				3FBE5AF519A0294100954A77 /* forno.png */,
 				3FBE5AF3199FBC6F00954A77 /* bocaTocaTreco.png */,
@@ -2238,6 +2304,7 @@
 				A84855501994119600C5F0A3 /* velocidadeTempo.png in Resources */,
 				A84855A91994137D00C5F0A3 /* musicaPanela.mp3 in Resources */,
 				A848554E1994119600C5F0A3 /* tocaTreco2.png in Resources */,
+				0BA27C5C19A2938A00D21948 /* Do.png in Resources */,
 				A84854F11994119600C5F0A3 /* explosao.png in Resources */,
 				A84855521994119600C5F0A3 /* vibracao.png in Resources */,
 				3F608D78196C7585001979E9 /* sharp.png in Resources */,
@@ -2247,6 +2314,7 @@
 				A848552F1994119600C5F0A3 /* pilar.png in Resources */,
 				3F608DD9196C7585001979E9 /* P200 Piano D6.caf in Resources */,
 				3F608DAF196C7585001979E9 /* heyjude.xml in Resources */,
+				0BA27C6219A2938A00D21948 /* Sol.png in Resources */,
 				3F902CAD199DD8C800FDF84A /* pMiddleHorizontal.png in Resources */,
 				A848559E1994137D00C5F0A3 /* helicoptero.wav in Resources */,
 				3FD3253019970424004A0262 /* frequenciaFlauta.jpg in Resources */,
@@ -2265,6 +2333,7 @@
 				A84855461994119600C5F0A3 /* tecladoeletrico.jpg in Resources */,
 				A84854C71994119600C5F0A3 /* bibliotecaBackground.jpg in Resources */,
 				A84855B11994137D00C5F0A3 /* sol3G.wav in Resources */,
+				0BA27C6019A2938A00D21948 /* Re.png in Resources */,
 				2B64FA621969232B00BC57FD /* Mod2Aula7Exe1ViewController.xib in Resources */,
 				3F608D71196C7585001979E9 /* natural.plist in Resources */,
 				3F608DD7196C7585001979E9 /* P200 Piano D4.caf in Resources */,
@@ -2324,6 +2393,7 @@
 				A848558A1994137D00C5F0A3 /* apito.wav in Resources */,
 				3F608D8F196C7585001979E9 /* semicolcheiaPausa.png in Resources */,
 				A84855281994119600C5F0A3 /* pentagramaComEscadaDeTons.png in Resources */,
+				0BA27C5219A2917900D21948 /* GameBlocosViewController.xib in Resources */,
 				3F608D88196C7585001979E9 /* 5.png in Resources */,
 				3FC36C321996B95F006A1B2D /* barraAzul.jpeg in Resources */,
 				A84854EF1994119600C5F0A3 /* escalaSol.png in Resources */,
@@ -2398,6 +2468,7 @@
 				A84854CD1994119600C5F0A3 /* Capoeiraframe1.gif in Resources */,
 				3FAD245A1973AD8200DEDFF8 /* Mod1Aula2Exe2ViewController.xib in Resources */,
 				A84855291994119600C5F0A3 /* pentagramaComLinhasSuplementares.png in Resources */,
+				0BA27C5F19A2938A00D21948 /* Mi.png in Resources */,
 				A848551B1994119600C5F0A3 /* notaSemibreve.png in Resources */,
 				A84854E41994119600C5F0A3 /* escadaDeTons.png in Resources */,
 				A84855301994119600C5F0A3 /* pilarHarmonia.png in Resources */,
@@ -2430,6 +2501,7 @@
 				3F608D5F196C7585001979E9 /* fad2.caf in Resources */,
 				3FD3253719971DEE004A0262 /* RetornaPaginaViewController.xib in Resources */,
 				3F608DD4196C7585001979E9 /* P200 Piano D#8.caf in Resources */,
+				0BA27C6419A293A600D21948 /* papelAntigo.jpg in Resources */,
 				A84855A01994137D00C5F0A3 /* instrumentos.mp3 in Resources */,
 				A8C3F0AD194B72A400E78899 /* InfoPlist.strings in Resources */,
 				3F902CA9199DD8C800FDF84A /* pForegroundHorizontal.png in Resources */,
@@ -2444,12 +2516,14 @@
 				3F608D9A196C7585001979E9 /* 5th_Symphony.xml in Resources */,
 				A84854D51994119600C5F0A3 /* carnavalframe4.gif in Resources */,
 				A84855AA1994137D00C5F0A3 /* notaA4 (1).caf in Resources */,
+				0BA27C4E19A2917900D21948 /* EscadaDeNotasViewController.xib in Resources */,
 				3F608DB7196C7585001979E9 /* ninar.xml in Resources */,
 				3F608DB9196C7585001979E9 /* palmeiras.xml in Resources */,
 				3F608DDA196C7585001979E9 /* P200 Piano F#2.caf in Resources */,
 				A84854C61994119600C5F0A3 /* biblioteca.png in Resources */,
 				3FB23EB619A1D68C003677A6 /* musicaJogoMusica.mp3 in Resources */,
 				2B64FA53196922D500BC57FD /* Mod2Aula4Exe7ViewController.xib in Resources */,
+				0BA27C5D19A2938A00D21948 /* Fa.png in Resources */,
 				A84855A71994137D00C5F0A3 /* musicaMixaIntroducao.wav in Resources */,
 				A84855C0199416D100C5F0A3 /* TransicaoExercicioViewController.xib in Resources */,
 				3F608DAB196C7585001979E9 /* fantasma.xml in Resources */,
@@ -2474,6 +2548,7 @@
 				A848552C1994119600C5F0A3 /* piano.png in Resources */,
 				A84854FD1994119600C5F0A3 /* graficoAgudo.jpg in Resources */,
 				2B64FA44196922B800BC57FD /* Mod2Aula4Exe4ViewController.xib in Resources */,
+				0BA27C5E19A2938A00D21948 /* La.png in Resources */,
 				A848553F1994119600C5F0A3 /* silencio.jpg in Resources */,
 				3F608DAA196C7585001979E9 /* et.xml in Resources */,
 				0B9709BD199BE944008C3B2A /* TocaTrecoViewController.xib in Resources */,
@@ -2581,6 +2656,7 @@
 				2B64FA5D1969230400BC57FD /* Mod2Aula6Exe1ViewController.xib in Resources */,
 				A84854E11994119600C5F0A3 /* cristalTimbre.png in Resources */,
 				A84855401994119600C5F0A3 /* silencioPausa.png in Resources */,
+				0BA27C6119A2938A00D21948 /* Si.png in Resources */,
 				A84855A51994137D00C5F0A3 /* musicaCristal.mp3 in Resources */,
 				A848558F1994137D00C5F0A3 /* carro.wav in Resources */,
 				3FAD54BD199B26FD00475CEA /* fundoPapiro.png in Resources */,
@@ -2629,7 +2705,9 @@
 				3F03108F1999D8F500570B8A /* EfeitoComponeteView.m in Sources */,
 				2B64FA84196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m in Sources */,
 				3F608DE2196C7585001979E9 /* Sinfonia.m in Sources */,
+				0BA27C4F19A2917900D21948 /* GameBlocosViewController.m in Sources */,
 				3FAD24551973975500DEDFF8 /* EfeitoMascote.m in Sources */,
+				0BA27C5019A2917900D21948 /* EscadaDeNotasViewController.m in Sources */,
 				2B64FA7A1969235B00BC57FD /* Mod2Aula7Exe6ViewController.m in Sources */,
 				2B64FA161969222600BC57FD /* Mod2Aula1Exe3ViewController.m in Sources */,
 				0B9709BC199BE944008C3B2A /* TocaTrecoViewController.m in Sources */,
@@ -2637,6 +2715,7 @@
 				0BA27C4019A2755000D21948 /* EfeitoFala.m in Sources */,
 				3FCC29151995A9DE000B951F /* MascoteViewController.m in Sources */,
 				3FBE5AF1199FBB5A00954A77 /* JogoBlocosSomViewController.m in Sources */,
+				0BA27C4D19A2917900D21948 /* EscadaDeNotasPrincipal.m in Sources */,
 				2B64FA39196922A400BC57FD /* Mod2Aula4Exe2ViewController.m in Sources */,
 				3FAC5921197F5BE8001B762F /* BarraSuperiorViewController.m in Sources */,
 				2B64F9E41969207E00BC57FD /* Mod1Aula2Exe1ViewController.m in Sources */,
@@ -2652,6 +2731,7 @@
 				2B64F9FF1969215900BC57FD /* Mod1Aula4Exe1ViewController.m in Sources */,
 				A8C3F0B3194B72A400E78899 /* AppDelegate.m in Sources */,
 				A83ED3DE19520810006CB6A4 /* GerenciadorDeUsuarios.m in Sources */,
+				0BA27C5119A2917900D21948 /* GameBlocosPrincipal.m in Sources */,
 				2B64FA48196922C100BC57FD /* Mod2Aula4Exe5ViewController.m in Sources */,
 				2B64FA661969233700BC57FD /* Mod2Aula7Exe2ViewController.m in Sources */,
 				2B64FA3E196922AD00BC57FD /* Mod2Aula4Exe3ViewController.m in Sources */,
