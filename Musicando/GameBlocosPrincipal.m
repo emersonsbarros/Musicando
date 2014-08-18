@@ -42,8 +42,11 @@
 
 -(void)gameOver{
     [[GameOverViewController sharedManager]gameOverParaUmaCena].view.hidden = NO;
-    //[self pausaJogo];
-    //[self.audioPlayer stop];
+    [self pausaJogo];
+}
+
+-(void)pausaJogo{
+    self.scene.view.paused = YES;
 }
 
 -(void)carregarPrimeirosComponentes{

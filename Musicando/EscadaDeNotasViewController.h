@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 #import "EscadaDeNotasPrincipal.h"
+#import "GameBlocosPrincipal.h"
+#import "Biblioteca.h"
 
 @interface EscadaDeNotasViewController : UIViewController
 

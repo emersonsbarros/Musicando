@@ -1155,11 +1155,11 @@
 		0BA27C5319A2918000D21948 /* Game Escala */ = {
 			isa = PBXGroup;
 			children = (
-				0BA27C4319A2917800D21948 /* EscadaDeNotasViewController.h */,
-				0BA27C4519A2917800D21948 /* EscadaDeNotasPrincipal.m */,
 				0BA27C4619A2917800D21948 /* EscadaDeNotasViewController.xib */,
-				0BA27C4919A2917800D21948 /* EscadaDeNotasPrincipal.h */,
 				0BA27C4A19A2917800D21948 /* EscadaDeNotasViewController.m */,
+				0BA27C4319A2917800D21948 /* EscadaDeNotasViewController.h */,
+				0BA27C4919A2917800D21948 /* EscadaDeNotasPrincipal.h */,
+				0BA27C4519A2917800D21948 /* EscadaDeNotasPrincipal.m */,
 			);
 			name = "Game Escala";
 			sourceTree = "<group>";

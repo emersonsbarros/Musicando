@@ -7,6 +7,7 @@
 //
 #import <AVFoundation/AVFoundation.h>
 #import <SpriteKit/SpriteKit.h>
+#import "GameOverViewController.h"
 
 
 //CONSTANSTES para colisão

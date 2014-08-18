@@ -17,6 +17,9 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
+    //Gamer para SpriteKit
+    [[GameOverViewController sharedManager]addBarraSuperioAoXibOculto:self:[Biblioteca sharedManager].exercicioAtual];
+    
     //Configure the view.
     SKView * skView = (SKView *)self.view;
     skView.showsFPS = NO;

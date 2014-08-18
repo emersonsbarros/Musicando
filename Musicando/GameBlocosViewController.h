@@ -10,6 +10,7 @@
 #import <SpriteKit/SpriteKit.h>
 #import "GameBlocosPrincipal.h"
 #import "GameOverViewController.h"
+#import "Biblioteca.h"
 
 
 @interface GameBlocosViewController : UIViewController

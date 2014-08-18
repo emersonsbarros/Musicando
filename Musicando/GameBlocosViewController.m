@@ -7,7 +7,6 @@
 //
 
 #import "GameBlocosViewController.h"
-#import "Biblioteca.h"
 
 @interface GameBlocosViewController ()
 
