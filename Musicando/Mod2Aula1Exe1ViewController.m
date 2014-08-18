@@ -5,7 +5,7 @@
 //  Created by Emerson Barros on 06/07/14.
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
-
+#import "EfeitoFala.h"
 #import "Mod2Aula1Exe1ViewController.h"
 
 @interface Mod2Aula1Exe1ViewController ()
@@ -67,7 +67,6 @@
     self.testaConversa = [MascoteViewController sharedManager].testaConversa;
     self.imagemDoMascote2 = [MascoteViewController sharedManager].imagemDoMascote2;
     [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote2];
-    
     
     [self pulaFalaMascote];
 

@@ -47,11 +47,29 @@ static const UInt32 fundo = 0x1 << 7;
 @property SKSpriteNode *espacoDoPentagrama3;
 @property SKSpriteNode *espacoDoPentagrama4;
 
-//Auxiliares
-@property NSArray *listaDeNotas;
-@property NSArray *listaTesteDeSprites;
-@property int indiceNotaSorteada;
+@property SKSpriteNode *botaoStartAndChek;
 
+//Pontuacao
+@property int pontuacaoJogadorAtual;
+@property SKLabelNode *stringDePontuacao;
+@property SKLabelNode *labelDePontuacao;
+
+@property SKLabelNode *stringDeTempo;
+@property SKLabelNode *labelDeTempo;
+
+
+
+//Auxiliares
+@property int estadoPauseJogo;
+
+@property NSMutableArray *listaDeNotasComPosicoes;
+@property NSArray *listaDeNotas;
+
+@property int indiceNotaSorteada;
+@property int quantidadeDeNotas;
+
+@property int tempoPercorrido;
+@property int auxTempoPercorrido;
 
 
 //MÉTODOS-----------

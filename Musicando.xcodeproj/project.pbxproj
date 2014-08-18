@@ -254,6 +254,18 @@
 		2B64FA801969236D00BC57FD /* Mod2Aula8Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA7E1969236D00BC57FD /* Mod2Aula8Exe1ViewController.xib */; };
 		2B64FA84196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA82196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m */; };
 		2B64FA85196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA83196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib */; };
+		2BAE044119A20D8C00785152 /* EfeitoFala.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE044019A20D8C00785152 /* EfeitoFala.m */; };
+		2BAE044319A216B800785152 /* backPapel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE044219A216B800785152 /* backPapel.jpg */; };
+		2BAE044519A217C200785152 /* papelAntigo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE044419A217C200785152 /* papelAntigo.jpg */; };
+		2BAE044D19A22AC900785152 /* Do.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE044619A22AC900785152 /* Do.png */; };
+		2BAE044E19A22AC900785152 /* Fa.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE044719A22AC900785152 /* Fa.png */; };
+		2BAE044F19A22AC900785152 /* La.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE044819A22AC900785152 /* La.png */; };
+		2BAE045019A22AC900785152 /* Mi.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE044919A22AC900785152 /* Mi.png */; };
+		2BAE045119A22AC900785152 /* Re.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE044A19A22AC900785152 /* Re.png */; };
+		2BAE045219A22AC900785152 /* Si.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE044B19A22AC900785152 /* Si.png */; };
+		2BAE045319A22AC900785152 /* Sol.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE044C19A22AC900785152 /* Sol.png */; };
+		2BAE046019A24C5700785152 /* CrieMusicaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE045E19A24C5700785152 /* CrieMusicaViewController.m */; };
+		2BAE046119A24C5700785152 /* CrieMusicaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE045F19A24C5700785152 /* CrieMusicaViewController.xib */; };
 		3F03108F1999D8F500570B8A /* EfeitoComponeteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F03108E1999D8F500570B8A /* EfeitoComponeteView.m */; };
 		3F43A31C199C8AB20038D1E9 /* EstudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43A31B199C8AB20038D1E9 /* EstudioViewController.m */; };
 		3F608CA1196C5B7D001979E9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F608CA0196C5B7D001979E9 /* AudioToolbox.framework */; };
@@ -784,6 +796,20 @@
 		2B64FA81196923FA00BC57FD /* Mod1Aula3Exe5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula3Exe5ViewController.h; sourceTree = "<group>"; };
 		2B64FA82196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula3Exe5ViewController.m; sourceTree = "<group>"; };
 		2B64FA83196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula3Exe5ViewController.xib; sourceTree = "<group>"; };
+		2BAE043F19A20D8C00785152 /* EfeitoFala.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoFala.h; sourceTree = "<group>"; };
+		2BAE044019A20D8C00785152 /* EfeitoFala.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoFala.m; sourceTree = "<group>"; };
+		2BAE044219A216B800785152 /* backPapel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backPapel.jpg; sourceTree = "<group>"; };
+		2BAE044419A217C200785152 /* papelAntigo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = papelAntigo.jpg; sourceTree = "<group>"; };
+		2BAE044619A22AC900785152 /* Do.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Do.png; sourceTree = "<group>"; };
+		2BAE044719A22AC900785152 /* Fa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fa.png; sourceTree = "<group>"; };
+		2BAE044819A22AC900785152 /* La.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = La.png; sourceTree = "<group>"; };
+		2BAE044919A22AC900785152 /* Mi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mi.png; sourceTree = "<group>"; };
+		2BAE044A19A22AC900785152 /* Re.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Re.png; sourceTree = "<group>"; };
+		2BAE044B19A22AC900785152 /* Si.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Si.png; sourceTree = "<group>"; };
+		2BAE044C19A22AC900785152 /* Sol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sol.png; sourceTree = "<group>"; };
+		2BAE045D19A24C5700785152 /* CrieMusicaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrieMusicaViewController.h; sourceTree = "<group>"; };
+		2BAE045E19A24C5700785152 /* CrieMusicaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrieMusicaViewController.m; sourceTree = "<group>"; };
+		2BAE045F19A24C5700785152 /* CrieMusicaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CrieMusicaViewController.xib; sourceTree = "<group>"; };
 		3F03108D1999D8F500570B8A /* EfeitoComponeteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoComponeteView.h; sourceTree = "<group>"; };
 		3F03108E1999D8F500570B8A /* EfeitoComponeteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoComponeteView.m; sourceTree = "<group>"; };
 		3F43A31A199C8AB20038D1E9 /* EstudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EstudioViewController.h; sourceTree = "<group>"; };
@@ -1106,6 +1132,8 @@
 				3F03108E1999D8F500570B8A /* EfeitoComponeteView.m */,
 				0B99B635199AAB4000F9A799 /* EfeitoNotaAnimada.h */,
 				0B99B636199AAB4000F9A799 /* EfeitoNotaAnimada.m */,
+				2BAE043F19A20D8C00785152 /* EfeitoFala.h */,
+				2BAE044019A20D8C00785152 /* EfeitoFala.m */,
 			);
 			name = Efeitos;
 			sourceTree = "<group>";
@@ -1157,6 +1185,15 @@
 		0BC10ABD199EA09E00BB6482 /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				2BAE044619A22AC900785152 /* Do.png */,
+				2BAE044719A22AC900785152 /* Fa.png */,
+				2BAE044819A22AC900785152 /* La.png */,
+				2BAE044919A22AC900785152 /* Mi.png */,
+				2BAE044A19A22AC900785152 /* Re.png */,
+				2BAE044B19A22AC900785152 /* Si.png */,
+				2BAE044C19A22AC900785152 /* Sol.png */,
+				2BAE044419A217C200785152 /* papelAntigo.jpg */,
+				2BAE044219A216B800785152 /* backPapel.jpg */,
 				0BC10ABE199EA09E00BB6482 /* alavanca.png */,
 				0BC10ABF199EA09E00BB6482 /* amplitudeVolume.jpg */,
 				0BC10AC0199EA09E00BB6482 /* animaIndio1.gif */,
@@ -1522,6 +1559,7 @@
 		2B64FA08196921C200BC57FD /* Aula3 */ = {
 			isa = PBXGroup;
 			children = (
+				2BAE045419A247B100785152 /* Game Partitura */,
 				0BC10AB3199E9FC500BB6482 /* Game Escada de Notas */,
 				2B64FA221969226F00BC57FD /* Mod2Aula3Exe1ViewController.h */,
 				2B64FA231969226F00BC57FD /* Mod2Aula3Exe1ViewController.m */,
@@ -1534,6 +1572,16 @@
 				2B64FA2E1969228500BC57FD /* Mod2Aula3Exe3ViewController.xib */,
 			);
 			name = Aula3;
+			sourceTree = "<group>";
+		};
+		2BAE045419A247B100785152 /* Game Partitura */ = {
+			isa = PBXGroup;
+			children = (
+				2BAE045D19A24C5700785152 /* CrieMusicaViewController.h */,
+				2BAE045E19A24C5700785152 /* CrieMusicaViewController.m */,
+				2BAE045F19A24C5700785152 /* CrieMusicaViewController.xib */,
+			);
+			name = "Game Partitura";
 			sourceTree = "<group>";
 		};
 		3F43A319199C8A8A0038D1E9 /* EstudioView */ = {
@@ -2244,6 +2292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BAE045119A22AC900785152 /* Re.png in Resources */,
 				3F608D66196C7585001979E9 /* mib2.caf in Resources */,
 				3F608DAC196C7585001979E9 /* ghost.xml in Resources */,
 				3F608D80196C7585001979E9 /* semicolcheia.png in Resources */,
@@ -2264,6 +2313,7 @@
 				0BC10BF8199EA09E00BB6482 /* roma.jpg in Resources */,
 				3F902CA5199DD8C800FDF84A /* pBackgroundHorizontal.png in Resources */,
 				0BC10B7B199EA09E00BB6482 /* bibliotecaBackground.jpg in Resources */,
+				2BAE044D19A22AC900785152 /* Do.png in Resources */,
 				0BC10BE4199EA09E00BB6482 /* pausaBloco.png in Resources */,
 				0BC10BFF199EA09E00BB6482 /* setaRetornaPagina.png in Resources */,
 				0BC10BAF199EA09E00BB6482 /* frequenciaViolino.jpg in Resources */,
@@ -2315,6 +2365,7 @@
 				0BC10C17199EA09E00BB6482 /* violaoTimbre.png in Resources */,
 				0BC10AB2199E9FC000BB6482 /* EscadaDeNotasViewController.xib in Resources */,
 				3F608DD2196C7585001979E9 /* P200 Piano C10.caf in Resources */,
+				2BAE045219A22AC900785152 /* Si.png in Resources */,
 				0BC10B82199EA09E00BB6482 /* cantoGregoriano.jpg in Resources */,
 				A84855921994137D00C5F0A3 /* coral.mp3 in Resources */,
 				0BC10BD8199EA09E00BB6482 /* notasDeMelodia.png in Resources */,
@@ -2351,8 +2402,10 @@
 				3F608D85196C7585001979E9 /* 2.png in Resources */,
 				3F608D75196C7585001979E9 /* dot.gif in Resources */,
 				3F608D5B196C7585001979E9 /* do1.caf in Resources */,
+				2BAE046119A24C5700785152 /* CrieMusicaViewController.xib in Resources */,
 				0BC10B85199EA09E00BB6482 /* Capoeiraframe3.gif in Resources */,
 				0BC10BEB199EA09E00BB6482 /* pianoclassico.png in Resources */,
+				2BAE045319A22AC900785152 /* Sol.png in Resources */,
 				0BC10BD2199EA09E00BB6482 /* notaColcheia.png in Resources */,
 				0BC10BB0199EA09E00BB6482 /* fundoPapiro.png in Resources */,
 				2B64FA3A196922A400BC57FD /* Mod2Aula4Exe2ViewController.xib in Resources */,
@@ -2362,6 +2415,7 @@
 				0BC10BDB199EA09E00BB6482 /* notaSemifusa.png in Resources */,
 				3F608D8B196C7585001979E9 /* notaCaraTocaSom.png in Resources */,
 				A848559D1994137D00C5F0A3 /* harmoniaPiano.wav in Resources */,
+				2BAE044519A217C200785152 /* papelAntigo.jpg in Resources */,
 				A848558A1994137D00C5F0A3 /* apito.wav in Resources */,
 				3F608D8F196C7585001979E9 /* semicolcheiaPausa.png in Resources */,
 				3F608D88196C7585001979E9 /* 5.png in Resources */,
@@ -2425,6 +2479,7 @@
 				3F608DD8196C7585001979E9 /* P200 Piano D5.caf in Resources */,
 				0BC10B89199EA09E00BB6482 /* carnavalframe2.gif in Resources */,
 				3F608DDD196C7585001979E9 /* P200 Piano F#5.caf in Resources */,
+				2BAE045019A22AC900785152 /* Mi.png in Resources */,
 				0BC10B8A199EA09E00BB6482 /* carnavalframe3.gif in Resources */,
 				3F608DAE196C7585001979E9 /* harry_potter_theme_song.xml in Resources */,
 				3FAD245A1973AD8200DEDFF8 /* Mod1Aula2Exe2ViewController.xib in Resources */,
@@ -2436,6 +2491,7 @@
 				3F608D64196C7585001979E9 /* la3.caf in Resources */,
 				3F608D67196C7585001979E9 /* mib3.caf in Resources */,
 				0BC10BFE199EA09E00BB6482 /* setaPraCima.png in Resources */,
+				2BAE044F19A22AC900785152 /* La.png in Resources */,
 				0BC10C15199EA09E00BB6482 /* vibracao.png in Resources */,
 				0BC10C0F199EA09E00BB6482 /* tocaTreco.png in Resources */,
 				0BC10BA3199EA09E00BB6482 /* escalaMusicalAntiga.jpg in Resources */,
@@ -2498,7 +2554,9 @@
 				3F608DB9196C7585001979E9 /* palmeiras.xml in Resources */,
 				3F608DDA196C7585001979E9 /* P200 Piano F#2.caf in Resources */,
 				0BC10C06199EA09E00BB6482 /* tartaruga.png in Resources */,
+				2BAE044E19A22AC900785152 /* Fa.png in Resources */,
 				2B64FA53196922D500BC57FD /* Mod2Aula4Exe7ViewController.xib in Resources */,
+				2BAE044319A216B800785152 /* backPapel.jpg in Resources */,
 				A84855A71994137D00C5F0A3 /* musicaMixaIntroducao.wav in Resources */,
 				A84855C0199416D100C5F0A3 /* TransicaoExercicioViewController.xib in Resources */,
 				0BC10C14199EA09E00BB6482 /* ventoPipa.png in Resources */,
@@ -2646,6 +2704,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B64FA251969226F00BC57FD /* Mod2Aula3Exe1ViewController.m in Sources */,
+				2BAE046019A24C5700785152 /* CrieMusicaViewController.m in Sources */,
 				2B64FA701969234700BC57FD /* Mod2Aula7Exe4ViewController.m in Sources */,
 				A8C3F0BC194B72A400E78899 /* MenuViewController.m in Sources */,
 				A83ED3D819520810006CB6A4 /* Mascote.m in Sources */,
@@ -2727,6 +2786,7 @@
 				3FADEE621998688C00352D2C /* EfeitoTransicao.m in Sources */,
 				3F608D97196C7585001979E9 /* LeitorPartituraXML.m in Sources */,
 				A83ED3E119520810006CB6A4 /* Topico.m in Sources */,
+				2BAE044119A20D8C00785152 /* EfeitoFala.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

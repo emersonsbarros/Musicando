@@ -868,6 +868,9 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
 //Jogo
 Exercicio *mod2Aula3Exe4 = [[Exercicio alloc] init:201 nome:@"Game Escada" nomeView:@"EscadaDeNotasViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
     
+//Jogo2
+    Exercicio *mod2Aula3Exe5 = [[Exercicio alloc] init:201 nome:@"Game Partitura" nomeView:@"CrieMusicaViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
     
 //Aula de Pentagrama
     Aula *mod2Aula3 = [[Aula alloc]init];
@@ -877,6 +880,8 @@ Exercicio *mod2Aula3Exe4 = [[Exercicio alloc] init:201 nome:@"Game Escada" nomeV
     [[mod2Aula3 listaDeExercicios]addObject: mod2Aula3Exe2];
     [[mod2Aula3 listaDeExercicios]addObject: mod2Aula3Exe3];
     [[mod2Aula3 listaDeExercicios]addObject: mod2Aula3Exe4];
+    [[mod2Aula3 listaDeExercicios]addObject: mod2Aula3Exe5];
+
 
 
 
@@ -1489,6 +1494,7 @@ Exercicio *mod2Aula3Exe4 = [[Exercicio alloc] init:201 nome:@"Game Escada" nomeV
     mod2Aula8.nome = @"Claves";
     mod2Aula8.capa = [UIImage imageNamed:@"aula.png"];
     [[mod2Aula8 listaDeExercicios]addObject: mod2Aula8Exe1];
+
     
     
 ///////////////////////////// Modulo Intermediario //////////////////////////////////

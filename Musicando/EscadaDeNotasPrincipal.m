@@ -18,21 +18,22 @@
         self.physicsWorld.contactDelegate = self;
         self.physicsWorld.gravity = CGVectorMake(0, GRAVIDADE_MUNDO);
         
-//        //Inicia zerado auxiliar para pausa, contadores de tempo e pontuação
-//        self.estadoPauseJogo = 0;
-//        self.tempoPercorrido = 0;
-//        self.auxTempoPercorrido = 0;
-//        self.pontuacaoJogadorAtual = 0;
-//        
-//        //Inicia com velocidade padrão do guindaste
-//        self.velocidadeGuindaste = 10;
-//        
+        //Inicia zerado auxiliar para pausa, contadores de tempo e pontuação
+        self.estadoPauseJogo = 0;
+        self.tempoPercorrido = 0;
+        self.auxTempoPercorrido = 0;
+        self.pontuacaoJogadorAtual = 0;
+        
         //Inicia lista de notas e indice para sorteio
-        self.listaDeNotas = [[NSArray alloc] initWithObjects: @"Dó", @"Ré", @"Mi", @"Fá", @"Sol", @"Lá", @"Si", nil];
+        self.listaDeNotasComPosicoes = [[NSMutableArray alloc] init];
+        self.listaDeNotas = [[NSArray alloc] initWithObjects: @"Do", @"Re", @"Mi", @"Fa", @"Sol", @"La", @"Si", nil];
         self.indiceNotaSorteada = 0;
+        [self sortearQuantidadeDeNotas];
         
         //Inicia primeiros nós
         [self carregarPrimeirosComponentes];
+        
+        
         activeDragNode = nil;
     }
     
@@ -43,34 +44,47 @@
 -(void)carregarPrimeirosComponentes{
     
     [self criaFundo];
-//    [self criaPiso];
-//    
-//    //[self criaGuindaste];
-//    [self criaTocaTreco];
+    [self criaNotasMusicais];
     [self criaPentagrama];
-    [self criaNotaMusical];
+    [self criaBotaoStarAndCheck];
     
-//    [self addChild: [self criarBotaoCairBloco]];
-//    
-//    
-//    //Configura as labels de pontuação
-//    self.stringDePontuacao = [[SKLabelNode alloc]init];
-//    self.stringDePontuacao.color = [UIColor blackColor];
-//    self.stringDePontuacao.fontSize = 25.0f;
-//    self.stringDePontuacao.position = CGPointMake(80, 500);
-//    self.stringDePontuacao.zPosition = 2;
-//    self.stringDePontuacao.text = @"Pontuação: ";
-//    self.stringDePontuacao.fontName = @"Marker Felt Thin";
-//    [self addChild: self.stringDePontuacao];
-//    
-//    self.labelDePontuacao = [[SKLabelNode alloc]init];
-//    self.labelDePontuacao.color = [UIColor blackColor];
-//    self.labelDePontuacao.fontSize = 25.0f;
-//    self.labelDePontuacao.position = CGPointMake(160, 500);
-//    self.labelDePontuacao.zPosition = 2;
-//    self.labelDePontuacao.text = @"0";
-//    self.labelDePontuacao.fontName = @"Marker Felt Thin";
-//    [self addChild: self.labelDePontuacao];
+    
+//Configura as labels de pontuação
+    self.stringDePontuacao = [[SKLabelNode alloc]init];
+    self.stringDePontuacao.color = [UIColor blackColor];
+    self.stringDePontuacao.fontSize = 25.0f;
+    self.stringDePontuacao.position = CGPointMake(80, 500);
+    self.stringDePontuacao.zPosition = 2;
+    self.stringDePontuacao.text = @"Pontuação: ";
+    self.stringDePontuacao.fontName = @"Marker Felt Thin";
+    [self addChild: self.stringDePontuacao];
+    
+    self.labelDePontuacao = [[SKLabelNode alloc]init];
+    self.labelDePontuacao.color = [UIColor blackColor];
+    self.labelDePontuacao.fontSize = 25.0f;
+    self.labelDePontuacao.position = CGPointMake(160, 500);
+    self.labelDePontuacao.zPosition = 2;
+    self.labelDePontuacao.text = @"0";
+    self.labelDePontuacao.fontName = @"Marker Felt Thin";
+    [self addChild: self.labelDePontuacao];
+    
+    self.stringDeTempo = [[SKLabelNode alloc]init];
+    self.stringDeTempo.color = [UIColor blackColor];
+    self.stringDeTempo.fontSize = 25.0f;
+    self.stringDeTempo.position = CGPointMake(160, 500);
+    self.stringDeTempo.zPosition = 2;
+    self.stringDeTempo.text = @"Tempo";
+    self.stringDeTempo.fontName = @"Marker Felt Thin";
+    [self addChild: self.stringDeTempo];
+    
+    self.labelDeTempo = [[SKLabelNode alloc]init];
+    self.labelDeTempo.color = [UIColor blackColor];
+    self.labelDeTempo.fontSize = 25.0f;
+    self.labelDeTempo.position = CGPointMake(160, 500);
+    self.labelDeTempo.zPosition = 2;
+    self.labelDeTempo.text = [NSString stringWithFormat: @"%d", self.tempoPercorrido];
+    self.labelDeTempo.fontName = @"Marker Felt Thin";
+    [self addChild: self.labelDeTempo];
     
 }
 
@@ -80,118 +94,17 @@
 /////////////////////////////////////////////////////// UPDATE DO TEMPO ////////////////////////////////////////////////////////
 
 -(void)update:(CFTimeInterval)currentTime{
-    //Condicao para calcular distancia percorrida
     
-//    if(self.estadoPauseJogo == 0 ){
-    
-        //        if(self.tempoPassaroBonus == 0){
-        //            self.verfificaBotaoFly = false;
-        //            buttonDownNode.hidden = NO;
-        //            buttonUpNode.hidden = NO;
-        //            buttonMagic.hidden = YES;
-        //            [self heroRun];
-        //            self.man.physicsBody.density = 0.2f;
-        //            [self.man.physicsBody applyForce:CGVectorMake(0, 50)];
-        //            self.tempoPassaroBonus +=1;
-        //        }
-        //
-        //        if(self.verfificaBotaoFly == true){
-        //            if (self.tempoPassaraoAux % 40 == 0) {
-        //                if(self.tempoPassaroBonus >0){
-        //                    self.tempoPassaroBonus -=1;
-        //                    self.tempoPassaraoAux = 0;
-        //                }
-        //            }
-        //        }
-        
-        //        if(self.tempoPassaroBonus >= 10){
-        //            buttonMagic.hidden = NO;
-        //        }
-        
-//        self.auxTempoPercorrido += 1;
-//        //self.tempoPassaraoAux +=1;
-//        
-//        
-//        //CHAMA VARIACOES COM A VELOCIDADE ACIMA DE 40M
-//        if(self.auxTempoPercorrido > 40){
-//            
-//            self.tempoPercorrido += 1;
-//            self.auxTempoPercorrido = 0;
-    
-            //self.textoDistancia.text = [NSString stringWithFormat:@"%d", self.tempoPercorrido];
-            //self.tempoFly.text = [NSString stringWithFormat:@"%d", self.tempoPassaroBonus];
-            //self.numMagia.text = [NSString stringWithFormat:@"%d", self.qtdPower];
+    if (self.estadoPauseJogo == 0) {
+        self.auxTempoPercorrido+=1;
+
+        if (self.auxTempoPercorrido == 30 && self.tempoPercorrido == 20) {
+            self.tempoPercorrido -=1;
+            self.labelDeTempo.text = [NSString stringWithFormat: @"%d", self.tempoPercorrido];
             
-//            //Controla a velocidade dos monstros
-//            if(self.tempoPercorrido % 30 == 0){
-//                if(self.velocidadeGuindaste > 1){
-//                    self.velocidadeGuindaste -= 0.10;
-//                }
-//            }
-    
-            //AUMENTA PODER
-            //            if(self.tempoPercorrido % 30 == 0){
-            //                self.qtdPower = self.qtdPower + 1;
-            //            }
-            //
-            //            //CRIA MURO E segura o pulo maior por 3 segundos
-            //            if(self.tempoPercorrido %50 == 0){
-            //                self.nivelMosntro = true;
-            //                [self criaMuro];
-            //                [NSTimer scheduledTimerWithTimeInterval:0.0 target:self selector:@selector(tiraMuroMonstroNivel1e2) userInfo:nil repeats:NO];
-            //
-            //            }
-            
-            //CRIA BURACO
-            //            if(self.tempoPercorrido %13 == 0){
-            //                [self criaBuraco];
-            //            }
-            
-            //            //AUMENTA BONUS PASSARO
-            //            if(self.tempoPercorrido %35 == 0){
-            //                self.tempoPassaroBonus += 10;
-            //            }
-            
-            //SE BATE RECORDE CHAMA ANIMACAO ESPECIAL
-            //            if(self.verificaBateRecorde != true){
-            //                [self configurarRanking];
-            //                //Aparece Toasty
-            //                if (self.pontuacaoJogadorAtual > self.pontuacaoJogadorNoRanking){
-            //                    [self apareceToasty];
-            //                    self.verificaBateRecorde = true;
-            //                }
-            //            }
-            
-            //CHAMA OS MONSTROS ALEATORIAMENTE
-            //            if(self.tempoPercorrido % 7 == 0){
-            //                self.sorteaMonstro = arc4random()%2;
-            //
-            //                if(self.nivelMosntro == false) {
-            //                    switch (self.sorteaMonstro) {
-            //                        case 0:
-            //                            [self criaMorte];
-            //                            break;
-            //
-            //                        case 1:
-            //                            [self criaDragao];
-            //                            break;
-            //                    }
-            //                }else{
-            //                    switch (self.sorteaMonstro) {
-            //                        case 0:
-            //                            [self criaMaicon];
-            //                            break;
-            //
-            //                        case 1:
-            //                            [self criaGargula];
-            //                            break;
-            //                    }
-            //                }
-//        }
-//        
-//    }
-//    
-    
+            self.auxTempoPercorrido = 0;
+        }
+    }    
     
 }
 
@@ -223,25 +136,9 @@
             //NOTAS CERTAS
             if([self.notaMusicalPrincipal.name isEqualToString:@"Dó"]){
                 
-                NSLog(@"Colidiu nota na linha");
-//
-//                //Remove os blocos da view
-//                [blocoNota removeAllChildren];
-//                [blocoNota removeFromParent];
-//                
-//                //Adiciona pontuação
-//                self.pontuacaoJogadorAtual += 10;
-//                self.labelDePontuacao.text = [NSString stringWithFormat: @"%i", self.pontuacaoJogadorAtual];
-//                
-//                //Aguarda alguns segundos até criar um novo
-//                [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(criaBlocoNotaMusical) userInfo:nil repeats:NO];
-//                [[self botaoCairNota] setAlpha: 1];
-                
                 //NOTAS ERRADAS
             }else if([self.notaMusicalPrincipal.name isEqualToString:@"Dó"]){
                 
-//                NSLog(@"Colidiu nota errada com tocatreco - %@", blocoNota.name);
-
             }
             //COLISAO NO CHÃO
         }else{
@@ -250,15 +147,11 @@
                 
                 //NOTAS CERTAS
                 }if([self.notaMusicalPrincipal.name isEqualToString:@"Dó"]){
-                
-                    NSLog(@"Colidiu nota no espaço");
-                
+                    
                 
                 //NOTAS ERRADAS
                 }else if([self.notaMusicalPrincipal.name isEqualToString:@"Dó"]){
-                
-//                    NSLog(@"Colidiu com o chão nota errada - %@", blocoNota.name);
-            
+                    
                 }
         }
         
@@ -276,14 +169,99 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     UITouch *touch = [touches anyObject];
-    // Identify where this touch is on the scene
     CGPoint scenePosition = [touch locationInNode: self];
-    // Find the child node that contains this touch
-    SKNode* checkNode = [self nodeAtPoint:scenePosition];
-    // Make sure it is a player ship and not another node like the parent SKScene
-    if (checkNode && [checkNode.name isEqual:@"Dó"]) {
+    SKNode* checkNode = [self nodeAtPoint: scenePosition];
+    
+    //ATIVA MOVIMENTO NO NÓ DE NOTA
+    if (checkNode && ([checkNode.name isEqual:@"Do"] || [checkNode.name isEqual:@"Re"] || [checkNode.name isEqual:@"Mi"] || [checkNode.name isEqual:@"Fa"] || [checkNode.name isEqual:@"Sol"] || [checkNode.name isEqual:@"La"] || [checkNode.name isEqual:@"Si"])) {
         activeDragNode = (SKSpriteNode*)checkNode;
     }
+    
+    //START
+    if ([checkNode.name isEqualToString: @"start"]) {
+        self.tempoPercorrido = 20;
+        checkNode.name = @"check";
+    }
+    
+    //CHECK
+    if ([checkNode.name isEqualToString: @"check"]) {
+        
+        
+        for (SKSpriteNode *nota in self.listaDeNotasComPosicoes) {
+            
+            NSLog(@"%@", nota.name);
+            
+            //1a LINHA SUPLEMENTAR
+            if ([nota.name isEqualToString: @"Do"]) {
+                NSLog(@"%f", nota.position.y);
+                if (nota.position.y > 100 && nota.position.y < 100) {
+                    NSLog(@"Do errado");
+                }
+            }
+            
+            //1o ESPACO SUPLEMENTAR
+            if ([nota.name isEqualToString: @"Re"]) {
+                if (nota.position.y > 100 && nota.position.y < 100) {
+                    NSLog(@"Re errado");
+
+                }
+            }
+            
+            //1a LINHA
+            if ([nota.name isEqualToString: @"Mi"]) {
+                NSLog(@"%f", nota.position.y);
+                if (nota.position.y >= 500 && nota.position.y <= 510) {
+                    NSLog(@"Mi certo");
+
+                }
+            }
+            
+            //1o ESPACO
+            if ([nota.name isEqualToString: @"Fa"]) {
+                NSLog(@"%f", nota.position.y);
+                if (nota.position.y >= 475 && nota.position.y <= 495) {
+                    NSLog(@"FA certo");
+
+                }
+            }
+            
+            //2a LINHA
+            if ([nota.name isEqualToString: @"Sol"]) {
+                NSLog(@"%f", nota.position.y);
+                if (nota.position.y >= 450 && nota.position.y <= 460) {
+                    NSLog(@"SOL certo");
+
+                }
+            }
+            
+            //2o ESPACO
+            if ([nota.name isEqualToString: @"La"]) {
+                NSLog(@"%f", nota.position.y);
+
+                if (nota.position.y >= 425 && nota.position.y <= 465) {
+                    NSLog(@"LA certo");
+
+                }
+            }
+            
+            //3a LINHA
+            if ([nota.name isEqualToString: @"Si"]) {
+                NSLog(@"%f", nota.position.y);
+
+                if (nota.position.y >= 400 && nota.position.y <= 410) {
+                    NSLog(@"SI certo");
+
+                }
+            }
+            
+            
+        }
+        
+        
+    }
+    
+    
+    
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -362,8 +340,8 @@
     fundo.position  = CGPointMake(512, 384);
     
     //Cria textura
-    //SKTexture *texturaFundoPrincipal = [SKTexture textureWithImageNamed: @"backPapel.png"];
-    self.fundoPrincipal = [SKSpriteNode spriteNodeWithColor:[UIColor whiteColor] size: CGSizeMake(1024, 768)];
+    SKTexture *texturaFundoPrincipal = [SKTexture textureWithImageNamed: @"papelAntigo.jpg"];
+    self.fundoPrincipal = [SKSpriteNode spriteNodeWithTexture:texturaFundoPrincipal size: CGSizeMake(1024, 768)];
     fundo.zPosition = -5;
     
     //Adiciona a textura ao nó e o nó a cena
@@ -371,37 +349,52 @@
     [self addChild: fundo];
 }
 
+-(void)sortearQuantidadeDeNotas{
+    self.quantidadeDeNotas = arc4random() % 4 + 1;
+}
 
 //NOTA MUSICAL
--(void)criaNotaMusical{
+-(void)criaNotasMusicais{
     
-    //Aloca, seta nome e posição do nó
-    notaMusical = [[SKNode alloc]init];
-    notaMusical.name = @"Nota";
-    notaMusical.position = CGPointMake(512, 700);
-    notaMusical.zPosition = 2;
+    int auxiliarPosicaoX = 200;
+
+    for (int i = 0; i < self.quantidadeDeNotas; i++) {
+        
+        notaMusical = [[SKNode alloc] init];
+        notaMusical.zPosition = 2;
+        
+        //Seta nome sorteado
+        self.indiceNotaSorteada = arc4random() % 7;
+        
+        _notaMusicalPrincipal = [[SKSpriteNode alloc] init];
+        _notaMusicalPrincipal.position = CGPointMake(auxiliarPosicaoX, 700);
+        _notaMusicalPrincipal.name = [self.listaDeNotas objectAtIndex: self.indiceNotaSorteada];
+        SKTexture *texturaNota = [SKTexture textureWithImageNamed: [NSString stringWithFormat: @"%@.png", _notaMusicalPrincipal.name]];
+
+        _notaMusicalPrincipal.texture = texturaNota;
+        _notaMusicalPrincipal.size = CGSizeMake(50, 60);
+        
+        //Cria o corpo físico do bloco
+        self.notaMusicalPrincipal.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(50, 60)];
+        self.notaMusicalPrincipal.physicsBody.dynamic = YES;
+        self.notaMusicalPrincipal.physicsBody.affectedByGravity = NO;
+        self.notaMusicalPrincipal.physicsBody.density = 0.2f;
+        self.notaMusicalPrincipal.physicsBody.usesPreciseCollisionDetection = YES;
+        self.notaMusicalPrincipal.physicsBody.restitution = 0;
+        
+        self.notaMusicalPrincipal.physicsBody.categoryBitMask = nota;
+        self.notaMusicalPrincipal.physicsBody.collisionBitMask = ~espaco | ~linha;
+        self.notaMusicalPrincipal.physicsBody.contactTestBitMask = piso | linha | espaco;
+        
+        //Adiciona a textura ao nó e o nó a cena
+        [notaMusical addChild: self.notaMusicalPrincipal];
+        [self addChild: notaMusical];
+        
+        [_listaDeNotasComPosicoes addObject: self.notaMusicalPrincipal];
+        
+        auxiliarPosicaoX+=20;
+    }
     
-    //Cria textura
-    SKTexture *texturaNota = [SKTexture textureWithImageNamed: @"faBloco.png"];
-    self.notaMusicalPrincipal = [SKSpriteNode spriteNodeWithTexture: texturaNota size: CGSizeMake(50, 50)];
-    self.notaMusicalPrincipal.name = @"Dó";
-    
-    
-    //Cria o corpo físico do bloco
-    self.notaMusicalPrincipal.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(120, 122)];
-    self.notaMusicalPrincipal.physicsBody.dynamic = YES;
-    self.notaMusicalPrincipal.physicsBody.affectedByGravity = NO;
-    self.notaMusicalPrincipal.physicsBody.density = 0.2f;
-    self.notaMusicalPrincipal.physicsBody.usesPreciseCollisionDetection = YES;
-    self.notaMusicalPrincipal.physicsBody.restitution = 0;
-    
-    self.notaMusicalPrincipal.physicsBody.categoryBitMask = nota;
-    self.notaMusicalPrincipal.physicsBody.collisionBitMask = ~espaco | ~linha;
-    self.notaMusicalPrincipal.physicsBody.contactTestBitMask = piso | linha | espaco;
-    
-    //Adiciona a textura ao nó e o nó a cena
-    [notaMusical addChild: self.notaMusicalPrincipal];
-    [self addChild: notaMusical];
 }
 
 
@@ -497,7 +490,16 @@
     //[self addChild: pentagrama];
 }
 
-
+- (void)criaBotaoStarAndCheck{
+    
+    _botaoStartAndChek = [SKSpriteNode spriteNodeWithImageNamed:@"buttonMagic.png"];
+    _botaoStartAndChek.position = CGPointMake(50, 380);
+    _botaoStartAndChek.size = CGSizeMake(50, 50);
+    _botaoStartAndChek.name = @"start";
+    _botaoStartAndChek.zPosition = +5.0;
+    
+    [self addChild: _botaoStartAndChek];
+}
 
 
 @end
