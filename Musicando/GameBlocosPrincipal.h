@@ -7,7 +7,6 @@
 //
 #import <AVFoundation/AVFoundation.h>
 #import <SpriteKit/SpriteKit.h>
-#import "GameOver.h"
 
 //Constantes para colisão
 static const UInt32 blocoNotaCorreta = 0x1 << 0;
@@ -28,6 +27,8 @@ static const UInt32 tocaTrecoCategoria = 0x1 << 3;
     SKNode *tocaTreco;
     SKNode *corpoParaColisaoDoTocaTreco;
     SKNode *blocoNota;
+    
+    SKNode *botaoCair;
 }
 
 //Sprite Nodes
@@ -59,7 +60,6 @@ static const UInt32 tocaTrecoCategoria = 0x1 << 3;
 -(void)carregarPrimeirosComponentes;
 
 -(void)criaBlocoNotaMusical;
-- (SKSpriteNode *)criarBotaoCairBloco;
 
 -(void)criaGuindaste;
 -(void)criaTocaTreco;

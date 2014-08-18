@@ -46,16 +46,15 @@
     [self criaFundo];
     [self criaPiso];
 
-    //[self criaGuindaste];
+    [self cairNota];
     [self criaTocaTreco];
     [self criaBlocoNotaMusical];
 
-    [self addChild: [self criarBotaoCairBloco]];
     
 
 //Configura as labels de pontuação
     self.stringDePontuacao = [[SKLabelNode alloc]init];
-    self.stringDePontuacao.fontColor = [UIColor redColor];
+    self.stringDePontuacao.fontColor = [UIColor blackColor];
     self.stringDePontuacao.fontSize = 40.0f;
     self.stringDePontuacao.position = CGPointMake(120, 670);
     self.stringDePontuacao.zPosition = 2;
@@ -74,9 +73,9 @@
     
     //Adiciona a nota e sua label o nome sorteado
     self.nomeDaNota = [[SKLabelNode alloc]init];
-    self.nomeDaNota.fontColor = [UIColor redColor];
+    self.nomeDaNota.fontColor = [UIColor blackColor];
     self.nomeDaNota.fontSize = 40.0f;
-    self.nomeDaNota.position = CGPointMake(90, 720);
+    self.nomeDaNota.position = CGPointMake(100, 720);
     self.nomeDaNota.zPosition = 2;
     self.nomeDaNota.fontName = @"Marker Felt Thin";
     //Adiciona a nota e sua label o nome sorteado
@@ -224,6 +223,7 @@
     SKNode *node = [self nodeAtPoint: location];
     
     //Botão cair bloco
+
     if ([node.name isEqualToString:@"cairNota"]) {
         [self adionarFisicaAoBlocoMusical];
         [[self botaoCairNota] setAlpha: 0];
@@ -356,11 +356,11 @@
     tocaTreco = [[SKNode alloc]init];
     tocaTreco.name = @"TocaTreco";
     tocaTreco.position = CGPointMake(530, 100);
-    tocaTreco.zPosition = 10;
+    tocaTreco.zPosition = 4;
     
     //Cria testura do guindaste
     SKTexture *texturaTocaTreco = [SKTexture textureWithImageNamed: @"bocaDoTocaTreco.png"];
-    self.tocaTrecoPrincipal = [SKSpriteNode spriteNodeWithTexture: texturaTocaTreco size: CGSizeMake(840, 200)];
+    self.tocaTrecoPrincipal = [SKSpriteNode spriteNodeWithTexture: texturaTocaTreco size: CGSizeMake(840, 400)];
     
     [tocaTreco addChild: self.tocaTrecoPrincipal];
     [self addChild: tocaTreco];
@@ -374,12 +374,12 @@
     //Aloca, seta nome e tamanho do nó
     blocoNota = [[SKNode alloc]init];
     blocoNota.name = @"Nota";
-    blocoNota.position = CGPointMake(512, 700);
+    blocoNota.position = CGPointMake(512, 600);
     blocoNota.zPosition = 3;
 
         //Cria testura do guindaste
     SKTexture *texturaNota = [SKTexture textureWithImageNamed: @"siBloco.png"];
-    self.blocoNotaPrincipal = [SKSpriteNode spriteNodeWithTexture: texturaNota size: CGSizeMake(100, 100)];
+    self.blocoNotaPrincipal = [SKSpriteNode spriteNodeWithTexture: texturaNota size: CGSizeMake(120, 112)];
     self.blocoNotaPrincipal.zPosition = 3;
     
     [self acaoMoverDireitaEsquerda: blocoNota :self.velocidadeGuindaste];
@@ -433,16 +433,16 @@
 
 /////////////////////////////////////////////////////// BOTÕES ////////////////////////////////////////////////////////
 
-- (SKSpriteNode *)criarBotaoCairBloco{
+-(void)cairNota{
     
-    //Cria e seta configurações do botão
-    _botaoCairNota = [SKSpriteNode spriteNodeWithImageNamed:@"buttonMagic.png"];
-    _botaoCairNota.position = CGPointMake(160,330);
-    _botaoCairNota.size = CGSizeMake(50,50);
-    _botaoCairNota.name = @"cairNota";
-    _botaoCairNota.zPosition = +5.0;
+    self.botaoCairNota = [[SKSpriteNode alloc] init];
+    self.botaoCairNota = [SKSpriteNode spriteNodeWithImageNamed:@"buttonMagic.png"];
+    self.botaoCairNota.name = @"cairNota";
+    self.botaoCairNota.position = CGPointMake(900, 100);
+    self.botaoCairNota.size = CGSizeMake(100, 100);
+    self.botaoCairNota.zPosition = 10;
     
-    return _botaoCairNota;
+    [self addChild: self.botaoCairNota];
 }
 
 
@@ -453,7 +453,7 @@
 -(void)acaoMoverDireitaEsquerda: (SKNode*)node :(int)duracao{
     
     //Antigos: 212 - 812
-    SKAction *moverPraEsquerda = [SKAction moveTo: CGPointMake(312, node.position.y) duration: duracao];
+    SKAction *moverPraEsquerda = [SKAction moveTo: CGPointMake(112, node.position.y) duration: duracao];
     SKAction *moverPraDireita = [SKAction moveTo: CGPointMake(912, node.position.y) duration: duracao];
     SKAction *movimentoCompleto = [SKAction sequence: @[moverPraEsquerda, moverPraDireita]];
     

@@ -34,7 +34,6 @@
 		0BC10B79199EA09E00BB6482 /* batidasDoCoracao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0BC10ACB199EA09E00BB6482 /* batidasDoCoracao.jpg */; };
 		0BC10B7A199EA09E00BB6482 /* biblioteca.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BC10ACC199EA09E00BB6482 /* biblioteca.png */; };
 		0BC10B7B199EA09E00BB6482 /* bibliotecaBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0BC10ACD199EA09E00BB6482 /* bibliotecaBackground.jpg */; };
-		0BC10B7C199EA09E00BB6482 /* bocaDoTocaTreco.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BC10ACE199EA09E00BB6482 /* bocaDoTocaTreco.png */; };
 		0BC10B7D199EA09E00BB6482 /* bolaNota.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BC10ACF199EA09E00BB6482 /* bolaNota.png */; };
 		0BC10B7E199EA09E00BB6482 /* bolaPausa.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BC10AD0199EA09E00BB6482 /* bolaPausa.png */; };
 		0BC10B7F199EA09E00BB6482 /* bolaSom.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BC10AD1199EA09E00BB6482 /* bolaSom.png */; };
@@ -481,6 +480,7 @@
 		A84855BB1994146500C5F0A3 /* LeituraPartituraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A84855B91994146500C5F0A3 /* LeituraPartituraViewController.m */; };
 		A84855BF199416D100C5F0A3 /* TransicaoExercicioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A84855BD199416D100C5F0A3 /* TransicaoExercicioViewController.m */; };
 		A84855C0199416D100C5F0A3 /* TransicaoExercicioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84855BE199416D100C5F0A3 /* TransicaoExercicioViewController.xib */; };
+		A85FDE5A19A28447006C12E5 /* bocaDoTocaTreco.png in Resources */ = {isa = PBXBuildFile; fileRef = A85FDE5919A28447006C12E5 /* bocaDoTocaTreco.png */; };
 		A8C3F0A3194B72A400E78899 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C3F0A2194B72A400E78899 /* Foundation.framework */; };
 		A8C3F0A5194B72A400E78899 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C3F0A4194B72A400E78899 /* CoreGraphics.framework */; };
 		A8C3F0A7194B72A400E78899 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C3F0A6194B72A400E78899 /* UIKit.framework */; };
@@ -544,7 +544,6 @@
 		0BC10ACB199EA09E00BB6482 /* batidasDoCoracao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = batidasDoCoracao.jpg; sourceTree = "<group>"; };
 		0BC10ACC199EA09E00BB6482 /* biblioteca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = biblioteca.png; sourceTree = "<group>"; };
 		0BC10ACD199EA09E00BB6482 /* bibliotecaBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bibliotecaBackground.jpg; sourceTree = "<group>"; };
-		0BC10ACE199EA09E00BB6482 /* bocaDoTocaTreco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bocaDoTocaTreco.png; sourceTree = "<group>"; };
 		0BC10ACF199EA09E00BB6482 /* bolaNota.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bolaNota.png; sourceTree = "<group>"; };
 		0BC10AD0199EA09E00BB6482 /* bolaPausa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bolaPausa.png; sourceTree = "<group>"; };
 		0BC10AD1199EA09E00BB6482 /* bolaSom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bolaSom.png; sourceTree = "<group>"; };
@@ -1064,6 +1063,7 @@
 		A84855BC199416D100C5F0A3 /* TransicaoExercicioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransicaoExercicioViewController.h; sourceTree = "<group>"; };
 		A84855BD199416D100C5F0A3 /* TransicaoExercicioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransicaoExercicioViewController.m; sourceTree = "<group>"; };
 		A84855BE199416D100C5F0A3 /* TransicaoExercicioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransicaoExercicioViewController.xib; sourceTree = "<group>"; };
+		A85FDE5919A28447006C12E5 /* bocaDoTocaTreco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bocaDoTocaTreco.png; sourceTree = "<group>"; };
 		A8C3F09F194B72A400E78899 /* Musicando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musicando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C3F0A2194B72A400E78899 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A8C3F0A4194B72A400E78899 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1186,6 +1186,7 @@
 				2BAE044619A22AC900785152 /* Do.png */,
 				2BAE044719A22AC900785152 /* Fa.png */,
 				2BAE044819A22AC900785152 /* La.png */,
+				A85FDE5919A28447006C12E5 /* bocaDoTocaTreco.png */,
 				2BAE044919A22AC900785152 /* Mi.png */,
 				2BAE044A19A22AC900785152 /* Re.png */,
 				2BAE044B19A22AC900785152 /* Si.png */,
@@ -1208,7 +1209,6 @@
 				0BC10ACB199EA09E00BB6482 /* batidasDoCoracao.jpg */,
 				0BC10ACC199EA09E00BB6482 /* biblioteca.png */,
 				0BC10ACD199EA09E00BB6482 /* bibliotecaBackground.jpg */,
-				0BC10ACE199EA09E00BB6482 /* bocaDoTocaTreco.png */,
 				0BC10ACF199EA09E00BB6482 /* bolaNota.png */,
 				0BC10AD0199EA09E00BB6482 /* bolaPausa.png */,
 				0BC10AD1199EA09E00BB6482 /* bolaSom.png */,
@@ -2611,7 +2611,7 @@
 				3F608DB4196C7585001979E9 /* Mozart-Marcha Turca.xml in Resources */,
 				0BC10B6F199EA09E00BB6482 /* animaIndio2.gif in Resources */,
 				3F608D5C196C7585001979E9 /* do2.caf in Resources */,
-				0BC10B7C199EA09E00BB6482 /* bocaDoTocaTreco.png in Resources */,
+				A85FDE5A19A28447006C12E5 /* bocaDoTocaTreco.png in Resources */,
 				0BC10BAD199EA09E00BB6482 /* frequenciaFlauta.jpg in Resources */,
 				0BC10B7F199EA09E00BB6482 /* bolaSom.png in Resources */,
 				A84855981994137D00C5F0A3 /* fa3F.wav in Resources */,
