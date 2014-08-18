@@ -168,6 +168,8 @@
             }else if([blocoNota.name isEqualToString:@"Dor"] || [blocoNota.name isEqualToString:@"Rir"] || [blocoNota.name isEqualToString:@"Mou"] || [blocoNota.name isEqualToString:@"Fê"] || [blocoNota.name isEqualToString:@"Sou"] || [blocoNota.name isEqualToString:@"Lú"] || [blocoNota.name isEqualToString:@"Sir"]){
                 
                 NSLog(@"Colidiu nota errada com tocatreco - %@", blocoNota.name);
+                NSLog(@"Chama cena de GameOver!");
+
             }
 //COLISAO NO CHÃO
         }else{
@@ -184,6 +186,7 @@
                 }else if([blocoNota.name isEqualToString:@"Dor"] || [blocoNota.name isEqualToString:@"Rir"] || [blocoNota.name isEqualToString:@"Mou"] || [blocoNota.name isEqualToString:@"Fê"] || [blocoNota.name isEqualToString:@"Sou"] || [blocoNota.name isEqualToString:@"Lú"] || [blocoNota.name isEqualToString:@"Sir"]){
                 
                     NSLog(@"Colidiu com o chão nota errada - %@", blocoNota.name);
+                    NSLog(@"Chama cena de GameOver!");
 
                     if (blocoNota.position.y > piso.position.y+50) {
 
@@ -480,5 +483,11 @@
     }
     return animationSheet;
 }
+
+//-(void)gameOver{
+//    GameOver *over = [[GameOver alloc]initWithSize:CGSizeMake(384,512)];
+//    SKTransition *animate = [SKTransition fadeWithDuration:1.0f];
+//    [self.view presentScene: over transition:animate];
+//}
 
 @end

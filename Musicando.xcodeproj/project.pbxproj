@@ -264,8 +264,7 @@
 		2BAE045119A22AC900785152 /* Re.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE044A19A22AC900785152 /* Re.png */; };
 		2BAE045219A22AC900785152 /* Si.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE044B19A22AC900785152 /* Si.png */; };
 		2BAE045319A22AC900785152 /* Sol.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE044C19A22AC900785152 /* Sol.png */; };
-		2BAE046019A24C5700785152 /* CrieMusicaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE045E19A24C5700785152 /* CrieMusicaViewController.m */; };
-		2BAE046119A24C5700785152 /* CrieMusicaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE045F19A24C5700785152 /* CrieMusicaViewController.xib */; };
+		2BAE046519A2524C00785152 /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE046319A2524C00785152 /* GameOver.m */; };
 		3F03108F1999D8F500570B8A /* EfeitoComponeteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F03108E1999D8F500570B8A /* EfeitoComponeteView.m */; };
 		3F43A31C199C8AB20038D1E9 /* EstudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43A31B199C8AB20038D1E9 /* EstudioViewController.m */; };
 		3F608CA1196C5B7D001979E9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F608CA0196C5B7D001979E9 /* AudioToolbox.framework */; };
@@ -807,9 +806,8 @@
 		2BAE044A19A22AC900785152 /* Re.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Re.png; sourceTree = "<group>"; };
 		2BAE044B19A22AC900785152 /* Si.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Si.png; sourceTree = "<group>"; };
 		2BAE044C19A22AC900785152 /* Sol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sol.png; sourceTree = "<group>"; };
-		2BAE045D19A24C5700785152 /* CrieMusicaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrieMusicaViewController.h; sourceTree = "<group>"; };
-		2BAE045E19A24C5700785152 /* CrieMusicaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrieMusicaViewController.m; sourceTree = "<group>"; };
-		2BAE045F19A24C5700785152 /* CrieMusicaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CrieMusicaViewController.xib; sourceTree = "<group>"; };
+		2BAE046319A2524C00785152 /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
+		2BAE046419A2524C00785152 /* GameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOver.h; sourceTree = "<group>"; };
 		3F03108D1999D8F500570B8A /* EfeitoComponeteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoComponeteView.h; sourceTree = "<group>"; };
 		3F03108E1999D8F500570B8A /* EfeitoComponeteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoComponeteView.m; sourceTree = "<group>"; };
 		3F43A31A199C8AB20038D1E9 /* EstudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EstudioViewController.h; sourceTree = "<group>"; };
@@ -1446,7 +1444,6 @@
 		2B64FA011969217300BC57FD /* Aula1 */ = {
 			isa = PBXGroup;
 			children = (
-				0BC10ABC199E9FE200BB6482 /* Game Notas */,
 				2B64FA091969220C00BC57FD /* Mod2Aula1Exe1ViewController.h */,
 				2B64FA0A1969220C00BC57FD /* Mod2Aula1Exe1ViewController.m */,
 				2B64FA0B1969220C00BC57FD /* Mod2Aula1Exe1ViewController.xib */,
@@ -1559,8 +1556,6 @@
 		2B64FA08196921C200BC57FD /* Aula3 */ = {
 			isa = PBXGroup;
 			children = (
-				2BAE045419A247B100785152 /* Game Partitura */,
-				0BC10AB3199E9FC500BB6482 /* Game Escada de Notas */,
 				2B64FA221969226F00BC57FD /* Mod2Aula3Exe1ViewController.h */,
 				2B64FA231969226F00BC57FD /* Mod2Aula3Exe1ViewController.m */,
 				2B64FA241969226F00BC57FD /* Mod2Aula3Exe1ViewController.xib */,
@@ -1574,14 +1569,15 @@
 			name = Aula3;
 			sourceTree = "<group>";
 		};
-		2BAE045419A247B100785152 /* Game Partitura */ = {
+		2BAE046219A2524200785152 /* Jogos */ = {
 			isa = PBXGroup;
 			children = (
-				2BAE045D19A24C5700785152 /* CrieMusicaViewController.h */,
-				2BAE045E19A24C5700785152 /* CrieMusicaViewController.m */,
-				2BAE045F19A24C5700785152 /* CrieMusicaViewController.xib */,
+				0BC10AB3199E9FC500BB6482 /* Game Escada de Notas */,
+				0BC10ABC199E9FE200BB6482 /* Game Notas */,
+				2BAE046319A2524C00785152 /* GameOver.m */,
+				2BAE046419A2524C00785152 /* GameOver.h */,
 			);
-			name = "Game Partitura";
+			name = Jogos;
 			sourceTree = "<group>";
 		};
 		3F43A319199C8A8A0038D1E9 /* EstudioView */ = {
@@ -2029,6 +2025,7 @@
 		3FD7EA3A19529661005F089A /* Exercicios */ = {
 			isa = PBXGroup;
 			children = (
+				2BAE046219A2524200785152 /* Jogos */,
 				2B64F9DE19691F8600BC57FD /* Iniciante */,
 				2B64F9DF19691F9600BC57FD /* Intermediario */,
 			);
@@ -2402,7 +2399,6 @@
 				3F608D85196C7585001979E9 /* 2.png in Resources */,
 				3F608D75196C7585001979E9 /* dot.gif in Resources */,
 				3F608D5B196C7585001979E9 /* do1.caf in Resources */,
-				2BAE046119A24C5700785152 /* CrieMusicaViewController.xib in Resources */,
 				0BC10B85199EA09E00BB6482 /* Capoeiraframe3.gif in Resources */,
 				0BC10BEB199EA09E00BB6482 /* pianoclassico.png in Resources */,
 				2BAE045319A22AC900785152 /* Sol.png in Resources */,
@@ -2704,7 +2700,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B64FA251969226F00BC57FD /* Mod2Aula3Exe1ViewController.m in Sources */,
-				2BAE046019A24C5700785152 /* CrieMusicaViewController.m in Sources */,
 				2B64FA701969234700BC57FD /* Mod2Aula7Exe4ViewController.m in Sources */,
 				A8C3F0BC194B72A400E78899 /* MenuViewController.m in Sources */,
 				A83ED3D819520810006CB6A4 /* Mascote.m in Sources */,
@@ -2749,6 +2744,7 @@
 				0B03193B19521C0B00316D6B /* AulasViewController.m in Sources */,
 				3FAD24521973843A00DEDFF8 /* EfeitoImagem.m in Sources */,
 				3F608DCC196C7585001979E9 /* Partitura.m in Sources */,
+				2BAE046519A2524C00785152 /* GameOver.m in Sources */,
 				A84855BF199416D100C5F0A3 /* TransicaoExercicioViewController.m in Sources */,
 				3FAC5929197F7923001B762F /* BibliotecaViewController.m in Sources */,
 				2B64FA7F1969236D00BC57FD /* Mod2Aula8Exe1ViewController.m in Sources */,

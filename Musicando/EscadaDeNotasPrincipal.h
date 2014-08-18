@@ -7,6 +7,7 @@
 //
 #import <AVFoundation/AVFoundation.h>
 #import <SpriteKit/SpriteKit.h>
+#import "GameOver.h"
 
 
 //CONSTANSTES para colisão
@@ -61,6 +62,7 @@ static const UInt32 fundo = 0x1 << 7;
 
 //Auxiliares
 @property int estadoPauseJogo;
+@property BOOL escalaCerta;
 
 @property NSMutableArray *listaDeNotasComPosicoes;
 @property NSArray *listaDeNotas;

@@ -20,7 +20,9 @@
         
         //Inicia zerado auxiliar para pausa, contadores de tempo e pontuação
         self.estadoPauseJogo = 0;
-        self.tempoPercorrido = 0;
+        self.escalaCerta = NO;
+        
+        self.tempoPercorrido = 20;
         self.auxTempoPercorrido = 0;
         self.pontuacaoJogadorAtual = 0;
         
@@ -53,7 +55,7 @@
     self.stringDePontuacao = [[SKLabelNode alloc]init];
     self.stringDePontuacao.color = [UIColor blackColor];
     self.stringDePontuacao.fontSize = 25.0f;
-    self.stringDePontuacao.position = CGPointMake(80, 500);
+    self.stringDePontuacao.position = CGPointMake(800, 700);
     self.stringDePontuacao.zPosition = 2;
     self.stringDePontuacao.text = @"Pontuação: ";
     self.stringDePontuacao.fontName = @"Marker Felt Thin";
@@ -62,25 +64,25 @@
     self.labelDePontuacao = [[SKLabelNode alloc]init];
     self.labelDePontuacao.color = [UIColor blackColor];
     self.labelDePontuacao.fontSize = 25.0f;
-    self.labelDePontuacao.position = CGPointMake(160, 500);
+    self.labelDePontuacao.position = CGPointMake(870, 700);
     self.labelDePontuacao.zPosition = 2;
-    self.labelDePontuacao.text = @"0";
+    self.labelDePontuacao.text = [NSString stringWithFormat: @"%d", self.pontuacaoJogadorAtual];
     self.labelDePontuacao.fontName = @"Marker Felt Thin";
     [self addChild: self.labelDePontuacao];
     
     self.stringDeTempo = [[SKLabelNode alloc]init];
     self.stringDeTempo.color = [UIColor blackColor];
     self.stringDeTempo.fontSize = 25.0f;
-    self.stringDeTempo.position = CGPointMake(160, 500);
+    self.stringDeTempo.position = CGPointMake(800, 670);
     self.stringDeTempo.zPosition = 2;
-    self.stringDeTempo.text = @"Tempo";
+    self.stringDeTempo.text = @"Tempo:";
     self.stringDeTempo.fontName = @"Marker Felt Thin";
     [self addChild: self.stringDeTempo];
     
     self.labelDeTempo = [[SKLabelNode alloc]init];
     self.labelDeTempo.color = [UIColor blackColor];
     self.labelDeTempo.fontSize = 25.0f;
-    self.labelDeTempo.position = CGPointMake(160, 500);
+    self.labelDeTempo.position = CGPointMake(870, 670);
     self.labelDeTempo.zPosition = 2;
     self.labelDeTempo.text = [NSString stringWithFormat: @"%d", self.tempoPercorrido];
     self.labelDeTempo.fontName = @"Marker Felt Thin";
@@ -98,11 +100,20 @@
     if (self.estadoPauseJogo == 0) {
         self.auxTempoPercorrido+=1;
 
-        if (self.auxTempoPercorrido == 30 && self.tempoPercorrido == 20) {
-            self.tempoPercorrido -=1;
-            self.labelDeTempo.text = [NSString stringWithFormat: @"%d", self.tempoPercorrido];
+        if (self.auxTempoPercorrido == 30) {
             
-            self.auxTempoPercorrido = 0;
+            if (self.tempoPercorrido > 0) {
+            
+                self.tempoPercorrido -=1;
+                self.labelDeTempo.text = [NSString stringWithFormat: @"%d", self.tempoPercorrido];
+            
+                self.auxTempoPercorrido = 0;
+            }else{
+                
+                if (!self.escalaCerta)
+                    NSLog(@"Chama cena de GameOver!");
+                
+            }
         }
     }    
     
@@ -172,18 +183,18 @@
     CGPoint scenePosition = [touch locationInNode: self];
     SKNode* checkNode = [self nodeAtPoint: scenePosition];
     
-    //ATIVA MOVIMENTO NO NÓ DE NOTA
+//ATIVA MOVIMENTO NO NÓ DE NOTA
     if (checkNode && ([checkNode.name isEqual:@"Do"] || [checkNode.name isEqual:@"Re"] || [checkNode.name isEqual:@"Mi"] || [checkNode.name isEqual:@"Fa"] || [checkNode.name isEqual:@"Sol"] || [checkNode.name isEqual:@"La"] || [checkNode.name isEqual:@"Si"])) {
         activeDragNode = (SKSpriteNode*)checkNode;
     }
     
-    //START
+//START
     if ([checkNode.name isEqualToString: @"start"]) {
         self.tempoPercorrido = 20;
         checkNode.name = @"check";
     }
     
-    //CHECK
+//CHECK
     if ([checkNode.name isEqualToString: @"check"]) {
         
         
@@ -196,6 +207,11 @@
                 NSLog(@"%f", nota.position.y);
                 if (nota.position.y > 100 && nota.position.y < 100) {
                     NSLog(@"Do errado");
+                    self.pontuacaoJogadorAtual += 10;
+                    _escalaCerta = YES;
+
+                }else{
+                    _escalaCerta = NO;
                 }
             }
             
@@ -203,6 +219,12 @@
             if ([nota.name isEqualToString: @"Re"]) {
                 if (nota.position.y > 100 && nota.position.y < 100) {
                     NSLog(@"Re errado");
+                    self.pontuacaoJogadorAtual += 10;
+                    _escalaCerta = YES;
+
+
+                }else{
+                    _escalaCerta = NO;
 
                 }
             }
@@ -212,7 +234,12 @@
                 NSLog(@"%f", nota.position.y);
                 if (nota.position.y >= 500 && nota.position.y <= 510) {
                     NSLog(@"Mi certo");
+                    self.pontuacaoJogadorAtual += 10;
+                    _escalaCerta = YES;
 
+
+                }else{
+                    _escalaCerta = NO;
                 }
             }
             
@@ -221,7 +248,11 @@
                 NSLog(@"%f", nota.position.y);
                 if (nota.position.y >= 475 && nota.position.y <= 495) {
                     NSLog(@"FA certo");
+                    self.pontuacaoJogadorAtual += 10;
+                    _escalaCerta = YES;
 
+                }else{
+                    _escalaCerta = NO;
                 }
             }
             
@@ -230,7 +261,11 @@
                 NSLog(@"%f", nota.position.y);
                 if (nota.position.y >= 450 && nota.position.y <= 460) {
                     NSLog(@"SOL certo");
+                    self.pontuacaoJogadorAtual += 10;
+                    _escalaCerta = YES;
 
+                }else{
+                    _escalaCerta = NO;
                 }
             }
             
@@ -240,7 +275,11 @@
 
                 if (nota.position.y >= 425 && nota.position.y <= 465) {
                     NSLog(@"LA certo");
+                    self.pontuacaoJogadorAtual += 10;
+                    _escalaCerta = YES;
 
+                }else{
+                    _escalaCerta = NO;
                 }
             }
             
@@ -250,14 +289,20 @@
 
                 if (nota.position.y >= 400 && nota.position.y <= 410) {
                     NSLog(@"SI certo");
-
+                    self.pontuacaoJogadorAtual += 10;
+                    _escalaCerta = YES;
+                }else{
+                    _escalaCerta = NO;
                 }
             }
             
-            
         }
         
+        self.labelDePontuacao.text = [NSString stringWithFormat: @"%d", self.pontuacaoJogadorAtual];
         
+        if (!self.escalaCerta)
+            NSLog(@"Chama cena de GameOver!");
+
     }
     
     
@@ -500,6 +545,12 @@
     
     [self addChild: _botaoStartAndChek];
 }
+
+//-(void)gameOver{
+//    GameOver *over = [[GameOver alloc]initWithSize:CGSizeMake(384,512)];
+//    SKTransition *animate = [SKTransition fadeWithDuration:1.0f];
+//    [self.view presentScene: over transition:animate];
+//}
 
 
 @end

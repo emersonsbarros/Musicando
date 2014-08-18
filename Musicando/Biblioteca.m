@@ -871,6 +871,62 @@ Exercicio *mod2Aula3Exe4 = [[Exercicio alloc] init:201 nome:@"Game Escada" nomeV
 //Jogo2
     Exercicio *mod2Aula3Exe5 = [[Exercicio alloc] init:201 nome:@"Game Partitura" nomeView:@"CrieMusicaViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
     
+    //Falas
+    Fala *mod2Aula3Exe5fala1 = [[Fala alloc] init];
+    mod2Aula3Exe5fala1.conteudo = @"Vamos criar a música parabéns pra você.";
+    
+    Fala *mod2Aula3Exe5fala2 = [[Fala alloc] init];
+    mod2Aula3Exe5fala2.conteudo = @"Adicione 2 notas dó de 1 tempo.";
+    
+    Fala *mod2Aula3Exe5fala3 = [[Fala alloc] init];
+    mod2Aula3Exe5fala3.conteudo = @"Adicione 1 nota si de 4 tempos, e um dó de 1 tempo";
+    
+    Fala *mod2Aula3Exe5fala4 = [[Fala alloc] init];
+    mod2Aula3Exe5fala4.conteudo = @"Agora, adicione 1 nota fá de 1 tempo, e um dó da 4a oitava de 4 tempos.";
+    
+    Fala *mod2Aula3Exe5fala5 = [[Fala alloc] init];
+    mod2Aula3Exe5fala5.conteudo = @"Novamentte, adicione 2 notas dó de 1 tempo, e um si de 4 tempos";
+    
+    Fala *mod2Aula3Exe5fala6 = [[Fala alloc] init];
+    mod2Aula3Exe5fala6.conteudo = @"Adicione 1 dó e 1 fá de 1 tempo.";
+    
+    Fala *mod2Aula3Exe5fala7 = [[Fala alloc] init];
+    mod2Aula3Exe5fala7.conteudo = @"E um dó acima de 4 tempos.";
+    
+    Fala *mod2Aula3Exe5fala8 = [[Fala alloc] init];
+    mod2Aula3Exe5fala8.conteudo = @"Adicione duas notas dó de 1 tempo, e outra acima de 2 tempos.";
+
+    Fala *mod2Aula3Exe5fala9 = [[Fala alloc] init];
+    mod2Aula3Exe5fala9.conteudo = @"Adicione uma nota lá, fá e mi. Todas de 1 tempo.";
+
+    Fala *mod2Aula3Exe5fala10 = [[Fala alloc] init];
+    mod2Aula3Exe5fala10.conteudo = @"Agora um si de 4 tempos, um si de 1 tempo e um sibemol de 1 tempo.";
+
+    
+    Fala *mod2Aula3Exe5fala11 = [[Fala alloc] init];
+    mod2Aula3Exe5fala11.conteudo = @"Pra finalizar adicione um lá de 2 tempos, um fá de 1 tempo. Um sol de 1 tempo e finalmente um ré de 4 tempos.";
+    
+    Fala *mod2Aula3Exe5fala12 = [[Fala alloc] init];
+    mod2Aula3Exe5fala12.conteudo = @"Quer ver como ficou? Dê o play e se divirta com a música que acabou de fazer!";
+    
+    
+    //Conversa
+    Conversa *mod2Aula3Exe5conversa1 = [[Conversa alloc] init];
+    [[mod2Aula3Exe5conversa1 listaDeFalas] addObject: mod2Aula3Exe5fala1];
+    [[mod2Aula3Exe5conversa1 listaDeFalas] addObject: mod2Aula3Exe5fala2];
+    [[mod2Aula3Exe5conversa1 listaDeFalas] addObject: mod2Aula3Exe5fala3];
+    [[mod2Aula3Exe5conversa1 listaDeFalas] addObject: mod2Aula3Exe5fala4];
+    [[mod2Aula3Exe5conversa1 listaDeFalas] addObject: mod2Aula3Exe5fala5];
+    [[mod2Aula3Exe5conversa1 listaDeFalas] addObject: mod2Aula3Exe5fala6];
+    [[mod2Aula3Exe5conversa1 listaDeFalas] addObject: mod2Aula3Exe5fala7];
+    [[mod2Aula3Exe5conversa1 listaDeFalas] addObject: mod2Aula3Exe5fala8];
+    [[mod2Aula3Exe5conversa1 listaDeFalas] addObject: mod2Aula3Exe5fala9];
+    [[mod2Aula3Exe5conversa1 listaDeFalas] addObject: mod2Aula3Exe5fala10];
+    [[mod2Aula3Exe5conversa1 listaDeFalas] addObject: mod2Aula3Exe5fala11];
+    [[mod2Aula3Exe5conversa1 listaDeFalas] addObject: mod2Aula3Exe5fala12];
+
+    [[[mod2Aula3Exe5 mascote] listaDeConversas] addObject: mod2Aula3Exe5conversa1];
+    
     
 //Aula de Pentagrama
     Aula *mod2Aula3 = [[Aula alloc]init];
