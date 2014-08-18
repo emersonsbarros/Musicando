@@ -9,8 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 #import "GameOverViewController.h"
 
-@interface PegarNotasEPausasPrincipal : SKScene{
-    
+@interface PegarNotasEPausasPrincipal : SKScene  <SKPhysicsContactDelegate>{
     
     //Nodes
     SKNode *objetoPraCair1;
@@ -24,12 +23,22 @@
 @property SKSpriteNode *botaoEsquerda;
 @property SKSpriteNode *botaoDireita;
 
+//Labels
+@property SKLabelNode *stringDePontuacao;
+@property SKLabelNode *labelDePontuacao;
+
 //Atributos
 @property NSMutableArray *listaDeSimbolosMusicais;
+@property int indiceSimboloSorteado;
 
+@property int estadoPauseJogo;
+@property int tempoPercorrido;
+@property int auxTempoPercorrido;
+@property int pontuacaoJogadorAtual;
+
+//Botoes
 -(SKSpriteNode*)criaBotaoDireita;
 -(SKSpriteNode*)criaBotaoEsquerda;
-
 
 
 @end
