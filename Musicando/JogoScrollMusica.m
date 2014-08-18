@@ -25,9 +25,13 @@
         
         self.physicsWorld.contactDelegate = self;
         self.physicsWorld.gravity = CGVectorMake(0,GRAVIDADEMUNDO );
-
         
-        PBParallaxBackgroundDirection direction = kPBParallaxBackgroundDirectionRight;
+        NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"musicaJogoMusica" ofType:@"mp3"]];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile error:nil];
+        self.audioPlayer.numberOfLoops = -1;
+        [self.audioPlayer play];
+        
+        PBParallaxBackgroundDirection direction = kPBParallaxBackgroundDirectionLeft;
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
         self.scaleMode = SKSceneScaleModeAspectFit;
         self.direction = direction;
@@ -351,13 +355,25 @@
             [self criaCasa];
         }
         
+        if(self.contadorPontos % 8 == 0){
+            if(self.velocidadeMonstro > 2.5)self.velocidadeMonstro -= 0.5;
+        }
+        
     }
     
    
-    
-    
 }
 
+-(void)pausaJogo{
+    NSLog(@"dd");
+    self.scene.view.paused = YES;
+}
+
+-(void)gameOver{
+    [[GameOverViewController sharedManager]gameOverParaUmaCena].view.hidden = NO;
+    [self pausaJogo];
+    [self.audioPlayer stop];
+}
 
 -(void)didBeginContact:(SKPhysicsContact *)contact {
     
@@ -377,15 +393,14 @@
     
     if ((firstBody.categoryBitMask & mascoteCategory) !=0) {
         if((secondBody.categoryBitMask & pisoCategory)!=0){
-           // NSLog(@"m1");
         }else if((secondBody.categoryBitMask & monstroNivel1Category)!=0){
-            NSLog(@"m1");
+            [self gameOver];
         }else if((secondBody.categoryBitMask & monstroNivel2Category)!=0){
-            NSLog(@"m2");
+            [self gameOver];
         }else if((secondBody.categoryBitMask & monstroNivel3Category)!=0){
-            NSLog(@"m3");
+            [self gameOver];
         }else if((secondBody.categoryBitMask & monstroNivel4Category)!=0){
-            NSLog(@"m4");
+            [self gameOver];
         }
     }
     

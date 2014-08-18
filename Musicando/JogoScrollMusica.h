@@ -7,7 +7,9 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import <AVFoundation/AVFoundation.h>
 #import "PBParallaxScrolling.h"
+#import "GameOverViewController.h"
 
 static const UInt32 mascoteCategory = 0x1 << 0;
 static const UInt32 pisoCategory = 0x1 << 1;
@@ -42,6 +44,6 @@ static const UInt32 monstroNivel4Category = 0x1 << 5;
 @property int sorteaMonstro;
 @property int contadorPontos;
 
-
+@property AVAudioPlayer *audioPlayer;
 
 @end

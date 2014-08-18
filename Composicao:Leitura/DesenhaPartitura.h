@@ -39,4 +39,7 @@
 
 -(void)desenhaContornoPartituraParaEdicao;
 
+
+@property Nota *notaAtualEdicao;;
+
 @end

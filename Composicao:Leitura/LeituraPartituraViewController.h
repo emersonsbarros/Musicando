@@ -11,7 +11,7 @@
 #import "DataBaseInstrumento.h"
 #import "DesenhaPartitura.h"
 #import <QuartzCore/QuartzCore.h>
-
+#import "EfeitoComponeteView.h"
 
 @interface LeituraPartituraViewController : UIViewController <UIScrollViewDelegate,UITableViewDataSource, UITableViewDelegate> {
     

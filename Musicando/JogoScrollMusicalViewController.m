@@ -58,11 +58,14 @@
     //Add barra,Mascote,View de Retornar Pagina ao Xib
     [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
     self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
-       
+    
+    //Gamer para SpriteKit
+    [[GameOverViewController sharedManager]addBarraSuperioAoXibOculto:self:[Biblioteca sharedManager].exercicioAtual];
+    
     //Cria Seletor e manda ele como paramentro para outros View Controllers poderem usar
     SEL selectors1 = @selector(pulaFalaMascote);
-    [self addGesturePassaFalaMascote:self.viewGesturePassaFala];
-    
+    [[MascoteViewController sharedManager]addGesturePassaFalaMascote:self.viewGesturePassaFala :selectors1:self];
+    [[RetornaPaginaViewController sharedManager]addGesturePassaFalaMascote:[RetornaPaginaViewController sharedManager].viewRetornaPagina:selectors1:self];
     
     //Biblioteca
     self.lblFalaDoMascote = [MascoteViewController sharedManager].lblFalaDoMascote;
@@ -98,9 +101,8 @@
 -(void)chamaMetodosFala1{
     
     for(UIView *view in self.view.subviews){
-        if(view.tag != 1001){
-            [view removeFromSuperview];
-        }
+        if((view.tag == 1001)||(view.tag == 9999)){
+        }else [view removeFromSuperview];
     }
 
     [self chamaJogo];

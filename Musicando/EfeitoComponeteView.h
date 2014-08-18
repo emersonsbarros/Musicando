@@ -12,6 +12,7 @@
 #import "MascoteViewController.h"
 #import "RetornaPaginaViewController.h"
 #import "TocaTrecoViewController.h"
+#import "ComposicaoPartituraViewController.h"
 
 @interface EfeitoComponeteView : NSObject
 
@@ -19,5 +20,9 @@
 +(EfeitoComponeteView*)sharedManager;
 
 -(void)addComponetesViewExercicio:(UIViewController*)controller :(Exercicio*)exer;
+-(void)addComponentesViewEdicaoPartitura:(UIViewController*)viewAtual :(Exercicio*)exerc;
+-(void)addComponentesViewMascote:(UIViewController*)viewAtual :(Exercicio*)exerc;
+-(void)addComponentesViewBarra:(UIViewController*)viewAtual :(Exercicio*)exerc;
+
 
 @end

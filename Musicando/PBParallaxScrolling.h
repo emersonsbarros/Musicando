@@ -38,7 +38,7 @@ typedef enum {
 
 @interface PBParallaxScrolling : SKSpriteNode
 
-/** @brief Designated initializer for the parallax backgorund. 
+/** @brief Designated initializer for the parallax backgorund.
  * Creates and initializes a new parallax background of certain size, with some images, an initial velocity and a differential of this velocity to each background.
  * @param backgrounds a NSArray of the backgrounds, expressed as either NSStrings (containing the name of the image to use), UIImages (with the image used to build the texture), SKTexture (with the textures to build the SKNodes) or SKNodes. They must be ordered from foreground to background, i.e: the closer element must be the first one in the array.
  * @param the direction of the parallax movement (up, down, right or left).

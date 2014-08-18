@@ -11,11 +11,11 @@
 #import "DesenhaPartitura.h"
 #import "DataBaseNotaPadrao.h"
 #import "NotaEdicaoGesture.h"
+#import "Biblioteca.h"
 
 @interface ComposicaoPartituraViewController : UIViewController <UIScrollViewDelegate> {
     
     Nota *nota;
-    NSMutableArray *listaNotasEdicao;
     int posicaoX;
     int espacamentoEntreNotas;
     int limiteDeNotas;
@@ -27,10 +27,12 @@
 - (IBAction)tocarTodasNoras:(id)sender;
 - (IBAction)limparNotasPartituraEdicao:(id)sender;
 
+@property NSMutableArray *listaNotasEdicao;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollEdicao;
 @property float posNotaTocando;
 @property int contadorIndiceNota;
 @property CGPoint posOriginalScroll;
+
 
 - (IBAction)semibreveBotao:(id)sender;
 - (IBAction)minimaBotao:(id)sender;

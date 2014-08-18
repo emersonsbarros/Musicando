@@ -33,6 +33,39 @@
     return [self sharedManager];
 }
 
+-(void)addComponentesViewMascote:(UIViewController*)viewAtual :(Exercicio*)exerc{
+    
+    MascoteViewController *bar = [[MascoteViewController alloc]init];
+    bar.view.layer.zPosition =+11;
+    [viewAtual addChildViewController:bar];
+    bar.view.frame = CGRectMake(420, 520, bar.view.frame.size.width,bar.view.frame.size.height);
+    [viewAtual.view addSubview:bar.view];
+
+    
+}
+
+-(void)addComponentesViewBarra:(UIViewController*)viewAtual :(Exercicio*)exerc{
+    
+    BarraSuperiorViewController *bar2 = [[BarraSuperiorViewController alloc]init];
+    bar2.view.layer.zPosition = +5;
+    [viewAtual addChildViewController:bar2];
+    [viewAtual.view addSubview:bar2.view];
+
+}
+
+
+//-(void)addComponentesViewEdicaoPartitura:(UIViewController*)viewAtual :(Exercicio*)exerc{
+//    
+//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
+//    UIViewController *bar = [sb instantiateViewControllerWithIdentifier:@"ComposicaoPartitura"];
+//    [viewAtual.view addSubview:bar.view];
+//    
+//    
+//    for (UIImageView *t in [DesenhaPartitura sharedManager].listaImagensTracoPentagrama) {
+//       t.frame = CGRectMake(t.frame.origin.x-150,t.frame.origin.y-150,t.frame.size.width,t.frame.size.height);
+//    }
+//
+//}
 
 //Add os componetes para uma view de exercicio
 -(void)addComponetesViewExercicio:(UIViewController*)controller :(Exercicio*)exer{

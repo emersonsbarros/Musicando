@@ -223,6 +223,23 @@
     [[[mod1Aula2Exe2 mascote] listaDeConversas] addObject: mod1Aula2Exe2conversa1];
 
 
+    
+////////////////////////////// JOGO 2 ////////////////////////////////////
+    
+    Exercicio *mod1Aula2Exe1Jogo = [[Exercicio alloc] init:101 nome:@"Jogo Som" nomeView:@"JogoBlocosSomViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+
+    //Falas do Mascote
+    //Falas
+    Fala *mod1Aula2Exe1Jogofala1 = [[Fala alloc] init];
+    mod1Aula2Exe1Jogofala1.conteudo = @"O Toca Treco está louco para tocar, mais para isso voce deve preparar algo no forno para ele, agora que voce já sabe os pilares do som, mãos á massa e construa seu proprio som!";
+    
+    
+    //Conversa
+    Conversa *mod1Aula2Exe1Jogoconversa1 = [[Conversa alloc] init];
+    [[mod1Aula2Exe1Jogoconversa1 listaDeFalas] addObject: mod1Aula2Exe1Jogofala1];
+    [[mod1Aula2Exe1Jogoconversa1 listaDeFalas] addObject: mod1Aula2Exe1Jogofala1];
+    
+    [[[mod1Aula2Exe1Jogo mascote] listaDeConversas] addObject:mod1Aula2Exe1Jogoconversa1];
 //----------------------------------------------------------------------------------------------------------//
     
 //Aula de Som
@@ -231,6 +248,7 @@
     mod1Aula2.capa = [UIImage imageNamed:@"aula.png"];
     [[mod1Aula2 listaDeExercicios]addObject: mod1Aula2Exe1];
     [[mod1Aula2 listaDeExercicios]addObject: mod1Aula2Exe2];
+    [[mod1Aula2 listaDeExercicios]addObject: mod1Aula2Exe1Jogo];
     
 ////////////////////////////////// Aula 3 //////////////////////////////////////
     
@@ -883,6 +901,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
 
 
 ////////////////////////////////// Aula 4 //////////////////////////////////////
+ 
     
 //Exercicios
 //INTRO SIMBOLOGIA DAS NOTAS
@@ -1176,6 +1195,25 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     [[mod2Aula4Exe7conversa1 listaDeFalas] addObject: mod2Aula4Exe7fala5];
     [[[mod2Aula4Exe7 mascote] listaDeConversas] addObject: mod2Aula4Exe7conversa1];
     
+////////////////////// JOGO //////////////////////////
+    
+    Exercicio *mod2Aula4Exe7Jogo = [[Exercicio alloc] init:202 nome:@"Jogo Partitura" nomeView:@"JogoEdicaoPartituraViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
+    //Falas
+    Fala *mod2Aula4Exe7Jogofala1 = [[Fala alloc] init];
+    mod2Aula4Exe7Jogofala1.conteudo = @"Agora vamos testar seu conhecimento! Vou mostrar algumas notas e depois voce terá que escolher o desenho de tempo na barra acima e sua respectiva linha no pentagrama ";
+    
+    Fala *mod2Aula4Exe7Jogofala2 = [[Fala alloc] init];
+    mod2Aula4Exe7Jogofala2.conteudo = @"----------";
+    
+    
+    //Conversa
+    Conversa *mod2Aula4Exe7Jogoconversa1 = [[Conversa alloc] init];
+    [[mod2Aula4Exe7Jogoconversa1 listaDeFalas] addObject: mod2Aula4Exe7Jogofala1];
+    [[mod2Aula4Exe7Jogoconversa1 listaDeFalas] addObject: mod2Aula4Exe7Jogofala2];
+    [[[mod2Aula4Exe7Jogo mascote] listaDeConversas] addObject: mod2Aula4Exe7Jogoconversa1];
+    
+    
 //Aula de Notação nota/pausa
     Aula *mod2Aula4 = [[Aula alloc]init];
     mod2Aula4.nome = @"Notação nota/pausa";
@@ -1187,7 +1225,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe5];
     [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe6];
     [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe7];
-
+    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe7Jogo];
     
 ////////////////////////////////// Aula 5 //////////////////////////////////////
     

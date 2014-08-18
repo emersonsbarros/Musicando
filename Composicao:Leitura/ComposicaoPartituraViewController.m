@@ -23,6 +23,7 @@
 
 @implementation ComposicaoPartituraViewController
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -39,6 +40,11 @@
 -(void)viewDidDisappear:(BOOL)animated{
     [[Sinfonia sharedManager]pararPlayerPartitura];
 }
+
+-(NSMutableArray*)retornaListaNotasEdicao{
+    return self.listaNotasEdicao;
+}
+
 
 -(Nota*)retornaNotaCriadaPeloUsuario:(float)j :(UIImageView*)t :(UIImageView*)t2 :(UIImageView*)ultimoTraco{
     
@@ -785,15 +791,17 @@
     float posy = touchPoint.y;
     Nota *not = [self retornaPosicaoNotaEdicao:posx:posy];
     
-    if((not != NULL)&&(listaNotasEdicao.count <= limiteDeNotas)){
+    if((not != NULL)&&(self.listaNotasEdicao.count <= limiteDeNotas)){
+        [DesenhaPartitura sharedManager].notaAtualEdicao = not;
+        
         [[self scrollEdicao]addSubview:[not imagemNota]];
-        [listaNotasEdicao addObject:not];
+        [self.listaNotasEdicao addObject:not];
         listaSons = [[NSMutableArray alloc]init];
         [listaSons addObject:not];
         [[Sinfonia sharedManager]tocarUmaNota:listaSons:@"Piano"];
         [[self scrollEdicao] setContentSize:CGSizeMake((self.scrollEdicao.bounds.size.width+posicaoX)-700, self.scrollEdicao.bounds.size.height)];
         
-        if(listaNotasEdicao.count > 5){
+        if(self.listaNotasEdicao.count > 5){
             [self aumentarLinhasPentagrama];
             CGPoint bottomOffset = CGPointMake((posicaoX-650),0);
             [[self scrollEdicao] setContentOffset:bottomOffset animated:YES];
@@ -807,7 +815,7 @@
 
 -(void)atualizaPosicaoTocando{
   
-    Nota *notaAtual = [listaNotasEdicao objectAtIndex:self.contadorIndiceNota];
+    Nota *notaAtual = [self.listaNotasEdicao objectAtIndex:self.contadorIndiceNota];
     self.posNotaTocando = notaAtual.imagemNota.frame.origin.x;
 
     
@@ -832,7 +840,7 @@
     }
 
 
-    if(listaNotasEdicao.count-1 != self.contadorIndiceNota){
+    if(self.listaNotasEdicao.count-1 != self.contadorIndiceNota){
         CGPoint bottomOffset = CGPointMake((self.posNotaTocando-350),0);
         [[self scrollEdicao] setContentOffset:bottomOffset animated:YES];
         
@@ -848,21 +856,23 @@
 
 - (IBAction)tocarTodasNoras:(id)sender {
     
+    [[Sinfonia sharedManager]pararPlayerPartitura];
+    
     self.contadorIndiceNota = 0;
     self.posOriginalScroll = self.scrollEdicao.contentOffset;
-    if(listaNotasEdicao.count != 0)[self atualizaPosicaoTocando];
+    if(self.listaNotasEdicao.count != 0)[self atualizaPosicaoTocando];
     
-    
-    if([listaNotasEdicao lastObject] != NULL)[[Sinfonia sharedManager]tocarTodasNotasEdicao:listaNotasEdicao:@"Piano"];
+    if([self.listaNotasEdicao lastObject] != NULL)[[Sinfonia sharedManager]tocarTodasNotasEdicao:self.listaNotasEdicao:@"Piano"];
 }
 
 - (IBAction)limparNotasPartituraEdicao:(id)sender {
     
-    if(listaNotasEdicao.count != 0){
+    
+    if(self.listaNotasEdicao.count != 0){
         for (UIView *subView in self.scrollEdicao.subviews)
         {
-            for(int i=0;i<listaNotasEdicao.count;i++){
-                Nota *coord = [listaNotasEdicao  objectAtIndex:i];
+            for(int i=0;i<self.listaNotasEdicao.count;i++){
+                Nota *coord = [self.listaNotasEdicao  objectAtIndex:i];
                 
                 if ([subView isEqual:coord.imagemNota])
                 {
@@ -872,8 +882,10 @@
             }
         }
         
+        
+        self.listaNotasEdicao = [[NSMutableArray alloc]init];
         [[Sinfonia sharedManager]pararPlayerPartitura];
-        listaNotasEdicao = [[NSMutableArray alloc]init];
+
         CGPoint bottomOffset = CGPointMake(0,0);
         [[self scrollEdicao] setContentOffset:bottomOffset animated:YES];
         posicaoX = 150;
@@ -891,11 +903,11 @@
 }
 
 -(void)rearranjaPosicoesNotas:(int)posicaoNotaDeletada{
-    Nota *pegaPosicaoDaUltimaNota = [listaNotasEdicao lastObject];
+    Nota *pegaPosicaoDaUltimaNota = [self.listaNotasEdicao lastObject];
     posicaoX = pegaPosicaoDaUltimaNota.posicaoNotaEdicao;
     NSMutableArray *aux = [[NSMutableArray alloc] init];
     
-    for(Nota *auxs in listaNotasEdicao){
+    for(Nota *auxs in self.listaNotasEdicao){
         Nota *t = [[Nota alloc]init];
         t.posicaoNotaEdicao = auxs.posicaoNotaEdicao;
         [aux addObject:t];
@@ -903,12 +915,12 @@
     
     int k=0;
     
-    for(int i=0;i<listaNotasEdicao.count;i++){
-        Nota *notaPosicao = [listaNotasEdicao objectAtIndex:i];
+    for(int i=0;i<self.listaNotasEdicao.count;i++){
+        Nota *notaPosicao = [self.listaNotasEdicao objectAtIndex:i];
         if(notaPosicao.posicaoNotaEdicao == posicaoNotaDeletada){
-            for(int j=i;j<listaNotasEdicao.count-1;j++){
+            for(int j=i;j<self.listaNotasEdicao.count-1;j++){
                 k=j+1;
-                Nota *notaPosicaoProx = [listaNotasEdicao objectAtIndex:k];
+                Nota *notaPosicaoProx = [self.listaNotasEdicao objectAtIndex:k];
                 Nota *notaPosicaoAtual = [aux objectAtIndex:j];
                 notaPosicaoProx.posicaoNotaEdicao = notaPosicaoAtual.posicaoNotaEdicao;
                 
@@ -952,7 +964,7 @@
                              }
                          }
                          
-                         [listaNotasEdicao removeObject:notaParaEdicao];
+                         [self.listaNotasEdicao removeObject:notaParaEdicao];
                      }];
     
 }
@@ -976,18 +988,19 @@
 {
     [super viewDidLoad];
     
-   // self.scrollEdicao.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"fundoPapiro.png"]];
     
-    listaNotasEdicao = [[NSMutableArray alloc]init];
+    self.listaNotasEdicao = [[NSMutableArray alloc]init];
     
     [[DesenhaPartitura sharedManager]desenhaContornoPartituraParaEdicao];
     self.scrollEdicao.delegate = self;
     
     nota = [[DataBaseNotaPadrao sharedManager]retornaNotaPadrao:@"seminima"];
+
     
     for (UIImageView *t in [DesenhaPartitura sharedManager].listaImagensTracoPentagrama) {
         [[self scrollEdicao]addSubview:t];
     }
+    
     
     posicaoX = 150;
     espacamentoEntreNotas = 110;

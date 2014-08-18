@@ -28,7 +28,8 @@
 -(id)init{
     self = [super init];
     if(self){
-            }
+        self.notaAtualEdicao = [[Nota alloc]init];
+    }
     return self;
 }
 

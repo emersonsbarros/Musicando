@@ -66,7 +66,7 @@ static inline CGFloat roundFloatToTwoDecimalPlaces(CGFloat num) { return floorf(
         // sanity checks
         if (speed < 0) speed = -speed;
         if (differential < 0 || differential > 1) differential = kPBParallaxBackgroundDefaultSpeedDifferential; // sanity check
-
+        
         // initialize backgrounds
         CGFloat zPos = 1.0f / backgrounds.count;
         NSUInteger bgNumber = 0;
@@ -133,7 +133,7 @@ static inline CGFloat roundFloatToTwoDecimalPlaces(CGFloat num) { return floorf(
             self.clonedBackgrounds = [cBgs copy];
             self.speeds = [spds copy];
         } else { NSLog(@"Unable to find any valid backgrounds for parallax scrolling."); return nil; }
-
+        
     }
     
     return self;
@@ -149,21 +149,20 @@ static inline CGFloat roundFloatToTwoDecimalPlaces(CGFloat num) { return floorf(
         SKSpriteNode * cBg = [self.clonedBackgrounds objectAtIndex:i];
         CGFloat newBgX = bg.position.x, newBgY = bg.position.y, newCbgX = cBg.position.x, newCbgY = cBg.position.y;
         // position depends on direction.
-        self.direction = kPBParallaxBackgroundDirectionLeft;
         switch (self.direction) {
             case kPBParallaxBackgroundDirectionUp:
                 newBgY += speed;
                 newCbgY += speed;
                 if (newBgY >= bg.size.height) newBgY = newCbgY - cBg.size.height + kParallaxBackgroundAntiFlickeringAdjustment;
                 if (newCbgY >= cBg.size.height) newCbgY = newBgY - bg.size.height + kParallaxBackgroundAntiFlickeringAdjustment;
-
+                
                 break;
             case kPBParallaxBackgroundDirectionDown:
                 newBgY -= speed;
                 newCbgY -= speed;
                 if (newBgY <= -bg.size.height) newBgY = newCbgY + cBg.size.height - kParallaxBackgroundAntiFlickeringAdjustment;
                 if (newCbgY <= -bg.size.height) newCbgY = newBgY + bg.size.height - kParallaxBackgroundAntiFlickeringAdjustment;
-
+                
                 break;
             case kPBParallaxBackgroundDirectionRight:
                 newBgX += speed;
@@ -184,7 +183,7 @@ static inline CGFloat roundFloatToTwoDecimalPlaces(CGFloat num) { return floorf(
         // update positions with the right coordinates.
         bg.position = CGPointMake(newBgX, newBgY);
         cBg.position = CGPointMake(newCbgX, newCbgY);
-
+        
     }
 }
 
@@ -210,7 +209,7 @@ static inline CGFloat roundFloatToTwoDecimalPlaces(CGFloat num) { return floorf(
         default:
             break;
     }
-    self.direction = kPBParallaxBackgroundDirectionLeft;
+    self.direction = newDirection;
 }
 
 - (void) showBackgroundPositions {
@@ -223,7 +222,7 @@ static inline CGFloat roundFloatToTwoDecimalPlaces(CGFloat num) { return floorf(
         SKSpriteNode * bg = [self.backgrounds objectAtIndex:i];
         SKSpriteNode * cBg = [self.clonedBackgrounds objectAtIndex:i];
         NSLog(@"Layer %u: background1 at (%f, %f), background2 at (%f, %f), speed: %f", i, bg.position.x,bg.position.y, cBg.position.x, cBg.position.y, speed);
- 
+        
     }
 }
 

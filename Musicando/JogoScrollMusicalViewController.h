@@ -10,7 +10,6 @@
 #import <SpriteKit/SpriteKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "JogoScrollMusica.h"
-
 #import <QuartzCore/QuartzCore.h>
 #import "Biblioteca.h"
 #import "Conversa.h"
@@ -23,10 +22,14 @@
 #import "EfeitoPlayer.h"
 #import "EfeitoComponeteView.h"
 #import "EfeitoNotaAnimada.h"
+#import "GameOverViewController.h"
 
 @interface JogoScrollMusicalViewController: UIViewController {
    
 }
+
+//--------------- CODIGO QUE REPETE EM TODAS AS VIEWS ---------------------//
+//////////////////Codigo mutavel/////////////////
 
 //Aux Biblioteca
 @property Biblioteca *testaBiblio;
@@ -36,5 +39,8 @@
 @property UIImageView *imagemDoMascote2;
 @property  UILabel *lblFalaDoMascote;
 @property UIView *viewGesturePassaFala;
+@property UIView *imgTocaTreco;
+
+//-------------------------------------------------------------------------//
 
 @end
