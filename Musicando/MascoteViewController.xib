@@ -40,9 +40,9 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfb-LM-vAp">
-                    <rect key="frame" x="490" y="5" width="39" height="33"/>
+                    <rect key="frame" x="485" y="6" width="49" height="36"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" backgroundImage="som.jpg">
+                    <state key="normal" backgroundImage="iconeSomFala.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -50,7 +50,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhh-he-VwG">
-                    <rect key="frame" x="553" y="6" width="38" height="30"/>
+                    <rect key="frame" x="548" y="9" width="38" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" backgroundImage="retornar.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -66,8 +66,8 @@
         </view>
     </objects>
     <resources>
+        <image name="iconeSomFala.png" width="150" height="133"/>
         <image name="rasgado.png" width="748" height="243"/>
         <image name="retornar.png" width="142" height="150"/>
-        <image name="som.jpg" width="500" height="500"/>
     </resources>
 </document>

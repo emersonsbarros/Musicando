@@ -145,12 +145,12 @@
     if(self.estadoAudioFala){
         [[EfeitoFala sharedManager]dimunuiSomFala];
         self.estadoAudioFala = NO;
-        NSLog(@"vdd");
+        self.outBtnAudioFala.alpha = 0.5;
     }else{
         [[EfeitoFala sharedManager]aumentaSomFala];
         [self produzSomFala];
         self.estadoAudioFala = YES;
-        NSLog(@"fals");
+        self.outBtnAudioFala.alpha = 1.0;
     }
     
     
