@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -9,6 +9,7 @@
                 <outlet property="imagemDoMascote2" destination="F4o-wu-Dr3" id="07k-k9-CVC"/>
                 <outlet property="imgFundoTexto" destination="z0U-3T-IyR" id="LtC-vk-LRY"/>
                 <outlet property="lblFalaDoMascote" destination="yhz-jz-FVd" id="74Y-rA-mev"/>
+                <outlet property="outBtnAudioFala" destination="rfb-LM-vAp" id="Pgq-QI-g18"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewGesturePassaFala" destination="vfy-j7-Npc" id="GGm-zy-xQH"/>
             </connections>
@@ -38,6 +39,26 @@
                     <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfb-LM-vAp">
+                    <rect key="frame" x="490" y="5" width="39" height="33"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="som.jpg">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnAudioFala:" destination="-1" eventType="touchUpInside" id="imd-Dm-V8X"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhh-he-VwG">
+                    <rect key="frame" x="553" y="6" width="38" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="retornar.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnRepetirFala:" destination="-1" eventType="touchUpInside" id="TKa-9Y-Rko"/>
+                    </connections>
+                </button>
             </subviews>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -46,5 +67,7 @@
     </objects>
     <resources>
         <image name="rasgado.png" width="748" height="243"/>
+        <image name="retornar.png" width="142" height="150"/>
+        <image name="som.jpg" width="500" height="500"/>
     </resources>
 </document>

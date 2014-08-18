@@ -12,6 +12,7 @@
 		0B9709BC199BE944008C3B2A /* TocaTrecoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9709BA199BE944008C3B2A /* TocaTrecoViewController.m */; };
 		0B9709BD199BE944008C3B2A /* TocaTrecoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9709BB199BE944008C3B2A /* TocaTrecoViewController.xib */; };
 		0B99B637199AAB4000F9A799 /* EfeitoNotaAnimada.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B99B636199AAB4000F9A799 /* EfeitoNotaAnimada.m */; };
+		0BA27C4019A2755000D21948 /* EfeitoFala.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA27C3F19A2755000D21948 /* EfeitoFala.m */; };
 		0BA369DB199E862300B53D46 /* ruido.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA369DA199E862300B53D46 /* ruido.png */; };
 		2B64F9E41969207E00BC57FD /* Mod1Aula2Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64F9E21969207E00BC57FD /* Mod1Aula2Exe1ViewController.m */; };
 		2B64F9E51969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64F9E31969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib */; };
@@ -499,6 +500,8 @@
 		0B9709BB199BE944008C3B2A /* TocaTrecoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TocaTrecoViewController.xib; sourceTree = "<group>"; };
 		0B99B635199AAB4000F9A799 /* EfeitoNotaAnimada.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoNotaAnimada.h; sourceTree = "<group>"; };
 		0B99B636199AAB4000F9A799 /* EfeitoNotaAnimada.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoNotaAnimada.m; sourceTree = "<group>"; };
+		0BA27C3E19A2755000D21948 /* EfeitoFala.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoFala.h; sourceTree = "<group>"; };
+		0BA27C3F19A2755000D21948 /* EfeitoFala.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoFala.m; sourceTree = "<group>"; };
 		0BA369DA199E862300B53D46 /* ruido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ruido.png; sourceTree = "<group>"; };
 		2B64F9E11969207E00BC57FD /* Mod1Aula2Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula2Exe1ViewController.h; sourceTree = "<group>"; };
 		2B64F9E21969207E00BC57FD /* Mod1Aula2Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula2Exe1ViewController.m; sourceTree = "<group>"; };
@@ -1089,6 +1092,8 @@
 				3F03108E1999D8F500570B8A /* EfeitoComponeteView.m */,
 				0B99B635199AAB4000F9A799 /* EfeitoNotaAnimada.h */,
 				0B99B636199AAB4000F9A799 /* EfeitoNotaAnimada.m */,
+				0BA27C3E19A2755000D21948 /* EfeitoFala.h */,
+				0BA27C3F19A2755000D21948 /* EfeitoFala.m */,
 			);
 			name = Efeitos;
 			sourceTree = "<group>";
@@ -2625,6 +2630,7 @@
 				2B64FA161969222600BC57FD /* Mod2Aula1Exe3ViewController.m in Sources */,
 				0B9709BC199BE944008C3B2A /* TocaTrecoViewController.m in Sources */,
 				2B64FA4D196922C900BC57FD /* Mod2Aula4Exe6ViewController.m in Sources */,
+				0BA27C4019A2755000D21948 /* EfeitoFala.m in Sources */,
 				3FCC29151995A9DE000B951F /* MascoteViewController.m in Sources */,
 				3FBE5AF1199FBB5A00954A77 /* JogoBlocosSomViewController.m in Sources */,
 				2B64FA39196922A400BC57FD /* Mod2Aula4Exe2ViewController.m in Sources */,

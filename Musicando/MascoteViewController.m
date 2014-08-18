@@ -35,7 +35,7 @@
 -(id)init{
     self = [super init];
     if(self){
-        
+        self.estadoAudioFala = YES;
     }
     return self;
 }
@@ -44,6 +44,7 @@
 +(id)allocWithZone:(struct _NSZone *)zone{
     return [self sharedManager];
 }
+
 
 -(void)viewDidDisappear:(BOOL)animated {
     
@@ -72,7 +73,11 @@
     self.testaConversa = self.testaBiblio.exercicioAtual.mascote.listaDeConversas.firstObject;
     self.imagemDoMascote2.image = [[[[Biblioteca sharedManager] exercicioAtual] mascote] imagem].image;
     
-    
+    [[EfeitoFala sharedManager]incializar];
+    Fala *falaAtual = [self.testaConversa.listaDeFalas objectAtIndex:0];
+    NSString *textoFala = falaAtual.conteudo;
+    [[EfeitoFala sharedManager]falar:textoFala];
+
 }
 
 
@@ -84,7 +89,6 @@
 
 -(void)passaView{
     
-    
     [[EfeitoTransicao sharedManager]chamaTransicaoPaginaDireita:self.controller];
     
     [NSTimer scheduledTimerWithTimeInterval:0.0
@@ -93,6 +97,12 @@
                                        userInfo:nil
                                         repeats:NO];
     
+    [NSTimer scheduledTimerWithTimeInterval: 2.0
+                                     target: self
+                                   selector: @selector(produzSomFala)
+                                   userInfo: nil
+                                    repeats: NO];
+
     
 }
 
@@ -121,5 +131,41 @@
     
 }
 
+-(void)produzSomFala{
+    
+    [[EfeitoFala sharedManager]incializar];
+    Fala *falaAtual = [self.testaConversa.listaDeFalas objectAtIndex:[MascoteViewController sharedManager].contadorDeFalas-1];
+    NSString *textoFala = falaAtual.conteudo;
+    [[EfeitoFala sharedManager]falar:textoFala];
+    
+}
+
+- (IBAction)btnAudioFala:(id)sender {
+    
+    if(self.estadoAudioFala){
+        [[EfeitoFala sharedManager]dimunuiSomFala];
+        self.estadoAudioFala = NO;
+        NSLog(@"vdd");
+    }else{
+        [[EfeitoFala sharedManager]aumentaSomFala];
+        [self produzSomFala];
+        self.estadoAudioFala = YES;
+        NSLog(@"fals");
+    }
+    
+    
+}
+
+- (IBAction)btnRepetirFala:(id)sender {
+    [self produzSomFala];
+}
+
+- (IBAction)bntSaiFala:(id)sender {
+    [[EfeitoFala sharedManager]dimunuiSomFala];
+}
+
 
 @end
+
+
+

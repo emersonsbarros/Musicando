@@ -13,6 +13,7 @@
 #import "Conversa.h"
 #import "Fala.h"
 #import "EfeitoTransicao.h"
+#import "EfeitoFala.h"
 
 @interface MascoteViewController : UIViewController
 
@@ -39,6 +40,14 @@
 -(void)atualizaExericioMascote;
 
 -(void)addGesturePassaFalaMascote:(UIView*)viewGesture :(SEL)metodoPassaFala :(UIViewController*)cont;
+
+@property (weak, nonatomic) IBOutlet UIButton *outBtnAudioFala;
+
+- (IBAction)btnAudioFala:(id)sender;
+
+- (IBAction)btnRepetirFala:(id)sender;
+
+@property BOOL estadoAudioFala;
 
 
 @end
