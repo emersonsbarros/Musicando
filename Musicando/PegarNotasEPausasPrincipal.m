@@ -29,6 +29,9 @@
         //Inicia lista de notas e indice para sorteio
         self.listaDeSimbolosMusicais = [[NSMutableArray alloc] initWithObjects: @"Do", @"Re", @"Mi", @"Fa", @"Sol", @"La", @"Si", @"P4", @"P2", @"P1", @"P12", @"P14", @"P18", @"P16", nil];
         self.indiceSimboloSorteado = 0;
+        self.quantidadeMovimentoEsquerda = 1;
+        self.quantidadeMovimentoDireita = 1;
+
         
         //Inicia primeiros nós
         [self carregarPrimeirosComponentes];
@@ -108,12 +111,25 @@
     
     //Botão direita
     if ([node.name isEqualToString:@"botaoDireita"]) {
-        [self acaoMoverDireita: _mascote];
-    }
+        //Ate 2 movimentos
+        if (self.quantidadeMovimentoDireita <= 2) {
+            [self acaoMoverDireita: _mascote];
+            self.quantidadeMovimentoDireita++;
+            
+            if(self.quantidadeMovimentoEsquerda != 0)
+                self.quantidadeMovimentoEsquerda++;
+        }    }
     
     //Botão esquerda
     if ([node.name isEqualToString:@"botaoEsqueda"]) {
-        [self acaoMoverEsquerda: _mascote];
+        //Ate 2 movimentos
+        if (self.quantidadeMovimentoEsquerda <= 2) {
+            [self acaoMoverEsquerda: _mascote];
+            self.quantidadeMovimentoEsquerda++;
+            
+            if(self.quantidadeMovimentoDireita != 0)
+                self.quantidadeMovimentoDireita++;
+        }
     }
     
 }
@@ -162,7 +178,7 @@
     SKTexture *texturaFundoPrincipal = [SKTexture textureWithImageNamed: @"papelAntigo.jpg"];
     self.fundo.texture = texturaFundoPrincipal;
     self.fundo.size = CGSizeMake(1024, 768);
-    fundo.zPosition = -5;
+     self.fundo.zPosition = -5;
     
     //Adiciona a textura ao nó e o nó a cena
     [self addChild: self.fundo];
@@ -193,15 +209,14 @@
 
 //MOVIMENTO DIREITA ESQUERDA
 -(void)acaoMoverDireita: (SKNode*)node{
-    
-    SKAction *moverPraDireita = [SKAction moveTo: CGPointMake(912, node.position.y) duration: 3];
-    SKAction *movimentoCompleto = [SKAction sequence: @[moverPraDireita]];
+        SKAction *moverPraDireita = [SKAction moveTo: CGPointMake(100, node.position.y) duration: 3];
+        [node runAction: moverPraDireita];
 }
 
 -(void)acaoMoverEsquerda: (SKNode*)node{
-    
     SKAction *moverPraEsquerda = [SKAction moveTo: CGPointMake(312, node.position.y) duration: 3];
-    SKAction *movimentoCompleto = [SKAction sequence: @[moverPraEsquerda, moverPraDireita]];
+    [node runAction: moverPraEsquerda];
+
 }
 
 

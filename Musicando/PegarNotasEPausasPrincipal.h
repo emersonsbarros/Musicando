@@ -27,7 +27,7 @@
 @property SKLabelNode *stringDePontuacao;
 @property SKLabelNode *labelDePontuacao;
 
-//Atributos
+//Atributos e auxiliares
 @property NSMutableArray *listaDeSimbolosMusicais;
 @property int indiceSimboloSorteado;
 
@@ -35,6 +35,13 @@
 @property int tempoPercorrido;
 @property int auxTempoPercorrido;
 @property int pontuacaoJogadorAtual;
+
+//Movimentos
+@property int quantidadeMovimentoDireita;
+@property int quantidadeMovimentoEsquerda;
+
+
+
 
 //Botoes
 -(SKSpriteNode*)criaBotaoDireita;

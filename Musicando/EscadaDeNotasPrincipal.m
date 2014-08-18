@@ -352,7 +352,7 @@
     SKAction *moverPraDireita = [SKAction moveTo: CGPointMake(912, node.position.y) duration: duracao];
     SKAction *movimentoCompleto = [SKAction sequence: @[moverPraEsquerda, moverPraDireita]];
     
-    [node runAction:[SKAction repeatActionForever: movimentoCompleto]];
+    [node runAction: [SKAction repeatActionForever: movimentoCompleto]];
 }
 
 
