@@ -20,6 +20,7 @@
         
         //Inicia zerado auxiliar para pausa, contadores de tempo e pontuação
         self.estadoPauseJogo = 0;
+        self.tempoEncerrado = NO;
         self.escalaCerta = NO;
         
         self.tempoPercorrido = 0;
@@ -53,7 +54,7 @@
     
 //Configura as labels de pontuação
     self.stringDePontuacao = [[SKLabelNode alloc]init];
-    self.stringDePontuacao.color = [UIColor blackColor];
+    self.stringDePontuacao.fontColor = [UIColor blackColor];
     self.stringDePontuacao.fontSize = 25.0f;
     self.stringDePontuacao.position = CGPointMake(800, 700);
     self.stringDePontuacao.zPosition = 2;
@@ -62,7 +63,7 @@
     [self addChild: self.stringDePontuacao];
     
     self.labelDePontuacao = [[SKLabelNode alloc]init];
-    self.labelDePontuacao.color = [UIColor blackColor];
+    self.labelDePontuacao.fontColor = [UIColor blackColor];
     self.labelDePontuacao.fontSize = 25.0f;
     self.labelDePontuacao.position = CGPointMake(870, 700);
     self.labelDePontuacao.zPosition = 2;
@@ -71,7 +72,7 @@
     [self addChild: self.labelDePontuacao];
     
     self.stringDeTempo = [[SKLabelNode alloc]init];
-    self.stringDeTempo.color = [UIColor blackColor];
+    self.stringDeTempo.fontColor = [UIColor blackColor];
     self.stringDeTempo.fontSize = 25.0f;
     self.stringDeTempo.position = CGPointMake(800, 670);
     self.stringDeTempo.zPosition = 2;
@@ -80,7 +81,7 @@
     [self addChild: self.stringDeTempo];
     
     self.labelDeTempo = [[SKLabelNode alloc]init];
-    self.labelDeTempo.color = [UIColor blackColor];
+    self.labelDeTempo.fontColor = [UIColor blackColor];
     self.labelDeTempo.fontSize = 25.0f;
     self.labelDeTempo.position = CGPointMake(870, 670);
     self.labelDeTempo.zPosition = 2;
@@ -108,11 +109,8 @@
                     self.tempoPercorrido -=1;
                     self.labelDeTempo.text = [NSString stringWithFormat: @"%d", self.tempoPercorrido];
                     self.auxTempoPercorrido = 0;
+                    if(self.tempoPercorrido == 0) self.tempoEncerrado = YES;
                     
-                }else{
-                    if (!self.escalaCerta){
-                        NSLog(@"Chama cena de GameOver!");
-                    }
                 }
             }
             
@@ -166,7 +164,7 @@
     }
     
 //CHECK
-    if ([checkNode.name isEqualToString: @"check"]) {
+    if ([checkNode.name isEqualToString: @"check"] && _tempoEncerrado) {
         
         
         for (SKSpriteNode *nota in self.listaDeNotasComPosicoes) {
@@ -270,8 +268,21 @@
         
         self.labelDePontuacao.text = [NSString stringWithFormat: @"%d", self.pontuacaoJogadorAtual];
         
-        if (!self.escalaCerta)
+        if (!self.escalaCerta){
             NSLog(@"Chama cena de GameOver!");
+        }else{
+            
+            self.botaoStartAndChek.name = @"start";
+            self.tempoEncerrado = NO;
+            self.tempoPercorrido = 0;
+            
+            for(SKSpriteNode *nota in self.listaDeNotasComPosicoes){
+                [nota removeFromParent];
+            }
+            
+            [self criaNotasMusicais];
+            
+        }
 
     }
     
@@ -428,10 +439,10 @@
     self.linhaDoPentagrama4 = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: CGSizeMake(800, 10)];
     self.linhaDoPentagrama5 = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: CGSizeMake(800, 10)];
     
-    self.espacoDoPentagrama1 = [SKSpriteNode spriteNodeWithColor:[UIColor redColor] size: CGSizeMake(800, 40)];
-    self.espacoDoPentagrama2 = [SKSpriteNode spriteNodeWithColor:[UIColor redColor] size: CGSizeMake(800, 40)];
-    self.espacoDoPentagrama3 = [SKSpriteNode spriteNodeWithColor:[UIColor redColor] size: CGSizeMake(800, 40)];
-    self.espacoDoPentagrama4 = [SKSpriteNode spriteNodeWithColor:[UIColor redColor] size: CGSizeMake(800, 40)];
+    self.espacoDoPentagrama1 = [SKSpriteNode spriteNodeWithColor:[UIColor whiteColor] size: CGSizeMake(800, 40)];
+    self.espacoDoPentagrama2 = [SKSpriteNode spriteNodeWithColor:[UIColor whiteColor] size: CGSizeMake(800, 40)];
+    self.espacoDoPentagrama3 = [SKSpriteNode spriteNodeWithColor:[UIColor whiteColor] size: CGSizeMake(800, 40)];
+    self.espacoDoPentagrama4 = [SKSpriteNode spriteNodeWithColor:[UIColor whiteColor] size: CGSizeMake(800, 40)];
     
     [pentagrama addChild: self.linhaDoPentagrama1];
     [pentagrama addChild: self.linhaDoPentagrama2];

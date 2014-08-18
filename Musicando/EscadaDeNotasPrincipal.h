@@ -62,6 +62,7 @@ static const UInt32 fundo = 0x1 << 7;
 
 //Auxiliares
 @property int estadoPauseJogo;
+@property BOOL tempoEncerrado;
 @property BOOL escalaCerta;
 
 @property NSMutableArray *listaDeNotasComPosicoes;

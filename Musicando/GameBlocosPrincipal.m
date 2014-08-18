@@ -26,7 +26,7 @@
         self.pontuacaoJogadorAtual = 0;
         
         //Inicia com velocidade padrão do guindaste
-        self.velocidadeGuindaste = 10;
+        self.velocidadeGuindaste = 1;
         
         //Inicia lista de notas e indice para sorteio
         self.listaDeNotas = [[NSArray alloc] initWithObjects: @"Dó", @"Ré", @"Mi", @"Fá", @"Sol", @"Lá", @"Si", @"Dor", @"Rir", @"Mou", @"Fê", @"Sou", @"Lú", @"Sir", nil];
@@ -55,30 +55,30 @@
 
 //Configura as labels de pontuação
     self.stringDePontuacao = [[SKLabelNode alloc]init];
-    self.stringDePontuacao.color = [UIColor redColor];
+    self.stringDePontuacao.fontColor = [UIColor redColor];
     self.stringDePontuacao.fontSize = 40.0f;
     self.stringDePontuacao.position = CGPointMake(120, 670);
     self.stringDePontuacao.zPosition = 2;
     self.stringDePontuacao.text = @"Pontuação: ";
-    self.stringDePontuacao.fontName = @"Helvetica";
+    self.stringDePontuacao.fontName = @"Marker Felt Thin";
     [self addChild: self.stringDePontuacao];
 
     self.labelDePontuacao = [[SKLabelNode alloc]init];
-    self.labelDePontuacao.color = [UIColor blackColor];
+    self.labelDePontuacao.fontColor = [UIColor blackColor];
     self.labelDePontuacao.fontSize = 40.0f;
     self.labelDePontuacao.position = CGPointMake(250, 670);
     self.labelDePontuacao.zPosition = 2;
     self.labelDePontuacao.text = @"0";
-    self.labelDePontuacao.fontName = @"Helvetica";
+    self.labelDePontuacao.fontName = @"Marker Felt Thin";
     [self addChild: self.labelDePontuacao];
     
     //Adiciona a nota e sua label o nome sorteado
     self.nomeDaNota = [[SKLabelNode alloc]init];
-    self.nomeDaNota.color = [UIColor redColor];
+    self.nomeDaNota.fontColor = [UIColor redColor];
     self.nomeDaNota.fontSize = 40.0f;
     self.nomeDaNota.position = CGPointMake(90, 720);
     self.nomeDaNota.zPosition = 2;
-    self.nomeDaNota.fontName = @"Helvetica";
+    self.nomeDaNota.fontName = @"Marker Felt Thin";
     //Adiciona a nota e sua label o nome sorteado
     self.nomeDaNota.text = [NSString stringWithFormat:@"Nota: %@", [self.listaDeNotas objectAtIndex: self.indiceNotaSorteada]];
     [self addChild: self.nomeDaNota];
@@ -379,7 +379,7 @@
 
         //Cria testura do guindaste
     SKTexture *texturaNota = [SKTexture textureWithImageNamed: @"siBloco.png"];
-    self.blocoNotaPrincipal = [SKSpriteNode spriteNodeWithTexture: texturaNota size: CGSizeMake(50, 50)];
+    self.blocoNotaPrincipal = [SKSpriteNode spriteNodeWithTexture: texturaNota size: CGSizeMake(100, 100)];
     self.blocoNotaPrincipal.zPosition = 3;
     
     [self acaoMoverDireitaEsquerda: blocoNota :self.velocidadeGuindaste];
@@ -484,10 +484,5 @@
     return animationSheet;
 }
 
-//-(void)gameOver{
-//    GameOver *over = [[GameOver alloc]initWithSize:CGSizeMake(384,512)];
-//    SKTransition *animate = [SKTransition fadeWithDuration:1.0f];
-//    [self.view presentScene: over transition:animate];
-//}
 
 @end
