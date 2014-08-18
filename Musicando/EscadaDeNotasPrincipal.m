@@ -64,7 +64,7 @@
 //Configura as labels de pontuação
     self.stringDePontuacao = [[SKLabelNode alloc]init];
     self.stringDePontuacao.fontColor = [UIColor blackColor];
-    self.stringDePontuacao.fontSize = 25.0f;
+    self.stringDePontuacao.fontSize = 50.0f;
     self.stringDePontuacao.position = CGPointMake(800, 700);
     self.stringDePontuacao.zPosition = 2;
     self.stringDePontuacao.text = @"Pontuação: ";
@@ -73,8 +73,8 @@
     
     self.labelDePontuacao = [[SKLabelNode alloc]init];
     self.labelDePontuacao.fontColor = [UIColor blackColor];
-    self.labelDePontuacao.fontSize = 25.0f;
-    self.labelDePontuacao.position = CGPointMake(870, 700);
+    self.labelDePontuacao.fontSize = 50.0f;
+    self.labelDePontuacao.position = CGPointMake(940, 700);
     self.labelDePontuacao.zPosition = 2;
     self.labelDePontuacao.text = [NSString stringWithFormat: @"%d", self.pontuacaoJogadorAtual];
     self.labelDePontuacao.fontName = @"Marker Felt Thin";
@@ -82,8 +82,8 @@
     
     self.stringDeTempo = [[SKLabelNode alloc]init];
     self.stringDeTempo.fontColor = [UIColor blackColor];
-    self.stringDeTempo.fontSize = 25.0f;
-    self.stringDeTempo.position = CGPointMake(800, 670);
+    self.stringDeTempo.fontSize = 50.0f;
+    self.stringDeTempo.position = CGPointMake(840, 650);
     self.stringDeTempo.zPosition = 2;
     self.stringDeTempo.text = @"Tempo:";
     self.stringDeTempo.fontName = @"Marker Felt Thin";
@@ -91,8 +91,8 @@
     
     self.labelDeTempo = [[SKLabelNode alloc]init];
     self.labelDeTempo.fontColor = [UIColor blackColor];
-    self.labelDeTempo.fontSize = 25.0f;
-    self.labelDeTempo.position = CGPointMake(870, 670);
+    self.labelDeTempo.fontSize = 50.0f;
+    self.labelDeTempo.position = CGPointMake(940, 650);
     self.labelDeTempo.zPosition = 2;
     self.labelDeTempo.text = [NSString stringWithFormat: @"%d", self.tempoPercorrido];
     self.labelDeTempo.fontName = @"Marker Felt Thin";
