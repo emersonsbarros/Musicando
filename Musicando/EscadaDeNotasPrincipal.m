@@ -22,7 +22,7 @@
         self.estadoPauseJogo = 0;
         self.escalaCerta = NO;
         
-        self.tempoPercorrido = 20;
+        self.tempoPercorrido = 0;
         self.auxTempoPercorrido = 0;
         self.pontuacaoJogadorAtual = 0;
         
@@ -102,20 +102,24 @@
 
         if (self.auxTempoPercorrido == 30) {
             
-            if (self.tempoPercorrido > 0) {
-            
-                self.tempoPercorrido -=1;
-                self.labelDeTempo.text = [NSString stringWithFormat: @"%d", self.tempoPercorrido];
-            
-                self.auxTempoPercorrido = 0;
-            }else{
-                
-                if (!self.escalaCerta)
-                    NSLog(@"Chama cena de GameOver!");
-                
+            if ([self.botaoStartAndChek.name isEqualToString: @"check"]) {
+                if (self.tempoPercorrido > 0) {
+                    
+                    self.tempoPercorrido -=1;
+                    self.labelDeTempo.text = [NSString stringWithFormat: @"%d", self.tempoPercorrido];
+                    self.auxTempoPercorrido = 0;
+                    
+                }else{
+                    if (!self.escalaCerta){
+                        NSLog(@"Chama cena de GameOver!");
+                    }
+                }
             }
+            
+            self.auxTempoPercorrido = 0;
+
         }
-    }    
+    }
     
 }
 
@@ -136,39 +140,6 @@
         primeiroCorpoFisico = contact.bodyB;
         segundoCorpoFisico = contact.bodyA;
     }
-    
-    
-    //VERIFICADOR DAS COLISÕES
-    if ((primeiroCorpoFisico.categoryBitMask & nota) != 0) {
-        
-        //Verifica se o bloco colidiu com tocaTreco
-        if((segundoCorpoFisico.categoryBitMask & linha) != 0){
-            
-            //NOTAS CERTAS
-            if([self.notaMusicalPrincipal.name isEqualToString:@"Dó"]){
-                
-                //NOTAS ERRADAS
-            }else if([self.notaMusicalPrincipal.name isEqualToString:@"Dó"]){
-                
-            }
-            //COLISAO NO CHÃO
-        }else{
-            
-            if((segundoCorpoFisico.categoryBitMask & espaco) != 0){
-                
-                //NOTAS CERTAS
-                }if([self.notaMusicalPrincipal.name isEqualToString:@"Dó"]){
-                    
-                
-                //NOTAS ERRADAS
-                }else if([self.notaMusicalPrincipal.name isEqualToString:@"Dó"]){
-                    
-                }
-        }
-        
-        
-    }
-    
     
 }
 
@@ -205,7 +176,7 @@
             //1a LINHA SUPLEMENTAR
             if ([nota.name isEqualToString: @"Do"]) {
                 NSLog(@"%f", nota.position.y);
-                if (nota.position.y > 100 && nota.position.y < 100) {
+                if (nota.position.y >= 235 && nota.position.y <= 255) {
                     NSLog(@"Do errado");
                     self.pontuacaoJogadorAtual += 10;
                     _escalaCerta = YES;
@@ -217,11 +188,10 @@
             
             //1o ESPACO SUPLEMENTAR
             if ([nota.name isEqualToString: @"Re"]) {
-                if (nota.position.y > 100 && nota.position.y < 100) {
+                if (nota.position.y >= 260 && nota.position.y <= 280) {
                     NSLog(@"Re errado");
                     self.pontuacaoJogadorAtual += 10;
                     _escalaCerta = YES;
-
 
                 }else{
                     _escalaCerta = NO;
@@ -545,11 +515,6 @@
     [self addChild: _botaoStartAndChek];
 }
 
-//-(void)gameOver{
-//    GameOver *over = [[GameOver alloc]initWithSize:CGSizeMake(384,512)];
-//    SKTransition *animate = [SKTransition fadeWithDuration:1.0f];
-//    [self.view presentScene: over transition:animate];
-//}
 
 
 @end
