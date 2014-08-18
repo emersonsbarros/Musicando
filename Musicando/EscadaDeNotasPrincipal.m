@@ -232,7 +232,7 @@
             //1a LINHA
             if ([nota.name isEqualToString: @"Mi"]) {
                 NSLog(@"%f", nota.position.y);
-                if (nota.position.y >= 500 && nota.position.y <= 510) {
+                if (nota.position.y >= 285 && nota.position.y <= 105) {
                     NSLog(@"Mi certo");
                     self.pontuacaoJogadorAtual += 10;
                     _escalaCerta = YES;
@@ -246,7 +246,7 @@
             //1o ESPACO
             if ([nota.name isEqualToString: @"Fa"]) {
                 NSLog(@"%f", nota.position.y);
-                if (nota.position.y >= 475 && nota.position.y <= 495) {
+                if (nota.position.y >= 310 && nota.position.y <= 330) {
                     NSLog(@"FA certo");
                     self.pontuacaoJogadorAtual += 10;
                     _escalaCerta = YES;
@@ -259,7 +259,7 @@
             //2a LINHA
             if ([nota.name isEqualToString: @"Sol"]) {
                 NSLog(@"%f", nota.position.y);
-                if (nota.position.y >= 450 && nota.position.y <= 460) {
+                if (nota.position.y >= 340 && nota.position.y <= 360) {
                     NSLog(@"SOL certo");
                     self.pontuacaoJogadorAtual += 10;
                     _escalaCerta = YES;
@@ -273,7 +273,7 @@
             if ([nota.name isEqualToString: @"La"]) {
                 NSLog(@"%f", nota.position.y);
 
-                if (nota.position.y >= 425 && nota.position.y <= 465) {
+                if (nota.position.y >= 360 && nota.position.y <= 380) {
                     NSLog(@"LA certo");
                     self.pontuacaoJogadorAtual += 10;
                     _escalaCerta = YES;
@@ -287,7 +287,7 @@
             if ([nota.name isEqualToString: @"Si"]) {
                 NSLog(@"%f", nota.position.y);
 
-                if (nota.position.y >= 400 && nota.position.y <= 410) {
+                if (nota.position.y >= 390 && nota.position.y <= 410) {
                     NSLog(@"SI certo");
                     self.pontuacaoJogadorAtual += 10;
                     _escalaCerta = YES;
@@ -340,7 +340,6 @@
 //MOVIMENTO DIREITA ESQUERDA
 -(void)acaoMoverDireitaEsquerda: (SKNode*)node :(int)duracao{
     
-    //Antigos: 212 - 812
     SKAction *moverPraEsquerda = [SKAction moveTo: CGPointMake(312, node.position.y) duration: duracao];
     SKAction *moverPraDireita = [SKAction moveTo: CGPointMake(912, node.position.y) duration: duracao];
     SKAction *movimentoCompleto = [SKAction sequence: @[moverPraEsquerda, moverPraDireita]];
@@ -417,10 +416,10 @@
         SKTexture *texturaNota = [SKTexture textureWithImageNamed: [NSString stringWithFormat: @"%@.png", _notaMusicalPrincipal.name]];
 
         _notaMusicalPrincipal.texture = texturaNota;
-        _notaMusicalPrincipal.size = CGSizeMake(50, 60);
+        _notaMusicalPrincipal.size = CGSizeMake(40, 40);
         
         //Cria o corpo físico do bloco
-        self.notaMusicalPrincipal.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(50, 60)];
+        self.notaMusicalPrincipal.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(40, 40)];
         self.notaMusicalPrincipal.physicsBody.dynamic = YES;
         self.notaMusicalPrincipal.physicsBody.affectedByGravity = NO;
         self.notaMusicalPrincipal.physicsBody.density = 0.2f;
