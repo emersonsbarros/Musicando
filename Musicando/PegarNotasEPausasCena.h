@@ -11,12 +11,17 @@
 #import <SpriteKit/SpriteKit.h>
 
 //CONSTANSTES para colisão
-static const UInt32 mascote = 0x1 << 0;
+static const UInt32 mascoteCategoria = 0x1 << 0;
 static const UInt32 simboloMusicalCorreto = 0x1 << 1;
 static const UInt32 simboloMusicalErrado = 0x1 << 2;
-static const UInt32 piso = 0x1 << 2;
+static const UInt32 pisoCategoria = 0x1 << 2;
 
 @interface PegarNotasEPausasCena : SKScene <SKPhysicsContactDelegate>{
+    SKNode *piso;
+    
+    SKNode *simbolo1;
+    SKNode *simbolo2;
+    SKNode *simbolo3;
 }
 
 //Sprites & Nodes
@@ -25,7 +30,7 @@ static const UInt32 piso = 0x1 << 2;
 @property SKSpriteNode *simboloMusicalPraCair3;
 
 @property SKSpriteNode *fundo;
-@property SKSpriteNode *piso;
+@property SKSpriteNode *pisoPrincipal;
 @property SKSpriteNode *mascote;
 @property SKSpriteNode *botaoEsquerda;
 @property SKSpriteNode *botaoDireita;
@@ -45,6 +50,7 @@ static const UInt32 piso = 0x1 << 2;
 
 @property int indiceSimboloAtualSorteado;
 @property int indiceParaSorteio;
+@property int indiceSortearCerto;
 
 @property int estadoPauseJogo;
 @property int tempoPercorrido;
