@@ -46,6 +46,7 @@ static const UInt32 pisoCategoria = 0x1 << 2;
 
 @property NSString *simboloMusicalAtual;
 @property float densidadeAtual;
+@property float gravidadeAtual;
 
 @property int indiceSimboloAtualSorteado;
 @property int indiceParaSorteio;

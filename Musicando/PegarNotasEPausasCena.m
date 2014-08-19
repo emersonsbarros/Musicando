@@ -16,6 +16,7 @@
     if (self = [super initWithSize: size]){
         
     //Configura física do mundo
+        self.gravidadeAtual = -0.05;
         self.physicsWorld.contactDelegate = self;
         self.physicsWorld.gravity = CGVectorMake(0, GRAVIDADE_MUNDO);
         
@@ -114,15 +115,22 @@
             
             //A cada 10 segundos cria novos simbolos
             if (self.tempoPercorrido % 10 == 0) {
-//                [self simboloPraCair1];
-//                [self simboloPraCair2];
-//                [self simboloPraCair3];
+                [self simboloPraCair1];
+                [self simboloPraCair2];
+                [self simboloPraCair3];
             }
             
             //A cada 1 min troca o simbolo pedido e aumenta densidade
             if (self.tempoPercorrido % 60 == 0) {
                 [self sortearSimboloAtual];
             }
+            
+            //A cada 2 min aumenta gravidade
+            if (self.tempoPercorrido % 120 == 0) {
+                self.physicsWorld.gravity = CGVectorMake(0, self.physicsWorld.gravity.dy+0.01);
+            }
+            
+
 
         self.tempoPercorrido++;
         self.auxTempoPercorrido = 0;
@@ -177,7 +185,9 @@
         
         
         //COLISAO NO CHÃO
-        }else if((segundoCorpoFisico.categoryBitMask & pisoCategoria)!= 0){
+        }else{
+            
+            if((segundoCorpoFisico.categoryBitMask & pisoCategoria)!= 0){
             
                 //NOTAS CERTAS
                 if([simbolo.name isEqual: [self simboloMusicalAtual]]){
@@ -195,7 +205,7 @@
                     self.labelDePontuacao.text = [NSString stringWithFormat: @"%d", self.pontuacaoJogadorAtual];
                    
                 }
-            
+            }
         }
         
         
@@ -400,7 +410,7 @@
     _mascotePrincipal.size = CGSizeMake(100, 100);
     
 //Cria o corpo físico do bloco
-    mascote.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(100, 30)];
+    mascote.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(100, 90)];
     mascote.physicsBody.dynamic = YES;
     mascote.physicsBody.affectedByGravity = NO;
     mascote.physicsBody.density = 0.2f;
@@ -446,18 +456,19 @@
 //Cria testura do piso
     SKTexture *texturaPiso = [SKTexture textureWithImageNamed: @"chao.png"];
     self.pisoPrincipal = [SKSpriteNode spriteNodeWithTexture:texturaPiso size: CGSizeMake(2400, 50)];
+    self.pisoPrincipal.alpha = 0.3;
     
 //Cria o corpo físico do piso
-    self.pisoPrincipal.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.pisoPrincipal.size];
-    self.pisoPrincipal.physicsBody.dynamic = NO;
-    self.pisoPrincipal.physicsBody.affectedByGravity = NO;
-    self.pisoPrincipal.physicsBody.allowsRotation = NO;
-    self.pisoPrincipal.physicsBody.density = 0.6f;
-    self.pisoPrincipal.physicsBody.restitution = 0;
+    piso.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.pisoPrincipal.size];
+    piso.physicsBody.dynamic = NO;
+    piso.physicsBody.affectedByGravity = NO;
+    piso.physicsBody.allowsRotation = NO;
+    piso.physicsBody.density = 0.6f;
+    piso.physicsBody.restitution = 0;
     
 //Configuração colisão do corpo físico do piso
-    self.pisoPrincipal.physicsBody.categoryBitMask = pisoCategoria;
-    self.pisoPrincipal.physicsBody.contactTestBitMask = simboloMusicalCorreto;
+    piso.physicsBody.categoryBitMask = pisoCategoria;
+    piso.physicsBody.contactTestBitMask = simboloMusicalCorreto;
     
 //Adiciona a textura ao nó, e o nó a cena
     [piso addChild: self.pisoPrincipal];
