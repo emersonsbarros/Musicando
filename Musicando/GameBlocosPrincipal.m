@@ -146,8 +146,8 @@
 //COLISÃO TOCATRECO
         if((segundoCorpoFisico.categoryBitMask & tocaTrecoCategoria) != 0){
             
-            
-            if ((blocoNota.position.y > _base.position.y+5) && (blocoNota.position.x >= 350 && blocoNota.position.x <= 655)) {
+            NSLog(@"Pos %fx - %fy", blocoNota.position.x, blocoNota.position.y);
+            if (((blocoNota.position.y <= 600) && (blocoNota.position.x >= 300 && blocoNota.position.x <= 755))) {
 
             //NOTAS CERTAS
                 if([blocoNota.name isEqualToString:@"Dó"] || [blocoNota.name isEqualToString:@"Ré"] || [blocoNota.name isEqualToString:@"Mi"] || [blocoNota.name isEqualToString:@"Fá"] || [blocoNota.name isEqualToString:@"Sol"] || [blocoNota.name isEqualToString:@"Lá"] || [blocoNota.name isEqualToString:@"Si"]){
@@ -172,20 +172,21 @@
                 }else if([blocoNota.name isEqualToString:@"Dor"] || [blocoNota.name isEqualToString:@"Rir"] || [blocoNota.name isEqualToString:@"Mou"] || [blocoNota.name isEqualToString:@"Fê"] || [blocoNota.name isEqualToString:@"Sou"] || [blocoNota.name isEqualToString:@"Lú"] || [blocoNota.name isEqualToString:@"Sir"]){
                 
                 NSLog(@"Colidiu nota errada com tocatreco - %@", blocoNota.name);
-                [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(gameOver) userInfo:nil repeats:NO];
+                [NSTimer scheduledTimerWithTimeInterval: 1.0 target:self selector:@selector(gameOver) userInfo:nil repeats:NO];
 
                 }
             }
 //COLISAO NO CHÃO
         }else if((segundoCorpoFisico.categoryBitMask & pisoCategoria)!=0){
             
-             if (blocoNota.position.y > piso.position.y+5 && ((blocoNota.position.x <= 340) || (blocoNota.position.x >= 705))){
+            NSLog(@"Pos %fx - %fy", blocoNota.position.x, blocoNota.position.y);
+             if (blocoNota.position.y <= 600 && ((blocoNota.position.x <= 915) || (blocoNota.position.x >= 670))){
             
                 //NOTAS CERTAS
                  if([blocoNota.name isEqualToString:@"Dó"] || [blocoNota.name isEqualToString:@"Ré"] || [blocoNota.name isEqualToString:@"Mi"] || [blocoNota.name isEqualToString:@"Fá"] || [blocoNota.name isEqualToString:@"Sol"] || [blocoNota.name isEqualToString:@"Lá"] || [blocoNota.name isEqualToString:@"Si"]){
                 
                     NSLog(@"Colidiu com o chão nota certa - %@", blocoNota.name);
-                    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(gameOver) userInfo:nil repeats:NO];
+                    [NSTimer scheduledTimerWithTimeInterval: 1.0 target:self selector:@selector(gameOver) userInfo:nil repeats:NO];
             
                 //NOTAS ERRADAS
                  }else if([blocoNota.name isEqualToString:@"Dor"] || [blocoNota.name isEqualToString:@"Rir"] || [blocoNota.name isEqualToString:@"Mou"] || [blocoNota.name isEqualToString:@"Fê"] || [blocoNota.name isEqualToString:@"Sou"] || [blocoNota.name isEqualToString:@"Lú"] || [blocoNota.name isEqualToString:@"Sir"]){
@@ -203,7 +204,7 @@
                         [self sortearNota];
                     
                         //Aguarda alguns segundos até criar um novo
-                        [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(criaBlocoNotaMusical) userInfo:nil repeats:NO];
+                        [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(criaBlocoNotaMusical) userInfo:nil repeats:NO];
                         [[self botaoCairNota] setAlpha: 1];
 
                 }
@@ -363,7 +364,10 @@
     [corpoParaColisaoDoTocaTreco addChild: _base];
     [self addChild: corpoParaColisaoDoTocaTreco];
 
-    
+    NSLog(@"COLUNA1 Pos %fx - %fy", _coluna1.position.x, _coluna1.position.y);
+    NSLog(@"COLUNA2 Pos %fx - %fy", _coluna2.position.x, _coluna2.position.y);
+    NSLog(@"BASE Pos %fx - %fy", _base.position.x, _base.position.y);
+
 //IMAGEM TOCATRECO
     self.tocaTrecoPrincipal = [[SKSpriteNode alloc]init];
     self.tocaTrecoPrincipal.name = @"TocaTreco";
@@ -374,7 +378,7 @@
     //Cria testura do guindaste
     SKTexture *texturaTocaTreco = [SKTexture textureWithImageNamed: @"bocaDoTocaTreco.png"];
     self.tocaTrecoPrincipal.texture = texturaTocaTreco;
-    self.tocaTrecoPrincipal.alpha = 0.3;
+//    self.tocaTrecoPrincipal.alpha = 0.3;
     
     [self addChild: self.tocaTrecoPrincipal];
 
@@ -415,7 +419,7 @@
     NSLog(@"%@", blocoNota.name);
     
     //Cria o corpo físico do bloco
-    self.blocoNotaPrincipal.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(120, 122)];
+    self.blocoNotaPrincipal.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.blocoNotaPrincipal.size];
     self.blocoNotaPrincipal.physicsBody.dynamic = YES;
     self.blocoNotaPrincipal.physicsBody.affectedByGravity = YES;
     self.blocoNotaPrincipal.physicsBody.allowsRotation = YES;
@@ -425,13 +429,10 @@
     
     /* Se a nota sorteada estiver entre as sete 1as, ela recebe a categoria de nota certa
      Do contrário será uma nota da categoria errada */
-    if (self.indiceNotaSorteada < 7)
-        self.blocoNotaPrincipal.physicsBody.categoryBitMask = blocoNotaCorreta;
-    else
-        self.blocoNotaPrincipal.physicsBody.categoryBitMask = blocoNotaCorreta;
+    self.blocoNotaPrincipal.physicsBody.categoryBitMask = blocoNotaCorreta;
     
     //Configura com quais categorias terá colisão
-    self.blocoNotaPrincipal.physicsBody.contactTestBitMask = pisoCategoria | tocaTrecoCategoria;
+    self.blocoNotaPrincipal.physicsBody.contactTestBitMask = pisoCategoria | tocaTrecoCategoria | coluna;
     
     
     //Remove os nós dos pais e adiciona novamente com a física
