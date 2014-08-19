@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
 #import "PegarNotasEPausasCena.h"
-#define GRAVIDADE_MUNDO -0.0005
+#define GRAVIDADE_MUNDO -1
 
 
 @implementation PegarNotasEPausasCena
@@ -95,8 +95,8 @@
 
 //Simbolos
     [self simboloPraCair1];
-    [self simboloPraCair2];
-    [self simboloPraCair3];
+//    [self simboloPraCair2];
+//    [self simboloPraCair3];
 }
 
 
@@ -266,7 +266,7 @@
     self.simboloMusicalPraCair1.texture = textura;
     
 //Cria o corpo físico
-    self.simboloMusicalPraCair1.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(100, 100)];
+    self.simboloMusicalPraCair1.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.simboloMusicalPraCair1.size];
     self.simboloMusicalPraCair1.physicsBody.dynamic = YES;
     self.simboloMusicalPraCair1.physicsBody.affectedByGravity = YES;
     self.simboloMusicalPraCair1.physicsBody.density = self.densidadeAtual;
@@ -297,7 +297,7 @@
     self.simboloMusicalPraCair2.texture = textura;
     
 //Cria o corpo físico
-    self.simboloMusicalPraCair2.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(100, 100)];
+    self.simboloMusicalPraCair2.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.simboloMusicalPraCair2.size];
     self.simboloMusicalPraCair2.physicsBody.dynamic = YES;
     self.simboloMusicalPraCair2.physicsBody.affectedByGravity = YES;
     self.simboloMusicalPraCair2.physicsBody.density = self.densidadeAtual;
@@ -328,7 +328,7 @@
     self.simboloMusicalPraCair3.texture = textura;
     
 //Cria o corpo físico
-    self.simboloMusicalPraCair3.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(100, 100)];
+    self.simboloMusicalPraCair3.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.simboloMusicalPraCair3.size];
     self.simboloMusicalPraCair3.physicsBody.dynamic = YES;
     self.simboloMusicalPraCair3.physicsBody.affectedByGravity = YES;
     self.simboloMusicalPraCair3.physicsBody.density = self.densidadeAtual;
@@ -351,7 +351,7 @@
 //Incia
     _mascote = [[SKSpriteNode alloc] init];
     _mascote.position = CGPointMake(512, 100);
-    _mascote.zPosition = 6;
+    _mascote.zPosition = 5;
     _mascote.name = @"mascote";
     
 //Posicao e img
@@ -401,23 +401,20 @@
     self.piso = [[SKSpriteNode alloc]init];
     self.piso.name = @"piso";
     self.piso.position = CGPointMake(512, 10);
+    self.piso.zPosition = 5;
     
 //Cria testura do piso
-    SKTexture *texturaPiso = [SKTexture textureWithImageNamed: @"chao.png"];
+    SKTexture *texturaPiso = [SKTexture textureWithImageNamed: @"pisoPedra.png"];
     self.piso.texture = texturaPiso;
     self.piso.size = CGSizeMake(1200, 50);
     
 //Cria o corpo físico do piso
-    self.piso.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(1200, 50)];
+    self.piso.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.piso.size];
     self.piso.physicsBody.dynamic = NO;
-    self.piso.physicsBody.affectedByGravity = NO;
-    self.piso.physicsBody.allowsRotation = NO;
-    self.piso.physicsBody.density = 50;
-    self.piso.physicsBody.restitution = 0;
     
 //Configuração colisão do corpo físico do piso
     self.piso.physicsBody.categoryBitMask = piso;
-    //self.piso.physicsBody.contactTestBitMask = simboloMusicalCorreto | simboloMusicalErrado;
+    self.piso.physicsBody.contactTestBitMask = simboloMusicalCorreto | simboloMusicalErrado;
     
 //Adiciona a textura ao nó, e o nó a cena
     [self addChild: self.piso];

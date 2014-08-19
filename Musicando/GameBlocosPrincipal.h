@@ -13,7 +13,9 @@
 static const UInt32 blocoNotaCorreta = 0x1 << 0;
 static const UInt32 pisoCategoria = 0x1 << 1;
 static const UInt32 guindasteCategoria = 0x1 << 2;
+
 static const UInt32 tocaTrecoCategoria = 0x1 << 3;
+static const UInt32 coluna = 0x1 << 4;
 
 
 
