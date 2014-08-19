@@ -491,10 +491,10 @@
 -(SKSpriteNode*)criaBotaoEsquerda{
     
     _botaoEsquerda = [[SKSpriteNode alloc] init];
-    _botaoEsquerda = [SKSpriteNode spriteNodeWithImageNamed:@"buttonMagic.png"];
+    _botaoEsquerda = [SKSpriteNode spriteNodeWithImageNamed:@"botaoEsquerda.png"];
     
-    _botaoEsquerda.position = CGPointMake(100, 200);
-    _botaoEsquerda.size = CGSizeMake(50, 0);
+    _botaoEsquerda.position = CGPointMake(100, 100);
+    _botaoEsquerda.size = CGSizeMake(200, 200);
     _botaoEsquerda.name = @"botaoEsquerda";
     _botaoEsquerda.zPosition = +5.0;
     
