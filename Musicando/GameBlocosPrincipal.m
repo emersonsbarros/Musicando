@@ -367,21 +367,6 @@
     NSLog(@"COLUNA1 Pos %fx - %fy", _coluna1.position.x, _coluna1.position.y);
     NSLog(@"COLUNA2 Pos %fx - %fy", _coluna2.position.x, _coluna2.position.y);
     NSLog(@"BASE Pos %fx - %fy", _base.position.x, _base.position.y);
-
-//IMAGEM TOCATRECO
-    self.tocaTrecoPrincipal = [[SKSpriteNode alloc]init];
-    self.tocaTrecoPrincipal.name = @"TocaTreco";
-    self.tocaTrecoPrincipal.size = CGSizeMake(840, 420);
-    self.tocaTrecoPrincipal.position = CGPointMake(550, 100);
-    self.tocaTrecoPrincipal.zPosition = 5;
-    
-    //Cria testura do guindaste
-    SKTexture *texturaTocaTreco = [SKTexture textureWithImageNamed: @"bocaDoTocaTreco.png"];
-    self.tocaTrecoPrincipal.texture = texturaTocaTreco;
-//    self.tocaTrecoPrincipal.alpha = 0.3;
-    
-    [self addChild: self.tocaTrecoPrincipal];
-
 }
 
 
