@@ -5,7 +5,6 @@
 //  Created by Emerson Barros on 18/08/14.
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
-
 #import "PegarNotasEPausasCena.h"
 #define GRAVIDADE_MUNDO -10
 
@@ -16,30 +15,32 @@
     
     if (self = [super initWithSize: size]){
         
-        //Configura física do mundo
+    //Configura física do mundo
         self.physicsWorld.contactDelegate = self;
         self.physicsWorld.gravity = CGVectorMake(0, GRAVIDADE_MUNDO);
         
-        //Inicia zerado auxiliar para pausa, contadores de tempo e pontuação
+    //Inicia zerado auxiliar para pausa, contadores de tempo e pontuação
+        self.simboloMusicalAtual = @"";
         self.estadoPauseJogo = 0;
-        
         self.tempoPercorrido = 0;
         self.auxTempoPercorrido = 0;
         self.pontuacaoJogadorAtual = 0;
-        
-        //Inicia lista de notas e indice para sorteio
-        self.listaDeSimbolosMusicais = [[NSMutableArray alloc] initWithObjects: @"Do", @"Re", @"Mi", @"Fa", @"Sol", @"La", @"Si", @"P4", @"P2", @"P1", @"P12", @"P14", @"P18", @"P16", nil];
         self.indiceSimboloSorteado = 0;
+        
         self.quantidadeMovimentoEsquerda = 1;
         self.quantidadeMovimentoDireita = 1;
         
-        //Inicia primeiros nós
+    //Inicia lista de notas e indice para sorteio
+        self.listaDeSimbolosMusicais = [[NSMutableArray alloc] initWithObjects: @"N4", @"N2", @"N1", @"N12", @"N14", @"N18", @"N116", @"P4", @"P2", @"P1", @"P12", @"P14", @"P18", @"P116", nil];
+        
+        self.listaNomeDosSimbolosMusicais = [[NSMutableArray alloc] initWithObjects: @"semibreve", @"miníma", @"seminíma", @"colcheia", @"semicolcheia", @"fusa", @"semifusa", @"pausa 4", @"pausa 2", @"pausa 1", @"pausa 1/2", @"pausa 1/4", @"pausa 1/8", @"pausa 1/16", nil];
+        
+    //Inicia primeiros nós
         [self carregarPrimeirosComponentes];
     }
     
     return self;
 }
-
 
 
 -(void)carregarPrimeirosComponentes{
@@ -71,10 +72,28 @@
     self.labelDePontuacao.text = [NSString stringWithFormat: @"%d", self.pontuacaoJogadorAtual];
     self.labelDePontuacao.fontName = @"Marker Felt Thin";
     [self addChild: self.labelDePontuacao];
+    
+    self.stringDeSimboloMusical = [[SKLabelNode alloc]init];
+    self.stringDeSimboloMusical.fontColor = [UIColor blackColor];
+    self.stringDeSimboloMusical.fontSize = 50.0f;
+    self.stringDeSimboloMusical.position = CGPointMake(840, 650);
+    self.stringDeSimboloMusical.zPosition = 2;
+    self.stringDeSimboloMusical.text = @"Símbolo: ";
+    self.stringDeSimboloMusical.fontName = @"Marker Felt Thin";
+    [self addChild: self.stringDeSimboloMusical];
+    
+    self.labelDeSimboloMusical = [[SKLabelNode alloc]init];
+    self.labelDeSimboloMusical.fontColor = [UIColor blackColor];
+    self.labelDeSimboloMusical.fontSize = 50.0f;
+    self.labelDeSimboloMusical.position = CGPointMake(940, 650);
+    self.labelDeSimboloMusical.zPosition = 2;
+    self.labelDeSimboloMusical.text = self.simboloMusicalAtual;
+    self.labelDeSimboloMusical.fontName = @"Marker Felt Thin";
+    [self addChild: self.labelDeSimboloMusical];
 }
 
 
-/////////////////////////////////////////////////////// UPDATE DO TEMPO ////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////// UPDATE DO TEMPO ////////////////////////////////////////////////
 
 -(void)update:(CFTimeInterval)currentTime{
 }
@@ -97,6 +116,9 @@
         segundoCorpoFisico = contact.bodyA;
     }
     
+    
+    
+    
 }
 
 
@@ -108,11 +130,14 @@
     CGPoint location = [touch locationInNode:self];
     SKNode *node = [self nodeAtPoint: location];
     
+    
 //Botão direita
     if ([node.name isEqualToString:@"botaoDireita"]) {
         
         //Ate 2 movimentos
         if (self.quantidadeMovimentoDireita < 2) {
+            self.botaoDireita.alpha = 0;
+            
             [self acaoMoverDireita: _mascote];
             self.quantidadeMovimentoDireita++;
             
@@ -125,6 +150,8 @@
         
         //Ate 2 movimentos
         if (self.quantidadeMovimentoEsquerda < 2) {
+            self.botaoEsquerda.alpha = 0;
+            
             [self acaoMoverEsquerda: _mascote];
             self.quantidadeMovimentoEsquerda++;
             
@@ -132,6 +159,7 @@
                 self.quantidadeMovimentoDireita--;
         }
     }
+    
     
 }
 
@@ -242,13 +270,18 @@
 
 //MOVIMENTO DIREITA ESQUERDA
 -(void)acaoMoverDireita: (SKNode*)node{
-    SKAction *moverPraDireita = [SKAction moveTo: CGPointMake(node.position.x+200, node.position.y) duration: 2];
+    SKAction *moverPraDireita = [SKAction moveTo: CGPointMake(node.position.x+200, node.position.y) duration: 1.5];
     [node runAction: moverPraDireita];
+    
+    self.botaoDireita.alpha = 1;
+
 }
 
 -(void)acaoMoverEsquerda: (SKNode*)node{
-    SKAction *moverPraEsquerda = [SKAction moveTo: CGPointMake(node.position.x-200, node.position.y) duration: 2];
+    SKAction *moverPraEsquerda = [SKAction moveTo: CGPointMake(node.position.x-200, node.position.y) duration: 1.5];
     [node runAction: moverPraEsquerda];
+    
+    self.botaoEsquerda.alpha = 1;
 }
 
 

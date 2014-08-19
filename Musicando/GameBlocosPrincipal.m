@@ -116,7 +116,6 @@
                     self.velocidadeGuindaste -= 0.10;
             }
             
-            
         }
         
     }

@@ -33,11 +33,16 @@ static const UInt32 piso = 0x1 << 2;
 //Labels
 @property SKLabelNode *stringDePontuacao;
 @property SKLabelNode *labelDePontuacao;
+@property SKLabelNode *stringDeSimboloMusical;
+@property SKLabelNode *labelDeSimboloMusical;
 
 //Atributos e auxiliares
 @property NSMutableArray *listaDeSimbolosMusicais;
-@property int indiceSimboloSorteado;
+@property NSMutableArray *listaNomeDosSimbolosMusicais;
 
+@property NSString *simboloMusicalAtual;
+
+@property int indiceSimboloSorteado;
 @property int estadoPauseJogo;
 @property int tempoPercorrido;
 @property int auxTempoPercorrido;
