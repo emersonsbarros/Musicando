@@ -37,6 +37,9 @@ static const UInt32 tocaTrecoCategoria = 0x1 << 3;
 @property SKSpriteNode *pisoPrincipal;
 @property SKSpriteNode *guindastePrincipal;
 
+@property SKSpriteNode *coluna1;
+@property SKSpriteNode *coluna2;
+@property SKSpriteNode *base;
 @property SKSpriteNode *tocaTrecoPrincipal;
 
 @property SKSpriteNode *blocoNotaPrincipal;

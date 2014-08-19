@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
 #import "PegarNotasEPausasCena.h"
-#define GRAVIDADE_MUNDO -10
+#define GRAVIDADE_MUNDO -0.0005
 
 
 @implementation PegarNotasEPausasCena
@@ -21,6 +21,8 @@
         
     //Inicia zerado auxiliar para pausa, contadores de tempo e pontuação
         self.simboloMusicalAtual = @"";
+        self.densidadeAtual = 0.02f;
+        
         self.estadoPauseJogo = 0;
         self.tempoPercorrido = 0;
         self.auxTempoPercorrido = 0;
@@ -31,7 +33,7 @@
         self.quantidadeMovimentoDireita = 1;
         
     //Inicia lista de notas e indice para sorteio
-        self.listaDeSimbolosMusicais = [[NSMutableArray alloc] initWithObjects: @"notaSemibreve", @"notaMinima", @"notaSeminima", @"notaColcheia", @"notaSemicolcheia", @"notaFusa", @"notaSemiFusa", @"P4", @"P2", @"P1", @"P12", @"P14", @"P18", @"P116", nil];
+        self.listaDeSimbolosMusicais = [[NSMutableArray alloc] initWithObjects: @"notaSemibreve", @"notaMinima", @"notaSeminima", @"notaColcheia", @"notaSemicolcheia", @"notaFusa", @"notaSemiFusa", @"pausa4Tempos", @"pausa2Tempos", @"pausa1Tempo", @"pausa1-2Tempo", @"pausa1-4Tempo", @"pausa1-18Tempo", @"pausa1-16Tempo", nil];
         
         self.listaNomeDosSimbolosMusicais = [[NSMutableArray alloc] initWithObjects: @"semibreve", @"miníma", @"seminíma", @"colcheia", @"semicolcheia", @"fusa", @"semifusa", @"pausa 4", @"pausa 2", @"pausa 1", @"pausa 1/2", @"pausa 1/4", @"pausa 1/8", @"pausa 1/16", nil];
         
@@ -67,7 +69,7 @@
     self.labelDePontuacao = [[SKLabelNode alloc]init];
     self.labelDePontuacao.fontColor = [UIColor blackColor];
     self.labelDePontuacao.fontSize = 50.0f;
-    self.labelDePontuacao.position = CGPointMake(940, 700);
+    self.labelDePontuacao.position = CGPointMake(950, 700);
     self.labelDePontuacao.zPosition = 2;
     self.labelDePontuacao.text = [NSString stringWithFormat: @"%d", self.pontuacaoJogadorAtual];
     self.labelDePontuacao.fontName = @"Marker Felt Thin";
@@ -76,7 +78,7 @@
     self.stringDeSimboloMusical = [[SKLabelNode alloc]init];
     self.stringDeSimboloMusical.fontColor = [UIColor blackColor];
     self.stringDeSimboloMusical.fontSize = 50.0f;
-    self.stringDeSimboloMusical.position = CGPointMake(840, 650);
+    self.stringDeSimboloMusical.position = CGPointMake(710, 650);
     self.stringDeSimboloMusical.zPosition = 2;
     self.stringDeSimboloMusical.text = @"Símbolo: ";
     self.stringDeSimboloMusical.fontName = @"Marker Felt Thin";
@@ -85,16 +87,20 @@
     self.labelDeSimboloMusical = [[SKLabelNode alloc]init];
     self.labelDeSimboloMusical.fontColor = [UIColor blackColor];
     self.labelDeSimboloMusical.fontSize = 50.0f;
-    self.labelDeSimboloMusical.position = CGPointMake(940, 650);
+    self.labelDeSimboloMusical.position = CGPointMake(900, 650);
     self.labelDeSimboloMusical.zPosition = 2;
     self.labelDeSimboloMusical.text = self.simboloMusicalAtual;
     self.labelDeSimboloMusical.fontName = @"Marker Felt Thin";
     [self addChild: self.labelDeSimboloMusical];
+
+//Simbolos
+    [self simboloPraCair1];
+    [self simboloPraCair2];
+    [self simboloPraCair3];
 }
 
 
 /////////////////////////////////////////////////////// UPDATE DO TEMPO ////////////////////////////////////////////////
-
 -(void)update:(CFTimeInterval)currentTime{
     
     if (self.estadoPauseJogo == 0) {
@@ -103,14 +109,23 @@
         //CADA 30ms do AUXILIAR = 1s NO TEMPO
         if (self.auxTempoPercorrido == 30) {
             
-                if (self.tempoPercorrido == 0) {
-                    
-                    self.tempoPercorrido -=1;
-                    self.auxTempoPercorrido = 0;
-                }
+            //A cada 10 segundos cria novos simbolos
+            if (self.tempoPercorrido % 10 == 0) {
+                [self simboloPraCair1];
+                [self simboloPraCair2];
+                [self simboloPraCair3];
+            }
             
-            self.auxTempoPercorrido = 0;
+            //A cada 1 min troca o simbolo pedido e aumenta densidade
+            if (self.tempoPercorrido % 60 == 0) {
+                [self sortearSimboloAtual];
+                //self.densidadeAtual+= 0.000001 ;
+            }
+
+        self.tempoPercorrido++;
+        self.auxTempoPercorrido = 0;
         }
+        
     }
     
 }
@@ -140,12 +155,14 @@
         //COLISÃO NO PISO
         if((segundoCorpoFisico.categoryBitMask & piso) != 0){
             NSLog(@"GameOver!");
-            [self gameOver];
+//           [self gameOver];
         }
         
         //COLISÃO NO MASCOTE
         if((segundoCorpoFisico.categoryBitMask & mascote)!=0){
-                
+            [[primeiroCorpoFisico node] removeFromParent];
+            self.pontuacaoJogadorAtual += 10;
+            self.labelDePontuacao.text = [NSString stringWithFormat:@"%d", self.pontuacaoJogadorAtual];
         }
         
 //SIMBOLO ERRADO
@@ -153,13 +170,16 @@
         
         //COLISÃO NO PISO
         if((segundoCorpoFisico.categoryBitMask & piso) != 0){
-            
+            [[primeiroCorpoFisico node] removeFromParent];
+            self.pontuacaoJogadorAtual += 10;
+            self.labelDePontuacao.text = [NSString stringWithFormat:@"%d", self.pontuacaoJogadorAtual];
+
         }
         
         //COLISÃO NO MASCOTE
         if((segundoCorpoFisico.categoryBitMask & mascote)!=0){
             NSLog(@"GameOver!");
-            [self gameOver];
+//            [self gameOver];
         }
         
     }
@@ -233,12 +253,12 @@
 
 /////////////////////////////////////////////////////// CRIAÇÃO ////////////////////////////////////////////////////////
 //SIMBOLO 1
--(void)simboloPraCair1: (float)densidade{
+-(void)simboloPraCair1{
     
 //Inicia
     self.simboloMusicalPraCair1 = [[SKSpriteNode alloc] init];
-    self.simboloMusicalPraCair1.position = CGPointMake(312, 900);
-    self.simboloMusicalPraCair1.size = CGSizeMake(100, 100);
+    self.simboloMusicalPraCair1.position = CGPointMake(312, 800);
+    self.simboloMusicalPraCair1.size = CGSizeMake(50, 100);
     self.simboloMusicalPraCair1.zPosition = 5;
     
 //Imagem
@@ -248,8 +268,8 @@
 //Cria o corpo físico
     self.simboloMusicalPraCair1.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(100, 100)];
     self.simboloMusicalPraCair1.physicsBody.dynamic = YES;
-    self.simboloMusicalPraCair1.physicsBody.affectedByGravity = NO;
-    self.simboloMusicalPraCair1.physicsBody.density = densidade;
+    self.simboloMusicalPraCair1.physicsBody.affectedByGravity = YES;
+    self.simboloMusicalPraCair1.physicsBody.density = self.densidadeAtual;
     self.simboloMusicalPraCair1.physicsBody.usesPreciseCollisionDetection = YES;
     self.simboloMusicalPraCair1.physicsBody.restitution = 0;
     self.simboloMusicalPraCair1.physicsBody.contactTestBitMask = piso | mascote;
@@ -264,12 +284,12 @@
 }
 
 //SIMBOLO 2
--(void)simboloPraCair2: (float)densidade{
+-(void)simboloPraCair2{
     
 //Inicia
     self.simboloMusicalPraCair2 = [[SKSpriteNode alloc] init];
-    self.simboloMusicalPraCair2.position = CGPointMake(512, 900);
-    self.simboloMusicalPraCair2.size = CGSizeMake(100, 100);
+    self.simboloMusicalPraCair2.position = CGPointMake(512, 800);
+    self.simboloMusicalPraCair2.size = CGSizeMake(50, 100);
     self.simboloMusicalPraCair2.zPosition = 5;
 
 //Imagem
@@ -279,8 +299,8 @@
 //Cria o corpo físico
     self.simboloMusicalPraCair2.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(100, 100)];
     self.simboloMusicalPraCair2.physicsBody.dynamic = YES;
-    self.simboloMusicalPraCair2.physicsBody.affectedByGravity = NO;
-    self.simboloMusicalPraCair2.physicsBody.density = densidade;
+    self.simboloMusicalPraCair2.physicsBody.affectedByGravity = YES;
+    self.simboloMusicalPraCair2.physicsBody.density = self.densidadeAtual;
     self.simboloMusicalPraCair2.physicsBody.usesPreciseCollisionDetection = YES;
     self.simboloMusicalPraCair2.physicsBody.restitution = 0;
     self.simboloMusicalPraCair2.physicsBody.contactTestBitMask = piso | mascote;
@@ -295,12 +315,12 @@
 }
 
 //SIMBOLO 3
--(void)simboloPraCair3: (float)densidade{
+-(void)simboloPraCair3{
     
 //Incia
     self.simboloMusicalPraCair3 = [[SKSpriteNode alloc] init];
-    self.simboloMusicalPraCair3.position = CGPointMake(712, 900);
-    self.simboloMusicalPraCair3.size = CGSizeMake(100, 100);
+    self.simboloMusicalPraCair3.position = CGPointMake(712, 800);
+    self.simboloMusicalPraCair3.size = CGSizeMake(50, 100);
     self.simboloMusicalPraCair3.zPosition = 5;
     
 //Imagem
@@ -310,8 +330,8 @@
 //Cria o corpo físico
     self.simboloMusicalPraCair3.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(100, 100)];
     self.simboloMusicalPraCair3.physicsBody.dynamic = YES;
-    self.simboloMusicalPraCair3.physicsBody.affectedByGravity = NO;
-    self.simboloMusicalPraCair3.physicsBody.density = densidade;
+    self.simboloMusicalPraCair3.physicsBody.affectedByGravity = YES;
+    self.simboloMusicalPraCair3.physicsBody.density = self.densidadeAtual;
     self.simboloMusicalPraCair3.physicsBody.usesPreciseCollisionDetection = YES;
     self.simboloMusicalPraCair3.physicsBody.restitution = 0;
     self.simboloMusicalPraCair3.physicsBody.contactTestBitMask = piso | mascote;
@@ -331,7 +351,7 @@
 //Incia
     _mascote = [[SKSpriteNode alloc] init];
     _mascote.position = CGPointMake(512, 100);
-    _mascote.zPosition = 2;
+    _mascote.zPosition = 6;
     _mascote.name = @"mascote";
     
 //Posicao e img
@@ -340,7 +360,7 @@
     _mascote.size = CGSizeMake(100, 100);
     
 //Cria o corpo físico do bloco
-    _mascote.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(100, 100)];
+    _mascote.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(100, 30)];
     _mascote.physicsBody.dynamic = YES;
     _mascote.physicsBody.affectedByGravity = NO;
     _mascote.physicsBody.density = 0.2f;
@@ -380,7 +400,7 @@
 //Aloca, seta nome e tamanho do nó
     self.piso = [[SKSpriteNode alloc]init];
     self.piso.name = @"piso";
-    self.piso.position = CGPointMake(300, -60);
+    self.piso.position = CGPointMake(512, 10);
     
 //Cria testura do piso
     SKTexture *texturaPiso = [SKTexture textureWithImageNamed: @"chao.png"];
@@ -392,12 +412,12 @@
     self.piso.physicsBody.dynamic = NO;
     self.piso.physicsBody.affectedByGravity = NO;
     self.piso.physicsBody.allowsRotation = NO;
-    self.piso.physicsBody.density = 0.6f;
+    self.piso.physicsBody.density = 50;
     self.piso.physicsBody.restitution = 0;
     
 //Configuração colisão do corpo físico do piso
     self.piso.physicsBody.categoryBitMask = piso;
-    self.piso.physicsBody.contactTestBitMask = simboloMusicalCorreto | simboloMusicalErrado;
+    //self.piso.physicsBody.contactTestBitMask = simboloMusicalCorreto | simboloMusicalErrado;
     
 //Adiciona a textura ao nó, e o nó a cena
     [self addChild: self.piso];

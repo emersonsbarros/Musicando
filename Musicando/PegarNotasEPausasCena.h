@@ -41,6 +41,7 @@ static const UInt32 piso = 0x1 << 2;
 @property NSMutableArray *listaNomeDosSimbolosMusicais;
 
 @property NSString *simboloMusicalAtual;
+@property float densidadeAtual;
 
 @property int indiceSimboloAtualSorteado;
 @property int indiceParaSorteio;
@@ -62,6 +63,8 @@ static const UInt32 piso = 0x1 << 2;
 
 -(void)criaMascote;
 -(void)criaFundo;
+
+-(void)removerDaCena: (SKSpriteNode*)node;
 
 -(void)acaoMoverDireita: (SKNode*)node;
 -(void)acaoMoverEsquerda: (SKNode*)node;

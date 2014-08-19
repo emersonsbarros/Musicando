@@ -59,7 +59,6 @@
     [self criaBlocoNotaMusical];
 
     
-
 //Configura as labels de pontuação
     self.stringDePontuacao = [[SKLabelNode alloc]init];
     self.stringDePontuacao.fontColor = [UIColor blackColor];
@@ -152,7 +151,7 @@
                 NSLog(@"Colidiu nota certa com tocatreco - %@", blocoNota.name);
                 
                 
-                if (blocoNota.position.y > corpoParaColisaoDoTocaTreco.position.y+50) {
+                if ((blocoNota.position.y > corpoParaColisaoDoTocaTreco.position.y+5) && (blocoNota.position.x >= 350 && blocoNota.position.x <= 655)) {
                     //Remove os blocos da view
                     [blocoNota removeAllChildren];
                     [blocoNota removeFromParent];
@@ -194,7 +193,7 @@
                     NSLog(@"Colidiu com o chão nota errada - %@", blocoNota.name);
                     
 
-                    if (blocoNota.position.y > piso.position.y+50) {
+                    if (blocoNota.position.y > piso.position.y+5) {
 
                         //Remove os blocos da view
                         [blocoNota removeAllChildren];
@@ -237,9 +236,6 @@
     }
     
 }
-
-
-
 
 
 ////////////////////////////////////////////////// CRIAÇÃO DE AMBIENTE, PERSONAGENS E OUTROS COMPONENTES ////////////////////////////////////////////////////
@@ -298,7 +294,6 @@
     guindaste.name = @"Guindaste";
     guindaste.position = CGPointMake(512, 700);
     guindaste.zPosition = 1;
-
     
     //Cria testura do guindaste
     SKTexture *texturaGuindaste = [SKTexture textureWithImageNamed: @"ganchoGuindaste.jpg"];
@@ -327,50 +322,61 @@
     //Aloca, seta nome e tamanho do nó
     corpoParaColisaoDoTocaTreco = [[SKNode alloc]init];
     corpoParaColisaoDoTocaTreco.name = @"CorpoTocaTreco";
-    corpoParaColisaoDoTocaTreco.position = CGPointMake(485, 50);
-    corpoParaColisaoDoTocaTreco.zPosition = 3;
     
-    //Cria o corpo do cone
-    SKSpriteNode *imagemCorpoTocaTreco = [SKSpriteNode spriteNodeWithImageNamed: @"triangulo.png"];
+    self.coluna1 = [[SKSpriteNode alloc] init];
+    self.coluna1.color = [UIColor blackColor];
+    self.coluna1.size = CGSizeMake(45, 220);
+    self.coluna1.position = CGPointMake(351, 30);
+    self.coluna1.zPosition = 3;
 
-    CGFloat offsetX = imagemCorpoTocaTreco.frame.size.width * imagemCorpoTocaTreco.anchorPoint.x;
-    CGFloat offsetY = imagemCorpoTocaTreco.frame.size.height * imagemCorpoTocaTreco.anchorPoint.y;
-    CGMutablePathRef path = CGPathCreateMutable();
+    self.coluna2 = [[SKSpriteNode alloc] init];
+    self.coluna2.color = [UIColor blackColor];
+    self.coluna2.size = CGSizeMake(45, 220);
+    self.coluna2.position = CGPointMake(655, 30);
+    self.coluna2.zPosition = 3;
     
-    CGPathMoveToPoint(path, NULL, 164 - offsetX, 2 - offsetY);
-    CGPathAddLineToPoint(path, NULL, 168 - offsetX, 68 - offsetY);
-    CGPathAddLineToPoint(path, NULL, 93 - offsetX, 13 - offsetY);
-    CGPathAddLineToPoint(path, NULL, 5 - offsetX, 73 - offsetY);
-    CGPathAddLineToPoint(path, NULL, 3 - offsetX, 8 - offsetY);
+    self.base = [[SKSpriteNode alloc] init];
+    self.base.color = [UIColor redColor];
+    self.base.size = CGSizeMake(260, 60);
+    self.base.position = CGPointMake(503, 30);
+    self.base.zPosition = 3;
+
+    self.coluna1.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.coluna1.size];
+    self.coluna1.physicsBody.dynamic = NO;
+    self.coluna2.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.coluna2.size];
+    self.coluna2.physicsBody.dynamic = NO;
+
     
-    CGPathCloseSubpath(path);
-    imagemCorpoTocaTreco.physicsBody = [SKPhysicsBody bodyWithPolygonFromPath: path];
+    self.base.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.base.size];
+    self.base.physicsBody.dynamic = NO;
+    self.base.physicsBody.affectedByGravity = NO;
+    self.base.physicsBody.allowsRotation = NO;
+    self.base.physicsBody.density = 0.2f;
+    self.base.physicsBody.usesPreciseCollisionDetection = YES;
+    self.base.physicsBody.restitution = 0;
+    self.base.physicsBody.categoryBitMask = tocaTrecoCategoria;
+    self.base.physicsBody.contactTestBitMask = pisoCategoria | blocoNotaCorreta;
     
-    imagemCorpoTocaTreco.physicsBody.dynamic = NO;
-    imagemCorpoTocaTreco.physicsBody.affectedByGravity = NO;
-    imagemCorpoTocaTreco.physicsBody.allowsRotation = NO;
-    imagemCorpoTocaTreco.physicsBody.density = 0.2f;
-    imagemCorpoTocaTreco.physicsBody.usesPreciseCollisionDetection = YES;
-    imagemCorpoTocaTreco.physicsBody.restitution = 0;
-    imagemCorpoTocaTreco.physicsBody.categoryBitMask = tocaTrecoCategoria;
-    imagemCorpoTocaTreco.physicsBody.contactTestBitMask = pisoCategoria | blocoNotaCorreta;
+    [self addChild: _coluna1];
+    [self addChild: _coluna2];
     
-    [corpoParaColisaoDoTocaTreco addChild: imagemCorpoTocaTreco];
+    [corpoParaColisaoDoTocaTreco addChild: _base];
     [self addChild: corpoParaColisaoDoTocaTreco];
+
     
-//TOCATRECO
-    //Aloca, seta nome e tamanho do nó
-    tocaTreco = [[SKNode alloc]init];
-    tocaTreco.name = @"TocaTreco";
-    tocaTreco.position = CGPointMake(530, 100);
-    tocaTreco.zPosition = 4;
+//IMAGEM TOCATRECO
+    self.tocaTrecoPrincipal = [[SKSpriteNode alloc]init];
+    self.tocaTrecoPrincipal.name = @"TocaTreco";
+    self.tocaTrecoPrincipal.size = CGSizeMake(840, 400);
+    self.tocaTrecoPrincipal.position = CGPointMake(550, 100);
+    self.tocaTrecoPrincipal.zPosition = 4;
     
     //Cria testura do guindaste
     SKTexture *texturaTocaTreco = [SKTexture textureWithImageNamed: @"bocaDoTocaTreco.png"];
-    self.tocaTrecoPrincipal = [SKSpriteNode spriteNodeWithTexture: texturaTocaTreco size: CGSizeMake(840, 400)];
+    self.tocaTrecoPrincipal.texture = texturaTocaTreco;
+    self.tocaTrecoPrincipal.alpha = 0.3;
     
-//    [tocaTreco addChild: self.tocaTrecoPrincipal];
-//    [self addChild: tocaTreco];
+    [self addChild: self.tocaTrecoPrincipal];
 
 }
 
@@ -385,7 +391,7 @@
     blocoNota.zPosition = 3;
 
         //Cria testura do guindaste
-    SKTexture *texturaNota = [SKTexture textureWithImageNamed: @"siBloco.png"];
+    SKTexture *texturaNota = [SKTexture textureWithImageNamed: @"doBloco.png"];
     self.blocoNotaPrincipal = [SKSpriteNode spriteNodeWithTexture: texturaNota size: CGSizeMake(120, 112)];
     self.blocoNotaPrincipal.zPosition = 3;
     
@@ -455,7 +461,6 @@
 
 
 /////////////////////////////////////////////////////// AÇÕES, ANIMAÇÕES E SPRITES ////////////////////////////////////////////////////////
-
 //MOVIMENTO DIREITA ESQUERDA
 -(void)acaoMoverDireitaEsquerda: (SKNode*)node :(int)duracao{
     
