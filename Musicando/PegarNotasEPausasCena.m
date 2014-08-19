@@ -31,7 +31,7 @@
         self.quantidadeMovimentoDireita = 1;
         
     //Inicia lista de notas e indice para sorteio
-        self.listaDeSimbolosMusicais = [[NSMutableArray alloc] initWithObjects: @"N4", @"N2", @"N1", @"N12", @"N14", @"N18", @"N116", @"P4", @"P2", @"P1", @"P12", @"P14", @"P18", @"P116", nil];
+        self.listaDeSimbolosMusicais = [[NSMutableArray alloc] initWithObjects: @"notaSemibreve", @"notaMinima", @"notaSeminima", @"notaColcheia", @"notaSemicolcheia", @"notaFusa", @"notaSemiFusa", @"P4", @"P2", @"P1", @"P12", @"P14", @"P18", @"P116", nil];
         
         self.listaNomeDosSimbolosMusicais = [[NSMutableArray alloc] initWithObjects: @"semibreve", @"miníma", @"seminíma", @"colcheia", @"semicolcheia", @"fusa", @"semifusa", @"pausa 4", @"pausa 2", @"pausa 1", @"pausa 1/2", @"pausa 1/4", @"pausa 1/8", @"pausa 1/16", nil];
         
@@ -96,6 +96,23 @@
 /////////////////////////////////////////////////////// UPDATE DO TEMPO ////////////////////////////////////////////////
 
 -(void)update:(CFTimeInterval)currentTime{
+    
+    if (self.estadoPauseJogo == 0) {
+        self.auxTempoPercorrido+=1;
+        
+        //CADA 30ms do AUXILIAR = 1s NO TEMPO
+        if (self.auxTempoPercorrido == 30) {
+            
+                if (self.tempoPercorrido == 0) {
+                    
+                    self.tempoPercorrido -=1;
+                    self.auxTempoPercorrido = 0;
+                }
+            
+            self.auxTempoPercorrido = 0;
+        }
+    }
+    
 }
 
 
@@ -116,50 +133,34 @@
         segundoCorpoFisico = contact.bodyA;
     }
     
-    
-    if ((primeiroCorpoFisico.categoryBitMask & blocoNotaCorreta) != 0) {
+
+//SIMBOLO CERTO
+    if ((primeiroCorpoFisico.categoryBitMask & simboloMusicalCorreto) != 0) {
         
-        //COLISÃO TOCATRECO
-        if((segundoCorpoFisico.categoryBitMask & tocaTrecoCategoria) != 0){
-            
-            //NOTAS CERTAS
-            if([blocoNota.name isEqualToString:@"Dó"] || [blocoNota.name isEqualToString:@"Ré"] || [blocoNota.name isEqualToString:@"Mi"] || [blocoNota.name isEqualToString:@"Fá"] || [blocoNota.name isEqualToString:@"Sol"] || [blocoNota.name isEqualToString:@"Lá"] || [blocoNota.name isEqualToString:@"Si"]){
-                NSLog(@"Colidiu nota certa com tocatreco - %@", blocoNota.name);
-                
-                
-                }
-                
-                
-                
-                //NOTAS ERRADAS
-            }else if([blocoNota.name isEqualToString:@"Dor"] || [blocoNota.name isEqualToString:@"Rir"] || [blocoNota.name isEqualToString:@"Mou"] || [blocoNota.name isEqualToString:@"Fê"] || [blocoNota.name isEqualToString:@"Sou"] || [blocoNota.name isEqualToString:@"Lú"] || [blocoNota.name isEqualToString:@"Sir"]){
-                
-                NSLog(@"Colidiu nota errada com tocatreco - %@", blocoNota.name);
-                [self gameOver];
-                
-            }
-            //COLISAO NO CHÃO
-        }else{
-            
-            if((segundoCorpoFisico.categoryBitMask & pisoCategoria)!=0){
-                
-                //NOTAS CERTAS
-            }if([blocoNota.name isEqualToString:@"Dó"] || [blocoNota.name isEqualToString:@"Ré"] || [blocoNota.name isEqualToString:@"Mi"] || [blocoNota.name isEqualToString:@"Fá"] || [blocoNota.name isEqualToString:@"Sol"] || [blocoNota.name isEqualToString:@"Lá"] || [blocoNota.name isEqualToString:@"Si"]){
-                
-                NSLog(@"Colidiu com o chão nota certa - %@", blocoNota.name);
-                [self gameOver];
-                
-                //NOTAS ERRADAS
-            }else if([blocoNota.name isEqualToString:@"Dor"] || [blocoNota.name isEqualToString:@"Rir"] || [blocoNota.name isEqualToString:@"Mou"] || [blocoNota.name isEqualToString:@"Fê"] || [blocoNota.name isEqualToString:@"Sou"] || [blocoNota.name isEqualToString:@"Lú"] || [blocoNota.name isEqualToString:@"Sir"]){
-                
-                NSLog(@"Colidiu com o chão nota errada - %@", blocoNota.name);
-                
-                
-                    
-                }
-            }
+        //COLISÃO NO PISO
+        if((segundoCorpoFisico.categoryBitMask & piso) != 0){
+            NSLog(@"GameOver!");
+            [self gameOver];
         }
         
+        //COLISÃO NO MASCOTE
+        if((segundoCorpoFisico.categoryBitMask & mascote)!=0){
+                
+        }
+        
+//SIMBOLO ERRADO
+    }else if ((primeiroCorpoFisico.categoryBitMask & simboloMusicalErrado) != 0){
+        
+        //COLISÃO NO PISO
+        if((segundoCorpoFisico.categoryBitMask & piso) != 0){
+            
+        }
+        
+        //COLISÃO NO MASCOTE
+        if((segundoCorpoFisico.categoryBitMask & mascote)!=0){
+            NSLog(@"GameOver!");
+            [self gameOver];
+        }
         
     }
 
@@ -236,8 +237,13 @@
     
 //Inicia
     self.simboloMusicalPraCair1 = [[SKSpriteNode alloc] init];
-    self.simboloMusicalPraCair1.position = CGPointMake(100, 900);
+    self.simboloMusicalPraCair1.position = CGPointMake(312, 900);
+    self.simboloMusicalPraCair1.size = CGSizeMake(100, 100);
     self.simboloMusicalPraCair1.zPosition = 5;
+    
+//Imagem
+    SKTexture *textura = [SKTexture textureWithImageNamed: [NSString stringWithFormat:@"%@.png",[self sortearSimboloPraCair]]];
+    self.simboloMusicalPraCair1.texture = textura;
     
 //Cria o corpo físico
     self.simboloMusicalPraCair1.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(100, 100)];
@@ -249,9 +255,9 @@
     self.simboloMusicalPraCair1.physicsBody.contactTestBitMask = piso | mascote;
 
     if ([self.simboloMusicalPraCair1.name isEqualToString: self.simboloMusicalAtual]) {
-        self.simboloMusicalPraCair1.physicsBody.categoryBitMask = simboloMusical;
+        self.simboloMusicalPraCair1.physicsBody.categoryBitMask = simboloMusicalCorreto;
     }else{
-        
+        self.simboloMusicalPraCair2.physicsBody.categoryBitMask = simboloMusicalErrado;
     }
     
     [self addChild: self.simboloMusicalPraCair1];
@@ -263,8 +269,13 @@
 //Inicia
     self.simboloMusicalPraCair2 = [[SKSpriteNode alloc] init];
     self.simboloMusicalPraCair2.position = CGPointMake(512, 900);
+    self.simboloMusicalPraCair2.size = CGSizeMake(100, 100);
     self.simboloMusicalPraCair2.zPosition = 5;
 
+//Imagem
+    SKTexture *textura = [SKTexture textureWithImageNamed: [NSString stringWithFormat:@"%@.png",[self sortearSimboloPraCair]]];
+    self.simboloMusicalPraCair2.texture = textura;
+    
 //Cria o corpo físico
     self.simboloMusicalPraCair2.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(100, 100)];
     self.simboloMusicalPraCair2.physicsBody.dynamic = YES;
@@ -277,7 +288,7 @@
     if ([self.simboloMusicalPraCair2.name isEqualToString: self.simboloMusicalAtual]) {
         self.simboloMusicalPraCair2.physicsBody.categoryBitMask = simboloMusicalCorreto;
     }else{
-        
+        self.simboloMusicalPraCair2.physicsBody.categoryBitMask = simboloMusicalErrado;
     }
     
     [self addChild: self.simboloMusicalPraCair2];
@@ -288,8 +299,13 @@
     
 //Incia
     self.simboloMusicalPraCair3 = [[SKSpriteNode alloc] init];
-    self.simboloMusicalPraCair3.position = CGPointMake(912, 900);
+    self.simboloMusicalPraCair3.position = CGPointMake(712, 900);
+    self.simboloMusicalPraCair3.size = CGSizeMake(100, 100);
     self.simboloMusicalPraCair3.zPosition = 5;
+    
+//Imagem
+    SKTexture *textura = [SKTexture textureWithImageNamed: [NSString stringWithFormat:@"%@.png",[self sortearSimboloPraCair]]];
+    self.simboloMusicalPraCair3.texture = textura;
     
 //Cria o corpo físico
     self.simboloMusicalPraCair3.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(100, 100)];
@@ -303,7 +319,7 @@
     if ([self.simboloMusicalPraCair3.name isEqualToString: self.simboloMusicalAtual]) {
         self.simboloMusicalPraCair3.physicsBody.categoryBitMask = simboloMusicalCorreto;
     }else{
-        
+        self.simboloMusicalPraCair3.physicsBody.categoryBitMask = simboloMusicalErrado;
     }
     
     [self addChild: self.simboloMusicalPraCair3];
@@ -333,7 +349,7 @@
     
 //Colisao
     _mascote.physicsBody.categoryBitMask = mascote;
-    _mascote.physicsBody.contactTestBitMask = simboloMusical;
+    _mascote.physicsBody.contactTestBitMask = simboloMusicalCorreto | simboloMusicalErrado;
     
 //Adiciona a textura ao nó e o nó a cena
     [self addChild: _mascote];
@@ -381,7 +397,7 @@
     
 //Configuração colisão do corpo físico do piso
     self.piso.physicsBody.categoryBitMask = piso;
-    self.piso.physicsBody.contactTestBitMask = simboloMusical;
+    self.piso.physicsBody.contactTestBitMask = simboloMusicalCorreto | simboloMusicalErrado;
     
 //Adiciona a textura ao nó, e o nó a cena
     [self addChild: self.piso];
