@@ -25,7 +25,7 @@
         self.tempoPercorrido = 0;
         self.auxTempoPercorrido = 0;
         self.pontuacaoJogadorAtual = 0;
-        self.indiceSimboloSorteado = 0;
+        self.indiceSimboloAtualSorteado = 0;
         
         self.quantidadeMovimentoEsquerda = 1;
         self.quantidadeMovimentoDireita = 1;
@@ -211,42 +211,102 @@
 /////////////////////////////////////////////////////// SORTEIOS ////////////////////////////////////////////////////////
 -(void)sortearSimboloAtual{
     
-    self.indiceSimboloSorteado = arc4random() % 14;
-    self.simboloMusicalAtual = [self.listaDeSimbolosMusicais objectAtIndex: self.indiceSimboloSorteado];
-    self.labelDeSimboloMusical.text = [self.listaNomeDosSimbolosMusicais objectAtIndex: self.indiceSimboloSorteado];
+    self.indiceSimboloAtualSorteado = arc4random() % 14;
+    
+    self.simboloMusicalAtual = [self.listaDeSimbolosMusicais objectAtIndex: self.indiceSimboloAtualSorteado];
+    self.labelDeSimboloMusical.text = [self.listaNomeDosSimbolosMusicais objectAtIndex: self.indiceSimboloAtualSorteado];
     
 }
 
+-(NSString*)sortearSimboloPraCair{
+    
+    self.indiceParaSorteio = arc4random() % 14;
+    return [self.listaDeSimbolosMusicais objectAtIndex: self.indiceParaSorteio];
+
+}
+
+/////////////////////////////////////////////////////// REMOÇÃO ////////////////////////////////////////////////////////
+-(void)removerDaCena: (SKSpriteNode*)node{
+    [node removeFromParent];
+}
+
 /////////////////////////////////////////////////////// CRIAÇÃO ////////////////////////////////////////////////////////
-//SIMBOLO1
+//SIMBOLO 1
 -(void)simboloPraCair1: (float)densidade{
     
-//Incia
+//Inicia
     self.simboloMusicalPraCair1 = [[SKSpriteNode alloc] init];
     self.simboloMusicalPraCair1.position = CGPointMake(100, 900);
     self.simboloMusicalPraCair1.zPosition = 5;
     
+//Cria o corpo físico
+    self.simboloMusicalPraCair1.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(100, 100)];
+    self.simboloMusicalPraCair1.physicsBody.dynamic = YES;
+    self.simboloMusicalPraCair1.physicsBody.affectedByGravity = NO;
+    self.simboloMusicalPraCair1.physicsBody.density = densidade;
+    self.simboloMusicalPraCair1.physicsBody.usesPreciseCollisionDetection = YES;
+    self.simboloMusicalPraCair1.physicsBody.restitution = 0;
+    self.simboloMusicalPraCair1.physicsBody.contactTestBitMask = piso | mascote;
+
+    if ([self.simboloMusicalPraCair1.name isEqualToString: self.simboloMusicalAtual]) {
+        self.simboloMusicalPraCair1.physicsBody.categoryBitMask = simboloMusical;
+    }else{
+        
+    }
+    
+    [self addChild: self.simboloMusicalPraCair1];
 }
 
-//SIMBOLO2
+//SIMBOLO 2
 -(void)simboloPraCair2: (float)densidade{
     
-//Incia
+//Inicia
     self.simboloMusicalPraCair2 = [[SKSpriteNode alloc] init];
     self.simboloMusicalPraCair2.position = CGPointMake(512, 900);
     self.simboloMusicalPraCair2.zPosition = 5;
 
+//Cria o corpo físico
+    self.simboloMusicalPraCair2.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(100, 100)];
+    self.simboloMusicalPraCair2.physicsBody.dynamic = YES;
+    self.simboloMusicalPraCair2.physicsBody.affectedByGravity = NO;
+    self.simboloMusicalPraCair2.physicsBody.density = densidade;
+    self.simboloMusicalPraCair2.physicsBody.usesPreciseCollisionDetection = YES;
+    self.simboloMusicalPraCair2.physicsBody.restitution = 0;
+    self.simboloMusicalPraCair2.physicsBody.contactTestBitMask = piso | mascote;
+    
+    if ([self.simboloMusicalPraCair2.name isEqualToString: self.simboloMusicalAtual]) {
+        self.simboloMusicalPraCair2.physicsBody.categoryBitMask = simboloMusicalCorreto;
+    }else{
+        
+    }
+    
+    [self addChild: self.simboloMusicalPraCair2];
 }
 
-//SIMBOLO3
+//SIMBOLO 3
 -(void)simboloPraCair3: (float)densidade{
     
 //Incia
     self.simboloMusicalPraCair3 = [[SKSpriteNode alloc] init];
     self.simboloMusicalPraCair3.position = CGPointMake(912, 900);
     self.simboloMusicalPraCair3.zPosition = 5;
-
     
+//Cria o corpo físico
+    self.simboloMusicalPraCair3.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(100, 100)];
+    self.simboloMusicalPraCair3.physicsBody.dynamic = YES;
+    self.simboloMusicalPraCair3.physicsBody.affectedByGravity = NO;
+    self.simboloMusicalPraCair3.physicsBody.density = densidade;
+    self.simboloMusicalPraCair3.physicsBody.usesPreciseCollisionDetection = YES;
+    self.simboloMusicalPraCair3.physicsBody.restitution = 0;
+    self.simboloMusicalPraCair3.physicsBody.contactTestBitMask = piso | mascote;
+    
+    if ([self.simboloMusicalPraCair3.name isEqualToString: self.simboloMusicalAtual]) {
+        self.simboloMusicalPraCair3.physicsBody.categoryBitMask = simboloMusicalCorreto;
+    }else{
+        
+    }
+    
+    [self addChild: self.simboloMusicalPraCair3];
 }
 
 

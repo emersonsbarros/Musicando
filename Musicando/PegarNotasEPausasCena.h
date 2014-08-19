@@ -12,7 +12,8 @@
 
 //CONSTANSTES para colisão
 static const UInt32 mascote = 0x1 << 0;
-static const UInt32 simboloMusical = 0x1 << 1;
+static const UInt32 simboloMusicalCorreto = 0x1 << 1;
+static const UInt32 simboloMusicalErrado = 0x1 << 2;
 static const UInt32 piso = 0x1 << 2;
 
 @interface PegarNotasEPausasCena : SKScene <SKPhysicsContactDelegate>{
@@ -41,7 +42,9 @@ static const UInt32 piso = 0x1 << 2;
 
 @property NSString *simboloMusicalAtual;
 
-@property int indiceSimboloSorteado;
+@property int indiceSimboloAtualSorteado;
+@property int indiceParaSorteio;
+
 @property int estadoPauseJogo;
 @property int tempoPercorrido;
 @property int auxTempoPercorrido;
