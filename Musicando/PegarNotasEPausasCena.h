@@ -13,6 +13,7 @@
 //CONSTANSTES para colisão
 static const UInt32 mascote = 0x1 << 0;
 static const UInt32 simboloMusical = 0x1 << 1;
+static const UInt32 piso = 0x1 << 2;
 
 @interface PegarNotasEPausasCena : SKScene <SKPhysicsContactDelegate>{
     
@@ -24,6 +25,7 @@ static const UInt32 simboloMusical = 0x1 << 1;
 
 //Sprites
 @property SKSpriteNode *fundo;
+@property SKSpriteNode *piso;
 @property SKSpriteNode *mascote;
 @property SKSpriteNode *botaoEsquerda;
 @property SKSpriteNode *botaoDireita;

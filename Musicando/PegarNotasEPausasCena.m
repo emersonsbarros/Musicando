@@ -46,6 +46,7 @@
     
 //Ambiente
     [self criaFundo];
+    [self criaPiso];
     [self criaMascote];
     
 //Botoes
@@ -184,6 +185,34 @@
     [self addChild: self.fundo];
 }
 
+//PISO
+-(void)criaPiso{
+    
+//Aloca, seta nome e tamanho do nó
+    self.piso = [[SKSpriteNode alloc]init];
+    self.piso.name = @"piso";
+    self.piso.position = CGPointMake(300, -60);
+    
+//Cria testura do piso
+    SKTexture *texturaPiso = [SKTexture textureWithImageNamed: @"chao.png"];
+    self.piso.texture = texturaPiso;
+    self.piso.size = CGSizeMake(1200, 50);
+    
+//Cria o corpo físico do piso
+    self.piso.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(1200, 50)];
+    self.piso.physicsBody.dynamic = NO;
+    self.piso.physicsBody.affectedByGravity = NO;
+    self.piso.physicsBody.allowsRotation = NO;
+    self.piso.physicsBody.density = 0.6f;
+    self.piso.physicsBody.restitution = 0;
+    
+//Configuração colisão do corpo físico do piso
+    self.piso.physicsBody.categoryBitMask = piso;
+    self.piso.physicsBody.contactTestBitMask = simboloMusical;
+    
+//Adiciona a textura ao nó, e o nó a cena
+    [self addChild: self.piso];
+}
 
 -(SKSpriteNode*)criaBotaoDireita{
     
@@ -213,12 +242,12 @@
 
 //MOVIMENTO DIREITA ESQUERDA
 -(void)acaoMoverDireita: (SKNode*)node{
-    SKAction *moverPraDireita = [SKAction moveTo: CGPointMake(node.position.x+200, node.position.y) duration: 3];
+    SKAction *moverPraDireita = [SKAction moveTo: CGPointMake(node.position.x+200, node.position.y) duration: 2];
     [node runAction: moverPraDireita];
 }
 
 -(void)acaoMoverEsquerda: (SKNode*)node{
-    SKAction *moverPraEsquerda = [SKAction moveTo: CGPointMake(node.position.x-200, node.position.y) duration: 3];
+    SKAction *moverPraEsquerda = [SKAction moveTo: CGPointMake(node.position.x-200, node.position.y) duration: 2];
     [node runAction: moverPraEsquerda];
 }
 
