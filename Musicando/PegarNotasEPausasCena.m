@@ -1,19 +1,20 @@
 //
-//  PegarNotasEPausasPrincipal.m
+//  PegarNotasEPausasCena.m
 //  Musicando
 //
-//  Created by EMERSON DE SOUZA BARROS on 18/08/14.
+//  Created by Emerson Barros on 18/08/14.
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
 
-#import "PegarNotasEPausasPrincipal.h"
+#import "PegarNotasEPausasCena.h"
 #define GRAVIDADE_MUNDO -10
 
 
-@implementation PegarNotasEPausasPrincipal
+@implementation PegarNotasEPausasCena
 
 -(id)initWithSize:(CGSize)size{
-    if (self = [super initWithSize:size]){
+    
+    if (self = [super initWithSize: size]){
         
         //Configura física do mundo
         self.physicsWorld.contactDelegate = self;
@@ -31,11 +32,9 @@
         self.indiceSimboloSorteado = 0;
         self.quantidadeMovimentoEsquerda = 1;
         self.quantidadeMovimentoDireita = 1;
-
         
         //Inicia primeiros nós
         [self carregarPrimeirosComponentes];
-    
     }
     
     return self;
@@ -45,16 +44,15 @@
 
 -(void)carregarPrimeirosComponentes{
     
-    //Ambiente
+//Ambiente
     [self criaFundo];
     [self criaMascote];
-       
-    //Botoes
-    [self addChild:[self criaBotaoDireita]];
-    [self addChild:[self criaBotaoEsquerda]];
-
     
-    //Configura as labels de pontuação
+//Botoes
+    [self addChild: [self criaBotaoDireita]];
+    [self addChild: [self criaBotaoEsquerda]];
+    
+//Configura as labels de pontuação
     self.stringDePontuacao = [[SKLabelNode alloc]init];
     self.stringDePontuacao.fontColor = [UIColor blackColor];
     self.stringDePontuacao.fontSize = 50.0f;
@@ -83,7 +81,7 @@
 
 
 /////////////////////////////////////////////////////// COLISÃO ////////////////////////////////////////////////////////
--(void)didBeginContact:(SKPhysicsContact *)contact {
+-(void)didBeginContact:(SKPhysicsContact *)contact{
     
     SKPhysicsBody *primeiroCorpoFisico;
     SKPhysicsBody *segundoCorpoFisico;
@@ -121,7 +119,7 @@
         }    }
     
     //Botão esquerda
-    if ([node.name isEqualToString:@"botaoEsqueda"]) {
+    if ([node.name isEqualToString:@"botaoEsquerda"]) {
         //Ate 2 movimentos
         if (self.quantidadeMovimentoEsquerda <= 2) {
             [self acaoMoverEsquerda: _mascote];
@@ -138,31 +136,31 @@
 //////////////////////////////// CRIAÇAO ////////////////////////////////////////////
 -(void)criaMascote{
     
-        //Incia
-        _mascote = [[SKSpriteNode alloc] init];
-        _mascote.position = CGPointMake(512, 100);
-        _mascote.zPosition = 2;
-        _mascote.name = @"mascote";
-
-        //Posicao e img
-        SKTexture *textura = [SKTexture textureWithImageNamed: @"mascote.png"];
-        _mascote.texture = textura;
-        _mascote.size = CGSizeMake(100, 100);
-        
-        //Cria o corpo físico do bloco
-        _mascote.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(100, 100)];
-        _mascote.physicsBody.dynamic = YES;
-        _mascote.physicsBody.affectedByGravity = NO;
-        _mascote.physicsBody.density = 0.2f;
-        _mascote.physicsBody.usesPreciseCollisionDetection = YES;
-        _mascote.physicsBody.restitution = 0;
+    //Incia
+    _mascote = [[SKSpriteNode alloc] init];
+    _mascote.position = CGPointMake(512, 100);
+    _mascote.zPosition = 2;
+    _mascote.name = @"mascote";
     
-        //Colisao
-//        _mascote.physicsBody.categoryBitMask = mascote;
-//        _mascote.physicsBody.contactTestBitMask = simboloMusical;
+    //Posicao e img
+    SKTexture *textura = [SKTexture textureWithImageNamed: @"mascote.png"];
+    _mascote.texture = textura;
+    _mascote.size = CGSizeMake(100, 100);
     
-        //Adiciona a textura ao nó e o nó a cena
-        [self addChild: _mascote];
+    //Cria o corpo físico do bloco
+    _mascote.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(100, 100)];
+    _mascote.physicsBody.dynamic = YES;
+    _mascote.physicsBody.affectedByGravity = NO;
+    _mascote.physicsBody.density = 0.2f;
+    _mascote.physicsBody.usesPreciseCollisionDetection = YES;
+    _mascote.physicsBody.restitution = 0;
+    
+    //Colisao
+    //        _mascote.physicsBody.categoryBitMask = mascote;
+    //        _mascote.physicsBody.contactTestBitMask = simboloMusical;
+    
+    //Adiciona a textura ao nó e o nó a cena
+    [self addChild: _mascote];
     
 }
 
@@ -170,7 +168,7 @@
 -(void)criaFundo{
     
     //Aloca, seta nome e posição do nó
-    self.fundo = [[SKSpriteNode alloc]init];
+    self.fundo = [[SKSpriteNode alloc] init];
     self.fundo.name = @"fundo";
     self.fundo.position  = CGPointMake(512, 384);
     
@@ -178,7 +176,7 @@
     SKTexture *texturaFundoPrincipal = [SKTexture textureWithImageNamed: @"papelAntigo.jpg"];
     self.fundo.texture = texturaFundoPrincipal;
     self.fundo.size = CGSizeMake(1024, 768);
-     self.fundo.zPosition = -5;
+    self.fundo.zPosition = -5;
     
     //Adiciona a textura ao nó e o nó a cena
     [self addChild: self.fundo];
@@ -186,6 +184,8 @@
 
 
 -(SKSpriteNode*)criaBotaoDireita{
+    
+    _botaoDireita = [[SKSpriteNode alloc] init];
     _botaoDireita = [SKSpriteNode spriteNodeWithImageNamed:@"buttonMagic.png"];
     _botaoDireita.position = CGPointMake(900, 200);
     _botaoDireita.size = CGSizeMake(50, 50);
@@ -196,27 +196,29 @@
 }
 
 -(SKSpriteNode*)criaBotaoEsquerda{
+    
+    _botaoEsquerda = [[SKSpriteNode alloc] init];
     _botaoEsquerda = [SKSpriteNode spriteNodeWithImageNamed:@"buttonMagic.png"];
-    _botaoEsquerda.position = CGPointMake(900, 200);
+    _botaoEsquerda.position = CGPointMake(100, 200);
     _botaoEsquerda.size = CGSizeMake(50, 50);
-    _botaoEsquerda.name = @"botaoEsqueda";
+    _botaoEsquerda.name = @"botaoEsquerda";
     _botaoEsquerda.zPosition = +5.0;
     
-    return _botaoDireita;
+    return _botaoEsquerda;
 }
 
 /////////////////////////////////////////////////////// AÇÕES, ANIMAÇÕES E SPRITES ////////////////////////////////////////////////////////
 
 //MOVIMENTO DIREITA ESQUERDA
 -(void)acaoMoverDireita: (SKNode*)node{
-        SKAction *moverPraDireita = [SKAction moveTo: CGPointMake(100, node.position.y) duration: 3];
-        [node runAction: moverPraDireita];
+    SKAction *moverPraDireita = [SKAction moveTo: CGPointMake(100, node.position.y) duration: 3];
+    [node runAction: moverPraDireita];
 }
 
 -(void)acaoMoverEsquerda: (SKNode*)node{
     SKAction *moverPraEsquerda = [SKAction moveTo: CGPointMake(312, node.position.y) duration: 3];
     [node runAction: moverPraEsquerda];
-
+    
 }
 
 
@@ -252,5 +254,7 @@
 -(void)pausaJogo{
     self.scene.view.paused = YES;
 }
+
+
 
 @end

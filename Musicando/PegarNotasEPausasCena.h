@@ -1,15 +1,16 @@
 //
-//  PegarNotasEPausasPrincipal.h
+//  PegarNotasEPausasCena.h
 //  Musicando
 //
-//  Created by EMERSON DE SOUZA BARROS on 18/08/14.
+//  Created by Emerson Barros on 18/08/14.
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
 
-#import <SpriteKit/SpriteKit.h>
+#import <AVFoundation/AVFoundation.h>
 #import "GameOverViewController.h"
+#import <SpriteKit/SpriteKit.h>
 
-@interface PegarNotasEPausasPrincipal : SKScene  <SKPhysicsContactDelegate>{
+@interface PegarNotasEPausasCena : SKScene <SKPhysicsContactDelegate>{
     
     //Nodes
     SKNode *objetoPraCair1;
@@ -40,12 +41,26 @@
 @property int quantidadeMovimentoDireita;
 @property int quantidadeMovimentoEsquerda;
 
-
-
-
 //Botoes
 -(SKSpriteNode*)criaBotaoDireita;
 -(SKSpriteNode*)criaBotaoEsquerda;
+
+-(void)carregarPrimeirosComponentes;
+
+-(void)criaMascote;
+-(void)criaFundo;
+
+-(void)acaoMoverDireita: (SKNode*)node;
+-(void)acaoMoverEsquerda: (SKNode*)node;
+
+-(void)update:(CFTimeInterval)currentTime;
+-(void)didBeginContact:(SKPhysicsContact *)contact;
+-(void)touchesBegan:(NSSet*)touches withEvent: (UIEvent*)event;
+
+-(NSMutableArray*)loadSpriteSheetFromImageWithName:(NSString*)name withNumberOfSprites:(int)numSprites withNumberOfRows:(int)numRows withNumberOfSpritesPerRow:(int)numSpritesPerRow;
+
+-(void)gameOver;
+-(void)pausaJogo;
 
 
 @end

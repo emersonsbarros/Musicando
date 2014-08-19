@@ -14,11 +14,12 @@
 
 @implementation PegarNotasEPausasViewController
 
+
 - (void)viewDidLoad{
     [super viewDidLoad];
     
     //Gamer para SpriteKit
-    [[GameOverViewController sharedManager]addBarraSuperioAoXibOculto:self:[Biblioteca sharedManager].exercicioAtual];
+    [[GameOverViewController sharedManager]addBarraSuperioAoXibOculto: self:[Biblioteca sharedManager].exercicioAtual];
     
     //Configure the view.
     SKView * skView = (SKView *)self.view;
@@ -27,7 +28,7 @@
     skView.backgroundColor = [UIColor whiteColor];
     
     //Create and configure the scene.
-    SKScene * cenaPrincipal = [PegarNotasEPausasPrincipal sceneWithSize: skView.bounds.size];
+    SKScene * cenaPrincipal = [PegarNotasEPausasCena sceneWithSize: skView.bounds.size];
     cenaPrincipal.scaleMode = SKSceneScaleModeAspectFill;
     
     //Present the scene.

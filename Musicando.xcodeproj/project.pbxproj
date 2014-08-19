@@ -29,6 +29,7 @@
 		0BA27C6219A2938A00D21948 /* Sol.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA27C5B19A2938A00D21948 /* Sol.png */; };
 		0BA27C6419A293A600D21948 /* papelAntigo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0BA27C6319A293A600D21948 /* papelAntigo.jpg */; };
 		0BA369DB199E862300B53D46 /* ruido.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA369DA199E862300B53D46 /* ruido.png */; };
+		2B41C6B019A2E6990038B30B /* PegarNotasEPausasCena.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B41C6AF19A2E6990038B30B /* PegarNotasEPausasCena.m */; };
 		2B64F9E41969207E00BC57FD /* Mod1Aula2Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64F9E21969207E00BC57FD /* Mod1Aula2Exe1ViewController.m */; };
 		2B64F9E51969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64F9E31969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib */; };
 		2B64F9EA196920D000BC57FD /* Mod1Aula3Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64F9E8196920D000BC57FD /* Mod1Aula3Exe1ViewController.m */; };
@@ -333,7 +334,6 @@
 		A84854F31994119600C5F0A3 /* flauta.png in Resources */ = {isa = PBXBuildFile; fileRef = A84854571994119600C5F0A3 /* flauta.png */; };
 		A84854F41994119600C5F0A3 /* frequencia.png in Resources */ = {isa = PBXBuildFile; fileRef = A84854581994119600C5F0A3 /* frequencia.png */; };
 		A84854F51994119600C5F0A3 /* frequenciaDiapasao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A84854591994119600C5F0A3 /* frequenciaDiapasao.jpg */; };
-		A84854F61994119600C5F0A3 /* frequenciaFlauta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A848545A1994119600C5F0A3 /* frequenciaFlauta.jpg */; };
 		A84854F71994119600C5F0A3 /* frequenciaHomen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A848545B1994119600C5F0A3 /* frequenciaHomen.jpg */; };
 		A84854F81994119600C5F0A3 /* frequenciaViolino.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A848545C1994119600C5F0A3 /* frequenciaViolino.jpg */; };
 		A84854F91994119600C5F0A3 /* furacao.png in Resources */ = {isa = PBXBuildFile; fileRef = A848545D1994119600C5F0A3 /* furacao.png */; };
@@ -478,7 +478,6 @@
 		A84855BB1994146500C5F0A3 /* LeituraPartituraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A84855B91994146500C5F0A3 /* LeituraPartituraViewController.m */; };
 		A84855BF199416D100C5F0A3 /* TransicaoExercicioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A84855BD199416D100C5F0A3 /* TransicaoExercicioViewController.m */; };
 		A84855C0199416D100C5F0A3 /* TransicaoExercicioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84855BE199416D100C5F0A3 /* TransicaoExercicioViewController.xib */; };
-		A87F0FC119A2BB62000061EC /* PegarNotasEPausasPrincipal.m in Sources */ = {isa = PBXBuildFile; fileRef = A87F0FC019A2BB62000061EC /* PegarNotasEPausasPrincipal.m */; };
 		A87F0FC519A2BB88000061EC /* PegarNotasEPausasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A87F0FC319A2BB88000061EC /* PegarNotasEPausasViewController.m */; };
 		A87F0FC619A2BB88000061EC /* PegarNotasEPausasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A87F0FC419A2BB88000061EC /* PegarNotasEPausasViewController.xib */; };
 		A8C3F0A3194B72A400E78899 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C3F0A2194B72A400E78899 /* Foundation.framework */; };
@@ -540,6 +539,8 @@
 		0BA27C5B19A2938A00D21948 /* Sol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sol.png; sourceTree = "<group>"; };
 		0BA27C6319A293A600D21948 /* papelAntigo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = papelAntigo.jpg; sourceTree = "<group>"; };
 		0BA369DA199E862300B53D46 /* ruido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ruido.png; sourceTree = "<group>"; };
+		2B41C6AE19A2E6990038B30B /* PegarNotasEPausasCena.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PegarNotasEPausasCena.h; sourceTree = "<group>"; };
+		2B41C6AF19A2E6990038B30B /* PegarNotasEPausasCena.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PegarNotasEPausasCena.m; sourceTree = "<group>"; };
 		2B64F9E11969207E00BC57FD /* Mod1Aula2Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula2Exe1ViewController.h; sourceTree = "<group>"; };
 		2B64F9E21969207E00BC57FD /* Mod1Aula2Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula2Exe1ViewController.m; sourceTree = "<group>"; };
 		2B64F9E31969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula2Exe1ViewController.xib; sourceTree = "<group>"; };
@@ -1063,8 +1064,6 @@
 		A84855BC199416D100C5F0A3 /* TransicaoExercicioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransicaoExercicioViewController.h; sourceTree = "<group>"; };
 		A84855BD199416D100C5F0A3 /* TransicaoExercicioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransicaoExercicioViewController.m; sourceTree = "<group>"; };
 		A84855BE199416D100C5F0A3 /* TransicaoExercicioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransicaoExercicioViewController.xib; sourceTree = "<group>"; };
-		A87F0FBF19A2BB62000061EC /* PegarNotasEPausasPrincipal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PegarNotasEPausasPrincipal.h; sourceTree = "<group>"; };
-		A87F0FC019A2BB62000061EC /* PegarNotasEPausasPrincipal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PegarNotasEPausasPrincipal.m; sourceTree = "<group>"; };
 		A87F0FC219A2BB88000061EC /* PegarNotasEPausasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PegarNotasEPausasViewController.h; sourceTree = "<group>"; };
 		A87F0FC319A2BB88000061EC /* PegarNotasEPausasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PegarNotasEPausasViewController.m; sourceTree = "<group>"; };
 		A87F0FC419A2BB88000061EC /* PegarNotasEPausasViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PegarNotasEPausasViewController.xib; sourceTree = "<group>"; };
@@ -1165,9 +1164,9 @@
 			children = (
 				0BA27C4919A2917800D21948 /* EscadaDeNotasPrincipal.h */,
 				0BA27C4519A2917800D21948 /* EscadaDeNotasPrincipal.m */,
-				0BA27C4619A2917800D21948 /* EscadaDeNotasViewController.xib */,
-				0BA27C4A19A2917800D21948 /* EscadaDeNotasViewController.m */,
 				0BA27C4319A2917800D21948 /* EscadaDeNotasViewController.h */,
+				0BA27C4A19A2917800D21948 /* EscadaDeNotasViewController.m */,
+				0BA27C4619A2917800D21948 /* EscadaDeNotasViewController.xib */,
 			);
 			name = "Game Escala";
 			sourceTree = "<group>";
@@ -2103,8 +2102,8 @@
 		A87F0FBE19A2BB2A000061EC /* Game Pegar Notas */ = {
 			isa = PBXGroup;
 			children = (
-				A87F0FBF19A2BB62000061EC /* PegarNotasEPausasPrincipal.h */,
-				A87F0FC019A2BB62000061EC /* PegarNotasEPausasPrincipal.m */,
+				2B41C6AE19A2E6990038B30B /* PegarNotasEPausasCena.h */,
+				2B41C6AF19A2E6990038B30B /* PegarNotasEPausasCena.m */,
 				A87F0FC219A2BB88000061EC /* PegarNotasEPausasViewController.h */,
 				A87F0FC319A2BB88000061EC /* PegarNotasEPausasViewController.m */,
 				A87F0FC419A2BB88000061EC /* PegarNotasEPausasViewController.xib */,
@@ -2402,7 +2401,6 @@
 				3F608D85196C7585001979E9 /* 2.png in Resources */,
 				3F608D75196C7585001979E9 /* dot.gif in Resources */,
 				A84854F91994119600C5F0A3 /* furacao.png in Resources */,
-				A84854F61994119600C5F0A3 /* frequenciaFlauta.jpg in Resources */,
 				3F608D5B196C7585001979E9 /* do1.caf in Resources */,
 				A848554D1994119600C5F0A3 /* tocaTreco.png in Resources */,
 				2B64FA3A196922A400BC57FD /* Mod2Aula4Exe2ViewController.xib in Resources */,
@@ -2742,6 +2740,7 @@
 				3FAC5921197F5BE8001B762F /* BarraSuperiorViewController.m in Sources */,
 				2B64F9E41969207E00BC57FD /* Mod1Aula2Exe1ViewController.m in Sources */,
 				3FAD24591973AD8200DEDFF8 /* Mod1Aula2Exe2ViewController.m in Sources */,
+				2B41C6B019A2E6990038B30B /* PegarNotasEPausasCena.m in Sources */,
 				3F608DE3196C7585001979E9 /* OpenALSupport.c in Sources */,
 				2B64FA52196922D500BC57FD /* Mod2Aula4Exe7ViewController.m in Sources */,
 				2B64FA611969232B00BC57FD /* Mod2Aula7Exe1ViewController.m in Sources */,
@@ -2787,7 +2786,6 @@
 				3F608D98196C7585001979E9 /* Nota.m in Sources */,
 				A83ED3DB19520810006CB6A4 /* Conversa.m in Sources */,
 				2B64FA111969221C00BC57FD /* Mod2Aula1Exe2ViewController.m in Sources */,
-				A87F0FC119A2BB62000061EC /* PegarNotasEPausasPrincipal.m in Sources */,
 				A83ED3E219520810006CB6A4 /* Usuario.m in Sources */,
 				3F608D58196C7585001979E9 /* DataBaseInstrumento.m in Sources */,
 				A83ED3DF19520810006CB6A4 /* Glossario.m in Sources */,

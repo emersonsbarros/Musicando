@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SpriteKit/SpriteKit.h>
 #import "GameOverViewController.h"
-#import "PegarNotasEPausasPrincipal.h"
+#import "PegarNotasEPausasCena.h"
 #import "Biblioteca.h"
 
 @interface PegarNotasEPausasViewController : UIViewController
