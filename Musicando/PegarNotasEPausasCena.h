@@ -10,6 +10,10 @@
 #import "GameOverViewController.h"
 #import <SpriteKit/SpriteKit.h>
 
+//CONSTANSTES para colisão
+static const UInt32 mascote = 0x1 << 0;
+static const UInt32 simboloMusical = 0x1 << 1;
+
 @interface PegarNotasEPausasCena : SKScene <SKPhysicsContactDelegate>{
     
     //Nodes

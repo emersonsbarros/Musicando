@@ -107,26 +107,28 @@
     CGPoint location = [touch locationInNode:self];
     SKNode *node = [self nodeAtPoint: location];
     
-    //Botão direita
+//Botão direita
     if ([node.name isEqualToString:@"botaoDireita"]) {
+        
         //Ate 2 movimentos
-        if (self.quantidadeMovimentoDireita <= 2) {
+        if (self.quantidadeMovimentoDireita < 2) {
             [self acaoMoverDireita: _mascote];
             self.quantidadeMovimentoDireita++;
             
             if(self.quantidadeMovimentoEsquerda != 0)
-                self.quantidadeMovimentoEsquerda++;
+                self.quantidadeMovimentoEsquerda--;
         }    }
     
-    //Botão esquerda
+//Botão esquerda
     if ([node.name isEqualToString:@"botaoEsquerda"]) {
+        
         //Ate 2 movimentos
-        if (self.quantidadeMovimentoEsquerda <= 2) {
+        if (self.quantidadeMovimentoEsquerda < 2) {
             [self acaoMoverEsquerda: _mascote];
             self.quantidadeMovimentoEsquerda++;
             
             if(self.quantidadeMovimentoDireita != 0)
-                self.quantidadeMovimentoDireita++;
+                self.quantidadeMovimentoDireita--;
         }
     }
     
@@ -136,18 +138,18 @@
 //////////////////////////////// CRIAÇAO ////////////////////////////////////////////
 -(void)criaMascote{
     
-    //Incia
+//Incia
     _mascote = [[SKSpriteNode alloc] init];
     _mascote.position = CGPointMake(512, 100);
     _mascote.zPosition = 2;
     _mascote.name = @"mascote";
     
-    //Posicao e img
+//Posicao e img
     SKTexture *textura = [SKTexture textureWithImageNamed: @"mascote.png"];
     _mascote.texture = textura;
     _mascote.size = CGSizeMake(100, 100);
     
-    //Cria o corpo físico do bloco
+//Cria o corpo físico do bloco
     _mascote.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(100, 100)];
     _mascote.physicsBody.dynamic = YES;
     _mascote.physicsBody.affectedByGravity = NO;
@@ -155,11 +157,11 @@
     _mascote.physicsBody.usesPreciseCollisionDetection = YES;
     _mascote.physicsBody.restitution = 0;
     
-    //Colisao
-    //        _mascote.physicsBody.categoryBitMask = mascote;
-    //        _mascote.physicsBody.contactTestBitMask = simboloMusical;
+//Colisao
+    _mascote.physicsBody.categoryBitMask = mascote;
+    _mascote.physicsBody.contactTestBitMask = simboloMusical;
     
-    //Adiciona a textura ao nó e o nó a cena
+//Adiciona a textura ao nó e o nó a cena
     [self addChild: _mascote];
     
 }
@@ -167,18 +169,18 @@
 //FUNDO
 -(void)criaFundo{
     
-    //Aloca, seta nome e posição do nó
+//Aloca, seta nome e posição do nó
     self.fundo = [[SKSpriteNode alloc] init];
     self.fundo.name = @"fundo";
     self.fundo.position  = CGPointMake(512, 384);
     
-    //Cria textura
+//Cria textura
     SKTexture *texturaFundoPrincipal = [SKTexture textureWithImageNamed: @"papelAntigo.jpg"];
     self.fundo.texture = texturaFundoPrincipal;
     self.fundo.size = CGSizeMake(1024, 768);
     self.fundo.zPosition = -5;
     
-    //Adiciona a textura ao nó e o nó a cena
+//Adiciona a textura ao nó e o nó a cena
     [self addChild: self.fundo];
 }
 
@@ -211,14 +213,13 @@
 
 //MOVIMENTO DIREITA ESQUERDA
 -(void)acaoMoverDireita: (SKNode*)node{
-    SKAction *moverPraDireita = [SKAction moveTo: CGPointMake(100, node.position.y) duration: 3];
+    SKAction *moverPraDireita = [SKAction moveTo: CGPointMake(node.position.x+200, node.position.y) duration: 3];
     [node runAction: moverPraDireita];
 }
 
 -(void)acaoMoverEsquerda: (SKNode*)node{
-    SKAction *moverPraEsquerda = [SKAction moveTo: CGPointMake(312, node.position.y) duration: 3];
+    SKAction *moverPraEsquerda = [SKAction moveTo: CGPointMake(node.position.x-200, node.position.y) duration: 3];
     [node runAction: moverPraEsquerda];
-    
 }
 
 
