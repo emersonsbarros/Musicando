@@ -544,7 +544,7 @@
 
 - (void)criaBotaoStarAndCheck{
     
-    _botaoStartAndChek = [SKSpriteNode spriteNodeWithImageNamed:@"buttonMagic.png"];
+    _botaoStartAndChek = [SKSpriteNode spriteNodeWithImageNamed:@"botaoLancar"];
     _botaoStartAndChek.position = CGPointMake(900, 200);
     _botaoStartAndChek.size = CGSizeMake(50, 50);
     _botaoStartAndChek.name = @"start";

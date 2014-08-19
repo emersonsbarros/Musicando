@@ -99,6 +99,11 @@
 		2BA153AA19A3A236000E4D3F /* pausa1-4Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA153A919A3A236000E4D3F /* pausa1-4Tempo.png */; };
 		2BA153AC19A3A242000E4D3F /* pausa1-8Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA153AB19A3A242000E4D3F /* pausa1-8Tempo.png */; };
 		2BA153AE19A3A24D000E4D3F /* pausa1-16Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA153AD19A3A24D000E4D3F /* pausa1-16Tempo.png */; };
+		2BA153B419A3AA37000E4D3F /* botaoChecar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA153AF19A3AA37000E4D3F /* botaoChecar.png */; };
+		2BA153B519A3AA37000E4D3F /* botaoLancar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA153B019A3AA37000E4D3F /* botaoLancar.png */; };
+		2BA153B619A3AA37000E4D3F /* botaoSalvar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA153B119A3AA37000E4D3F /* botaoSalvar.png */; };
+		2BA153B719A3AA37000E4D3F /* pausa2Tempos.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA153B219A3AA37000E4D3F /* pausa2Tempos.png */; };
+		2BA153B819A3AA37000E4D3F /* pausa4Tempos.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA153B319A3AA37000E4D3F /* pausa4Tempos.png */; };
 		3F03108F1999D8F500570B8A /* EfeitoComponeteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F03108E1999D8F500570B8A /* EfeitoComponeteView.m */; };
 		3F135895199EFE0400873CD4 /* casaMusica.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F135894199EFE0400873CD4 /* casaMusica.png */; };
 		3F2EA5E019A02DCD00972B81 /* botaoMaquina.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F2EA5DF19A02DCD00972B81 /* botaoMaquina.png */; };
@@ -648,6 +653,11 @@
 		2BA153A919A3A236000E4D3F /* pausa1-4Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pausa1-4Tempo.png"; sourceTree = "<group>"; };
 		2BA153AB19A3A242000E4D3F /* pausa1-8Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pausa1-8Tempo.png"; sourceTree = "<group>"; };
 		2BA153AD19A3A24D000E4D3F /* pausa1-16Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pausa1-16Tempo.png"; sourceTree = "<group>"; };
+		2BA153AF19A3AA37000E4D3F /* botaoChecar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaoChecar.png; sourceTree = "<group>"; };
+		2BA153B019A3AA37000E4D3F /* botaoLancar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaoLancar.png; sourceTree = "<group>"; };
+		2BA153B119A3AA37000E4D3F /* botaoSalvar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaoSalvar.png; sourceTree = "<group>"; };
+		2BA153B219A3AA37000E4D3F /* pausa2Tempos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pausa2Tempos.png; sourceTree = "<group>"; };
+		2BA153B319A3AA37000E4D3F /* pausa4Tempos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pausa4Tempos.png; sourceTree = "<group>"; };
 		3F03108D1999D8F500570B8A /* EfeitoComponeteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoComponeteView.h; sourceTree = "<group>"; };
 		3F03108E1999D8F500570B8A /* EfeitoComponeteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoComponeteView.m; sourceTree = "<group>"; };
 		3F135894199EFE0400873CD4 /* casaMusica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = casaMusica.png; sourceTree = "<group>"; };
@@ -2116,6 +2126,11 @@
 		A87F0FBE19A2BB2A000061EC /* Game Pegar Notas */ = {
 			isa = PBXGroup;
 			children = (
+				2BA153AF19A3AA37000E4D3F /* botaoChecar.png */,
+				2BA153B019A3AA37000E4D3F /* botaoLancar.png */,
+				2BA153B119A3AA37000E4D3F /* botaoSalvar.png */,
+				2BA153B219A3AA37000E4D3F /* pausa2Tempos.png */,
+				2BA153B319A3AA37000E4D3F /* pausa4Tempos.png */,
 				2BA153A519A3A21C000E4D3F /* pausa1Tempo.png */,
 				2BA153A719A3A228000E4D3F /* pausa1-2Tempo.png */,
 				2BA153A919A3A236000E4D3F /* pausa1-4Tempo.png */,
@@ -2497,6 +2512,7 @@
 				3F43A318199C85BD0038D1E9 /* iconeLeitor.png in Resources */,
 				A848558B1994137D00C5F0A3 /* barulhoBasePilar.wav in Resources */,
 				3F608DA7196C7585001979E9 /* chefao.xml in Resources */,
+				2BA153B419A3AA37000E4D3F /* botaoChecar.png in Resources */,
 				2B64F9EB196920D000BC57FD /* Mod1Aula3Exe1ViewController.xib in Resources */,
 				3F608DD8196C7585001979E9 /* P200 Piano D5.caf in Resources */,
 				3F608DDD196C7585001979E9 /* P200 Piano F#5.caf in Resources */,
@@ -2521,6 +2537,7 @@
 				A84855941994137D00C5F0A3 /* corridaTartaruga.wav in Resources */,
 				A84855391994119600C5F0A3 /* sambaSimbolo.jpg in Resources */,
 				A84854D91994119600C5F0A3 /* chegadaLinha.png in Resources */,
+				2BA153B819A3AA37000E4D3F /* pausa4Tempos.png in Resources */,
 				3F608D64196C7585001979E9 /* la3.caf in Resources */,
 				3F608D67196C7585001979E9 /* mib3.caf in Resources */,
 				A84854FE1994119600C5F0A3 /* graficoAgudoCortado.jpg in Resources */,
@@ -2540,6 +2557,7 @@
 				A848559C1994137D00C5F0A3 /* happybirthdaySamba.mp3 in Resources */,
 				3F902CAB199DD8C800FDF84A /* pForegroundVertical.png in Resources */,
 				2B64FA711969234700BC57FD /* Mod2Aula7Exe4ViewController.xib in Resources */,
+				2BA153B519A3AA37000E4D3F /* botaoLancar.png in Resources */,
 				3FAC5922197F5BE8001B762F /* BarraSuperiorViewController.xib in Resources */,
 				3F608DD0196C7585001979E9 /* P200 Piano A#5.caf in Resources */,
 				3F608D5F196C7585001979E9 /* fad2.caf in Resources */,
@@ -2612,6 +2630,7 @@
 				3F608D8A196C7585001979E9 /* notaCaraPausaSom.png in Resources */,
 				A84855AC1994137D00C5F0A3 /* notasPausas.mp3 in Resources */,
 				A84855421994119600C5F0A3 /* som.jpg in Resources */,
+				2BA153B719A3AA37000E4D3F /* pausa2Tempos.png in Resources */,
 				2BA153A319A39DDA000E4D3F /* botaoDireita.png in Resources */,
 				3F608D5D196C7585001979E9 /* do3.caf in Resources */,
 				3FC36C301996B37F006A1B2D /* barraPapel.jpg in Resources */,
@@ -2680,6 +2699,7 @@
 				A848550A1994119600C5F0A3 /* maestro.png in Resources */,
 				A84854F21994119600C5F0A3 /* faBloco.png in Resources */,
 				A84855A21994137D00C5F0A3 /* leao.wav in Resources */,
+				2BA153B619A3AA37000E4D3F /* botaoSalvar.png in Resources */,
 				3F608DB1196C7585001979E9 /* kokiri-forest.xml in Resources */,
 				A84855A41994137D00C5F0A3 /* mi3E.wav in Resources */,
 				A848550D1994119600C5F0A3 /* microfone.jpg in Resources */,

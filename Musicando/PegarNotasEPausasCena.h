@@ -43,6 +43,7 @@ static const UInt32 pisoCategoria = 0x1 << 2;
 //Atributos e auxiliares
 @property NSMutableArray *listaDeSimbolosMusicais;
 @property NSMutableArray *listaNomeDosSimbolosMusicais;
+@property NSMutableArray *notasJaSorteadas;
 
 @property NSString *simboloMusicalAtual;
 @property float densidadeAtual;

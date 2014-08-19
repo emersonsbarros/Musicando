@@ -249,7 +249,7 @@
     fundo.position  = CGPointMake(512, 384);
     
     //Cria testura do fundo
-    SKTexture *texturaFundoPrincipal = [SKTexture textureWithImageNamed: @"papelAntigo.jpg"];
+    SKTexture *texturaFundoPrincipal = [SKTexture textureWithImageNamed: @"fundoPapiro.png"];
     self.fundoPrincipal = [SKSpriteNode spriteNodeWithTexture: texturaFundoPrincipal size: CGSizeMake(1024, 768)];
     fundo.zPosition = -5;
     
@@ -437,7 +437,7 @@
 -(void)cairNota{
     
     self.botaoCairNota = [[SKSpriteNode alloc] init];
-    self.botaoCairNota = [SKSpriteNode spriteNodeWithImageNamed:@"buttonMagic.png"];
+    self.botaoCairNota = [SKSpriteNode spriteNodeWithImageNamed:@"botaoLancar.png"];
     self.botaoCairNota.name = @"cairNota";
     self.botaoCairNota.position = CGPointMake(900, 100);
     self.botaoCairNota.size = CGSizeMake(100, 100);

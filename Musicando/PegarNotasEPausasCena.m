@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
 #import "PegarNotasEPausasCena.h"
-#define GRAVIDADE_MUNDO -0.05
+#define GRAVIDADE_MUNDO -0.1
 
 
 @implementation PegarNotasEPausasCena
@@ -37,6 +37,8 @@
         self.listaDeSimbolosMusicais = [[NSMutableArray alloc] initWithObjects: @"notaSemibreve", @"notaMinima", @"notaSeminima", @"notaColcheia", @"notaSemicolcheia", @"notaFusa", @"notaSemiFusa", @"pausa4Tempos", @"pausa2Tempos", @"pausa1Tempo", @"pausa1-2Tempo", @"pausa1-4Tempo", @"pausa1-8Tempo", @"pausa1-16Tempo", nil];
         
         self.listaNomeDosSimbolosMusicais = [[NSMutableArray alloc] initWithObjects: @"semibreve", @"miníma", @"seminíma", @"colcheia", @"semicolcheia", @"fusa", @"semifusa", @"pausa 4", @"pausa 2", @"pausa 1", @"pausa 1/2", @"pausa 1/4", @"pausa 1/8", @"pausa 1/16", nil];
+        
+        self.notasJaSorteadas = [[NSMutableArray alloc] init];
         
         [self sortearSimboloAtual];
         [self sortearSimboloCerto];
@@ -96,11 +98,6 @@
     self.labelDeSimboloMusical.text = self.simboloMusicalAtual;
     self.labelDeSimboloMusical.fontName = @"Marker Felt Thin";
     [self addChild: self.labelDeSimboloMusical];
-
-//Simbolos
-    [self simboloPraCair1];
-    [self simboloPraCair2];
-    [self simboloPraCair3];
 }
 
 
@@ -111,10 +108,10 @@
         self.auxTempoPercorrido+=1;
         
         //CADA 30ms do AUXILIAR = 1s NO TEMPO
-        if ((self.auxTempoPercorrido == 30) && (self.tempoPercorrido > 20)) {
+        if ((self.auxTempoPercorrido == 30)) {
             
             //A cada 10 segundos cria novos simbolos
-            if (self.tempoPercorrido % 10 == 0) {
+            if (self.tempoPercorrido % 15 == 0) {
                 [self simboloPraCair1];
                 [self simboloPraCair2];
                 [self simboloPraCair3];
@@ -130,8 +127,6 @@
                 self.physicsWorld.gravity = CGVectorMake(0, self.physicsWorld.gravity.dy+0.01);
             }
             
-
-
         self.tempoPercorrido++;
         self.auxTempoPercorrido = 0;
         }
@@ -294,6 +289,8 @@
         simbolo.name = [self sortearSimboloPraCair];
     }
     
+    [self.notasJaSorteadas addObject: simbolo];
+    
 //Inicia
     self.simboloMusicalPraCair1 = [[SKSpriteNode alloc] init];
     self.simboloMusicalPraCair1.size = CGSizeMake(50, 100);
@@ -330,7 +327,14 @@
     if (_indiceSortearCerto == 1) {
         simbolo.name = [self simboloMusicalAtual];
     }else{
+        
         simbolo.name = [self sortearSimboloPraCair];
+        for (SKNode *no in self.notasJaSorteadas) {
+            if (no.name == simbolo.name) {
+                simbolo.name = [self sortearSimboloPraCair];
+            }
+        }
+        [self.notasJaSorteadas addObject: simbolo];
     }
     
 //Inicia
@@ -370,6 +374,12 @@
         simbolo.name = [self simboloMusicalAtual];
     }else{
         simbolo.name = [self sortearSimboloPraCair];
+        for (SKNode *no in self.notasJaSorteadas) {
+            if (no.name == simbolo.name) {
+                simbolo.name = [self sortearSimboloPraCair];
+            }
+        }
+        [self.notasJaSorteadas addObject: simbolo];
     }
     
 //Incia
@@ -396,6 +406,9 @@
 
     [simbolo addChild: self.simboloMusicalPraCair3];
     [self addChild: simbolo];
+    
+    //Remove da lista
+    [self.notasJaSorteadas removeAllObjects];
 }
 
 
@@ -440,7 +453,7 @@
     self.fundo.position  = CGPointMake(512, 384);
     
 //Cria textura
-    SKTexture *texturaFundoPrincipal = [SKTexture textureWithImageNamed: @"papelAntigo.jpg"];
+    SKTexture *texturaFundoPrincipal = [SKTexture textureWithImageNamed: @"fundoPapiro.png"];
     self.fundo.texture = texturaFundoPrincipal;
     self.fundo.size = CGSizeMake(1024, 768);
     self.fundo.zPosition = -5;
