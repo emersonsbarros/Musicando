@@ -24,6 +24,7 @@
         self.tempoPercorrido = 0;
         self.auxTempoPercorrido = 0;
         self.pontuacaoJogadorAtual = 0;
+        self.podeCair = YES;
         
         //Inicia com velocidade padrão do guindaste
         self.velocidadeGuindaste = 1;
@@ -167,6 +168,7 @@
                     //Aguarda alguns segundos até criar um novo
                     [NSTimer scheduledTimerWithTimeInterval: 1.0 target:self selector:@selector(criaBlocoNotaMusical) userInfo:nil repeats:NO];
                     [[self botaoCairNota] setAlpha: 1];
+                    self.podeCair = YES;
         
                 //NOTAS ERRADAS
                 }else if([blocoNota.name isEqualToString:@"Dor"] || [blocoNota.name isEqualToString:@"Rir"] || [blocoNota.name isEqualToString:@"Mou"] || [blocoNota.name isEqualToString:@"Fê"] || [blocoNota.name isEqualToString:@"Sou"] || [blocoNota.name isEqualToString:@"Lú"] || [blocoNota.name isEqualToString:@"Sir"]){
@@ -206,6 +208,7 @@
                         //Aguarda alguns segundos até criar um novo
                         [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(criaBlocoNotaMusical) userInfo:nil repeats:NO];
                         [[self botaoCairNota] setAlpha: 1];
+                        self.podeCair = YES;
 
                 }
             }
@@ -227,10 +230,10 @@
     SKNode *node = [self nodeAtPoint: location];
     
     //Botão cair bloco
-    NSLog(@"%@", node.name);
-    if ([node.name isEqualToString:@"cairNota"]) {
+    if (([node.name isEqualToString:@"cairNota"]) && self.podeCair) {
         [self adionarFisicaAoBlocoMusical];
         [[self botaoCairNota] setAlpha: 0];
+        self.podeCair = NO;
     }
     
 }

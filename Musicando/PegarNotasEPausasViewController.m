@@ -24,7 +24,7 @@
     //Configure the view.
     SKView * skView = (SKView *)self.view;
     skView.showsFPS = NO;
-    skView.showsNodeCount = YES;
+    skView.showsNodeCount = NO;
     skView.backgroundColor = [UIColor whiteColor];
     
     //Create and configure the scene.

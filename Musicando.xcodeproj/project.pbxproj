@@ -94,6 +94,11 @@
 		2B64FA85196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA83196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib */; };
 		2BA153A319A39DDA000E4D3F /* botaoDireita.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA153A119A39DDA000E4D3F /* botaoDireita.png */; };
 		2BA153A419A39DDA000E4D3F /* botaoEsquerda.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA153A219A39DDA000E4D3F /* botaoEsquerda.png */; };
+		2BA153A619A3A21C000E4D3F /* pausa1Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA153A519A3A21C000E4D3F /* pausa1Tempo.png */; };
+		2BA153A819A3A228000E4D3F /* pausa1-2Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA153A719A3A228000E4D3F /* pausa1-2Tempo.png */; };
+		2BA153AA19A3A236000E4D3F /* pausa1-4Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA153A919A3A236000E4D3F /* pausa1-4Tempo.png */; };
+		2BA153AC19A3A242000E4D3F /* pausa1-8Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA153AB19A3A242000E4D3F /* pausa1-8Tempo.png */; };
+		2BA153AE19A3A24D000E4D3F /* pausa1-16Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA153AD19A3A24D000E4D3F /* pausa1-16Tempo.png */; };
 		3F03108F1999D8F500570B8A /* EfeitoComponeteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F03108E1999D8F500570B8A /* EfeitoComponeteView.m */; };
 		3F135895199EFE0400873CD4 /* casaMusica.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F135894199EFE0400873CD4 /* casaMusica.png */; };
 		3F2EA5E019A02DCD00972B81 /* botaoMaquina.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F2EA5DF19A02DCD00972B81 /* botaoMaquina.png */; };
@@ -638,6 +643,11 @@
 		2B64FA83196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula3Exe5ViewController.xib; sourceTree = "<group>"; };
 		2BA153A119A39DDA000E4D3F /* botaoDireita.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaoDireita.png; sourceTree = "<group>"; };
 		2BA153A219A39DDA000E4D3F /* botaoEsquerda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaoEsquerda.png; sourceTree = "<group>"; };
+		2BA153A519A3A21C000E4D3F /* pausa1Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pausa1Tempo.png; sourceTree = "<group>"; };
+		2BA153A719A3A228000E4D3F /* pausa1-2Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pausa1-2Tempo.png"; sourceTree = "<group>"; };
+		2BA153A919A3A236000E4D3F /* pausa1-4Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pausa1-4Tempo.png"; sourceTree = "<group>"; };
+		2BA153AB19A3A242000E4D3F /* pausa1-8Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pausa1-8Tempo.png"; sourceTree = "<group>"; };
+		2BA153AD19A3A24D000E4D3F /* pausa1-16Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pausa1-16Tempo.png"; sourceTree = "<group>"; };
 		3F03108D1999D8F500570B8A /* EfeitoComponeteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoComponeteView.h; sourceTree = "<group>"; };
 		3F03108E1999D8F500570B8A /* EfeitoComponeteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoComponeteView.m; sourceTree = "<group>"; };
 		3F135894199EFE0400873CD4 /* casaMusica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = casaMusica.png; sourceTree = "<group>"; };
@@ -2106,6 +2116,11 @@
 		A87F0FBE19A2BB2A000061EC /* Game Pegar Notas */ = {
 			isa = PBXGroup;
 			children = (
+				2BA153A519A3A21C000E4D3F /* pausa1Tempo.png */,
+				2BA153A719A3A228000E4D3F /* pausa1-2Tempo.png */,
+				2BA153A919A3A236000E4D3F /* pausa1-4Tempo.png */,
+				2BA153AB19A3A242000E4D3F /* pausa1-8Tempo.png */,
+				2BA153AD19A3A24D000E4D3F /* pausa1-16Tempo.png */,
 				2BA153A119A39DDA000E4D3F /* botaoDireita.png */,
 				2BA153A219A39DDA000E4D3F /* botaoEsquerda.png */,
 				2B41C6AE19A2E6990038B30B /* PegarNotasEPausasCena.h */,
@@ -2335,6 +2350,7 @@
 				A84855521994119600C5F0A3 /* vibracao.png in Resources */,
 				3F608D78196C7585001979E9 /* sharp.png in Resources */,
 				A84855081994119600C5F0A3 /* linhasDePentagrama.png in Resources */,
+				2BA153AE19A3A24D000E4D3F /* pausa1-16Tempo.png in Resources */,
 				A848553B1994119600C5F0A3 /* saudeMusica.png in Resources */,
 				A848559B1994137D00C5F0A3 /* happybirthdayRock.mp3 in Resources */,
 				A848552F1994119600C5F0A3 /* pilar.png in Resources */,
@@ -2428,12 +2444,14 @@
 				A84855511994119600C5F0A3 /* ventoPipa.png in Resources */,
 				A84855471994119600C5F0A3 /* teclaPiano.png in Resources */,
 				3F608DA2196C7585001979E9 /* Beethoven-Fur Elise.xml in Resources */,
+				2BA153A819A3A228000E4D3F /* pausa1-2Tempo.png in Resources */,
 				A84854E51994119600C5F0A3 /* escadaModulo.png in Resources */,
 				3F608D7B196C7585001979E9 /* linha.jpg in Resources */,
 				A84855951994137D00C5F0A3 /* do3C.wav in Resources */,
 				A84855141994119600C5F0A3 /* notaColcheia.png in Resources */,
 				A84854D41994119600C5F0A3 /* carnavalframe3.gif in Resources */,
 				A84855AB1994137D00C5F0A3 /* notaA4.caf in Resources */,
+				2BA153AA19A3A236000E4D3F /* pausa1-4Tempo.png in Resources */,
 				A84854CC1994119600C5F0A3 /* cantoGregoriano.jpg in Resources */,
 				A84855061994119600C5F0A3 /* leao.png in Resources */,
 				A848554A1994119600C5F0A3 /* telefoneFixo.png in Resources */,
@@ -2548,6 +2566,7 @@
 				3F608DDA196C7585001979E9 /* P200 Piano F#2.caf in Resources */,
 				A84854C61994119600C5F0A3 /* biblioteca.png in Resources */,
 				3FB23EB619A1D68C003677A6 /* musicaJogoMusica.mp3 in Resources */,
+				2BA153A619A3A21C000E4D3F /* pausa1Tempo.png in Resources */,
 				2B64FA53196922D500BC57FD /* Mod2Aula4Exe7ViewController.xib in Resources */,
 				0BA27C5D19A2938A00D21948 /* Fa.png in Resources */,
 				A84855A71994137D00C5F0A3 /* musicaMixaIntroducao.wav in Resources */,
@@ -2648,6 +2667,7 @@
 				A84855121994119600C5F0A3 /* monge.png in Resources */,
 				3F608DBA196C7585001979E9 /* parabens.xml in Resources */,
 				3F608DB2196C7585001979E9 /* lepo.xml in Resources */,
+				2BA153AC19A3A242000E4D3F /* pausa1-8Tempo.png in Resources */,
 				A848551D1994119600C5F0A3 /* notaSemifusa.png in Resources */,
 				A84855491994119600C5F0A3 /* telao.png in Resources */,
 				0BA27C4219A2911A00D21948 /* iconeSomFala.png in Resources */,

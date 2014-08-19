@@ -158,19 +158,23 @@
         segundoCorpoFisico = contact.bodyA;
     }
     
+    NSLog(@"Simbolo Pedido %@", self.simboloMusicalAtual);
+    NSLog(@"No de colisao %@", primeiroCorpoFisico.node.name);
+
     
     //VERIFICADOR DAS COLISÕES
     if ((primeiroCorpoFisico.categoryBitMask & simboloMusicalCorreto) != 0) {
         
         //COLISÃO MASCOTE
         if((segundoCorpoFisico.categoryBitMask & mascoteCategoria) != 0){
-                
+            
+            
                 //SIMBOLO CERTO
-                if([simbolo.name isEqual: [self simboloMusicalAtual]]){
+                if([primeiroCorpoFisico.node.name isEqual: [self simboloMusicalAtual]]){
                     NSLog(@"%@ colidiu com mascote - %fx | %fy", simbolo.name, simbolo.position.x, simbolo.position.y);
                     
                     //Remove o simbolo da view
-                    [simbolo removeFromParent];
+                    [primeiroCorpoFisico.node removeFromParent];
                     
                     //Adiciona pontuação
                     self.pontuacaoJogadorAtual += 10;
@@ -190,7 +194,7 @@
             if((segundoCorpoFisico.categoryBitMask & pisoCategoria)!= 0){
             
                 //NOTAS CERTAS
-                if([simbolo.name isEqual: [self simboloMusicalAtual]]){
+                if([primeiroCorpoFisico.node.name isEqual: [self simboloMusicalAtual]]){
                     NSLog(@"GAMEOVER %@ colidiu com chao - %fx | %fy", simbolo.name, simbolo.position.x, simbolo.position.y);
                     [self gameOver];
                     
@@ -198,7 +202,7 @@
                 }else{
                     NSLog(@"%@ colidiu com chao", simbolo.name);
                     //Remove o simbolo da view
-                    [simbolo removeFromParent];
+                    [primeiroCorpoFisico.node removeFromParent];
                     
                     //Adiciona pontuação
                     self.pontuacaoJogadorAtual += 10;

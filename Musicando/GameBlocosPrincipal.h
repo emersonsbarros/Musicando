@@ -62,6 +62,8 @@ static const UInt32 coluna = 0x1 << 4;
 @property NSArray *listaDeNotas;
 @property int indiceNotaSorteada;
 
+@property BOOL podeCair;
+
 //Métodos
 -(void)carregarPrimeirosComponentes;
 

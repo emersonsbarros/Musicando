@@ -70,8 +70,6 @@ static const UInt32 pisoCategoria = 0x1 << 2;
 -(void)criaMascote;
 -(void)criaFundo;
 
--(void)removerDaCena: (SKSpriteNode*)node;
-
 -(void)acaoMoverDireita: (SKNode*)node;
 -(void)acaoMoverEsquerda: (SKNode*)node;
 
