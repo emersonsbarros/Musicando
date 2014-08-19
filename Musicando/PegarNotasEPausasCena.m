@@ -106,7 +106,7 @@
     SKPhysicsBody *primeiroCorpoFisico;
     SKPhysicsBody *segundoCorpoFisico;
     
-    //Padrão delegate
+//Padrão delegate
     if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask){
         primeiroCorpoFisico = contact.bodyA;
         segundoCorpoFisico = contact.bodyB;
@@ -117,7 +117,52 @@
     }
     
     
-    
+    if ((primeiroCorpoFisico.categoryBitMask & blocoNotaCorreta) != 0) {
+        
+        //COLISÃO TOCATRECO
+        if((segundoCorpoFisico.categoryBitMask & tocaTrecoCategoria) != 0){
+            
+            //NOTAS CERTAS
+            if([blocoNota.name isEqualToString:@"Dó"] || [blocoNota.name isEqualToString:@"Ré"] || [blocoNota.name isEqualToString:@"Mi"] || [blocoNota.name isEqualToString:@"Fá"] || [blocoNota.name isEqualToString:@"Sol"] || [blocoNota.name isEqualToString:@"Lá"] || [blocoNota.name isEqualToString:@"Si"]){
+                NSLog(@"Colidiu nota certa com tocatreco - %@", blocoNota.name);
+                
+                
+                }
+                
+                
+                
+                //NOTAS ERRADAS
+            }else if([blocoNota.name isEqualToString:@"Dor"] || [blocoNota.name isEqualToString:@"Rir"] || [blocoNota.name isEqualToString:@"Mou"] || [blocoNota.name isEqualToString:@"Fê"] || [blocoNota.name isEqualToString:@"Sou"] || [blocoNota.name isEqualToString:@"Lú"] || [blocoNota.name isEqualToString:@"Sir"]){
+                
+                NSLog(@"Colidiu nota errada com tocatreco - %@", blocoNota.name);
+                [self gameOver];
+                
+            }
+            //COLISAO NO CHÃO
+        }else{
+            
+            if((segundoCorpoFisico.categoryBitMask & pisoCategoria)!=0){
+                
+                //NOTAS CERTAS
+            }if([blocoNota.name isEqualToString:@"Dó"] || [blocoNota.name isEqualToString:@"Ré"] || [blocoNota.name isEqualToString:@"Mi"] || [blocoNota.name isEqualToString:@"Fá"] || [blocoNota.name isEqualToString:@"Sol"] || [blocoNota.name isEqualToString:@"Lá"] || [blocoNota.name isEqualToString:@"Si"]){
+                
+                NSLog(@"Colidiu com o chão nota certa - %@", blocoNota.name);
+                [self gameOver];
+                
+                //NOTAS ERRADAS
+            }else if([blocoNota.name isEqualToString:@"Dor"] || [blocoNota.name isEqualToString:@"Rir"] || [blocoNota.name isEqualToString:@"Mou"] || [blocoNota.name isEqualToString:@"Fê"] || [blocoNota.name isEqualToString:@"Sou"] || [blocoNota.name isEqualToString:@"Lú"] || [blocoNota.name isEqualToString:@"Sir"]){
+                
+                NSLog(@"Colidiu com o chão nota errada - %@", blocoNota.name);
+                
+                
+                    
+                }
+            }
+        }
+        
+        
+    }
+
     
 }
 
@@ -163,8 +208,48 @@
     
 }
 
+/////////////////////////////////////////////////////// SORTEIOS ////////////////////////////////////////////////////////
+-(void)sortearSimboloAtual{
+    
+    self.indiceSimboloSorteado = arc4random() % 14;
+    self.simboloMusicalAtual = [self.listaDeSimbolosMusicais objectAtIndex: self.indiceSimboloSorteado];
+    self.labelDeSimboloMusical.text = [self.listaNomeDosSimbolosMusicais objectAtIndex: self.indiceSimboloSorteado];
+    
+}
 
-//////////////////////////////// CRIAÇAO ////////////////////////////////////////////
+/////////////////////////////////////////////////////// CRIAÇÃO ////////////////////////////////////////////////////////
+//SIMBOLO1
+-(void)simboloPraCair1: (float)densidade{
+    
+//Incia
+    self.simboloMusicalPraCair1 = [[SKSpriteNode alloc] init];
+    self.simboloMusicalPraCair1.position = CGPointMake(100, 900);
+    self.simboloMusicalPraCair1.zPosition = 5;
+    
+}
+
+//SIMBOLO2
+-(void)simboloPraCair2: (float)densidade{
+    
+//Incia
+    self.simboloMusicalPraCair2 = [[SKSpriteNode alloc] init];
+    self.simboloMusicalPraCair2.position = CGPointMake(512, 900);
+    self.simboloMusicalPraCair2.zPosition = 5;
+
+}
+
+//SIMBOLO3
+-(void)simboloPraCair3: (float)densidade{
+    
+//Incia
+    self.simboloMusicalPraCair3 = [[SKSpriteNode alloc] init];
+    self.simboloMusicalPraCair3.position = CGPointMake(912, 900);
+    self.simboloMusicalPraCair3.zPosition = 5;
+
+    
+}
+
+
 -(void)criaMascote{
     
 //Incia
@@ -317,7 +402,5 @@
 -(void)pausaJogo{
     self.scene.view.paused = YES;
 }
-
-
 
 @end

@@ -16,14 +16,13 @@ static const UInt32 simboloMusical = 0x1 << 1;
 static const UInt32 piso = 0x1 << 2;
 
 @interface PegarNotasEPausasCena : SKScene <SKPhysicsContactDelegate>{
-    
-    //Nodes
-    SKNode *objetoPraCair1;
-    SKNode *objetoPraCair2;
-    SKNode *objetoPraCair3;
 }
 
-//Sprites
+//Sprites & Nodes
+@property SKSpriteNode *simboloMusicalPraCair1;
+@property SKSpriteNode *simboloMusicalPraCair2;
+@property SKSpriteNode *simboloMusicalPraCair3;
+
 @property SKSpriteNode *fundo;
 @property SKSpriteNode *piso;
 @property SKSpriteNode *mascote;
