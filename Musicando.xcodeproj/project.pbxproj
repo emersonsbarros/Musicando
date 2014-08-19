@@ -92,6 +92,8 @@
 		2B64FA801969236D00BC57FD /* Mod2Aula8Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA7E1969236D00BC57FD /* Mod2Aula8Exe1ViewController.xib */; };
 		2B64FA84196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64FA82196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m */; };
 		2B64FA85196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64FA83196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib */; };
+		2BA153A319A39DDA000E4D3F /* botaoDireita.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA153A119A39DDA000E4D3F /* botaoDireita.png */; };
+		2BA153A419A39DDA000E4D3F /* botaoEsquerda.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA153A219A39DDA000E4D3F /* botaoEsquerda.png */; };
 		3F03108F1999D8F500570B8A /* EfeitoComponeteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F03108E1999D8F500570B8A /* EfeitoComponeteView.m */; };
 		3F135895199EFE0400873CD4 /* casaMusica.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F135894199EFE0400873CD4 /* casaMusica.png */; };
 		3F2EA5E019A02DCD00972B81 /* botaoMaquina.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F2EA5DF19A02DCD00972B81 /* botaoMaquina.png */; };
@@ -634,6 +636,8 @@
 		2B64FA81196923FA00BC57FD /* Mod1Aula3Exe5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula3Exe5ViewController.h; sourceTree = "<group>"; };
 		2B64FA82196923FA00BC57FD /* Mod1Aula3Exe5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula3Exe5ViewController.m; sourceTree = "<group>"; };
 		2B64FA83196923FA00BC57FD /* Mod1Aula3Exe5ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula3Exe5ViewController.xib; sourceTree = "<group>"; };
+		2BA153A119A39DDA000E4D3F /* botaoDireita.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaoDireita.png; sourceTree = "<group>"; };
+		2BA153A219A39DDA000E4D3F /* botaoEsquerda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaoEsquerda.png; sourceTree = "<group>"; };
 		3F03108D1999D8F500570B8A /* EfeitoComponeteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoComponeteView.h; sourceTree = "<group>"; };
 		3F03108E1999D8F500570B8A /* EfeitoComponeteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoComponeteView.m; sourceTree = "<group>"; };
 		3F135894199EFE0400873CD4 /* casaMusica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = casaMusica.png; sourceTree = "<group>"; };
@@ -2102,6 +2106,8 @@
 		A87F0FBE19A2BB2A000061EC /* Game Pegar Notas */ = {
 			isa = PBXGroup;
 			children = (
+				2BA153A119A39DDA000E4D3F /* botaoDireita.png */,
+				2BA153A219A39DDA000E4D3F /* botaoEsquerda.png */,
 				2B41C6AE19A2E6990038B30B /* PegarNotasEPausasCena.h */,
 				2B41C6AF19A2E6990038B30B /* PegarNotasEPausasCena.m */,
 				A87F0FC219A2BB88000061EC /* PegarNotasEPausasViewController.h */,
@@ -2500,6 +2506,7 @@
 				3F608D64196C7585001979E9 /* la3.caf in Resources */,
 				3F608D67196C7585001979E9 /* mib3.caf in Resources */,
 				A84854FE1994119600C5F0A3 /* graficoAgudoCortado.jpg in Resources */,
+				2BA153A419A39DDA000E4D3F /* botaoEsquerda.png in Resources */,
 				A848550E1994119600C5F0A3 /* modulo.png in Resources */,
 				A84855B31994137D00C5F0A3 /* telefone.mp3 in Resources */,
 				A84854BB1994119600C5F0A3 /* alavanca.png in Resources */,
@@ -2586,6 +2593,7 @@
 				3F608D8A196C7585001979E9 /* notaCaraPausaSom.png in Resources */,
 				A84855AC1994137D00C5F0A3 /* notasPausas.mp3 in Resources */,
 				A84855421994119600C5F0A3 /* som.jpg in Resources */,
+				2BA153A319A39DDA000E4D3F /* botaoDireita.png in Resources */,
 				3F608D5D196C7585001979E9 /* do3.caf in Resources */,
 				3FC36C301996B37F006A1B2D /* barraPapel.jpg in Resources */,
 				3F608D83196C7585001979E9 /* seminimaCortada.png in Resources */,
