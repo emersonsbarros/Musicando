@@ -58,7 +58,6 @@
     [self criaTocaTreco];
     [self criaBlocoNotaMusical];
 
-    
 //Configura as labels de pontuação
     self.stringDePontuacao = [[SKLabelNode alloc]init];
     self.stringDePontuacao.fontColor = [UIColor blackColor];
@@ -78,13 +77,14 @@
     self.labelDePontuacao.fontName = @"Marker Felt Thin";
     [self addChild: self.labelDePontuacao];
     
-    //Adiciona a nota e sua label o nome sorteado
+//Adiciona a nota e sua label o nome sorteado
     self.nomeDaNota = [[SKLabelNode alloc]init];
     self.nomeDaNota.fontColor = [UIColor blackColor];
     self.nomeDaNota.fontSize = 40.0f;
     self.nomeDaNota.position = CGPointMake(100, 720);
     self.nomeDaNota.zPosition = 2;
     self.nomeDaNota.fontName = @"Marker Felt Thin";
+    
     //Adiciona a nota e sua label o nome sorteado
     self.nomeDaNota.text = [NSString stringWithFormat:@"Nota: %@", [self.listaDeNotas objectAtIndex: self.indiceNotaSorteada]];
     [self addChild: self.nomeDaNota];
@@ -418,7 +418,6 @@
     
     //Configura com quais categorias terá colisão
     self.blocoNotaPrincipal.physicsBody.contactTestBitMask = pisoCategoria | tocaTrecoCategoria | coluna;
-    
     
     //Remove os nós dos pais e adiciona novamente com a física
     [blocoNota removeFromParent];
