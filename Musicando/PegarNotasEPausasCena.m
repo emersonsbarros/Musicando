@@ -40,9 +40,6 @@
         
         self.notasJaSorteadas = [[NSMutableArray alloc] init];
         
-        [self sortearSimboloAtual];
-        [self sortearSimboloCerto];
-        
     //Inicia primeiros nós
         [self carregarPrimeirosComponentes];
     }
@@ -98,6 +95,8 @@
     self.labelDeSimboloMusical.text = self.simboloMusicalAtual;
     self.labelDeSimboloMusical.fontName = @"Marker Felt Thin";
     [self addChild: self.labelDeSimboloMusical];
+    
+    [self sortearSimboloAtual];
 }
 
 
@@ -112,6 +111,8 @@
             
             //A cada 10 segundos cria novos simbolos
             if (self.tempoPercorrido % 15 == 0) {
+                [self sortearSimboloCerto];
+                
                 [self simboloPraCair1];
                 [self simboloPraCair2];
                 [self simboloPraCair3];
