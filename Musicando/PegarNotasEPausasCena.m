@@ -95,8 +95,6 @@
     self.labelDeSimboloMusical.text = self.simboloMusicalAtual;
     self.labelDeSimboloMusical.fontName = @"Marker Felt Thin";
     [self addChild: self.labelDeSimboloMusical];
-    
-    [self sortearSimboloAtual];
 }
 
 
@@ -110,7 +108,8 @@
         if ((self.auxTempoPercorrido == 30)) {
             
             //A cada 10 segundos cria novos simbolos
-            if (self.tempoPercorrido % 15 == 0) {
+            if (self.tempoPercorrido % 20 == 0) {
+                [self sortearSimboloAtual];
                 [self sortearSimboloCerto];
                 
                 [self simboloPraCair1];
@@ -120,7 +119,7 @@
             
             //A cada 1 min troca o simbolo pedido e aumenta densidade
             if (self.tempoPercorrido % 60 == 0) {
-                [self sortearSimboloAtual];
+               // [self sortearSimboloAtual];
             }
             
             //A cada 2 min aumenta gravidade
@@ -474,7 +473,7 @@
 //Cria testura do piso
     SKTexture *texturaPiso = [SKTexture textureWithImageNamed: @"chao.png"];
     self.pisoPrincipal = [SKSpriteNode spriteNodeWithTexture:texturaPiso size: CGSizeMake(2400, 50)];
-    self.pisoPrincipal.alpha = 0.3;
+    self.pisoPrincipal.alpha = 0;
     
 //Cria o corpo físico do piso
     piso.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.pisoPrincipal.size];
