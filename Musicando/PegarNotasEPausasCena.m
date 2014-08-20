@@ -34,7 +34,7 @@
         self.quantidadeMovimentoDireita = 1;
         
     //Inicia lista de notas e indice para sorteio
-        self.listaDeSimbolosMusicais = [[NSMutableArray alloc] initWithObjects: @"notaSemibreve", @"notaMinima", @"notaSeminima", @"notaColcheia", @"notaSemicolcheia", @"notaFusa", @"notaSemiFusa", @"pausa4Tempos", @"pausa2Tempos", @"pausa1Tempo", @"pausa1-2Tempo", @"pausa1-4Tempo", @"pausa1-8Tempo", @"pausa1-16Tempo", nil];
+        self.listaDeSimbolosMusicais = [[NSMutableArray alloc] initWithObjects: @"notaSemibreve", @"notaMinima", @"notaSeminima", @"notaColcheia", @"notaSemicolcheia", @"notaFusa", @"notaSemifusa", @"pausa4Tempos", @"pausa2Tempos", @"pausa1Tempo", @"pausa1-2Tempo", @"pausa1-4Tempo", @"pausa1-8Tempo", @"pausa1-16Tempo", nil];
         
         self.listaNomeDosSimbolosMusicais = [[NSMutableArray alloc] initWithObjects: @"semibreve", @"miníma", @"seminíma", @"colcheia", @"semicolcheia", @"fusa", @"semifusa", @"pausa 4", @"pausa 2", @"pausa 1", @"pausa 1/2", @"pausa 1/4", @"pausa 1/8", @"pausa 1/16", nil];
         
@@ -305,7 +305,11 @@
     self.simboloMusicalPraCair1 = [[SKSpriteNode alloc] init];
     self.simboloMusicalPraCair1.name = simbolo.name;
 
-    self.simboloMusicalPraCair1.size = CGSizeMake(50, 100);
+    if ([simbolo.name isEqualToString: @"notaSemibreve"] || [simbolo.name isEqualToString: @"pausa4Tempos"]|| [simbolo.name isEqualToString: @"pausa4Tempos"]) {
+        self.simboloMusicalPraCair1.size = CGSizeMake(50, 50);
+    }else{
+        self.simboloMusicalPraCair1.size = CGSizeMake(50, 100);
+    }
     simbolo.position = CGPointMake(312, 800);
     simbolo.zPosition = 5;
     
@@ -341,15 +345,20 @@
     }else{
         do {
             simbolo.name = [self sortearSimboloPraCair];
-        } while (([simbolo.name isEqualToString: self.simboloMusicalPraCair1.name]));
+        } while ([simbolo.name isEqualToString: self.simboloMusicalPraCair1.name]);
     }
     
     
 //Inicia
     self.simboloMusicalPraCair2 = [[SKSpriteNode alloc] init];
     self.simboloMusicalPraCair2.name = simbolo.name;
-
-    self.simboloMusicalPraCair2.size = CGSizeMake(50, 100);
+    
+    if ([simbolo.name isEqualToString: @"notaSemibreve"] || [simbolo.name isEqualToString: @"pausa4Tempos"]|| [simbolo.name isEqualToString: @"pausa4Tempos"]) {
+        self.simboloMusicalPraCair2.size = CGSizeMake(50, 50);
+    }else{
+        self.simboloMusicalPraCair2.size = CGSizeMake(50, 100);
+    }
+    
     simbolo.position = CGPointMake(512, 800);
     simbolo.zPosition = 5;
 
@@ -394,7 +403,11 @@
     self.simboloMusicalPraCair3 = [[SKSpriteNode alloc] init];
     self.simboloMusicalPraCair3.name = simbolo.name;
 
-    self.simboloMusicalPraCair3.size = CGSizeMake(50, 100);
+    if ([simbolo.name isEqualToString: @"notaSemibreve"] || [simbolo.name isEqualToString: @"pausa4Tempos"]|| [simbolo.name isEqualToString: @"pausa4Tempos"]) {
+        self.simboloMusicalPraCair3.size = CGSizeMake(50, 30);
+    }else{
+        self.simboloMusicalPraCair3.size = CGSizeMake(50, 100);
+    }
     simbolo.position = CGPointMake(712, 800);
     simbolo.zPosition = 5;
     
