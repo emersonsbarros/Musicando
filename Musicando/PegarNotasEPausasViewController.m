@@ -74,7 +74,7 @@
     //Create and configure the scene.
     SKScene * cenaPrincipal = [PegarNotasEPausasCena sceneWithSize: skView.bounds.size];
     cenaPrincipal.scaleMode = SKSceneScaleModeAspectFill;
-    
+                                     
     //Present the scene.
     [skView presentScene: cenaPrincipal];
 }
