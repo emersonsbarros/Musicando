@@ -228,10 +228,10 @@
 -(void)criaMascote{
     
     SKTexture *texturaPiso2 = [SKTexture textureWithImageNamed:@"mascote.png"];
-    self.man = [SKSpriteNode spriteNodeWithTexture:texturaPiso2 size:CGSizeMake(200,50)];
+    self.man = [SKSpriteNode spriteNodeWithTexture:texturaPiso2 size:CGSizeMake(250,50)];
     self.man.name = @"HumanWhite";
     [self.man setSize:CGSizeMake(100,150)];
-    self.man.position = CGPointMake(200, 700);
+    self.man.position = CGPointMake(250, 700);
     self.man.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.man.size.width/2];
     self.man.physicsBody.dynamic = YES;
     self.man.physicsBody.affectedByGravity =YES;
@@ -244,7 +244,7 @@
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"animacaoNotasMascote" ofType:@"sks"];
     self.particulaNotaMascote = [NSKeyedUnarchiver unarchiveObjectWithFile: path];
-    self.particulaNotaMascote.position = CGPointMake(-180, 0);
+    self.particulaNotaMascote.position = CGPointMake(-130, 0);
 
     [self.man addChild:self.particulaNotaMascote];
     
