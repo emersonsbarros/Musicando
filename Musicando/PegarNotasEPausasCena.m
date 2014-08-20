@@ -305,7 +305,7 @@
     self.simboloMusicalPraCair1 = [[SKSpriteNode alloc] init];
     self.simboloMusicalPraCair1.name = simbolo.name;
 
-    if ([simbolo.name isEqualToString: @"notaSemibreve"] || [simbolo.name isEqualToString: @"pausa4Tempos"]|| [simbolo.name isEqualToString: @"pausa4Tempos"]) {
+    if ([simbolo.name isEqualToString: @"notaSemibreve"] || [simbolo.name isEqualToString: @"pausa2Tempos"]|| [simbolo.name isEqualToString: @"pausa4Tempos"]) {
         self.simboloMusicalPraCair1.size = CGSizeMake(50, 25);
     }else{
         self.simboloMusicalPraCair1.size = CGSizeMake(50, 100);
@@ -353,7 +353,7 @@
     self.simboloMusicalPraCair2 = [[SKSpriteNode alloc] init];
     self.simboloMusicalPraCair2.name = simbolo.name;
     
-    if ([simbolo.name isEqualToString: @"notaSemibreve"] || [simbolo.name isEqualToString: @"pausa4Tempos"]|| [simbolo.name isEqualToString: @"pausa4Tempos"]) {
+    if ([simbolo.name isEqualToString: @"notaSemibreve"] || [simbolo.name isEqualToString: @"pausa2Tempos"]|| [simbolo.name isEqualToString: @"pausa4Tempos"]) {
         self.simboloMusicalPraCair2.size = CGSizeMake(50, 25);
     }else{
         self.simboloMusicalPraCair2.size = CGSizeMake(50, 100);
@@ -403,7 +403,7 @@
     self.simboloMusicalPraCair3 = [[SKSpriteNode alloc] init];
     self.simboloMusicalPraCair3.name = simbolo.name;
 
-    if ([simbolo.name isEqualToString: @"notaSemibreve"] || [simbolo.name isEqualToString: @"pausa4Tempos"]|| [simbolo.name isEqualToString: @"pausa4Tempos"]) {
+    if ([simbolo.name isEqualToString: @"notaSemibreve"] || [simbolo.name isEqualToString: @"pausa2Tempos"]|| [simbolo.name isEqualToString: @"pausa4Tempos"]) {
         self.simboloMusicalPraCair3.size = CGSizeMake(50, 25);
     }else{
         self.simboloMusicalPraCair3.size = CGSizeMake(50, 100);
