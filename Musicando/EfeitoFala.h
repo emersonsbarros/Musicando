@@ -19,6 +19,7 @@
 
 -(void)dimunuiSomFala;
 -(void)aumentaSomFala;
+-(void)stopAudioFala;
 
 @property float nivelVolume;
 

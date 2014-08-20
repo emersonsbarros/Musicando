@@ -116,11 +116,14 @@
     Fala *mod1Aula1Exe1Jogofala1 = [[Fala alloc] init];
     mod1Aula1Exe1Jogofala1.conteudo = @"A Musica é muito importante e sempre chega aos nosso ouvidos, agora ajude ao nosso Mascote Lálá a chegar ao maximo de casas possiveis, mais cuidado á fortes ventos atrapalhando, não deixe eles te pegarem!";
     
+    Fala *mod1Aula1Exe1Jogofala2 = [[Fala alloc] init];
+    mod1Aula1Exe1Jogofala2.conteudo = @"";
+    
     
     //Conversa
     Conversa *mod1Aula1Exe1Jogoconversa1 = [[Conversa alloc] init];
     [[mod1Aula1Exe1Jogoconversa1 listaDeFalas] addObject: mod1Aula1Exe1Jogofala1];
-    [[mod1Aula1Exe1Jogoconversa1 listaDeFalas] addObject: mod1Aula1Exe1Jogofala1];
+    [[mod1Aula1Exe1Jogoconversa1 listaDeFalas] addObject: mod1Aula1Exe1Jogofala2];
     
     [[[mod1Aula1Exe1Jogo mascote] listaDeConversas] addObject:mod1Aula1Exe1Jogoconversa1];
     
@@ -1216,7 +1219,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     mod2Aula4Exe7Jogofala1.conteudo = @"Agora vamos testar seu conhecimento! Vou mostrar algumas notas e depois voce terá que escolher o desenho de tempo na barra acima e sua respectiva linha no pentagrama ";
     
     Fala *mod2Aula4Exe7Jogofala2 = [[Fala alloc] init];
-    mod2Aula4Exe7Jogofala2.conteudo = @"----------";
+    mod2Aula4Exe7Jogofala2.conteudo = @"";
     
     
     //Conversa

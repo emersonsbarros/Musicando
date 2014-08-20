@@ -25,6 +25,7 @@ static const UInt32 monstroNivel4Category = 0x1 << 5;
 @property (nonatomic) PBParallaxBackgroundDirection direction;
 @property (nonatomic, strong) PBParallaxScrolling * parallaxBackground;
 @property SKSpriteNode *man;
+@property SKEmitterNode *particulaNotaMascote;
 @property SKSpriteNode *piso;
 @property SKSpriteNode *btnPula;
 

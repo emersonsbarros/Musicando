@@ -89,6 +89,8 @@
 
 -(void)passaView{
     
+    [[EfeitoFala sharedManager]stopAudioFala];
+    
     [[EfeitoTransicao sharedManager]chamaTransicaoPaginaDireita:self.controller];
     
     [NSTimer scheduledTimerWithTimeInterval:0.0

@@ -148,7 +148,14 @@ NSString *UYLKeySpeechText = @"UYLKeySpeechText";
 -(void)aumentaSomFala{
     self.nivelVolume = 5.0;
     
-    
+}
+
+-(void)stopAudioFala{
+    [_synthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+    AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:@""];
+    [_synthesizer speakUtterance:utterance];
+    [_synthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+
 }
 
 -(void)dimunuiSomFala{

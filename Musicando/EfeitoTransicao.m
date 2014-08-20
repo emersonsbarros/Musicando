@@ -67,8 +67,16 @@
         [img.layer removeAllAnimations];
         [img removeFromSuperview];
     }
-    //[player stop];
+    
+    for(UIViewController *img in contr.childViewControllers){
+        [img removeFromParentViewController];
+    }
+
+    
     [contr.view removeFromSuperview];
+    [contr removeFromParentViewController];
+    [contr didMoveToParentViewController:nil];
+     contr = nil;
 }
 
 -(void)chamaOProximoExercicio:(UIViewController*)viewAntiga :(NSString*)nomeDaViewAtual{

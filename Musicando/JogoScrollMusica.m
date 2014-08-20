@@ -45,7 +45,7 @@
         [self addChild:parallax];
 
         
-        self.velocidadeMonstro = 4;
+        self.velocidadeMonstro = 12;
         self.distanciaPercorrida = 0;
         self.sorteaMonstro = 0;
         self.AuxdistanciaPercorrida =0;
@@ -241,6 +241,13 @@
     self.man.physicsBody.restitution =0;
     self.man.physicsBody.categoryBitMask = mascoteCategory;
     self.man.physicsBody.contactTestBitMask = pisoCategory ;
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"animacaoNotasMascote" ofType:@"sks"];
+    self.particulaNotaMascote = [NSKeyedUnarchiver unarchiveObjectWithFile: path];
+    self.particulaNotaMascote.position = CGPointMake(-180, 0);
+
+    [self.man addChild:self.particulaNotaMascote];
+    
 
     [self addChild:self.man];
 }
@@ -270,11 +277,7 @@
 //}
 
 -(void)didSimulatePhysics{
-    //NSLog(@"v = %f",self.man.position.y);
-    //[self centerOnNode:self.man];
-    //[self centerOnCameraNamed:@"HumanWhite"];
-    
-//    self.parallaxBackground.position = CGPointMake(-(self.man.position.x-(self.size.width/2)), -(self.man.position.y-(self.size.height/2)));
+ 
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -284,22 +287,7 @@
     SKNode *node = [self nodeAtPoint:location];
     
 //    [self.parallaxBackground reverseMovementDirection];
-//    if ([node.name isEqualToString:@"flyHeroe"]) {
-//        
-//        if(self.tempoPassaroBonus >1){
-//            self.verfificaBotaoFly = true;
-//            buttonMagic.hidden = NO;
-//            buttonDownNode.hidden = YES;
-//            buttonUpNode.hidden = YES;
-//            [self heroFly];
-//            self.man.physicsBody.density = 0.3f;
-//            self.man.physicsBody.velocity = CGVectorMake(0, 0);
-//            [self.man.physicsBody applyForce:CGVectorMake(0, 3000)];
-//        }
-//        
-//    }
-    
-    
+
     if ([node.name isEqualToString:@"pulaMascote"]) {
         [self.man.physicsBody applyForce:CGVectorMake(0, 1000)];
     }
@@ -356,7 +344,7 @@
         }
         
         if(self.contadorPontos % 8 == 0){
-            if(self.velocidadeMonstro > 2.5)self.velocidadeMonstro -= 0.5;
+            if(self.velocidadeMonstro > 3.5)self.velocidadeMonstro -= 0.5;
         }
         
     }
@@ -365,7 +353,6 @@
 }
 
 -(void)pausaJogo{
-    NSLog(@"dd");
     self.scene.view.paused = YES;
 }
 

@@ -258,9 +258,12 @@
 		3FD3253019970424004A0262 /* frequenciaFlauta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3252F19970424004A0262 /* frequenciaFlauta.jpg */; };
 		3FD3253619971DEE004A0262 /* RetornaPaginaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3253419971DEE004A0262 /* RetornaPaginaViewController.m */; };
 		3FD3253719971DEE004A0262 /* RetornaPaginaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3253519971DEE004A0262 /* RetornaPaginaViewController.xib */; };
+		3FD3DA2019A3011000302C1C /* manualJogoBlocos.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3DA1F19A3011000302C1C /* manualJogoBlocos.png */; };
 		3FD7EA3119529126005F089A /* Mod1Aula1Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7EA2F19529126005F089A /* Mod1Aula1Exe1ViewController.m */; };
 		3FD7EA3219529126005F089A /* Mod1Aula1Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FD7EA3019529126005F089A /* Mod1Aula1Exe1ViewController.xib */; };
 		3FDE64CA19762BF100EECEE8 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDE64C919762BF100EECEE8 /* SpriteKit.framework */; };
+		3FDF763919A2F1E000C775E5 /* Blocoflauta.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FDF763719A2F1E000C775E5 /* Blocoflauta.png */; };
+		3FDF763A19A2F1E000C775E5 /* Blocoviolao.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FDF763819A2F1E000C775E5 /* Blocoviolao.png */; };
 		A804EEE1194F6D4A00DB14A9 /* ModuloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A804EEE0194F6D4A00DB14A9 /* ModuloViewController.m */; };
 		A82BA8B5195A0964009EB605 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82BA8B4195A0964009EB605 /* AVFoundation.framework */; };
 		A83ED3D819520810006CB6A4 /* Mascote.m in Sources */ = {isa = PBXBuildFile; fileRef = A83ED3C319520810006CB6A4 /* Mascote.m */; };
@@ -290,7 +293,7 @@
 		A84854C81994119600C5F0A3 /* bolaNota.png in Resources */ = {isa = PBXBuildFile; fileRef = A848542C1994119600C5F0A3 /* bolaNota.png */; };
 		A84854C91994119600C5F0A3 /* bolaPausa.png in Resources */ = {isa = PBXBuildFile; fileRef = A848542D1994119600C5F0A3 /* bolaPausa.png */; };
 		A84854CA1994119600C5F0A3 /* bolaSom.png in Resources */ = {isa = PBXBuildFile; fileRef = A848542E1994119600C5F0A3 /* bolaSom.png */; };
-		A84854CB1994119600C5F0A3 /* brilhoParticula.sks in Resources */ = {isa = PBXBuildFile; fileRef = A848542F1994119600C5F0A3 /* brilhoParticula.sks */; };
+		A84854CB1994119600C5F0A3 /* animacaoNotasMascote.sks in Resources */ = {isa = PBXBuildFile; fileRef = A848542F1994119600C5F0A3 /* animacaoNotasMascote.sks */; };
 		A84854CC1994119600C5F0A3 /* cantoGregoriano.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A84854301994119600C5F0A3 /* cantoGregoriano.jpg */; };
 		A84854CD1994119600C5F0A3 /* Capoeiraframe1.gif in Resources */ = {isa = PBXBuildFile; fileRef = A84854311994119600C5F0A3 /* Capoeiraframe1.gif */; };
 		A84854CE1994119600C5F0A3 /* Capoeiraframe2.gif in Resources */ = {isa = PBXBuildFile; fileRef = A84854321994119600C5F0A3 /* Capoeiraframe2.gif */; };
@@ -824,10 +827,13 @@
 		3FD3253319971DEE004A0262 /* RetornaPaginaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetornaPaginaViewController.h; sourceTree = "<group>"; };
 		3FD3253419971DEE004A0262 /* RetornaPaginaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetornaPaginaViewController.m; sourceTree = "<group>"; };
 		3FD3253519971DEE004A0262 /* RetornaPaginaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RetornaPaginaViewController.xib; sourceTree = "<group>"; };
+		3FD3DA1F19A3011000302C1C /* manualJogoBlocos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = manualJogoBlocos.png; sourceTree = "<group>"; };
 		3FD7EA2E19529126005F089A /* Mod1Aula1Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula1Exe1ViewController.h; sourceTree = "<group>"; };
 		3FD7EA2F19529126005F089A /* Mod1Aula1Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula1Exe1ViewController.m; sourceTree = "<group>"; };
 		3FD7EA3019529126005F089A /* Mod1Aula1Exe1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula1Exe1ViewController.xib; sourceTree = "<group>"; };
 		3FDE64C919762BF100EECEE8 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		3FDF763719A2F1E000C775E5 /* Blocoflauta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blocoflauta.png; sourceTree = "<group>"; };
+		3FDF763819A2F1E000C775E5 /* Blocoviolao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blocoviolao.png; sourceTree = "<group>"; };
 		A804EEDF194F6D4A00DB14A9 /* ModuloViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuloViewController.h; sourceTree = "<group>"; };
 		A804EEE0194F6D4A00DB14A9 /* ModuloViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuloViewController.m; sourceTree = "<group>"; };
 		A82BA8B4195A0964009EB605 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -869,7 +875,7 @@
 		A848542C1994119600C5F0A3 /* bolaNota.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bolaNota.png; sourceTree = "<group>"; };
 		A848542D1994119600C5F0A3 /* bolaPausa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bolaPausa.png; sourceTree = "<group>"; };
 		A848542E1994119600C5F0A3 /* bolaSom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bolaSom.png; sourceTree = "<group>"; };
-		A848542F1994119600C5F0A3 /* brilhoParticula.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = brilhoParticula.sks; sourceTree = "<group>"; };
+		A848542F1994119600C5F0A3 /* animacaoNotasMascote.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = animacaoNotasMascote.sks; sourceTree = "<group>"; };
 		A84854301994119600C5F0A3 /* cantoGregoriano.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cantoGregoriano.jpg; sourceTree = "<group>"; };
 		A84854311994119600C5F0A3 /* Capoeiraframe1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Capoeiraframe1.gif; sourceTree = "<group>"; };
 		A84854321994119600C5F0A3 /* Capoeiraframe2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Capoeiraframe2.gif; sourceTree = "<group>"; };
@@ -1851,6 +1857,9 @@
 		A848541E1994119600C5F0A3 /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				3FD3DA1F19A3011000302C1C /* manualJogoBlocos.png */,
+				3FDF763719A2F1E000C775E5 /* Blocoflauta.png */,
+				3FDF763819A2F1E000C775E5 /* Blocoviolao.png */,
 				0BA27C6319A293A600D21948 /* papelAntigo.jpg */,
 				0BA27C5519A2938A00D21948 /* Do.png */,
 				0BA27C5619A2938A00D21948 /* Fa.png */,
@@ -1889,7 +1898,6 @@
 				A848542C1994119600C5F0A3 /* bolaNota.png */,
 				A848542D1994119600C5F0A3 /* bolaPausa.png */,
 				A848542E1994119600C5F0A3 /* bolaSom.png */,
-				A848542F1994119600C5F0A3 /* brilhoParticula.sks */,
 				A84854301994119600C5F0A3 /* cantoGregoriano.jpg */,
 				A84854311994119600C5F0A3 /* Capoeiraframe1.gif */,
 				A84854321994119600C5F0A3 /* Capoeiraframe2.gif */,
@@ -2034,6 +2042,7 @@
 				3FC36C311996B95F006A1B2D /* barraAzul.jpeg */,
 				3F2EA5EB19A06FF500972B81 /* retornar.png */,
 				3F2EA5DF19A02DCD00972B81 /* botaoMaquina.png */,
+				A848542F1994119600C5F0A3 /* animacaoNotasMascote.sks */,
 			);
 			path = Imagens;
 			sourceTree = "<group>";
@@ -2341,7 +2350,7 @@
 				3F608D7E196C7585001979E9 /* minima.png in Resources */,
 				A84854FC1994119600C5F0A3 /* gesturePassaFalaMascoteTap.png in Resources */,
 				3FB23EB819A1DA80003677A6 /* musicaJogoBlocos.mp3 in Resources */,
-				A84854CB1994119600C5F0A3 /* brilhoParticula.sks in Resources */,
+				A84854CB1994119600C5F0A3 /* animacaoNotasMascote.sks in Resources */,
 				A84855A61994137D00C5F0A3 /* musicaManeira.mp3 in Resources */,
 				3F43A315199C84700038D1E9 /* iconeInstrumento.png in Resources */,
 				A84855151994119600C5F0A3 /* notaFusa.png in Resources */,
@@ -2559,6 +2568,7 @@
 				2B64FA7B1969235B00BC57FD /* Mod2Aula7Exe6ViewController.xib in Resources */,
 				3F608D7C196C7585001979E9 /* colcheia.png in Resources */,
 				3F608DB0196C7585001979E9 /* indiana.xml in Resources */,
+				3FDF763A19A2F1E000C775E5 /* Blocoviolao.png in Resources */,
 				A84854FA1994119600C5F0A3 /* galo.png in Resources */,
 				A84855181994119600C5F0A3 /* notas.jpg in Resources */,
 				A84855991994137D00C5F0A3 /* galo.wav in Resources */,
@@ -2657,11 +2667,13 @@
 				A84854E11994119600C5F0A3 /* cristalTimbre.png in Resources */,
 				A84855401994119600C5F0A3 /* silencioPausa.png in Resources */,
 				0BA27C6119A2938A00D21948 /* Si.png in Resources */,
+				3FD3DA2019A3011000302C1C /* manualJogoBlocos.png in Resources */,
 				A84855A51994137D00C5F0A3 /* musicaCristal.mp3 in Resources */,
 				A848558F1994137D00C5F0A3 /* carro.wav in Resources */,
 				3FAD54BD199B26FD00475CEA /* fundoPapiro.png in Resources */,
 				A84855561994119600C5F0A3 /* x.png in Resources */,
 				A84855481994119600C5F0A3 /* tela.png in Resources */,
+				3FDF763919A2F1E000C775E5 /* Blocoflauta.png in Resources */,
 				3F608DDE196C7585001979E9 /* P200 Piano F#6.caf in Resources */,
 				A84855021994119600C5F0A3 /* guitarra.png in Resources */,
 				A84855351994119600C5F0A3 /* retrato.jpg in Resources */,

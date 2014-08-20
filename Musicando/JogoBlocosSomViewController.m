@@ -193,7 +193,7 @@
     [self.borderLayer setFrame:borderFrame];
     [self.borderLayer setCornerRadius:8];
     [self.borderLayer setBorderWidth:3];
-    [self.borderLayer setBorderColor:[[UIColor blackColor] CGColor]];
+    [self.borderLayer setBorderColor:[[UIColor grayColor] CGColor]];
     [self.imgBlocoModelagem.layer addSublayer:self.borderLayer];
     
     [self addGesturesAoBloco];
@@ -336,7 +336,7 @@
             self.usuarioTimbre = @"Violao";
             break;
         case 3:
-            [self.borderLayer setBackgroundColor:[[UIColor blackColor] CGColor]];
+            [self.borderLayer setBackgroundColor:[[UIColor greenColor] CGColor]];
             self.usuarioTimbre = @"Flauta";
             break;
         default:
@@ -348,12 +348,12 @@
 }
 
 -(void)trocaAumentaVolume:(UITapGestureRecognizer*)recognizer{
-    [self.borderLayer setBorderColor:[[UIColor redColor] CGColor]];
+    [self.borderLayer setBorderColor:[[UIColor blackColor] CGColor]];
     self.usuarioIntensidade = @"Alto";
 }
 
 -(void)trocaDiminuiVolume:(UITapGestureRecognizer*)recognizer{
-    [self.borderLayer setBorderColor:[[UIColor greenColor] CGColor]];
+    [self.borderLayer setBorderColor:[[UIColor whiteColor] CGColor]];
     self.usuarioIntensidade = @"Baixo";
 }
 

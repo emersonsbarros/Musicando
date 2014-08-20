@@ -16,6 +16,9 @@
 
 
 @property AVAudioPlayer *audioPlayer;
+@property AVAudioPlayer *backGroundPrincipalPlayer;
+@property AVAudioPlayer *backGroundExercicioPlayer;
+
 @property NSURL *caminhoDoAudio;
 
 -(void)playAudio:(NSURL*)audio;

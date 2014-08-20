@@ -35,6 +35,11 @@
                             <rect key="frame" x="0.0" y="-1" width="1024" height="771"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
+                        <imageView userInteractionEnabled="NO" alpha="0.29999999999999966" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="manualJogoBlocos.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Hd-PW-pf9">
+                            <rect key="frame" x="20" y="83" width="296" height="404"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
+                        </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="telao.png" translatesAutoresizingMaskIntoConstraints="NO" id="S57-Od-nCq">
                             <rect key="frame" x="537" y="-6" width="440" height="289"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -50,7 +55,7 @@
                             </subviews>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASI-Pq-YUU">
-                            <rect key="frame" x="324" y="185" width="64" height="63"/>
+                            <rect key="frame" x="392" y="284" width="64" height="63"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" backgroundImage="botaoMaquina.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -67,25 +72,25 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Qtd Blocos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f34-3c-oNG">
-                            <rect key="frame" x="331" y="83" width="170" height="50"/>
+                            <rect key="frame" x="334" y="90" width="170" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="28"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpk-a2-8hQ">
-                            <rect key="frame" x="368" y="120" width="97" height="38"/>
+                            <rect key="frame" x="371" y="127" width="97" height="38"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tempo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mim-7R-u3q">
-                            <rect key="frame" x="190" y="83" width="170" height="50"/>
+                            <rect key="frame" x="334" y="180" width="170" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="28"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f29-Kn-hN5">
-                            <rect key="frame" x="227" y="120" width="97" height="38"/>
+                            <rect key="frame" x="371" y="229" width="97" height="38"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
                             <nil key="highlightedColor"/>
@@ -162,6 +167,7 @@
         <image name="botaoMaquina.png" width="150" height="150"/>
         <image name="forno.png" width="640" height="632"/>
         <image name="fundoPapiro.png" width="1651" height="975"/>
+        <image name="manualJogoBlocos.png" width="533" height="640"/>
         <image name="telao.png" width="723" height="477"/>
     </resources>
 </document>
