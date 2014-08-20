@@ -306,7 +306,7 @@
     self.simboloMusicalPraCair1.name = simbolo.name;
 
     if ([simbolo.name isEqualToString: @"notaSemibreve"] || [simbolo.name isEqualToString: @"pausa4Tempos"]|| [simbolo.name isEqualToString: @"pausa4Tempos"]) {
-        self.simboloMusicalPraCair1.size = CGSizeMake(50, 50);
+        self.simboloMusicalPraCair1.size = CGSizeMake(50, 25);
     }else{
         self.simboloMusicalPraCair1.size = CGSizeMake(50, 100);
     }
@@ -354,7 +354,7 @@
     self.simboloMusicalPraCair2.name = simbolo.name;
     
     if ([simbolo.name isEqualToString: @"notaSemibreve"] || [simbolo.name isEqualToString: @"pausa4Tempos"]|| [simbolo.name isEqualToString: @"pausa4Tempos"]) {
-        self.simboloMusicalPraCair2.size = CGSizeMake(50, 50);
+        self.simboloMusicalPraCair2.size = CGSizeMake(50, 25);
     }else{
         self.simboloMusicalPraCair2.size = CGSizeMake(50, 100);
     }
@@ -395,7 +395,7 @@
         
         do {
             simbolo.name = [self sortearSimboloPraCair];
-        } while (([simbolo.name isEqualToString: self.simboloMusicalPraCair1.name] && [simbolo.name isEqualToString: self.simboloMusicalPraCair2.name]));
+        } while ((([simbolo.name isEqualToString: self.simboloMusicalPraCair1.name]) || ([simbolo.name isEqualToString: self.simboloMusicalPraCair2.name])));
     }
     
     
@@ -404,7 +404,7 @@
     self.simboloMusicalPraCair3.name = simbolo.name;
 
     if ([simbolo.name isEqualToString: @"notaSemibreve"] || [simbolo.name isEqualToString: @"pausa4Tempos"]|| [simbolo.name isEqualToString: @"pausa4Tempos"]) {
-        self.simboloMusicalPraCair3.size = CGSizeMake(50, 30);
+        self.simboloMusicalPraCair3.size = CGSizeMake(50, 25);
     }else{
         self.simboloMusicalPraCair3.size = CGSizeMake(50, 100);
     }
