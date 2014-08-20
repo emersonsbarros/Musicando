@@ -1,17 +1,18 @@
 //
-//  EscadaDeNotasViewController.m
+//  PegarNotasEPausasViewController.m
 //  Musicando
 //
-//  Created by EMERSON DE SOUZA BARROS on 13/08/14.
+//  Created by EMERSON DE SOUZA BARROS on 18/08/14.
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
 
-#import "EscadaDeNotasViewController.h"
+#import "PegarNotasEPausasViewController.h"
 
-@interface EscadaDeNotasViewController ()
+@interface PegarNotasEPausasViewController ()
 @end
 
-@implementation EscadaDeNotasViewController
+
+@implementation PegarNotasEPausasViewController
 
 - (BOOL)shouldAutorotate{
     return YES;
@@ -71,9 +72,9 @@
     skView.backgroundColor = [UIColor whiteColor];
     
     //Create and configure the scene.
-    SKScene * cenaPrincipal = [EscadaDeNotasPrincipal sceneWithSize: skView.bounds.size];
+    SKScene * cenaPrincipal = [PegarNotasEPausasCena sceneWithSize: skView.bounds.size];
     cenaPrincipal.scaleMode = SKSceneScaleModeAspectFill;
-    
+                                     
     //Present the scene.
     [skView presentScene: cenaPrincipal];
 }
@@ -131,3 +132,4 @@
 }
 
 @end
+

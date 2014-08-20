@@ -35,12 +35,24 @@
         
         //Inicia primeiros nós
         [self carregarPrimeirosComponentes];
-        
-        
         activeDragNode = nil;
+        
+        NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"bensound-enigmatic" ofType:@"mp3"]];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile error:nil];
+        self.audioPlayer.numberOfLoops = -1;
     }
     
     return self;
+}
+
+-(void)gameOver{
+    [[GameOverViewController sharedManager]gameOverParaUmaCena].view.hidden = NO;
+    [self pausaJogo];
+    [self.audioPlayer stop];
+}
+
+-(void)pausaJogo{
+    self.scene.view.paused = YES;
 }
 
 
@@ -55,7 +67,7 @@
 //Configura as labels de pontuação
     self.stringDePontuacao = [[SKLabelNode alloc]init];
     self.stringDePontuacao.fontColor = [UIColor blackColor];
-    self.stringDePontuacao.fontSize = 25.0f;
+    self.stringDePontuacao.fontSize = 50.0f;
     self.stringDePontuacao.position = CGPointMake(800, 700);
     self.stringDePontuacao.zPosition = 2;
     self.stringDePontuacao.text = @"Pontuação: ";
@@ -64,8 +76,8 @@
     
     self.labelDePontuacao = [[SKLabelNode alloc]init];
     self.labelDePontuacao.fontColor = [UIColor blackColor];
-    self.labelDePontuacao.fontSize = 25.0f;
-    self.labelDePontuacao.position = CGPointMake(870, 700);
+    self.labelDePontuacao.fontSize = 50.0f;
+    self.labelDePontuacao.position = CGPointMake(940, 700);
     self.labelDePontuacao.zPosition = 2;
     self.labelDePontuacao.text = [NSString stringWithFormat: @"%d", self.pontuacaoJogadorAtual];
     self.labelDePontuacao.fontName = @"Marker Felt Thin";
@@ -73,8 +85,8 @@
     
     self.stringDeTempo = [[SKLabelNode alloc]init];
     self.stringDeTempo.fontColor = [UIColor blackColor];
-    self.stringDeTempo.fontSize = 25.0f;
-    self.stringDeTempo.position = CGPointMake(800, 670);
+    self.stringDeTempo.fontSize = 50.0f;
+    self.stringDeTempo.position = CGPointMake(840, 650);
     self.stringDeTempo.zPosition = 2;
     self.stringDeTempo.text = @"Tempo:";
     self.stringDeTempo.fontName = @"Marker Felt Thin";
@@ -82,8 +94,8 @@
     
     self.labelDeTempo = [[SKLabelNode alloc]init];
     self.labelDeTempo.fontColor = [UIColor blackColor];
-    self.labelDeTempo.fontSize = 25.0f;
-    self.labelDeTempo.position = CGPointMake(870, 670);
+    self.labelDeTempo.fontSize = 50.0f;
+    self.labelDeTempo.position = CGPointMake(940, 650);
     self.labelDeTempo.zPosition = 2;
     self.labelDeTempo.text = [NSString stringWithFormat: @"%d", self.tempoPercorrido];
     self.labelDeTempo.fontName = @"Marker Felt Thin";
@@ -159,6 +171,8 @@
     
 //START
     if ([checkNode.name isEqualToString: @"start"]) {
+        if (![self.audioPlayer isPlaying]) [self.audioPlayer play];
+        
         self.tempoPercorrido = 20;
         checkNode.name = @"check";
     }
@@ -175,24 +189,28 @@
             if ([nota.name isEqualToString: @"Do"]) {
                 NSLog(@"%f", nota.position.y);
                 if (nota.position.y >= 235 && nota.position.y <= 255) {
-                    NSLog(@"Do errado");
+                    NSLog(@"DÓ CERTO");
                     self.pontuacaoJogadorAtual += 10;
                     _escalaCerta = YES;
 
                 }else{
+                    NSLog(@"DÓ ERRADO");
                     _escalaCerta = NO;
+                    break;
                 }
             }
             
             //1o ESPACO SUPLEMENTAR
             if ([nota.name isEqualToString: @"Re"]) {
                 if (nota.position.y >= 260 && nota.position.y <= 280) {
-                    NSLog(@"Re errado");
+                    NSLog(@"RÉ CERTO");
                     self.pontuacaoJogadorAtual += 10;
                     _escalaCerta = YES;
 
                 }else{
+                    NSLog(@"RÉ ERRADO");
                     _escalaCerta = NO;
+                    break;
 
                 }
             }
@@ -201,13 +219,15 @@
             if ([nota.name isEqualToString: @"Mi"]) {
                 NSLog(@"%f", nota.position.y);
                 if (nota.position.y >= 285 && nota.position.y <= 105) {
-                    NSLog(@"Mi certo");
+                    NSLog(@"MI CERTO");
                     self.pontuacaoJogadorAtual += 10;
                     _escalaCerta = YES;
 
 
                 }else{
+                    NSLog(@"MI ERRADO");
                     _escalaCerta = NO;
+                    break;
                 }
             }
             
@@ -215,12 +235,15 @@
             if ([nota.name isEqualToString: @"Fa"]) {
                 NSLog(@"%f", nota.position.y);
                 if (nota.position.y >= 310 && nota.position.y <= 330) {
-                    NSLog(@"FA certo");
+                    NSLog(@"FÁ CERTO");
                     self.pontuacaoJogadorAtual += 10;
                     _escalaCerta = YES;
 
                 }else{
+                    NSLog(@"FÁ ERRADO");
                     _escalaCerta = NO;
+                    break;
+
                 }
             }
             
@@ -228,12 +251,15 @@
             if ([nota.name isEqualToString: @"Sol"]) {
                 NSLog(@"%f", nota.position.y);
                 if (nota.position.y >= 340 && nota.position.y <= 360) {
-                    NSLog(@"SOL certo");
+                    NSLog(@"SOL CERTO");
                     self.pontuacaoJogadorAtual += 10;
                     _escalaCerta = YES;
 
                 }else{
+                    NSLog(@"SOL ERRADO");
                     _escalaCerta = NO;
+                    break;
+
                 }
             }
             
@@ -242,12 +268,15 @@
                 NSLog(@"%f", nota.position.y);
 
                 if (nota.position.y >= 360 && nota.position.y <= 380) {
-                    NSLog(@"LA certo");
+                    NSLog(@"LÁ CERTO");
                     self.pontuacaoJogadorAtual += 10;
                     _escalaCerta = YES;
 
                 }else{
+                    NSLog(@"LÁ ERRADO");
                     _escalaCerta = NO;
+                    break;
+
                 }
             }
             
@@ -256,11 +285,13 @@
                 NSLog(@"%f", nota.position.y);
 
                 if (nota.position.y >= 390 && nota.position.y <= 410) {
-                    NSLog(@"SI certo");
+                    NSLog(@"SI CERTO");
                     self.pontuacaoJogadorAtual += 10;
                     _escalaCerta = YES;
                 }else{
+                    NSLog(@"SI ERRADO");
                     _escalaCerta = NO;
+                    break;
                 }
             }
             
@@ -270,8 +301,9 @@
         
         if (!self.escalaCerta){
             NSLog(@"Chama cena de GameOver!");
+            [self gameOver];
         }else{
-            
+            NSLog(@"ESCALA CERTA");
             self.botaoStartAndChek.name = @"start";
             self.tempoEncerrado = NO;
             self.tempoPercorrido = 0;
@@ -325,7 +357,7 @@
     SKAction *moverPraDireita = [SKAction moveTo: CGPointMake(912, node.position.y) duration: duracao];
     SKAction *movimentoCompleto = [SKAction sequence: @[moverPraEsquerda, moverPraDireita]];
     
-    [node runAction:[SKAction repeatActionForever: movimentoCompleto]];
+    [node runAction: [SKAction repeatActionForever: movimentoCompleto]];
 }
 
 
@@ -433,16 +465,16 @@
     pentagrama.zPosition = 0;
     
     //Adiciona as linhas ao pentagrama
-    self.linhaDoPentagrama1 = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: CGSizeMake(800, 10)];
-    self.linhaDoPentagrama2 = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: CGSizeMake(800, 10)];
-    self.linhaDoPentagrama3 = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: CGSizeMake(800, 10)];
-    self.linhaDoPentagrama4 = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: CGSizeMake(800, 10)];
-    self.linhaDoPentagrama5 = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: CGSizeMake(800, 10)];
+    self.linhaDoPentagrama1 = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: CGSizeMake(1200, 10)];
+    self.linhaDoPentagrama2 = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: CGSizeMake(1200, 10)];
+    self.linhaDoPentagrama3 = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: CGSizeMake(1200, 10)];
+    self.linhaDoPentagrama4 = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: CGSizeMake(1200, 10)];
+    self.linhaDoPentagrama5 = [SKSpriteNode spriteNodeWithColor:[UIColor blackColor] size: CGSizeMake(1200, 10)];
     
-    self.espacoDoPentagrama1 = [SKSpriteNode spriteNodeWithColor:[UIColor whiteColor] size: CGSizeMake(800, 40)];
-    self.espacoDoPentagrama2 = [SKSpriteNode spriteNodeWithColor:[UIColor whiteColor] size: CGSizeMake(800, 40)];
-    self.espacoDoPentagrama3 = [SKSpriteNode spriteNodeWithColor:[UIColor whiteColor] size: CGSizeMake(800, 40)];
-    self.espacoDoPentagrama4 = [SKSpriteNode spriteNodeWithColor:[UIColor whiteColor] size: CGSizeMake(800, 40)];
+    self.espacoDoPentagrama1 = [SKSpriteNode spriteNodeWithColor:[UIColor whiteColor] size: CGSizeMake(1200, 40)];
+    self.espacoDoPentagrama2 = [SKSpriteNode spriteNodeWithColor:[UIColor whiteColor] size: CGSizeMake(1200, 40)];
+    self.espacoDoPentagrama3 = [SKSpriteNode spriteNodeWithColor:[UIColor whiteColor] size: CGSizeMake(1200, 40)];
+    self.espacoDoPentagrama4 = [SKSpriteNode spriteNodeWithColor:[UIColor whiteColor] size: CGSizeMake(1200, 40)];
     
     [pentagrama addChild: self.linhaDoPentagrama1];
     [pentagrama addChild: self.linhaDoPentagrama2];
@@ -517,8 +549,8 @@
 
 - (void)criaBotaoStarAndCheck{
     
-    _botaoStartAndChek = [SKSpriteNode spriteNodeWithImageNamed:@"buttonMagic.png"];
-    _botaoStartAndChek.position = CGPointMake(50, 380);
+    _botaoStartAndChek = [SKSpriteNode spriteNodeWithImageNamed:@"botaoLancar"];
+    _botaoStartAndChek.position = CGPointMake(900, 200);
     _botaoStartAndChek.size = CGSizeMake(50, 50);
     _botaoStartAndChek.name = @"start";
     _botaoStartAndChek.zPosition = +5.0;

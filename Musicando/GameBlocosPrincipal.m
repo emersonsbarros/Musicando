@@ -24,6 +24,7 @@
         self.tempoPercorrido = 0;
         self.auxTempoPercorrido = 0;
         self.pontuacaoJogadorAtual = 0;
+        self.podeCair = YES;
         
         //Inicia com velocidade padrão do guindaste
         self.velocidadeGuindaste = 1;
@@ -33,8 +34,12 @@
 
         //Inicia primeiros nós
         [self carregarPrimeirosComponentes];
-        
         [self sortearNota];
+        
+        NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"bensound-badass" ofType:@"mp3"]];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile error:nil];
+        self.audioPlayer.numberOfLoops = -1;
+        [self.audioPlayer play];
     }
     
     return self;
@@ -42,8 +47,12 @@
 
 -(void)gameOver{
     [[GameOverViewController sharedManager]gameOverParaUmaCena].view.hidden = NO;
-    //[self pausaJogo];
-    //[self.audioPlayer stop];
+    [self pausaJogo];
+    [self.audioPlayer stop];
+}
+
+-(void)pausaJogo{
+    self.scene.view.paused = YES;
 }
 
 -(void)carregarPrimeirosComponentes{
@@ -54,8 +63,6 @@
     [self cairNota];
     [self criaTocaTreco];
     [self criaBlocoNotaMusical];
-
-    
 
 //Configura as labels de pontuação
     self.stringDePontuacao = [[SKLabelNode alloc]init];
@@ -76,13 +83,14 @@
     self.labelDePontuacao.fontName = @"Marker Felt Thin";
     [self addChild: self.labelDePontuacao];
     
-    //Adiciona a nota e sua label o nome sorteado
+//Adiciona a nota e sua label o nome sorteado
     self.nomeDaNota = [[SKLabelNode alloc]init];
     self.nomeDaNota.fontColor = [UIColor blackColor];
     self.nomeDaNota.fontSize = 40.0f;
     self.nomeDaNota.position = CGPointMake(100, 720);
     self.nomeDaNota.zPosition = 2;
     self.nomeDaNota.fontName = @"Marker Felt Thin";
+    
     //Adiciona a nota e sua label o nome sorteado
     self.nomeDaNota.text = [NSString stringWithFormat:@"Nota: %@", [self.listaDeNotas objectAtIndex: self.indiceNotaSorteada]];
     [self addChild: self.nomeDaNota];
@@ -112,7 +120,6 @@
                 if(self.velocidadeGuindaste > 1)
                     self.velocidadeGuindaste -= 0.10;
             }
-            
             
         }
         
@@ -144,72 +151,72 @@
         
 //COLISÃO TOCATRECO
         if((segundoCorpoFisico.categoryBitMask & tocaTrecoCategoria) != 0){
+            
+            NSLog(@"Pos %fx - %fy", blocoNota.position.x, blocoNota.position.y);
+            if (((blocoNota.position.y <= 600) && (blocoNota.position.x >= 300 && blocoNota.position.x <= 755))) {
 
             //NOTAS CERTAS
-            if([blocoNota.name isEqualToString:@"Dó"] || [blocoNota.name isEqualToString:@"Ré"] || [blocoNota.name isEqualToString:@"Mi"] || [blocoNota.name isEqualToString:@"Fá"] || [blocoNota.name isEqualToString:@"Sol"] || [blocoNota.name isEqualToString:@"Lá"] || [blocoNota.name isEqualToString:@"Si"]){
-                NSLog(@"Colidiu nota certa com tocatreco - %@", blocoNota.name);
+                if([blocoNota.name isEqualToString:@"Dó"] || [blocoNota.name isEqualToString:@"Ré"] || [blocoNota.name isEqualToString:@"Mi"] || [blocoNota.name isEqualToString:@"Fá"] || [blocoNota.name isEqualToString:@"Sol"] || [blocoNota.name isEqualToString:@"Lá"] || [blocoNota.name isEqualToString:@"Si"]){
+                    NSLog(@"Colidiu nota certa com tocatreco - %@", blocoNota.name);
                 
                 
-                if (blocoNota.position.y > corpoParaColisaoDoTocaTreco.position.y+50) {
                     //Remove os blocos da view
                     [blocoNota removeAllChildren];
                     [blocoNota removeFromParent];
                     
                     //Adiciona pontuação
                     self.pontuacaoJogadorAtual += 10;
-                    self.labelDePontuacao.text = [NSString stringWithFormat: @"%i", self.pontuacaoJogadorAtual];
+                    self.labelDePontuacao.text = [NSString stringWithFormat: @"%d", self.pontuacaoJogadorAtual];
                     
                     [self sortearNota];
                     
                     //Aguarda alguns segundos até criar um novo
                     [NSTimer scheduledTimerWithTimeInterval: 1.0 target:self selector:@selector(criaBlocoNotaMusical) userInfo:nil repeats:NO];
                     [[self botaoCairNota] setAlpha: 1];
-                }
-                
-
-
-            //NOTAS ERRADAS
-            }else if([blocoNota.name isEqualToString:@"Dor"] || [blocoNota.name isEqualToString:@"Rir"] || [blocoNota.name isEqualToString:@"Mou"] || [blocoNota.name isEqualToString:@"Fê"] || [blocoNota.name isEqualToString:@"Sou"] || [blocoNota.name isEqualToString:@"Lú"] || [blocoNota.name isEqualToString:@"Sir"]){
+                    self.podeCair = YES;
+        
+                //NOTAS ERRADAS
+                }else if([blocoNota.name isEqualToString:@"Dor"] || [blocoNota.name isEqualToString:@"Rir"] || [blocoNota.name isEqualToString:@"Mou"] || [blocoNota.name isEqualToString:@"Fê"] || [blocoNota.name isEqualToString:@"Sou"] || [blocoNota.name isEqualToString:@"Lú"] || [blocoNota.name isEqualToString:@"Sir"]){
                 
                 NSLog(@"Colidiu nota errada com tocatreco - %@", blocoNota.name);
-                [self gameOver];
+                [NSTimer scheduledTimerWithTimeInterval: 1.0 target:self selector:@selector(gameOver) userInfo:nil repeats:NO];
 
+                }
             }
 //COLISAO NO CHÃO
-        }else{
+        }else if((segundoCorpoFisico.categoryBitMask & pisoCategoria)!=0){
             
-            if((segundoCorpoFisico.categoryBitMask & pisoCategoria)!=0){
+            NSLog(@"Pos %fx - %fy", blocoNota.position.x, blocoNota.position.y);
+             if (blocoNota.position.y <= 600 && ((blocoNota.position.x <= 915) || (blocoNota.position.x >= 670))){
             
                 //NOTAS CERTAS
-                }if([blocoNota.name isEqualToString:@"Dó"] || [blocoNota.name isEqualToString:@"Ré"] || [blocoNota.name isEqualToString:@"Mi"] || [blocoNota.name isEqualToString:@"Fá"] || [blocoNota.name isEqualToString:@"Sol"] || [blocoNota.name isEqualToString:@"Lá"] || [blocoNota.name isEqualToString:@"Si"]){
+                 if([blocoNota.name isEqualToString:@"Dó"] || [blocoNota.name isEqualToString:@"Ré"] || [blocoNota.name isEqualToString:@"Mi"] || [blocoNota.name isEqualToString:@"Fá"] || [blocoNota.name isEqualToString:@"Sol"] || [blocoNota.name isEqualToString:@"Lá"] || [blocoNota.name isEqualToString:@"Si"]){
                 
                     NSLog(@"Colidiu com o chão nota certa - %@", blocoNota.name);
-                    [self gameOver];
+                    [NSTimer scheduledTimerWithTimeInterval: 1.0 target:self selector:@selector(gameOver) userInfo:nil repeats:NO];
             
-            //NOTAS ERRADAS
-                }else if([blocoNota.name isEqualToString:@"Dor"] || [blocoNota.name isEqualToString:@"Rir"] || [blocoNota.name isEqualToString:@"Mou"] || [blocoNota.name isEqualToString:@"Fê"] || [blocoNota.name isEqualToString:@"Sou"] || [blocoNota.name isEqualToString:@"Lú"] || [blocoNota.name isEqualToString:@"Sir"]){
+                //NOTAS ERRADAS
+                 }else if([blocoNota.name isEqualToString:@"Dor"] || [blocoNota.name isEqualToString:@"Rir"] || [blocoNota.name isEqualToString:@"Mou"] || [blocoNota.name isEqualToString:@"Fê"] || [blocoNota.name isEqualToString:@"Sou"] || [blocoNota.name isEqualToString:@"Lú"] || [blocoNota.name isEqualToString:@"Sir"]){
                 
                     NSLog(@"Colidiu com o chão nota errada - %@", blocoNota.name);
                     
-
-                    if (blocoNota.position.y > piso.position.y+50) {
-
                         //Remove os blocos da view
                         [blocoNota removeAllChildren];
                         [blocoNota removeFromParent];
                     
                         //Adiciona pontuação
                         self.pontuacaoJogadorAtual += 10;
-                        self.labelDePontuacao.text = [NSString stringWithFormat: @"%i", self.pontuacaoJogadorAtual];
+                        self.labelDePontuacao.text = [NSString stringWithFormat: @"%d", self.pontuacaoJogadorAtual];
                     
                         [self sortearNota];
                     
                         //Aguarda alguns segundos até criar um novo
-                        [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(criaBlocoNotaMusical) userInfo:nil repeats:NO];
+                        [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(criaBlocoNotaMusical) userInfo:nil repeats:NO];
                         [[self botaoCairNota] setAlpha: 1];
+                        self.podeCair = YES;
 
-                    }
                 }
+            }
         }
     
 
@@ -228,16 +235,13 @@
     SKNode *node = [self nodeAtPoint: location];
     
     //Botão cair bloco
-
-    if ([node.name isEqualToString:@"cairNota"]) {
+    if (([node.name isEqualToString:@"cairNota"]) && self.podeCair) {
         [self adionarFisicaAoBlocoMusical];
         [[self botaoCairNota] setAlpha: 0];
+        self.podeCair = NO;
     }
     
 }
-
-
-
 
 
 ////////////////////////////////////////////////// CRIAÇÃO DE AMBIENTE, PERSONAGENS E OUTROS COMPONENTES ////////////////////////////////////////////////////
@@ -250,7 +254,7 @@
     fundo.position  = CGPointMake(512, 384);
     
     //Cria testura do fundo
-    SKTexture *texturaFundoPrincipal = [SKTexture textureWithImageNamed: @"papelAntigo.jpg"];
+    SKTexture *texturaFundoPrincipal = [SKTexture textureWithImageNamed: @"fundoPapiro.png"];
     self.fundoPrincipal = [SKSpriteNode spriteNodeWithTexture: texturaFundoPrincipal size: CGSizeMake(1024, 768)];
     fundo.zPosition = -5;
     
@@ -265,14 +269,14 @@
     //Aloca, seta nome e tamanho do nó
     piso = [[SKNode alloc]init];
     piso.name = @"Piso";
-    piso.position = CGPointMake(300, -60);
+    piso.position = CGPointMake(512, -60);
     
     //Cria testura do piso
     SKTexture *texturaPiso = [SKTexture textureWithImageNamed: @"chao.png"];
-    self.pisoPrincipal = [SKSpriteNode spriteNodeWithTexture:texturaPiso size: CGSizeMake(1200, 50)];
+    self.pisoPrincipal = [SKSpriteNode spriteNodeWithTexture:texturaPiso size: CGSizeMake(2400, 50)];
     
     //Cria o corpo físico do piso
-    self.pisoPrincipal.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(1200, 50)];
+    self.pisoPrincipal.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.pisoPrincipal.size];
     self.pisoPrincipal.physicsBody.dynamic = NO;
     self.pisoPrincipal.physicsBody.affectedByGravity = NO;
     self.pisoPrincipal.physicsBody.allowsRotation = NO;
@@ -296,7 +300,6 @@
     guindaste.name = @"Guindaste";
     guindaste.position = CGPointMake(512, 700);
     guindaste.zPosition = 1;
-
     
     //Cria testura do guindaste
     SKTexture *texturaGuindaste = [SKTexture textureWithImageNamed: @"ganchoGuindaste.jpg"];
@@ -325,51 +328,53 @@
     //Aloca, seta nome e tamanho do nó
     corpoParaColisaoDoTocaTreco = [[SKNode alloc]init];
     corpoParaColisaoDoTocaTreco.name = @"CorpoTocaTreco";
-    corpoParaColisaoDoTocaTreco.position = CGPointMake(485, 50);
-    corpoParaColisaoDoTocaTreco.zPosition = 3;
     
-    //Cria o corpo do cone
-    SKSpriteNode *imagemCorpoTocaTreco = [SKSpriteNode spriteNodeWithImageNamed: @"triangulo.png"];
+    self.coluna1 = [[SKSpriteNode alloc] init];
+    self.coluna1.color = [UIColor blackColor];
+    self.coluna1.size = CGSizeMake(45, 220);
+    self.coluna1.position = CGPointMake(351, 30);
+    self.coluna1.zPosition = 3;
 
-    CGFloat offsetX = imagemCorpoTocaTreco.frame.size.width * imagemCorpoTocaTreco.anchorPoint.x;
-    CGFloat offsetY = imagemCorpoTocaTreco.frame.size.height * imagemCorpoTocaTreco.anchorPoint.y;
-    CGMutablePathRef path = CGPathCreateMutable();
+    self.coluna2 = [[SKSpriteNode alloc] init];
+    self.coluna2.color = [UIColor blackColor];
+    self.coluna2.size = CGSizeMake(45, 220);
+    self.coluna2.position = CGPointMake(655, 30);
+    self.coluna2.zPosition = 3;
     
-    CGPathMoveToPoint(path, NULL, 164 - offsetX, 2 - offsetY);
-    CGPathAddLineToPoint(path, NULL, 168 - offsetX, 68 - offsetY);
-    CGPathAddLineToPoint(path, NULL, 93 - offsetX, 13 - offsetY);
-    CGPathAddLineToPoint(path, NULL, 5 - offsetX, 73 - offsetY);
-    CGPathAddLineToPoint(path, NULL, 3 - offsetX, 8 - offsetY);
+    self.base = [[SKSpriteNode alloc] init];
+    self.base.color = [UIColor redColor];
+    self.base.size = CGSizeMake(260, 40);
+    self.base.position = CGPointMake(503, 10);
+    self.base.zPosition = 3;
+
+    self.coluna1.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.coluna1.size];
+    self.coluna1.physicsBody.dynamic = NO;
+    self.coluna2.physicsBody.categoryBitMask = coluna;
+    self.coluna2.physicsBody.contactTestBitMask = blocoNotaCorreta;
+
+    self.coluna2.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.coluna2.size];
+    self.coluna2.physicsBody.dynamic = NO;
+    self.coluna2.physicsBody.categoryBitMask = coluna;
+    self.coluna2.physicsBody.contactTestBitMask = blocoNotaCorreta;
+
+    self.base.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.base.size];
+    self.base.physicsBody.dynamic = NO;
+    self.base.physicsBody.affectedByGravity = NO;
+    self.base.physicsBody.allowsRotation = NO;
+    self.base.physicsBody.density = 0.2f;
+    self.base.physicsBody.usesPreciseCollisionDetection = YES;
+    self.base.physicsBody.restitution = 0;
+    self.base.physicsBody.categoryBitMask = tocaTrecoCategoria;
+    self.base.physicsBody.contactTestBitMask = blocoNotaCorreta;
     
-    CGPathCloseSubpath(path);
-    imagemCorpoTocaTreco.physicsBody = [SKPhysicsBody bodyWithPolygonFromPath: path];
-    
-    imagemCorpoTocaTreco.physicsBody.dynamic = NO;
-    imagemCorpoTocaTreco.physicsBody.affectedByGravity = NO;
-    imagemCorpoTocaTreco.physicsBody.allowsRotation = NO;
-    imagemCorpoTocaTreco.physicsBody.density = 0.2f;
-    imagemCorpoTocaTreco.physicsBody.usesPreciseCollisionDetection = YES;
-    imagemCorpoTocaTreco.physicsBody.restitution = 0;
-    imagemCorpoTocaTreco.physicsBody.categoryBitMask = tocaTrecoCategoria;
-    imagemCorpoTocaTreco.physicsBody.contactTestBitMask = pisoCategoria | blocoNotaCorreta;
-    
-    [corpoParaColisaoDoTocaTreco addChild: imagemCorpoTocaTreco];
+    [self addChild: _coluna1];
+    [self addChild: _coluna2];
+    [corpoParaColisaoDoTocaTreco addChild: _base];
     [self addChild: corpoParaColisaoDoTocaTreco];
-    
-//TOCATRECO
-    //Aloca, seta nome e tamanho do nó
-    tocaTreco = [[SKNode alloc]init];
-    tocaTreco.name = @"TocaTreco";
-    tocaTreco.position = CGPointMake(530, 100);
-    tocaTreco.zPosition = 4;
-    
-    //Cria testura do guindaste
-    SKTexture *texturaTocaTreco = [SKTexture textureWithImageNamed: @"bocaDoTocaTreco.png"];
-    self.tocaTrecoPrincipal = [SKSpriteNode spriteNodeWithTexture: texturaTocaTreco size: CGSizeMake(840, 400)];
-    
-//    [tocaTreco addChild: self.tocaTrecoPrincipal];
-//    [self addChild: tocaTreco];
 
+    NSLog(@"COLUNA1 Pos %fx - %fy", _coluna1.position.x, _coluna1.position.y);
+    NSLog(@"COLUNA2 Pos %fx - %fy", _coluna2.position.x, _coluna2.position.y);
+    NSLog(@"BASE Pos %fx - %fy", _base.position.x, _base.position.y);
 }
 
 
@@ -383,7 +388,7 @@
     blocoNota.zPosition = 3;
 
         //Cria testura do guindaste
-    SKTexture *texturaNota = [SKTexture textureWithImageNamed: @"siBloco.png"];
+    SKTexture *texturaNota = [SKTexture textureWithImageNamed: @"doBloco.png"];
     self.blocoNotaPrincipal = [SKSpriteNode spriteNodeWithTexture: texturaNota size: CGSizeMake(120, 112)];
     self.blocoNotaPrincipal.zPosition = 3;
     
@@ -407,7 +412,7 @@
     NSLog(@"%@", blocoNota.name);
     
     //Cria o corpo físico do bloco
-    self.blocoNotaPrincipal.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(120, 122)];
+    self.blocoNotaPrincipal.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.blocoNotaPrincipal.size];
     self.blocoNotaPrincipal.physicsBody.dynamic = YES;
     self.blocoNotaPrincipal.physicsBody.affectedByGravity = YES;
     self.blocoNotaPrincipal.physicsBody.allowsRotation = YES;
@@ -417,14 +422,10 @@
     
     /* Se a nota sorteada estiver entre as sete 1as, ela recebe a categoria de nota certa
      Do contrário será uma nota da categoria errada */
-    if (self.indiceNotaSorteada < 7)
-        self.blocoNotaPrincipal.physicsBody.categoryBitMask = blocoNotaCorreta;
-    else
-        self.blocoNotaPrincipal.physicsBody.categoryBitMask = blocoNotaCorreta;
+    self.blocoNotaPrincipal.physicsBody.categoryBitMask = blocoNotaCorreta;
     
     //Configura com quais categorias terá colisão
-    self.blocoNotaPrincipal.physicsBody.contactTestBitMask = pisoCategoria | tocaTrecoCategoria;
-    
+    self.blocoNotaPrincipal.physicsBody.contactTestBitMask = pisoCategoria | tocaTrecoCategoria | coluna;
     
     //Remove os nós dos pais e adiciona novamente com a física
     [blocoNota removeFromParent];
@@ -441,7 +442,7 @@
 -(void)cairNota{
     
     self.botaoCairNota = [[SKSpriteNode alloc] init];
-    self.botaoCairNota = [SKSpriteNode spriteNodeWithImageNamed:@"buttonMagic.png"];
+    self.botaoCairNota = [SKSpriteNode spriteNodeWithImageNamed:@"botaoLancar.png"];
     self.botaoCairNota.name = @"cairNota";
     self.botaoCairNota.position = CGPointMake(900, 100);
     self.botaoCairNota.size = CGSizeMake(100, 100);
@@ -453,7 +454,6 @@
 
 
 /////////////////////////////////////////////////////// AÇÕES, ANIMAÇÕES E SPRITES ////////////////////////////////////////////////////////
-
 //MOVIMENTO DIREITA ESQUERDA
 -(void)acaoMoverDireitaEsquerda: (SKNode*)node :(int)duracao{
     

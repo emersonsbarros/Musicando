@@ -13,7 +13,9 @@
 static const UInt32 blocoNotaCorreta = 0x1 << 0;
 static const UInt32 pisoCategoria = 0x1 << 1;
 static const UInt32 guindasteCategoria = 0x1 << 2;
+
 static const UInt32 tocaTrecoCategoria = 0x1 << 3;
+static const UInt32 coluna = 0x1 << 4;
 
 
 
@@ -37,6 +39,9 @@ static const UInt32 tocaTrecoCategoria = 0x1 << 3;
 @property SKSpriteNode *pisoPrincipal;
 @property SKSpriteNode *guindastePrincipal;
 
+@property SKSpriteNode *coluna1;
+@property SKSpriteNode *coluna2;
+@property SKSpriteNode *base;
 @property SKSpriteNode *tocaTrecoPrincipal;
 
 @property SKSpriteNode *blocoNotaPrincipal;
@@ -47,6 +52,7 @@ static const UInt32 tocaTrecoCategoria = 0x1 << 3;
 @property SKLabelNode *stringDePontuacao;
 @property SKLabelNode *labelDePontuacao;
 
+@property AVAudioPlayer *audioPlayer;
 
 //Auxiliares
 @property int pontuacaoJogadorAtual;
@@ -56,6 +62,8 @@ static const UInt32 tocaTrecoCategoria = 0x1 << 3;
 @property double velocidadeGuindaste;
 @property NSArray *listaDeNotas;
 @property int indiceNotaSorteada;
+
+@property BOOL podeCair;
 
 //Métodos
 -(void)carregarPrimeirosComponentes;
