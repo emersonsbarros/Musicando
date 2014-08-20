@@ -28,7 +28,7 @@
         self.tempoPercorrido = 0;
         self.auxTempoPercorrido = 0;
         self.pontuacaoJogadorAtual = 0;
-        self.indiceSimboloAtualSorteado = 0;
+        self.indiceSimboloAtualSorteado = 5;
         
         self.quantidadeMovimentoEsquerda = 1;
         self.quantidadeMovimentoDireita = 1;
@@ -111,7 +111,7 @@
         self.auxTempoPercorrido+=1;
         
         //CADA 30ms do AUXILIAR = 1s NO TEMPO
-        if ((self.auxTempoPercorrido == 30)) {
+        if ((self.auxTempoPercorrido == 40)) {
             
             //A cada 10 segundos cria novos simbolos
             if (self.tempoPercorrido % 20 == 0) {
@@ -279,8 +279,12 @@
 }
 
 -(void)sortearSimboloCerto{
-    _indiceSortearCerto = arc4random() % 3;
-    NSLog(@"%d", _indiceSortearCerto);
+    int auxiliar = 0;
+    do {
+        auxiliar = arc4random() % 3;
+    } while (auxiliar == _indiceSortearCerto);
+    
+    _indiceSortearCerto = auxiliar;
 }
 
 /////////////////////////////////////////////////////// CRIAÇÃO ////////////////////////////////////////////////////////
@@ -289,16 +293,18 @@
     
 //Aloca, seta nome e tamanho do nó
     simbolo = [[SKNode alloc]init];
+    
     if (_indiceSortearCerto == 0) {
         simbolo.name = self.simboloMusicalAtual;
     }else{
         simbolo.name = [self sortearSimboloPraCair];
     }
     
-    [self.notasJaSorteadas addObject: simbolo];
     
 //Inicia
     self.simboloMusicalPraCair1 = [[SKSpriteNode alloc] init];
+    self.simboloMusicalPraCair1.name = simbolo.name;
+
     self.simboloMusicalPraCair1.size = CGSizeMake(50, 100);
     simbolo.position = CGPointMake(312, 800);
     simbolo.zPosition = 5;
@@ -333,18 +339,16 @@
     if (_indiceSortearCerto == 1) {
         simbolo.name = [self simboloMusicalAtual];
     }else{
-        
-        simbolo.name = [self sortearSimboloPraCair];
-        for (SKNode *no in self.notasJaSorteadas) {
-            if (no.name == simbolo.name) {
-                simbolo.name = [self sortearSimboloPraCair];
-            }
-        }
-        [self.notasJaSorteadas addObject: simbolo];
+        do {
+            simbolo.name = [self sortearSimboloPraCair];
+        } while (([simbolo.name isEqualToString: self.simboloMusicalPraCair1.name]));
     }
+    
     
 //Inicia
     self.simboloMusicalPraCair2 = [[SKSpriteNode alloc] init];
+    self.simboloMusicalPraCair2.name = simbolo.name;
+
     self.simboloMusicalPraCair2.size = CGSizeMake(50, 100);
     simbolo.position = CGPointMake(512, 800);
     simbolo.zPosition = 5;
@@ -379,17 +383,17 @@
     if (_indiceSortearCerto == 2) {
         simbolo.name = [self simboloMusicalAtual];
     }else{
-        simbolo.name = [self sortearSimboloPraCair];
-        for (SKNode *no in self.notasJaSorteadas) {
-            if (no.name == simbolo.name) {
-                simbolo.name = [self sortearSimboloPraCair];
-            }
-        }
-        [self.notasJaSorteadas addObject: simbolo];
+        
+        do {
+            simbolo.name = [self sortearSimboloPraCair];
+        } while (([simbolo.name isEqualToString: self.simboloMusicalPraCair1.name] && [simbolo.name isEqualToString: self.simboloMusicalPraCair2.name]));
     }
+    
     
 //Incia
     self.simboloMusicalPraCair3 = [[SKSpriteNode alloc] init];
+    self.simboloMusicalPraCair3.name = simbolo.name;
+
     self.simboloMusicalPraCair3.size = CGSizeMake(50, 100);
     simbolo.position = CGPointMake(712, 800);
     simbolo.zPosition = 5;
@@ -412,9 +416,6 @@
 
     [simbolo addChild: self.simboloMusicalPraCair3];
     [self addChild: simbolo];
-    
-    //Remove da lista
-    [self.notasJaSorteadas removeAllObjects];
 }
 
 
