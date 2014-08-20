@@ -35,6 +35,7 @@
 @property Biblioteca *testaBiblio;
 @property Conversa *testaConversa;
 @property Fala *testaFala;
+
 //Mascote (img,view,label)
 @property UIImageView *imagemDoMascote2;
 @property  UILabel *lblFalaDoMascote;

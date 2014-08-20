@@ -30,6 +30,9 @@
 		0BA27C6419A293A600D21948 /* papelAntigo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0BA27C6319A293A600D21948 /* papelAntigo.jpg */; };
 		0BA369DB199E862300B53D46 /* ruido.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA369DA199E862300B53D46 /* ruido.png */; };
 		2B41C6B019A2E6990038B30B /* PegarNotasEPausasCena.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B41C6AF19A2E6990038B30B /* PegarNotasEPausasCena.m */; };
+		2B61F40919A4DFDF00B0AE80 /* bensound-badass.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B61F40819A4DFDF00B0AE80 /* bensound-badass.mp3 */; };
+		2B61F40B19A4E12300B0AE80 /* bensound-enigmatic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B61F40A19A4E12300B0AE80 /* bensound-enigmatic.mp3 */; };
+		2B61F40D19A4E28A00B0AE80 /* bensound-goinghigher.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B61F40C19A4E28A00B0AE80 /* bensound-goinghigher.mp3 */; };
 		2B64F9E41969207E00BC57FD /* Mod1Aula2Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64F9E21969207E00BC57FD /* Mod1Aula2Exe1ViewController.m */; };
 		2B64F9E51969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B64F9E31969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib */; };
 		2B64F9EA196920D000BC57FD /* Mod1Aula3Exe1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64F9E8196920D000BC57FD /* Mod1Aula3Exe1ViewController.m */; };
@@ -553,6 +556,9 @@
 		0BA369DA199E862300B53D46 /* ruido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ruido.png; sourceTree = "<group>"; };
 		2B41C6AE19A2E6990038B30B /* PegarNotasEPausasCena.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PegarNotasEPausasCena.h; sourceTree = "<group>"; };
 		2B41C6AF19A2E6990038B30B /* PegarNotasEPausasCena.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PegarNotasEPausasCena.m; sourceTree = "<group>"; };
+		2B61F40819A4DFDF00B0AE80 /* bensound-badass.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-badass.mp3"; sourceTree = "<group>"; };
+		2B61F40A19A4E12300B0AE80 /* bensound-enigmatic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-enigmatic.mp3"; sourceTree = "<group>"; };
+		2B61F40C19A4E28A00B0AE80 /* bensound-goinghigher.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-goinghigher.mp3"; sourceTree = "<group>"; };
 		2B64F9E11969207E00BC57FD /* Mod1Aula2Exe1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod1Aula2Exe1ViewController.h; sourceTree = "<group>"; };
 		2B64F9E21969207E00BC57FD /* Mod1Aula2Exe1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod1Aula2Exe1ViewController.m; sourceTree = "<group>"; };
 		2B64F9E31969207E00BC57FD /* Mod1Aula2Exe1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mod1Aula2Exe1ViewController.xib; sourceTree = "<group>"; };
@@ -1186,6 +1192,7 @@
 		0BA27C5319A2918000D21948 /* Game Escala */ = {
 			isa = PBXGroup;
 			children = (
+				2B61F40A19A4E12300B0AE80 /* bensound-enigmatic.mp3 */,
 				0BA27C4919A2917800D21948 /* EscadaDeNotasPrincipal.h */,
 				0BA27C4519A2917800D21948 /* EscadaDeNotasPrincipal.m */,
 				0BA27C4319A2917800D21948 /* EscadaDeNotasViewController.h */,
@@ -1198,6 +1205,7 @@
 		0BA27C5419A2919400D21948 /* Game Nota */ = {
 			isa = PBXGroup;
 			children = (
+				2B61F40819A4DFDF00B0AE80 /* bensound-badass.mp3 */,
 				0BA27C4419A2917800D21948 /* GameBlocosPrincipal.h */,
 				0BA27C4B19A2917800D21948 /* GameBlocosPrincipal.m */,
 				0BA27C4719A2917800D21948 /* GameBlocosViewController.h */,
@@ -2138,6 +2146,7 @@
 				2BA153AD19A3A24D000E4D3F /* pausa1-16Tempo.png */,
 				2BA153A119A39DDA000E4D3F /* botaoDireita.png */,
 				2BA153A219A39DDA000E4D3F /* botaoEsquerda.png */,
+				2B61F40C19A4E28A00B0AE80 /* bensound-goinghigher.mp3 */,
 				2B41C6AE19A2E6990038B30B /* PegarNotasEPausasCena.h */,
 				2B41C6AF19A2E6990038B30B /* PegarNotasEPausasCena.m */,
 				A87F0FC219A2BB88000061EC /* PegarNotasEPausasViewController.h */,
@@ -2360,6 +2369,7 @@
 				A84855501994119600C5F0A3 /* velocidadeTempo.png in Resources */,
 				A84855A91994137D00C5F0A3 /* musicaPanela.mp3 in Resources */,
 				A848554E1994119600C5F0A3 /* tocaTreco2.png in Resources */,
+				2B61F40B19A4E12300B0AE80 /* bensound-enigmatic.mp3 in Resources */,
 				0BA27C5C19A2938A00D21948 /* Do.png in Resources */,
 				A84854F11994119600C5F0A3 /* explosao.png in Resources */,
 				A84855521994119600C5F0A3 /* vibracao.png in Resources */,
@@ -2377,6 +2387,7 @@
 				3FD3253019970424004A0262 /* frequenciaFlauta.jpg in Resources */,
 				3F608DB8196C7585001979E9 /* nokia.xml in Resources */,
 				A84855271994119600C5F0A3 /* pedindoSilencio.jpg in Resources */,
+				2B61F40D19A4E28A00B0AE80 /* bensound-goinghigher.mp3 in Resources */,
 				3FCC29161995A9DE000B951F /* MascoteViewController.xib in Resources */,
 				A84855311994119600C5F0A3 /* pilarMelodia.png in Resources */,
 				A84854E91994119600C5F0A3 /* escalaInteira.png in Resources */,
@@ -2622,6 +2633,7 @@
 				2B64FA7B1969235B00BC57FD /* Mod2Aula7Exe6ViewController.xib in Resources */,
 				3F608D7C196C7585001979E9 /* colcheia.png in Resources */,
 				3F608DB0196C7585001979E9 /* indiana.xml in Resources */,
+				2B61F40919A4DFDF00B0AE80 /* bensound-badass.mp3 in Resources */,
 				A84854FA1994119600C5F0A3 /* galo.png in Resources */,
 				A84855181994119600C5F0A3 /* notas.jpg in Resources */,
 				A84855991994137D00C5F0A3 /* galo.wav in Resources */,

@@ -34,8 +34,12 @@
 
         //Inicia primeiros nós
         [self carregarPrimeirosComponentes];
-        
         [self sortearNota];
+        
+        NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"bensound-badass" ofType:@"mp3"]];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile error:nil];
+        self.audioPlayer.numberOfLoops = -1;
+        [self.audioPlayer play];
     }
     
     return self;
@@ -44,6 +48,7 @@
 -(void)gameOver{
     [[GameOverViewController sharedManager]gameOverParaUmaCena].view.hidden = NO;
     [self pausaJogo];
+    [self.audioPlayer stop];
 }
 
 -(void)pausaJogo{
@@ -52,7 +57,7 @@
 
 -(void)carregarPrimeirosComponentes{
     
-    [self criaFundo];
+//    //[self criaFundo];
     [self criaPiso];
 
     [self cairNota];

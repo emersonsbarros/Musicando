@@ -57,7 +57,7 @@ static const UInt32 fundo = 0x1 << 7;
 @property SKLabelNode *stringDeTempo;
 @property SKLabelNode *labelDeTempo;
 
-
+@property AVAudioPlayer *audioPlayer;
 
 //Auxiliares
 @property int estadoPauseJogo;

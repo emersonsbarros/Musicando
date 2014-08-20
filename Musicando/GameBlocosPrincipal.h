@@ -52,6 +52,7 @@ static const UInt32 coluna = 0x1 << 4;
 @property SKLabelNode *stringDePontuacao;
 @property SKLabelNode *labelDePontuacao;
 
+@property AVAudioPlayer *audioPlayer;
 
 //Auxiliares
 @property int pontuacaoJogadorAtual;

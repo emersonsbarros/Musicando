@@ -42,6 +42,12 @@
         
     //Inicia primeiros nós
         [self carregarPrimeirosComponentes];
+        
+        NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"bensound-goinghigher" ofType:@"mp3"]];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile error:nil];
+        self.audioPlayer.numberOfLoops = -1;
+        [self.audioPlayer play];
+        
     }
     
     return self;
@@ -564,6 +570,8 @@
 -(void)gameOver{
     [[GameOverViewController sharedManager]gameOverParaUmaCena].view.hidden = NO;
     [self pausaJogo];
+    [self.audioPlayer stop];
+
 }
 
 -(void)pausaJogo{

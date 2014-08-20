@@ -58,6 +58,8 @@ static const UInt32 pisoCategoria = 0x1 << 2;
 @property int auxTempoPercorrido;
 @property int pontuacaoJogadorAtual;
 
+@property AVAudioPlayer *audioPlayer;
+
 //Movimentos
 @property int quantidadeMovimentoDireita;
 @property int quantidadeMovimentoEsquerda;
