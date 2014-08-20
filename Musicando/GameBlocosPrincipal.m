@@ -57,7 +57,7 @@
 
 -(void)carregarPrimeirosComponentes{
     
-//    //[self criaFundo];
+    [self criaFundo];
     [self criaPiso];
 
     [self cairNota];
