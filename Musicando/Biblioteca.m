@@ -109,7 +109,7 @@
     
 ////////////////////////////// JOGO 1 ////////////////////////////////////
     
-    Exercicio *mod1Aula1Exe1Jogo = [[Exercicio alloc] init:101 nome:@"Jogo música" nomeView:@"JogoScrollmúsicalViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod1Aula1Exe1Jogo = [[Exercicio alloc] init:101 nome:@"Jogo música" nomeView:@"JogoScrollmusicalViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
     
     //Falas do Mascote
     //Falas
@@ -124,9 +124,9 @@
     
     [[[mod1Aula1Exe1Jogo mascote] listaDeConversas] addObject:mod1Aula1Exe1Jogoconversa1];
     
-//Aula de músicalização
+//Aula de musicalização
     Aula *mod1Aula1 = [[Aula alloc]init];
-    mod1Aula1.nome = @"músicalização";
+    mod1Aula1.nome = @"musicalização";
     mod1Aula1.capa = [UIImage imageNamed:@"aula.png"];
     [[mod1Aula1 listaDeExercicios]addObject: mod1Aula1Exe1];
     [[mod1Aula1 listaDeExercicios]addObject: mod1Aula1Exe1Jogo];
@@ -253,33 +253,33 @@
 ////////////////////////////////// Aula 3 //////////////////////////////////////
     
 //Exercícios
-//INTRODUÇÃO músicaL
-    Exercicio *mod1Aula3Exe1 = [[Exercicio alloc] init:102 nome:@"Introdução músical" nomeView:@"Mod1Aula3Exe1ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+//INTRODUÇÃO musical
+    Exercicio *mod1Aula3Exe1 = [[Exercicio alloc] init:102 nome:@"Introdução musical" nomeView:@"Mod1Aula3Exe1ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
 
 //Falas
     Fala *mod1Aula3Exe1fala1 = [[Fala alloc] init];
-    mod1Aula3Exe1fala1.conteudo = @"Agora que já temos uma ideia de como a música está presente em nossa vida, e também o que é o som. Vamos aprender como a música é formada e quais são seus componentes.";
+    mod1Aula3Exe1fala1.conteudo = @"Já temos uma ideia de como a música está presente em nossa vida e também o que é o som. Vamos aprender agora como a música é formada e quais são seus componentes.";
     
     Fala *mod1Aula3Exe1fala2 = [[Fala alloc] init];
-    mod1Aula3Exe1fala2.conteudo = @"Numa mistura de SILÊNCIOS e SONS, a música nasce como a soma desses dois... Díficil de imaginar?";
+    mod1Aula3Exe1fala2.conteudo = @"Numa mistura de SILÊNCIOS e SONS, a música nasce como a soma desses dois. Díficil de imaginar?";
     
     Fala *mod1Aula3Exe1fala3 = [[Fala alloc] init];
-    mod1Aula3Exe1fala3.conteudo = @"Veja como tocatreco cria música com essa junção!";
+    mod1Aula3Exe1fala3.conteudo = @"Veja como TocaTreco cria música com essa junção!";
     
     Fala *mod1Aula3Exe1fala4 = [[Fala alloc] init];
-    mod1Aula3Exe1fala4.conteudo = @"É simples assim! Ao entrar sons + pausas o tocatreco faz a música. E com qualquer instrumento, também funcionará assim.";
+    mod1Aula3Exe1fala4.conteudo = @"É simples assim! Ao entrar sons + pausas o TocaTreco faz a música. E com qualquer instrumento, também funcionará assim.";
     
     Fala *mod1Aula3Exe1fala5 = [[Fala alloc] init];
-    mod1Aula3Exe1fala5.conteudo = @"Já pra fixarmos cada elemento, vamos para definição de cada um!";
+    mod1Aula3Exe1fala5.conteudo = @"Pra fixarmos cada elemento, vamos para definição de cada um!";
     
     Fala *mod1Aula3Exe1fala6 = [[Fala alloc] init];
     mod1Aula3Exe1fala6.conteudo = @"O pequeno mascote apontado representa o SOM, e o intervalo entre um som e outro são os silêncios, ou as chamadas as pausas.";
     
     Fala *mod1Aula3Exe1fala7 = [[Fala alloc] init];
-    mod1Aula3Exe1fala7.conteudo = @"Para memorizar vamos para um teste. Qual desses conjuntos na tela pode 'representar' a definição de música?";
+    mod1Aula3Exe1fala7.conteudo = @"Vamos memorizar com um teste. Qual desses conjuntos na tela pode \"representar\" a definição de música?";
     
     Fala *mod1Aula3Exe1fala8 = [[Fala alloc] init];
-    mod1Aula3Exe1fala8.conteudo = @"Acho que agora já sabemos melhor o que é a música, o que acha de entramos no 'mundo' dos ritmos?";
+    mod1Aula3Exe1fala8.conteudo = @"Agora já sabemos melhor o que é a música, o que acha de entramos no \"mundo\" dos ritmos?";
     
     //Conversa
     Conversa *mod1Aula3Exe1conversa1 = [[Conversa alloc] init];
@@ -307,16 +307,16 @@
     mod1Aula3Exe2fala3.conteudo = @"Os batimentos cardíacos para seu bom funcionamento necessitam sempre estar coordenados com velocidade e tempo para que o fluxo seja bombeado e o movimento do coração seja executado constantemente. Isso também é ritmo, e através dele esse processo acontece!";
     
     Fala *mod1Aula3Exe2fala4 = [[Fala alloc] init];
-    mod1Aula3Exe2fala4.conteudo = @"Voltando ao ritmos ligamos à estilos músicais, realmente eles tem uma relação. Uns são mais rápidos como Rock, outros mais suaves como Clássico. Vamos ver um exemplo de alguns deles...";
+    mod1Aula3Exe2fala4.conteudo = @"Voltando ao ritmos ligamos à estilos músicais, realmente eles tem uma relação. Uns são mais rápidos como Rock, outros mais suaves como Clássico. Veja um exemplo de alguns deles...";
     
     Fala *mod1Aula3Exe2fala5 = [[Fala alloc] init];
-    mod1Aula3Exe2fala5.conteudo = @"Você já deve ter ouvido a música 'Parabéns pra você' pelo menos uma dezena de vezes na vida, mas talvez nunca percebeu que ela pode ser apresentar de várias maneiras dependendo do ritmo. Dúvida? Clique em cada um acima e veja a diferença.";
+    mod1Aula3Exe2fala5.conteudo = @"Você já deve ter ouvido a música \"Parabéns pra você\" pelo menos uma dezena de vezes na vida, mas talvez nunca percebeu que ela pode ser apresentar de várias maneiras dependendo do ritmo. Duvida? Clique em cada um acima e veja a diferença.";
     
     Fala *mod1Aula3Exe2fala6 = [[Fala alloc] init];
-    mod1Aula3Exe2fala6.conteudo = @"Percebe que a diferênça acontece diretamente na execução, pode parecer até músicas diferente. E em tese realmente são, pois de acordo com o RITMO a velocidade e tempo da música é alterada.";
+    mod1Aula3Exe2fala6.conteudo = @"Percebe que a diferença acontece diretamente na execução, podem parecer até músicas diferente. E em tese realmente são, pois de acordo com o RITMO a velocidade e tempo da música é alterada.";
     
     Fala *mod1Aula3Exe2fala7 = [[Fala alloc] init];
-    mod1Aula3Exe2fala7.conteudo = @"Veja mais uma vez essa diferença de velocidade e tempo no tocatreco. Clique em cada um, e veja a saída da música.";
+    mod1Aula3Exe2fala7.conteudo = @"Veja mais uma vez essa diferença de velocidade e tempo no TocaTreco. Clique em cada um, e veja a saída da música.";
     
     Fala *mod1Aula3Exe2fala8 = [[Fala alloc] init];
     mod1Aula3Exe2fala8.conteudo = @"Para exercitar depois de tudo que te mostrei, qual dessas figuras você acha que corresponde definição e ao que interfere o ritmo na música?";
@@ -346,7 +346,7 @@
 
 //Falas
     Fala *mod1Aula3Exe3fala1 = [[Fala alloc] init];
-    mod1Aula3Exe3fala1.conteudo = @"Já descobrimos como a música é formada e como o ritmo a coordena, mas você chegou a pensar de onde vem esse sentido músical, será realmente que acontece só com vários sons ou pausas tocadas?";
+    mod1Aula3Exe3fala1.conteudo = @"Já descobrimos como a música é formada e como o ritmo a coordena, mas você chegou a pensar de onde vem esse sentido musical, será realmente que acontece só com vários sons ou pausas tocadas?";
     
     Fala *mod1Aula3Exe3fala2 = [[Fala alloc] init];
     mod1Aula3Exe3fala2.conteudo = @"Agora é hora de saber onde esse elementos se encaixam...";
@@ -355,22 +355,22 @@
     mod1Aula3Exe3fala3.conteudo = @"Melodia são sons emitidos SEPARADAMENTE, uma sucessão que dá sentido e fluidez na música. Isso mesmo, sempre que uma nota por vez é tocada em sequência de acordo com o ritmo, surge a melodia!";
     
     Fala *mod1Aula3Exe3fala4 = [[Fala alloc] init];
-    mod1Aula3Exe3fala4.conteudo = @"Imagine uma fila de notas e pausas sendo lideradas pelo ritmo, e uma à uma são tocadas criando esse sentido.";
+    mod1Aula3Exe3fala4.conteudo = @"Imagine uma fila de notas e pausas sendo lideradas pelo ritmo e uma à uma são tocadas, criando esse sentido.";
     
     Fala *mod1Aula3Exe3fala5 = [[Fala alloc] init];
-    mod1Aula3Exe3fala5.conteudo = @"O conceito é simples, vamos ver em seguida um exemplo nos tocatrecos.";
+    mod1Aula3Exe3fala5.conteudo = @"O conceito é simples, veja em seguida um exemplo nos TocaTrecos.";
     
     Fala *mod1Aula3Exe3fala6 = [[Fala alloc] init];
-    mod1Aula3Exe3fala6.conteudo = @"O primeiro tocatreco representa bem a melodia, com cada nota sendo tocada. Já o segundo contém a harmonia, porém já acresenta outros elementos que veremos mais pra frente, daí a diferença.";
+    mod1Aula3Exe3fala6.conteudo = @"O primeiro TocaTreco representa bem a melodia, com cada nota sendo tocada. Já o segundo contém a harmonia, porém já acresenta outros elementos que veremos mais pra frente.";
     
     Fala *mod1Aula3Exe3fala7 = [[Fala alloc] init];
-    mod1Aula3Exe3fala7.conteudo = @"Você deve memorizar que a melodia é fluidez de sons contínuos, e assim conseguirá diferenciar quando ela aparece.";
+    mod1Aula3Exe3fala7.conteudo = @"Você deve memorizar que a melodia é fluidez de sons contínuos e assim conseguirá diferenciar quando ela aparece.";
     
     Fala *mod1Aula3Exe3fala8 = [[Fala alloc] init];
-    mod1Aula3Exe3fala8.conteudo = @"Para fixar, sabendo que a melodia ocorre equando notas são tocadas individualmente. Qual dos instrumentos abaixo tem essa caracteristica?";
+    mod1Aula3Exe3fala8.conteudo = @"Para fixar, sabendo que a melodia ocorre equando notas são tocadas individualmente. Qual dos instrumentos abaixo tem essa característica?";
     
     Fala *mod1Aula3Exe3fala9 = [[Fala alloc] init];
-    mod1Aula3Exe3fala9.conteudo = @"Notas em fila ou sons simultâneos, a melodia aparece em toda música. Porém ela ainda terá o auxilio de outros 'colegas'. Vamos para a Harmonia!";
+    mod1Aula3Exe3fala9.conteudo = @"Notas em fila ou sons simultâneos, a melodia aparece em toda música. Porém ela ainda terá o auxilio de outros \"colegas\". Vamos para a Harmonia!";
     
 //Conversa
     Conversa *mod1Aula3Exe3conversa1 = [[Conversa alloc] init];
@@ -389,25 +389,25 @@
     Exercicio *mod1Aula3Exe4 = [[Exercicio alloc] init:102 nome:@"Harmonia" nomeView:@"Mod1Aula3Exe4ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
 //Falas
     Fala *mod1Aula3Exe4fala1 = [[Fala alloc] init];
-    mod1Aula3Exe4fala1.conteudo = @"Agora vamos falar um pouco sobre harmonia, que é um dos chamados 'elementos constitutivos e fundamentais' da música!";
+    mod1Aula3Exe4fala1.conteudo = @"Agora vamos falar um pouco sobre harmonia, que é um dos chamados \"elementos constitutivos e fundamentais\" da música!";
     
     Fala *mod1Aula3Exe4fala2 = [[Fala alloc] init];
-    mod1Aula3Exe4fala2.conteudo = @"Para nossa felicidade, a harmonia é justamente o contrário da melodia. São sons tocados ao mesmo tempo, contíunos, que também dão fluidez a música tocada. Díficil?";
+    mod1Aula3Exe4fala2.conteudo = @"Para nossa felicidade, a harmonia é justamente o contrário da melodia. São sons tocados ao mesmo tempo, contíunos, que também dão fluidez a música tocada.";
     
     Fala *mod1Aula3Exe4fala3 = [[Fala alloc] init];
-    mod1Aula3Exe4fala3.conteudo = @"Imagine sons interligados, só que diferentemente da melodia, temos blocos de notas que ocupam o mesmo 'tempo' na música.";
+    mod1Aula3Exe4fala3.conteudo = @"Imagine sons interligados, mas diferente da melodia, temos blocos de notas que ocupam o mesmo \"tempo\" na música.";
     
     Fala *mod1Aula3Exe4fala4 = [[Fala alloc] init];
-    mod1Aula3Exe4fala4.conteudo = @"Quer ver a diferença? Arraste a nota separada que representa a melodia, e depois a harmonia que são vários sons juntos. E ouça cada uma!";
+    mod1Aula3Exe4fala4.conteudo = @"Quer ver a diferença? Arraste a nota separada, que representa a melodia e depois a harmonia, que são vários sons juntos. Ouça cada uma!";
     
     Fala *mod1Aula3Exe4fala5 = [[Fala alloc] init];
-    mod1Aula3Exe4fala5.conteudo = @"Notou que na harmonia parece vários sons juntos, e já na melodia dá a impressão de apenas uma sequência cada um tocada de uma vez?";
+    mod1Aula3Exe4fala5.conteudo = @"Notou que na harmonia parece vários sons juntos e já na melodia dá a impressão de apenas uma sequência, cada um tocada de uma vez?";
     
     Fala *mod1Aula3Exe4fala6 = [[Fala alloc] init];
-    mod1Aula3Exe4fala6.conteudo = @"Agora vamos para os instrumentos. Assim como mostrei na melodia, existem técnicas de tocar instrumentos que exemplificam bem a harmonia.";
+    mod1Aula3Exe4fala6.conteudo = @"vamos para os instrumentos. Assim como mostrei na melodia existem técnicas de tocar instrumentos, que exemplificam bem a harmonia.";
     
     Fala *mod1Aula3Exe4fala7 = [[Fala alloc] init];
-    mod1Aula3Exe4fala7.conteudo = @"Arraste  cada um e veja a diferença entre os acordes harmoniosos do violão para a escala feita na flauta.";
+    mod1Aula3Exe4fala7.conteudo = @"Arraste cada um e veja a diferença entre os acordes harmoniosos do violão para a escala feita na flauta.";
     
     Fala *mod1Aula3Exe4fala8 = [[Fala alloc] init];
     mod1Aula3Exe4fala8.conteudo = @"Existem outros instrumentos que mostram a diferença. Guarde pra você que a harmonia é relacionada a CONJUNTO e a melodia a UNIDADE.";
@@ -440,22 +440,22 @@
     mod1Aula3Exe5fala1.conteudo = @"Você pode não saber, mas já vem aprendendo um pouco sobre o que é polifonia...";
     
     Fala *mod1Aula3Exe5fala2 = [[Fala alloc] init];
-    mod1Aula3Exe5fala2.conteudo = @"A definição é simples. Basta somar a MELODIA com a HARMONIA, que acabou de aprender. É isso mesmo! A polifonia ocorre sempre que temos a melodia e harmonia ao mesmo tempo. Meio complicado, ainda?";
+    mod1Aula3Exe5fala2.conteudo = @"A definição é simples. Basta somar a MELODIA com a HARMONIA, que acabou de aprender. É isso mesmo! A polifonia ocorre sempre que temos a melodia e harmonia ao mesmo tempo.";
     
     Fala *mod1Aula3Exe5fala3 = [[Fala alloc] init];
-    mod1Aula3Exe5fala3.conteudo = @"Vamos ao tocatreco ver o que acontece!";
+    mod1Aula3Exe5fala3.conteudo = @"Vamos ao TocaTreco ver o que acontece!";
     
     Fala *mod1Aula3Exe5fala4 = [[Fala alloc] init];
-    mod1Aula3Exe5fala4.conteudo = @"O pequeno mascote representa a melodia, já as outras notas representam a harmonia. Arraste-os ao tocatreco!";
+    mod1Aula3Exe5fala4.conteudo = @"O pequeno mascote representa a melodia, já as outras notas representam a harmonia. Arraste-os ao TocaTreco!";
     
     Fala *mod1Aula3Exe5fala5 = [[Fala alloc] init];
-    mod1Aula3Exe5fala5.conteudo = @"Quando o tocatreco toca as duas, ocorre a tal polifonia. Juntando os sons indivuais numa escala e conjuntos de sons num acorde.";
+    mod1Aula3Exe5fala5.conteudo = @"Quando o TocaTreco toca as duas, ocorre a tal polifonia. Juntando os sons indivuais numa escala e conjuntos de sons num acorde.";
     
     Fala *mod1Aula3Exe5fala6 = [[Fala alloc] init];
     mod1Aula3Exe5fala6.conteudo = @"Assim como na harmonia conseguimos perceber a polifonia em instrumentos. O teclado elétrico é um deles, que pode fazer uma batida eletrônica enquanto toca sua melodia.";
     
     Fala *mod1Aula3Exe5fala7 = [[Fala alloc] init];
-    mod1Aula3Exe5fala7.conteudo = @"Vamos ver, arraste para o tocatreco e como ele faz essa mistura.";
+    mod1Aula3Exe5fala7.conteudo = @"Vamos ver, arraste para o TocaTreco e veja como ele faz essa mistura.";
     
     Fala *mod1Aula3Exe5fala8 = [[Fala alloc] init];
     mod1Aula3Exe5fala8.conteudo = @"Viu que não tem segredo?";
@@ -493,35 +493,35 @@
 ////////////////////////////////// Aula 4 //////////////////////////////////////
     
 //Exercícios
-//PERCEPÇÃO músicaL
-    Exercicio *mod1Aula4Exe1 = [[Exercicio alloc] init:102 nome:@"Introdução a Percepção músical" nomeView:@"Mod1Aula4Exe1ViewController" experiencia:10 pontuacaoMaxima:10 :[UIImage imageNamed:@"exercicios.png"]];
+//PERCEPÇÃO musical
+    Exercicio *mod1Aula4Exe1 = [[Exercicio alloc] init:102 nome:@"Introdução a Percepção musical" nomeView:@"Mod1Aula4Exe1ViewController" experiencia:10 pontuacaoMaxima:10 :[UIImage imageNamed:@"exercicios.png"]];
 
 //Falas
     Fala *mod1Aula4Exe1fala1 = [[Fala alloc] init];
-    mod1Aula4Exe1fala1.conteudo = @"Até aqui já aprendemos importantes elementos da música. Agora para continuar a aprender, veremos porque é bom praticar sua percepção músical.";
+    mod1Aula4Exe1fala1.conteudo = @"Aprendemos importantes elementos da música. Para continuar a aprender, veremos porque é bom praticar sua percepção musical.";
     
     Fala *mod1Aula4Exe1fala2 = [[Fala alloc] init];
-    mod1Aula4Exe1fala2.conteudo = @"Não é nada de outro mundo. Percepção músical, é quando identificamos os elementos que fazem parte da música. Você lembra do ritmo, melodia e harmonia que dão fluidez e controlam o tempo da música?";
+    mod1Aula4Exe1fala2.conteudo = @"Não é nada de outro mundo. Percepção musical, é quando identificamos os elementos que fazem parte da música. Você lembra do ritmo, melodia e harmonia que dão fluidez e controlam o tempo da música?";
     
     Fala *mod1Aula4Exe1fala3 = [[Fala alloc] init];
-    mod1Aula4Exe1fala3.conteudo = @"Justamente quando você 'percebe' cada um deles na música, é a chamada da Percepção músical.";
+    mod1Aula4Exe1fala3.conteudo = @"Justamente quando você \"percebe\" cada um deles na música, é a chamada da Percepção musical.";
 
     
     Fala *mod1Aula4Exe1fala4 = [[Fala alloc] init];
-    mod1Aula4Exe1fala4.conteudo = @"Aqui temos elementos que representam o RITMO, MELODIA e HARMONIA. Veja o que acontece no placar lá em cima, quando você arrastar-los para o tocatreco.";
+    mod1Aula4Exe1fala4.conteudo = @"Aqui temos elementos que representam o RITMO, MELODIA e HARMONIA. Veja o que acontece no placar lá em cima, quando você arrastá-los para o TocaTreco.";
     
     
     Fala *mod1Aula4Exe1fala5 = [[Fala alloc] init];
-    mod1Aula4Exe1fala5.conteudo = @"Viu? O tocatreco consegue identificar o que cada elemento representa com sua 'percepção músical'.";
+    mod1Aula4Exe1fala5.conteudo = @"Viu? O TocaTreco consegue identificar o que cada elemento representa com sua \"percepção musical\".";
     
     Fala *mod1Aula4Exe1fala6 = [[Fala alloc] init];
     mod1Aula4Exe1fala6.conteudo = @"Você deve se atentar à sempre perceber esses três elementos. Assim como no som, imagine-os como pilares. Juntos formam os elementos fundamentais da música.";
     
     Fala *mod1Aula4Exe1fala7 = [[Fala alloc] init];
-    mod1Aula4Exe1fala7.conteudo = @"Não tem segredo. Quanto mais você ouvir, aprender e praticar a música, melhor sua percepção músical será!";
+    mod1Aula4Exe1fala7.conteudo = @"Não tem segredo. Quanto mais você ouvir, aprender e praticar a música, melhor sua percepção musical será!";
     
     Fala *mod1Aula4Exe1fala8 = [[Fala alloc] init];
-    mod1Aula4Exe1fala8.conteudo = @"Agora começaremos a entrar no mundo da notação músical, o que será que nos aguarda?";
+    mod1Aula4Exe1fala8.conteudo = @"Agora começaremos a entrar no mundo da notação musical, o que será que nos aguarda?";
     
 //Conversa
     Conversa *mod1Aula4Exe1conversa1 = [[Conversa alloc] init];
@@ -536,9 +536,9 @@
     [[[mod1Aula4Exe1 mascote] listaDeConversas] addObject: mod1Aula4Exe1conversa1];
 
     
-//Aula de Percepção músical
+//Aula de Percepção musical
     Aula *mod1Aula4 = [[Aula alloc]init];
-    mod1Aula4.nome = @"Percepção músical";
+    mod1Aula4.nome = @"Percepção musical";
     mod1Aula4.capa = [UIImage imageNamed:@"aula.png"];
     [[mod1Aula4 listaDeExercicios]addObject: mod1Aula4Exe1];
 
@@ -573,34 +573,34 @@
     //Falas do Mascote
     //Falas
     Fala *mod1Aula1Exe1fala1 = [[Fala alloc] init];
-    mod1Aula1Exe1fala1.conteudo = @"Agora vamos começar a entrar no mundo das partituras, mais antes vamos falar sobre Notas!";
+    mod1Aula1Exe1fala1.conteudo = @"Entrando no mundo das partituras, vamos começar a aprender sobre Notas!";
     
     Fala *mod1Aula1Exe1fala2 = [[Fala alloc] init];
-    mod1Aula1Exe1fala2.conteudo = @"Lembra aquela nossa aula sobre som, a nota músical pode ser chamanda assim, porém el retorna uma frequência unica, meio confuso né, vamos a pratica";
+    mod1Aula1Exe1fala2.conteudo = @"Lembra aquela nossa aula sobre som? A nota musical pode ser chamanda assim, porém ela retorna uma frequência única. Vamos a prática!";
     
     Fala *mod1Aula1Exe1fala3 = [[Fala alloc] init];
-    mod1Aula1Exe1fala3.conteudo = @"Toca nas teclas do Piano acima e veja que cada tecla corresponde a uma nota músical com uma frequência constante, com um som unico e sem alteracoes";
+    mod1Aula1Exe1fala3.conteudo = @"Toque nas teclas do Piano acima e veja que cada tecla corresponde a uma nota musical, com frequência constante, com som único e sem alterações.";
     
     Fala *mod1Aula1Exe1fala4 = [[Fala alloc] init];
-    mod1Aula1Exe1fala4.conteudo = @"Assim como o som, a nota tem a sua duração, o seu timbre depedendo do intrumento, a intensidade do volume, e a altura que é quando o som é grave ou agudo!";
+    mod1Aula1Exe1fala4.conteudo = @"Assim como o som, a nota tem a sua duração, o seu timbre depedendo do intrumento, a intensidade do volume e a altura, que é quando o som é grave ou agudo!";
     
     Fala *mod1Aula1Exe1fala5 = [[Fala alloc] init];
-    mod1Aula1Exe1fala5.conteudo = @"Para dividir essas notas com os 4 pilares aprendidos até agora, criaram escalas para ajudar na aprendizagem e evitar erros de interpretacao, onde podemos imaginalá como uma escada!";
+    mod1Aula1Exe1fala5.conteudo = @"Para dividir essas notas com os 4 pilares aprendidos até agora, criaram escalas pra ajudar na aprendizagem e evitar erros de interpretação. Podemos imagina-lá como uma escada.";
     
     Fala *mod1Aula1Exe1fala6 = [[Fala alloc] init];
-    mod1Aula1Exe1fala6.conteudo = @"Essa escala é divida em 7 notas, cada uma com seus respectivos pilares que as fazem diferenciar uma da outra, vamos ao exemplo";
+    mod1Aula1Exe1fala6.conteudo = @"Essa escala é divida em 7 notas, cada uma com seus respectivos pilares que as fazem diferenciar uma da outra, vamos ao exemplo!";
     
     Fala *mod1Aula1Exe1fala7 = [[Fala alloc] init];
-    mod1Aula1Exe1fala7.conteudo = @"De um toque em cada imagem do mascote de baixo para cima e veja como uma se difere da outra, observe que quanto mais alto fica na escada, mais a nota fica aguda";
+    mod1Aula1Exe1fala7.conteudo = @"Toque em cada imagem do mascote de baixo para cima e veja como uma se difere da outra. Observe que quanto mais alto fica na escada, mais a nota fica aguda.";
     
     Fala *mod1Aula1Exe1fala8 = [[Fala alloc] init];
-    mod1Aula1Exe1fala8.conteudo = @"Observamos que ao passar de cada degrau da escada, a nossa nota fica cada vez mais aguda e menos grave assim alterando a altura, logo juntando com os outros 3 pilares essas notas formam uma escala!";
+    mod1Aula1Exe1fala8.conteudo = @"Ao passar de cada degrau da escada, a nossa nota fica cada vez mais aguda e menos grave assim alterando a altura,]. Logo juntando com os outros 3 pilares essas notas formam uma escala.";
     
     Fala *mod1Aula1Exe1fala9 = [[Fala alloc] init];
-    mod1Aula1Exe1fala9.conteudo = @"Essas notas divididas dentro de uma escala ganham o nome aqui no Brasil de Dó – ré – mi – fá – sol – Lá – si";
+    mod1Aula1Exe1fala9.conteudo = @"Essas notas divididas dentro de uma escala ganham o nome aqui no Brasil de DÓ – RÉ – MI – FÁ – SOL – LÁ – SI";
     
     Fala *mod1Aula1Exe1fala10 = [[Fala alloc] init];
-    mod1Aula1Exe1fala10.conteudo = @"É interessante falar que em outros paises essas notas podem ganhar outro nome, como o EUA que usam os termos C – D – E – F – G – A – B para dividir as notas de uma escala";
+    mod1Aula1Exe1fala10.conteudo = @"É interessante falar que em outros países essas notas podem ganhar outro nome, como nos EUA que usam os termos C – D – E – F – G – A – B para dividir as notas.";
     
     //Conversa
     Conversa *mod2Aula1Exe1conversa1 = [[Conversa alloc] init];
@@ -625,22 +625,22 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     //Falas do Mascote
     //Falas
     Fala *mod1Aula1Exe2fala1 = [[Fala alloc] init];
-    mod1Aula1Exe2fala1.conteudo = @"Agora vamos gravar bem o nome e a ordem dessas divisioes da escala";
+    mod1Aula1Exe2fala1.conteudo = @"Vamos gravar bem o nome e a ordem dessas divisões da escala.";
     
     Fala *mod1Aula1Exe2fala2 = [[Fala alloc] init];
-    mod1Aula1Exe2fala2.conteudo = @"Então repita comigo Dó-Ré-Mi-Fa-So-La-Si! e acompanhe o audio";
+    mod1Aula1Exe2fala2.conteudo = @"Repita comigo DÓ – RÉ – MI – FÁ – SOL – LÁ – SI e acompanhe o áudio.";
     
     Fala *mod1Aula1Exe2fala3 = [[Fala alloc] init];
-    mod1Aula1Exe2fala3.conteudo = @"Ache dentro dessa sopa de letras o nome das 7 notas abrendidas até agora!";
+    mod1Aula1Exe2fala3.conteudo = @"Encontre dentro da sopa de letras o nome das 7 notas aprendidas até agora!";
     
     Fala *mod1Aula1Exe2fala4 = [[Fala alloc] init];
-    mod1Aula1Exe2fala4.conteudo = @"Heh Jow, É isso ai!, agora que você já tem uma nocão, tente colocar as notas das plaquinhas acima na ordem correta em que aprendemos até aqui, parra isso arraste para os pontos pretos acima cada plaquinha";
+    mod1Aula1Exe2fala4.conteudo = @"É isso ai! Agora que você já tem uma noção, tente colocar as notas das plaquinhas acima na ordem correta em que aprendemos até aqui. Pra isso arraste para os pontos pretos acima cada uma.";
     
     Fala *mod1Aula1Exe2fala5 = [[Fala alloc] init];
-    mod1Aula1Exe2fala5.conteudo = @"Oh ou! temos um problema o TocaTreco está Maluco e está jogando notas que não existem, e sua funcao e não deixar sair notas com os nomes errados, sempre que aparecer um nome diferente faca um gesto igual a imagem acima!";
+    mod1Aula1Exe2fala5.conteudo = @"Ah não... temos um problema, o TocaTreco está maluco, jogando notas que não existem. Sua função é não deixar sair notas com os nomes errados, sempre que aparecer um nome diferente faca um gesto igual a imagem acima!";
     
     Fala *mod1Aula1Exe2fala6 = [[Fala alloc] init];
-    mod1Aula1Exe2fala6.conteudo = @"Ufa! você conseguiu arrumar o TocaTreco, imagina a chiadeira dele fazendo notas que não existem!";
+    mod1Aula1Exe2fala6.conteudo = @"Ufa! Você conseguiu arrumar o TocaTreco, imagine a chiadeira dele fazendo notas que não existem!";
 
     
     //Conversa
@@ -668,7 +668,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     mod2Aula1Exe3fala1.conteudo = @"A principio elas foram criadas por um Monge chamado Guido de Arezzo, que tirou de uma letra de música latim os nomes das notas em homenagem ao Santo João";
     
     Fala *mod2Aula1Exe3fala2 = [[Fala alloc] init];
-    mod2Aula1Exe3fala2.conteudo = @"Ele percebeu que com a criacao de uma simples escala músical, facilitaria o aprendizado dos alunos e diminuia possiveis erros de interpretacoes de obras";
+    mod2Aula1Exe3fala2.conteudo = @"Ele percebeu que com a criacao de uma simples escala musical, facilitaria o aprendizado dos alunos e diminuia possiveis erros de interpretacoes de obras";
     
     Fala *mod2Aula1Exe3fala3 = [[Fala alloc] init];
     mod2Aula1Exe3fala3.conteudo = @"porém só bem depois no seculo 17 foi revisto os nomes das notas e a nota Dó foi criada e colocada no lugar do Ut!";
@@ -765,10 +765,10 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     mod2Aula2Exe2fala1.conteudo = @"Agora vamos exercitar o que aprendemos sobre pausas";
     
     Fala *mod2Aula2Exe2fala2 = [[Fala alloc] init];
-    mod2Aula2Exe2fala2.conteudo = @"Estamos numa biblioteca, ambiente que precisa do máximo SILÊNCIO. Mas parece que nosso tocatreco pifou e está fazendo o maior barulho...";
+    mod2Aula2Exe2fala2.conteudo = @"Estamos numa biblioteca, ambiente que precisa do máximo SILÊNCIO. Mas parece que nosso TocaTreco pifou e está fazendo o maior barulho...";
     
     Fala *mod2Aula2Exe2fala3 = [[Fala alloc] init];
-    mod2Aula2Exe2fala3.conteudo = @"Sua tarefa é arrastar as pausas para o tocatreco até que ele pare ou antes da bibliotecária chegar. É melhor começar...";
+    mod2Aula2Exe2fala3.conteudo = @"Sua tarefa é arrastar as pausas para o TocaTreco até que ele pare ou antes da bibliotecária chegar. É melhor começar...";
     
     Fala *mod2Aula2Exe2fala4 = [[Fala alloc] init];
     mod2Aula2Exe2fala4.conteudo = @"Agora sim o silêncio permanece, graças a sua ajuda!";
@@ -820,7 +820,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     mod2Aula3Exe1fala6.conteudo = @"Para sabermos qual é cada nota dependerá sempre da LINHA ou ESPAÇO que ocupar no PENTAGRAMA.";
     
     Fala *mod2Aula3Exe1fala7 = [[Fala alloc] init];
-    mod2Aula3Exe1fala7.conteudo = @"Vejamos este exemplo, há uma nota na segunda linha. Pra nós ela representará o SOL, arraste ao tocatreco e veja seu som!";
+    mod2Aula3Exe1fala7.conteudo = @"Vejamos este exemplo, há uma nota na segunda linha. Pra nós ela representará o SOL, arraste ao TocaTreco e veja seu som!";
     
     Fala *mod2Aula3Exe1fala8 = [[Fala alloc] init];
     mod2Aula3Exe1fala8.conteudo = @"Agora temos uma nota no terceiro espaço representando o LÁ. Arraste novamente e veja o som!";
