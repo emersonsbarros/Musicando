@@ -183,25 +183,25 @@
     mod1Aula2Exe2fala6.conteudo = @"Vamos aprender agora outro Pilar. O timbre é a capacidade que nos faz descobrir a origem de algum som, e está relacionado a forma das ondas do gráfico.";
     
     Fala *mod1Aula2Exe2fala7 = [[Fala alloc] init];
-    mod1Aula2Exe2fala7.conteudo = @"Toque nos pontos pretos acima e tente associá-los ao seu respectivos instrumento arrastando os Objetos para em cima do ponto";
+    mod1Aula2Exe2fala7.conteudo = @"Toque nos pontos pretos acima e tente associá-los ao seu respectivo instrumento, arrastando-os para em cima dos pontos.";
     
     Fala *mod1Aula2Exe2fala8 = [[Fala alloc] init];
-    mod1Aula2Exe2fala8.conteudo = @"Como eu tinha falado no comeco, o que faz diferenciar o timbre na frequência é o formato das ondas como você observa as imagens a cima";
+    mod1Aula2Exe2fala8.conteudo = @"Como eu havia falado no começo, o que faz diferenciar o timbre na frequência é o formato das ondas, como você observa nas imagens a cima.";
     
     Fala *mod1Aula2Exe2fala9 = [[Fala alloc] init];
-    mod1Aula2Exe2fala9.conteudo = @"Mais um pilar é importante falar, se o som aumentar alguem vai reclamar!, e é exatamente dessa rima que vem nosso outro carinha, a chamada Intensidade, ou melhor o Volume";
+    mod1Aula2Exe2fala9.conteudo = @"Mais um pilar é importante falar, se o som aumentar alguém vai reclamar! E é exatamente dessa rima que vem a chamada Intensidade, ou melhor o Volume.";
     
     Fala *mod1Aula2Exe2fala10 = [[Fala alloc] init];
-    mod1Aula2Exe2fala10.conteudo = @"Como observou a Intesidade é o volume do som, onde maior a intensidade, maior o volume do seu som, agora arraste um som descolado no TocaTreco e aumente a intesidade";
+    mod1Aula2Exe2fala10.conteudo = @"A Intesidade é o volume do som, sendo que quanto maior a intensidade, maior o volume do som. Arraste um som descolado no TocaTreco e aumente a intesidade.";
     
     Fala *mod1Aula2Exe2fala11 = [[Fala alloc] init];
-    mod1Aula2Exe2fala11.conteudo = @"A intensidade na frequência é representada pela amplitude que está desenhada no grafico acima, onde quando maior o seu comprimento, maior será o volume.";
+    mod1Aula2Exe2fala11.conteudo = @"A intensidade na frequência é representada pela amplitude que está desenhada no gráfico acima, quanto maior o seu comprimento, maior será o volume.";
     
     Fala *mod1Aula2Exe2fala12 = [[Fala alloc] init];
-    mod1Aula2Exe2fala12.conteudo = @"Por fim chegamos ao nosso ultimo pilar, a duracao que é nada mais que o tempo em que o som é feito";
+    mod1Aula2Exe2fala12.conteudo = @"Por fim chegamos ao nosso último pilar, a duração que é nada mais que o tempo em que o som é feito.";
     
     Fala *mod1Aula2Exe2fala13 = [[Fala alloc] init];
-    mod1Aula2Exe2fala13.conteudo = @"A animacao acima descreve bem como a duracao funciona, toque nos animais e veja a tartaruga fazendo um som mais longo e a lebre fazendo o som mais rapido, ambos possuem uma duracao mais com tempos diferentes!";
+    mod1Aula2Exe2fala13.conteudo = @"A animação acima descreve bem como a duração funciona. Toque nos animais, veja a tartaruga fazendo um som mais longo e a lebre fazendo o som mais rápido. Os dois possuem duração, mas com tempos diferentes!";
 
     
 //Conversa
@@ -582,7 +582,7 @@
     mod1Aula1Exe1fala3.conteudo = @"Toca nas teclas do Piano acima e veja que cada tecla corresponde a uma nota músical com uma frequência constante, com um som unico e sem alteracoes";
     
     Fala *mod1Aula1Exe1fala4 = [[Fala alloc] init];
-    mod1Aula1Exe1fala4.conteudo = @"Assim como o som, a nota tem a sua duracao, o seu timbre depedendo do intrumento, a intensidade do volume, e a altura que é quando o som é grave ou agudo!";
+    mod1Aula1Exe1fala4.conteudo = @"Assim como o som, a nota tem a sua duração, o seu timbre depedendo do intrumento, a intensidade do volume, e a altura que é quando o som é grave ou agudo!";
     
     Fala *mod1Aula1Exe1fala5 = [[Fala alloc] init];
     mod1Aula1Exe1fala5.conteudo = @"Para dividir essas notas com os 4 pilares aprendidos até agora, criaram escalas para ajudar na aprendizagem e evitar erros de interpretacao, onde podemos imaginalá como uma escada!";
@@ -729,7 +729,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
 //Falas do Mascote
     //Falas
     Fala *mod2Aula2Exe1fala1 = [[Fala alloc] init];
-    mod2Aula2Exe1fala1.conteudo = @"Agora falaremos sobre Pausas, elas são basicamente silencios que fazem por determinado tempo! Logo elas são diferentes de Sons ou Notas já que só possuem um pilar, a duracao!";
+    mod2Aula2Exe1fala1.conteudo = @"Agora falaremos sobre Pausas, elas são basicamente silencios que fazem por determinado tempo! Logo elas são diferentes de Sons ou Notas já que só possuem um pilar, a duração!";
     
     Fala *mod2Aula2Exe1fala2 = [[Fala alloc] init];
     mod2Aula2Exe1fala2.conteudo = @"A Pausa é um assunto bem simples mais de muita importancia, já que junto com as notas constroem um ritmo! Jogue as 2 músicas no TocaTreco e observe com pausa e sem pausa como ritmo fica";
@@ -1154,16 +1154,16 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     
 //Falas
     Fala *mod2Aula4Exe6fala1 = [[Fala alloc] init];
-    mod2Aula4Exe6fala1.conteudo = @"Lembra da nossa introducao sobre Pausas e que a pausa só possui um pilar que é a duracao, então agora é hora de dar nome aos Bois!";
+    mod2Aula4Exe6fala1.conteudo = @"Lembra da nossa introducao sobre Pausas e que a pausa só possui um pilar que é a duração, então agora é hora de dar nome aos Bois!";
     
     Fala *mod2Aula4Exe6fala2 = [[Fala alloc] init];
-    mod2Aula4Exe6fala2.conteudo = @"As pausas assim como as notas recebem um tipo de imagem que corresponde ao sua duracao, por exemplo a primeira que vemos é a de 4 tempos e depois a de 2";
+    mod2Aula4Exe6fala2.conteudo = @"As pausas assim como as notas recebem um tipo de imagem que corresponde ao sua duração, por exemplo a primeira que vemos é a de 4 tempos e depois a de 2";
     
     Fala *mod2Aula4Exe6fala3 = [[Fala alloc] init];
     mod2Aula4Exe6fala3.conteudo =  @"Só que nesse caso a diferenca não está entre as formas da imagem, mais sim no posicionamento no pentagrama, repare que a pausa de 2 tempos fica encostada na linha de baixo e a de 4 tempos na linha cima";
     
     Fala *mod2Aula4Exe6fala4 = [[Fala alloc] init];
-    mod2Aula4Exe6fala4.conteudo =  @"Uma maneira facil de lembrar a posicao certa de cada uma é que a de duracao mais alta fica a cima da de menor tempo, pois seu pilar duracao é maior!";
+    mod2Aula4Exe6fala4.conteudo =  @"Uma maneira facil de lembrar a posicao certa de cada uma é que a de duração mais alta fica a cima da de menor tempo, pois seu pilar duração é maior!";
 
     Fala *mod2Aula4Exe6fala5 = [[Fala alloc] init];
     mod2Aula4Exe6fala5.conteudo = @"Depois vem a imagem de 1 tempo que tem uma imagem unica, como se fosse um raio!";
@@ -1179,7 +1179,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     mod2Aula4Exe6fala8.conteudo = @"Por exemplo, se aparecer 2 pernas, você esta dividindo esse 0.5 tempo em 2, logo vira 1/4 ou 0.25 tempos, e assim sucessivamente";
     
     Fala *mod2Aula4Exe6fala9 = [[Fala alloc] init];
-    mod2Aula4Exe6fala9.conteudo = @"Lembrando que as Pausas sempre ficam no meio do Pentagrama, porque elas tem somente o pilar de duracao e não o de altura, assim não se preocupa com o nome da nota dentro da escala!";
+    mod2Aula4Exe6fala9.conteudo = @"Lembrando que as Pausas sempre ficam no meio do Pentagrama, porque elas tem somente o pilar de duração e não o de altura, assim não se preocupa com o nome da nota dentro da escala!";
     
     Fala *mod2Aula4Exe6fala10 = [[Fala alloc] init];
     mod2Aula4Exe6fala10.conteudo = @"Agora vamos treinar um pouco, ligue essas imagens de Pausa ao seu respectivo tempo!";
