@@ -141,7 +141,7 @@ NSString *UYLKeySpeechText = @"UYLKeySpeechText";
     //Velocidade
     [self selecionarAltura: 2]; //2 = High
     [self selecionarVelocidade: 1]; //1 = 0.5
-    [self selecionarLinguagem: 26];
+    [self selecionarLinguagem: 1];
     
 }
 
@@ -203,7 +203,7 @@ NSString *UYLKeySpeechText = @"UYLKeySpeechText";
         AVSpeechSynthesisVoice *voice = [AVSpeechSynthesisVoice voiceWithLanguage:self.selectedLanguage];
         _utterance = [[AVSpeechUtterance alloc] initWithString: texto];
         _utterance.voice = voice;
-        _utterance.volume = self.nivelVolume;
+        //_utterance.volume = self.nivelVolume;
     
         
         //Velocidade
