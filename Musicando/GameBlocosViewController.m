@@ -124,7 +124,7 @@
 -(void)chamaMetodosFala1{
     
     for(UIView *view in self.view.subviews){
-        if((view.tag == 1001)||(view.tag == 9999)){
+        if((view.tag == 1001)||(view.tag == 9999)||(view.tag == 500)){
         }else [view removeFromSuperview];
     }
     

@@ -15,7 +15,11 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bocaTocaTreco.png" translatesAutoresizingMaskIntoConstraints="NO" id="WRa-n6-14m">
+                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundoPapiro.png" translatesAutoresizingMaskIntoConstraints="NO" id="050-xR-cos">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" tag="500" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bocaTocaTreco.png" translatesAutoresizingMaskIntoConstraints="NO" id="WRa-n6-14m">
                     <rect key="frame" x="260" y="574" width="490" height="300"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
@@ -27,5 +31,6 @@
     </objects>
     <resources>
         <image name="bocaTocaTreco.png" width="619" height="284"/>
+        <image name="fundoPapiro.png" width="1651" height="975"/>
     </resources>
 </document>
