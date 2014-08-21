@@ -307,7 +307,7 @@
     mod1Aula3Exe2fala3.conteudo = @"Os batimentos cardíacos para seu bom funcionamento necessitam sempre estar coordenados com velocidade e tempo para que o fluxo seja bombeado e o movimento do coração seja executado constantemente. Isso também é ritmo, e através dele esse processo acontece!";
     
     Fala *mod1Aula3Exe2fala4 = [[Fala alloc] init];
-    mod1Aula3Exe2fala4.conteudo = @"Voltando ao ritmos ligamos à estilos músicais, realmente eles tem uma relação. Uns são mais rápidos como Rock, outros mais suaves como Clássico. Veja um exemplo de alguns deles...";
+    mod1Aula3Exe2fala4.conteudo = @"Voltando ao ritmos ligamos à estilos musicais, realmente eles tem uma relação. Uns são mais rápidos como Rock, outros mais suaves como Clássico. Veja um exemplo de alguns deles...";
     
     Fala *mod1Aula3Exe2fala5 = [[Fala alloc] init];
     mod1Aula3Exe2fala5.conteudo = @"Você já deve ter ouvido a música \"Parabéns pra você\" pelo menos uma dezena de vezes na vida, mas talvez nunca percebeu que ela pode ser apresentar de várias maneiras dependendo do ritmo. Duvida? Clique em cada um acima e veja a diferença.";
@@ -662,16 +662,16 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     //Falas
     
     Fala *mod2Aula1Exe3fala0 = [[Fala alloc] init];
-    mod2Aula1Exe3fala0.conteudo = @"Bem, agora vamos falar um poquinho sobre a historia das notas músicais, muitos tentaram chegar a um padrão mais somente no fim dos anos 1000 que chegaram ao que nós usamos hoje!";
+    mod2Aula1Exe3fala0.conteudo = @"Bem, agora vamos falar um pouco sobre a história das notas musicais. Muitos tentaram chegar a um padrão, mas somente no fim dos anos 1000 que chegou-se ao que nós usamos hoje!";
 
     Fala *mod2Aula1Exe3fala1 = [[Fala alloc] init];
-    mod2Aula1Exe3fala1.conteudo = @"A principio elas foram criadas por um Monge chamado Guido de Arezzo, que tirou de uma letra de música latim os nomes das notas em homenagem ao Santo João";
+    mod2Aula1Exe3fala1.conteudo = @"A princípio as notas foram criadas por um Monge chamado Guido de Arezzo, que tirou de uma letra de música em Latim os nomes em homenagem ao Santo João.";
     
     Fala *mod2Aula1Exe3fala2 = [[Fala alloc] init];
-    mod2Aula1Exe3fala2.conteudo = @"Ele percebeu que com a criacao de uma simples escala musical, facilitaria o aprendizado dos alunos e diminuia possiveis erros de interpretacoes de obras";
+    mod2Aula1Exe3fala2.conteudo = @"Ele percebeu que com a criação de uma simples escala musical, facilitaría o aprendizado dos alunos e diminuía possiveis erros de interpretações de obras.";
     
     Fala *mod2Aula1Exe3fala3 = [[Fala alloc] init];
-    mod2Aula1Exe3fala3.conteudo = @"porém só bem depois no seculo 17 foi revisto os nomes das notas e a nota Dó foi criada e colocada no lugar do Ut!";
+    mod2Aula1Exe3fala3.conteudo = @"Porém só bem depois no século XVII foi revisto os nomes das notas, e a nota DÓ foi criada e colocada no lugar do UT!";
     
     Fala *mod2Aula1Exe3fala4 = [[Fala alloc] init];
     mod2Aula1Exe3fala4.conteudo = @"Realmente as historias por parte da música me deixam muito curioso, ainda veremos mais ao longo da nossa Jornada!";
@@ -696,7 +696,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     //Falas do Mascote
     //Falas
     Fala *mod2Aula1Exe4fala1 = [[Fala alloc] init];
-    mod2Aula1Exe4fala1.conteudo = @"Já vimos até aqui quais são as sete notas músicais, mas quero ver se você aprendeu mesmo. Seu próximo objetivo é arremessar as notas com nome certo no TocaTreco e as erradas no chão. Qualquer erro pode ser fatal, vamos lá!";
+    mod2Aula1Exe4fala1.conteudo = @"Já vimos até aqui quais são as sete notas musicais, mas quero ver se você aprendeu mesmo. Seu próximo objetivo é arremessar as notas com nome certo no TocaTreco e as erradas no chão. Qualquer erro pode ser fatal, vamos lá!";
     
     
     //Conversa
@@ -729,19 +729,19 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
 //Falas do Mascote
     //Falas
     Fala *mod2Aula2Exe1fala1 = [[Fala alloc] init];
-    mod2Aula2Exe1fala1.conteudo = @"Agora falaremos sobre Pausas, elas são basicamente silencios que fazem por determinado tempo! Logo elas são diferentes de Sons ou Notas já que só possuem um pilar, a duração!";
+    mod2Aula2Exe1fala1.conteudo = @"Começando a falar sobre Pausas, elas são silêncios com determinada duração! Logo elas são diferentes de Sons ou Notas já que só possuem apenas um pilar: a duração.";
     
     Fala *mod2Aula2Exe1fala2 = [[Fala alloc] init];
-    mod2Aula2Exe1fala2.conteudo = @"A Pausa é um assunto bem simples mais de muita importancia, já que junto com as notas constroem um ritmo! Jogue as 2 músicas no TocaTreco e observe com pausa e sem pausa como ritmo fica";
+    mod2Aula2Exe1fala2.conteudo = @"A Pausa é um assunto bem simples, mas de muita importância, já que junto as notas constroem um Ritmo. Arraste as 2 músicas no TocaTreco e observe com a pausa e sem a pausa como ritmo fica.";
     
     Fala *mod2Aula2Exe1fala3 = [[Fala alloc] init];
-    mod2Aula2Exe1fala3.conteudo = @"Dentro do mundo da música as pausas podem se dividir em diversos tempos, ou seja o tempo de silencio que ela pode ter";
+    mod2Aula2Exe1fala3.conteudo = @"Dentro do mundo da música as pausas podem se dividir em diversos tempos, ou seja o tempo de silêncio que ela pode ter.";
     
     Fala *mod2Aula2Exe1fala4 = [[Fala alloc] init];
-    mod2Aula2Exe1fala4.conteudo = @"Agora toque nos pontos pretos e veja o que acontece, e depois associe ao 3 elementos: Pausa, Som, Nota!";
+    mod2Aula2Exe1fala4.conteudo = @"Toque nos pontos pretos e veja o que acontece. Depois associe aos 3 elementos: Pausa, Som e Nota.";
     
     Fala *mod2Aula2Exe1fala5 = [[Fala alloc] init];
-    mod2Aula2Exe1fala5.conteudo = @"Muito bem! Agora vamos aprofundar mais um pouco que daqui a pouco viram os Pentagramas!";
+    mod2Aula2Exe1fala5.conteudo = @"Muito bem! Agora vamos aprofundar um pouco mais, pois daqui a pouco virá o Pentagrama!";
     
     
 //Conversa
@@ -762,13 +762,13 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     
     //Falas
     Fala *mod2Aula2Exe2fala1 = [[Fala alloc] init];
-    mod2Aula2Exe2fala1.conteudo = @"Agora vamos exercitar o que aprendemos sobre pausas";
+    mod2Aula2Exe2fala1.conteudo = @"Vamos exercitar o que aprendemos sobre pausas?";
     
     Fala *mod2Aula2Exe2fala2 = [[Fala alloc] init];
     mod2Aula2Exe2fala2.conteudo = @"Estamos numa biblioteca, ambiente que precisa do máximo SILÊNCIO. Mas parece que nosso TocaTreco pifou e está fazendo o maior barulho...";
     
     Fala *mod2Aula2Exe2fala3 = [[Fala alloc] init];
-    mod2Aula2Exe2fala3.conteudo = @"Sua tarefa é arrastar as pausas para o TocaTreco até que ele pare ou antes da bibliotecária chegar. É melhor começar...";
+    mod2Aula2Exe2fala3.conteudo = @"Sua tarefa é arrastar as pausas para o TocaTreco até que ele pare ou antes da bibliotecária chegar. É melhor começar!";
     
     Fala *mod2Aula2Exe2fala4 = [[Fala alloc] init];
     mod2Aula2Exe2fala4.conteudo = @"Agora sim o silêncio permanece, graças a sua ajuda!";
@@ -802,10 +802,10 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     
 //Falas
     Fala *mod2Aula3Exe1fala1 = [[Fala alloc] init];
-    mod2Aula3Exe1fala1.conteudo = @"Já aprendemos o que são as notas, pausas e onde elas se encaixam. Mas afinal, onde escrevemos esses sinais? será que basta desenhá-los no papel e só? Vamos descobrir essas e outras repostas a seguir...";
+    mod2Aula3Exe1fala1.conteudo = @"Já aprendemos o que são as notas, pausas e onde elas se encaixam. Mas afinal, onde escrevemos esses sinais? Será que basta desenhá-los no papel e só? Vamos descobrir essas e outras repostas a seguir...";
     
     Fala *mod2Aula3Exe1fala2 = [[Fala alloc] init];
-    mod2Aula3Exe1fala2.conteudo = @"Existe um 'molde' para se organizar e ler todos os sinais que já aprendemos e que ainda vamos ver. É chamado de PAUTA ou PENTAGRAMA.";
+    mod2Aula3Exe1fala2.conteudo = @"Existe um \"molde\" para se organizar e ler todos os sinais que já aprendemos e que ainda vamos ver. É chamado de PAUTA ou PENTAGRAMA.";
     
     Fala *mod2Aula3Exe1fala3 = [[Fala alloc] init];
     mod2Aula3Exe1fala3.conteudo = @"O PENTAGRAMA é este conjunto de cinco linhas e quatro espaços, deitados horizontalmente. Daqui pra frente tudo relacionado a notação da música terá a presença dele.";
@@ -820,7 +820,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     mod2Aula3Exe1fala6.conteudo = @"Para sabermos qual é cada nota dependerá sempre da LINHA ou ESPAÇO que ocupar no PENTAGRAMA.";
     
     Fala *mod2Aula3Exe1fala7 = [[Fala alloc] init];
-    mod2Aula3Exe1fala7.conteudo = @"Vejamos este exemplo, há uma nota na segunda linha. Pra nós ela representará o SOL, arraste ao TocaTreco e veja seu som!";
+    mod2Aula3Exe1fala7.conteudo = @"Veja esse exemplo, há uma nota na segunda linha. Pra nós ela representará o SOL, arraste ao TocaTreco e veja seu som!";
     
     Fala *mod2Aula3Exe1fala8 = [[Fala alloc] init];
     mod2Aula3Exe1fala8.conteudo = @"Agora temos uma nota no terceiro espaço representando o LÁ. Arraste novamente e veja o som!";
@@ -855,7 +855,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     
 //Falas
     Fala *mod2Aula3Exe2fala1 = [[Fala alloc] init];
-    mod2Aula3Exe2fala1.conteudo = @"Agora vamos exercitar o que aprendemos sobre o pentagrama";
+    mod2Aula3Exe2fala1.conteudo = @"Vamos exercitar o que aprendemos sobre o pentagrama.";
     
     Fala *mod2Aula3Exe2fala2 = [[Fala alloc] init];
     mod2Aula3Exe2fala2.conteudo = @"Essa é a escada dos tons e infelizmente ela está apenas com o primeiro degrau.";
@@ -864,7 +864,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     mod2Aula3Exe2fala3.conteudo = @"Sua missão será reconstruir, arrastando cada nota para as linhas do pentagrama.";
     
     Fala *mod2Aula3Exe2fala4 = [[Fala alloc] init];
-    mod2Aula3Exe2fala4.conteudo = @"Finalmente minha 'outra' versão vai conseguir subir e tocar a escada de tons!";
+    mod2Aula3Exe2fala4.conteudo = @"Finalmente minha \"outra\" versão vai conseguir subir e tocar a escada de tons!";
     
     Fala *mod2Aula3Exe2fala5 = [[Fala alloc] init];
     mod2Aula3Exe2fala5.conteudo = @"Depois de ter aprendido um pouco sobre o pentagrama, que tal conhecermos melhor sua história?";
@@ -893,7 +893,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     mod2Aula3Exe3fala3.conteudo = @"A notação existente usada até então foi substituida por UMA linha, onde eram escritas as notas.";
     
     Fala *mod2Aula3Exe3fala4 = [[Fala alloc] init];
-    mod2Aula3Exe3fala4.conteudo = @"A quantidade de linhas foi variando até o século XVII...";
+    mod2Aula3Exe3fala4.conteudo = @"A quantidade de linhas foi variando até o século XVII.";
 
     Fala *mod2Aula3Exe3fala5 = [[Fala alloc] init];
     mod2Aula3Exe3fala5.conteudo = @"Até que o sistema se normalizou nas cinco linhas que são usadas atualmente.";
@@ -966,7 +966,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     mod2Aula4Exe1fala7.conteudo = @"Existem formas diferentes para representar cada tempo numa nota.";
     
     Fala *mod2Aula4Exe1fala8 = [[Fala alloc] init];
-    mod2Aula4Exe1fala8.conteudo = @"São chamados de valores ou figuras. Vamos ver cada um, começando pela nota de 4 tempos.";
+    mod2Aula4Exe1fala8.conteudo = @"São chamados de valores ou figuras. Começaremos pela nota de 4 tempos.";
     
     Fala *mod2Aula4Exe1fala9 = [[Fala alloc] init];
     mod2Aula4Exe1fala9.conteudo = @"Este círculo é a semibreve, quando ela aparece no pentagrama, significa que deve ser tocada por 4 tempos.";
@@ -1154,13 +1154,13 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     
 //Falas
     Fala *mod2Aula4Exe6fala1 = [[Fala alloc] init];
-    mod2Aula4Exe6fala1.conteudo = @"Lembra da nossa introducao sobre Pausas e que a pausa só possui um pilar que é a duração, então agora é hora de dar nome aos Bois!";
+    mod2Aula4Exe6fala1.conteudo = @"Lembra da nossa introdução sobre Pausas e que a pausa só possui um pilar que é a duração? Então agora é hora de \"dar nome aos bois\"!";
     
     Fala *mod2Aula4Exe6fala2 = [[Fala alloc] init];
-    mod2Aula4Exe6fala2.conteudo = @"As pausas assim como as notas recebem um tipo de imagem que corresponde ao sua duração, por exemplo a primeira que vemos é a de 4 tempos e depois a de 2";
+    mod2Aula4Exe6fala2.conteudo = @"As pausas assim como as notas recebem um tipo de imagem que corresponde a sua duração, por exemplo a primeira que vemos é a de 4 tempos e depois a de 2.";
     
     Fala *mod2Aula4Exe6fala3 = [[Fala alloc] init];
-    mod2Aula4Exe6fala3.conteudo =  @"Só que nesse caso a diferenca não está entre as formas da imagem, mais sim no posicionamento no pentagrama, repare que a pausa de 2 tempos fica encostada na linha de baixo e a de 4 tempos na linha cima";
+    mod2Aula4Exe6fala3.conteudo =  @"Só que nesse caso a diferença não está entre as formas da imagem, mais sim no posicionamento no pentagrama, repare que a pausa de 2 tempos fica encostada na linha de baixo e a de 4 tempos na linha cima";
     
     Fala *mod2Aula4Exe6fala4 = [[Fala alloc] init];
     mod2Aula4Exe6fala4.conteudo =  @"Uma maneira facil de lembrar a posicao certa de cada uma é que a de duração mais alta fica a cima da de menor tempo, pois seu pilar duração é maior!";
