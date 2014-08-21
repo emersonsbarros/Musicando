@@ -1163,29 +1163,29 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     mod2Aula4Exe6fala3.conteudo =  @"Só que nesse caso a diferença não está entre as formas da imagem, mais sim no posicionamento no pentagrama, repare que a pausa de 2 tempos fica encostada na linha de baixo e a de 4 tempos na linha cima";
     
     Fala *mod2Aula4Exe6fala4 = [[Fala alloc] init];
-    mod2Aula4Exe6fala4.conteudo =  @"Uma maneira facil de lembrar a posicao certa de cada uma é que a de duração mais alta fica a cima da de menor tempo, pois seu pilar duração é maior!";
+    mod2Aula4Exe6fala4.conteudo =  @"Uma maneira fácil de lembrar a posição certa de cada uma, é que a pausa de duração mais alta fica a cima da de menor tempo. Pois seu pilar duração é maior.";
 
     Fala *mod2Aula4Exe6fala5 = [[Fala alloc] init];
-    mod2Aula4Exe6fala5.conteudo = @"Depois vem a imagem de 1 tempo que tem uma imagem unica, como se fosse um raio!";
+    mod2Aula4Exe6fala5.conteudo = @"Depois vem a imagem de 1 tempo que tem uma imagem única, como se fosse um raio!";
     
     
     Fala *mod2Aula4Exe6fala6 = [[Fala alloc] init];
-    mod2Aula4Exe6fala6.conteudo = @"Depois vai se diminuindo os tempos e aparecendo novas imagens, onde segue essa ordem acima!";
+    mod2Aula4Exe6fala6.conteudo = @"Agora vai diminuindo os tempos e aparecendo novas imagens, onde segue essa ordem acima!";
     
     Fala *mod2Aula4Exe6fala7 = [[Fala alloc] init];
-    mod2Aula4Exe6fala7.conteudo = @"É interessante reparar que depois da nota de 1/2 tempo a imagem se mantem, porém vai se adicionando perninhas a imagem, onde a quantidade delas está relacionado ao quanto vc divide esse 0.5 tempo";
+    mod2Aula4Exe6fala7.conteudo = @"É interessante reparar que depois da nota de 1/2 tempo a imagem se mantém. Porém vai adicionamos \"traços\" ao lado da imagem e a quantidade delas está relacionado ao quanto voçê divide esse 1/2 tempo.";
     
     Fala *mod2Aula4Exe6fala8 = [[Fala alloc] init];
-    mod2Aula4Exe6fala8.conteudo = @"Por exemplo, se aparecer 2 pernas, você esta dividindo esse 0.5 tempo em 2, logo vira 1/4 ou 0.25 tempos, e assim sucessivamente";
+    mod2Aula4Exe6fala8.conteudo = @"Por exemplo, se aparecer 2 \"traços\" ao lado, você está dividindo esse 1/2 tempo em 2, logo vira 1/4 ou 0.25 e assim sucessivamente.";
     
     Fala *mod2Aula4Exe6fala9 = [[Fala alloc] init];
-    mod2Aula4Exe6fala9.conteudo = @"Lembrando que as Pausas sempre ficam no meio do Pentagrama, porque elas tem somente o pilar de duração e não o de altura, assim não se preocupa com o nome da nota dentro da escala!";
+    mod2Aula4Exe6fala9.conteudo = @"Lembrando que as Pausas sempre ficam no meio do Pentagrama, porque elas tem somente o pilar de duração e não o de altura. Assim não se preocupe com seu nome na da escala!";
     
     Fala *mod2Aula4Exe6fala10 = [[Fala alloc] init];
-    mod2Aula4Exe6fala10.conteudo = @"Agora vamos treinar um pouco, ligue essas imagens de Pausa ao seu respectivo tempo!";
+    mod2Aula4Exe6fala10.conteudo = @"Vamos treinar um pouco. Ligue essas imagens de Pausa ao seu respectivo tempo!";
     
     Fala *mod2Aula4Exe6fala11 = [[Fala alloc] init];
-    mod2Aula4Exe6fala11.conteudo = @"Muito bem! Agora que você já sabe a simbologia das notas em pausas logo você aprenderá o nome especifico dado para cada imagem dessa!";
+    mod2Aula4Exe6fala11.conteudo = @"Muito bem! Agora que você já sabe a simbologia das notas e pausas!";
     
     Conversa *mod2Aula4Exe6conversa1 = [[Conversa alloc] init];
     [[mod2Aula4Exe6conversa1 listaDeFalas] addObject: mod2Aula4Exe6fala1];
