@@ -114,7 +114,7 @@
     //Falas do Mascote
     //Falas
     Fala *mod1Aula1Exe1Jogofala1 = [[Fala alloc] init];
-    mod1Aula1Exe1Jogofala1.conteudo = @"A música é muito importante e sempre chega aos nosso ouvidos, agora ajude ao nosso Mascote Lálá a chegar ao maximo de casas possiveis, mais cuidado á fortes ventos atrapalhando, não deixe eles te pegarem!";
+    mod1Aula1Exe1Jogofala1.conteudo = @"A música é muito importante e nos dá uma boa sensação quando chega aos nosso ouvidos. Me ajude a chegar ao máximo de casas possíveis, mais cuidado existem fortes ventos atrapalhando. Não deixe eles nos pegarem!";
     
     
     //Conversa
@@ -231,7 +231,7 @@
     //Falas do Mascote
     //Falas
     Fala *mod1Aula2Exe1Jogofala1 = [[Fala alloc] init];
-    mod1Aula2Exe1Jogofala1.conteudo = @"O TocaTreco está louco para tocar, mais para isso você deve preparar algo no forno para ele, agora que você já sabe os pilares do som, mãos á massa e construa seu proprio som!";
+    mod1Aula2Exe1Jogofala1.conteudo = @"O TocaTreco está louco para tocar, mas para isso você deve preparar algo no forno para ele. Agora que você já sabe os pilares do SOM, mãos à massa e vamos construir seu proprio som!";
     
     
     //Conversa
@@ -696,7 +696,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     //Falas do Mascote
     //Falas
     Fala *mod2Aula1Exe4fala1 = [[Fala alloc] init];
-    mod2Aula1Exe4fala1.conteudo = @"Já vimos até aqui quais são as sete notas musicais, mas quero ver se você aprendeu mesmo. Seu próximo objetivo é arremessar as notas com nome certo no TocaTreco e as erradas no chão. Qualquer erro pode ser fatal, vamos lá!";
+    mod2Aula1Exe4fala1.conteudo = @"Já vimos até aqui quais são as sete notas musicais, mas quero ver se você aprendeu mesmo. Sua próximo missão é arremessar as notas com o nome certo no TocaTreco e as erradas no chão. Qualquer erro pode ser fatal, vamos lá!";
     
     
     //Conversa
@@ -915,7 +915,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     //Falas do Mascote
     //Falas
     Fala *mod2Aula3Exe4fala1 = [[Fala alloc] init];
-    mod2Aula3Exe4fala1.conteudo = @"Estou duvidando se você decorou mesmo as posições da notas no pentagrama. Meu desafio será que você arrume a escala a cada 20 segundos...";
+    mod2Aula3Exe4fala1.conteudo = @"Estou duvidando se você decorou mesmo as posições da notas no pentagrama. Te desafio a arrumar a escala a cada 20 segundos...";
     
     
     //Conversa
@@ -1237,7 +1237,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     
     //Falas
     Fala *mod2Aula4Exe7Jogofala1 = [[Fala alloc] init];
-    mod2Aula4Exe7Jogofala1.conteudo = @"Agora vamos testar seu conhecimento! Vou mostrar algumas notas e depois você terá que escolher o desenho de tempo na barra acima e sua respectiva linha no pentagrama ";
+    mod2Aula4Exe7Jogofala1.conteudo = @"Vamos testar seu conhecimento? Vou mostrar algumas notas, sua missão será escolher o desenho de TEMPO na barra acima e sua respectiva LINHA no pentagrama ";
     
     Fala *mod2Aula4Exe7Jogofala2 = [[Fala alloc] init];
     mod2Aula4Exe7Jogofala2.conteudo = @"----------";
@@ -1256,7 +1256,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     
     //Falas
     Fala *mod2Aula4Exe8Jogofala1 = [[Fala alloc] init];
-    mod2Aula4Exe8Jogofala1.conteudo = @"Já te mostrei todos os símbolos, sua missão agora é coletar apenas o que for pedido na tela. E se deixar passar, já era! ";
+    mod2Aula4Exe8Jogofala1.conteudo = @"Já te mostrei todos os símbolos, sua missão agora é coletar apenas o que for pedido na tela. E se deixar passar, já era...";
     
     
     //Conversa
