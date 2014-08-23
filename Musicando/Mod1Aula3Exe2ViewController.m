@@ -185,7 +185,7 @@
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Para som das batidas
-    [[self audioPlayer]stop];
+    [[EfeitoPlayer sharedManager]stopAudio];
     [[EfeitoImagem sharedManager]hiddenYesEmDegrade: self.imgBatidasDoCoracao];
     
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
@@ -208,7 +208,7 @@
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Para som das batidas
-    [[self audioPlayer]stop];
+    [[EfeitoPlayer sharedManager]stopAudio];
     
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
@@ -218,7 +218,7 @@
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Para som das batidas
-    [[self audioPlayer]stop];
+    [[EfeitoPlayer sharedManager]stopAudio];
     
     //Esconde botões de ritmo
     self.outBtoClassico.hidden = YES;
@@ -288,8 +288,8 @@
                      }];
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"coracaoBatendo" withExtension:@"mp3"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
     
 }
 
@@ -358,22 +358,22 @@
     [self animacaoAumentarBtoRitmo: self.outBtoClassico];
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"happybirthdayClassico" withExtension:@"mp3"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
 }
 
 - (IBAction)btoRock:(id)sender {
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"happybirthdayRock" withExtension:@"mp3"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
 }
 
 - (IBAction)btoSamba:(id)sender {
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"happybirthdaySamba" withExtension:@"mp3"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
 }
 
 - (IBAction)tempoVelocidade:(id)sender {

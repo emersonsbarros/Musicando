@@ -8,6 +8,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <SpriteKit/SpriteKit.h>
 #import "GameOverViewController.h"
+#import "EfeitoPlayer.h"
 
 //CONSTANSTES para colisão
 static const UInt32 nota = 0x1 << 0;
@@ -57,7 +58,6 @@ static const UInt32 fundo = 0x1 << 7;
 @property SKLabelNode *stringDeTempo;
 @property SKLabelNode *labelDeTempo;
 
-@property AVAudioPlayer *audioPlayer;
 
 //Auxiliares
 @property int estadoPauseJogo;

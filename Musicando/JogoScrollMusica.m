@@ -26,10 +26,9 @@
         self.physicsWorld.contactDelegate = self;
         self.physicsWorld.gravity = CGVectorMake(0,GRAVIDADEMUNDO );
         
+        
         NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"musicaJogoMusica" ofType:@"mp3"]];
-        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile error:nil];
-        self.audioPlayer.numberOfLoops = -1;
-        [self.audioPlayer play];
+        [[EfeitoPlayer sharedManager]playAudio:musicFile:-1];
         
         PBParallaxBackgroundDirection direction = kPBParallaxBackgroundDirectionLeft;
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
@@ -359,7 +358,7 @@
 -(void)gameOver{
     [[GameOverViewController sharedManager]gameOverParaUmaCena].view.hidden = NO;
     [self pausaJogo];
-    [self.audioPlayer stop];
+   [[EfeitoPlayer sharedManager]stopAudio];
 }
 
 -(void)didBeginContact:(SKPhysicsContact *)contact {

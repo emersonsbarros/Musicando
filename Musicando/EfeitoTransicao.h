@@ -11,6 +11,7 @@
 #import "Biblioteca.h"
 #import "TransicaoExercicioViewController.h"
 #import "BarraSuperiorViewController.h"
+#import "EfeitoPlayer.h"
 
 @interface EfeitoTransicao : NSObject
 

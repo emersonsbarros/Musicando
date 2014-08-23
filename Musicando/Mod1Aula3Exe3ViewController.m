@@ -230,7 +230,7 @@
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Para som
-    [[self audioPlayer]stop];
+    [[EfeitoPlayer sharedManager]stopAudio];
     
     [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
@@ -240,7 +240,7 @@
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Para som
-    [[self audioPlayer]stop];
+    [[EfeitoPlayer sharedManager]stopAudio];
     
     //Mostra views do teste
     self.outTocaTreco1.hidden = YES;
@@ -266,7 +266,7 @@
     //Esconde o teste e para som
     [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.alternativaCorreta];
     self.viewDeExercitar.hidden = YES;
-    [[self audioPlayer]stop];
+    [[EfeitoPlayer sharedManager]stopAudio];
     
     [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
@@ -303,7 +303,8 @@
         self.imgNota4.hidden = NO;
         
         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"escalaPiano3AOitava" withExtension:@"wav"];
-        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+        [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+       
         
     }else if(self.outTocaTreco2.tag == 100){
         NSLog(@"Primeiro tocatreco");
@@ -321,7 +322,7 @@
         
         
         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"harmoniaPiano" withExtension:@"wav"];
-        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+        [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
     }
     
 
@@ -339,7 +340,7 @@
                          
                      } completion:^(BOOL finished){
                          
-                         [[self audioPlayer]play];
+                          [[EfeitoPlayer sharedManager]playAudios];
                          
                      }];
     
@@ -365,8 +366,8 @@
     NSLog(@"Violão acionado");
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"acordesViolao" withExtension:@"wav"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
 
 }
 
@@ -387,16 +388,16 @@
 
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"escalaFlauta" withExtension:@"wav"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
 }
 
 - (IBAction)piano:(id)sender {
     NSLog(@"Piano acionado");
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"escalaPiano3AOitava" withExtension:@"wav"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
 
 }
 @end

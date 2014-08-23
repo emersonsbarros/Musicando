@@ -191,7 +191,7 @@
 -(void)chamaMetodosFala4 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
-    [[self audioPlayer] stop];
+    [[EfeitoPlayer sharedManager] stopAudio];
     
     self.escadaDeTons.hidden = YES;
     self.mascote2.hidden = YES;

@@ -23,6 +23,18 @@
     return self;
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
+
+-(void)viewDidDisappear:(BOOL)animated {
+    
+    [super viewDidDisappear: animated];
+    [[EfeitoTransicao sharedManager]finalizaExercicio:self];
+    
+}
+
 - (void)viewDidLoad{
     [super viewDidLoad];
     

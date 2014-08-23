@@ -253,8 +253,8 @@
             [self.listaLiberaFala addObject:self.estadoAux1];
             
             self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"panela" withExtension:@"mp3"];
-            self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-            [[self audioPlayer]play];
+            [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+            [[EfeitoPlayer sharedManager]playAudios];
             
             [theTimer invalidate];
         }
@@ -396,8 +396,8 @@
                      }
                      completion:^(BOOL finished){
                          self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"barulhoBasePilar" withExtension:@"wav"];
-                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-                         [[self audioPlayer]play];
+                         [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+                         [[EfeitoPlayer sharedManager]playAudios];
                          [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
                      }];
 
@@ -414,8 +414,8 @@
                      }
                      completion:^(BOOL finished){
                          self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"barulhoPilarCaindo" withExtension:@"mp3"];
-                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-                         [[self audioPlayer]play];
+                         [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+                         [[EfeitoPlayer sharedManager]playAudios];
                      }];
 
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:6.0f:self.viewGesturePassaFala];
@@ -458,7 +458,7 @@
 -(void)chamaMetodosFala2{
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
-    [[self audioPlayer]stop];
+    [[EfeitoPlayer sharedManager]stopAudio];
     
     [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgTocaTreco];
     [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgNotaSemPausa];
@@ -488,9 +488,8 @@
                      completion:^(BOOL finished){
                          self.imgNotaMusicalCaindo.frame = posOriginal;
                          self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"panela" withExtension:@"mp3"];
-                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-                         
-                         [[self audioPlayer]play];
+                         [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+                         [[EfeitoPlayer sharedManager]playAudios];
                          
                      }];
 }

@@ -37,9 +37,9 @@
         [self carregarPrimeirosComponentes];
         activeDragNode = nil;
         
-        NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"bensound-enigmatic" ofType:@"mp3"]];
-        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile error:nil];
-        self.audioPlayer.numberOfLoops = -1;
+        NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"musicaJogoMusica" ofType:@"mp3"]];
+        [[EfeitoPlayer sharedManager]playAudio:musicFile:-1];
+      
     }
     
     return self;
@@ -48,7 +48,7 @@
 -(void)gameOver{
     [[GameOverViewController sharedManager]gameOverParaUmaCena].view.hidden = NO;
     [self pausaJogo];
-    [self.audioPlayer stop];
+    [[EfeitoPlayer sharedManager]stopAudio];
 }
 
 -(void)pausaJogo{
@@ -171,7 +171,8 @@
     
 //START
     if ([checkNode.name isEqualToString: @"start"]) {
-        if (![self.audioPlayer isPlaying]) [self.audioPlayer play];
+        if (![[EfeitoPlayer sharedManager].somExercicioPlayer isPlaying])[[EfeitoPlayer sharedManager]playAudios];
+    
         
         self.tempoPercorrido = 20;
         checkNode.name = @"check";

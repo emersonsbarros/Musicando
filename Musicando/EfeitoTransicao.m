@@ -62,6 +62,9 @@
 
 //Remove todas animacoes do ViewController
 -(void)finalizaExercicio:(UIViewController*)contr{
+    
+    [[EfeitoPlayer sharedManager]stopAudio];
+    
     for(UIView *img in contr.view.subviews){
         img.alpha = 1;
         [img.layer removeAllAnimations];
@@ -77,6 +80,7 @@
     [contr removeFromParentViewController];
     [contr didMoveToParentViewController:nil];
      contr = nil;
+   
 }
 
 -(void)chamaOProximoExercicio:(UIViewController*)viewAntiga :(NSString*)nomeDaViewAtual{

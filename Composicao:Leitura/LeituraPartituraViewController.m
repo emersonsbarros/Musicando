@@ -102,9 +102,7 @@
 
 
 - (void) viewDidLoad{
-    
-    self.scroll.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"fundoPapiro.png"]];
-    
+        
     [Sinfonia sharedManager].contadorScrollDesloca = 500;
     [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(atualizaBarraScroll) userInfo:nil repeats:YES];
     

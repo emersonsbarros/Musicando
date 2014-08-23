@@ -78,6 +78,5 @@
 
 @property (weak, nonatomic) IBOutlet UIView *viewJogo;
 
-@property AVAudioPlayer *audioPlayer;
 
 @end

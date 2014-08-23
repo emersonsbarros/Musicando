@@ -33,16 +33,21 @@
     return self;
 }
 
+
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }
+
 
 -(void)viewDidDisappear:(BOOL)animated{
     [[Sinfonia sharedManager]pararPlayerPartitura];
 }
 
--(NSMutableArray*)retornaListaNotasEdicao{
-    return self.listaNotasEdicao;
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 
@@ -638,6 +643,7 @@
     
 }
 
+
 -(Nota*)retornaPosicaoNotaEdicao:(float)posx :(float)posy{
     
     Nota *aux;
@@ -798,7 +804,7 @@
         [self.listaNotasEdicao addObject:not];
         listaSons = [[NSMutableArray alloc]init];
         [listaSons addObject:not];
-        [[Sinfonia sharedManager]tocarUmaNota:listaSons:@"Piano"];
+        [[Sinfonia sharedManager]tocarUmaNota:listaSons:nomeInstrumento];
         [[self scrollEdicao] setContentSize:CGSizeMake((self.scrollEdicao.bounds.size.width+posicaoX)-700, self.scrollEdicao.bounds.size.height)];
         
         if(self.listaNotasEdicao.count > 5){
@@ -814,10 +820,10 @@
 
 
 -(void)atualizaPosicaoTocando{
-  
+    
     Nota *notaAtual = [self.listaNotasEdicao objectAtIndex:self.contadorIndiceNota];
     self.posNotaTocando = notaAtual.imagemNota.frame.origin.x;
-
+    
     
     NSString *tempoNota = notaAtual.tipoNota;
     float tempo = 0.0;
@@ -838,8 +844,8 @@
         tempo = whole;
     }else{
     }
-
-
+    
+    
     if(self.listaNotasEdicao.count-1 != self.contadorIndiceNota){
         CGPoint bottomOffset = CGPointMake((self.posNotaTocando-350),0);
         [[self scrollEdicao] setContentOffset:bottomOffset animated:YES];
@@ -851,8 +857,10 @@
                                        userInfo: nil
                                         repeats: NO];
     }
-
+    
 }
+
+
 
 - (IBAction)tocarTodasNoras:(id)sender {
     
@@ -862,8 +870,9 @@
     self.posOriginalScroll = self.scrollEdicao.contentOffset;
     if(self.listaNotasEdicao.count != 0)[self atualizaPosicaoTocando];
     
-    if([self.listaNotasEdicao lastObject] != NULL)[[Sinfonia sharedManager]tocarTodasNotasEdicao:self.listaNotasEdicao:@"Piano"];
+    if([self.listaNotasEdicao lastObject] != NULL)[[Sinfonia sharedManager]tocarTodasNotasEdicao:self.listaNotasEdicao:nomeInstrumento];
 }
+
 
 - (IBAction)limparNotasPartituraEdicao:(id)sender {
     
@@ -885,7 +894,7 @@
         
         self.listaNotasEdicao = [[NSMutableArray alloc]init];
         [[Sinfonia sharedManager]pararPlayerPartitura];
-
+        
         CGPoint bottomOffset = CGPointMake(0,0);
         [[self scrollEdicao] setContentOffset:bottomOffset animated:YES];
         posicaoX = 150;
@@ -981,13 +990,14 @@
     
     [notaSegura.imagemNota addGestureRecognizer:swipeGesture2];
     
-    
 }
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    nomeInstrumento = @"Piano";
     
     self.listaNotasEdicao = [[NSMutableArray alloc]init];
     
@@ -995,7 +1005,7 @@
     self.scrollEdicao.delegate = self;
     
     nota = [[DataBaseNotaPadrao sharedManager]retornaNotaPadrao:@"seminima"];
-
+    
     
     for (UIImageView *t in [DesenhaPartitura sharedManager].listaImagensTracoPentagrama) {
         [[self scrollEdicao]addSubview:t];
@@ -1009,13 +1019,23 @@
     
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+///////////////////////// Botao Instrumento /////////////////////////
+
+- (IBAction)btnViolao:(id)sender {
+    nomeInstrumento = @"natural";
 }
 
-///////////////////////// NOTA /////////////////////////
+- (IBAction)btnFlauta:(id)sender {
+    nomeInstrumento = @"FlautaDoce";
+}
+
+- (IBAction)btnPiano:(id)sender {
+    nomeInstrumento = @"Piano";
+}
+
+
+///////////////////////// Botao NOTA /////////////////////////
 
 - (IBAction)semibreveBotao:(id)sender {
     nota = [[DataBaseNotaPadrao sharedManager]retornaNotaPadrao:@"semibreve"];

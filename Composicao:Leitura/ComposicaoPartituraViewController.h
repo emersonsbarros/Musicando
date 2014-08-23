@@ -21,8 +21,10 @@
     int limiteDeNotas;
     NSMutableArray *listaSons;
     Nota *notaParaEdicao;
+    NSString *nomeInstrumento;
     
 }
+
 
 - (IBAction)tocarTodasNoras:(id)sender;
 - (IBAction)limparNotasPartituraEdicao:(id)sender;

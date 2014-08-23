@@ -344,8 +344,11 @@
                      }
                      completion:^(BOOL finished){
                          self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"barulhoBasePilar" withExtension:@"wav"];
-                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-                         [[self audioPlayer]play];
+                         
+                         [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+                         [[EfeitoPlayer sharedManager]playAudios];
+                        
+
                          [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
                      }];
     
@@ -362,8 +365,8 @@
                      }
                      completion:^(BOOL finished){
                          self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"barulhoPilarCaindo" withExtension:@"mp3"];
-                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-                         [[self audioPlayer]play];
+                         [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+                         [[EfeitoPlayer sharedManager]playAudios];
                      }];
     
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];

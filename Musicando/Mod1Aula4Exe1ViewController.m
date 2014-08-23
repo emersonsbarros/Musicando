@@ -194,7 +194,7 @@
 -(void)chamaMetodosFala4 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
 
-    [[self audioPlayer]stop];
+    [[EfeitoPlayer sharedManager]stopAudio];
     self.tocaTreco.hidden = YES;
     self.melodia.hidden = YES;
     self.ritmo.hidden = YES;
@@ -285,9 +285,8 @@
 
 - (void)acaoColisaoMelodia{
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"notasPausas" withExtension:@"mp3"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
     self.lblSaidaTocaTreco.text = @"Melodia";
 }
 
@@ -309,9 +308,8 @@
 
 - (void)acaoColisaoRitmo{
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"happybirthdaySamba" withExtension:@"mp3"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
     self.lblSaidaTocaTreco.text = @"Ritmo";
 
 }
@@ -334,9 +332,8 @@
 
 - (void)acaoColisaoHarmonia{
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"happibirthdayClassico" withExtension:@"mp3"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
     self.lblSaidaTocaTreco.text = @"Harmonia";
 }
 

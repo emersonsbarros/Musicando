@@ -8,6 +8,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <SpriteKit/SpriteKit.h>
 #import "GameOverViewController.h"
+#import "EfeitoPlayer.h"
 
 //Constantes para colisão
 static const UInt32 blocoNotaCorreta = 0x1 << 0;
@@ -52,7 +53,6 @@ static const UInt32 coluna = 0x1 << 4;
 @property SKLabelNode *stringDePontuacao;
 @property SKLabelNode *labelDePontuacao;
 
-@property AVAudioPlayer *audioPlayer;
 
 //Auxiliares
 @property int pontuacaoJogadorAtual;

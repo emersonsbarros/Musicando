@@ -141,9 +141,8 @@
     //Mostra troca treco + fumaça pra sensação de estar quebrado
     self.tocaTreco.hidden = NO;
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"instrumentos" withExtension:@"mp3"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
     
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
@@ -187,7 +186,7 @@
 -(void)chamaMetodosFala3 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
-    [[self audioPlayer] stop];
+    [[EfeitoPlayer sharedManager] stopAudio];
     
     //Esconde
     self.imgPausa1.hidden = YES;

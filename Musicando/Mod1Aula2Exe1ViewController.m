@@ -89,8 +89,8 @@
         [self.listaLiberaFala addObject:self.estadoAux1];
         
         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"panela" withExtension:@"mp3"];
-        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-        [[self audioPlayer]play];
+        [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+        [[EfeitoPlayer sharedManager]playAudios];
 
         
     }else{
@@ -288,8 +288,8 @@
                      }
                      completion:^(BOOL finished){
                          self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"barulhoPilarCaindo" withExtension:@"mp3"];
-                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-                         [[self audioPlayer]play];
+                         [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+                         [[EfeitoPlayer sharedManager]playAudios];
                      }];
     
     [UIView animateWithDuration:2.0
@@ -305,8 +305,8 @@
                      }
                      completion:^(BOOL finished){
                          self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"barulhoPilarCaindo" withExtension:@"mp3"];
-                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-                         [[self audioPlayer]play];
+                         [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+                         [[EfeitoPlayer sharedManager]playAudios];
                      }];
     
     [UIView animateWithDuration:2.0
@@ -322,8 +322,8 @@
                      }
                      completion:^(BOOL finished){
                          self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"barulhoPilarCaindo" withExtension:@"mp3"];
-                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-                         [[self audioPlayer]play];
+                         [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+                         [[EfeitoPlayer sharedManager]playAudios];
                      }];
     
     [UIView animateWithDuration:2.0
@@ -339,8 +339,8 @@
                      }
                      completion:^(BOOL finished){
                          self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"barulhoPilarCaindo" withExtension:@"mp3"];
-                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-                         [[self audioPlayer]play];
+                         [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+                         [[EfeitoPlayer sharedManager]playAudios];
                      }];    
     
     [UIView animateWithDuration:3.0
@@ -357,8 +357,8 @@
                      }
                      completion:^(BOOL finished){
                          self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"barulhoBasePilar" withExtension:@"wav"];
-                         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-                         [[self audioPlayer]play];
+                         [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+                         [[EfeitoPlayer sharedManager]playAudios];
                          [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
                      }];
     

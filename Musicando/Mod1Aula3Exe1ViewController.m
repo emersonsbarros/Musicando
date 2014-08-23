@@ -210,7 +210,7 @@
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Para a música
-    [[self audioPlayer]stop];
+    [[EfeitoPlayer sharedManager]stopAudio];
     
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
@@ -249,7 +249,7 @@
     //Remove animação da vitrola
     [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.alternativaCorreta];
     self.viewDeExercitar.hidden = YES;
-    [[self audioPlayer]stop];
+    [[EfeitoPlayer sharedManager]stopAudio];
     
     [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:3.0f:self.viewGesturePassaFala];
 }
@@ -282,7 +282,8 @@
     
     //Para teste
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"notasPausas" withExtension:@"mp3"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+
     
     [UIView animateWithDuration:2.0
                      animations:^(void){
@@ -291,7 +292,7 @@
                          self.imgBlocoDo.frame = CGRectMake(800, self.imgBlocoDo.frame.origin.y, self.imgBlocoDo.frame.size.width, self.imgBlocoDo.frame.size.height);
                          self.imgBlocoPausa.frame = CGRectMake(750, self.imgBlocoPausa.frame.origin.y, self.imgBlocoPausa.frame.size.width, self.imgBlocoPausa.frame.size.height);
                      } completion:^(BOOL finished){
-                         [[self audioPlayer]play];
+                        [[EfeitoPlayer sharedManager]playAudios];
                          self.imgBlocoDo.hidden = YES;
                          self.imgBlocoPausa.hidden = YES;
                      }];
@@ -323,16 +324,16 @@
     NSLog(@"Instrumentos");
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"instrumentos" withExtension:@"mp3"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
 }
 
 - (IBAction)coral:(id)sender {
     NSLog(@"Coral");
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"coral" withExtension:@"mp3"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
 }
 
 - (IBAction)notasPausas:(id)sender {
@@ -352,9 +353,9 @@
 
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"notasPausas" withExtension:@"mp3"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    [[self audioPlayer]play];
-\
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
+
 }
 
 

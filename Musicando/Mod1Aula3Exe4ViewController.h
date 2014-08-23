@@ -43,7 +43,6 @@
 /*===========================ATRIBUTOS=============================*/
 
 //Audio
-@property AVAudioPlayer *audioPlayer;
 @property NSURL *caminhoDoAudio;
 
 //Lista de imagens que precisam de colisao

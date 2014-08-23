@@ -36,10 +36,9 @@
         [self carregarPrimeirosComponentes];
         [self sortearNota];
         
-        NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"bensound-badass" ofType:@"mp3"]];
-        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile error:nil];
-        self.audioPlayer.numberOfLoops = -1;
-        [self.audioPlayer play];
+       
+        NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"musicaJogoMusica" ofType:@"mp3"]];
+        [[EfeitoPlayer sharedManager]playAudio:musicFile:-1];
     }
     
     return self;
@@ -48,7 +47,7 @@
 -(void)gameOver{
     [[GameOverViewController sharedManager]gameOverParaUmaCena].view.hidden = NO;
     [self pausaJogo];
-    [self.audioPlayer stop];
+    [[EfeitoPlayer sharedManager]stopAudio];
 }
 
 -(void)pausaJogo{

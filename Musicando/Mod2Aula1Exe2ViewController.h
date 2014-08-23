@@ -47,7 +47,6 @@
 
 
 //Atributos para tocar audio
-@property AVAudioPlayer *audioPlayer;
 @property NSURL *caminhoDoAudio;
 
 

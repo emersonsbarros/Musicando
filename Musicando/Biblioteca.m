@@ -109,19 +109,21 @@
     
 ////////////////////////////// JOGO 1 ////////////////////////////////////
     
-    Exercicio *mod1Aula1Exe1Jogo = [[Exercicio alloc] init:101 nome:@"Jogo música" nomeView:@"JogoScrollmusicalViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    Exercicio *mod1Aula1Exe1Jogo = [[Exercicio alloc] init:101 nome:@"Jogo música" nomeView:@"JogoScrollMusicalViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"exercicios.png"]];
+    
     
     //Falas do Mascote
-    //Falas
     Fala *mod1Aula1Exe1Jogofala1 = [[Fala alloc] init];
     mod1Aula1Exe1Jogofala1.conteudo = @"A música é muito importante e sempre chega aos nosso ouvidos, agora ajude ao nosso Mascote Lálá a chegar ao maximo de casas possiveis, mais cuidado á fortes ventos atrapalhando, não deixe eles te pegarem!";
+    
+    Fala *mod1Aula1Exe1Jogofala2 = [[Fala alloc] init];
+    mod1Aula1Exe1Jogofala2.conteudo = @"";
     
     
     //Conversa
     Conversa *mod1Aula1Exe1Jogoconversa1 = [[Conversa alloc] init];
     [[mod1Aula1Exe1Jogoconversa1 listaDeFalas] addObject: mod1Aula1Exe1Jogofala1];
-    [[mod1Aula1Exe1Jogoconversa1 listaDeFalas] addObject: mod1Aula1Exe1Jogofala1];
-    
+    [[mod1Aula1Exe1Jogoconversa1 listaDeFalas] addObject: mod1Aula1Exe1Jogofala2];
     [[[mod1Aula1Exe1Jogo mascote] listaDeConversas] addObject:mod1Aula1Exe1Jogoconversa1];
     
 //Aula de musicalização

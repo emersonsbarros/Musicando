@@ -191,7 +191,7 @@
 -(void)chamaMetodosFala4 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
-    [[self audioPlayer]stop];
+    [[EfeitoPlayer sharedManager]stopAudio];
     self.harmonia.hidden = YES;
     self.melodia.hidden = YES;
     
@@ -235,7 +235,7 @@
 -(void)chamaMetodosFala7 {
     [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
-    [[self audioPlayer]stop];
+    [[EfeitoPlayer sharedManager]stopAudio];
     self.tocaTreco.hidden = YES;
     self.piano.hidden = YES;
     self.teclado.hidden = YES;
@@ -271,9 +271,8 @@
 
 - (void)acaoColisaoHarmonia{
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"acordesViolao" withExtension:@"wav"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
 }
 
 -(void) checkColisaoMelodia:(NSTimer *) theTimer{
@@ -294,9 +293,8 @@
 
 - (void)acaoColisaoMelodia{
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"escalaFlauta" withExtension:@"wav"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
 }
 
 
@@ -318,9 +316,8 @@
 
 - (void)acaoColisaoTeclado{
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"tecladoEletrico" withExtension:@"wav"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
 }
 
 -(void) checkColisaoPiano:(NSTimer *) theTimer{
@@ -341,9 +338,8 @@
 
 - (void)acaoColisaoPiano{
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"escalaPiano3AOitava" withExtension:@"wav"];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    
-    [[self audioPlayer]play];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
 }
 
 

@@ -15,14 +15,19 @@
 +(EfeitoPlayer*)sharedManager;
 
 
-@property AVAudioPlayer *audioPlayer;
+@property AVAudioPlayer *somExercicioPlayer;
 @property AVAudioPlayer *backGroundPrincipalPlayer;
-@property AVAudioPlayer *backGroundExercicioPlayer;
+
 
 @property NSURL *caminhoDoAudio;
 
 -(void)playAudio:(NSURL*)audio;
 -(void)stopAudio;
 -(void)ajustaVolume:(float)valor;
+-(void)playAudio:(NSURL*)audio :(int)qtdRepeticoes;
+-(void)playAudio:(NSURL*)audio :(int)qtdRepeticoes :(float)volume;
+-(void)mudaVolume:(float)volume;
+-(void)playAudios;
+-(void)initPlayer:(NSURL*)audio;
 
 @end

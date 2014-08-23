@@ -84,10 +84,8 @@
         }else [view removeFromSuperview];
     }
     
-    NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"musicaJogoBlocos" ofType:@"mp3"]];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile error:nil];
-    self.audioPlayer.numberOfLoops = -1;
-    [self.audioPlayer play];
+    NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"musicaJogoMusica" ofType:@"mp3"]];
+    [[EfeitoPlayer sharedManager]playAudio:musicFile:-1];
     
     self.viewJogo.hidden = NO;
     [self chamaJogo];
@@ -156,7 +154,7 @@
     }else{
         [tempo invalidate];
         [[GameOverViewController sharedManager]addBarraSuperioAoXib:self :[Biblioteca sharedManager].exercicioAtual];
-        [self.audioPlayer stop];
+        [[EfeitoPlayer sharedManager]stopAudio];
     }
 }
 
@@ -432,7 +430,7 @@
        ([self.nomeTimbre isEqualToString:self.usuarioTimbre])){
         self.contadorBlocos +=1;
     }else{
-        [self.audioPlayer stop];
+        [[EfeitoPlayer sharedManager]stopAudio];
         [[GameOverViewController sharedManager]addBarraSuperioAoXib:self :[Biblioteca sharedManager].exercicioAtual];
         self.contadorBlocos = 0;
     }
