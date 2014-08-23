@@ -107,6 +107,7 @@
 		2BA153B619A3AA37000E4D3F /* botaoSalvar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA153B119A3AA37000E4D3F /* botaoSalvar.png */; };
 		2BA153B719A3AA37000E4D3F /* pausa2Tempos.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA153B219A3AA37000E4D3F /* pausa2Tempos.png */; };
 		2BA153B819A3AA37000E4D3F /* pausa4Tempos.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA153B319A3AA37000E4D3F /* pausa4Tempos.png */; };
+		2BCE35EF19A909A000AC1660 /* fundoPrata.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BCE35EE19A909A000AC1660 /* fundoPrata.jpg */; };
 		3F03108F1999D8F500570B8A /* EfeitoComponeteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F03108E1999D8F500570B8A /* EfeitoComponeteView.m */; };
 		3F135895199EFE0400873CD4 /* casaMusica.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F135894199EFE0400873CD4 /* casaMusica.png */; };
 		3F2EA5E019A02DCD00972B81 /* botaoMaquina.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F2EA5DF19A02DCD00972B81 /* botaoMaquina.png */; };
@@ -664,6 +665,7 @@
 		2BA153B119A3AA37000E4D3F /* botaoSalvar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaoSalvar.png; sourceTree = "<group>"; };
 		2BA153B219A3AA37000E4D3F /* pausa2Tempos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pausa2Tempos.png; sourceTree = "<group>"; };
 		2BA153B319A3AA37000E4D3F /* pausa4Tempos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pausa4Tempos.png; sourceTree = "<group>"; };
+		2BCE35EE19A909A000AC1660 /* fundoPrata.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fundoPrata.jpg; sourceTree = "<group>"; };
 		3F03108D1999D8F500570B8A /* EfeitoComponeteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EfeitoComponeteView.h; sourceTree = "<group>"; };
 		3F03108E1999D8F500570B8A /* EfeitoComponeteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EfeitoComponeteView.m; sourceTree = "<group>"; };
 		3F135894199EFE0400873CD4 /* casaMusica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = casaMusica.png; sourceTree = "<group>"; };
@@ -1891,6 +1893,7 @@
 		A848541E1994119600C5F0A3 /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				2BCE35EE19A909A000AC1660 /* fundoPrata.jpg */,
 				0BA27C6319A293A600D21948 /* papelAntigo.jpg */,
 				0BA27C5519A2938A00D21948 /* Do.png */,
 				0BA27C5619A2938A00D21948 /* Fa.png */,
@@ -2471,6 +2474,7 @@
 				A84855471994119600C5F0A3 /* teclaPiano.png in Resources */,
 				3F608DA2196C7585001979E9 /* Beethoven-Fur Elise.xml in Resources */,
 				2BA153A819A3A228000E4D3F /* pausa1-2Tempo.png in Resources */,
+				2BCE35EF19A909A000AC1660 /* fundoPrata.jpg in Resources */,
 				A84854E51994119600C5F0A3 /* escadaModulo.png in Resources */,
 				3F608D7B196C7585001979E9 /* linha.jpg in Resources */,
 				A84855951994137D00C5F0A3 /* do3C.wav in Resources */,
