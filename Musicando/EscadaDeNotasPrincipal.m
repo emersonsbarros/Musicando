@@ -31,6 +31,7 @@
         self.listaDeNotasComPosicoes = [[NSMutableArray alloc] init];
         self.listaDeNotas = [[NSArray alloc] initWithObjects: @"Do", @"Re", @"Mi", @"Fa", @"Sol", @"La", @"Si", nil];
         self.indiceNotaSorteada = 0;
+        self.ultimaQuantidadeSorteada = 0;
         [self sortearQuantidadeDeNotas];
         
         //Inicia primeiros nós
@@ -110,13 +111,14 @@
                     self.tempoPercorrido -=1;
                     self.labelDeTempo.text = [NSString stringWithFormat: @"%d", self.tempoPercorrido];
                     self.auxTempoPercorrido = 0;
-                    if(self.tempoPercorrido == 0) self.tempoEncerrado = YES;
-                    
                 }
+                
+                if(self.tempoPercorrido == 0){
+                    self.tempoEncerrado = YES;
+                }
+                
             }
-            
             self.auxTempoPercorrido = 0;
-
         }
     }
     
@@ -152,7 +154,7 @@
     SKNode* checkNode = [self nodeAtPoint: scenePosition];
     
 //ATIVA MOVIMENTO NO NÓ DE NOTA
-    if (checkNode && ([checkNode.name isEqual:@"Do"] || [checkNode.name isEqual:@"Re"] || [checkNode.name isEqual:@"Mi"] || [checkNode.name isEqual:@"Fa"] || [checkNode.name isEqual:@"Sol"] || [checkNode.name isEqual:@"La"] || [checkNode.name isEqual:@"Si"])) {
+    if ((checkNode && ([checkNode.name isEqual:@"Do"] || [checkNode.name isEqual:@"Re"] || [checkNode.name isEqual:@"Mi"] || [checkNode.name isEqual:@"Fa"] || [checkNode.name isEqual:@"Sol"] || [checkNode.name isEqual:@"La"] || [checkNode.name isEqual:@"Si"])) && (([self.botaoStartAndChek.name isEqualToString: @"check"]) && !(self.tempoEncerrado))) {
         activeDragNode = (SKSpriteNode*)checkNode;
     }
     
@@ -162,10 +164,12 @@
         
         self.tempoPercorrido = 20;
         checkNode.name = @"check";
+        [self.botaoStartAndChek setTexture: [SKTexture textureWithImageNamed:@"botaoChecar.png"]];
+        return;
     }
     
 //CHECK
-    if ([checkNode.name isEqualToString: @"check"] && _tempoEncerrado) {
+    if ([checkNode.name isEqualToString: @"check"]) {
         
         
         for (SKSpriteNode *nota in self.listaDeNotasComPosicoes) {
@@ -205,7 +209,7 @@
             //1a LINHA
             if ([nota.name isEqualToString: @"Mi"]) {
                 NSLog(@"%f", nota.position.y);
-                if (nota.position.y >= 285 && nota.position.y <= 105) {
+                if (nota.position.y >= 290 && nota.position.y <= 105) {
                     NSLog(@"MI CERTO");
                     self.pontuacaoJogadorAtual += 10;
                     _escalaCerta = YES;
@@ -292,6 +296,7 @@
         }else{
             NSLog(@"ESCALA CERTA");
             self.botaoStartAndChek.name = @"start";
+            [self.botaoStartAndChek setTexture: [SKTexture textureWithImageNamed:@"botaoSalvar.png"]];
             self.tempoEncerrado = NO;
             self.tempoPercorrido = 0;
             
@@ -394,7 +399,12 @@
 }
 
 -(void)sortearQuantidadeDeNotas{
-    self.quantidadeDeNotas = arc4random() % 4 + 1;
+    
+    do {
+        self.quantidadeDeNotas = arc4random() % 6 + 1;
+    } while (self.quantidadeDeNotas == self.ultimaQuantidadeSorteada);
+    self.ultimaQuantidadeSorteada = self.quantidadeDeNotas;
+    
 }
 
 //NOTA MUSICAL
@@ -536,9 +546,10 @@
 
 - (void)criaBotaoStarAndCheck{
     
-    _botaoStartAndChek = [SKSpriteNode spriteNodeWithImageNamed:@"botaoLancar"];
-    _botaoStartAndChek.position = CGPointMake(900, 200);
-    _botaoStartAndChek.size = CGSizeMake(50, 50);
+    _botaoStartAndChek = [[SKSpriteNode alloc] init];
+    [self.botaoStartAndChek setTexture: [SKTexture textureWithImageNamed:@"botaoSalvar.png"]];
+    _botaoStartAndChek.position = CGPointMake(512, 100);
+    _botaoStartAndChek.size = CGSizeMake(320, 120);
     _botaoStartAndChek.name = @"start";
     _botaoStartAndChek.zPosition = +5.0;
     

@@ -61,6 +61,7 @@ static const UInt32 fundo = 0x1 << 7;
 @property int pontuacaoJogadorAtual;
 @property int indiceNotaSorteada;
 @property int quantidadeDeNotas;
+@property int ultimaQuantidadeSorteada;
 @property BOOL tempoEncerrado;
 @property BOOL escalaCerta;
 
