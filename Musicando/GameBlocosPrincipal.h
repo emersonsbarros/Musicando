@@ -14,72 +14,80 @@
 static const UInt32 blocoNotaCorreta = 0x1 << 0;
 static const UInt32 pisoCategoria = 0x1 << 1;
 static const UInt32 guindasteCategoria = 0x1 << 2;
-
 static const UInt32 tocaTrecoCategoria = 0x1 << 3;
 static const UInt32 coluna = 0x1 << 4;
 
-
-
 @interface GameBlocosPrincipal : SKScene <SKPhysicsContactDelegate>{
     
-    //Ambiente
+//Nós - Ambiente
     SKNode *fundo;
     SKNode *piso;
     
-    //Guindaste, tocaTreco e bloco
+//Nós - TocaTreco e bloco
     SKNode *guindaste;
+    SKNode *blocoNota;
+    SKNode *botaoCair;
     SKNode *tocaTreco;
     SKNode *corpoParaColisaoDoTocaTreco;
-    SKNode *blocoNota;
-    
-    SKNode *botaoCair;
 }
 
-//Sprite Nodes
+//Sprite Nodes - Ambiente
 @property SKSpriteNode *fundoPrincipal;
 @property SKSpriteNode *pisoPrincipal;
-@property SKSpriteNode *guindastePrincipal;
 
+//Sprite Nodes - TocaTreco e bloco
+@property SKSpriteNode *guindastePrincipal;
+@property SKSpriteNode *blocoNotaPrincipal;
+@property SKSpriteNode *botaoCairNota;
+
+@property SKSpriteNode *tocaTrecoPrincipal;
 @property SKSpriteNode *coluna1;
 @property SKSpriteNode *coluna2;
 @property SKSpriteNode *base;
-@property SKSpriteNode *tocaTrecoPrincipal;
 
-@property SKSpriteNode *blocoNotaPrincipal;
-@property SKSpriteNode *botaoCairNota;
+//Labels
 @property SKLabelNode *nomeDaNota;
-
-//Pontuacao
 @property SKLabelNode *stringDePontuacao;
 @property SKLabelNode *labelDePontuacao;
 
-
 //Auxiliares
+@property NSArray *listaDeNotas;
+@property double velocidadeGuindaste;
 @property int pontuacaoJogadorAtual;
 @property int tempoPercorrido;
 @property int auxTempoPercorrido;
 @property int estadoPauseJogo;
-@property double velocidadeGuindaste;
-@property NSArray *listaDeNotas;
 @property int indiceNotaSorteada;
-
 @property BOOL podeCair;
 
-//Métodos
+
+//MÉTODOS
+//Carregamento
 -(void)carregarPrimeirosComponentes;
 
--(void)criaBlocoNotaMusical;
+//Delegate
+-(void)update:(CFTimeInterval)currentTime;
+-(void)didBeginContact:(SKPhysicsContact *)contact;
+-(void)touchesBegan:(NSSet*)touches withEvent: (UIEvent*)event;
 
+//Criação
+-(void)criaFundo;
+-(void)criaPiso;
 -(void)criaGuindaste;
 -(void)criaTocaTreco;
+-(void)criaBlocoNotaMusical;
 
--(void)criaPiso;
--(void)criaFundo;
+//Ações
+-(void)sortearNota;
+-(void)adionarFisicaAoBlocoMusical;
+-(void)cairNota;
 
+//Animações
 -(void)acaoMoverDireitaEsquerda: (SKNode*)node :(int)duracao;
-
--(void)update:(CFTimeInterval)currentTime;
--(void)touchesBegan:(NSSet*)touches withEvent: (UIEvent*)event;
 -(NSMutableArray*)loadSpriteSheetFromImageWithName:(NSString*)name withNumberOfSprites:(int)numSprites withNumberOfRows:(int)numRows withNumberOfSpritesPerRow:(int)numSpritesPerRow;
+
+//GameOver e Pausa
+-(void)gameOver;
+-(void)pausaJogo;
 
 @end

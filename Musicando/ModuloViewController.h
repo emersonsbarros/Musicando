@@ -22,5 +22,7 @@
 
 -(void)chamaStoryBoardAulas:(id)sender;
 
+@property NSMutableArray *listaModulos;
+
 
 @end

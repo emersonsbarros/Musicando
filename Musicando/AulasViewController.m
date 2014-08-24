@@ -109,7 +109,7 @@
         exerc.frame = CGRectMake(contadorDistanciaEntreBotoes, contadorDistanciaQuebraLinhas, 100, 100);
         [exerc setBackgroundImage:[exerc capa] forState:UIControlStateNormal];
         
-        exerc.descricaoBotao =  [[UILabel alloc] initWithFrame: CGRectMake(-45,60,200,100)];
+        exerc.descricaoBotao =  [[UILabel alloc] initWithFrame: CGRectMake(-45,75,200,100)];
         exerc.descricaoBotao.text = [exerc nome];
         exerc.descricaoBotao.font = [UIFont fontWithName:@"Papyrus" size:20];
         exerc.descricaoBotao.textColor = [UIColor whiteColor];
@@ -120,6 +120,7 @@
         [[self viewExercicios] addSubview: exerc];
         
         [self.listaExercicios addObject:exerc];
+        [self.listaExercicios addObject:exerc.descricaoBotao];
         
         contadorDistanciaEntreBotoes += 200;
         
@@ -158,6 +159,7 @@
             [subView removeFromSuperview];
         }
     }
+    
     for (UIView *subView in self.listaAulas){
         [[EfeitoImagem sharedManager]hiddenNoEmDegrade:subView];
     }

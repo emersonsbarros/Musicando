@@ -84,7 +84,7 @@
         }else [view removeFromSuperview];
     }
     
-    NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"musicaJogoMusica" ofType:@"mp3"]];
+    NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"musicaJogoBlocos" ofType:@"mp3"]];
     [[EfeitoPlayer sharedManager]playAudio:musicFile:-1];
     
     self.viewJogo.hidden = NO;

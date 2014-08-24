@@ -8,7 +8,6 @@
 #import "PegarNotasEPausasCena.h"
 #define GRAVIDADE_MUNDO -0.1
 
-
 @implementation PegarNotasEPausasCena
 
 -(id)initWithSize:(CGSize)size{
@@ -44,9 +43,9 @@
         [self carregarPrimeirosComponentes];
         
         NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"bensound-goinghigher" ofType:@"mp3"]];
-        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile error:nil];
-        self.audioPlayer.numberOfLoops = -1;
-        [self.audioPlayer play];
+        [[EfeitoPlayer sharedManager]playAudio:musicFile:-1];
+
+        
         
     }
     
@@ -584,7 +583,7 @@
 -(void)gameOver{
     [[GameOverViewController sharedManager]gameOverParaUmaCena].view.hidden = NO;
     [self pausaJogo];
-    [self.audioPlayer stop];
+    [[EfeitoPlayer sharedManager]stopAudio];
 
 }
 

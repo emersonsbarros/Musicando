@@ -4,6 +4,64 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
+        <!--Jogos View Controller-->
+        <scene sceneID="ucf-HG-kFy">
+            <objects>
+                <viewController id="ghb-Sq-4nX" customClass="JogosViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nlC-Ov-BXt"/>
+                        <viewControllerLayoutGuide type="bottom" id="9vZ-jF-XDu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Hr-zW-rxp">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundoPrata.png" translatesAutoresizingMaskIntoConstraints="NO" id="mYz-SE-RFd">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconeJogos.png" translatesAutoresizingMaskIntoConstraints="NO" id="gy0-KR-VI2">
+                                <rect key="frame" x="778" y="517" width="226" height="231"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tvGames.png" translatesAutoresizingMaskIntoConstraints="NO" id="iD2-1F-Dvc">
+                                <rect key="frame" x="11" y="-136" width="775" height="840"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cck-ZA-jkO">
+                                <rect key="frame" x="79" y="151" width="550" height="487"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frame-1.gif" translatesAutoresizingMaskIntoConstraints="NO" id="zgk-aZ-wVk">
+                                        <rect key="frame" x="26" y="28" width="499" height="430"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBP-FG-0YZ">
+                                <rect key="frame" x="654" y="158" width="67" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="iconeEstudio.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="SUA-57-VNU" kind="modal" identifier="SaiSalaJogos" modalTransitionStyle="crossDissolve" id="lxA-SZ-gPL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="imgFrameTv" destination="zgk-aZ-wVk" id="BwQ-8S-d87"/>
+                        <outlet property="viewTelevisao" destination="Cck-ZA-jkO" id="q1C-JO-2Iz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UdK-YK-kqP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1839" y="-2609"/>
+        </scene>
         <!--Estudio View Controller-->
         <scene sceneID="Tlx-sn-oR9">
             <objects>
@@ -58,6 +116,9 @@
                                     <color key="titleColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ghb-Sq-4nX" kind="modal" modalTransitionStyle="crossDissolve" id="m0K-KA-d0I"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnO-KA-v5p">
                                 <rect key="frame" x="277" y="474" width="259" height="177"/>
@@ -91,7 +152,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJd-bf-yNe">
-                                <rect key="frame" x="0.0" y="0.0" width="56" height="54"/>
+                                <rect key="frame" x="0.0" y="0.0" width="82" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="home.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -112,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYW-oH-ptb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1845" y="-1600"/>
+            <point key="canvasLocation" x="1839" y="-1560"/>
         </scene>
         <!--Leitura Partitura View Controller-->
         <scene sceneID="3AN-a4-C9f">
@@ -148,15 +209,15 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fJf-Jd-atm">
-                                        <rect key="frame" x="453" y="8" width="452" height="93"/>
+                                        <rect key="frame" x="480" y="8" width="425" height="93"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0T5-q0-VTd">
-                                                <rect key="frame" x="5" y="54" width="114" height="30"/>
+                                                <rect key="frame" x="30" y="44" width="65" height="54"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                 <color key="tintColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
-                                                <state key="normal">
+                                                <state key="normal" backgroundImage="playPlayer.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -164,11 +225,11 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HA1-Sf-UCK">
-                                                <rect key="frame" x="108" y="54" width="114" height="30"/>
+                                                <rect key="frame" x="107" y="42" width="62" height="56"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                 <color key="tintColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
-                                                <state key="normal" title="Stop">
+                                                <state key="normal" backgroundImage="stopPlayer.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -176,27 +237,27 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fp3-Ka-LTp">
-                                                <rect key="frame" x="216" y="54" width="114" height="30"/>
+                                                <rect key="frame" x="182" y="44" width="61" height="53"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                 <color key="tintColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
-                                                <state key="normal" title="Pause">
+                                                <state key="normal" backgroundImage="pausePlayer.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="botaoPause:" destination="ZZA-eA-jRR" eventType="touchUpInside" id="apS-Rv-Rgy"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fah-J9-yQl">
-                                                <rect key="frame" x="144" y="13" width="42" height="21"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fah-J9-yQl">
+                                                <rect key="frame" x="57" y="0.0" width="163" height="38"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <color key="textColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Andamento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7FC-OV-azL">
-                                                <rect key="frame" x="327" y="7" width="116" height="21"/>
+                                                <rect key="frame" x="300" y="8" width="116" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -204,7 +265,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRm-d4-Etb">
-                                                <rect key="frame" x="372" y="30" width="42" height="21"/>
+                                                <rect key="frame" x="345" y="30" width="42" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -212,7 +273,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="IXS-PS-TcL">
-                                                <rect key="frame" x="338" y="54" width="94" height="29"/>
+                                                <rect key="frame" x="311" y="54" width="94" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <color key="tintColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
                                                 <connections>
@@ -224,10 +285,10 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKt-dq-mfb">
-                                        <rect key="frame" x="279" y="14" width="114" height="30"/>
+                                        <rect key="frame" x="150" y="19" width="78" height="71"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <state key="normal" title="Violao">
+                                        <state key="normal" backgroundImage="violaoTimbre.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -235,10 +296,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tF8-Cb-UC9">
-                                        <rect key="frame" x="236" y="60" width="114" height="30"/>
+                                        <rect key="frame" x="250" y="23" width="85" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <state key="normal" title="Piano">
+                                        <state key="normal" backgroundImage="piano.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -246,10 +307,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXx-t1-6Nl">
-                                        <rect key="frame" x="341" y="60" width="114" height="30"/>
+                                        <rect key="frame" x="351" y="29" width="89" height="61"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <state key="normal" title="Flauta">
+                                        <state key="normal" backgroundImage="Blocoflauta.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -287,14 +348,15 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ooe-UU-S7A">
                                         <rect key="frame" x="6" y="0.0" width="391" height="659"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="dataSource" destination="ZZA-eA-jRR" id="jaP-6n-eYY"/>
                                             <outlet property="delegate" destination="ZZA-eA-jRR" id="xf5-Gz-7wE"/>
                                         </connections>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -312,7 +374,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="840-Pe-aAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3485" y="-2096"/>
+            <point key="canvasLocation" x="3469" y="-2104"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -330,12 +392,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Estudio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8v-oa-Y0G">
+                                <rect key="frame" x="680" y="538" width="231" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="81"/>
+                                <color key="textColor" red="0.094117656349999995" green="0.086274512110000007" blue="0.5176470876" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="barraAzul.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="rep-8f-z8P">
-                                <rect key="frame" x="-59" y="29" width="1083" height="204"/>
+                                <rect key="frame" x="-59" y="127" width="1083" height="204"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bj4-Vm-Snf">
-                                <rect key="frame" x="103" y="276" width="210" height="180"/>
+                                <rect key="frame" x="103" y="374" width="210" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
                                 <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -348,7 +417,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v22-F9-IqO">
-                                <rect key="frame" x="413" y="276" width="199" height="180"/>
+                                <rect key="frame" x="413" y="374" width="199" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
                                 <state key="normal" backgroundImage="iconeMenuTreinamento.png">
@@ -357,7 +426,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoR-qI-WBM">
-                                <rect key="frame" x="697" y="276" width="196" height="180"/>
+                                <rect key="frame" x="697" y="374" width="196" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
                                 <state key="normal" backgroundImage="iconeMenuEstudio.png">
@@ -369,16 +438,30 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Musicando" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGb-4y-yxh">
-                                <rect key="frame" x="44" y="63" width="937" height="156"/>
+                                <rect key="frame" x="44" y="161" width="937" height="156"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="168"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="em_breve.png" translatesAutoresizingMaskIntoConstraints="NO" id="OhN-KY-wAr">
-                                <rect key="frame" x="392" y="272" width="240" height="188"/>
+                                <rect key="frame" x="392" y="374" width="240" height="188"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jornada" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxU-zy-kba">
+                                <rect key="frame" x="93" y="543" width="231" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="81"/>
+                                <color key="textColor" red="0.094117656350135803" green="0.086274512112140656" blue="0.51764708757400513" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Treinamento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqv-fG-qd3">
+                                <rect key="frame" x="381" y="543" width="263" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="81"/>
+                                <color key="textColor" red="0.094117656349999995" green="0.086274512110000007" blue="0.5176470876" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -548,11 +631,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfL-9j-DG8">
-                                <rect key="frame" x="652" y="416" width="227" height="147"/>
+                                <rect key="frame" x="652" y="401" width="227" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="74"/>
                                 <state key="normal" title="Biblioteca">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -567,43 +650,29 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rak-o9-iBW">
-                                <rect key="frame" x="20" y="155" width="503" height="524"/>
+                                <rect key="frame" x="31" y="174" width="503" height="524"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tela.png" translatesAutoresizingMaskIntoConstraints="NO" id="6aa-EZ-Te1">
-                                        <rect key="frame" x="-5" y="0.0" width="508" height="524"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </imageView>
                                     <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOI-Uw-5Gq">
-                                        <rect key="frame" x="76" y="203" width="336" height="64"/>
+                                        <rect key="frame" x="56" y="135" width="336" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
+                                        <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="80"/>
                                         <state key="normal" title="Continuar">
                                             <color key="titleColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOK-bh-RZF">
-                                        <rect key="frame" x="76" y="131" width="336" height="64"/>
+                                        <rect key="frame" x="64" y="70" width="336" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
+                                        <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="80"/>
                                         <state key="normal" title="Nova jornada">
                                             <color key="titleColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2X-tf-RfY">
-                                        <rect key="frame" x="-15" y="33" width="518" height="64"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
-                                        <state key="normal" title="Bem vindo Jogador X">
-                                            <color key="titleColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                     <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBY-yY-Ubz">
-                                        <rect key="frame" x="162" y="362" width="164" height="142"/>
+                                        <rect key="frame" x="142" y="231" width="164" height="142"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
                                         <state key="normal" backgroundImage="home.png">
@@ -614,8 +683,11 @@
                                             <segue destination="BYZ-38-t0r" kind="modal" modalTransitionStyle="crossDissolve" id="0f7-NI-Cpa"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="em_breve.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Po-GG-YbR">
+                                        <rect key="frame" x="104" y="43" width="240" height="175"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="barraAzul.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="8cH-Za-Oxa">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
@@ -642,7 +714,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tba-lG-NrP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1845" y="-98"/>
+            <point key="canvasLocation" x="1845" y="-136"/>
         </scene>
         <!--Composicao Partitura View Controller - ComposicaoPartitura-->
         <scene sceneID="gW5-a8-H1H">
@@ -664,7 +736,7 @@
                                         <rect key="frame" x="0.0" y="-3" width="1029" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kQe-5a-NE9">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundoPrata.png" translatesAutoresizingMaskIntoConstraints="NO" id="kQe-5a-NE9">
                                         <rect key="frame" x="101" y="5" width="894" height="86"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -848,11 +920,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="116"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundoPrata.png" translatesAutoresizingMaskIntoConstraints="NO" id="pFf-Dz-Hr7">
+                                        <rect key="frame" x="518" y="16" width="202" height="84"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApK-Ns-SPg">
-                                        <rect key="frame" x="462" y="39" width="86" height="50"/>
+                                        <rect key="frame" x="386" y="21" width="77" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <state key="normal" title="Limpar">
+                                        <state key="normal" backgroundImage="Blocoflauta.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -860,10 +937,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKE-qs-OoD">
-                                        <rect key="frame" x="186" y="33" width="86" height="50"/>
+                                        <rect key="frame" x="536" y="36" width="90" height="71"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <state key="normal" title="Play">
+                                        <state key="normal" backgroundImage="playPlayer.png">
+                                            <color key="titleColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -871,10 +949,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9A8-75-77M">
-                                        <rect key="frame" x="289" y="33" width="86" height="50"/>
+                                        <rect key="frame" x="639" y="26" width="76" height="74"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <state key="normal" title="Limpar">
+                                        <state key="normal" backgroundImage="limpar.png">
+                                            <color key="titleColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -882,10 +961,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoB-Ej-9jE">
-                                        <rect key="frame" x="408" y="-5" width="86" height="50"/>
+                                        <rect key="frame" x="251" y="21" width="92" height="79"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <state key="normal" title="Piano">
+                                        <state key="normal" backgroundImage="piano.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -893,10 +972,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3XA-qp-OqQ">
-                                        <rect key="frame" x="511" y="0.0" width="86" height="50"/>
+                                        <rect key="frame" x="137" y="16" width="87" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <state key="normal" title="Violao">
+                                        <state key="normal" backgroundImage="violaoTimbre.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -928,10 +1007,12 @@
         <image name="4.png" width="57" height="96"/>
         <image name="5.png" width="57" height="96"/>
         <image name="6.png" width="57" height="96"/>
+        <image name="Blocoflauta.png" width="150" height="101"/>
         <image name="barraAzul.jpeg" width="207" height="31"/>
         <image name="biblioteca.png" width="150" height="146"/>
         <image name="colcheiaPausa.png" width="39" height="70"/>
         <image name="em_breve.png" width="362" height="253"/>
+        <image name="frame-1.gif" width="320" height="320"/>
         <image name="fundoPrata.png" width="1100" height="821"/>
         <image name="fusaPausa.png" width="58" height="120"/>
         <image name="home.png" width="150" height="150"/>
@@ -943,11 +1024,17 @@
         <image name="iconeMenuTreinamento.png" width="640" height="605"/>
         <image name="iconeParaEdicao.png" width="300" height="224"/>
         <image name="iconeParaEditor.png" width="232" height="244"/>
+        <image name="limpar.png" width="619" height="640"/>
+        <image name="pausePlayer.png" width="64" height="64"/>
+        <image name="piano.png" width="555" height="473"/>
+        <image name="playPlayer.png" width="64" height="64"/>
         <image name="semicolcheiaPausa.png" width="15" height="25"/>
         <image name="semifusa.png" width="31" height="58"/>
         <image name="semifusaPausa.png" width="55" height="108"/>
         <image name="seminimaPausa.png" width="380" height="684"/>
-        <image name="tela.png" width="1024" height="680"/>
+        <image name="stopPlayer.png" width="64" height="64"/>
+        <image name="tvGames.png" width="1280" height="1237"/>
+        <image name="violaoTimbre.png" width="80" height="150"/>
     </resources>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -956,9 +1043,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ub6-qR-eBg"/>
-        <segue reference="WPC-Ds-dfk"/>
         <segue reference="7Ix-dc-TsH"/>
-        <segue reference="t8s-TQ-CzK"/>
+        <segue reference="WPC-Ds-dfk"/>
+        <segue reference="ZtN-Rv-XGc"/>
+        <segue reference="10O-Jt-bQu"/>
     </inferredMetricsTieBreakers>
 </document>

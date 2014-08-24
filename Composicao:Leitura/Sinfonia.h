@@ -113,6 +113,11 @@
 
 -(void)tocarUmaNota:(NSMutableArray*)listaSons :(NSString*)nomeInstrumentoPlist;
 -(void)tocarTodasNotasEdicao:(NSMutableArray*)listaSons :(NSString*)nomeInstrumentoPlist;
+
+
+@property BOOL estadoBotaoLimpar;
+@property BOOL estadoBotaoPlay;
+
 @end
 
 

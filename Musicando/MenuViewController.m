@@ -18,7 +18,7 @@
 {
     [super viewDidLoad];
 	
-    [self performSelector:@selector(lacoCaindoNotas) withObject:NULL afterDelay:0.1];
+   // [self performSelector:@selector(lacoCaindoNotas) withObject:NULL afterDelay:0.1];
     
 }
 

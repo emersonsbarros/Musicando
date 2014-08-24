@@ -34,6 +34,7 @@
    
 }
 
+
 - (void)viewDidLoad{
     [super viewDidLoad];
         
@@ -252,6 +253,7 @@
     [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgIndioMusica];
     [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgCarnaval];
     [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgCapoeiraMusica];
+    
     
     [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgAnimacaoIndio];
     UIImage *image1 = [UIImage imageNamed:@"animaIndio1.gif"];

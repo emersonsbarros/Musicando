@@ -78,6 +78,9 @@
         
         [self.view bringSubviewToFront:mod];
         
+        [self.listaModulos addObject:mod];
+        [self.listaModulos addObject:mod.descricaoBotao];
+        
         contadorDistanciaEntreBotoes += 200;
     }
 
@@ -89,8 +92,7 @@
     
     [super viewDidLoad];
     
-//    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tela.png"]];
-//    [self.view addSubview:backgroundView];
+    self.listaModulos = [[NSMutableArray alloc]init];
     
     self.bibliotecaDosModulos = [Biblioteca sharedManager];
     [self carregaModulos];
@@ -99,6 +101,12 @@
 
 -(void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
+    
+    for (UIView *subView in self.listaModulos){
+        [subView removeFromSuperview];
+    }
+    
+    [self.listaModulos removeAllObjects];
 }
 
 - (void)didReceiveMemoryWarning{

@@ -203,7 +203,7 @@
     imgAddAnimacao.animationImages = listaSprite;
     CAKeyframeAnimation *animationSequence = [CAKeyframeAnimation animationWithKeyPath: @"contents"];
     animationSequence.calculationMode = kCAAnimationDiscrete;
-    animationSequence.autoreverses = YES;
+    animationSequence.autoreverses = NO;
     animationSequence.duration = 1.0;
     animationSequence.repeatCount = HUGE_VALF;
     animationSequence.values = [self animationCGImagesArray:imgAddAnimacao];

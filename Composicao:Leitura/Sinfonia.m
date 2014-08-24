@@ -48,6 +48,9 @@
         self.controleVelocidaTranNota = 0.5;
         [[DataBaseInstrumento sharedManager] addInstrumentosPadroesDoApplicativo];
         _soundBankPlayer = [[SoundBankPlayer alloc] init];
+        
+        self.estadoBotaoLimpar = true;
+        self.estadoBotaoPlay = true;
        
     }
     return self;
@@ -155,6 +158,9 @@
 -(void)tocarPlayerPartitura{
     
     auxIndiceNotas = auxIndiceNotasPausa;
+    
+    self.estadoBotaoPlay = false;
+    self.estadoBotaoLimpar = false;
     
     NSString *nomePrimeiroMetodo = self.instrumento.metodoPrimeiroTocar;
     // NSString *nomeSegundoMetodo = self.instrumento.metodoSegundoTocar;
@@ -291,18 +297,42 @@
 -(void)tocarpentagrama1{
     
     if(auxIndiceNotas >= [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]count]){
-        
+        self.estadoBotaoLimpar = true;
+        self.estadoBotaoPlay = true;
     }else{
         
         Nota *nota = [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]objectAtIndex:auxIndiceNotas];
 
         NSString *nomeNota = [nota nomeNota];
+        NSString *nomeNotaTransformada;
+        
+        if([nomeNota isEqualToString:@"C"]){
+            nomeNotaTransformada = @"Dó";
+        }else if([nomeNota isEqualToString:@"D"]){
+            nomeNotaTransformada = @"Ré";
+        }
+        else if([nomeNota isEqualToString:@"E"]){
+            nomeNotaTransformada = @"Mi";
+        }
+        else if([nomeNota isEqualToString:@"F"]){
+            nomeNotaTransformada = @"Fá";
+        }
+        else if([nomeNota isEqualToString:@"G"]){
+            nomeNotaTransformada = @"Sol";
+        }
+        else if([nomeNota isEqualToString:@"A"]){
+            nomeNotaTransformada = @"La";
+        }
+        else if([nomeNota isEqualToString:@"B"]){
+            nomeNotaTransformada = @"Si";
+        }
+        
         NSString *nivelNota = [nota oitava];
         NSString *tomEncurtado = [nota tom];
         NSString *notaFinal = [NSString stringWithFormat:@"%@%@",nivelNota,nomeNota];
         NSString *tempoNota = [nota tipoNota];
         self.compassoAtual = [[nota numeroCompasso]intValue];
-        self.textoDescricaoNota = [NSString stringWithFormat:@"%@%@",nivelNota,nomeNota];
+        self.textoDescricaoNota = [NSString stringWithFormat:@"%@%@%@",nivelNota,@" ",nomeNotaTransformada];
 
 
         float tempo = 0.0;
@@ -397,7 +427,8 @@
     
     
     if(auxIndiceNotas >= [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]count]){
-        
+        self.estadoBotaoLimpar = true;
+        self.estadoBotaoPlay = true;
     }else{
     Nota *nota = [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]objectAtIndex:auxIndiceNotas];
     NSString *nomeNota = [nota nomeNota];
@@ -500,7 +531,8 @@
     
     
     if(auxIndiceNotas >= [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]count]){
-        
+        self.estadoBotaoLimpar = true;
+        self.estadoBotaoPlay = true;
     }else{
     Nota *nota = [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]objectAtIndex:auxIndiceNotas];
     NSString *nomeNota = [nota nomeNota];

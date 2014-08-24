@@ -41,6 +41,9 @@
 
 -(void)viewDidDisappear:(BOOL)animated{
     [[Sinfonia sharedManager]pararPlayerPartitura];
+    [self.listaNotasEdicao removeAllObjects];
+    [Sinfonia sharedManager].estadoBotaoPlay = true;
+    [Sinfonia sharedManager].estadoBotaoLimpar = true;
 }
 
 
@@ -864,41 +867,48 @@
 
 - (IBAction)tocarTodasNoras:(id)sender {
     
-    [[Sinfonia sharedManager]pararPlayerPartitura];
+    if([Sinfonia sharedManager].estadoBotaoPlay){
+        [[Sinfonia sharedManager]pararPlayerPartitura];
+        
+        self.contadorIndiceNota = 0;
+        self.posOriginalScroll = self.scrollEdicao.contentOffset;
+        if(self.listaNotasEdicao.count != 0)[self atualizaPosicaoTocando];
+        
+        if([self.listaNotasEdicao lastObject] != NULL)[[Sinfonia sharedManager]tocarTodasNotasEdicao:self.listaNotasEdicao:nomeInstrumento];
+    }
     
-    self.contadorIndiceNota = 0;
-    self.posOriginalScroll = self.scrollEdicao.contentOffset;
-    if(self.listaNotasEdicao.count != 0)[self atualizaPosicaoTocando];
-    
-    if([self.listaNotasEdicao lastObject] != NULL)[[Sinfonia sharedManager]tocarTodasNotasEdicao:self.listaNotasEdicao:nomeInstrumento];
 }
 
 
 - (IBAction)limparNotasPartituraEdicao:(id)sender {
     
-    
-    if(self.listaNotasEdicao.count != 0){
-        for (UIView *subView in self.scrollEdicao.subviews)
-        {
-            for(int i=0;i<self.listaNotasEdicao.count;i++){
-                Nota *coord = [self.listaNotasEdicao  objectAtIndex:i];
-                
-                if ([subView isEqual:coord.imagemNota])
-                {
-                    [subView removeFromSuperview];
+    if([Sinfonia sharedManager].estadoBotaoLimpar){
+        if(self.listaNotasEdicao.count != 0){
+            for (UIView *subView in self.scrollEdicao.subviews)
+            {
+                for(int i=0;i<self.listaNotasEdicao.count;i++){
+                    Nota *coord = [self.listaNotasEdicao  objectAtIndex:i];
+                    
+                    if ([subView isEqual:coord.imagemNota])
+                    {
+                        [subView removeFromSuperview];
+                    }
+                    
                 }
-                
             }
+            
+            [[Sinfonia sharedManager]pararPlayerPartitura];
+            
+            
+            self.listaNotasEdicao = [[NSMutableArray alloc]init];
+            
+            
+            CGPoint bottomOffset = CGPointMake(0,0);
+            [[self scrollEdicao] setContentOffset:bottomOffset animated:YES];
+            posicaoX = 150;
         }
-        
-        
-        self.listaNotasEdicao = [[NSMutableArray alloc]init];
-        [[Sinfonia sharedManager]pararPlayerPartitura];
-        
-        CGPoint bottomOffset = CGPointMake(0,0);
-        [[self scrollEdicao] setContentOffset:bottomOffset animated:YES];
-        posicaoX = 150;
     }
+    
 }
 
 
