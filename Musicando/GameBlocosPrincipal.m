@@ -54,11 +54,15 @@
     [self criaTocaTreco];
     [self criaBlocoNotaMusical];
 
+    
+    
+
+    
 //Configura as labels de pontuação
     self.stringDePontuacao = [[SKLabelNode alloc]init];
     self.stringDePontuacao.fontColor = [UIColor blackColor];
     self.stringDePontuacao.fontSize = 40.0f;
-    self.stringDePontuacao.position = CGPointMake(120, 670);
+    self.stringDePontuacao.position = CGPointMake(590, 670);
     self.stringDePontuacao.zPosition = 2;
     self.stringDePontuacao.text = @"Pontuação: ";
     self.stringDePontuacao.fontName = @"Marker Felt Thin";
@@ -67,7 +71,7 @@
     self.labelDePontuacao = [[SKLabelNode alloc]init];
     self.labelDePontuacao.fontColor = [UIColor blackColor];
     self.labelDePontuacao.fontSize = 40.0f;
-    self.labelDePontuacao.position = CGPointMake(250, 670);
+    self.labelDePontuacao.position = CGPointMake(720, 670);
     self.labelDePontuacao.zPosition = 2;
     self.labelDePontuacao.text = @"0";
     self.labelDePontuacao.fontName = @"Marker Felt Thin";
@@ -77,7 +81,7 @@
     self.nomeDaNota = [[SKLabelNode alloc]init];
     self.nomeDaNota.fontColor = [UIColor blackColor];
     self.nomeDaNota.fontSize = 40.0f;
-    self.nomeDaNota.position = CGPointMake(100, 720);
+    self.nomeDaNota.position = CGPointMake(400, 670);
     self.nomeDaNota.zPosition = 2;
     self.nomeDaNota.fontName = @"Marker Felt Thin";
     
@@ -336,12 +340,12 @@
     self.base.zPosition = 3;
 
     self.coluna1.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.coluna1.size];
-    self.coluna1.physicsBody.dynamic = NO;
+    //self.coluna1.physicsBody.dynamic = NO;
     self.coluna2.physicsBody.categoryBitMask = coluna;
     self.coluna2.physicsBody.contactTestBitMask = blocoNotaCorreta;
 
     self.coluna2.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.coluna2.size];
-    self.coluna2.physicsBody.dynamic = NO;
+    //self.coluna2.physicsBody.dynamic = NO;
     self.coluna2.physicsBody.categoryBitMask = coluna;
     self.coluna2.physicsBody.contactTestBitMask = blocoNotaCorreta;
 

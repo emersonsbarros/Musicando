@@ -782,7 +782,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hn-mG-Vzo">
-                                        <rect key="frame" x="357" y="10" width="46" height="78"/>
+                                        <rect key="frame" x="352" y="10" width="46" height="78"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="5.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -792,9 +792,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gQ-3j-Qo1">
-                                        <rect key="frame" x="420" y="7" width="46" height="81"/>
+                                        <rect key="frame" x="412" y="10" width="40" height="76"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="6.png">
+                                        <state key="normal" backgroundImage="notaFusa.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -802,9 +802,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoF-yq-bhw">
-                                        <rect key="frame" x="462" y="11" width="67" height="75"/>
+                                        <rect key="frame" x="468" y="12" width="43" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="semifusa.png">
+                                        <state key="normal" backgroundImage="notaSemifusa.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -812,9 +812,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vC-7e-eWW">
-                                        <rect key="frame" x="549" y="24" width="67" height="19"/>
+                                        <rect key="frame" x="549" y="24" width="67" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="4-2Pausa.png">
+                                        <state key="normal" backgroundImage="pausa4Tempos.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -822,9 +822,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDj-ac-Rca">
-                                        <rect key="frame" x="621" y="51" width="67" height="19"/>
+                                        <rect key="frame" x="621" y="51" width="67" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="4-2Pausa.png">
+                                        <state key="normal" backgroundImage="pausa2Tempos.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -832,9 +832,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJA-cv-Kc5">
-                                        <rect key="frame" x="861" y="24" width="67" height="60"/>
+                                        <rect key="frame" x="864" y="15" width="67" height="69"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="fusaPausa.png">
+                                        <state key="normal" backgroundImage="pausa1-8Tempo.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -842,9 +842,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idq-vs-pRX">
-                                        <rect key="frame" x="792" y="24" width="67" height="57"/>
+                                        <rect key="frame" x="808" y="17" width="61" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="semicolcheiaPausa.png">
+                                        <state key="normal" backgroundImage="pausa1-4Tempo.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -852,9 +852,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBt-vp-TJP">
-                                        <rect key="frame" x="915" y="29" width="67" height="52"/>
+                                        <rect key="frame" x="922" y="18" width="67" height="66"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="semifusaPausa.png">
+                                        <state key="normal" backgroundImage="pausa1-16Tempo.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -872,9 +872,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSU-oT-xJ6">
-                                        <rect key="frame" x="743" y="21" width="67" height="57"/>
+                                        <rect key="frame" x="752" y="16" width="55" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="colcheiaPausa.png">
+                                        <state key="normal" backgroundImage="pausa1-2Tempo.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -996,25 +996,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcw-uT-LZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3485" y="-1194"/>
+            <point key="canvasLocation" x="3485" y="-1200"/>
         </scene>
     </scenes>
     <resources>
         <image name="1.png" width="57" height="96"/>
         <image name="2.png" width="57" height="96"/>
         <image name="3.png" width="57" height="96"/>
-        <image name="4-2Pausa.png" width="28" height="14"/>
-        <image name="4.png" width="57" height="96"/>
+        <image name="4.png" width="42.75" height="72"/>
         <image name="5.png" width="57" height="96"/>
-        <image name="6.png" width="57" height="96"/>
         <image name="Blocoflauta.png" width="150" height="101"/>
         <image name="barraAzul.jpeg" width="207" height="31"/>
         <image name="biblioteca.png" width="150" height="146"/>
-        <image name="colcheiaPausa.png" width="39" height="70"/>
         <image name="em_breve.png" width="362" height="253"/>
         <image name="frame-1.gif" width="320" height="320"/>
         <image name="fundoPrata.png" width="1100" height="821"/>
-        <image name="fusaPausa.png" width="58" height="120"/>
         <image name="home.png" width="150" height="150"/>
         <image name="iconeEstudio.png" width="640" height="605"/>
         <image name="iconeInstrumento.png" width="1040" height="704"/>
@@ -1025,12 +1021,17 @@
         <image name="iconeParaEdicao.png" width="300" height="224"/>
         <image name="iconeParaEditor.png" width="232" height="244"/>
         <image name="limpar.png" width="619" height="640"/>
+        <image name="notaFusa.png" width="256" height="450"/>
+        <image name="notaSemifusa.png" width="256" height="450"/>
+        <image name="pausa1-16Tempo.png" width="224" height="454"/>
+        <image name="pausa1-2Tempo.png" width="116" height="196"/>
+        <image name="pausa1-4Tempo.png" width="151" height="288"/>
+        <image name="pausa1-8Tempo.png" width="188" height="362"/>
+        <image name="pausa2Tempos.png" width="114" height="33"/>
+        <image name="pausa4Tempos.png" width="114" height="33"/>
         <image name="pausePlayer.png" width="64" height="64"/>
         <image name="piano.png" width="555" height="473"/>
         <image name="playPlayer.png" width="64" height="64"/>
-        <image name="semicolcheiaPausa.png" width="15" height="25"/>
-        <image name="semifusa.png" width="31" height="58"/>
-        <image name="semifusaPausa.png" width="55" height="108"/>
         <image name="seminimaPausa.png" width="380" height="684"/>
         <image name="stopPlayer.png" width="64" height="64"/>
         <image name="tvGames.png" width="1280" height="1237"/>
