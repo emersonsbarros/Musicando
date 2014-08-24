@@ -8,7 +8,6 @@
 #import "PegarNotasEPausasCena.h"
 #define GRAVIDADE_MUNDO -0.1
 
-
 @implementation PegarNotasEPausasCena
 
 -(id)initWithSize:(CGSize)size{

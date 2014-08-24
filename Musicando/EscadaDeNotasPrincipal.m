@@ -45,17 +45,6 @@
     return self;
 }
 
--(void)gameOver{
-    [[GameOverViewController sharedManager]gameOverParaUmaCena].view.hidden = NO;
-    [self pausaJogo];
-    [self.audioPlayer stop];
-}
-
--(void)pausaJogo{
-    self.scene.view.paused = YES;
-}
-
-
 -(void)carregarPrimeirosComponentes{
     
     [self criaFundo];
@@ -156,9 +145,7 @@
 
 /////////////////////////////////////////////////////// CAPTA TOQUE ////////////////////////////////////////////////////////
 //CHAMADO QUANDO HÁ UM TOQUE NA TELA
-
-
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     
     UITouch *touch = [touches anyObject];
     CGPoint scenePosition = [touch locationInNode: self];
@@ -322,7 +309,7 @@
     
 }
 
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
     
     // Be sure we have a reference to an object to drag
     if (activeDragNode == nil)
@@ -556,6 +543,16 @@
     _botaoStartAndChek.zPosition = +5.0;
     
     [self addChild: _botaoStartAndChek];
+}
+
+-(void)gameOver{
+    [[GameOverViewController sharedManager]gameOverParaUmaCena].view.hidden = NO;
+    [self pausaJogo];
+    [self.audioPlayer stop];
+}
+
+-(void)pausaJogo{
+    self.scene.view.paused = YES;
 }
 
 

@@ -11,8 +11,8 @@
 
 @implementation GameBlocosPrincipal
 
-
--(id)initWithSize:(CGSize)size {
+//Init
+-(id)initWithSize:(CGSize)size{
     if (self = [super initWithSize:size]) {
         
         //Configura física do mundo
@@ -26,7 +26,7 @@
         self.pontuacaoJogadorAtual = 0;
         self.podeCair = YES;
         
-        //Inicia com velocidade padrão do guindaste
+        //Inicia com velocidade padrão da nota
         self.velocidadeGuindaste = 1;
         
         //Inicia lista de notas e indice para sorteio
@@ -36,6 +36,7 @@
         [self carregarPrimeirosComponentes];
         [self sortearNota];
         
+        //Música de fundo
         NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"bensound-badass" ofType:@"mp3"]];
         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile error:nil];
         self.audioPlayer.numberOfLoops = -1;
@@ -45,16 +46,7 @@
     return self;
 }
 
--(void)gameOver{
-    [[GameOverViewController sharedManager]gameOverParaUmaCena].view.hidden = NO;
-    [self pausaJogo];
-    [self.audioPlayer stop];
-}
-
--(void)pausaJogo{
-    self.scene.view.paused = YES;
-}
-
+//Carregamento de nós principais
 -(void)carregarPrimeirosComponentes{
     
     [self criaFundo];
@@ -102,9 +94,10 @@
 
 /////////////////////////////////////////////////////// UPDATE DO TEMPO ////////////////////////////////////////////////////////
 
+//Atualizações do jogo por tempo
 -(void)update:(CFTimeInterval)currentTime{
-    //Condicao para calcular distancia percorrida
     
+    //Condicao para calcular distancia percorrida
     if(self.estadoPauseJogo == 0 ){
         
         self.auxTempoPercorrido += 1;
@@ -120,17 +113,15 @@
                 if(self.velocidadeGuindaste > 1)
                     self.velocidadeGuindaste -= 0.10;
             }
-            
         }
-        
     }
         
 }
 
 
-
 /////////////////////////////////////////////////////// COLISÃO ////////////////////////////////////////////////////////
--(void)didBeginContact:(SKPhysicsContact *)contact {
+//Contato de nós na view
+-(void)didBeginContact:(SKPhysicsContact *)contact{
     
     SKPhysicsBody *primeiroCorpoFisico;
     SKPhysicsBody *segundoCorpoFisico;
@@ -222,12 +213,11 @@
 
     }
     
-    
 }
 
 
 /////////////////////////////////////////////////////// TOQUES ////////////////////////////////////////////////////////
-//CHAMADO QUANDO HÁ UM TOQUE NA TELA
+//Contato de toque na tela
 -(void)touchesBegan:(NSSet*)touches withEvent: (UIEvent*)event{
     
     UITouch *touch = [touches anyObject];
@@ -398,8 +388,8 @@
     [self addChild: blocoNota];
 }
 
+//Sorteia o índice para a nota
 -(void)sortearNota{
-    //Sorteia o índice para a nota
     self.indiceNotaSorteada = arc4random() % 14;
         self.nomeDaNota.text = [NSString stringWithFormat:@"Nota: %@", [self.listaDeNotas objectAtIndex: self.indiceNotaSorteada]];
 }
@@ -438,7 +428,7 @@
 
 
 /////////////////////////////////////////////////////// BOTÕES ////////////////////////////////////////////////////////
-
+//Botão derruba nota
 -(void)cairNota{
     
     self.botaoCairNota = [[SKSpriteNode alloc] init];
@@ -489,5 +479,16 @@
     return animationSheet;
 }
 
+//Encerra o jogo e chama cena de gameover
+-(void)gameOver{
+    [[GameOverViewController sharedManager] gameOverParaUmaCena].view.hidden = NO;
+    [self pausaJogo];
+    [self.audioPlayer stop];
+}
+
+//Pausar jogo
+-(void)pausaJogo{
+    self.scene.view.paused = YES;
+}
 
 @end
