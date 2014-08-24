@@ -165,6 +165,7 @@
         checkNode.name = @"check";
         [self.botaoStartAndChek setTexture: [SKTexture textureWithImageNamed:@"botaoChecar.png"]];
         self.tempoPercorrido = 20;
+        return;
 
     }
     
