@@ -37,6 +37,7 @@ static const UInt32 fundo = 0x1 << 7;
 @property SKSpriteNode *linhaDoPentagrama3;
 @property SKSpriteNode *linhaDoPentagrama4;
 @property SKSpriteNode *linhaDoPentagrama5;
+@property SKSpriteNode *linhaDoPentagrama6;
 @property SKSpriteNode *espacoDoPentagrama1;
 @property SKSpriteNode *espacoDoPentagrama2;
 @property SKSpriteNode *espacoDoPentagrama3;
