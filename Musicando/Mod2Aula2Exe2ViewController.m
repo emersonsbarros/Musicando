@@ -40,6 +40,8 @@
     ///Add barra,Mascote,View de Retornar Pagina ao Xib
     [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
     self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
+    self.tocaTreco = [TocaTrecoViewController sharedManager].imgTocaTreco;
+    
     
     //Cria Seletor e manda ele como paramentro para outros View Controllers poderem usar
     SEL selectors1 = @selector(pulaFalaMascote);

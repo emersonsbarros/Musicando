@@ -943,7 +943,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     
 //Exercicios
 //INTRO SIMBOLOGIA DAS NOTAS
-    Exercicio *mod2Aula4Exe1 = [[Exercicio alloc] init:201 nome:@"Introdução a simbologia das notas" nomeView:@"Mod2Aula4Exe1ViewController" experiencia:10 pontuacaoMaxima:10 :[UIImage imageNamed:@"logoPrata.png"]];
+    Exercicio *mod2Aula4Exe1 = [[Exercicio alloc] init:201 nome:@"Simbologia das notas" nomeView:@"Mod2Aula4Exe1ViewController" experiencia:10 pontuacaoMaxima:10 :[UIImage imageNamed:@"logoPrata.png"]];
     
 //Falas
     Fala *mod2Aula4Exe1fala1 = [[Fala alloc] init];
@@ -1152,7 +1152,7 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     
 
 //SÍMBOLO DAS PAUSAS
-    Exercicio *mod2Aula4Exe6 = [[Exercicio alloc] init:202 nome:@"Símbolos das pausas" nomeView:@"Mod2Aula4Exe6ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"logoPrata.png"]];
+    Exercicio *mod2Aula4Exe6 = [[Exercicio alloc] init:202 nome:@"Simbologia das Pausas" nomeView:@"Mod2Aula4Exe6ViewController" experiencia:10 pontuacaoMaxima:10  :[UIImage imageNamed:@"logoPrata.png"]];
     
 //Falas
     Fala *mod2Aula4Exe6fala1 = [[Fala alloc] init];
@@ -1274,12 +1274,12 @@ Exercicio *mod2Aula1Exe2 = [[Exercicio alloc] init:202 nome:@"Praticando as Nota
     mod2Aula4.nome = @"Notação nota/pausa";
     mod2Aula4.capa = [UIImage imageNamed:@"aula.png"];
     [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe1];
-    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe2];
-    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe3];
-    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe4];
-    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe5];
+//    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe2];
+//    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe3];
+//    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe4];
+//    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe5];
     [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe6];
-    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe7];
+//    [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe7];
     [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe7Jogo];
     [[mod2Aula4 listaDeExercicios]addObject: mod2Aula4Exe8Jogo];
 

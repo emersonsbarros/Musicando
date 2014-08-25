@@ -308,17 +308,17 @@
         self.notaSol.frame = self.tocaTreco.frame;
         [self.listaLiberaFala addObject:self.estadoAux1];
         
-        [theTimer invalidate];
         [self acaoColisaoNotaSol];
+        
+        [theTimer invalidate];
+        
     }
     
 }
 
 - (void)acaoColisaoNotaSol{
-    //    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"notasPausas" withExtension:@"mp3"];
-    //    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    //
-    //    [[self audioPlayer]play];
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"notasPausas" withExtension:@"mp3"];
+    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
 }
 
 -(void) checkColisaoNotaDo:(NSTimer *) theTimer{
@@ -338,10 +338,10 @@
 }
 
 - (void)acaoColisaoNotaDo{
-    //    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"happybirthdaySamba" withExtension:@"mp3"];
-    //    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: self.caminhoDoAudio error: nil];
-    //
-    //    [[self audioPlayer]play];
+    
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"happybirthdaySamba" withExtension:@"mp3"];
+    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
+    
 }
 
 

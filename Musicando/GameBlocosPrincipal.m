@@ -145,7 +145,7 @@
 //COLISÃO TOCATRECO
         if((segundoCorpoFisico.categoryBitMask & tocaTrecoCategoria) != 0){
             
-            NSLog(@"Pos %fx - %fy", blocoNota.position.x, blocoNota.position.y);
+            NSLog(@"TOCA TRECO Pos %fx - %fy", blocoNota.position.x, blocoNota.position.y);
             if (((blocoNota.position.y <= 600) && (blocoNota.position.x >= 300 && blocoNota.position.x <= 755))) {
 
             //NOTAS CERTAS
@@ -167,6 +167,7 @@
                     [NSTimer scheduledTimerWithTimeInterval: 1.0 target:self selector:@selector(criaBlocoNotaMusical) userInfo:nil repeats:NO];
                     [[self botaoCairNota] setAlpha: 1];
                     self.podeCair = YES;
+                    return;
         
                 //NOTAS ERRADAS
                 }else if([blocoNota.name isEqualToString:@"Dor"] || [blocoNota.name isEqualToString:@"Rir"] || [blocoNota.name isEqualToString:@"Mou"] || [blocoNota.name isEqualToString:@"Fê"] || [blocoNota.name isEqualToString:@"Sou"] || [blocoNota.name isEqualToString:@"Lú"] || [blocoNota.name isEqualToString:@"Sir"]){
@@ -174,20 +175,22 @@
                 NSLog(@"Colidiu nota errada com tocatreco - %@", blocoNota.name);
                 [NSTimer scheduledTimerWithTimeInterval: 1.0 target:self selector:@selector(gameOver) userInfo:nil repeats:NO];
 
+                return;
                 }
             }
 //COLISAO NO CHÃO
         }else if((segundoCorpoFisico.categoryBitMask & pisoCategoria)!=0){
             
-            NSLog(@"Pos %fx - %fy", blocoNota.position.x, blocoNota.position.y);
-             if (blocoNota.position.y <= 600 && ((blocoNota.position.x <= 915) || (blocoNota.position.x >= 670))){
+            NSLog(@"CHAO Pos %fx - %fy", blocoNota.position.x, blocoNota.position.y);
+             if (blocoNota.position.y <= 600 && ((blocoNota.position.x <= 915) || (blocoNota.position.x >= 330))){
             
                 //NOTAS CERTAS
                  if([blocoNota.name isEqualToString:@"Dó"] || [blocoNota.name isEqualToString:@"Ré"] || [blocoNota.name isEqualToString:@"Mi"] || [blocoNota.name isEqualToString:@"Fá"] || [blocoNota.name isEqualToString:@"Sol"] || [blocoNota.name isEqualToString:@"Lá"] || [blocoNota.name isEqualToString:@"Si"]){
                 
                     NSLog(@"Colidiu com o chão nota certa - %@", blocoNota.name);
                     [NSTimer scheduledTimerWithTimeInterval: 1.0 target:self selector:@selector(gameOver) userInfo:nil repeats:NO];
-            
+                     return;
+
                 //NOTAS ERRADAS
                  }else if([blocoNota.name isEqualToString:@"Dor"] || [blocoNota.name isEqualToString:@"Rir"] || [blocoNota.name isEqualToString:@"Mou"] || [blocoNota.name isEqualToString:@"Fê"] || [blocoNota.name isEqualToString:@"Sou"] || [blocoNota.name isEqualToString:@"Lú"] || [blocoNota.name isEqualToString:@"Sir"]){
                 
@@ -207,6 +210,7 @@
                         [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(criaBlocoNotaMusical) userInfo:nil repeats:NO];
                         [[self botaoCairNota] setAlpha: 1];
                         self.podeCair = YES;
+                     return;
 
                 }
             }
@@ -340,12 +344,12 @@
     self.base.zPosition = 3;
 
     self.coluna1.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.coluna1.size];
-    //self.coluna1.physicsBody.dynamic = NO;
+    self.coluna1.physicsBody.dynamic = NO;
     self.coluna2.physicsBody.categoryBitMask = coluna;
     self.coluna2.physicsBody.contactTestBitMask = blocoNotaCorreta;
 
     self.coluna2.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.coluna2.size];
-    //self.coluna2.physicsBody.dynamic = NO;
+    self.coluna2.physicsBody.dynamic = NO;
     self.coluna2.physicsBody.categoryBitMask = coluna;
     self.coluna2.physicsBody.contactTestBitMask = blocoNotaCorreta;
 

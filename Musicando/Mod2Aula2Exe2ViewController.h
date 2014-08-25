@@ -29,7 +29,7 @@
 @property  UIView *viewGesturePassaFala;
 @property UIImageView *imagemDoMascote;
 
-@property (strong, nonatomic) IBOutlet UIImageView *tocaTreco;
+@property (strong, nonatomic) IBOutlet UIView *tocaTreco;
 
 @property (strong, nonatomic) IBOutlet UIImageView *imgPausa1;
 @property (strong, nonatomic) IBOutlet UIImageView *imgPausa2;

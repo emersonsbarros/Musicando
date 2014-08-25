@@ -41,11 +41,35 @@
 
 -(void)viewDidDisappear:(BOOL)animated{
     [[Sinfonia sharedManager]pararPlayerPartitura];
-    [self.listaNotasEdicao removeAllObjects];
     [Sinfonia sharedManager].estadoBotaoPlay = true;
     [Sinfonia sharedManager].estadoBotaoLimpar = true;
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    nomeInstrumento = @"Piano";
+    
+    self.listaNotasEdicao = [[NSMutableArray alloc]init];
+    
+    [[DesenhaPartitura sharedManager]desenhaContornoPartituraParaEdicao];
+    self.scrollEdicao.delegate = self;
+    
+    nota = [[DataBaseNotaPadrao sharedManager]retornaNotaPadrao:@"seminima"];
+    
+    
+    for (UIImageView *t in [DesenhaPartitura sharedManager].listaImagensTracoPentagrama) {
+        [[self scrollEdicao]addSubview:t];
+    }
+    
+    
+    posicaoX = 150;
+    espacamentoEntreNotas = 110;
+    limiteDeNotas = 100;
+    [self addGesturePrintarNotasTela];
+    
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -798,16 +822,26 @@
     
     float posx = touchPoint.x;
     float posy = touchPoint.y;
+    
     Nota *not = [self retornaPosicaoNotaEdicao:posx:posy];
     
     if((not != NULL)&&(self.listaNotasEdicao.count <= limiteDeNotas)){
         [DesenhaPartitura sharedManager].notaAtualEdicao = not;
         
-        [[self scrollEdicao]addSubview:[not imagemNota]];
-        [self.listaNotasEdicao addObject:not];
         listaSons = [[NSMutableArray alloc]init];
         [listaSons addObject:not];
         [[Sinfonia sharedManager]tocarUmaNota:listaSons:nomeInstrumento];
+        
+        [self.listaNotasEdicao addObject:not];
+        
+        for(Nota *img in self.listaNotasEdicao){
+            [[Sinfonia sharedManager]desapareceEfeito:img];
+        }
+        
+        [[self scrollEdicao]addSubview:[not imagemNota]];
+        
+        self.txtQtd.text = [NSString stringWithFormat:@"%d",self.listaNotasEdicao.count];
+        
         [[self scrollEdicao] setContentSize:CGSizeMake((self.scrollEdicao.bounds.size.width+posicaoX)-700, self.scrollEdicao.bounds.size.height)];
         
         if(self.listaNotasEdicao.count > 5){
@@ -868,7 +902,8 @@
 - (IBAction)tocarTodasNoras:(id)sender {
     
     if([Sinfonia sharedManager].estadoBotaoPlay){
-        [[Sinfonia sharedManager]pararPlayerPartitura];
+        
+        [[Sinfonia sharedManager]desapareceEfeito:[self.listaNotasEdicao lastObject]];
         
         self.contadorIndiceNota = 0;
         self.posOriginalScroll = self.scrollEdicao.contentOffset;
@@ -883,6 +918,7 @@
 - (IBAction)limparNotasPartituraEdicao:(id)sender {
     
     if([Sinfonia sharedManager].estadoBotaoLimpar){
+        
         if(self.listaNotasEdicao.count != 0){
             for (UIView *subView in self.scrollEdicao.subviews)
             {
@@ -897,11 +933,10 @@
                 }
             }
             
-            [[Sinfonia sharedManager]pararPlayerPartitura];
-            
-            
+    
+        
             self.listaNotasEdicao = [[NSMutableArray alloc]init];
-            
+             self.txtQtd.text = [NSString stringWithFormat:@"%d",self.listaNotasEdicao.count];
             
             CGPoint bottomOffset = CGPointMake(0,0);
             [[self scrollEdicao] setContentOffset:bottomOffset animated:YES];
@@ -984,6 +1019,7 @@
                          }
                          
                          [self.listaNotasEdicao removeObject:notaParaEdicao];
+                         NSLog(@"qt %d ",self.listaNotasEdicao.count);
                      }];
     
 }
@@ -999,33 +1035,6 @@
     
     
     [notaSegura.imagemNota addGestureRecognizer:swipeGesture2];
-    
-}
-
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    nomeInstrumento = @"Piano";
-    
-    self.listaNotasEdicao = [[NSMutableArray alloc]init];
-    
-    [[DesenhaPartitura sharedManager]desenhaContornoPartituraParaEdicao];
-    self.scrollEdicao.delegate = self;
-    
-    nota = [[DataBaseNotaPadrao sharedManager]retornaNotaPadrao:@"seminima"];
-    
-    
-    for (UIImageView *t in [DesenhaPartitura sharedManager].listaImagensTracoPentagrama) {
-        [[self scrollEdicao]addSubview:t];
-    }
-    
-    
-    posicaoX = 150;
-    espacamentoEntreNotas = 110;
-    limiteDeNotas = 100;
-    [self addGesturePrintarNotasTela];
     
 }
 

@@ -299,6 +299,7 @@
     if(auxIndiceNotas >= [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]count]){
         self.estadoBotaoLimpar = true;
         self.estadoBotaoPlay = true;
+        
     }else{
         
         Nota *nota = [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]objectAtIndex:auxIndiceNotas];

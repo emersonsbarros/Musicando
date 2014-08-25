@@ -215,36 +215,36 @@
 
 -(void)carregaListaPartituras{
     self.listaPartituras = [[NSMutableArray alloc]init];
-    [self.listaPartituras addObject:@"Video_Games_ENDING"];
+    //[self.listaPartituras addObject:@"Video_Games_ENDING"];
     [self.listaPartituras addObject:@"5th_Symphony"];
     [self.listaPartituras addObject:@"asa"];
-    [self.listaPartituras addObject:@"atireiGato"];
+    //[self.listaPartituras addObject:@"atireiGato"];
     [self.listaPartituras addObject:@"Bachviolao"];
     [self.listaPartituras addObject:@"Beethoven-Fur Elise"];
-    [self.listaPartituras addObject:@"caribe"];
+    //[self.listaPartituras addObject:@"caribe"];
     [self.listaPartituras addObject:@"cavaleiros"];
     [self.listaPartituras addObject:@"chefao"];
     [self.listaPartituras addObject:@"et"];
     [self.listaPartituras addObject:@"fantasma"];
     [self.listaPartituras addObject:@"ghost"];
-    [self.listaPartituras addObject:@"harry_potter_theme_song"];
+    //[self.listaPartituras addObject:@"harry_potter_theme_song"];
     [self.listaPartituras addObject:@"heyjude"];
     [self.listaPartituras addObject:@"indiana"];
-    [self.listaPartituras addObject:@"kokiri-forest"];
+    //[self.listaPartituras addObject:@"kokiri-forest"];
     [self.listaPartituras addObject:@"lepo"];
-    [self.listaPartituras addObject:@"mario"];
-    [self.listaPartituras addObject:@"lepo"];
+    //[self.listaPartituras addObject:@"mario"];
+    //[self.listaPartituras addObject:@"lepo"];
     [self.listaPartituras addObject:@"Mozart-Marcha Turca"];
     [self.listaPartituras addObject:@"natal"];
     [self.listaPartituras addObject:@"ninar"];
-    [self.listaPartituras addObject:@"nokia"];
+    //[self.listaPartituras addObject:@"nokia"];
     [self.listaPartituras addObject:@"palmeiras"];
     [self.listaPartituras addObject:@"parabens"];
-    [self.listaPartituras addObject:@"simpson"];
-    [self.listaPartituras addObject:@"Song_of_Storms"];
+    //[self.listaPartituras addObject:@"simpson"];
+    //[self.listaPartituras addObject:@"Song_of_Storms"];
     [self.listaPartituras addObject:@"ticofuba"];
     [self.listaPartituras addObject:@"titanic"];
-    [self.listaPartituras addObject:@"vitoria"];
+    //[self.listaPartituras addObject:@"vitoria"];
 }
 
 //Números de seções

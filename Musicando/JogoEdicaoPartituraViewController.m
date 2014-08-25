@@ -53,6 +53,8 @@
             mascote.hidden = NO;
         }
     }
+    
+    
     [MascoteViewController sharedManager].contadorDeFalas = 0;
     
     [self pulaFalaMascote];
@@ -91,7 +93,7 @@
     
     for(UIView *mascote in self.view.subviews){
         if(mascote.tag == 1002 ){
-            mascote.hidden = YES;
+            [mascote removeFromSuperview];
         }
     }
    
@@ -139,6 +141,7 @@
         t.frame = CGRectMake(t.frame.origin.x-150,t.frame.origin.y-150,t.frame.size.width,t.frame.size.height);
     }
     
+    [GameOverViewController sharedManager].view.hidden = YES;
     [[GameOverViewController sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
     
     [self.view addSubview:self.outBtnHome];

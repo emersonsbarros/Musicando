@@ -18,7 +18,7 @@
 #import <CoreMedia/CoreMedia.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <QuartzCore/QuartzCore.h>
-
+#import "DesenhaPartitura.h"
 
 @interface Sinfonia : NSObject < NSXMLParserDelegate > {
     
@@ -108,7 +108,6 @@
 @property int numeroTotalCompassos;
 
 
-
 @property float controleVelocidaTranNota;
 
 -(void)tocarUmaNota:(NSMutableArray*)listaSons :(NSString*)nomeInstrumentoPlist;
@@ -117,6 +116,11 @@
 
 @property BOOL estadoBotaoLimpar;
 @property BOOL estadoBotaoPlay;
+
+
+-(void)desapareceEfeito:(Nota*)notes;
+-(void)mostraEfeito:(Nota*)notes;
+
 
 @end
 

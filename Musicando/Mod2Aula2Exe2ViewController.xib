@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" alpha="0.34999999999999964" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bibliotecaBackground.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="H6O-4H-e1D">
+                <imageView userInteractionEnabled="NO" alpha="0.34999999999999964" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bibliotecaBackground.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="H6O-4H-e1D">
                     <rect key="frame" x="0.0" y="-57" width="1024" height="825"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>

@@ -141,7 +141,7 @@ NSString *UYLKeySpeechText = @"UYLKeySpeechText";
     //Velocidade
     [self selecionarAltura: 2]; //2 = High
     [self selecionarVelocidade: 1]; //1 = 0.5
-    [self selecionarLinguagem: 1];
+    [self selecionarLinguagem: 26];
     
 }
 

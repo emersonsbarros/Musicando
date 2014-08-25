@@ -92,7 +92,7 @@
         <image name="bolaSom.png" width="150" height="150"/>
         <image name="notaMusical.png" width="124" height="150"/>
         <image name="pilar.png" width="320" height="640"/>
-        <image name="ponto.png" width="150" height="101"/>
+        <image name="ponto.png" width="120" height="120"/>
         <image name="relogioPausa.png" width="148" height="150"/>
         <image name="silencioPausa.png" width="531" height="640"/>
     </resources>

@@ -24,11 +24,11 @@
     
 }
 
+@property (weak, nonatomic) IBOutlet UILabel *txtQtdNotas;
+
+
 - (IBAction)tocarTodasNoras:(id)sender;
 - (IBAction)limparNotasPartituraEdicao:(id)sender;
-
-@property (weak, nonatomic) IBOutlet UIButton *outBtnLimpar;
-
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollEdicao;
 

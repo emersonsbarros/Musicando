@@ -73,10 +73,10 @@
     self.testaConversa = self.testaBiblio.exercicioAtual.mascote.listaDeConversas.firstObject;
     self.imagemDoMascote2.image = [[[[Biblioteca sharedManager] exercicioAtual] mascote] imagem].image;
     
-    [[EfeitoFala sharedManager]incializar];
-    Fala *falaAtual = [self.testaConversa.listaDeFalas objectAtIndex:0];
-    NSString *textoFala = falaAtual.conteudo;
-    [[EfeitoFala sharedManager]falar:textoFala];
+//    [[EfeitoFala sharedManager]incializar];
+//    Fala *falaAtual = [self.testaConversa.listaDeFalas objectAtIndex:0];
+//    NSString *textoFala = falaAtual.conteudo;
+//    [[EfeitoFala sharedManager]falar:textoFala];
 
 }
 
@@ -91,7 +91,7 @@
     
     [[EfeitoFala sharedManager]stopAudioFala];
     
-    [[EfeitoTransicao sharedManager]chamaTransicaoPaginaDireita:self.controller];
+    [[EfeitoTransicao sharedManager]chamaTransicaoPaginaEsquerda:self.controller];
     
     [NSTimer scheduledTimerWithTimeInterval:0.0
                                          target:self.controller
@@ -99,11 +99,11 @@
                                        userInfo:nil
                                         repeats:NO];
     
-    [NSTimer scheduledTimerWithTimeInterval: 2.0
-                                     target: self
-                                   selector: @selector(produzSomFala)
-                                   userInfo: nil
-                                    repeats: NO];
+//    [NSTimer scheduledTimerWithTimeInterval: 2.0
+//                                     target: self
+//                                   selector: @selector(produzSomFala)
+//                                   userInfo: nil
+//                                    repeats: NO];
 
     
 }

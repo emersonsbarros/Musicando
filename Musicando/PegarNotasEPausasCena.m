@@ -68,7 +68,7 @@
     self.stringDePontuacao = [[SKLabelNode alloc]init];
     self.stringDePontuacao.fontColor = [UIColor blackColor];
     self.stringDePontuacao.fontSize = 50.0f;
-    self.stringDePontuacao.position = CGPointMake(800, 700+50);
+    self.stringDePontuacao.position = CGPointMake(800, 700-50);
     self.stringDePontuacao.zPosition = 2;
     self.stringDePontuacao.text = @"Pontuação: ";
     self.stringDePontuacao.fontName = @"Marker Felt Thin";
@@ -77,7 +77,7 @@
     self.labelDePontuacao = [[SKLabelNode alloc]init];
     self.labelDePontuacao.fontColor = [UIColor blackColor];
     self.labelDePontuacao.fontSize = 50.0f;
-    self.labelDePontuacao.position = CGPointMake(950, 700+50);
+    self.labelDePontuacao.position = CGPointMake(950, 700-50);
     self.labelDePontuacao.zPosition = 2;
     self.labelDePontuacao.text = [NSString stringWithFormat: @"%d", self.pontuacaoJogadorAtual];
     self.labelDePontuacao.fontName = @"Marker Felt Thin";
@@ -86,7 +86,7 @@
     self.stringDeSimboloMusical = [[SKLabelNode alloc]init];
     self.stringDeSimboloMusical.fontColor = [UIColor blackColor];
     self.stringDeSimboloMusical.fontSize = 50.0f;
-    self.stringDeSimboloMusical.position = CGPointMake(710, 650+50);
+    self.stringDeSimboloMusical.position = CGPointMake(710, 650-50);
     self.stringDeSimboloMusical.zPosition = 2;
     self.stringDeSimboloMusical.text = @"Símbolo: ";
     self.stringDeSimboloMusical.fontName = @"Marker Felt Thin";
@@ -95,7 +95,7 @@
     self.labelDeSimboloMusical = [[SKLabelNode alloc]init];
     self.labelDeSimboloMusical.fontColor = [UIColor blackColor];
     self.labelDeSimboloMusical.fontSize = 50.0f;
-    self.labelDeSimboloMusical.position = CGPointMake(900, 650+50);
+    self.labelDeSimboloMusical.position = CGPointMake(900, 650-50);
     self.labelDeSimboloMusical.zPosition = 2;
     self.labelDeSimboloMusical.text = self.simboloMusicalAtual;
     self.labelDeSimboloMusical.fontName = @"Marker Felt Thin";

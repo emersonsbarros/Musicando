@@ -211,7 +211,7 @@
         self.imgNotaComPausa.frame = self.imgTocaTreco.frame;
         [self.listaLiberaFala addObject:self.estadoAux1];
         
-        [self tocarMusicaNotasSemPausa];
+        //[self tocarMusicaNotasSemPausa];
         
         [theTimer invalidate];
     }

@@ -65,6 +65,7 @@
     
     [[EfeitoPlayer sharedManager]stopAudio];
     
+    
     for(UIView *img in contr.view.subviews){
         img.alpha = 1;
         [img.layer removeAllAnimations];
@@ -80,6 +81,9 @@
     [contr removeFromParentViewController];
     [contr didMoveToParentViewController:nil];
      contr = nil;
+    
+    
+    [[EfeitoFala sharedManager]stopAudioFala];
    
 }
 
