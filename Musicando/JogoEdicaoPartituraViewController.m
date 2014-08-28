@@ -26,20 +26,54 @@
     
 }
 
+//- (void)viewDidLoad
+//{
+//    [super viewDidLoad];
+//    
+//    self.viewSimulador.layer.zPosition = 10;
+//    
+//    self.contadorPontos = 0;
+//    
+//    //Add barra,Mascote,View de Retornar Pagina ao Xib
+//    [[EfeitoComponeteView sharedManager]addComponentesViewMascote:self:[Biblioteca sharedManager].exercicioAtual];
+//    self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
+//    //Cria Seletor e manda ele como paramentro para outros View Controllers poderem usar
+//    [self addGesturePassaFalaMascote:self.viewGesturePassaFala];
+//    
+//    
+//    //Biblioteca
+//    self.lblFalaDoMascote = [MascoteViewController sharedManager].lblFalaDoMascote;
+//    self.testaBiblio = [MascoteViewController sharedManager].testaBiblio;
+//    self.testaConversa = [MascoteViewController sharedManager].testaConversa;
+//    self.imagemDoMascote = [MascoteViewController sharedManager].imagemDoMascote2;
+//    [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote];
+//    
+//    for(UIView *mascote in self.view.subviews){
+//        if(mascote.tag == 1002 ){
+//            mascote.hidden = NO;
+//        }
+//    }
+//    
+//    
+//    [MascoteViewController sharedManager].contadorDeFalas = 0;
+//    
+//    [self pulaFalaMascote];
+//    
+//    [self inciaComponetes];
+//
+//}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.viewSimulador.layer.zPosition = 10;
-    
-    self.contadorPontos = 0;
+    // Do any additional setup after loading the view from its nib.
     
     //Add barra,Mascote,View de Retornar Pagina ao Xib
-    [[EfeitoComponeteView sharedManager]addComponentesViewMascote:self:[Biblioteca sharedManager].exercicioAtual];
+    [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
     self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
+    
     //Cria Seletor e manda ele como paramentro para outros View Controllers poderem usar
     [self addGesturePassaFalaMascote:self.viewGesturePassaFala];
-    
     
     //Biblioteca
     self.lblFalaDoMascote = [MascoteViewController sharedManager].lblFalaDoMascote;
@@ -48,19 +82,25 @@
     self.imagemDoMascote = [MascoteViewController sharedManager].imagemDoMascote2;
     [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote];
     
-    for(UIView *mascote in self.view.subviews){
-        if(mascote.tag == 1002 ){
-            mascote.hidden = NO;
-        }
-    }
-    
-    
-    [MascoteViewController sharedManager].contadorDeFalas = 0;
-    
     [self pulaFalaMascote];
     
-    [self inciaComponetes];
+    
+}
 
+
+-(void)chamaMetodosFala0{
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:1.0f:self.viewGesturePassaFala];
+}
+
+-(void)chamaMetodosFala1{
+    
+    
+    for(UIView *view in self.view.subviews){
+        if((view.tag == 23) || (view.tag = 22)){view.hidden = NO;
+        }else [view removeFromSuperview];
+    }
+    
+    [self inciaComponetes];
 }
 
 
@@ -81,23 +121,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)chamaMetodosFala0{
-  
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:1.0f:self.viewGesturePassaFala];
-    
-    
-}
 
--(void)chamaMetodosFala1{
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    
-    for(UIView *mascote in self.view.subviews){
-        if(mascote.tag == 1002 ){
-            [mascote removeFromSuperview];
-        }
-    }
-   
-}
 
 //Gerencia o passa de falas
 -(void)pulaFalaMascote{
@@ -131,16 +155,19 @@
 
 //////////////////// JOGO /////////////////////
 
+
 -(void)inciaComponetes{
 
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
     self.compor = [sb instantiateViewControllerWithIdentifier:@"ComposicaoPartitura"];
     [self addChildViewController:self.compor];
     [self.view addSubview:self.compor.view];
+    
     for (UIImageView *t in [DesenhaPartitura sharedManager].listaImagensTracoPentagrama) {
         t.frame = CGRectMake(t.frame.origin.x-150,t.frame.origin.y-150,t.frame.size.width,t.frame.size.height);
     }
     
+  
     [GameOverViewController sharedManager].view.hidden = YES;
     [[GameOverViewController sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
     

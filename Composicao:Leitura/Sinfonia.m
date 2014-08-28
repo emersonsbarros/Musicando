@@ -129,6 +129,7 @@
     
     self.instrumento = [[DataBaseInstrumento sharedManager]retornaInstrumento:nomeInstrumentoPlist];
     
+        
     [_soundBankPlayer setSoundBank:self.instrumento.nomeInstrumento];
 //    _soundBankPlayer2 = [[SoundBankPlayer alloc] init];
 //    [_soundBankPlayer2 setSoundBank:self.instrumento.nomeInstrumento];
@@ -149,6 +150,7 @@
     recebeOrdemNotasDoInstrumento = self.instrumento.ordemNotasInstrumento;
 
     auxIndiceNotasPausa = 0;
+    
     
     [self tocarPlayerPartitura];
 }
