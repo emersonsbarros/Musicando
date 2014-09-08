@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Exercicio.h"
-#import "EfeitoTransicao.h"
+#import "ExercicioTransicao.h"
 #import "MascoteViewController.h"
 
 @interface RetornaPaginaViewController : UIViewController 

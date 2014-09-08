@@ -17,8 +17,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-   // [self performSelector:@selector(lacoCaindoNotas) withObject:NULL afterDelay:0.1];
+    
+    [InicializaProjeto sharedManager];
     
 }
 
@@ -55,7 +55,7 @@
         UIImage *image1 = [UIImage imageNamed:@"notaCaraPausaSom.png"];
         UIImage *image2 = [UIImage imageNamed:@"notaCaraTocaSom.png"];
         NSArray *imageArray = [NSArray arrayWithObjects:image1,image2,nil];
-        [[EfeitoImagem sharedManager]addAnimacaoSprite:imageArray:carinha];
+        [[ExercicioImagem sharedManager]addAnimacaoSprite:imageArray:carinha];
         
         notaCaindo.frame = CGRectMake(posX,500,notaCaindo.frame.size.width+40,notaCaindo.frame.size.height+70);
         [[self listaImagensCai]addObject:notaCaindo];

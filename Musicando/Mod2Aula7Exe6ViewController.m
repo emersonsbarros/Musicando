@@ -31,7 +31,7 @@
 -(void)viewDidDisappear:(BOOL)animated {
     
     [super viewDidDisappear: animated];
-    [[EfeitoTransicao sharedManager]finalizaExercicio:self];
+    [[ExercicioTransicao sharedManager]finalizaExercicio:self];
     
 }
 
@@ -62,7 +62,7 @@
     //[self.listaImangesColisao addObject: self.harmonia];
     
     //Adiciona gesture ARRASTAR em todas imagens dessa lista
-    [[EfeitoImagem sharedManager]addGesturePainImagens: self.listaImangesColisao];
+    [[ExercicioImagem sharedManager]addGesturePainImagens: self.listaImangesColisao];
     
     //Inicia lista para liberar falas e auxiliares
     self.listaLiberaFala = [[NSMutableArray alloc]init];
@@ -84,7 +84,7 @@
     [self.view addSubview: self.lblFalaDoMascote];
     
     //Mascote começa a pular
-    [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando: self.imagemDoMascote];
+    [[ExercicioMascote sharedManager]chamaAnimacaoMascotePulando: self.imagemDoMascote];
 }
 
 //Adiciona gesture ao passar de fala a view que fica por cima do mascote
@@ -107,7 +107,7 @@
     
     if(self.contadorDeFalas == contadorMaximo){
         NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
-        [[EfeitoTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
+        [[ExercicioTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
     }
     
     if(self.contadorDeFalas < contadorMaximo){
@@ -142,28 +142,28 @@
 
 //Intro
 -(void)chamaMetodosFala0 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 -(void)chamaMetodosFala1 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 -(void)chamaMetodosFala2 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 -(void)chamaMetodosFala3 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 -(void)chamaMetodosFala4 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 

@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
 
-#import "EfeitoImagem.h"
+#import "ExercicioImagem.h"
 
-@implementation EfeitoImagem
+@implementation ExercicioImagem
 
 //Singleton
-+(EfeitoImagem*)sharedManager{
-    static EfeitoImagem *mascote = nil;
++(ExercicioImagem*)sharedManager{
+    static ExercicioImagem *mascote = nil;
     if(!mascote){
         mascote = [[super allocWithZone:nil] init];
     }
@@ -179,7 +179,7 @@
 -(void)verficaPulaFala:(NSTimer *) theTimer{
     
     if(self.listaLiberaFala.count == self.qtdColisoes){
-        [[EfeitoMascote sharedManager]chamaAddBrilho:self.imgMascoteAux:0.0f:self.viewGesturePassaFala];
+        [[ExercicioMascote sharedManager]chamaAddBrilho:self.imgMascoteAux:0.0f:self.viewGesturePassaFala];
         [self.listaLiberaFala removeAllObjects];
         [theTimer invalidate];
     }

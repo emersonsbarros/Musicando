@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
 
-#import "EfeitoNotaAnimada.h"
+#import "ExercicioAnimada.h"
 
-@implementation EfeitoNotaAnimada
+@implementation ExercicioAnimada
 
 //Singleton
-+(EfeitoNotaAnimada*)sharedManager{
-    static EfeitoNotaAnimada *mascote = nil;
++(ExercicioAnimada*)sharedManager{
+    static ExercicioAnimada *mascote = nil;
     if(!mascote){
         mascote = [[super allocWithZone:nil] init];
     }
@@ -105,7 +105,7 @@
         UIImage *image1 = [UIImage imageNamed:@"notaCaraPausaSom.png"];
         UIImage *image2 = [UIImage imageNamed:@"notaCaraTocaSom.png"];
         NSArray *imageArray = [NSArray arrayWithObjects:image1,image2,nil];
-        [[EfeitoImagem sharedManager]addAnimacaoSprite:imageArray:carinha];
+        [[ExercicioImagem sharedManager]addAnimacaoSprite:imageArray:carinha];
         
         notaCaindo.frame = CGRectMake(self.posX,70,notaCaindo.frame.size.width+40,notaCaindo.frame.size.height+70);
         [[self listaImagensCai]addObject:notaCaindo];
@@ -166,7 +166,7 @@
         UIImage *image1 = [UIImage imageNamed:@"notaCaraPausaSom.png"];
         UIImage *image2 = [UIImage imageNamed:@"notaCaraTocaSom.png"];
         NSArray *imageArray = [NSArray arrayWithObjects:image1,image2,nil];
-        [[EfeitoImagem sharedManager]addAnimacaoSprite:imageArray:carinha];
+        [[ExercicioImagem sharedManager]addAnimacaoSprite:imageArray:carinha];
         
         notaCaindo.frame = CGRectMake(posX,-100,notaCaindo.frame.size.width+40,notaCaindo.frame.size.height+70);
         [[self listaImagensCai]addObject:notaCaindo];

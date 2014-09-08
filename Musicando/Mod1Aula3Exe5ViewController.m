@@ -30,7 +30,7 @@
 -(void)viewDidDisappear:(BOOL)animated {
     
     [super viewDidDisappear: animated];
-    [[EfeitoTransicao sharedManager]finalizaExercicio:self];
+    [[ExercicioTransicao sharedManager]finalizaExercicio:self];
     
 }
 
@@ -38,7 +38,7 @@
     [super viewDidLoad];
     
     //Add barra,Mascote,View de Retornar Pagina ao Xib
-    [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
+    [[GerenciadorComponenteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
     self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
     
     
@@ -68,7 +68,7 @@
     [self.listaImangesColisao addObject: self.piano];
 
     //Adiciona gesture ARRASTAR em todas imagens dessa lista
-    [[EfeitoImagem sharedManager]addGesturePainImagens: self.listaImangesColisao];
+    [[ExercicioImagem sharedManager]addGesturePainImagens: self.listaImangesColisao];
     
     //Lista para saber se as colisoes na tela foram feitas p/ ir na prox fala
     self.listaLiberaFala = [[NSMutableArray alloc]init];
@@ -81,7 +81,7 @@
     self.testaBiblio = [MascoteViewController sharedManager].testaBiblio;
     self.testaConversa = [MascoteViewController sharedManager].testaConversa;
     self.imagemDoMascote = [MascoteViewController sharedManager].imagemDoMascote2;
-    [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote];
+    [[ExercicioMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote];
     
     [self pulaFalaMascote];
 
@@ -98,7 +98,7 @@
     
     if([MascoteViewController sharedManager].contadorDeFalas == contadorMaximo){
         NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
-        [[EfeitoTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
+        [[ExercicioTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
     }
     
     if([MascoteViewController sharedManager].contadorDeFalas < contadorMaximo){
@@ -144,25 +144,25 @@
 
 //Intro Harmonia
 -(void)chamaMetodosFala0 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Definicao
 -(void)chamaMetodosFala1 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Complemento
 -(void)chamaMetodosFala2 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:2.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:2.0f:self.viewGesturePassaFala];
 }
 
 //Tocatreco com harmonia e melodia
 -(void)chamaMetodosFala3 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Verifica se as imagens colidiram e add em uma lista que verificará se todas tiveram colisao
     [NSTimer scheduledTimerWithTimeInterval: 0.5
@@ -184,29 +184,29 @@
     self.melodia.hidden = NO;
     
     //Verifica o passar fala, passando a qtd de objetos que colidem*/
-    [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote :self.viewGesturePassaFala:self.listaLiberaFala:2];
+    [[ExercicioImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote :self.viewGesturePassaFala:self.listaLiberaFala:2];
 }
 
 //Complemento
 -(void)chamaMetodosFala4 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
-    [[EfeitoPlayer sharedManager]stopAudio];
+    [[ExercicioPlayer sharedManager]stopAudio];
     self.harmonia.hidden = YES;
     self.melodia.hidden = YES;
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Complemento
 -(void)chamaMetodosFala5 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //TocaTreco e instrumentos
 -(void)chamaMetodosFala6 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Verifica se as imagens colidiram e add em uma lista que verificará se todas tiveram colisao
     [NSTimer scheduledTimerWithTimeInterval: 0.5
@@ -228,25 +228,25 @@
     self.teclado.hidden = NO;
     
     //Verifica o passar fala, passando a qtd de objetos que colidem
-    [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote :self.viewGesturePassaFala:self.listaLiberaFala:2];
+    [[ExercicioImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote :self.viewGesturePassaFala:self.listaLiberaFala:2];
 }
 
 //Complemento
 -(void)chamaMetodosFala7 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
-    [[EfeitoPlayer sharedManager]stopAudio];
+    [[ExercicioPlayer sharedManager]stopAudio];
     self.tocaTreco.hidden = YES;
     self.piano.hidden = YES;
     self.teclado.hidden = YES;
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:3.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:3.0f:self.viewGesturePassaFala];
 }
 
 //Fala final
 -(void)chamaMetodosFala8 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 
@@ -271,8 +271,8 @@
 
 - (void)acaoColisaoHarmonia{
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"acordesViolao" withExtension:@"wav"];
-    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
-    [[EfeitoPlayer sharedManager]playAudios];
+    [[ExercicioPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[ExercicioPlayer sharedManager]playAudios];
 }
 
 -(void) checkColisaoMelodia:(NSTimer *) theTimer{
@@ -293,8 +293,8 @@
 
 - (void)acaoColisaoMelodia{
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"escalaFlauta" withExtension:@"wav"];
-    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
-    [[EfeitoPlayer sharedManager]playAudios];
+    [[ExercicioPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[ExercicioPlayer sharedManager]playAudios];
 }
 
 
@@ -316,8 +316,8 @@
 
 - (void)acaoColisaoTeclado{
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"tecladoEletrico" withExtension:@"wav"];
-    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
-    [[EfeitoPlayer sharedManager]playAudios];
+    [[ExercicioPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[ExercicioPlayer sharedManager]playAudios];
 }
 
 -(void) checkColisaoPiano:(NSTimer *) theTimer{
@@ -338,8 +338,8 @@
 
 - (void)acaoColisaoPiano{
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"escalaPiano3AOitava" withExtension:@"wav"];
-    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
-    [[EfeitoPlayer sharedManager]playAudios];
+    [[ExercicioPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[ExercicioPlayer sharedManager]playAudios];
 }
 
 

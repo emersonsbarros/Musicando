@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
 
-#import "EfeitoTransicao.h"
+#import "ExercicioTransicao.h"
 
-@implementation EfeitoTransicao
+@implementation ExercicioTransicao
 
 
 //Singleton
-+(EfeitoTransicao*)sharedManager{
-    static EfeitoTransicao *mascote = nil;
++(ExercicioTransicao*)sharedManager{
+    static ExercicioTransicao *mascote = nil;
     if(!mascote){
         mascote = [[super allocWithZone:nil] init];
     }
@@ -63,7 +63,7 @@
 //Remove todas animacoes do ViewController
 -(void)finalizaExercicio:(UIViewController*)contr{
     
-    [[EfeitoPlayer sharedManager]stopAudio];
+    [[ExercicioPlayer sharedManager]stopAudio];
     
     
     for(UIView *img in contr.view.subviews){
@@ -83,7 +83,7 @@
      contr = nil;
     
     
-    [[EfeitoFala sharedManager]stopAudioFala];
+    [[ExercicioFala sharedManager]stopAudioFala];
    
 }
 

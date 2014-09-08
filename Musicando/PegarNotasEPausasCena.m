@@ -43,7 +43,7 @@
         [self carregarPrimeirosComponentes];
         
         NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"bensound-goinghigher" ofType:@"mp3"]];
-        [[EfeitoPlayer sharedManager]playAudio:musicFile:-1];
+        [[ExercicioPlayer sharedManager]playAudio:musicFile:-1];
 
         
         
@@ -158,8 +158,8 @@
         segundoCorpoFisico = contact.bodyA;
     }
     
-    NSLog(@"Simbolo Pedido %@", self.simboloMusicalAtual);
-    NSLog(@"No de colisao %@", primeiroCorpoFisico.node.name);
+//    NSLog(@"Simbolo Pedido %@", self.simboloMusicalAtual);
+//    NSLog(@"No de colisao %@", primeiroCorpoFisico.node.name);
 
     
     //VERIFICADOR DAS COLISÕES
@@ -171,7 +171,7 @@
             
                 //SIMBOLO CERTO
                 if([primeiroCorpoFisico.node.name isEqual: [self simboloMusicalAtual]]){
-                    NSLog(@"%@ colidiu com mascote - %fx | %fy", simbolo.name, simbolo.position.x, simbolo.position.y);
+                    //NSLog(@"%@ colidiu com mascote - %fx | %fy", simbolo.name, simbolo.position.x, simbolo.position.y);
                     
                     //Remove o simbolo da view
                     [primeiroCorpoFisico.node removeFromParent];
@@ -182,7 +182,7 @@
                     
                 //SIMBOLO ERRADO
                 }else{
-                    NSLog(@"GAMEOVER %@ colidiu com mascote - %fx | %fy", simbolo.name, simbolo.position.x, simbolo.position.y);
+                    //NSLog(@"GAMEOVER %@ colidiu com mascote - %fx | %fy", simbolo.name, simbolo.position.x, simbolo.position.y);
                     [self gameOver];
                     
                 }
@@ -195,12 +195,12 @@
             
                 //NOTAS CERTAS
                 if([primeiroCorpoFisico.node.name isEqual: [self simboloMusicalAtual]]){
-                    NSLog(@"GAMEOVER %@ colidiu com chao - %fx | %fy", simbolo.name, simbolo.position.x, simbolo.position.y);
+                   // NSLog(@"GAMEOVER %@ colidiu com chao - %fx | %fy", simbolo.name, simbolo.position.x, simbolo.position.y);
                     [self gameOver];
                     
                 //NOTAS ERRADAS
                 }else{
-                    NSLog(@"%@ colidiu com chao", simbolo.name);
+                    //NSLog(@"%@ colidiu com chao", simbolo.name);
                     //Remove o simbolo da view
                     [primeiroCorpoFisico.node removeFromParent];
                     
@@ -326,7 +326,7 @@
     simbolo.physicsBody.contactTestBitMask = pisoCategoria | mascoteCategoria;
     simbolo.physicsBody.categoryBitMask = simboloMusicalCorreto;
     
-    NSLog(@"Simbolo 1 %@",simbolo.name);
+    //NSLog(@"Simbolo 1 %@",simbolo.name);
     
     [simbolo addChild: self.simboloMusicalPraCair1];
     [self addChild: simbolo];
@@ -375,7 +375,7 @@
     simbolo.physicsBody.contactTestBitMask = pisoCategoria | mascoteCategoria;
     simbolo.physicsBody.categoryBitMask = simboloMusicalCorreto;
     
-    NSLog(@"Simbolo 2 %@", simbolo.name);
+    //NSLog(@"Simbolo 2 %@", simbolo.name);
     
     [simbolo addChild: self.simboloMusicalPraCair2];
     [self addChild: simbolo];
@@ -424,7 +424,7 @@
     simbolo.physicsBody.contactTestBitMask = pisoCategoria | mascoteCategoria;
     simbolo.physicsBody.categoryBitMask = simboloMusicalCorreto;
     
-    NSLog(@"Simbolo 3 %@", simbolo.name);
+    //NSLog(@"Simbolo 3 %@", simbolo.name);
 
     [simbolo addChild: self.simboloMusicalPraCair3];
     [self addChild: simbolo];
@@ -583,7 +583,7 @@
 -(void)gameOver{
     [[GameOverViewController sharedManager]gameOverParaUmaCena].view.hidden = NO;
     [self pausaJogo];
-    [[EfeitoPlayer sharedManager]stopAudio];
+    [[ExercicioPlayer sharedManager]stopAudio];
 
 }
 

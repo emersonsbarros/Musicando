@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
 
-#import "EfeitoMascote.h"
+#import "ExercicioMascote.h"
 
-@implementation EfeitoMascote
+@implementation ExercicioMascote
 
 //Singleton
-+(EfeitoMascote*)sharedManager{
-    static EfeitoMascote *mascote = nil;
++(ExercicioMascote*)sharedManager{
+    static ExercicioMascote *mascote = nil;
     if(!mascote){
         mascote = [[super allocWithZone:nil] init];
     }

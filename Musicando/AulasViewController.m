@@ -21,11 +21,55 @@
     return self;
 }
 
+
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }
 
+
+- (void)viewDidLoad{
+    
+    [super viewDidLoad];
+    
+    self.listaAulas = [[NSMutableArray alloc]init];
+    self.listaExercicios = [[NSMutableArray alloc]init];
+    
+    [self carregaAulas];
+    
+}
+
+-(void)viewDidDisappear:(BOOL)animated {
+    
+    [super viewDidDisappear: animated];
+    
+    [self retiraViewExericios];
+    
+    for (UIView *subView in self.listaAulas){
+        [subView removeFromSuperview];
+    }
+    
+    [self.listaExercicios removeAllObjects];
+    [self.listaAulas removeAllObjects];
+}
+
+
+- (void)didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+
 -(void)chamaStoryBoardExercicio:(id)sender{
+    
+    [self retiraViewExericios];
+    for (UIView *subView in self.listaAulas){
+        [subView removeFromSuperview];
+    }
+    [self.listaExercicios removeAllObjects];
+    [self.listaAulas removeAllObjects];
+    
+    
     
     Exercicio *button = sender;
     id object = [[NSClassFromString([button nomeView]) alloc]initWithNibName:[button nomeView] bundle:nil];
@@ -83,13 +127,13 @@
     [Biblioteca sharedManager].aulaAtual = button;
     
     for (UIView *subView in self.listaAulas){
-        [[EfeitoImagem sharedManager]hiddenYesEmDegrade:subView];
+        [[ExercicioImagem sharedManager]hiddenYesEmDegrade:subView];
     }
     
     [self carregaExercicios];
     self.viewExercicios.layer.zPosition = +1;
     
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.viewExercicios];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.viewExercicios];
     
 }
 
@@ -115,8 +159,8 @@
         exerc.descricaoBotao.textColor = [UIColor whiteColor];
         exerc.descricaoBotao.textAlignment = NSTextAlignmentCenter;
         exerc.descricaoBotao.numberOfLines = 3;
-        [exerc addSubview:exerc.descricaoBotao];
         
+        [exerc addSubview:exerc.descricaoBotao];
         [[self viewExercicios] addSubview: exerc];
         
         [self.listaExercicios addObject:exerc];
@@ -133,15 +177,6 @@
         indice += 1;
     }
 }
-
-//-(void)efeitoDescer{
-//    
-//    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(retiraViewExericios)];
-//    singleTap.numberOfTouchesRequired = 1;
-//    self.viewExercicios.userInteractionEnabled = YES;
-//    [self.viewExercicios addGestureRecognizer:singleTap];
-//    
-//}
 
 -(void)retiraViewExericios{
     
@@ -161,8 +196,9 @@
     }
     
     for (UIView *subView in self.listaAulas){
-        [[EfeitoImagem sharedManager]hiddenNoEmDegrade:subView];
+        [[ExercicioImagem sharedManager]hiddenNoEmDegrade:subView];
     }
+    
     [self.listaExercicios removeAllObjects];
 }
 
@@ -171,37 +207,6 @@
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
-
-- (void)viewDidLoad{
-    
-    [super viewDidLoad];
-    
-    self.listaAulas = [[NSMutableArray alloc]init];
-    self.listaExercicios = [[NSMutableArray alloc]init];
-    
-    [self carregaAulas];
-    
-}
-
--(void)viewDidDisappear:(BOOL)animated {
-    
-    [super viewDidDisappear: animated];
-    
-    [self retiraViewExericios];
-    
-    for (UIView *subView in self.listaAulas){
-        [subView removeFromSuperview];
-    }
-    
-    [self.listaExercicios removeAllObjects];
-    [self.listaAulas removeAllObjects];
-}
-
-
-- (void)didReceiveMemoryWarning{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 

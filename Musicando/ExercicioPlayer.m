@@ -6,15 +6,15 @@
 //  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
 //
 
-#import "EfeitoPlayer.h"
+#import "ExercicioPlayer.h"
 
-@implementation EfeitoPlayer
+@implementation ExercicioPlayer
 
 
 
 //Singleton
-+(EfeitoPlayer*)sharedManager{
-    static EfeitoPlayer *mascote = nil;
++(ExercicioPlayer*)sharedManager{
+    static ExercicioPlayer *mascote = nil;
     if(!mascote){
         mascote = [[super allocWithZone:nil] init];
     }

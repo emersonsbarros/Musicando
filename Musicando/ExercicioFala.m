@@ -30,10 +30,10 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#import "EfeitoFala.h"
+#import "ExercicioFala.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface EfeitoFala () <AVSpeechSynthesizerDelegate>
+@interface ExercicioFala () <AVSpeechSynthesizerDelegate>
 
 @property (strong, nonatomic) NSArray *languageCodes;
 @property (strong, nonatomic) NSDictionary *languageDictionary;
@@ -63,7 +63,7 @@ typedef NS_ENUM(NSInteger, UYLPitchControlIndex)
 
 @end
 
-@implementation EfeitoFala
+@implementation ExercicioFala
 
 NSString *UYLPrefKeySelectedSpeed = @"UYLPrefKeySelectedSpeed";
 NSString *UYLPrefKeySelectedPitch = @"UYLPrefKeySelectedPitch";
@@ -72,8 +72,8 @@ NSString *UYLKeySpeechText = @"UYLKeySpeechText";
 
 
 //Singleton
-+(EfeitoFala*)sharedManager{
-    static EfeitoFala *mascote = nil;
++(ExercicioFala*)sharedManager{
+    static ExercicioFala *mascote = nil;
     if(!mascote){
         mascote = [[super allocWithZone:nil] init];
     }

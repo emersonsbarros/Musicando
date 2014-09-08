@@ -22,7 +22,7 @@
 -(void)viewDidDisappear:(BOOL)animated {
     
     [super viewDidDisappear: animated];
-    [[EfeitoTransicao sharedManager]finalizaExercicio:self];
+    [[ExercicioTransicao sharedManager]finalizaExercicio:self];
     
 }
 
@@ -35,7 +35,7 @@
     self.contadorPontos = 0;
     
     //Add barra,Mascote,View de Retornar Pagina ao Xib
-    [[EfeitoComponeteView sharedManager]addComponentesViewMascote:self:[Biblioteca sharedManager].exercicioAtual];
+    [[GerenciadorComponenteView sharedManager]addComponentesViewMascote:self:[Biblioteca sharedManager].exercicioAtual];
     self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
     //Cria Seletor e manda ele como paramentro para outros View Controllers poderem usar
     [self addGesturePassaFalaMascote:self.viewGesturePassaFala];
@@ -46,7 +46,7 @@
     self.testaBiblio = [MascoteViewController sharedManager].testaBiblio;
     self.testaConversa = [MascoteViewController sharedManager].testaConversa;
     self.imagemDoMascote = [MascoteViewController sharedManager].imagemDoMascote2;
-    [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote];
+    [[ExercicioMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote];
     
     for(UIView *mascote in self.view.subviews){
         if(mascote.tag == 1002 ){
@@ -83,13 +83,13 @@
 
 -(void)chamaMetodosFala0{
   
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:1.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:1.0f:self.viewGesturePassaFala];
     
     
 }
 
 -(void)chamaMetodosFala1{
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     for(UIView *mascote in self.view.subviews){
         if(mascote.tag == 1002 ){
@@ -141,21 +141,12 @@
         t.frame = CGRectMake(t.frame.origin.x-150,t.frame.origin.y-150,t.frame.size.width,t.frame.size.height);
     }
     
-    [GameOverViewController sharedManager].view.hidden = YES;
-    [[GameOverViewController sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
-    
     [self.view addSubview:self.outBtnHome];
     
     [self comecaRodada];
 }
 
 -(void)comecaRodada{
-    
-    for(UIView *gameover in self.view.subviews){
-        if(gameover.tag == 3333 ){
-            gameover.hidden = YES;
-        }
-    }
     
     [self simular];
     
@@ -164,6 +155,7 @@
                                    selector: @selector(verificaNotaCerta:)
                                    userInfo: nil
                                     repeats: YES];
+    
 }
 
 -(void)simular{
@@ -284,14 +276,15 @@
     self.notaUsuario = [DesenhaPartitura sharedManager].notaAtualEdicao;
     
     if(self.notaUsuario.nomeNota != NULL){
-        NSLog(@"n = %@",self.notaSimulada.nomeNota);
-        NSLog(@"n = %@",self.notaSimulada.oitava);
-        NSLog(@"n = %@",self.notaSimulada.tipoNota);
+//        NSLog(@"n = %@",self.notaSimulada.nomeNota);
+//        NSLog(@"n = %@",self.notaSimulada.oitava);
+//        NSLog(@"n = %@",self.notaSimulada.tipoNota);
+//        
+//        
+//        NSLog(@"dd = %@",self.notaUsuario.nomeNota);
+//        NSLog(@"dd = %@",self.notaUsuario.oitava);
+//        NSLog(@"dd = %@",self.notaUsuario.tipoNota);
         
-        
-        NSLog(@"dd = %@",self.notaUsuario.nomeNota);
-        NSLog(@"dd = %@",self.notaUsuario.oitava);
-        NSLog(@"dd = %@",self.notaUsuario.tipoNota);
         if(([self.notaSimulada.nomeNota isEqualToString:self.notaUsuario.nomeNota]) &&
            ([self.notaSimulada.oitava isEqualToString:self.notaUsuario.oitava]) &&
            ([self.notaSimulada.tipoNota isEqualToString:self.notaUsuario.tipoNota])){
@@ -308,11 +301,7 @@
         }else{
             [DesenhaPartitura sharedManager].notaAtualEdicao = [[Nota alloc]init];
 
-            for(UIView *gameover in self.view.subviews){
-                if(gameover.tag == 3333 ){
-                    gameover.hidden = NO;
-                }
-            }
+            [[GameOverViewController sharedManager]addBarraSuperioAoXib:self :[Biblioteca sharedManager].exercicioAtual];
             
             [tempo invalidate];
         }

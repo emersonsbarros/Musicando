@@ -9,16 +9,18 @@
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
 
-@interface EfeitoMascote : NSObject{
+@interface ExercicioMascote : NSObject{
     
     
 }
 
 //////////METODOS//////////
-+(EfeitoMascote*)sharedManager;
++(ExercicioMascote*)sharedManager;
+
 
 //Animacao do Mascote Pulando
 -(void)chamaAnimacaoMascotePulando:(UIImageView*)imagemDoMascote2;
+
 
 //Remove e coloca brilho e autoriza o passar de Fala
 -(void)chamaAddBrilho:(UIImageView*)imgBrilha :(float)tempoParaComecar :(UIView*)passaFala;

@@ -10,6 +10,7 @@
 
 @implementation DataBaseNotaPadrao
 
+///////////////////////////////////// Sington ///////////////////////////////////////
 
 +(DataBaseNotaPadrao*)sharedManager{
     static DataBaseNotaPadrao *unicoInstrumento = nil;
@@ -32,7 +33,10 @@
     return self;
 }
 
+/////////////////////////////////////////////////////////////////////////////////////
 
+
+//Notas/Pausas Padroes da Partitura
 -(void)addNotasPadroesDoApplicativo {
     
     Nota *nota1 = [[Nota alloc]init];
@@ -133,12 +137,7 @@
 }
 
 
--(void)AddInstrumento:(Nota*)nota{
-    
-    [[[DataBaseNotaPadrao sharedManager]listaNotasPadroes]addObject:nota];
-    
-}
-
+//Retorna a nota pelo seu nome
 -(Nota*)retornaNotaPadrao:(NSString*)nomeNota{
     
     Nota *nota;

@@ -14,12 +14,12 @@
 #import "Fala.h"
 #import "Nota.h"
 #import "Sinfonia.h"
-#import "EfeitoImagem.h"
-#import "EfeitoMascote.h"
-#import "EfeitoTransicao.h"
-#import "EfeitoPlayer.h"
-#import "EfeitoComponeteView.h"
-#import "EfeitoNotaAnimada.h"
+#import "ExercicioImagem.h"
+#import "ExercicioMascote.h"
+#import "ExercicioTransicao.h"
+#import "ExercicioPlayer.h"
+#import "GerenciadorComponenteView.h"
+#import "ExercicioAnimada.h"
 
 @interface Mod2Aula1Exe1ViewController : UIViewController {
     

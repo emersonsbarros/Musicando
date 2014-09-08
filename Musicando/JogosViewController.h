@@ -13,7 +13,7 @@
 #import "Biblioteca.h"
 #import "Aula.h"
 #import "Exercicio.h"
-#import "EfeitoImagem.h"
+#import "ExercicioImagem.h"
 
 @interface JogosViewController : UIViewController
 

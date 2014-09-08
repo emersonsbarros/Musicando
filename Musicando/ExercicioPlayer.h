@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface EfeitoPlayer : NSObject
+@interface ExercicioPlayer : NSObject
 
 
-+(EfeitoPlayer*)sharedManager;
++(ExercicioPlayer*)sharedManager;
 
 
 @property AVAudioPlayer *somExercicioPlayer;

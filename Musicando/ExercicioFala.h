@@ -10,9 +10,9 @@
 #import <Foundation/Foundation.h>
 
 
-@interface EfeitoFala : NSObject
+@interface ExercicioFala : NSObject
 
-+(EfeitoFala*)sharedManager;
++(ExercicioFala*)sharedManager;
 
 - (void)incializar;
 - (void)falar :(NSString*)texto;

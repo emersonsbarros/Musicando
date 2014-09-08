@@ -31,7 +31,7 @@
 -(void)viewDidDisappear:(BOOL)animated {
     
     [super viewDidDisappear: animated];
-    [[EfeitoTransicao sharedManager]finalizaExercicio:self];
+    [[ExercicioTransicao sharedManager]finalizaExercicio:self];
     
 }
 
@@ -40,7 +40,7 @@
     [super viewDidLoad];
     
     //Add barra,Mascote,View de Retornar Pagina ao Xib
-    [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
+    [[GerenciadorComponenteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
     self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
     
     
@@ -62,7 +62,7 @@
     [self.listaImangesColisao addObject:self.placaSi];
 
     //Add gesture arrastar em todas imagens dessa lista
-    [[EfeitoImagem sharedManager]addGesturePainImagens:self.listaImangesColisao];
+    [[ExercicioImagem sharedManager]addGesturePainImagens:self.listaImangesColisao];
     
 
     self.auxContaCacaPalavras = 0;
@@ -79,7 +79,7 @@
     self.testaBiblio = [MascoteViewController sharedManager].testaBiblio;
     self.testaConversa = [MascoteViewController sharedManager].testaConversa;
     self.imagemDoMascote2 = [MascoteViewController sharedManager].imagemDoMascote2;
-    [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote2];
+    [[ExercicioMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote2];
     
     
     [self pulaFalaMascote];
@@ -100,7 +100,7 @@
                                         self.pontoDo.frame.origin.y+50,
                                         self.placaDo.frame.size.width,
                                         self.placaDo.frame.size.height);
-        [[EfeitoImagem sharedManager]tiraGestureObjeto:self.placaDo];
+        [[ExercicioImagem sharedManager]tiraGestureObjeto:self.placaDo];
         [self.listaLiberaFala addObject:self.estadoAux1];
         Nota *aux = [[Nota alloc]init];
         self.listaSons = [[NSMutableArray alloc]init];
@@ -126,7 +126,7 @@
                                         self.pontoRe.frame.origin.y+50,
                                         self.placaRe.frame.size.width,
                                         self.placaRe.frame.size.height);
-        [[EfeitoImagem sharedManager]tiraGestureObjeto:self.placaRe];
+        [[ExercicioImagem sharedManager]tiraGestureObjeto:self.placaRe];
         [self.listaLiberaFala addObject:self.estadoAux1];
         Nota *aux = [[Nota alloc]init];
         self.listaSons = [[NSMutableArray alloc]init];
@@ -152,7 +152,7 @@
                                         self.pontoMi.frame.origin.y+50,
                                         self.placaMi.frame.size.width,
                                         self.placaMi.frame.size.height);
-        [[EfeitoImagem sharedManager]tiraGestureObjeto:self.placaMi];
+        [[ExercicioImagem sharedManager]tiraGestureObjeto:self.placaMi];
         [self.listaLiberaFala addObject:self.estadoAux1];
         Nota *aux = [[Nota alloc]init];
         self.listaSons = [[NSMutableArray alloc]init];
@@ -178,7 +178,7 @@
                                         self.pontoFa.frame.origin.y+50,
                                         self.placaFa.frame.size.width,
                                         self.placaFa.frame.size.height);
-        [[EfeitoImagem sharedManager]tiraGestureObjeto:self.placaFa];
+        [[ExercicioImagem sharedManager]tiraGestureObjeto:self.placaFa];
         [self.listaLiberaFala addObject:self.estadoAux1];
         Nota *aux = [[Nota alloc]init];
         self.listaSons = [[NSMutableArray alloc]init];
@@ -204,7 +204,7 @@
                                          self.pontoSol.frame.origin.y+50,
                                          self.placaSol.frame.size.width,
                                          self.placaSol.frame.size.height);
-        [[EfeitoImagem sharedManager]tiraGestureObjeto:self.placaSol];
+        [[ExercicioImagem sharedManager]tiraGestureObjeto:self.placaSol];
         [self.listaLiberaFala addObject:self.estadoAux1];
         Nota *aux = [[Nota alloc]init];
         self.listaSons = [[NSMutableArray alloc]init];
@@ -230,7 +230,7 @@
                                         self.pontoLa.frame.origin.y+50,
                                         self.placaLa.frame.size.width,
                                         self.placaLa.frame.size.height);
-        [[EfeitoImagem sharedManager]tiraGestureObjeto:self.placaLa];
+        [[ExercicioImagem sharedManager]tiraGestureObjeto:self.placaLa];
         [self.listaLiberaFala addObject:self.estadoAux1];
         Nota *aux = [[Nota alloc]init];
         self.listaSons = [[NSMutableArray alloc]init];
@@ -256,7 +256,7 @@
                                         self.pontoSi.frame.origin.y+50,
                                         self.placaSi.frame.size.width,
                                         self.placaSi.frame.size.height);
-        [[EfeitoImagem sharedManager]tiraGestureObjeto:self.placaSi];
+        [[ExercicioImagem sharedManager]tiraGestureObjeto:self.placaSi];
         [self.listaLiberaFala addObject:self.estadoAux1];
         Nota *aux = [[Nota alloc]init];
         self.listaSons = [[NSMutableArray alloc]init];
@@ -320,13 +320,13 @@
 
 -(void)chamaMetodosFala0{
     
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgEscala];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgEscala];
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
 }
 
 -(void)chamaMetodosFala1{
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
     
     //Add sprite as imagem da mão e comeca (tem uma parar no EfeitoImagem caso necesario)
@@ -338,9 +338,9 @@
     UIImage *image6 = [UIImage imageNamed:@"escalaLa.png"];
     UIImage *image7 = [UIImage imageNamed:@"escalaSi.png"];
     NSArray *imageArray = [NSArray arrayWithObjects:image1,image2,image3,image4,image5,image6,image7,nil];
-    [[EfeitoImagem sharedManager]addAnimacaoSprite:imageArray :self.imgEscala :5.0 :5];
+    [[ExercicioImagem sharedManager]addAnimacaoSprite:imageArray :self.imgEscala :5.0 :5];
 
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
 }
 
 -(void)verficaCacaPalavra:(NSTimer *) theTimer{
@@ -353,22 +353,22 @@
         self.auxContaCacaPalavras = 0;
         self.auxContaErradoCacaPalavras=0;
         
-       [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.txtGameOver];
+       [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.txtGameOver];
         
     }
     
     if(self.auxContaCacaPalavras == 7){
-        [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+        [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
         [theTimer invalidate];
         self.txtGameOver.text = @"Acertou!";
-        [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.txtGameOver];
+        [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.txtGameOver];
     }
     
 }
 
 -(void)acertaPalavra{
     self.auxContaCacaPalavras += 1;
-    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.txtGameOver];
+    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.txtGameOver];
 }
 
 -(void)erraCacaPalavras{
@@ -386,12 +386,12 @@
 }
 
 -(void)chamaMetodosFala2{
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
-    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgEscala];
+    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgEscala];
     
     
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.viewCacaPalavras];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.viewCacaPalavras];
 
     
     [self addGesturePalavraCerta:self.gestureDo];
@@ -421,13 +421,13 @@
 
 
 -(void)chamaMetodosFala3{
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
 
     
-    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.viewCacaPalavras];
+    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.viewCacaPalavras];
     
     
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.viewPlaquinhas];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.viewPlaquinhas];
     
     
     [NSTimer scheduledTimerWithTimeInterval: 0.5
@@ -473,17 +473,17 @@
                                     repeats: YES];
     
     
-    [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote2 :self.viewGesturePassaFala:self.listaLiberaFala:7];
+    [[ExercicioImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote2 :self.viewGesturePassaFala:self.listaLiberaFala:7];
    // [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote2 :self.viewGesturePassaFala:self.listaLiberaFala:0];
     
 }
 
 -(void)desceNota:(NSTimer *) theTimer{
     self.txtNomeNota.hidden = NO;
-    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgMaoGesture];
-    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.txtMaoGesture];
-    [[EfeitoImagem sharedManager]removeTodasAnimacoesView:self.imgMaoGesture];
-    [[EfeitoImagem sharedManager]removeTodasAnimacoesView:self.txtMaoGesture];
+    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgMaoGesture];
+    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.txtMaoGesture];
+    [[ExercicioImagem sharedManager]removeTodasAnimacoesView:self.imgMaoGesture];
+    [[ExercicioImagem sharedManager]removeTodasAnimacoesView:self.txtMaoGesture];
 
     if(self.indiceListaNomeNotas < self.listaNomeNotas.count){
         self.txtNomeNota.text = [self.listaNomeNotas objectAtIndex:self.indiceListaNomeNotas];
@@ -551,14 +551,14 @@
 }
 
 -(void)chamaMetodosFala4{
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
     
     
-    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.viewPlaquinhas];
+    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.viewPlaquinhas];
     
     
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.viewTocaTreco];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.viewTocaTreco];
     
     self.posOriginalNomeNota = self.txtNomeNota.frame;
     
@@ -606,14 +606,14 @@
     
     
     
-    [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote2 :self.viewGesturePassaFala:self.listaLiberaFala:7];
+    [[ExercicioImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote2 :self.viewGesturePassaFala:self.listaLiberaFala:7];
 }
 
 
 -(void)chamaMetodosFala5{
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
 }
 
 
@@ -627,7 +627,7 @@
     
     if([MascoteViewController sharedManager].contadorDeFalas == contadorMaximo){
         NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
-        [[EfeitoTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
+        [[ExercicioTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
     }
     
     if([MascoteViewController sharedManager].contadorDeFalas < contadorMaximo){

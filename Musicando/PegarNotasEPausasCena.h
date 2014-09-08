@@ -8,7 +8,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "GameOverViewController.h"
 #import <SpriteKit/SpriteKit.h>
-#import "EfeitoPlayer.h"
+#import "ExercicioPlayer.h"
 
 //CONSTANSTES para colisão
 static const UInt32 simboloMusicalCorreto = 0x1 << 0;

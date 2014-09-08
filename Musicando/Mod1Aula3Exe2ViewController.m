@@ -29,7 +29,7 @@
 -(void)viewDidDisappear:(BOOL)animated {
     
     [super viewDidDisappear: animated];
-    [[EfeitoTransicao sharedManager]finalizaExercicio:self];
+    [[ExercicioTransicao sharedManager]finalizaExercicio:self];
     
 }
 
@@ -37,7 +37,7 @@
     [super viewDidLoad];
     
     //Add barra,Mascote,View de Retornar Pagina ao Xib
-    [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
+    [[GerenciadorComponenteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
     self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
     
     
@@ -75,7 +75,7 @@
     //[self.listaImangesColisao addObject: self.flauta];
     
     //Adiciona gesture ARRASTAR em todas imagens dessa lista
-    [[EfeitoImagem sharedManager]addGesturePainImagens: self.listaImangesColisao];
+    [[ExercicioImagem sharedManager]addGesturePainImagens: self.listaImangesColisao];
     
     //Lista para saber se as colisoes na tela foram feitas p/ ir na prox fala
     self.listaLiberaFala = [[NSMutableArray alloc]init];
@@ -88,7 +88,7 @@
     self.testaBiblio = [MascoteViewController sharedManager].testaBiblio;
     self.testaConversa = [MascoteViewController sharedManager].testaConversa;
     self.imagemDoMascote = [MascoteViewController sharedManager].imagemDoMascote2;
-    [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote];
+    [[ExercicioMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote];
     
     [self pulaFalaMascote];
     
@@ -111,7 +111,7 @@
     
     if([MascoteViewController sharedManager].contadorDeFalas == contadorMaximo){
         NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
-        [[EfeitoTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
+        [[ExercicioTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
     }
     
     if([MascoteViewController sharedManager].contadorDeFalas < contadorMaximo){
@@ -160,65 +160,65 @@
 
 //Intro sobre ritmo
 -(void)chamaMetodosFala0 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Explicação ritmo
 -(void)chamaMetodosFala1 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Animação batimentos do coração
 -(void)chamaMetodosFala2 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Chama animação de batidas do coração
     [self animacaoBatidasDoCoracao];
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Complemento de fala sobre ritmos
 -(void)chamaMetodosFala3 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Para som das batidas
-    [[EfeitoPlayer sharedManager]stopAudio];
-    [[EfeitoImagem sharedManager]hiddenYesEmDegrade: self.imgBatidasDoCoracao];
+    [[ExercicioPlayer sharedManager]stopAudio];
+    [[ExercicioImagem sharedManager]hiddenYesEmDegrade: self.imgBatidasDoCoracao];
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Exemplo de música em vários ritmos
 -(void)chamaMetodosFala4 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Mostra view de exercitar
     self.viewDosRitmos.hidden = NO;
     self.imgBatidasDoCoracao.hidden = YES;
     [self primeiraAnimacao];
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Complemento de fala
 -(void)chamaMetodosFala5 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Para som das batidas
-    [[EfeitoPlayer sharedManager]stopAudio];
+    [[ExercicioPlayer sharedManager]stopAudio];
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Animação dos tocatrecos
 -(void)chamaMetodosFala6 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Para som das batidas
-    [[EfeitoPlayer sharedManager]stopAudio];
+    [[ExercicioPlayer sharedManager]stopAudio];
     
     //Esconde botões de ritmo
     self.outBtoClassico.hidden = YES;
@@ -229,12 +229,12 @@
     self.outTocaTreco1.hidden = NO;
     self.outTocaTreco2.hidden = NO;
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Exercício
 -(void)chamaMetodosFala7 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     self.outBtoMaestro.hidden = NO;
     self.outBtoMicrofone.hidden = NO;
@@ -243,24 +243,24 @@
     self.outTocaTreco1.hidden = YES;
     self.outTocaTreco2.hidden = YES;
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Completa fala
 -(void)chamaMetodosFala8 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Fala final
 -(void)chamaMetodosFala9 {
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Mostra view de exercitar
     self.viewDosRitmos.hidden = YES;
-    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.alternativaCorreta];
+    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.alternativaCorreta];
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 
@@ -273,7 +273,7 @@
 -(void)animacaoBatidasDoCoracao{
     
     //Animação da vitrola
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgBatidasDoCoracao];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgBatidasDoCoracao];
     [UIView animateWithDuration:1.0
                           delay:0.0
                         options:  UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionTransitionCrossDissolve
@@ -288,8 +288,8 @@
                      }];
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"coracaoBatendo" withExtension:@"mp3"];
-    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
-    [[EfeitoPlayer sharedManager]playAudios];
+    [[ExercicioPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[ExercicioPlayer sharedManager]playAudios];
     
 }
 
@@ -358,29 +358,29 @@
     [self animacaoAumentarBtoRitmo: self.outBtoClassico];
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"happybirthdayClassico" withExtension:@"mp3"];
-    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
-    [[EfeitoPlayer sharedManager]playAudios];
+    [[ExercicioPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[ExercicioPlayer sharedManager]playAudios];
 }
 
 - (IBAction)btoRock:(id)sender {
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"happybirthdayRock" withExtension:@"mp3"];
-    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
-    [[EfeitoPlayer sharedManager]playAudios];
+    [[ExercicioPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[ExercicioPlayer sharedManager]playAudios];
 }
 
 - (IBAction)btoSamba:(id)sender {
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"happybirthdaySamba" withExtension:@"mp3"];
-    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
-    [[EfeitoPlayer sharedManager]playAudios];
+    [[ExercicioPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[ExercicioPlayer sharedManager]playAudios];
 }
 
 - (IBAction)tempoVelocidade:(id)sender {
     NSLog(@"ACERTOU! Tempo e velocidade");
     
     //Animação da vitrola
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.alternativaCorreta];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.alternativaCorreta];
     [UIView animateWithDuration:1.0
                           delay:0.0
                         options:  UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionTransitionCrossDissolve

@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
-#import "EfeitoMascote.h"
+#import "ExercicioMascote.h"
 
-@interface EfeitoImagem : NSObject {
+@interface ExercicioImagem : NSObject {
     
 }
 
-+(EfeitoImagem*)sharedManager;
++(ExercicioImagem*)sharedManager;
 
 
 //Add o gesture de arrastar para uma imagem

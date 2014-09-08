@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EfeitoImagem.h"
-#import "EfeitoMascote.h"
+#import "ExercicioImagem.h"
+#import "ExercicioMascote.h"
 #import "Biblioteca.h"
 #import "Conversa.h"
 #import "Fala.h"
-#import "EfeitoTransicao.h"
-#import "EfeitoFala.h"
+#import "ExercicioTransicao.h"
+#import "ExercicioFala.h"
 
 @interface MascoteViewController : UIViewController
 

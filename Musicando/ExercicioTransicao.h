@@ -11,13 +11,13 @@
 #import "Biblioteca.h"
 #import "TransicaoExercicioViewController.h"
 #import "BarraSuperiorViewController.h"
-#import "EfeitoPlayer.h"
-#import "EfeitoFala.h"
+#import "ExercicioPlayer.h"
+#import "ExercicioFala.h"
 
-@interface EfeitoTransicao : NSObject
+@interface ExercicioTransicao : NSObject
 
 
-+(EfeitoTransicao*)sharedManager;
++(ExercicioTransicao*)sharedManager;
 -(void)chamaTransicaoPaginaEsquerda:(UIViewController*)controller;
 -(void)chamaTransicaoPaginaDireita:(UIViewController*)controller;
 -(void)chamaTransicaoPaginaTopo:(UIViewController*)controller;

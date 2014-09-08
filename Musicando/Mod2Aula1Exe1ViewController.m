@@ -31,7 +31,7 @@
 -(void)viewDidDisappear:(BOOL)animated {
     
     [super viewDidDisappear: animated];
-    [[EfeitoTransicao sharedManager]finalizaExercicio:self];
+    [[ExercicioTransicao sharedManager]finalizaExercicio:self];
     
 }
 
@@ -41,7 +41,7 @@
     // Do any additional setup after loading the view from its nib.
     
     //Add barra,Mascote,View de Retornar Pagina ao Xib
-    [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
+    [[GerenciadorComponenteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
     self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
     
     //Cria Seletor e manda ele como paramentro para outros View Controllers poderem usar
@@ -57,7 +57,7 @@
     //[self.listaImangesColisao addObject:self.imgFitaFuracao];
  
     //Add gesture arrastar em todas imagens dessa lista
-    [[EfeitoImagem sharedManager]addGesturePainImagens:self.listaImangesColisao];
+    [[ExercicioImagem sharedManager]addGesturePainImagens:self.listaImangesColisao];
     
     
     //Lista para saber se as colisoes na tela foram feitas p/ ir na prox fala
@@ -71,7 +71,7 @@
     self.testaBiblio = [MascoteViewController sharedManager].testaBiblio;
     self.testaConversa = [MascoteViewController sharedManager].testaConversa;
     self.imagemDoMascote2 = [MascoteViewController sharedManager].imagemDoMascote2;
-    [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote2];
+    [[ExercicioMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote2];
     
     
     [self pulaFalaMascote];
@@ -88,7 +88,7 @@
     
     if([MascoteViewController sharedManager].contadorDeFalas == contadorMaximo){
         NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
-        [[EfeitoTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
+        [[ExercicioTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
     }
     
     if([MascoteViewController sharedManager].contadorDeFalas < contadorMaximo){
@@ -135,40 +135,40 @@
 }
 
 -(void)chamaMetodosFala0{
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgPassaroParitura];
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgPassaroParitura];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
 }
 
 -(void)chamaMetodosFala1{
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
 }
 
 -(void)chamaMetodosFala2{
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
     
     
-    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgPassaroParitura];
+    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgPassaroParitura];
     
     
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.viewPiano];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.viewPiano];
     
     
     
-    [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote2 :self.viewGesturePassaFala:self.listaLiberaFala:7];
+    [[ExercicioImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote2 :self.viewGesturePassaFala:self.listaLiberaFala:7];
 
 }
 
 -(void)chamaMetodosFala3{
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
-    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.viewPiano];
+    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.viewPiano];
     
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.pilar1];
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.pilar2];
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.pilar3];
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.pilar4];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.pilar1];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.pilar2];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.pilar3];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.pilar4];
     
     UILabel *txtPilar1 = [[UILabel alloc]init];
     txtPilar1.text = @"Altura";
@@ -229,8 +229,8 @@
                      }
                      completion:^(BOOL finished){
                          self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"barulhoPilarCaindo" withExtension:@"mp3"];
-                         [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
-                         [[EfeitoPlayer sharedManager]playAudios];
+                         [[ExercicioPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+                         [[ExercicioPlayer sharedManager]playAudios];
                      }];
     
     [UIView animateWithDuration:2.0
@@ -246,8 +246,8 @@
                      }
                      completion:^(BOOL finished){
                          self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"barulhoPilarCaindo" withExtension:@"mp3"];
-                         [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
-                         [[EfeitoPlayer sharedManager]playAudios];
+                         [[ExercicioPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+                         [[ExercicioPlayer sharedManager]playAudios];
                      }];
     
     [UIView animateWithDuration:2.0
@@ -263,8 +263,8 @@
                      }
                      completion:^(BOOL finished){
                          self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"barulhoPilarCaindo" withExtension:@"mp3"];
-                         [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
-                         [[EfeitoPlayer sharedManager]playAudios];
+                         [[ExercicioPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+                         [[ExercicioPlayer sharedManager]playAudios];
                      }];
     
     [UIView animateWithDuration:2.0
@@ -280,8 +280,8 @@
                      }
                      completion:^(BOOL finished){
                          self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"barulhoPilarCaindo" withExtension:@"mp3"];
-                         [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
-                         [[EfeitoPlayer sharedManager]playAudios];
+                         [[ExercicioPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+                         [[ExercicioPlayer sharedManager]playAudios];
                      }];
     
     [UIView animateWithDuration:3.0
@@ -298,24 +298,24 @@
                      }
                      completion:^(BOOL finished){
                          self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"barulhoBasePilar" withExtension:@"wav"];
-                         [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
-                         [[EfeitoPlayer sharedManager]playAudios];
-                         [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+                         [[ExercicioPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+                         [[ExercicioPlayer sharedManager]playAudios];
+                         [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
                      }];
 }
 
 -(void)chamaMetodosFala4{
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
-    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.pilar1];
-    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.pilar2];
-    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.pilar3];
-    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.pilar4];
-    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.base];
+    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.pilar1];
+    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.pilar2];
+    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.pilar3];
+    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.pilar4];
+    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.base];
     
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgEscada];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgEscada];
     
-   [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.viewEscada];
+   [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.viewEscada];
     self.outDo.hidden = YES;
     self.outRe.hidden = YES;
     self.outMi.hidden = YES;
@@ -325,23 +325,23 @@
     self.outSi.hidden = YES;
     
     
-   [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+   [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
     
 
 }
 
 -(void)chamaMetodosFala5{
     
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
     
 }
 
 
 -(void)chamaMetodosFala6{
     
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
     self.outDo.hidden = NO;
     self.outRe.hidden = NO;
@@ -351,53 +351,53 @@
     self.outLa.hidden = NO;
     self.outSi.hidden = NO;
     
-    [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote2 :self.viewGesturePassaFala:self.listaLiberaFala:7];;
+    [[ExercicioImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote2 :self.viewGesturePassaFala:self.listaLiberaFala:7];;
     
 }
 
 -(void)chamaMetodosFala7{
     
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
     
     
 }
 
 -(void)chamaMetodosFala8{
     
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
    
     UIButton *button = (UIButton *)[self.viewEscada viewWithTag:11];
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:button];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:button];
     UIButton *button2 = (UIButton *)[self.viewEscada viewWithTag:12];
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:button2];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:button2];
     UIButton *button3 = (UIButton *)[self.viewEscada viewWithTag:13];
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:button3];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:button3];
     UIButton *button4 = (UIButton *)[self.viewEscada viewWithTag:14];
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:button4];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:button4];
     UIButton *button5 = (UIButton *)[self.viewEscada viewWithTag:15];
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:button5];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:button5];
     UIButton *button6 = (UIButton *)[self.viewEscada viewWithTag:16];
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:button6];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:button6];
     UIButton *button7 = (UIButton *)[self.viewEscada viewWithTag:17];
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:button7];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:button7];
     
-   [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+   [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
     
 }
 
 -(void)chamaMetodosFala9{
     
-    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
-    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.viewEscada];
+    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.viewEscada];
     
     
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgBandeira];
-    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.lblPadraoAmericano];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgBandeira];
+    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.lblPadraoAmericano];
     
     [UIView animateWithDuration:4.0
                           delay:0.0
@@ -426,7 +426,7 @@
                      }
                      completion:(NULL)];
     
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
     
     
 }

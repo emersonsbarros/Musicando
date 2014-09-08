@@ -29,7 +29,7 @@
 -(void)chamaProximaAula{
     
     NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
-    [[EfeitoTransicao sharedManager]chamaOProximoExercicio:self:proxExercicio];
+    [[ExercicioTransicao sharedManager]chamaOProximoExercicio:self:proxExercicio];
     
 }
 
@@ -40,7 +40,7 @@
     [self performSelector:@selector(lacoCaindoNotas) withObject:NULL afterDelay:0.1];
     
     self.txtProximaAula.textAlignment = NSTextAlignmentCenter;
-    self.txtProximaAula.text = [[EfeitoTransicao sharedManager]retornaONomeDaProximaAula:[[Biblioteca sharedManager]exercicioAtual].nomeView];
+    self.txtProximaAula.text = [[ExercicioTransicao sharedManager]retornaONomeDaProximaAula:[[Biblioteca sharedManager]exercicioAtual].nomeView];
     
 
     [NSTimer scheduledTimerWithTimeInterval: 8.0
@@ -80,7 +80,7 @@
         UIImage *image1 = [UIImage imageNamed:@"notaCaraPausaSom.png"];
         UIImage *image2 = [UIImage imageNamed:@"notaCaraTocaSom.png"];
         NSArray *imageArray = [NSArray arrayWithObjects:image1,image2,nil];
-        [[EfeitoImagem sharedManager]addAnimacaoSprite:imageArray:carinha];
+        [[ExercicioImagem sharedManager]addAnimacaoSprite:imageArray:carinha];
         
         notaCaindo.frame = CGRectMake(posX,450,notaCaindo.frame.size.width+40,notaCaindo.frame.size.height+70);
         [[self listaImagensCai]addObject:notaCaindo];

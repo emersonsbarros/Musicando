@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "Nota.h"
 #import "Sinfonia.h"
-#import "EfeitoImagem.h"
+#import "ExercicioImagem.h"
 
-@interface EfeitoNotaAnimada : NSObject
+@interface ExercicioAnimada : NSObject
 
 
 //Atributos para Animacao chover objetos
@@ -21,7 +21,7 @@
 @property float duracao;
 @property NSMutableArray *listaImagensCai;
 
-+(EfeitoNotaAnimada*)sharedManager;
++(ExercicioAnimada*)sharedManager;
 
 -(void)animacaoCaiNotaIdaVolta:(UIViewController*)controler;
 -(void)animacaoCaiNotaOndas:(UIViewController*)controler;
