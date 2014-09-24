@@ -24,6 +24,9 @@
     
 }
 
+@property (weak, nonatomic) IBOutlet UILabel *txtQtdNotas;
+
+
 - (IBAction)tocarTodasNoras:(id)sender;
 - (IBAction)limparNotasPartituraEdicao:(id)sender;
 

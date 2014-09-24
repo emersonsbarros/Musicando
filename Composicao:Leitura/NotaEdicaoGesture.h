@@ -13,8 +13,8 @@
     
 }
 
+//um gesture com uma nota
 @property Nota *notaEdicaoGesture;
-
 
 
 @end

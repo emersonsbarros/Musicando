@@ -10,6 +10,7 @@
 
 @implementation DataBaseNotaPadrao
 
+///////////////////////////////////// Sington ///////////////////////////////////////
 
 +(DataBaseNotaPadrao*)sharedManager{
     static DataBaseNotaPadrao *unicoInstrumento = nil;
@@ -32,57 +33,213 @@
     return self;
 }
 
+/////////////////////////////////////////////////////////////////////////////////////
 
+    
+//Notas/Pausas Padroes da Partitura
 -(void)addNotasPadroesDoApplicativo {
     
-    Nota *nota1 = [[Nota alloc]init];
-    nota1.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"1.png"]];
-    nota1.nomeNota = @"semibreve";
-    nota1.tipoNota = @"whole";
     
-    Nota *nota2 = [[Nota alloc]init];
-    nota2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"2.png"]];
-    nota2.nomeNota = @"minima";
-    nota2.tipoNota = @"half";
+    //Nota Dó
+    Nota *notaDo4 = [[Nota alloc]init];
+    notaDo4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Do4tempo.png"]];
+    notaDo4.nomeNota = @"C";
+    notaDo4.tipoNota = @"whole";
+    
+    Nota *notaDo2 = [[Nota alloc]init];
+    notaDo2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Do1tempo.png"]];
+    notaDo2.nomeNota = @"C";
+    notaDo2.tipoNota = @"half";
+    
+    Nota *notaDo1 = [[Nota alloc]init];
+    notaDo1.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Do1tempo.png"]];
+    notaDo1.nomeNota = @"C";
+    notaDo1.tipoNota = @"quarter";
+    
+    Nota *notaDo12 = [[Nota alloc]init];
+    notaDo12.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Do1:2tempo-01.png"]];
+    notaDo12.nomeNota = @"C";
+    notaDo12.tipoNota = @"eighth";
+    
+
+    //Nota Re
+    Nota *notaRe4 = [[Nota alloc]init];
+    notaRe4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Re4tempo.png"]];
+    notaRe4.nomeNota = @"D";
+    notaRe4.tipoNota = @"whole";
+    
+    Nota *notaRe2 = [[Nota alloc]init];
+    notaRe2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Re1tempo.png"]];
+    notaRe2.nomeNota = @"D";
+    notaRe2.tipoNota = @"half";
+    
+    Nota *notaRe1 = [[Nota alloc]init];
+    notaRe1.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Re1tempo.png"]];
+    notaRe1.nomeNota = @"D";
+    notaRe1.tipoNota = @"quarter";
+    
+    Nota *notaRe12 = [[Nota alloc]init];
+    notaRe12.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Re1:2tempo.png"]];
+    notaRe12.nomeNota = @"D";
+    notaRe12.tipoNota = @"eighth";
     
     
-    Nota *nota3 = [[Nota alloc]init];
-    nota3.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"3.png"]];
-    nota3.nomeNota = @"seminima";
-    nota3.tipoNota = @"quarter";
+    //Nota Mi
+    Nota *notaMi4 = [[Nota alloc]init];
+    notaMi4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Mi1:2tempo.png"]];
+    notaMi4.nomeNota = @"E";
+    notaMi4.tipoNota = @"whole";
     
+    Nota *notaMi2 = [[Nota alloc]init];
+    notaMi2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Mi1tempo.png"]];
+    notaMi2.nomeNota = @"E";
+    notaMi2.tipoNota = @"half";
     
-    Nota *nota4 = [[Nota alloc]init];
-    nota4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"4.png"]];
-    nota4.nomeNota = @"colcheia";
-    nota4.tipoNota = @"eighth";
+    Nota *notaMi1 = [[Nota alloc]init];
+    notaMi1.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Mi1tempo.png"]];
+    notaMi1.nomeNota = @"E";
+    notaMi1.tipoNota = @"quarter";
     
-    
-    Nota *nota5 = [[Nota alloc]init];
-    nota5.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"5.png"]];
-    nota5.nomeNota = @"semicolcheia";
-    nota5.tipoNota = @"16th";
-    
-    
-    Nota *nota6 = [[Nota alloc]init];
-    nota6.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"6.png"]];
-    nota6.nomeNota = @"fusa";
-    nota6.tipoNota = @"32th";
+    Nota *notaMi12 = [[Nota alloc]init];
+    notaMi12.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Mi1:2tempo.png"]];
+    notaMi12.nomeNota = @"E";
+    notaMi12.tipoNota = @"eighth";
 
     
-    Nota *nota7 = [[Nota alloc]init];
-    nota7.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"semifusa.png"]];
-    nota7.nomeNota = @"semifusa";
-    nota7.tipoNota = @"64th";
+    //Nota fA
+    Nota *notaFa4 = [[Nota alloc]init];
+    notaFa4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"fa4tempo.png"]];
+    notaFa4.nomeNota = @"F";
+    notaFa4.tipoNota = @"whole";
     
-    [self.listaNotasPadroes addObject:nota1];
-    [self.listaNotasPadroes addObject:nota2];
-    [self.listaNotasPadroes addObject:nota3];
-    [self.listaNotasPadroes addObject:nota4];
-    [self.listaNotasPadroes addObject:nota5];
-    [self.listaNotasPadroes addObject:nota6];
-    [self.listaNotasPadroes addObject:nota7];
-   
+    Nota *notaFa2 = [[Nota alloc]init];
+    notaFa2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Fa1tempo.png"]];
+    notaFa2.nomeNota = @"F";
+    notaFa2.tipoNota = @"half";
+    
+    Nota *notaFa1 = [[Nota alloc]init];
+    notaFa1.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Fa1tempo.png"]];
+    notaFa1.nomeNota = @"F";
+    notaFa1.tipoNota = @"quarter";
+    
+    Nota *notaFa12 = [[Nota alloc]init];
+    notaFa12.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Fa1:2tempo.png"]];
+    notaFa12.nomeNota = @"F";
+    notaFa12.tipoNota = @"eighth";
+    
+    
+    
+    //Nota Sol
+    Nota *notaSol4 = [[Nota alloc]init];
+    notaSol4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Sol4tempo.png"]];
+    notaSol4.nomeNota = @"G";
+    notaSol4.tipoNota = @"whole";
+    
+    Nota *notaSol2 = [[Nota alloc]init];
+    notaSol2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Sol1tempo.png"]];
+    notaSol2.nomeNota = @"G";
+    notaSol2.tipoNota = @"half";
+    
+    Nota *notaSol1 = [[Nota alloc]init];
+    notaSol1.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Sol1tempo.png"]];
+    notaSol1.nomeNota = @"G";
+    notaSol1.tipoNota = @"quarter";
+    
+    Nota *notaSol12 = [[Nota alloc]init];
+    notaSol12.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Sol1:2tempo.png"]];
+    notaSol12.nomeNota = @"G";
+    notaSol12.tipoNota = @"eighth";
+    
+    
+    
+    //Nota La
+    Nota *notaLa4 = [[Nota alloc]init];
+    notaLa4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"La1:2tempo.png"]];
+    notaLa4.nomeNota = @"A";
+    notaLa4.tipoNota = @"whole";
+    
+    Nota *notaLa2 = [[Nota alloc]init];
+    notaLa2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"la1tempo.png"]];
+    notaLa2.nomeNota = @"A";
+    notaLa2.tipoNota = @"half";
+    
+    Nota *notaLa1 = [[Nota alloc]init];
+    notaLa1.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"la1tempo.png"]];
+    notaLa1.nomeNota = @"A";
+    notaLa1.tipoNota = @"quarter";
+    
+    Nota *notaLa12 = [[Nota alloc]init];
+    notaLa12.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"La1:2tempo.png"]];
+    notaLa12.nomeNota = @"A";
+    notaLa12.tipoNota = @"eighth";
+    
+    
+    
+    //Nota Si
+    Nota *notaSi4 = [[Nota alloc]init];
+    notaSi4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Si4tempo.png"]];
+    notaSi4.nomeNota = @"B";
+    notaSi4.tipoNota = @"whole";
+    
+    Nota *notaSi2 = [[Nota alloc]init];
+    notaSi2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Si1tempo.png"]];
+    notaSi2.nomeNota = @"B";
+    notaSi2.tipoNota = @"half";
+    
+    Nota *notaSi1 = [[Nota alloc]init];
+    notaSi1.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Si1tempo.png"]];
+    notaSi1.nomeNota = @"B";
+    notaSi1.tipoNota = @"quarter";
+    
+    Nota *notaSi12 = [[Nota alloc]init];
+    notaSi12.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Si1:2tempo.png"]];
+    notaSi12.nomeNota = @"B";
+    notaSi12.tipoNota = @"eighth";
+    
+    
+    
+    [self.listaNotasPadroes addObject:notaDo4];
+    [self.listaNotasPadroes addObject:notaDo2];
+    [self.listaNotasPadroes addObject:notaDo1];
+    [self.listaNotasPadroes addObject:notaDo12];
+    
+    [self.listaNotasPadroes addObject:notaRe4];
+    [self.listaNotasPadroes addObject:notaRe2];
+    [self.listaNotasPadroes addObject:notaRe1];
+    [self.listaNotasPadroes addObject:notaRe12];
+
+    
+    [self.listaNotasPadroes addObject:notaMi4];
+    [self.listaNotasPadroes addObject:notaMi2];
+    [self.listaNotasPadroes addObject:notaMi1];
+    [self.listaNotasPadroes addObject:notaMi12];
+
+    
+    [self.listaNotasPadroes addObject:notaFa4];
+    [self.listaNotasPadroes addObject:notaFa2];
+    [self.listaNotasPadroes addObject:notaFa1];
+    [self.listaNotasPadroes addObject:notaFa12];
+    
+    [self.listaNotasPadroes addObject:notaSol4];
+    [self.listaNotasPadroes addObject:notaSol2];
+    [self.listaNotasPadroes addObject:notaSol1];
+    [self.listaNotasPadroes addObject:notaSol12];
+
+    
+    [self.listaNotasPadroes addObject:notaLa4];
+    [self.listaNotasPadroes addObject:notaLa2];
+    [self.listaNotasPadroes addObject:notaLa1];
+    [self.listaNotasPadroes addObject:notaLa12];
+
+    
+    [self.listaNotasPadroes addObject:notaSi4];
+    [self.listaNotasPadroes addObject:notaSi2];
+    [self.listaNotasPadroes addObject:notaSi1];
+    [self.listaNotasPadroes addObject:notaSi12];
+
+
+    
+    
     Nota *notaPausa1 = [[Nota alloc]init];
     notaPausa1.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"4-2Pausa.png"]];
     notaPausa1.nomeNota = @"semibrevePausa";
@@ -106,47 +263,42 @@
     notaPausa4.tipoNota = @"eighth";
     
     
-    Nota *notaPausa5 = [[Nota alloc]init];
-    notaPausa5.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"semicolcheiaPausa.png"]];
-    notaPausa5.nomeNota = @"semicolcheiaPausa";
-    notaPausa5.tipoNota = @"16th";
-    
-    
-    Nota *notaPausa6 = [[Nota alloc]init];
-    notaPausa6.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"fusaPausa.png"]];
-    notaPausa6.nomeNota = @"fusaPausa";
-    notaPausa6.tipoNota = @"32th";
-    
-    
-    Nota *notaPausa7 = [[Nota alloc]init];
-    notaPausa7.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"semifusaPausa.png"]];
-    notaPausa7.nomeNota = @"semifusaPausa";
-    notaPausa7.tipoNota = @"64th";
+
     
     [self.listaNotasPadroes addObject:notaPausa1];
     [self.listaNotasPadroes addObject:notaPausa2];
     [self.listaNotasPadroes addObject:notaPausa3];
     [self.listaNotasPadroes addObject:notaPausa4];
-    [self.listaNotasPadroes addObject:notaPausa5];
-    [self.listaNotasPadroes addObject:notaPausa6];
-    [self.listaNotasPadroes addObject:notaPausa7];
+ 
 }
 
 
--(void)AddInstrumento:(Nota*)nota{
-    
-    [[[DataBaseNotaPadrao sharedManager]listaNotasPadroes]addObject:nota];
-    
-}
-
+//Retorna a nota pelo seu nome
 -(Nota*)retornaNotaPadrao:(NSString*)nomeNota{
     
     Nota *nota;
     
     for(int i=0;i<self.listaNotasPadroes.count;i++){
         nota = [[self listaNotasPadroes] objectAtIndex:i];
-        if([[nota nomeNota]isEqualToString:nomeNota]){
+        if([[nota tipoNota]isEqualToString:nomeNota]){
             return  nota;
+        }
+    }
+    
+    return NULL;
+}
+
+
+-(UIImage*)retornaNotaPadraoCrianca:(NSString*)tipoNomeNota{
+
+    Nota *nota;
+    
+    for(int i=0;i<self.listaNotasPadroes.count;i++){
+        nota = [[self listaNotasPadroes] objectAtIndex:i];
+        NSString *tempo  = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
+    
+        if(([[nota nomeNota] isEqualToString:tipoNomeNota]) &&([[nota tipoNota] isEqualToString:tempo])){
+            return  nota.imagemNota.image;
         }
     }
     

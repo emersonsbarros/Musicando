@@ -18,100 +18,62 @@
 #import <CoreMedia/CoreMedia.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <QuartzCore/QuartzCore.h>
-
+#import "DesenhaPartitura.h"
 
 @interface Sinfonia : NSObject < NSXMLParserDelegate > {
-    
-    NSXMLParser *parser;
-    
-    NSMutableArray *descricaoGeralPartitura;
-    NSMutableArray *pentagramaPartitura;
-    NSMutableArray *notasPartitura;
-    NSMutableArray *notasPartitura2;
-    
-    NSString *element;
-    NSString *codeValue;
-    NSString *codeValue2;
-    BOOL auxCodeValue2;
-    
-    NSMutableDictionary *item;
-    NSMutableDictionary *partitura;
-    NSMutableDictionary *notas;
-    
-    //descricao da partitura
-    NSMutableString *titulo;
-    NSMutableString *data;
-    NSMutableString *nomeInstrumento;
-    
-    //partitura
-    NSMutableString *n1;
-    NSMutableString *armaduraClave;
-    NSMutableString *numeroDeTempo;
-    NSMutableString *unidadeDeTempo;
-    NSMutableString *tipoClave;
-    NSMutableString *linhaClave;
-    
-    //Notas
-    NSMutableString *n2;
-    NSMutableString *n3;
-    NSMutableString *n4;
-    NSMutableString *n5;
-    NSMutableString *tom;
-    NSMutableString *nivelPentagrama;
-    NSMutableString *numeroCompasso;
-    NSMutableString *posNotaCimaBaixo;
-    NSMutableString *continuaNota;
     
     NSMutableArray *recebeOrdemNotasDoInstrumento;
     
     int auxIndiceNotasPausa;
     int auxIndiceNotas;
     int auxIndiceNotas2;
-    BOOL estadoStaff;
     
     SoundBankPlayer *_soundBankPlayer;
     SoundBankPlayer *_soundBankPlayer2;
   
-
 }
 
-//////////////////// Atributos da Sinfonia ////////////////
+
++(Sinfonia*)sharedManager;
+
 
 @property NSString *nomeSinfonia;
 @property NSString *dataSinfonia;
 @property NSString *nomeInstrumentoSinfonia;
 @property NSMutableArray *listaPartiturasSinfonia;
 @property NSString *numeroCompassos;
-
-//////////////////// ATRIBUTOS XML //////////////////////////
-
-
 @property Instrumento *instrumento;
 
 
--(void)metodoIniciaSinfonia:(NSString*)nomePartitura :(NSString*)nomeInstrumento;
-+(Sinfonia*)sharedManager;
 
+-(void)metodoIniciaSinfonia:(NSString*)nomePartitura :(NSString*)nomeInstrumento;
 -(void)tocarPlayerPartitura;
 -(void)pausePlayerPartitura;
 -(void)pararPlayerPartitura;
 -(void)repetePlayerPartitura;
 
-@property NSString *textoDescricaoNota;
-
-@property int contadorScrollDesloca;
-
-@property SEL selectors;
-
-@property int compassoAtual;
-@property int numeroTotalCompassos;
-
-
-
-@property float controleVelocidaTranNota;
 
 -(void)tocarUmaNota:(NSMutableArray*)listaSons :(NSString*)nomeInstrumentoPlist;
 -(void)tocarTodasNotasEdicao:(NSMutableArray*)listaSons :(NSString*)nomeInstrumentoPlist;
+
+
+-(void)desapareceEfeito:(Nota*)notes;
+-(void)mostraEfeito:(Nota*)notes;
+
+
+@property NSString *textoDescricaoNota;
+@property int contadorScrollDesloca;
+@property int compassoAtual;
+@property int numeroTotalCompassos;
+@property float controleVelocidaTranNota;
+
+@property BOOL estadoBotaoLimpar;
+@property BOOL estadoBotaoPlay;
+
+
+
+
+
 @end
 
 

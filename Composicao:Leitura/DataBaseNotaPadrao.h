@@ -8,18 +8,21 @@
 
 #import <Foundation/Foundation.h>
 #import "Nota.h"
+#import "EscolhaUsuarioPartitura.h"
 
 @interface DataBaseNotaPadrao : NSObject {
     
 }
 
-//Metodos
-+(DataBaseNotaPadrao*)sharedManager;
-
+//Lista que contem notas/pausaspadroes
 @property NSMutableArray *listaNotasPadroes;
 
 
+//Metodos
++(DataBaseNotaPadrao*)sharedManager;
 -(Nota*)retornaNotaPadrao:(NSString*)nomeNota;
+
+-(UIImage*)retornaNotaPadraoCrianca:(NSString*)tipoNomeNota;
 
 
 @end

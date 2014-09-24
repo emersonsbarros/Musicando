@@ -17,7 +17,7 @@
           <score-part id="P1">
               <part-name></part-name>
               <score-instrument id="P1-I2">
-                  <instrument-name>NONE</instrument-name>
+                  <instrument-name>Beethoven - Symphony No. 5</instrument-name>
               </score-instrument>
               <midi-instrument id="P1-I2">
                   <midi-channel>1</midi-channel>
