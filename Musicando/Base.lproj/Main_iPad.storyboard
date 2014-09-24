@@ -259,9 +259,6 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="225-Yc-UqM" kind="modal" modalTransitionStyle="crossDissolve" id="7Ix-dc-TsH"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v22-F9-IqO">
                                 <rect key="frame" x="413" y="374" width="199" height="180"/>
@@ -355,9 +352,6 @@
                                 <state key="normal" title="&lt; Modulo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="Gfd-Jb-Kxo" kind="modal" modalTransitionStyle="crossDissolve" id="t8s-TQ-CzK"/>
-                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aulas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNR-lI-8Aj">
                                 <rect key="frame" x="448" y="6" width="131" height="30"/>
@@ -402,166 +396,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="37S-Ow-rpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5109" y="-98"/>
-        </scene>
-        <!--Modulo View Controller - Modulos-->
-        <scene sceneID="ug8-dH-x1R">
-            <objects>
-                <viewController storyboardIdentifier="modulos" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gfd-Jb-Kxo" customClass="ModuloViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cqD-6x-oWn"/>
-                        <viewControllerLayoutGuide type="bottom" id="6c2-2T-rjS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="dAM-9d-WRA">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="barraAzul.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="mPD-r8-xRe">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundoPrata.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZwO-Gw-9It">
-                                <rect key="frame" x="0.0" y="45" width="1024" height="723"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQH-pB-XI2">
-                                <rect key="frame" x="12" y="5" width="177" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="&lt; Jornada">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="225-Yc-UqM" kind="modal" identifier="biblioteca" modalTransitionStyle="crossDissolve" id="YTc-dY-brs"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Modulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73T-hf-zj5">
-                                <rect key="frame" x="447" y="5" width="131" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Modulos" id="VIS-42-bVj">
-                        <barButtonItem key="rightBarButtonItem" id="eTR-dv-WNA">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                    </navigationItem>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <outlet property="imgFundo" destination="ZwO-Gw-9It" id="pH0-jZ-Mbf"/>
-                        <segue destination="DGN-Kk-A93" kind="modal" identifier="chamaAulas" modalTransitionStyle="crossDissolve" id="Kdn-9d-DQ9"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ey2-Tz-uDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3494" y="-98"/>
-        </scene>
-        <!--Biblioteca View Controller - biblioteca-->
-        <scene sceneID="X75-kB-Ko3">
-            <objects>
-                <viewController storyboardIdentifier="biblioteca" title="biblioteca" useStoryboardIdentifierAsRestorationIdentifier="YES" id="225-Yc-UqM" customClass="BibliotecaViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vfx-cU-rnR"/>
-                        <viewControllerLayoutGuide type="bottom" id="TKg-7V-5XB"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UTI-OH-as6">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundoPrata.png" translatesAutoresizingMaskIntoConstraints="NO" id="TqK-q8-5A5">
-                                <rect key="frame" x="0.0" y="45" width="1024" height="723"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfL-9j-DG8">
-                                <rect key="frame" x="652" y="401" width="227" height="147"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="74"/>
-                                <state key="normal" title="Biblioteca">
-                                    <color key="titleColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcK-1X-FD5">
-                                <rect key="frame" x="673" y="281" width="184" height="159"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="biblioteca.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Gfd-Jb-Kxo" kind="modal" modalTransitionStyle="crossDissolve" id="10O-Jt-bQu"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rak-o9-iBW">
-                                <rect key="frame" x="31" y="174" width="503" height="524"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOI-Uw-5Gq">
-                                        <rect key="frame" x="56" y="135" width="336" height="64"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="80"/>
-                                        <state key="normal" title="Continuar">
-                                            <color key="titleColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOK-bh-RZF">
-                                        <rect key="frame" x="64" y="70" width="336" height="64"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="80"/>
-                                        <state key="normal" title="Nova jornada">
-                                            <color key="titleColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBY-yY-Ubz">
-                                        <rect key="frame" x="142" y="231" width="164" height="142"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
-                                        <state key="normal" backgroundImage="home.png">
-                                            <color key="titleColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="modal" modalTransitionStyle="crossDissolve" id="0f7-NI-Cpa"/>
-                                        </connections>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="em_breve.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Po-GG-YbR">
-                                        <rect key="frame" x="104" y="43" width="240" height="175"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="barraAzul.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="8cH-Za-Oxa">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jornada" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFC-gd-1cU">
-                                <rect key="frame" x="393" y="7" width="239" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Jornada" id="MPi-to-5FY">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" id="hA5-qc-aW3">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                    </navigationItem>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tba-lG-NrP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1845" y="-136"/>
         </scene>
         <!--Composicao Partitura View Controller - ComposicaoPartitura-->
         <scene sceneID="gW5-a8-H1H">
@@ -617,7 +451,6 @@
     </scenes>
     <resources>
         <image name="barraAzul.jpeg" width="207" height="31"/>
-        <image name="biblioteca.png" width="150" height="146"/>
         <image name="em_breve.png" width="362" height="253"/>
         <image name="frame-1.gif" width="320" height="320"/>
         <image name="fundoPrata.png" width="1100" height="821"/>
@@ -639,9 +472,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="10O-Jt-bQu"/>
-        <segue reference="7Ix-dc-TsH"/>
-        <segue reference="WPC-Ds-dfk"/>
-        <segue reference="ub6-qR-eBg"/>
+        <segue reference="lxA-SZ-gPL"/>
     </inferredMetricsTieBreakers>
 </document>

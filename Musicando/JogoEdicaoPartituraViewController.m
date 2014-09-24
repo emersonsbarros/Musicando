@@ -69,11 +69,7 @@
     // Do any additional setup after loading the view from its nib.
     
     //Add barra,Mascote,View de Retornar Pagina ao Xib
-<<<<<<< HEAD
     [[GerenciadorComponenteView sharedManager]addComponentesViewMascote:self:[Biblioteca sharedManager].exercicioAtual];
-=======
-    [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
->>>>>>> FETCH_HEAD
     self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
     
     //Cria Seletor e manda ele como paramentro para outros View Controllers poderem usar
@@ -91,21 +87,6 @@
     
 }
 
-
--(void)chamaMetodosFala0{
-    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:1.0f:self.viewGesturePassaFala];
-}
-
--(void)chamaMetodosFala1{
-    
-    
-    for(UIView *view in self.view.subviews){
-        if((view.tag == 23) || (view.tag = 22)){view.hidden = NO;
-        }else [view removeFromSuperview];
-    }
-    
-    [self inciaComponetes];
-}
 
 
 -(void)addGesturePassaFalaMascote:(UIView*)viewGesture{
@@ -125,7 +106,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-<<<<<<< HEAD
+
 -(void)chamaMetodosFala0{
   
     [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:1.0f:self.viewGesturePassaFala];
@@ -143,9 +124,7 @@
     }
    
 }
-=======
 
->>>>>>> FETCH_HEAD
 
 //Gerencia o passa de falas
 -(void)pulaFalaMascote{
@@ -191,13 +170,12 @@
         t.frame = CGRectMake(t.frame.origin.x-150,t.frame.origin.y-150,t.frame.size.width,t.frame.size.height);
     }
     
-<<<<<<< HEAD
-=======
+
   
     [GameOverViewController sharedManager].view.hidden = YES;
     [[GameOverViewController sharedManager]addBarraSuperioAoXib:self:[Biblioteca sharedManager].exercicioAtual];
     
->>>>>>> FETCH_HEAD
+
     [self.view addSubview:self.outBtnHome];
     
     [self comecaRodada];
