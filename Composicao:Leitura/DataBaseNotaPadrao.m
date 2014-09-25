@@ -39,6 +39,8 @@
 //Notas/Pausas Padroes da Partitura
 -(void)addNotasPadroesDoApplicativo {
     
+    UIImageView *carinha = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Do4tempo.png"]];
+    UIImageView *chapeu = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"chapeu.png"]];
     
     //Nota Dó
     Nota *notaDo4 = [[Nota alloc]init];
@@ -46,20 +48,34 @@
     notaDo4.nomeNota = @"C";
     notaDo4.tipoNota = @"whole";
     
+    
     Nota *notaDo2 = [[Nota alloc]init];
     notaDo2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Do1tempo.png"]];
     notaDo2.nomeNota = @"C";
     notaDo2.tipoNota = @"half";
     
+    [carinha setFrame:CGRectMake(-65,-15,150,180)];
+    [notaDo2.imagemNota addSubview:carinha];
+    
+    [chapeu setFrame:CGRectMake(-15,25,80,50)];
+    [notaDo2.imagemNota addSubview:chapeu];
+
+    
+    
     Nota *notaDo1 = [[Nota alloc]init];
     notaDo1.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Do1tempo.png"]];
     notaDo1.nomeNota = @"C";
     notaDo1.tipoNota = @"quarter";
+    [carinha setFrame:CGRectMake(-65,-15,150,180)];
+    [notaDo1.imagemNota addSubview:carinha];
+    
     
     Nota *notaDo12 = [[Nota alloc]init];
     notaDo12.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Do1:2tempo-01.png"]];
     notaDo12.nomeNota = @"C";
     notaDo12.tipoNota = @"eighth";
+    [carinha setFrame:CGRectMake(-65,-15,150,180)];
+    [notaDo12.imagemNota addSubview:carinha];
     
 
     //Nota Re
@@ -86,7 +102,7 @@
     
     //Nota Mi
     Nota *notaMi4 = [[Nota alloc]init];
-    notaMi4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Mi1:2tempo.png"]];
+    notaMi4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Mi4tempo.png"]];
     notaMi4.nomeNota = @"E";
     notaMi4.tipoNota = @"whole";
     
@@ -154,7 +170,7 @@
     
     //Nota La
     Nota *notaLa4 = [[Nota alloc]init];
-    notaLa4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"La1:2tempo.png"]];
+    notaLa4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"La4tempo.png"]];
     notaLa4.nomeNota = @"A";
     notaLa4.tipoNota = @"whole";
     
@@ -289,7 +305,7 @@
 }
 
 
--(UIImage*)retornaNotaPadraoCrianca:(NSString*)tipoNomeNota{
+-(UIImageView*)retornaNotaPadraoCrianca:(NSString*)tipoNomeNota{
 
     Nota *nota;
     
@@ -298,7 +314,7 @@
         NSString *tempo  = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
     
         if(([[nota nomeNota] isEqualToString:tipoNomeNota]) &&([[nota tipoNota] isEqualToString:tempo])){
-            return  nota.imagemNota.image;
+            return  nota.imagemNota;
         }
     }
     

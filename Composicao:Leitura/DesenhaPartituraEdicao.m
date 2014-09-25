@@ -119,7 +119,7 @@
 -(Nota*)retornaNotaCriadaPeloUsuario:(float)j :(UIImageView*)t :(UIImageView*)t2 :(UIImageView*)ultimoTraco{
     
     Nota *aux;
-    int ajusteNota = -184;
+    int ajusteNota = -177;
     int tamanhoHor = 100;
     int tamanhoVert = 150;
     
@@ -679,8 +679,19 @@
         aux.oitava = @"4";
         aux.duracao = @"0";
         aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota]];
+        
+        aux.imagemNota = [[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota];
+        
+    
+
+        
+//        UIImageView *imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Do4tempo.png"]];
+//        [imagemNota setFrame:CGRectMake(-65,-15,150,180)];
+//        [aux.imagemNota addSubview:imagemNota];
+        
+        
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(ultimoTraco.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota),tamanhoHor,tamanhoVert)];
+        
         aux.tom = @"";
         aux.pertencePartitura = @"";
         aux.numeroCompasso = @"0";
@@ -888,7 +899,7 @@
 -(void)desenhaContornoPartituraParaEdicao:(int)qtLinhas{
     
     self.posicaoX = 150;
-    espacamentoEntreNotas = 110;
+    espacamentoEntreNotas = 150;
     
     
     //Pos Linha em X | Espamento entre linhas

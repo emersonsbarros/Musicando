@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B97FC4819D495C1005CF7E0 /* NotaAnimadaPadrao.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B97FC4719D495C1005CF7E0 /* NotaAnimadaPadrao.m */; };
 		0BA5895B19D35FD1005AC1CC /* chapeu.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA5893A19D35FD1005AC1CC /* chapeu.png */; };
 		0BA5895C19D35FD1005AC1CC /* Do1:2tempo-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA5893C19D35FD1005AC1CC /* Do1:2tempo-01.png */; };
 		0BA5895D19D35FD1005AC1CC /* Do1tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA5893D19D35FD1005AC1CC /* Do1tempo.png */; };
@@ -215,6 +216,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B97FC4619D495C1005CF7E0 /* NotaAnimadaPadrao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotaAnimadaPadrao.h; sourceTree = "<group>"; };
+		0B97FC4719D495C1005CF7E0 /* NotaAnimadaPadrao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotaAnimadaPadrao.m; sourceTree = "<group>"; };
 		0BA5893A19D35FD1005AC1CC /* chapeu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chapeu.png; sourceTree = "<group>"; };
 		0BA5893C19D35FD1005AC1CC /* Do1:2tempo-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Do1:2tempo-01.png"; sourceTree = "<group>"; };
 		0BA5893D19D35FD1005AC1CC /* Do1tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Do1tempo.png; sourceTree = "<group>"; };
@@ -920,6 +923,8 @@
 				3F608CB5196C7585001979E9 /* DataBaseInstrumento.m */,
 				3F608CB6196C7585001979E9 /* DataBaseNotaPadrao.h */,
 				3F608CB7196C7585001979E9 /* DataBaseNotaPadrao.m */,
+				0B97FC4619D495C1005CF7E0 /* NotaAnimadaPadrao.h */,
+				0B97FC4719D495C1005CF7E0 /* NotaAnimadaPadrao.m */,
 			);
 			name = DataBase;
 			sourceTree = "<group>";
@@ -1404,6 +1409,7 @@
 			files = (
 				3F03E4B419BC1B180061000B /* PlayerPartituraEdicaoViewController.m in Sources */,
 				A8C3F0BC194B72A400E78899 /* MenuViewController.m in Sources */,
+				0B97FC4819D495C1005CF7E0 /* NotaAnimadaPadrao.m in Sources */,
 				3F608D99196C7585001979E9 /* NotaEdicaoGesture.m in Sources */,
 				3F43A31C199C8AB20038D1E9 /* EstudioViewController.m in Sources */,
 				A84855BB1994146500C5F0A3 /* LeituraPartituraViewController.m in Sources */,
