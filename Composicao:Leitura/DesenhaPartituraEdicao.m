@@ -361,8 +361,11 @@
         aux.oitava = @"5";
         aux.duracao = @"0";
         aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota]];
-         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,t.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
+        
+        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
+        [self addComponentesImangesNota:aux];
+         
+        [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,t.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
         aux.tom = @"";
         aux.pertencePartitura = @"";
         aux.numeroCompasso = @"0";
@@ -387,7 +390,10 @@
         aux.oitava = @"5";
         aux.duracao = @"0";
         aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota]];
+        
+        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
+        [self addComponentesImangesNota:aux];
+        
         float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(pos)-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
         aux.tom = @"";
@@ -414,7 +420,10 @@
         aux.oitava = @"5";
         aux.duracao = @"0";
         aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota]];
+        
+        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
+        [self addComponentesImangesNota:aux];
+        
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,t.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
         aux.tom = @"";
         aux.pertencePartitura = @"";
@@ -440,7 +449,10 @@
         aux.oitava = @"5";
         aux.duracao = @"0";
         aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota]];
+        
+        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
+        [self addComponentesImangesNota:aux];
+        
         float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(pos)-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
         aux.tom = @"";
@@ -467,7 +479,10 @@
         aux.oitava = @"5";
         aux.duracao = @"0";
         aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota]];
+        
+        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
+        [self addComponentesImangesNota:aux];
+        
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,t.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
         aux.tom = @"";
         aux.pertencePartitura = @"";
@@ -492,7 +507,10 @@
         aux.oitava = @"5";
         aux.duracao = @"0";
         aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-        aux.imagemNota =[[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota]];
+        
+        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
+        [self addComponentesImangesNota:aux];
+        
         float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(pos)-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
 
@@ -520,7 +538,10 @@
         aux.oitava = @"4";
         aux.duracao = @"0";
         aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota]];
+        
+        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
+        [self addComponentesImangesNota:aux];
+        
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,t.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
         aux.tom = @"";
         aux.pertencePartitura = @"";
@@ -545,7 +566,10 @@
         aux.oitava = @"4";
         aux.duracao = @"0";
         aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota]];
+        
+        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
+        [self addComponentesImangesNota:aux];
+        
         float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(pos)-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
 
@@ -573,7 +597,10 @@
         aux.oitava = @"4";
         aux.duracao = @"0";
         aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota]];
+        
+        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
+        [self addComponentesImangesNota:aux];
+        
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,t.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
         aux.tom = @"";
         aux.pertencePartitura = @"";
@@ -598,7 +625,10 @@
         aux.oitava = @"4";
         aux.duracao = @"0";
         aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota]];
+        
+        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
+        [self addComponentesImangesNota:aux];
+        
         float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(pos)-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
 
@@ -626,7 +656,10 @@
         aux.oitava = @"4";
         aux.duracao = @"0";
         aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota]];
+        
+        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
+        [self addComponentesImangesNota:aux];
+        
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,t.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
         aux.tom = @"";
         aux.pertencePartitura = @"";
@@ -652,7 +685,10 @@
         aux.oitava = @"4";
         aux.duracao = @"0";
         aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota]];
+        
+        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
+        [self addComponentesImangesNota:aux];
+        
         float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(pos)-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
         aux.tom = @"";
@@ -680,15 +716,9 @@
         aux.duracao = @"0";
         aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
         
-        aux.imagemNota = [[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota];
-        
-    
+        aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
+        [self addComponentesImangesNota:aux];
 
-        
-//        UIImageView *imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Do4tempo.png"]];
-//        [imagemNota setFrame:CGRectMake(-65,-15,150,180)];
-//        [aux.imagemNota addSubview:imagemNota];
-        
         
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(ultimoTraco.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota),tamanhoHor,tamanhoVert)];
         
@@ -735,6 +765,25 @@
     
 }
 
+-(void)addComponentesImangesNota:(Nota*)aux{
+    
+    NotaAnimadaPadrao *padrao = [[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota];
+    UIImage *imgCarinha = [[DataBaseNotaPadrao sharedManager]retornaCarinhaNota:aux.nomeNota];
+    
+    if(padrao.carinha == 1){
+        UIImageView *carinha = [[UIImageView alloc]initWithImage:imgCarinha];
+        [carinha setFrame:CGRectMake(-65,-15,150,180)];
+        [aux.imagemNota addSubview:carinha];
+    }
+    
+    if(padrao.chapeu == 1){
+        UIImageView *chapeu = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"chapeu.png"]];
+        [chapeu setFrame:CGRectMake(-33,50,80,50)];
+        [aux.imagemNota addSubview:chapeu];
+    }
+    
+}
+
 -(Nota*)retornaPosicaoNotaEdicao:(float)posx :(float)posy{
     
     Nota *aux;
@@ -748,7 +797,7 @@
             aux = [[Nota alloc]init];
             aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
             aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
-            [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,linhaPausa.frame.origin.y+5,60,20)];
+            [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,linhaPausa.frame.origin.y+3,60,20)];
             aux.nomeNota = @"";
             aux.oitava = @"";
             aux.tom = @"";
@@ -774,7 +823,7 @@
             aux = [[Nota alloc]init];
             aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
             aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
-            [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,linhaPausa.frame.origin.y+30,60,80)];
+            [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,linhaPausa.frame.origin.y-10,60,80)];
             aux.nomeNota = @"";
             aux.oitava = @"";
             aux.tom = @"";
@@ -787,7 +836,7 @@
             aux = [[Nota alloc]init];
             aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
             aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
-            [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,linhaPausa.frame.origin.y+30,60,80)];
+            [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,linhaPausa.frame.origin.y-10,60,80)];
             aux.nomeNota = @"";
             aux.oitava = @"";
             aux.tom = @"";
@@ -903,7 +952,7 @@
     
     
     //Pos Linha em X | Espamento entre linhas
-    float posHorizontalRiscoPentagrama = 00.0f;
+    float posHorizontalRiscoPentagrama = 60.0f;
     float espacamentoRiscoPentagrama = 60.0f;
     
     self.listaImagensTracoPentagrama = [[NSMutableArray alloc]init];

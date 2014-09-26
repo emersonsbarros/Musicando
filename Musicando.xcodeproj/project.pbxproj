@@ -35,6 +35,14 @@
 		0BA5897319D35FD1005AC1CC /* Sol4tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA5895A19D35FD1005AC1CC /* Sol4tempo.png */; };
 		0BAFF93219D347E0008299BD /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BAFF93119D347E0008299BD /* 1.png */; };
 		3F03108F1999D8F500570B8A /* GerenciadorComponenteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F03108E1999D8F500570B8A /* GerenciadorComponenteView.m */; };
+		3F03969219D54024008D694E /* botao1Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F03968E19D54024008D694E /* botao1Tempo.png */; };
+		3F03969319D54024008D694E /* botao2Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F03968F19D54024008D694E /* botao2Tempo.png */; };
+		3F03969419D54024008D694E /* botao4Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F03969019D54024008D694E /* botao4Tempo.png */; };
+		3F03969519D54024008D694E /* botao12Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F03969119D54024008D694E /* botao12Tempo.png */; };
+		3F03969A19D54293008D694E /* botao1Pausa.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F03969619D54293008D694E /* botao1Pausa.png */; };
+		3F03969B19D54293008D694E /* botao2Pausa.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F03969719D54293008D694E /* botao2Pausa.png */; };
+		3F03969C19D54293008D694E /* botao4Pausa.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F03969819D54293008D694E /* botao4Pausa.png */; };
+		3F03969D19D54293008D694E /* botao12Pausa.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F03969919D54293008D694E /* botao12Pausa.png */; };
 		3F03E4A719BBA6600061000B /* DesenhaPartituraEdicao.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F03E4A619BBA6600061000B /* DesenhaPartituraEdicao.m */; };
 		3F03E4AC19BBABDE0061000B /* BarraNotasPausasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F03E4AA19BBABDE0061000B /* BarraNotasPausasViewController.m */; };
 		3F03E4AD19BBABDE0061000B /* BarraNotasPausasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F03E4AB19BBABDE0061000B /* BarraNotasPausasViewController.xib */; };
@@ -153,7 +161,6 @@
 		3F608DE2196C7585001979E9 /* Sinfonia.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F608D51196C7585001979E9 /* Sinfonia.m */; };
 		3F608DE3196C7585001979E9 /* OpenALSupport.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F608D53196C7585001979E9 /* OpenALSupport.c */; };
 		3F608DE4196C7585001979E9 /* SoundBankPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F608D56196C7585001979E9 /* SoundBankPlayer.m */; };
-		3FA3CC96197A3D2200E1FCFB /* notaParaRosto.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA3CC95197A3D2200E1FCFB /* notaParaRosto.png */; };
 		3FAD4B6219AA80D2005128C0 /* pausa1-8Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FAD4B6119AA80D2005128C0 /* pausa1-8Tempo.png */; };
 		3FB1CC2F19B77EDE00FAF884 /* ComponenteScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB1CC2E19B77EDE00FAF884 /* ComponenteScroll.m */; };
 		3FB1CC3219B78AA700FAF884 /* InicializaProjeto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB1CC3119B78AA700FAF884 /* InicializaProjeto.m */; };
@@ -246,6 +253,14 @@
 		0BAFF93119D347E0008299BD /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		3F03108D1999D8F500570B8A /* GerenciadorComponenteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadorComponenteView.h; sourceTree = "<group>"; };
 		3F03108E1999D8F500570B8A /* GerenciadorComponenteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciadorComponenteView.m; sourceTree = "<group>"; };
+		3F03968E19D54024008D694E /* botao1Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao1Tempo.png; sourceTree = "<group>"; };
+		3F03968F19D54024008D694E /* botao2Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao2Tempo.png; sourceTree = "<group>"; };
+		3F03969019D54024008D694E /* botao4Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao4Tempo.png; sourceTree = "<group>"; };
+		3F03969119D54024008D694E /* botao12Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao12Tempo.png; sourceTree = "<group>"; };
+		3F03969619D54293008D694E /* botao1Pausa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao1Pausa.png; sourceTree = "<group>"; };
+		3F03969719D54293008D694E /* botao2Pausa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao2Pausa.png; sourceTree = "<group>"; };
+		3F03969819D54293008D694E /* botao4Pausa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao4Pausa.png; sourceTree = "<group>"; };
+		3F03969919D54293008D694E /* botao12Pausa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao12Pausa.png; sourceTree = "<group>"; };
 		3F03E4A519BBA6600061000B /* DesenhaPartituraEdicao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesenhaPartituraEdicao.h; sourceTree = "<group>"; };
 		3F03E4A619BBA6600061000B /* DesenhaPartituraEdicao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesenhaPartituraEdicao.m; sourceTree = "<group>"; };
 		3F03E4A919BBABDE0061000B /* BarraNotasPausasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarraNotasPausasViewController.h; sourceTree = "<group>"; };
@@ -498,6 +513,14 @@
 		0BA5893919D35FD1005AC1CC /* Auxiliares Notas */ = {
 			isa = PBXGroup;
 			children = (
+				3F03968E19D54024008D694E /* botao1Tempo.png */,
+				3F03968F19D54024008D694E /* botao2Tempo.png */,
+				3F03969019D54024008D694E /* botao4Tempo.png */,
+				3F03969119D54024008D694E /* botao12Tempo.png */,
+				3F03969619D54293008D694E /* botao1Pausa.png */,
+				3F03969719D54293008D694E /* botao2Pausa.png */,
+				3F03969819D54293008D694E /* botao4Pausa.png */,
+				3F03969919D54293008D694E /* botao12Pausa.png */,
 				0BA5893A19D35FD1005AC1CC /* chapeu.png */,
 			);
 			path = "Auxiliares Notas";
@@ -1252,13 +1275,15 @@
 				3F608D78196C7585001979E9 /* sharp.png in Resources */,
 				3F608DD9196C7585001979E9 /* P200 Piano D6.caf in Resources */,
 				3F608DAF196C7585001979E9 /* heyjude.xml in Resources */,
+				3F03969319D54024008D694E /* botao2Tempo.png in Resources */,
 				3FC4384519A940F900376281 /* papelAntigo.jpg in Resources */,
 				3FC4385A19A940F900376281 /* pianoclassico.png in Resources */,
 				3F205C2919B81FA100965F60 /* ListaPartiturasViewController.xib in Resources */,
-				3FA3CC96197A3D2200E1FCFB /* notaParaRosto.png in Resources */,
+				3F03969C19D54293008D694E /* botao4Pausa.png in Resources */,
 				3F608D71196C7585001979E9 /* ViolaoNylon.plist in Resources */,
 				3F608DD7196C7585001979E9 /* P200 Piano D4.caf in Resources */,
 				3F608D60196C7585001979E9 /* fad3.caf in Resources */,
+				3F03969219D54024008D694E /* botao1Tempo.png in Resources */,
 				3F608D7E196C7585001979E9 /* minima.png in Resources */,
 				A8C3F0BE194B72A400E78899 /* Images.xcassets in Resources */,
 				3FE8D55419B96F120011BD9A /* BotaoEstudioViewController.xib in Resources */,
@@ -1270,12 +1295,14 @@
 				0BA5895F19D35FD1005AC1CC /* Fa1:2tempo.png in Resources */,
 				3F608DD2196C7585001979E9 /* P200 Piano C10.caf in Resources */,
 				3F03E4B519BC1B180061000B /* PlayerPartituraEdicaoViewController.xib in Resources */,
+				3F03969D19D54293008D694E /* botao12Pausa.png in Resources */,
 				3F608DE1196C7585001979E9 /* Piano.plist in Resources */,
 				3FC438A319A954F900376281 /* iconeMenuJornada.png in Resources */,
 				3F608D8D196C7585001979E9 /* colcheiaPausa.png in Resources */,
 				3F608DDC196C7585001979E9 /* P200 Piano F#4.caf in Resources */,
 				3F608DD1196C7585001979E9 /* P200 Piano A#7.caf in Resources */,
 				3F608DCD196C7585001979E9 /* P200 Piano A#2.caf in Resources */,
+				3F03969419D54024008D694E /* botao4Tempo.png in Resources */,
 				3F608D85196C7585001979E9 /* 2.png in Resources */,
 				3F608D75196C7585001979E9 /* dot.gif in Resources */,
 				3F608D5B196C7585001979E9 /* do1.caf in Resources */,
@@ -1285,6 +1312,7 @@
 				0BA5896919D35FD1005AC1CC /* Mi1tempo.png in Resources */,
 				0BA5896019D35FD1005AC1CC /* Fa1tempo.png in Resources */,
 				3F608D8F196C7585001979E9 /* semicolcheiaPausa.png in Resources */,
+				3F03969B19D54293008D694E /* botao2Pausa.png in Resources */,
 				3F608D88196C7585001979E9 /* 5.png in Resources */,
 				0BA5897219D35FD1005AC1CC /* Sol1tempo.png in Resources */,
 				3FC4389C19A94CA700376281 /* fundoPrata.png in Resources */,
@@ -1353,6 +1381,7 @@
 				3F608D5D196C7585001979E9 /* do3.caf in Resources */,
 				0BA5896219D35FD1005AC1CC /* fundoazul-01.png in Resources */,
 				3F608D83196C7585001979E9 /* seminimaCortada.png in Resources */,
+				3F03969A19D54293008D694E /* botao1Pausa.png in Resources */,
 				3F608DB4196C7585001979E9 /* Mozart-Marcha Turca.xml in Resources */,
 				3F608D5C196C7585001979E9 /* do2.caf in Resources */,
 				3F608D70196C7585001979E9 /* 6c - G.caf in Resources */,
@@ -1388,6 +1417,7 @@
 				3F608DA1196C7585001979E9 /* Bachviolao.xml in Resources */,
 				3F608DDE196C7585001979E9 /* P200 Piano F#6.caf in Resources */,
 				3F608D6A196C7585001979E9 /* 3 - D.caf in Resources */,
+				3F03969519D54024008D694E /* botao12Tempo.png in Resources */,
 				0BA5896D19D35FD1005AC1CC /* Re4tempo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

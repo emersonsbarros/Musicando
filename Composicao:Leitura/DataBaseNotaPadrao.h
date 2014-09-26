@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Nota.h"
 #import "EscolhaUsuarioPartitura.h"
+#import "NotaAnimadaPadrao.h"
 
 @interface DataBaseNotaPadrao : NSObject {
     
@@ -22,7 +23,7 @@
 +(DataBaseNotaPadrao*)sharedManager;
 -(Nota*)retornaNotaPadrao:(NSString*)nomeNota;
 
--(UIImageView*)retornaNotaPadraoCrianca:(NSString*)tipoNomeNota;
-
+-(NotaAnimadaPadrao*)retornaNotaPadraoCrianca:(NSString*)tipoNomeNota;
+-(UIImage*)retornaCarinhaNota:(NSString*)tipoNomeNota;
 
 @end

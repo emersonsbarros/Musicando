@@ -11,7 +11,7 @@
 #import "NotaEdicaoGesture.h"
 #import "ComponenteScrollEdicao.h"
 #import "DataBaseNotaPadrao.h"
-
+#import "NotaAnimadaPadrao.h"
 
 @interface DesenhaPartituraEdicao : NSObject {
     

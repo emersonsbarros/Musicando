@@ -330,12 +330,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2xU-zs-mDr">
-                                <rect key="frame" x="0.0" y="96" width="1024" height="567"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="663"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMV-6J-GBa">
-                                <rect key="frame" x="0.0" y="96" width="1024" height="557"/>
+                                <rect key="frame" x="0.0" y="51" width="1024" height="602"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="piH-kM-Q8k" id="LHg-3s-kCO"/>
@@ -352,10 +352,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="barraAzul.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="1NO-Qo-qm8">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -371,7 +367,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Do4tempo.png" width="1083" height="1625"/>
+        <image name="Do4tempo.png" width="200" height="300"/>
         <image name="barraAzul.jpeg" width="207" height="31"/>
         <image name="em_breve.png" width="362" height="253"/>
         <image name="frame-1.gif" width="320" height="320"/>

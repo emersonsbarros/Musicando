@@ -10,4 +10,13 @@
 
 @interface NotaAnimadaPadrao : NSObject
 
+
+@property UIImageView *imagemNota;
+@property int carinha;
+@property int chapeu;
+@property NSString *nomeNota;
+@property NSString *tipoNota;
+@property UIImage *imgCarinha;
+
+
 @end
