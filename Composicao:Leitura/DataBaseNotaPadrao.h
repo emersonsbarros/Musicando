@@ -13,12 +13,12 @@
     
 }
 
-//Lista que contem notas/pausaspadroes
+//Metodos
++(DataBaseNotaPadrao*)sharedManager;
+
 @property NSMutableArray *listaNotasPadroes;
 
 
-//Metodos
-+(DataBaseNotaPadrao*)sharedManager;
 -(Nota*)retornaNotaPadrao:(NSString*)nomeNota;
 
 

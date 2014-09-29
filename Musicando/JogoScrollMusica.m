@@ -28,7 +28,7 @@
         
         
         NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"musicaJogoMusica" ofType:@"mp3"]];
-        [[ExercicioPlayer sharedManager]playAudio:musicFile:-1];
+        [[EfeitoPlayer sharedManager]playAudio:musicFile:-1];
         
         PBParallaxBackgroundDirection direction = kPBParallaxBackgroundDirectionLeft;
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
@@ -358,7 +358,7 @@
 -(void)gameOver{
     [[GameOverViewController sharedManager]gameOverParaUmaCena].view.hidden = NO;
     [self pausaJogo];
-   [[ExercicioPlayer sharedManager]stopAudio];
+   [[EfeitoPlayer sharedManager]stopAudio];
 }
 
 -(void)didBeginContact:(SKPhysicsContact *)contact {

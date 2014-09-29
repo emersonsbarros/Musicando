@@ -33,7 +33,7 @@
 -(void)viewDidDisappear:(BOOL)animated {
     
     [super viewDidDisappear: animated];
-    [[ExercicioTransicao sharedManager]finalizaExercicio:self];
+    [[EfeitoTransicao sharedManager]finalizaExercicio:self];
     
 }
 
@@ -43,7 +43,7 @@
     // Do any additional setup after loading the view from its nib.
     
     //Add barra,Mascote,View de Retornar Pagina ao Xib
-    [[GerenciadorComponenteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
+    [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
     self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
     
     //Cria Seletor e manda ele como paramentro para outros View Controllers poderem usar
@@ -54,7 +54,7 @@
     self.testaBiblio = [MascoteViewController sharedManager].testaBiblio;
     self.testaConversa = [MascoteViewController sharedManager].testaConversa;
     self.imagemDoMascote2 = [MascoteViewController sharedManager].imagemDoMascote2;
-    [[ExercicioMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote2];
+    [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote2];
     
     
     [self pulaFalaMascote];
@@ -74,7 +74,7 @@
 }
 
 -(void)chamaMetodosFala0{
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
 }
 
 -(void)chamaMetodosFala1{
@@ -85,7 +85,7 @@
     }
     
     NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"musicaJogoBlocos" ofType:@"mp3"]];
-    [[ExercicioPlayer sharedManager]playAudio:musicFile:-1];
+    [[EfeitoPlayer sharedManager]playAudio:musicFile:-1];
     
     self.viewJogo.hidden = NO;
     [self chamaJogo];
@@ -154,7 +154,7 @@
     }else{
         [tempo invalidate];
         [[GameOverViewController sharedManager]addBarraSuperioAoXib:self :[Biblioteca sharedManager].exercicioAtual];
-        [[ExercicioPlayer sharedManager]stopAudio];
+        [[EfeitoPlayer sharedManager]stopAudio];
     }
 }
 
@@ -430,7 +430,7 @@
        ([self.nomeTimbre isEqualToString:self.usuarioTimbre])){
         self.contadorBlocos +=1;
     }else{
-        [[ExercicioPlayer sharedManager]stopAudio];
+        [[EfeitoPlayer sharedManager]stopAudio];
         [[GameOverViewController sharedManager]addBarraSuperioAoXib:self :[Biblioteca sharedManager].exercicioAtual];
         self.contadorBlocos = 0;
     }

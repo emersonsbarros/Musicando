@@ -10,7 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "PBParallaxScrolling.h"
 #import "GameOverViewController.h"
-#import "ExercicioPlayer.h"
+#import "EfeitoPlayer.h"
 
 static const UInt32 mascoteCategory = 0x1 << 0;
 static const UInt32 pisoCategory = 0x1 << 1;

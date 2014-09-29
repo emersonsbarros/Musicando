@@ -8,7 +8,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <SpriteKit/SpriteKit.h>
 #import "GameOverViewController.h"
-#import "ExercicioPlayer.h"
+#import "EfeitoPlayer.h"
 
 //Constantes para colisão
 static const UInt32 blocoNotaCorreta = 0x1 << 0;

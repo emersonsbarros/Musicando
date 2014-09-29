@@ -31,7 +31,7 @@
 -(void)viewDidDisappear:(BOOL)animated {
     
     [super viewDidDisappear: animated];
-    [[ExercicioTransicao sharedManager]finalizaExercicio:self];
+    [[EfeitoTransicao sharedManager]finalizaExercicio:self];
     
 }
 
@@ -40,7 +40,7 @@
     [super viewDidLoad];
     
     ///Add barra,Mascote,View de Retornar Pagina ao Xib
-    [[GerenciadorComponenteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
+    [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
     self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
     
     //Cria Seletor e manda ele como paramentro para outros View Controllers poderem usar
@@ -68,7 +68,7 @@
     [self.listaImangesColisao addObject: self.notaSol];
     
     //Adiciona gesture ARRASTAR em todas imagens dessa lista
-    [[ExercicioImagem sharedManager]addGesturePainImagens: self.listaImangesColisao];
+    [[EfeitoImagem sharedManager]addGesturePainImagens: self.listaImangesColisao];
     
     //Lista para saber se as colisoes na tela foram feitas p/ ir na prox fala
     self.listaLiberaFala = [[NSMutableArray alloc]init];
@@ -81,7 +81,7 @@
     self.testaBiblio = [MascoteViewController sharedManager].testaBiblio;
     self.testaConversa = [MascoteViewController sharedManager].testaConversa;
     self.imagemDoMascote = [MascoteViewController sharedManager].imagemDoMascote2;
-    [[ExercicioMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote];
+    [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote];
     
     [self pulaFalaMascote];
 
@@ -98,7 +98,7 @@
     
     if([MascoteViewController sharedManager].contadorDeFalas == contadorMaximo){
         NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
-        [[ExercicioTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
+        [[EfeitoTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
     }
     if([MascoteViewController sharedManager].contadorDeFalas < contadorMaximo){
         switch ([MascoteViewController sharedManager].contadorDeFalas) {
@@ -149,13 +149,13 @@
 
 //Intro
 -(void)chamaMetodosFala0 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    [[ExercicioMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Explicação, mostra primeiro desenho
 -(void)chamaMetodosFala1 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     self.pentagrama.hidden = NO;
     
@@ -171,35 +171,35 @@
                      completion:^(BOOL finished){
                      }];
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Complemento
 -(void)chamaMetodosFala2 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Esconde o pentagrama simples, mostra o completo
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade: self.pentagrama];
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade: self.pentagramaCompleto];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade: self.pentagrama];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade: self.pentagramaCompleto];
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Setas direcionando a contagem de linhas e espaços
 -(void)chamaMetodosFala3 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
 
     //Mostra
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade: self.seta1];
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade: self.seta2];
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade: self.seta3];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade: self.seta1];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade: self.seta2];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade: self.seta3];
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Mostra pentagrama complementar
 -(void)chamaMetodosFala4 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Esconde setas e mostra pentagrama com linhas complementar
     self.seta1.hidden = YES;
@@ -209,24 +209,24 @@
     
     //Pentagrama e linhas
     self.pentagramaParaLinhasComplementares.hidden = NO;
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade: self.linhasSuplementares];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade: self.linhasSuplementares];
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Complemento
 -(void)chamaMetodosFala5 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     self.linhasSuplementares.hidden = YES;
     self.pentagramaCompleto.hidden = YES;
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Mostra nota no pentagrama
 -(void)chamaMetodosFala6 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
 
     [NSTimer scheduledTimerWithTimeInterval: 0.5
                                      target: self
@@ -243,13 +243,13 @@
     self.pentagramaParaLinhasComplementares.hidden = YES;
 
     
-    [[ExercicioImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote :self.viewGesturePassaFala:self.listaLiberaFala: 1];
+    [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote :self.viewGesturePassaFala:self.listaLiberaFala: 1];
 
 }
 
 //Complemento
 -(void)chamaMetodosFala7 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     [NSTimer scheduledTimerWithTimeInterval: 0.5
                                      target: self
@@ -261,18 +261,18 @@
     self.notaDo.hidden = NO;
 
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Complemento
 -(void)chamaMetodosFala8 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Complemento
 -(void)chamaMetodosFala9 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     self.pentagramaParaLinhasComplementares.hidden = YES;
     self.tocaTreco.hidden = YES;
@@ -281,12 +281,12 @@
     self.notaSol.hidden = YES;
 
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 //Complemento
 -(void)chamaMetodosFala10 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 
@@ -318,7 +318,7 @@
 
 - (void)acaoColisaoNotaSol{
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"notasPausas" withExtension:@"mp3"];
-    [[ExercicioPlayer sharedManager]playAudio:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
 }
 
 -(void) checkColisaoNotaDo:(NSTimer *) theTimer{
@@ -340,7 +340,7 @@
 - (void)acaoColisaoNotaDo{
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"happybirthdaySamba" withExtension:@"mp3"];
-    [[ExercicioPlayer sharedManager]playAudio:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
     
 }
 

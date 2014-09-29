@@ -12,10 +12,11 @@
 
 
 -(void)ordenaNotas:(NSMutableArray*)listaNotas {
+    
+//    self.ordemNotasInstrumento = [[NSMutableArray alloc]init];
     self.ordemNotasInstrumento = listaNotas;
 }
 
-//Retorna o numero da proxima nota do PList
 -(int)retornarNumeroNotaInstrumento:(NSMutableArray*)listaNotasInstrumento :(NSString*)notaXML{
     
     int contadorDeNota = self.numeroIniciaNota;
@@ -31,7 +32,7 @@
     return 0;
 }
 
-//ajusta o tom da nota (cima|baixo)
+
 -(NSString*)retornaIndiceListaMusicas:(NSString*)nota :(int)escalaTom{
     
     NSString *notaAcima;

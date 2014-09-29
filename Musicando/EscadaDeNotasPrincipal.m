@@ -39,7 +39,7 @@
         //Música de background
         
         NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"bensound-enigmatic" ofType:@"mp3"]];
-        [[ExercicioPlayer sharedManager]playAudio:musicFile:-1];
+        [[EfeitoPlayer sharedManager]playAudio:musicFile:-1];
     }
     
     return self;
@@ -160,7 +160,7 @@
     
 //START
     if ([checkNode.name isEqualToString: @"start"]) {
-        if (![[ExercicioPlayer sharedManager].somExercicioPlayer isPlaying]) [[ExercicioPlayer sharedManager]playAudios];
+        if (![[EfeitoPlayer sharedManager].somExercicioPlayer isPlaying]) [[EfeitoPlayer sharedManager]playAudios];
         checkNode.name = @"check";
         [self.botaoStartAndChek setTexture: [SKTexture textureWithImageNamed:@"botaoChecar.png"]];
         self.tempoPercorrido = 50;
@@ -174,17 +174,17 @@
         
         for (SKSpriteNode *nota in self.listaDeNotasComPosicoes) {
             
-            //NSLog(@"%@", nota.name);
+            NSLog(@"%@", nota.name);
             
             //1a LINHA SUPLEMENTAR
             if ([nota.name isEqualToString: @"Do"]) {
-                //NSLog(@"%f", nota.position.y);
+                NSLog(@"%f", nota.position.y);
                 if (nota.position.y >= 230 && nota.position.y <= 255 ) {
-                    //NSLog(@"DÓ CERTO");
+                    NSLog(@"DÓ CERTO");
                     _escalaCerta = YES;
 
                 }else{
-                    //NSLog(@"DÓ ERRADO");
+                    NSLog(@"DÓ ERRADO");
                     _escalaCerta = NO;
                     break;
                 }
@@ -193,11 +193,11 @@
             //1o ESPACO SUPLEMENTAR
             if ([nota.name isEqualToString: @"Re"]) {
                 if (nota.position.y >= 260 && nota.position.y <= 280) {
-                    //NSLog(@"RÉ CERTO");
+                    NSLog(@"RÉ CERTO");
                     _escalaCerta = YES;
 
                 }else{
-                    //NSLog(@"RÉ ERRADO");
+                    NSLog(@"RÉ ERRADO");
                     _escalaCerta = NO;
                     break;
 
@@ -206,14 +206,14 @@
             
             //1a LINHA
             if ([nota.name isEqualToString: @"Mi"]) {
-                //NSLog(@"%f", nota.position.y);
+                NSLog(@"%f", nota.position.y);
                 if (nota.position.y >= 285 && nota.position.y <= 305) {
-                    //NSLog(@"MI CERTO");
+                    NSLog(@"MI CERTO");
                     _escalaCerta = YES;
 
 
                 }else{
-                    //NSLog(@"MI ERRADO");
+                    NSLog(@"MI ERRADO");
                     _escalaCerta = NO;
                     break;
                 }
@@ -221,13 +221,13 @@
             
             //1o ESPACO
             if ([nota.name isEqualToString: @"Fa"]) {
-               // NSLog(@"%f", nota.position.y);
+                NSLog(@"%f", nota.position.y);
                 if (nota.position.y >= 310 && nota.position.y <= 330) {
-                    //NSLog(@"FÁ CERTO");
+                    NSLog(@"FÁ CERTO");
                     _escalaCerta = YES;
 
                 }else{
-                    //NSLog(@"FÁ ERRADO");
+                    NSLog(@"FÁ ERRADO");
                     _escalaCerta = NO;
                     break;
 
@@ -236,13 +236,13 @@
             
             //2a LINHA
             if ([nota.name isEqualToString: @"Sol"]) {
-                //NSLog(@"%f", nota.position.y);
+                NSLog(@"%f", nota.position.y);
                 if (nota.position.y >= 340 && nota.position.y <= 360) {
-                    //NSLog(@"SOL CERTO");
+                    NSLog(@"SOL CERTO");
                     _escalaCerta = YES;
 
                 }else{
-                    //NSLog(@"SOL ERRADO");
+                    NSLog(@"SOL ERRADO");
                     _escalaCerta = NO;
                     break;
 
@@ -251,14 +251,14 @@
             
             //2o ESPACO
             if ([nota.name isEqualToString: @"La"]) {
-                //NSLog(@"%f", nota.position.y);
+                NSLog(@"%f", nota.position.y);
 
                 if (nota.position.y >= 360 && nota.position.y <= 385) {
-                    //NSLog(@"LÁ CERTO");
+                    NSLog(@"LÁ CERTO");
                     _escalaCerta = YES;
 
                 }else{
-                   // NSLog(@"LÁ ERRADO");
+                    NSLog(@"LÁ ERRADO");
                     _escalaCerta = NO;
                     break;
 
@@ -267,13 +267,13 @@
             
             //3a LINHA
             if ([nota.name isEqualToString: @"Si"]) {
-                //NSLog(@"%f", nota.position.y);
+                NSLog(@"%f", nota.position.y);
 
                 if (nota.position.y >= 390 && nota.position.y <= 410) {
-                    //NSLog(@"SI CERTO");
+                    NSLog(@"SI CERTO");
                     _escalaCerta = YES;
                 }else{
-                    //NSLog(@"SI ERRADO");
+                    NSLog(@"SI ERRADO");
                     _escalaCerta = NO;
                     break;
                 }
@@ -283,10 +283,10 @@
         
         
         if (!self.escalaCerta){
-            //NSLog(@"Chama cena de GameOver!");
+            NSLog(@"Chama cena de GameOver!");
             [self gameOver];
         }else{
-            //NSLog(@"ESCALA CERTA");
+            NSLog(@"ESCALA CERTA");
             self.pontuacaoJogadorAtual += 10;
             self.labelDePontuacao.text = [NSString stringWithFormat: @"%d", self.pontuacaoJogadorAtual];
 
@@ -544,8 +544,8 @@
     [self addChild: self.espacoDoPentagrama3];
     [self addChild: self.espacoDoPentagrama4];
 
-    //NSLog(@"linha 1 - %fy", self.linhaDoPentagrama1.position.y);
-    //NSLog(@"linha 5 - %fy", self.linhaDoPentagrama5.position.y);
+    NSLog(@"linha 1 - %fy", self.linhaDoPentagrama1.position.y);
+    NSLog(@"linha 5 - %fy", self.linhaDoPentagrama5.position.y);
 
 
 }
@@ -565,7 +565,7 @@
 -(void)gameOver{
     [[GameOverViewController sharedManager]gameOverParaUmaCena].view.hidden = NO;
     [self pausaJogo];
-    [[ExercicioPlayer sharedManager]stopAudio];
+    [[EfeitoPlayer sharedManager]stopAudio];
 }
 
 -(void)pausaJogo{

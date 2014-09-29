@@ -9,55 +9,37 @@
 #import <Foundation/Foundation.h>
 #import "Sinfonia.h"
 #import <QuartzCore/QuartzCore.h>
-#import "ComponenteScroll.h"
 
 @interface DesenhaPartitura : NSObject {
-    
     NSString *codeValue2;
+
     float tamanhoHorizontal;
     float tamanhoVertical;
+    
     float posNotaReal;
     
 }
 
-//Imagens Armadura
-@property  NSMutableArray *listaArmadurasClave;
++(DesenhaPartitura*)sharedManager;
+-(void)metodosDesenhaPartitura;
 
-//Imagens Linhas Pentagramas|Compasso
 @property  NSMutableArray *listaImagensTracoPentagrama;
 @property  NSMutableArray *listaImagensColunaPentagrama;
-//Imagens
+@property  NSMutableArray *listaArmadurasClave;
 @property  NSMutableArray *listaTracoNotas;
 @property  NSMutableArray *listaTracoNotasH;
 
-
-//Label formula Compasso
 @property  UITextView *textoNumeroTempo;
 @property  UITextView *textoUnidadeTempo;
-//Label cabecalho Partitura
+
 @property  UILabel *textoNomeInstrumento;
 @property  UILabel *textoNomePartitura;
 
-
 @property  UIImageView *tipoClave;
+
+-(void)desenhaContornoPartituraParaEdicao;
+
 
 @property Nota *notaAtualEdicao;;
 
-
-@property int acrecentaDistanciaArmaduraHorizontal;
-
-//Sington
-+(DesenhaPartitura*)sharedManager;
-
-//Desenha
--(void)metodosDesenhaPartitura;
--(void)desenhaContornoPartituraParaEdicao:(int)qtLinhas;
-
-
-
-
 @end
-
-
-
-

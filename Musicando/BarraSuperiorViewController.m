@@ -52,7 +52,7 @@
 
 -(void)atualizaExericioBarra{
     
-    //NSLog(@"corer %@",self.txtAulaAtual.text);
+    NSLog(@"corer %@",self.txtAulaAtual.text);
     
     self.txtAulaAtual.text = self.textoAulaAtual;
     self.txtNumeroAulas.text = self.textoNumeroAulas;

@@ -31,7 +31,7 @@
 -(void)viewDidDisappear:(BOOL)animated {
     
     [super viewDidDisappear: animated];
-    [[ExercicioTransicao sharedManager]finalizaExercicio:self];
+    [[EfeitoTransicao sharedManager]finalizaExercicio:self];
     
 }
 
@@ -41,7 +41,7 @@
 
 
     //Add barra,Mascote,View de Retornar Pagina ao Xib
-    [[GerenciadorComponenteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
+    [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
     self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
     
     //Cria Seletor e manda ele como paramentro para outros View Controllers poderem usar
@@ -54,7 +54,7 @@
     //Add imagens que faram colisao
     //[self.listaImangesColisao addObject:self.imgFitaFuracao];
     //Add gesture arrastar em todas imagens dessa lista
-    [[ExercicioImagem sharedManager]addGesturePainImagens:self.listaImangesColisao];
+    [[EfeitoImagem sharedManager]addGesturePainImagens:self.listaImangesColisao];
     
     
     //Lista para saber se as colisoes na tela foram feitas p/ ir na prox fala
@@ -68,7 +68,7 @@
     self.testaBiblio = [MascoteViewController sharedManager].testaBiblio;
     self.testaConversa = [MascoteViewController sharedManager].testaConversa;
     self.imagemDoMascote2 = [MascoteViewController sharedManager].imagemDoMascote2;
-    [[ExercicioMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote2];
+    [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote2];
     
     
     [self pulaFalaMascote];
@@ -78,36 +78,36 @@
 
 -(void)chamaMetodosFala0{
     
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgEscalaOriginal];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgEscalaOriginal];
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
 
 }
 
 
 -(void)chamaMetodosFala1{
     
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgEscalaOriginal];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgEscalaOriginal];
     
     
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgEscalaAntiga];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgEscalaAntiga];
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
     
 }
 
 
 -(void)chamaMetodosFala2{
     
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgEscalaAntiga];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgEscalaAntiga];
     
     
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgMonge];
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgIdeiasmonge];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgMonge];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgIdeiasmonge];
     
     [UIView animateWithDuration:3.0
                           delay:2.0
@@ -119,42 +119,42 @@
                      }];
     
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
     
 }
 
 
 -(void)chamaMetodosFala3{
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
     
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgMonge];
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgIdeiasmonge];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgMonge];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgIdeiasmonge];
     
     
 
     [self lacoCaindoNotas];
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
 }
 
 
 -(void)chamaMetodosFala4{
     
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
     
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
 }
 
 
 -(void)chamaMetodosFala5{
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
     
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
 
 }
 
@@ -171,7 +171,7 @@
     
     if([MascoteViewController sharedManager].contadorDeFalas == contadorMaximo){
         NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
-        [[ExercicioTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
+        [[EfeitoTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
     }
     if([MascoteViewController sharedManager].contadorDeFalas < contadorMaximo){
         switch ([MascoteViewController sharedManager].contadorDeFalas) {
@@ -219,7 +219,7 @@
 
 -(void)lacoCaindoNotas{
     
-    [[ExercicioMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote2];
+    [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote2];
     
     float duracao = 1.0;
     float delay = 0.0;

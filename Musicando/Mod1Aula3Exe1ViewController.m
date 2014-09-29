@@ -31,7 +31,7 @@
 -(void)viewDidDisappear:(BOOL)animated {
     
     [super viewDidDisappear: animated];
-    [[ExercicioTransicao sharedManager]finalizaExercicio:self];
+    [[EfeitoTransicao sharedManager]finalizaExercicio:self];
     
 }
 
@@ -53,7 +53,7 @@
 -(void)iniciarComponentes{
     
     //Add barra,Mascote,View de Retornar Pagina ao Xib
-    [[GerenciadorComponenteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
+    [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
     self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
     
     
@@ -70,7 +70,7 @@
     //[self.listaImangesColisao addObject: self.violao];
     //[self.listaImangesColisao addObject: self.flauta];
     //Adiciona gesture ARRASTAR em todas imagens dessa lista
-    [[ExercicioImagem sharedManager]addGesturePainImagens: self.listaImangesColisao];
+    [[EfeitoImagem sharedManager]addGesturePainImagens: self.listaImangesColisao];
     
     
     //Lista para saber se as colisoes na tela foram feitas p/ ir na prox fala
@@ -84,7 +84,7 @@
     self.testaBiblio = [MascoteViewController sharedManager].testaBiblio;
     self.testaConversa = [MascoteViewController sharedManager].testaConversa;
     self.imagemDoMascote = [MascoteViewController sharedManager].imagemDoMascote2;
-    [[ExercicioMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote];
+    [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote];
     
     
     [self pulaFalaMascote];
@@ -106,7 +106,7 @@
     
     if([MascoteViewController sharedManager].contadorDeFalas == contadorMaximo){
         NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
-        [[ExercicioTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
+        [[EfeitoTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
     }
     
     if([MascoteViewController sharedManager].contadorDeFalas < contadorMaximo){
@@ -149,13 +149,13 @@
 
 //Intro sobre música
 -(void)chamaMetodosFala0 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    [[ExercicioMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho: self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Animação e silêncio
 -(void)chamaMetodosFala1 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Animação
     self.imgSilencio.hidden = NO;
@@ -180,18 +180,18 @@
                      }];
 
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Fala sobre tocatreco
 -(void)chamaMetodosFala2 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:2.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:2.0f:self.viewGesturePassaFala];
 }
 
 //Chama animação do tocatreco
 -(void)chamaMetodosFala3 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Mostra view de exercitar
     self.viewDeExercitar.hidden = NO;
@@ -202,31 +202,31 @@
     [self animacaoNotaEntrandoNoTocador];
     [self animacaoNotaSaindoDoTocador];
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:2.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:2.0f:self.viewGesturePassaFala];
 }
 
 //Fala sobre animação
 -(void)chamaMetodosFala4 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Para a música
-    [[ExercicioPlayer sharedManager]stopAudio];
+    [[EfeitoPlayer sharedManager]stopAudio];
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Mostra explicação nota e pausa
 -(void)chamaMetodosFala5 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     [self animacaoExplicandoNotaPausa];
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Exercício
 -(void)chamaMetodosFala6 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Esconde as views de explicação
     self.imgNota.hidden = YES;
@@ -238,20 +238,20 @@
     self.outBtoCoral.hidden = NO;
     self.outBtoNotasPausas.hidden = NO;
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:5.0f:self.viewGesturePassaFala];
 }
 
 //Fala final
 -(void)chamaMetodosFala7 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote:self.viewGesturePassaFala];
     
     //Esconde view de exercitar e para a música
     //Remove animação da vitrola
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.alternativaCorreta];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.alternativaCorreta];
     self.viewDeExercitar.hidden = YES;
-    [[ExercicioPlayer sharedManager]stopAudio];
+    [[EfeitoPlayer sharedManager]stopAudio];
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:3.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote:3.0f:self.viewGesturePassaFala];
 }
 
 
@@ -282,7 +282,7 @@
     
     //Para teste
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"notasPausas" withExtension:@"mp3"];
-    [[ExercicioPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
 
     
     [UIView animateWithDuration:2.0
@@ -292,7 +292,7 @@
                          self.imgBlocoDo.frame = CGRectMake(800, self.imgBlocoDo.frame.origin.y, self.imgBlocoDo.frame.size.width, self.imgBlocoDo.frame.size.height);
                          self.imgBlocoPausa.frame = CGRectMake(750, self.imgBlocoPausa.frame.origin.y, self.imgBlocoPausa.frame.size.width, self.imgBlocoPausa.frame.size.height);
                      } completion:^(BOOL finished){
-                        [[ExercicioPlayer sharedManager]playAudios];
+                        [[EfeitoPlayer sharedManager]playAudios];
                          self.imgBlocoDo.hidden = YES;
                          self.imgBlocoPausa.hidden = YES;
                      }];
@@ -324,23 +324,23 @@
     NSLog(@"Instrumentos");
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"instrumentos" withExtension:@"mp3"];
-    [[ExercicioPlayer sharedManager]initPlayer:self.caminhoDoAudio];
-    [[ExercicioPlayer sharedManager]playAudios];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
 }
 
 - (IBAction)coral:(id)sender {
     NSLog(@"Coral");
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"coral" withExtension:@"mp3"];
-    [[ExercicioPlayer sharedManager]initPlayer:self.caminhoDoAudio];
-    [[ExercicioPlayer sharedManager]playAudios];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
 }
 
 - (IBAction)notasPausas:(id)sender {
     NSLog(@"ACERTOU! Notas e pausas");
     
     //Animação de resposta certa
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.alternativaCorreta];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.alternativaCorreta];
     [UIView animateWithDuration:1.0
                           delay:0.0
                         options:  UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionTransitionCrossDissolve
@@ -353,8 +353,8 @@
 
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"notasPausas" withExtension:@"mp3"];
-    [[ExercicioPlayer sharedManager]initPlayer:self.caminhoDoAudio];
-    [[ExercicioPlayer sharedManager]playAudios];
+    [[EfeitoPlayer sharedManager]initPlayer:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudios];
 
 }
 

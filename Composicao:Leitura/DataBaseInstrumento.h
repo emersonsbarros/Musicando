@@ -21,6 +21,7 @@
 +(DataBaseInstrumento*)sharedManager;
 
 
+-(void)AddInstrumento:(Instrumento *)instrumento;
 -(void)addInstrumentosPadroesDoApplicativo;
 -(Instrumento*)retornaInstrumento:(NSString*)nomeInstrumentoRetorna;
 

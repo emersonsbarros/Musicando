@@ -89,11 +89,11 @@
 
 -(void)passaView{
     
-    [[ExercicioFala sharedManager]stopAudioFala];
+    [[EfeitoFala sharedManager]stopAudioFala];
     
-    [[ExercicioTransicao sharedManager]chamaTransicaoPaginaDireita:self.controller];
+    [[EfeitoTransicao sharedManager]chamaTransicaoPaginaEsquerda:self.controller];
     
-    [NSTimer scheduledTimerWithTimeInterval:0.1
+    [NSTimer scheduledTimerWithTimeInterval:0.0
                                          target:self.controller
                                        selector:self.metodo
                                        userInfo:nil
@@ -135,21 +135,21 @@
 
 -(void)produzSomFala{
     
-    [[ExercicioFala sharedManager]incializar];
+    [[EfeitoFala sharedManager]incializar];
     Fala *falaAtual = [self.testaConversa.listaDeFalas objectAtIndex:[MascoteViewController sharedManager].contadorDeFalas-1];
     NSString *textoFala = falaAtual.conteudo;
-    [[ExercicioFala sharedManager]falar:textoFala];
+    [[EfeitoFala sharedManager]falar:textoFala];
     
 }
 
 - (IBAction)btnAudioFala:(id)sender {
     
     if(self.estadoAudioFala){
-        [[ExercicioFala sharedManager]dimunuiSomFala];
+        [[EfeitoFala sharedManager]dimunuiSomFala];
         self.estadoAudioFala = NO;
         self.outBtnAudioFala.alpha = 0.5;
     }else{
-        [[ExercicioFala sharedManager]aumentaSomFala];
+        [[EfeitoFala sharedManager]aumentaSomFala];
         [self produzSomFala];
         self.estadoAudioFala = YES;
         self.outBtnAudioFala.alpha = 1.0;
@@ -163,7 +163,7 @@
 }
 
 - (IBAction)bntSaiFala:(id)sender {
-    [[ExercicioFala sharedManager]dimunuiSomFala];
+    [[EfeitoFala sharedManager]dimunuiSomFala];
 }
 
 

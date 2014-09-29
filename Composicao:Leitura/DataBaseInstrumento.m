@@ -11,7 +11,6 @@
 @implementation DataBaseInstrumento
 
 
-///////////////////////////////////// Sington ///////////////////////////////////////
 
 +(DataBaseInstrumento*)sharedManager{
     static DataBaseInstrumento *unicoInstrumento = nil;
@@ -33,41 +32,6 @@
     return self;
 }
 
-////////////////////////// Instrumentos ////////////////////////////////////////
-
-//retorna o isntrumento pelo nome
--(Instrumento*)retornaInstrumento:(NSString*)nomeInstrumentoRetorna{
-    
-    Instrumento *instrumento;
-    
-    for(int i=0;i<self.listaInstrumentos.count;i++){
-        instrumento = [[self listaInstrumentos] objectAtIndex:i];
-        if([[instrumento nomeInstrumento]isEqualToString:nomeInstrumentoRetorna]){
-            return  instrumento;
-        }
-    }
-    
-    return NULL;
-}
-
-
-//add Instrumentos na lista
--(void)AddInstrumento:(Instrumento *)instrumento{
-    
-    [[[DataBaseInstrumento sharedManager]listaInstrumentos]addObject:instrumento];
-    
-}
-
-//cria instrumentos
--(void)addInstrumentosPadroesDoApplicativo {
-    
-    [self instanciaInstrumentoPiano];
-    [self instanciaInstrumentoViolao];
-    [self instanciaInstrumentoFlauta];
-}
-
-
-//Instancias de Instrumentos
 -(void)instanciaInstrumentoFlauta{
     Instrumento *instr1 = [[Instrumento alloc]init];
     
@@ -173,7 +137,7 @@
 
 -(void)instanciaInstrumentoViolao{
     Instrumento *instr1 = [[Instrumento alloc]init];
-    instr1.nomeInstrumento = @"ViolaoNylon";
+    instr1.nomeInstrumento = @"natural";
     
     NSMutableArray *nomeNotas = [[NSMutableArray alloc]init];
     [nomeNotas addObject:@"0A"];
@@ -380,6 +344,33 @@
 
 
 
+-(void)addInstrumentosPadroesDoApplicativo {
+    
+    [self instanciaInstrumentoPiano];
+    [self instanciaInstrumentoViolao];
+    [self instanciaInstrumentoFlauta];
+}
+
+
+-(void)AddInstrumento:(Instrumento *)instrumento{
+    
+    [[[DataBaseInstrumento sharedManager]listaInstrumentos]addObject:instrumento];
+    
+}
+
+-(Instrumento*)retornaInstrumento:(NSString*)nomeInstrumentoRetorna{
+   
+    Instrumento *instrumento;
+    
+    for(int i=0;i<self.listaInstrumentos.count;i++){
+        instrumento = [[self listaInstrumentos] objectAtIndex:i];
+        if([[instrumento nomeInstrumento]isEqualToString:nomeInstrumentoRetorna]){
+            return  instrumento;
+        }
+    }
+    
+    return NULL;
+}
 
 
 @end

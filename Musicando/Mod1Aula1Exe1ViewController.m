@@ -27,36 +27,10 @@
 }
 
 
-- (void)didReceiveMemoryWarning{
-    [super didReceiveMemoryWarning];
-    
-//    self.imgFitaGalo = nil;
-//    self.imgFitaCarro= nil;
-//    self.imgFitaFuracao= nil;
-//    self.imgObjetoMusica3= nil;
-//    self.imgObjetoMusica2= nil;
-//    self.imgObjetoMusica1= nil;
-//    self.imgGaloGrande= nil;
-//    self.imgPipaGrande= nil;
-//    self.imgCarroGrande= nil;
-//    self.imgMaoTocaTreco= nil;
-//    self.imgGaloMao= nil;
-//    self.imgBen1= nil;
-//    self.imgBen2= nil;
-//    self.imgBen3= nil;
-//    self.imgIndioMusica= nil;
-//    self.imgAnimacaoIndio= nil;
-//    self.imgCarnaval= nil;
-//    self.imgAnimacaoCarnaval= nil;
-//    self.imgCapoeiraMusica= nil;
-//    self.imgAnimacaoCapoeira= nil;
-}
-
-
 -(void)viewDidDisappear:(BOOL)animated {
     
     [super viewDidDisappear: animated];
-    [[ExercicioTransicao sharedManager]finalizaExercicio:self];
+    [[EfeitoTransicao sharedManager]finalizaExercicio:self];
    
 }
 
@@ -65,7 +39,7 @@
     [super viewDidLoad];
         
     //Add barra,Mascote,View de Retornar Pagina ao Xib
-    [[GerenciadorComponenteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
+    [[EfeitoComponeteView sharedManager]addComponetesViewExercicio:self:[Biblioteca sharedManager].exercicioAtual];
     self.viewGesturePassaFala = [MascoteViewController sharedManager].viewGesturePassaFala;
     self.imgTocaTreco = [TocaTrecoViewController sharedManager].imgTocaTreco;
     
@@ -86,7 +60,7 @@
     [self.listaImangesColisao addObject:self.imgObjetoMusica2];
     [self.listaImangesColisao addObject:self.imgObjetoMusica3];
     //Add gesture arrastar em todas imagens dessa lista
-    [[ExercicioImagem sharedManager]addGesturePainImagens:self.listaImangesColisao];
+    [[EfeitoImagem sharedManager]addGesturePainImagens:self.listaImangesColisao];
     
     
     //Lista para saber se as colisoes na tela foram feitas p/ ir na prox fala
@@ -100,7 +74,7 @@
     self.testaBiblio = [MascoteViewController sharedManager].testaBiblio;
     self.testaConversa = [MascoteViewController sharedManager].testaConversa;
     self.imagemDoMascote2 = [MascoteViewController sharedManager].imagemDoMascote2;
-    [[ExercicioMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote2];
+    [[EfeitoMascote sharedManager]chamaAnimacaoMascotePulando:self.imagemDoMascote2];
     
     
     [self pulaFalaMascote];
@@ -108,6 +82,9 @@
 }
 
 
+- (void)didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+}
 
 
 //////////////////////////// Colisoes //////////////////////////////
@@ -121,8 +98,8 @@
     //Tira e desoculta a animacao de introdudacao de como jogar objetos no tocaTreco
     UIPanGestureRecognizer *aux = self.imgFitaGalo.gestureRecognizers.firstObject;
     if (aux.numberOfTouches == 1){
-        [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgGaloMao];
-        [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgMaoTocaTreco];
+        [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgGaloMao];
+        [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgMaoTocaTreco];
     }
     
     if (nowIntersecting){
@@ -147,8 +124,8 @@
     //Tira e desoculta a animacao de introdudacao de como jogar objetos no tocaTreco
     UIPanGestureRecognizer *aux = self.imgFitaCarro.gestureRecognizers.firstObject;
     if (aux.numberOfTouches == 1){
-        [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgGaloMao];
-        [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgMaoTocaTreco];
+        [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgGaloMao];
+        [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgMaoTocaTreco];
     }
     
     if (nowIntersecting){
@@ -170,8 +147,8 @@
     //Tira e desoculta a animacao de introdudacao de como jogar objetos no tocaTreco
     UIPanGestureRecognizer *aux = self.imgFitaFuracao.gestureRecognizers.firstObject;
     if (aux.numberOfTouches == 1){
-        [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgGaloMao];
-        [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgMaoTocaTreco];
+        [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgGaloMao];
+        [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgMaoTocaTreco];
     }
     
     if (nowIntersecting){
@@ -196,7 +173,7 @@
         [self.listaLiberaFala addObject:self.estadoAux1];
         
         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"musicaCristal" withExtension:@"mp3"];
-        [[ExercicioPlayer sharedManager]playAudio:self.caminhoDoAudio];
+        [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
         
         [theTimer invalidate];
     }
@@ -215,7 +192,7 @@
         [self.listaLiberaFala addObject:self.estadoAux1];
         
         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"musicaPanela" withExtension:@"mp3"];
-        [[ExercicioPlayer sharedManager]playAudio:self.caminhoDoAudio];
+        [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
         
         [theTimer invalidate];
     }
@@ -234,7 +211,7 @@
         [self.listaLiberaFala addObject:self.estadoAux1];
         
         self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"musicaPalmas" withExtension:@"mp3"];
-        [[ExercicioPlayer sharedManager]playAudio:self.caminhoDoAudio];
+        [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
         
         [theTimer invalidate];
     }
@@ -256,35 +233,35 @@
 -(void)chamaMetodosFala0 {
     
     //Animcao para cair notas
-    [[ExercicioAnimada sharedManager]animacaoCaiNotaIdaVolta:self];
+    [[EfeitoNotaAnimada sharedManager]animacaoCaiNotaIdaVolta:self];
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
 }
 
 -(void)chamaMetodosFala1 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
 }
 
 -(void)chamaMetodosFala2 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
     //Remove todas as animacoes que estao na lista, no caso estou tirando as notas que caiem
-    [[ExercicioAnimada sharedManager]removeAnimacao];
+    [[EfeitoNotaAnimada sharedManager]removeAnimacao];
 
     //Mostra imagem oculta
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgIndioMusica];
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgCarnaval];
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgCapoeiraMusica];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgIndioMusica];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgCarnaval];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgCapoeiraMusica];
     
     
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgAnimacaoIndio];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgAnimacaoIndio];
     UIImage *image1 = [UIImage imageNamed:@"animaIndio1.gif"];
     UIImage *image2 = [UIImage imageNamed:@"animaIndio2.gif"];
     NSArray *imageArray = [NSArray arrayWithObjects:image1,image2,nil];
-    [[ExercicioImagem sharedManager]addAnimacaoSprite:imageArray:self.imgAnimacaoIndio];
+    [[EfeitoImagem sharedManager]addAnimacaoSprite:imageArray:self.imgAnimacaoIndio];
     
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgAnimacaoCarnaval];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgAnimacaoCarnaval];
     UIImage *image3 = [UIImage imageNamed:@"carnavalframe1.gif"];
     UIImage *image4 = [UIImage imageNamed:@"carnavalframe2.gif"];
     UIImage *image5 = [UIImage imageNamed:@"carnavalframe3.gif"];
@@ -292,21 +269,21 @@
     UIImage *image7 = [UIImage imageNamed:@"carnavalframe5.gif"];
     UIImage *image8 = [UIImage imageNamed:@"carnavalframe6.gif"];
     NSArray *imageArray2 = [NSArray arrayWithObjects:image3,image4,image5,image6,image7,image8,nil];
-    [[ExercicioImagem sharedManager]addAnimacaoSprite:imageArray2:self.imgAnimacaoCarnaval];
+    [[EfeitoImagem sharedManager]addAnimacaoSprite:imageArray2:self.imgAnimacaoCarnaval];
     
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgAnimacaoCapoeira];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgAnimacaoCapoeira];
     UIImage *image9 = [UIImage imageNamed:@"Capoeiraframe1.gif"];
     UIImage *image10 = [UIImage imageNamed:@"Capoeiraframe2.gif"];
     UIImage *image11 = [UIImage imageNamed:@"Capoeiraframe3.gif"];
     NSArray *imageArray3 = [NSArray arrayWithObjects:image9,image10,image11,nil];
-    [[ExercicioImagem sharedManager]addAnimacaoSprite:imageArray3:self.imgAnimacaoCapoeira];
+    [[EfeitoImagem sharedManager]addAnimacaoSprite:imageArray3:self.imgAnimacaoCapoeira];
     
     
     [UIView animateWithDuration:2.0
                           delay:0.0
                         options:  UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionTransitionCrossDissolve
                      animations:^{
-                         CGRect moveGalo = CGRectMake(self.imgIndioMusica.frame.origin.x+400,
+                         CGRect moveGalo = CGRectMake(self.imgIndioMusica.frame.origin.x+500,
                                                       self.imgIndioMusica.frame.origin.y,
                                                       self.imgIndioMusica.frame.size.width,
                                                       self.imgIndioMusica.frame.size.height);
@@ -395,7 +372,7 @@
                                               self.imgAnimacaoCapoeira.frame = moveGalo2;
                                           }
                                           completion:^(BOOL finished){
-                                              [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
+                                              [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:1.0f:self.viewGesturePassaFala];
                                           }];
                      }];
     
@@ -403,31 +380,31 @@
 }
 
 -(void)chamaMetodosFala3 {
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
-    [[ExercicioPlayer sharedManager]stopAudio];
+    [[EfeitoPlayer sharedManager]stopAudio];
     
     //Tira e mostra imagem oculta
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgIndioMusica];
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgCapoeiraMusica];
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgCarnaval];
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgAnimacaoCapoeira];
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgAnimacaoCarnaval];
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgAnimacaoIndio];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgIndioMusica];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgCapoeiraMusica];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgCarnaval];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgAnimacaoCapoeira];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgAnimacaoCarnaval];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgAnimacaoIndio];
     
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgTocaTreco];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgTocaTreco];
     
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
     
 }
 
 -(void)chamaMetodosFala4 {
     
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgMaoTocaTreco];
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgGaloMao];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgMaoTocaTreco];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgGaloMao];
     
     
     [UIView animateWithDuration:2.0
@@ -470,33 +447,33 @@
                                     repeats: YES];
     
     
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgFitaCarro];
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgFitaGalo];
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgFitaFuracao];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgFitaCarro];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgFitaGalo];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgFitaFuracao];
     
     self.imgTocaTreco.userInteractionEnabled = YES;
     
     //Metodo que verifica o passar fala, nele tem que passar a qt de objetos que colidirá nessa fala, no caso 3
-    [[ExercicioImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote2 :self.viewGesturePassaFala:self.listaLiberaFala:3];
+    [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote2 :self.viewGesturePassaFala:self.listaLiberaFala:3];
     
     
 }
 
 -(void)chamaMetodosFala5 {
     
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
-    [[ExercicioPlayer sharedManager]stopAudio];
+    [[EfeitoPlayer sharedManager]stopAudio];
     
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgPipaGrande];
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgCarroGrande];
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgGaloGrande];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgPipaGrande];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgCarroGrande];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgGaloGrande];
 
     
-    [[ExercicioImagem sharedManager]removeTodasAnimacoesView:self.imgGaloMao];
-    [[ExercicioImagem sharedManager]removeTodasAnimacoesView:self.imgMaoTocaTreco];
+    [[EfeitoImagem sharedManager]removeTodasAnimacoesView:self.imgGaloMao];
+    [[EfeitoImagem sharedManager]removeTodasAnimacoesView:self.imgMaoTocaTreco];
     
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.outAlavancaTocaTreco];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.outAlavancaTocaTreco];
     
     
     
@@ -513,9 +490,9 @@
                      }
                      completion:^(BOOL finished){
                          self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"musicaMixaIntroducao" withExtension:@"wav"];
-                         [[ExercicioPlayer sharedManager]playAudio:self.caminhoDoAudio];
+                         [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
                          
-                         [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:8.0f:self.viewGesturePassaFala];
+                         [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:8.0f:self.viewGesturePassaFala];
                      }];
     
    
@@ -524,35 +501,35 @@
 
 -(void)chamaMetodosFala6 {
     
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
 
-    [[ExercicioPlayer sharedManager]stopAudio];
+    [[EfeitoPlayer sharedManager]stopAudio];
     
-    [[ExercicioImagem sharedManager]removeTodasAnimacoesView:self.imgPipaGrande];
-    [[ExercicioImagem sharedManager]removeTodasAnimacoesView:self.imgCarroGrande];
-    [[ExercicioImagem sharedManager]removeTodasAnimacoesView:self.imgGaloGrande];
+    [[EfeitoImagem sharedManager]removeTodasAnimacoesView:self.imgPipaGrande];
+    [[EfeitoImagem sharedManager]removeTodasAnimacoesView:self.imgCarroGrande];
+    [[EfeitoImagem sharedManager]removeTodasAnimacoesView:self.imgGaloGrande];
     
     
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.outAlavancaTocaTreco];
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgTocaTreco];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.outAlavancaTocaTreco];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgTocaTreco];
 
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
     
 }
 
 
 -(void)chamaMetodosFala7 {
     
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
     
     //Remove todas as animacoes que estao na lista, no caso estou tirando as notas que caiem
-    [[ExercicioAnimada sharedManager]removeAnimacao];
+    [[EfeitoNotaAnimada sharedManager]removeAnimacao];
     
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgObjetoMusica1];
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgObjetoMusica2];
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgObjetoMusica3];
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgTocaTreco];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgObjetoMusica1];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgObjetoMusica2];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgObjetoMusica3];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgTocaTreco];
     
     
     [NSTimer scheduledTimerWithTimeInterval: 0.5
@@ -574,26 +551,26 @@
                                     repeats: YES];
     
     
-    [[ExercicioImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote2 :self.viewGesturePassaFala:self.listaLiberaFala:3];
+    [[EfeitoImagem sharedManager]chamaVerficadorPassaFala:self.imagemDoMascote2 :self.viewGesturePassaFala:self.listaLiberaFala:3];
     
 }
 
 -(void)chamaMetodosFala8 {
 
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
     
-    [[ExercicioPlayer sharedManager]stopAudio];
+    [[EfeitoPlayer sharedManager]stopAudio];
     
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgObjetoMusica1];
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgObjetoMusica2];
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgObjetoMusica3];
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgTocaTreco];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgObjetoMusica1];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgObjetoMusica2];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgObjetoMusica3];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgTocaTreco];
     
     
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgBen3];
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgBen2];
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgBen1];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgBen3];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgBen2];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgBen1];
     
     
     [UIView animateWithDuration:2.0
@@ -637,14 +614,14 @@
                      completion:(NULL)];
     
     
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:8.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:8.0f:self.viewGesturePassaFala];
     
 }
 
 -(void)chamaMetodosFala9 {
     
-    [[ExercicioMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
-    [[ExercicioMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]removeBrilho:self.imagemDoMascote2:self.viewGesturePassaFala];
+    [[EfeitoMascote sharedManager]chamaAddBrilho:self.imagemDoMascote2:5.0f:self.viewGesturePassaFala];
 }
 
 
@@ -657,7 +634,7 @@
     
     if([MascoteViewController sharedManager].contadorDeFalas == contadorMaximo){
         NSString *proxExercicio = [[Biblioteca sharedManager]exercicioAtual].nomeView;
-        [[ExercicioTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
+        [[EfeitoTransicao sharedManager]chamaViewTransicaoExercicio:self:proxExercicio];
     }
     
     if([MascoteViewController sharedManager].contadorDeFalas < contadorMaximo){
@@ -710,18 +687,18 @@
 ////////////////////////// ACOES DA COLISAO ////////////////////////
 
 -(void)tocaIndio{
-//    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"indio" withExtension:@"mp3"];
-//    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"indio" withExtension:@"mp3"];
+    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
 }
 
 -(void)tocaCarnaval{
-//    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"carnaval" withExtension:@"mp3"];
-//    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"carnaval" withExtension:@"mp3"];
+    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
 }
 
 -(void)tocaCapoeira{
-//    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"capoeira" withExtension:@"mp3"];
-//    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
+    self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"capoeira" withExtension:@"mp3"];
+    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
 }
 
 //Fazem as imagens sairem da esquerda até direita, no caso o Galo,Carro,Vento
@@ -748,12 +725,12 @@
     
     
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"galo" withExtension:@"wav"];
-    [[ExercicioPlayer sharedManager]playAudio:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
 
     
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgGaloGrande];
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgCarroGrande];
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgPipaGrande];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgGaloGrande];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgCarroGrande];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgPipaGrande];
   
     [self deslocaImagemGrandeParaDireita:self.imgGaloGrande:3.0];
    
@@ -762,12 +739,12 @@
 
 - (void)acaoColisaoCarro {
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"carro" withExtension:@"wav"];
-    [[ExercicioPlayer sharedManager]playAudio:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
 
     
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgCarroGrande];
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgGaloGrande];
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgPipaGrande];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgCarroGrande];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgGaloGrande];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgPipaGrande];
     
     [self deslocaImagemGrandeParaDireita:self.imgCarroGrande:7.0];
     
@@ -776,12 +753,12 @@
 
 - (void)acaoColisaoVento {
     self.caminhoDoAudio = [[NSBundle mainBundle] URLForResource:@"vento" withExtension:@"wav"];
-    [[ExercicioPlayer sharedManager]playAudio:self.caminhoDoAudio];
-    [[ExercicioPlayer sharedManager]ajustaVolume:5.0];
+    [[EfeitoPlayer sharedManager]playAudio:self.caminhoDoAudio];
+    [[EfeitoPlayer sharedManager]ajustaVolume:5.0];
     
-    [[ExercicioImagem sharedManager]hiddenNoEmDegrade:self.imgPipaGrande];
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgGaloGrande];
-    [[ExercicioImagem sharedManager]hiddenYesEmDegrade:self.imgCarroGrande];
+    [[EfeitoImagem sharedManager]hiddenNoEmDegrade:self.imgPipaGrande];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgGaloGrande];
+    [[EfeitoImagem sharedManager]hiddenYesEmDegrade:self.imgCarroGrande];
     
     
     [self deslocaImagemGrandeParaDireita:self.imgPipaGrande:7.0];

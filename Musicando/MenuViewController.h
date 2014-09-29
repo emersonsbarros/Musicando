@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
-#import "ExercicioImagem.h"
-#import "ExercicioMascote.h"
+#import "EfeitoImagem.h"
+#import "EfeitoMascote.h"
 #import <QuartzCore/QuartzCore.h>
-#import "InicializaProjeto.h"
 
 
 @interface MenuViewController : UIViewController

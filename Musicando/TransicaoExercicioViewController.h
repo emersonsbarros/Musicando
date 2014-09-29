@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Biblioteca.h"
-#import "ExercicioImagem.h"
-#import "ExercicioTransicao.h"
+#import "EfeitoImagem.h"
+#import "EfeitoTransicao.h"
 
 @interface TransicaoExercicioViewController : UIViewController
 

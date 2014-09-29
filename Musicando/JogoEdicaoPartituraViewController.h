@@ -15,12 +15,12 @@
 #import "Fala.h"
 #import "Nota.h"
 #import "Sinfonia.h"
-#import "ExercicioImagem.h"
-#import "ExercicioMascote.h"
-#import "ExercicioTransicao.h"
-#import "ExercicioPlayer.h"
-#import "GerenciadorComponenteView.h"
-#import "ExercicioAnimada.h"
+#import "EfeitoImagem.h"
+#import "EfeitoMascote.h"
+#import "EfeitoTransicao.h"
+#import "EfeitoPlayer.h"
+#import "EfeitoComponeteView.h"
+#import "EfeitoNotaAnimada.h"
 #import "ComposicaoPartituraViewController.h"
 #import "GameOverViewController.h"
 #import "DesenhaPartitura.h"
@@ -66,7 +66,6 @@
 
 - (IBAction)btnHome:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *outBtnHome;
-
 
 
 

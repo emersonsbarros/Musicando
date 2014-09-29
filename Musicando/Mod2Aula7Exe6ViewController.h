@@ -11,13 +11,13 @@
 #import <AVFoundation/AVFoundation.h>
 #import "Nota.h"
 #import "Sinfonia.h"
-#import "ExercicioImagem.h"
-#import "ExercicioMascote.h"
+#import "EfeitoImagem.h"
+#import "EfeitoMascote.h"
 #import "BarraSuperiorViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import <SpriteKit/SpriteKit.h>
 #import <UIKit/UIKit.h>
-#import "ExercicioTransicao.h"
+#import "EfeitoTransicao.h"
 @interface Mod2Aula7Exe6ViewController : UIViewController
 
 /*==============================VIEWS===============================*/

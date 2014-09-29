@@ -33,8 +33,6 @@
 
 @implementation Sinfonia
 
-///////////////////////////////////// Sington ///////////////////////////////////////
-
 +(Sinfonia*)sharedManager{
     static Sinfonia *unicoInstrumento = nil;
     if(!unicoInstrumento){
@@ -58,12 +56,10 @@
     return self;
 }
 
+
 +(id)allocWithZone:(struct _NSZone *)zone{
     return [self sharedManager];
 }
-
-////////////////////////////////// Efeitos para Notas //////////////////////////////////
-
 
 -(void)mostraEfeito:(Nota*)notes{
     
@@ -80,9 +76,6 @@
 }
 
 
-/////////////////////////////// Metodos Tocar Notas ///////////////////////////////////////////
-
-//Toca uma nota
 -(void)tocarUmaNota:(NSMutableArray*)listaSons :(NSString*)nomeInstrumentoPlist{
     
     self.instrumento = [[DataBaseInstrumento sharedManager]retornaInstrumento:nomeInstrumentoPlist];
@@ -94,7 +87,6 @@
     recebeOrdemNotasDoInstrumento = self.instrumento.ordemNotasInstrumento;
     
     self.listaPartiturasSinfonia = [[NSMutableArray alloc]init];
-    
     Partitura *part = [[Partitura alloc]init];
     [[self listaPartiturasSinfonia]addObject:part];
     [[[self listaPartiturasSinfonia]objectAtIndex:0]setListaNotasPartitura:listaSons];
@@ -105,7 +97,7 @@
     
 }
 
-//Toca uma lista de notas
+
 -(void)tocarTodasNotasEdicao:(NSMutableArray*)listaSons :(NSString*)nomeInstrumentoPlist{
    
     self.instrumento = [[DataBaseInstrumento sharedManager]retornaInstrumento:nomeInstrumentoPlist];
@@ -130,7 +122,6 @@
     
 }
 
-//Comeca a sinfonia
 -(void)metodoIniciaSinfonia:(NSString*)nomePartituras :(NSString*)nomeInstrumentoPlist {
     
 
@@ -138,7 +129,6 @@
     
     self.instrumento = [[DataBaseInstrumento sharedManager]retornaInstrumento:nomeInstrumentoPlist];
     
-        
     [_soundBankPlayer setSoundBank:self.instrumento.nomeInstrumento];
 //    _soundBankPlayer2 = [[SoundBankPlayer alloc] init];
 //    [_soundBankPlayer2 setSoundBank:self.instrumento.nomeInstrumento];
@@ -159,7 +149,6 @@
     recebeOrdemNotasDoInstrumento = self.instrumento.ordemNotasInstrumento;
 
     auxIndiceNotasPausa = 0;
-    
     
     [self tocarPlayerPartitura];
 }
@@ -213,8 +202,6 @@
         
         nota.imagemNota.alpha = 1.0;
         auxIndiceNotas = [[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura].count;
-        
-        
     }
     
 }
@@ -249,30 +236,30 @@
         tempo = whole;
         volume = 10.0;
     }else{
-       // NSLog(@"deu errado temopo");
+        NSLog(@"deu errado temopo");
     }
     
     
     if ([tomEncurtado rangeOfString:@"-1"].location != NSNotFound){
         int indiceDescerEscala = -1;
         
-        //NSLog(@"antes %@",notaFinal);
+        NSLog(@"antes %@",notaFinal);
         notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceDescerEscala];
-        //NSLog(@"depois- %@",notaFinal);
+        NSLog(@"depois- %@",notaFinal);
         
     }else if ([tomEncurtado rangeOfString:@"1"].location != NSNotFound){
         int indiceSubirEscala = 1;
         
-        //NSLog(@"antes %@",notaFinal);
+        NSLog(@"antes %@",notaFinal);
         notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
-        //NSLog(@"depois+ %@",notaFinal);
+        NSLog(@"depois+ %@",notaFinal);
         
     }else if ([tomEncurtado rangeOfString:@"-2"].location != NSNotFound){
         int indiceSubirEscala = -2;
         
-        //NSLog(@"antes %@",notaFinal);
+        NSLog(@"antes %@",notaFinal);
         notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
-        //NSLog(@"depois-- %@",notaFinal);
+        NSLog(@"depois-- %@",notaFinal);
         
     }else if ([tomEncurtado rangeOfString:@"2"].location != NSNotFound){
         int indiceSubirEscala = 2;
@@ -339,8 +326,6 @@
         }
         else if([nomeNota isEqualToString:@"B"]){
             nomeNotaTransformada = @"Si";
-        }else{
-            nomeNotaTransformada = @"Pausa";
         }
         
         NSString *nivelNota = [nota oitava];
@@ -447,41 +432,14 @@
         self.estadoBotaoPlay = true;
     }else{
     Nota *nota = [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]objectAtIndex:auxIndiceNotas];
-    
     NSString *nomeNota = [nota nomeNota];
-    NSString *nomeNotaTransformada;
-    
-    if([nomeNota isEqualToString:@"C"]){
-        nomeNotaTransformada = @"Dó";
-    }else if([nomeNota isEqualToString:@"D"]){
-        nomeNotaTransformada = @"Ré";
-    }
-    else if([nomeNota isEqualToString:@"E"]){
-        nomeNotaTransformada = @"Mi";
-    }
-    else if([nomeNota isEqualToString:@"F"]){
-        nomeNotaTransformada = @"Fá";
-    }
-    else if([nomeNota isEqualToString:@"G"]){
-        nomeNotaTransformada = @"Sol";
-    }
-    else if([nomeNota isEqualToString:@"A"]){
-        nomeNotaTransformada = @"La";
-    }
-    else if([nomeNota isEqualToString:@"B"]){
-        nomeNotaTransformada = @"Si";
-    }else{
-        nomeNotaTransformada = @"Pausa";
-    }
-    
     NSString *nivelNota = [nota oitava];
     NSString *tomEncurtado = [nota tom];
     NSString *notaFinal = [NSString stringWithFormat:@"%@%@",nivelNota,nomeNota];
     NSString *tempoNota = [nota tipoNota];
     self.compassoAtual = [[nota numeroCompasso]intValue];
-    self.textoDescricaoNota = [NSString stringWithFormat:@"%@%@%@",nivelNota,@" ",nomeNotaTransformada];
-        
-       
+    self.textoDescricaoNota = [NSString stringWithFormat:@"%@%@",nivelNota,nomeNota];
+    
     float tempo = 0.0;
     float volume = 0.4;
     
@@ -578,39 +536,13 @@
         self.estadoBotaoPlay = true;
     }else{
     Nota *nota = [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]objectAtIndex:auxIndiceNotas];
-
     NSString *nomeNota = [nota nomeNota];
-    NSString *nomeNotaTransformada;
-    
-    if([nomeNota isEqualToString:@"C"]){
-        nomeNotaTransformada = @"Dó";
-    }else if([nomeNota isEqualToString:@"D"]){
-        nomeNotaTransformada = @"Ré";
-    }
-    else if([nomeNota isEqualToString:@"E"]){
-        nomeNotaTransformada = @"Mi";
-    }
-    else if([nomeNota isEqualToString:@"F"]){
-        nomeNotaTransformada = @"Fá";
-    }
-    else if([nomeNota isEqualToString:@"G"]){
-        nomeNotaTransformada = @"Sol";
-    }
-    else if([nomeNota isEqualToString:@"A"]){
-        nomeNotaTransformada = @"La";
-    }
-    else if([nomeNota isEqualToString:@"B"]){
-        nomeNotaTransformada = @"Si";
-    }else{
-        nomeNotaTransformada = @"Pausa";
-    }
-    
     NSString *nivelNota = [nota oitava];
     NSString *tomEncurtado = [nota tom];
     NSString *notaFinal = [NSString stringWithFormat:@"%@%@",nivelNota,nomeNota];
     NSString *tempoNota = [nota tipoNota];
     self.compassoAtual = [[nota numeroCompasso]intValue];
-    self.textoDescricaoNota = [NSString stringWithFormat:@"%@%@%@",nivelNota,@" ",nomeNotaTransformada];
+    self.textoDescricaoNota = [NSString stringWithFormat:@"%@%@",nivelNota,nomeNota];
     
     float tempo = 0.0;
     float volume = 0.4;

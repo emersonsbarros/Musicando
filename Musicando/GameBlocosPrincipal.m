@@ -38,7 +38,7 @@
         
         //Música de fundo
         NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"bensound-badass" ofType:@"mp3"]];
-        [[ExercicioPlayer sharedManager]playAudio:musicFile:-1];
+        [[EfeitoPlayer sharedManager]playAudio:musicFile:-1];
     }
     
     return self;
@@ -145,12 +145,12 @@
 //COLISÃO TOCATRECO
         if((segundoCorpoFisico.categoryBitMask & tocaTrecoCategoria) != 0){
             
-            //NSLog(@"TOCA TRECO Pos %fx - %fy", blocoNota.position.x, blocoNota.position.y);
+            NSLog(@"TOCA TRECO Pos %fx - %fy", blocoNota.position.x, blocoNota.position.y);
             if (((blocoNota.position.y <= 600) && (blocoNota.position.x >= 300 && blocoNota.position.x <= 755))) {
 
             //NOTAS CERTAS
                 if([blocoNota.name isEqualToString:@"Dó"] || [blocoNota.name isEqualToString:@"Ré"] || [blocoNota.name isEqualToString:@"Mi"] || [blocoNota.name isEqualToString:@"Fá"] || [blocoNota.name isEqualToString:@"Sol"] || [blocoNota.name isEqualToString:@"Lá"] || [blocoNota.name isEqualToString:@"Si"]){
-                    //NSLog(@"Colidiu nota certa com tocatreco - %@", blocoNota.name);
+                    NSLog(@"Colidiu nota certa com tocatreco - %@", blocoNota.name);
                 
                 
                     //Remove os blocos da view
@@ -172,7 +172,7 @@
                 //NOTAS ERRADAS
                 }else if([blocoNota.name isEqualToString:@"Dor"] || [blocoNota.name isEqualToString:@"Rir"] || [blocoNota.name isEqualToString:@"Mou"] || [blocoNota.name isEqualToString:@"Fê"] || [blocoNota.name isEqualToString:@"Sou"] || [blocoNota.name isEqualToString:@"Lú"] || [blocoNota.name isEqualToString:@"Sir"]){
                 
-                //NSLog(@"Colidiu nota errada com tocatreco - %@", blocoNota.name);
+                NSLog(@"Colidiu nota errada com tocatreco - %@", blocoNota.name);
                 [NSTimer scheduledTimerWithTimeInterval: 1.0 target:self selector:@selector(gameOver) userInfo:nil repeats:NO];
 
                 return;
@@ -181,20 +181,20 @@
 //COLISAO NO CHÃO
         }else if((segundoCorpoFisico.categoryBitMask & pisoCategoria)!=0){
             
-            //NSLog(@"CHAO Pos %fx - %fy", blocoNota.position.x, blocoNota.position.y);
+            NSLog(@"CHAO Pos %fx - %fy", blocoNota.position.x, blocoNota.position.y);
              if (blocoNota.position.y <= 600 && ((blocoNota.position.x <= 915) || (blocoNota.position.x >= 330))){
             
                 //NOTAS CERTAS
                  if([blocoNota.name isEqualToString:@"Dó"] || [blocoNota.name isEqualToString:@"Ré"] || [blocoNota.name isEqualToString:@"Mi"] || [blocoNota.name isEqualToString:@"Fá"] || [blocoNota.name isEqualToString:@"Sol"] || [blocoNota.name isEqualToString:@"Lá"] || [blocoNota.name isEqualToString:@"Si"]){
                 
-                   // NSLog(@"Colidiu com o chão nota certa - %@", blocoNota.name);
+                    NSLog(@"Colidiu com o chão nota certa - %@", blocoNota.name);
                     [NSTimer scheduledTimerWithTimeInterval: 1.0 target:self selector:@selector(gameOver) userInfo:nil repeats:NO];
                      return;
 
                 //NOTAS ERRADAS
                  }else if([blocoNota.name isEqualToString:@"Dor"] || [blocoNota.name isEqualToString:@"Rir"] || [blocoNota.name isEqualToString:@"Mou"] || [blocoNota.name isEqualToString:@"Fê"] || [blocoNota.name isEqualToString:@"Sou"] || [blocoNota.name isEqualToString:@"Lú"] || [blocoNota.name isEqualToString:@"Sir"]){
                 
-                   // NSLog(@"Colidiu com o chão nota errada - %@", blocoNota.name);
+                    NSLog(@"Colidiu com o chão nota errada - %@", blocoNota.name);
                     
                         //Remove os blocos da view
                         [blocoNota removeAllChildren];
@@ -368,9 +368,9 @@
     [corpoParaColisaoDoTocaTreco addChild: _base];
     [self addChild: corpoParaColisaoDoTocaTreco];
 
-//    NSLog(@"COLUNA1 Pos %fx - %fy", _coluna1.position.x, _coluna1.position.y);
-//    NSLog(@"COLUNA2 Pos %fx - %fy", _coluna2.position.x, _coluna2.position.y);
-//    NSLog(@"BASE Pos %fx - %fy", _base.position.x, _base.position.y);
+    NSLog(@"COLUNA1 Pos %fx - %fy", _coluna1.position.x, _coluna1.position.y);
+    NSLog(@"COLUNA2 Pos %fx - %fy", _coluna2.position.x, _coluna2.position.y);
+    NSLog(@"BASE Pos %fx - %fy", _base.position.x, _base.position.y);
 }
 
 
@@ -405,7 +405,7 @@
     
     //Adiciona a nota e sua label o nome sorteado
     blocoNota.name = [self.listaDeNotas objectAtIndex: self.indiceNotaSorteada];
-    //NSLog(@"%@", blocoNota.name);
+    NSLog(@"%@", blocoNota.name);
     
     //Cria o corpo físico do bloco
     self.blocoNotaPrincipal.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize: self.blocoNotaPrincipal.size];
@@ -489,7 +489,7 @@
 -(void)gameOver{
     [[GameOverViewController sharedManager] gameOverParaUmaCena].view.hidden = NO;
     [self pausaJogo];
-    [[ExercicioPlayer sharedManager]stopAudio];
+    [[EfeitoPlayer sharedManager]stopAudio];
 }
 
 //Pausar jogo

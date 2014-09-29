@@ -12,9 +12,6 @@
 
 @implementation LeitorPartituraXML
 
-
-///////////////////////////////////// Sington ///////////////////////////////////////
-
 +(LeitorPartituraXML*)sharedManager{
     static LeitorPartituraXML *unicoInstrumento = nil;
     if(!unicoInstrumento){
@@ -34,10 +31,6 @@
     return self;
 }
 
-
-/////////////////////////////////////// Metodos do XML //////////////////////////////////////////
-
-//Comeca a leitura XML
 -(void)iniciaLeiuturaXML:(NSString *)nomeXML{
     
     auxCodeValue2 = true;
@@ -55,10 +48,12 @@
     [parser setDelegate:self];
     [parser setShouldResolveExternalEntities:NO];
     [parser parse];
-    
+
 }
 
-//retira os espacos e pula linhas da string
+/////////////////////////////////////// Metodos do XML //////////////////////////////////////////
+
+
 -(NSString*)retiraEspacoLinhaString:(NSString*)string{
     
     NSString *aux2NotaFinal = [string stringByReplacingOccurrencesOfString:@"\n" withString:@""];
@@ -67,10 +62,6 @@
     return string;
 }
 
-
-//////////////////////////////// Metodos do protocolo ///////////////////////////
-
-//aloca a lista quando á primeira ocorrencia da tag do xml
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
     
     element = elementName;
@@ -118,7 +109,6 @@
     }
     
 }
-
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
     
@@ -215,8 +205,6 @@
     
 }
 
-
-//seta o valor da key para o nsmutablestring
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
     
     
@@ -332,8 +320,6 @@
     
 }
 
-
-//metodo que é chamado quando é finalizado o parse do xml
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
     
     

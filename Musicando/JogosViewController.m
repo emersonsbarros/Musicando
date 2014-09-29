@@ -54,7 +54,7 @@
     UIImage *image9 = [UIImage imageNamed:@"frame-9.gif"];
     
     NSArray *imageArray2 = [NSArray arrayWithObjects:image1,image2,image3,image4,image5,image6,image7,image8,image9,nil];
-   [[ExercicioImagem sharedManager]addAnimacaoSprite:imageArray2:self.imgFrameTv];
+   [[EfeitoImagem sharedManager]addAnimacaoSprite:imageArray2:self.imgFrameTv];
     
 }
 
@@ -74,9 +74,6 @@
 }
 
 -(void)chamaStoryBoardExercicio:(id)sender{
-    
-    [self retiraViewExericios];
- 
     
     Exercicio *button = sender;
     id object = [[NSClassFromString([button nomeView]) alloc]initWithNibName:[button nomeView] bundle:nil];
@@ -134,6 +131,7 @@
         exerc.descricaoBotao.textAlignment = NSTextAlignmentCenter;
         
         [exerc addSubview:exerc.descricaoBotao];
+        
         [[self viewTelevisao] addSubview: exerc];
         
         [self.listaExercicios addObject:exerc.descricaoBotao];
@@ -160,16 +158,4 @@
 }
 
 
--(void)viewDidDisappear:(BOOL)animated {
-    
-    [super viewDidDisappear: animated];
-    
-    [self retiraViewExericios];
-    
-}
-
 @end
-
-
-
-

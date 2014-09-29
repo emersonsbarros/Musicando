@@ -58,7 +58,7 @@
 -(void)retornaViewDoExercicio:(UIViewController*)viewController{
     
     for(UIView *img in viewController.view.subviews){
-        if((img.tag == 1000)||(img.tag == 1001)||(img.tag == 1002)||(img.tag == 1003)||(img.tag == 2223)) {
+        if((img.tag == 1000)||(img.tag == 1001)||(img.tag == 1002)||(img.tag == 1003)) {
         }else {
             img.hidden = YES;
         }
@@ -77,7 +77,7 @@
         [MascoteViewController sharedManager].contadorDeFalas = [MascoteViewController sharedManager].contadorDeFalas -2;
         
         
-        [[ExercicioTransicao sharedManager]chamaTransicaoPaginaTopo:self.cont];
+        [[EfeitoTransicao sharedManager]chamaTransicaoPaginaTopo:self.cont];
 
         
         [NSTimer scheduledTimerWithTimeInterval:0.0
